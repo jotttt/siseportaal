@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<!--_____ META _______-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--_____META END_______-->
+		<title>TTÜ | Dashboard</title>
+		<!--_____ PLUGINS CSS _______-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/toastr/toastr.min.css">
+		<!--_____ PAGE CSS _______-->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="top-navigation">
+
+		<div id="wrapper" class="full-height-scroll">
+			<div id="page-wrapper" class="gray-darker-bg">
+				<!--_________ NAVBAR BEGIN ___________-->
+				<div class="row">
+					<nav class="navbar navbar-static-top cherry-bg" role="navigation">
+						<div class="navbar-header">
+							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed pull-right" type="button">
+								<i class="fa fa-reorder"></i>
+							</button>
+							<a href="#" class="navbar-brand"><div id="logo-minimal-w"></div></a>
+						</div>
+						<div class="navbar-collapse collapse" id="navbar">
+							<ul class="nav navbar-nav">
+								<li id="dash-mobile-search">
+									<form>
+										<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+									</form>
+								</li>
+								<li>
+									<a href="#">Dokumendid</a>
+								</li>
+								<li>
+									<a href="#">Ülikool</a>
+								</li>
+								<li>
+									<a href="#">Inimesed</a>
+								</li>
+								<li>
+									<a href="#">Teenused</a>
+								</li>
+							</ul>
+
+							<ul class="nav navbar-top-links navbar-right">
+								<li class="dropdown m-l">
+									<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+										<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+									</a>
+									<ul class="dropdown-menu dropdown-alerts">
+										<li>
+											<a href="mailbox.html">
+												<div>
+													<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+													<span class="pull-right text-muted small">19 minutit tagasi</span>
+												</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="profile.html">
+												<div>
+													<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+													<span class="pull-right text-muted small">56 minutit tagasi</span>
+												</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="grid_options.html">
+												<div>
+													<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+													<span class="pull-right text-muted small">4h tagasi</span>
+												</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<div class="text-center link-block">
+												<a href="notifications.html">
+													<strong>Vaata kõiki teavitusi</strong>
+													<i class="fa fa-angle-right"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="show-icon ">
+									<a href="login.html">
+										<i class="fa fa-sign-out"></i>
+									</a>
+								</li>
+								<li  class="show-icon hidden-xs">
+									<a class="right-sidebar-toggle">
+										<i class="fa fa-tasks"></i>
+									</a>
+								</li>
+							</ul>
+							<ul class="nav navbar-top-links navbar-right visible-md visible-lg">
+								<form>
+									<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!--NAVBAR END
+------------------------------------------------------------->
+
+				<!--CONTENT BEGIN
+------------------------------------------------------------->
+				<div class="wrapper wrapper-content animated fadeIn">
+					<div class="row">
+						<div class="row">
+							<div class="col-lg-12">
+								<!--SPECIAL MESSAGE FOR MOBILE BEGIN
+------------------------------------------------------->
+								<div id="ttu-message-mobile" class="ibox float-e-margins">
+									<div class="ibox-title-full">
+										<h5><i class="fa fa-bullhorn"></i> Sündmus</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content-full">
+										<div class="text-center"><img class="img-responsive" src="img/sp2015.jpg"></div>
+									</div>
+								</div>
+								<!--SPECIAL MESSAGE FOR MOBILE END
+----------------------------------------------------------------->
+							</div>
+						</div>
+						<div class="row"  id="sortable-view">
+							<!--LEFT COLUMN BEGIN
+----------------------------------------------------------------->
+							<div class="col-lg-3 ui-sortable">
+								<!--MY PROFILE BEGIN
+----------------------------------------------------------------->
+								<div class="ibox float-e-margins hidden-xs hidden-sm hidden-md">
+									<div class="ibox-title">
+										<h5><i class="fa fa-user"></i> Minu profiil</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content text-center">
+										<h3 class="m-b-lg">Teretulemast siseveeb!</h3>
+										<img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+										<div class="m-b-md">
+											<h2 class="font-bold no-margins">
+												Sander Marandi
+											</h2>
+											<small>IT projektijuht</small>
+										</div>
+									</div>
+								</div>
+								<!--IN MY PROFILE END
+----------------------------------------------------------------->
+
+								<!--IN HOUSE TRAINING WIDGET BEGIN
+----------------------------------------------------------------->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-mortar-board"></i> Sisekoolitused</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<table class="table table-striped no-margins">
+											<thead>
+												<tr>
+													<th>Aeg</th>
+													<th>Nimi</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="label label-success-o">04.12.2015</span></td>
+													<td>Meeskonnatöö koolitus I tase</td>
+												</tr>
+												<tr>
+													<td><span class="label label-info-o">18.12.2015</span></td>
+													<td>Meeskonnatöö koolitus II tase</td>
+												</tr>
+												<tr>
+													<td><span class="label label-danger-o">23.12.2015</span></td>
+													<td>Ristmeedia koolitus </td>
+												</tr>
+												<tr>
+													<td><span class="label label-danger-o">24.12.2015</span></td>
+													<td>Excel edasijõudnutele</td>
+												</tr>
+												<tr>
+													<td><span class="label label-warning-o">27.12.2015</span></td>
+													<td>Avalik suhtlus I</td>
+												</tr>
+												<tr>
+													<td><span class="label label-info-o">29.12.2015</span></td>
+													<td>Word edasijõudnutele</td>
+												</tr>
+												<tr>
+													<td><span class="label label-info-o">30.12.2015</span></td>
+													<td>Ristmeedia koolitus</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr><td></td><td><button type="button" class="label label-white pull-right m-t" data-container="body" data-toggle="popover" data-placement="top" data-content="">Legend</button></td></tr>
+											</tfoot>
+										</table>
+									</div>
+								</div>
+								<!--IN HOUSE TRAINING WIDGET END
+----------------------------------------------------------------->
+								<!--PHONEBOOK WIDGET BEGIN
+----------------------------------------------------------------->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-phone"></i> Telefoniraamat</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<div class="favorites">
+											<form class="clearfix" role="form" action="#">
+												<div class="form-group">
+													<input type="text" placeholder="Nimi" class="form-control">
+												</div>
+												<div class="form-group">
+													<input type="text" placeholder="Amet" class="form-control">
+												</div>
+												<div class="form-group">
+													<input type="text" placeholder="Üksus" class="form-control">
+												</div>
+												<div class="form-group">
+													<input type="text" placeholder="Telefon" class="form-control">
+												</div>
+												<button class="btn btn-md btn-primary pull-right" type="submit"><strong>Otsi</strong></button>
+											</form>
+										</div>
+									</div>
+								</div>
+								<!--PHONEBOOK WIDGET END
+------------------------------------------------------>
+							</div>
+							<!--LEFT COLUMN END
+-------------------------------------------------------->
+							<!--MIDDLE COLUMN BEGIN
+-------------------------------------------------------->
+							<div class="col-lg-6">
+								<!--_________ SPECIAL MESSAGE BEGIN ______-->
+								<div id="ttu-message-desktop" class="ibox float-e-margins">
+									<div class="ibox-title-full">
+										<h5><i class="fa fa-bullhorn"></i> Sündmus</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content-full">
+										<div class="text-center"><img class="img-responsive" src="img/sp2015.jpg"></div>
+									</div>
+								</div>
+								<!--_________ SPECIAL MESSAGE END _______-->
+								<!--_________ NEWS BEGIN ________-->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-newspaper-o"></i> Uudised</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://www.tallinn.ee/gal_pildid/66035.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">Selgusid Mektory konkursi võitjad</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://thecoolgadgets.com/wp-content/uploads/2010/12/IBM-Exaflop-CMOS.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">TTÜ vilistlase firma muudab autotööstuse tulevikku, usuvad tehnoloogiahiiud</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://fotoklubi.tipikas.ee/pildid/kaariku09/kaariku_priit_004.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">Vaata kuidas läksid TTÜ tudengitel suvemängud Käärikul</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://www.tallinn.ee/gal_pildid/92370.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">Kes olid Tehnopoli parimad?</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://www.glassway.ee/wp-content/gallery/product-a/mg_8471.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">TTÜ laboratooriumid said uue moodsa sisustuse</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xl-6">
+												<div class="news-module">
+													<div class="news-wrapper">
+														<div class="news-heading">
+															<img src="http://elering.ee/public/Infokeskus/Pressimaterjalid/TTUga_koostooleppe_allkirjastamine/.gallery_pictures/07.jpg" class="img-responsive">
+															<div class="news-text">
+																<a href="#"><h4 class="news-title">Eleringi ja TTÜ sõlmisid ühiste kavatsuste protokollid</h4></a>
+																<p class="news-lead">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--_________ NEWS END ________-->
+							</div>
+							<!--MIDDLE COLUMN END
+-------------------------------------------------------->
+							<!--RIGHT COLUMN BEGIN
+-------------------------------------------------------->
+							<div class="col-lg-3 ui-sortable">
+									<!--MY PAGES BEGIN
+-------------------------------------------------------->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-bookmark"></i> Minu leheküljed</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<div class="panel-body">
+											<div class="panel-group" id="accordion">
+												<div class="panel panel-default">
+													<div data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  aria-expanded="true" class="panel-heading">
+														<h4 class="panel-title">
+															Minu viited <i class="fa fa-angle-down"></i>
+														</h4>
+													</div>
+													<div id="collapseThree" class="panel-collapse collapse in" aria-expanded="true">
+														<div class="panel-body">
+															<div class="m-b-sm b-b"><a href="#">Tallinna linnavolikogu kiitis heaks maksukärped</a></div>
+															<div class="m-b-sm b-b"><a href="#">TTÜ võõrustab põhjaveeuurijaid kõikidelt kontinentidelt</a></div>
+															<div class="m-b-sm b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+															<div class="m-b-sm "><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default">
+													<div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" class="panel-heading closed">
+														<h4 class="panel-title">
+															Viimased <i class="fa fa-angle-down"></i>
+														</h4>
+													</div>
+													<div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															<div class="m-b-xs b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+															<div class="m-b-xs"><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--MY PAGES END
+-------------------------------------------------------->
+								<!--_________ BIRTHDAYS BEGIN __________-->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-birthday-cake"></i> Tänased sünnipäevad</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<div class="m-b-xs"><i class="fa fa-user"></i> Priit Tamm</div>
+										<div><i class="fa fa-user"></i> Sander Marandi</div>
+									</div>
+								</div>
+								<!--_________ BIRTHDAYS END ________-->
+								<!--_PICTURES AND VIDEOS BEGIN ______-->
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5><i class="fa fa-play-circle"></i> Pildid ja  videod</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<figure>
+											<iframe width="100%" height="349" src="https://www.youtube.com/embed/rRAB047iefY" frameborder="0" allowfullscreen></iframe>
+										</figure>
+
+									</div>
+								</div>
+								<!--_________ PICTURES AND VIDEOS END ________-->
+							</div>
+							<!--RIGHT COLUMN END
+-------------------------------------------------------->
+						</div>
+					</div>
+				</div>
+				<!--CONTENT END
+-------------------------------------------------------------->
+				<!--FOOTER BEGIN
+-------------------------------------------------------------->
+				<div class="footer">
+					<div class="pull-right">
+						Sul on vaba ruumi <strong>567MB</strong>
+					</div>
+					<div>
+						<strong>Copyright</strong> TTÜ &copy; 2014-2015
+					</div>
+				</div>
+				<!--FOOTER END
+-------------------------------------------------------------->
+				<!--MODAL CONTENT BEGIN
+-------------------------------------------------------------->
+				<div id="right-sidebar" class="">
+					<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+						<div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+
+							<ul class="nav nav-tabs navs-3">
+
+								<li class="active"><a data-toggle="tab" href="#tab-11" aria-expanded="true">
+									Valik 1
+									</a>
+								</li>
+								<li><a data-toggle="tab" href="#tab-22">
+									Valik 2
+									</a>
+								</li>
+								<li class="">
+									<a data-toggle="tab" href="#tab-33" aria-expanded="false">
+										<i class="fa fa-gear"></i>
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+
+
+								<div id="tab-11" class="tab-pane active">
+									<div class="sidebar-title">
+										<h3> <i class="fa fa-folder"></i> Minu failid</h3>
+										<small><i class="fa fa-tim"></i> Kaustas on 2 dokumenti</small>
+									</div>
+									<div>
+										<ul  class="sidebar-list">
+											<li class="">
+												<a href="#" class="">
+													<div class="pull-left text-center m-r">
+														<i class="fa fa-file-text-o fa-3x"></i>
+													</div>
+													<div class="m-l m-b-xs">Puhkuste graafiku koostamise juhend ja soovitused tuleviku mudeli laiendamiseks.pdf</div>
+													<div class="small text-muted pull-right ">Lisatud 15.02.2015</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="pull-left text-center m-r">
+														<i class="fa fa-file-text-o fa-3x"></i>
+													</div>
+													<div class="m-l m-b-xs">Majandusaruande kolmas lisa ja seletused.pdf</div>
+													<div class="small text-muted pull-right">Lisatud 12.06.2014</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+
+								<div id="tab-22" class="tab-pane">
+
+									<div class="sidebar-title">
+										<h3> <i class="fa fa-cube"></i> Viimased uuendused</h3>
+										<small><i class="fa fa-tim"></i> Paigaldatud 14 uuendust. 1 on paigaldamata.</small>
+									</div>
+
+									<ul class="sidebar-list">
+										<li>
+											<a href="#">
+												<div class="small pull-right m-t-xs">5 tundi tagasi</div>
+												<h4>Versiooni uuendus 1.0.0.14</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio accusantium saepe id.
+
+												<div class="small">Paigaldatud: 22%</div>
+												<div class="progress progress-mini">
+													<div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+												</div>
+												<div class="small text-muted m-t-xs">Paigalduse lõpuni 3 minutit</div>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+
+								<div id="tab-33" class="tab-pane">
+
+									<div class="sidebar-title">
+										<h3><i class="fa fa-gears"></i> Sätted</h3>
+										<small><i class="fa fa-tim"></i> Siin saad muuta oma põhisätteid</small>
+									</div>
+
+									<div class="setings-item">
+										<span>
+											Näita teateid
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+												<label class="onoffswitch-label" for="example">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Keela messenger
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+												<label class="onoffswitch-label" for="example2">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Luba ajaloo salvestus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+												<label class="onoffswitch-label" for="example3">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Näita tabeleid
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+												<label class="onoffswitch-label" for="example4">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Kasutaja teavitused
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+												<label class="onoffswitch-label" for="example5">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Globaalne otsing
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+												<label class="onoffswitch-label" for="example6">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="setings-item">
+										<span>
+											Uuenda igapäev
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+												<label class="onoffswitch-label" for="example7">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="sidebar-content">
+										<h4>Sätted</h4>
+										<div class="small">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia doloremque ducimus, iste cum molestiae unde recusandae dolorem necessitatibus, quod? Pariatur officia omnis aperiam doloribus, impedit ipsa laborum provident accusamus quos obcaecati mollitia beatae. Placeat, totam, fugiat. Ad architecto repudiandae, non.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 847.546129374337px; background: rgb(0, 0, 0);"></div>
+						<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MESSAGES -->
+
+
+		<!-- FULLSCREEN TOGGLE BUTTON -->
+		<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+		<!-- SCROLL TO TOP BUTTON -->
+		<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+		<!--SCRIPTS
+------------------------------------------------------------------>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+		<script src="js/inspinia.js"></script>
+		<script src="js/plugins/pace/pace.min.js"></script>
+		<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="js/plugins/toastr/toastr.min.js"></script>
+		<!-- My custom scripts -->
+		<script src="js/navbar_menu.js"></script>
+		<script src="js/dashboard.js"></script>
+		<script>
+
+			//TOASTR
+			toastr.options.closeButton = true;
+			toastr.options.timeOut = 0;
+			toastr.options.extendedTimeOut = 0;
+			toastr.info('<h4>Teade</h4>Ülikooli infotund täna kell 11. <a class="alert-link" href="#">Vaata lähemalt</a>');
+
+		</script>
+	</body>
+</html>

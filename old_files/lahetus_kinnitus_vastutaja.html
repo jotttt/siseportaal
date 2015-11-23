@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>TTÜ | Lähetused</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/plugins/x-editable/bootstrap-editable.css" rel="stylesheet">
+		<link href="css/plugins/datapicker/datepicker3.min.css" rel="stylesheet">
+		<link href="css/plugins/iCheck/grey.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/switchery/switchery.css" />
+		<link href="css/style.css" rel="stylesheet">
+
+
+	</head>
+
+	<body class="">
+
+		<div id="wrapper">
+			<!--SIDEBAR
+--------------------------------------------------------------->
+			<nav class="navbar-default navbar-static-side" role="navigation">
+				<div class="sidebar-collapse">
+					<ul class="nav" id="side-menu">
+						<li class="nav-header">
+							<div class="dropdown profile-element"> 			<span>
+								<a href="#" class="cr-block"><div id="logo-minimal-w" class="center-block"></div></a>
+								</span>
+							</div>
+							<div class="logo-element">
+								<div id="logo-text-w" class="center-block"></div>
+							</div>
+						</li>
+						<!--SIDEBAR SEARCH
+----------------------------------------------------------------->
+						<li>
+							<form class="sidebar-search center-block" role="search">
+								<div class="input-group m-b">
+									<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term2" id="srch-term2" style="font-family:Arial, FontAwesome">
+								</div>
+							</form>
+						</li>
+						<!--SIDEBAR SEARCH END
+----------------------------------------------------------------->
+						<li class="active">
+							<a href="#"><i class="fa fa-university"></i> <span class="nav-label">Minu töölaud</span><span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="/contacts/9045239624610520" id="_contacts" class="ajax-load">Telefoniraamat</a></li>
+								<li><a href="/request/9045239624610520" id="_request" class="ajax-load">Iseteenindus</a></li>
+								<li><a href="/docs/9045239624610520" id="_docs" class="ajax-load">Töökorraldus</a></li>
+								<li><a href="/news/9045239624610520" id="_news" class="ajax-load">Uudised</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Meediapank</span><span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="/media/9045239624610520" id="_media" class="ajax-load">Meediahaldus</a></li>
+								<li><a href="/tube/9045239624610520" id="_tube" class="ajax-load">Videosirvik</a></li>
+
+							</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-wrench"></i> <span class="nav-label">Juhi töölaud</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/budget_view/9045239624610520" id="_budget_view" class="ajax-load">Eelarve vaade</a></li>
+							<li><a href="/budget_plan/9045239624610520" id="_budget_plan" class="ajax-load">Eelarve planeerimine</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Minu üksus</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/myunit/9045239624610520" id="_myunit" class="ajax-load">Inimesed</a></li>
+							<li><a href="lahetus_uld.html" id="_trip" class="ajax-load">Lähetused</a></li>
+							<li><a href="/budget/9045239624610520" id="_budget" class="ajax-load">Eelarve</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Multimail</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/msgprep/9045239624610520" id="_msgprep" class="ajax-load">Sõnumihaldus</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-at"></i> <span class="nav-label">Kontaktikeskus</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/organizations/9045239624610520" id="_organizations" class="ajax-load">Organisatsioonid</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-sliders"></i> <span class="nav-label">IT teenuste haldus</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/cmdb/9045239624610520" id="_cmdb" class="ajax-load">Seire</a></li>
+							<li><a href="/dns/9045239624610520" id="_dns" class="ajax-load">Nimeserver</a></li>
+							<li><a href="/helpdesk/9045239624610520" id="_helpdesk" class="ajax-load">Kasutajatugi</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-phone"></i> <span class="nav-label">Sideteenused</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/mobiledb/9045239624610520" id="_mobiledb" class="ajax-load">Mobiilinumbrid</a></li>
+							<li><a href="/deskphone/9045239624610520" id="_deskphone" class="ajax-load">Lauanumbrid</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-pencil"></i> <span class="nav-label">Sisuhaldus</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/edit/9045239624610520" id="_edit" class="ajax-load">Redigeerimine (näidis)</a></li>
+							<li><a href="/view/9045239624610520" id="_view" class="ajax-load">Vaatlemine (näidis)</a></li>
+
+						</ul>
+						</li><li>
+						<a href="#"><i class="fa fa-building-o"></i> <span class="nav-label">Kinnisvarahaldus</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li><a href="/room/9045239624610520" id="_room" class="ajax-load">Ruumide register</a></li>
+							<li><a href="/fmreports/9045239624610520" id="_fmreports" class="ajax-load">Aruanded</a></li>
+							<li><a href="/assetlist/9045239624610520" id="_assetlist" class="ajax-load">Varahaldus</a></li>
+							<li><a href="/helpline/9045239624610520" id="_helpline" class="ajax-load">Murekontor</a></li>
+
+						</ul>
+						</li>
+					</ul>
+
+				</div>
+			</nav>
+			<!--SIDEBAR END
+--------------------------------------------------------------->
+			<!--CONTENT
+--------------------------------------------------------------->
+			<div id="page-wrapper" class="gray-bg">
+				<!--TOP NAVBAR
+--------------------------------------------------------------->
+				<div class="row border-bottom">
+					<nav class="navbar navbar-static-top cherry-bg" role="navigation">
+						<div class="navbar-header">
+							<a class="navbar-minimalize minimalize-styl-2" href="#"><i class="fa fa-bars"></i> </a>
+
+							<ul class="nav navbar-nav">
+								<li class="dropdown hidden-xs">
+									<a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Dokumendid <span class="caret"></span></a>
+									<ul role="menu" class="dropdown-menu">
+										<li><a href="">Menu item</a></li>
+										<li><a href="">Menu item</a></li>
+										<li><a href="">Menu item</a></li>
+										<li><a href="">Menu item</a></li>
+									</ul>
+								</li>
+								<li class="dropdown dropdown-large hidden-xs">
+									<a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inimesed <span class="caret"></span></a>
+									<ul class="dropdown-menu dropdown-menu-large row">
+										<li class="col-sm-4">
+											<ul>
+												<li class="dropdown-header">Teaduskonnad</li>
+												<li><a href="#">Ehitusteaduskond</a></li>
+												<li><a href="#">Energeetikateaduskond</a></li>
+												<li class="divider"></li>
+												<li class="dropdown-header">Lorem</li>
+												<li><a href="#">Example</a></li>
+												<li><a href="#">Aligninment options</a></li>
+												<li><a href="#">Headers</a></li>
+												<li><a href="#">Disabled menu items</a></li>
+											</ul>
+										</li>
+										<li class="col-sm-4">
+											<ul>
+												<li class="dropdown-header">Asutused</li>
+												<li><a href="#">Basic example</a></li>
+												<li><a href="#">Button toolbar</a></li>
+												<li><a href="#">Sizing</a></li>
+												<li><a href="#">Nesting</a></li>
+												<li><a href="#">Vertical variation</a></li>
+												<li class="divider"></li>
+												<li class="dropdown-header">Ipsum</li>
+												<li><a href="#">Single button dropdowns</a></li>
+											</ul>
+										</li>
+										<li class="col-sm-4">
+											<ul>
+												<li class="dropdown-header">Üksused</li>
+												<li><a href="#">Basic example</a></li>
+												<li><a href="#">Sizing</a></li>
+												<li><a href="#">Checkboxes and radio addons</a></li>
+												<li class="divider"></li>
+												<li class="dropdown-header">Dolor</li>
+												<li><a href="#">Lorem ipsum dolor</a></li>
+												<li><a href="#">Pills</a></li>
+												<li><a href="#">Justified</a></li>
+											</ul>
+										</li>
+									</ul>
+
+								</li>
+								<li class="dropdown dropdown-large hidden-xs">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+									<ul class="dropdown-menu dropdown-menu-large row">
+
+										<li class="col-sm-4">
+											<ul>
+
+												<li class="level-1 dropdown-header"><a href="#">Põhiline</a></li>
+												<li class="level-2"><a href="#">TTÜ põhikiri</a></li>
+												<div class="l3">
+													<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja paraboolne eksistents</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja kaatet</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja sinusoidne üleminek paberkandjale</a></li>
+												</div>
+												<li class="level-2"><a href="#">TTÜ arengukava 2011−2015</a></li>
+												<li class="level-2"><a href="#">TTÜ kollektiivleping</a></li>
+												<li class="level-2"><a href="#">TTÜ juhtimissüsteemi käsiraamat</a></li>
+												<li class="level-2"><a href="#">TTÜ seadus (Riigi Teataja)</a></li>
+												<li class="level-2"><a href="#">Ülikooliseadus (Riigi Teataja)</a></li>
+												<li class="level-2"><a href="#">Teadus- ja arendustegevuse korralduse seadus (Riigi Teataja)</a></li>
+												<li class="level-2"><a href="#">Kõrgharidusstandard (Riigi Teataja)</a></li>
+												<li class="level-1 dropdown-header"><a href="#">Õigusaktid</a></li>
+												<li class="level-2"><a href="#">Kuratooriumi määrused</a></li>
+												<li class="level-2"><a href="#">Kuratooriumi otsused</a></li>
+												<li class="level-2"><a href="#">Nõukogu määrused</a></li>
+												<li class="level-2"><a href="#">Nõukogu otsused</a></li>
+												<li class="level-2"><a href="#">Üldkäskkirjad</a></li>
+												<li class="level-2"><a href="#">Personalikäskkirjad</a></li>
+												<li class="level-2"><a href="#">Korraldused</a></li>
+												<li class="level-2"><a href="#">Korraldused asendaja määramiseks</a></li>
+												<li class="level-2"><a href="#">Riigihangete korraldused</a></li>
+												<li class="level-2"><a href="#">Dekaani
+													korraldused</a></li>
+												<div class="l3">
+													<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
+													<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
+												</div>
+											</ul>
+										</li>
+										<li class="col-sm-4">
+											<ul>
+												<li class="level-1 dropdown-header"><a href="#">Terviktekstid, vormid</a></li>
+												<li class="level-2"><a href="#">Õppetöö</a></li>
+												<li class="level-2"><a href="#">Teadus- ja arendustöö</a></li>
+												<li class="level-2"><a href="#">Täiendusõpe</a></li>
+												<li class="level-2"><a href="#">Personalitöö</a></li>
+												<li class="level-2"><a href="#">Dokumendihaldus</a></li>
+												<li class="level-2"><a href="#">Lepingud ja volikirjad</a></li>
+												<li class="level-2"><a href="#">Finantstegevus</a></li>
+												<li class="level-2"><a href="#">Haldus-majandustegevus</a></li>
+												<li class="level-2"><a href="#">Statuudid</a></li>
+												<li class="level-2"><a href="#">Hinnakirjad</a></li>
+												<li class="level-2"><a href="#">Arengukavad ja strateegiad</a></li>
+												<li class="level-2"><a href="#">Asutuste põhikirjad</a></li>
+												<li class="level-2"><a href="#">Akadeemiliste struktuuriüksuste põhimäärused</a></li>
+												<li class="level-2"><a href="#">Haldus-tugistruktuuriüksuste põhimäärused</a></li>
+												<li class="level-2"><a href="#">Otsustuskogude töö</a></li>
+												<li class="level-2"><a href="#">TTÜ struktuur ja üldandmed</a></li>
+												<li class="level-1 dropdown-header"><a href="#">Kirjaregister</a></li>
+												<li class="level-2"><a href="#">Volikirjade register</a></li>
+												<li class="level-2"><a href="#">Lepingute register</a></li>
+												<li class="level-2"><a href="#">Lähetuste register</a></li>
+												<li class="level-2"><a href="#">TTÜga seotud juriidiliste isikute register</a></li>
+												<li class="level-2"><a href="#">Õigusaktide audit</a></li>
+												<li class="level-2"><a href="#">Õigusaktide tõlked (regulations and documents)</a></li>
+												<li class="level-2"><a href="#">Ingliskeelne terminoloogia</a></li>
+											</ul></li>
+										<li class="col-sm-4">
+											<ul>
+												<li class="level-1 dropdown-header"><a href="#">Mallid</a></li>
+												<li class="level-2"><a href="#">Dokumendimallid</a></li>
+												<li class="level-2"><a href="#">Näidisdokumendid</a></li>
+												<li class="level-2"><a href="#">Slaidimallid</a></li>
+												<li class="level-1 dropdown-header"><a href="#">Turundusmaterjalid</a></li>
+												<li class="level-2"><a href="#">TTÜ brändi ja tunnusgraafika kogumik</a></li>
+												<li class="level-2"><a href="#">Logod</a></li>
+												<li class="level-2"><a href="#">Rahvusvahelise turunduse käsiraamat</a></li>
+												<li class="level-1 dropdown-header"><a href="#">Infotund, avakoosolekud</a></li>
+												<li class="level-2"><a href="#">Üleülikooliline infotund</a></li>
+												<li class="level-2"><a href="#">Rektori kõned õppeaasta avakoosolekul</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</div>
+						<!--RIGHT NAVBAR
+--------------------------------------------------------------->
+						<ul class="nav navbar-top-links navbar-right">
+							<li class="dropdown m-l">
+								<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+									<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+								</a>
+								<ul class="dropdown-menu dropdown-alerts">
+									<li>
+										<a href="mailbox.html">
+											<div>
+												<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+												<span class="pull-right text-muted small">19 minutit tagasi</span>
+											</div>
+										</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="profile.html">
+											<div>
+												<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+												<span class="pull-right text-muted small">56 minutit tagasi</span>
+											</div>
+										</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="grid_options.html">
+											<div>
+												<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+												<span class="pull-right text-muted small">4h tagasi</span>
+											</div>
+										</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<div class="text-center link-block">
+											<a href="notifications.html">
+												<strong>Vaata kõiki teavitusi</strong>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="show-icon ">
+								<a href="login.html">
+									<i class="fa fa-sign-out"></i>
+								</a>
+							</li>
+							<li  class="show-icon hidden-xs">
+								<a class="right-sidebar-toggle">
+									<i class="fa fa-tasks"></i>
+								</a>
+							</li>
+						</ul>
+						<!--RIGHT NAVBAR END
+--------------------------------------------------------------->
+						<!--NAVBAR SEARCH
+--------------------------------------------------------------->
+						<ul class="nav navbar-top-links navbar-right visible-lg">
+							<form>
+								<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:Arial, FontAwesome">
+							</form>
+						</ul>
+						<!--NAVBAR SEARCH END
+--------------------------------------------------------------->
+
+					</nav>
+				</div>
+				<!--TOP NAVBAR END
+--------------------------------------------------------------->
+				<div class="row wrapper border-bottom white-bg">
+					<div class="col-md-4">
+						<ol class="breadcrumb">
+							<li>
+								<a href="index.html">This is</a>
+							</li>
+							<li class="active">
+								<strong>Breadcrumb</strong>
+							</li>
+						</ol>
+					</div>
+					<div class="col-sm-8">
+					</div>
+				</div>
+				<!--PAGE
+--------------------------------------------------------------->
+				<div class="wrapper wrapper-content animated fadeIn" style="font-size: 1.1em">
+					<!-- ERRAND VIEW
+--------------------------------------------------------------->
+
+					<div class="row">
+						<div class="col-sm-3">
+							<h2>Nimi</h2>
+						</div>
+						<div class="col-sm-3">
+							<h2>Osakond</h2>
+						</div>
+						<div class="col-sm-6">
+							<h2>Sihtkoht</h2>
+						</div>
+					</div>
+					<div class="panel-group " id="accordion">
+						<div class="panel panel-default errand-panel">
+							<div class="panel-heading">
+								<h5 class="panel-title errand-panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><div class="row"><div class="col-sm-3">Sander Marandi</div><div class="col-sm-3">IT osakond</div><div class="col-sm-6">Holland, Leyden</div></div></a>
+								</h5>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse">
+								<div class="panel-body">
+									<!--1ST BLOCK ERRAND FORM
+--------------------------------------------------------------->
+									<div class="row">
+										<div class="col-xl-6">
+											<div class="row">
+												<div class="col-xs-3 text-right font-bold m-b-xs m-t-md">Lähetuse sisu</div>
+												<div class="col-xs-9 "></div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Lähetuse kestus</div>
+												<div class="col-xs-9 "> 12/09/2015 - 16/09/2015</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Finantseerimise allikad</div>
+												<div class="col-xs-9 ">01PA</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Organisatsioon</div><div class="col-xs-9 ">MSG-117 </div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Lähetuse eesmärk</div><div class="col-xs-9 ">Konverents, seminar &gt; Osalemine </div>
+											</div>
+											<!--2ND BLOCK ERRAND FORM
+--------------------------------------------------------------->
+											<div class="row">
+												<div class="col-xs-3 text-right font-bold m-b-xs m-t-md">Planeeritavad kulud</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Päevaraha</div>
+												<div class="col-xs-9 ">350€</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Sõidukulud</div>
+												<div class="col-xs-9 ">452€</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Majutuskulud</div>
+												<div class="col-xs-9 ">1240€</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-3 text-right m-b-xs">Muud kulud</div>
+												<div class="col-xs-9">77€</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-6 text-right">
+													<div class="hr-line-solid"></div>
+												</div>
+											</div>
+											<!--TOTAL
+--------------------------------------------------------------->
+											<div class="row">
+												<div class="col-xs-3 text-right font-bold">Planeeritavad kulud kokku</div><div class="col-xs-9  m-b">2042€</div>
+											</div>
+											<!--ERRAND FORM END
+--------------------------------------------------------------->
+										</div>
+									</div>
+								</div>
+								<div class="panel-footer">
+									<div class="row">
+									<div class="col-xs-3 text-right font-bold"><button class=" btn btn-primary">Kinnita</button></div><div class="col-xs-9  m-b"><button class="btn btn-default m-l">Ära kinnita</button></div>
+
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><div class="row"><div class="col-sm-3">Anna Kolossova</div><div class="col-sm-3">Turundus</div><div class="col-sm-6">Saksamaa, München</div></div></a>
+								</h5>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--MODAL CONTENT
+--------------------------------------------------------------->
+					<div id="right-sidebar" class="">
+						<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+							<div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+
+								<ul class="nav nav-tabs navs-3">
+
+									<li class="active"><a data-toggle="tab" href="#tab-11" aria-expanded="true">
+										Valik 1
+										</a>
+									</li>
+									<li><a data-toggle="tab" href="#tab-22">
+										Valik 2
+										</a>
+									</li>
+									<li class="">
+										<a data-toggle="tab" href="#tab-33" aria-expanded="false">
+											<i class="fa fa-gear"></i>
+										</a>
+									</li>
+								</ul>
+
+								<div class="tab-content">
+
+
+									<div id="tab-11" class="tab-pane active">
+										<div class="sidebar-title">
+											<h3> <i class="fa fa-folder"></i> Minu failid</h3>
+											<small><i class="fa fa-tim"></i> Kaustas on 2 dokumenti</small>
+										</div>
+										<div>
+											<ul class="sidebar-list">
+												<li class="">
+													<a href="#" class="">
+														<div class="pull-left text-center m-r">
+															<i class="fa fa-file-text-o fa-3x"></i>
+														</div>
+														<div class="m-l m-b-xs">Puhkuste graafiku koostamise juhend ja soovitused tuleviku mudeli laiendamiseks.pdf</div>
+														<div class="small text-muted pull-right ">Lisatud 15.02.2015</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="pull-left text-center m-r">
+															<i class="fa fa-file-text-o fa-3x"></i>
+														</div>
+														<div class="m-l m-b-xs">Majandusaruande kolmas lisa ja seletused.pdf</div>
+														<div class="small text-muted pull-right">Lisatud 12.06.2014</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+
+									<div id="tab-22" class="tab-pane">
+
+										<div class="sidebar-title">
+											<h3> <i class="fa fa-cube"></i> Viimased uuendused</h3>
+											<small><i class="fa fa-tim"></i> Paigaldatud 14 uuendust. 1 on paigaldamata.</small>
+										</div>
+
+										<ul class="sidebar-list">
+											<li>
+												<a href="#">
+													<div class="small pull-right m-t-xs">5 tundi tagasi</div>
+													<h4>Versiooni uuendus 1.0.0.14</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio accusantium saepe id.
+
+													<div class="small">Paigaldatud: 22%</div>
+													<div class="progress progress-mini">
+														<div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+													</div>
+													<div class="small text-muted m-t-xs">Paigalduse lõpuni 3 minutit</div>
+												</a>
+											</li>
+										</ul>
+
+									</div>
+
+									<div id="tab-33" class="tab-pane">
+
+										<div class="sidebar-title">
+											<h3><i class="fa fa-gears"></i> Sätted</h3>
+											<small><i class="fa fa-tim"></i> Siin saad muuta oma põhisätteid</small>
+										</div>
+
+										<div class="setings-item">
+											<span>
+												Näita teateid
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+													<label class="onoffswitch-label" for="example">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Keela messenger
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+													<label class="onoffswitch-label" for="example2">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Luba ajaloo salvestus
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+													<label class="onoffswitch-label" for="example3">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Näita tabeleid
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+													<label class="onoffswitch-label" for="example4">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Kasutaja teavitused
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+													<label class="onoffswitch-label" for="example5">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Globaalne otsing
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+													<label class="onoffswitch-label" for="example6">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="setings-item">
+											<span>
+												Uuenda igapäev
+											</span>
+											<div class="switch">
+												<div class="onoffswitch">
+													<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+													<label class="onoffswitch-label" for="example7">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="sidebar-content">
+											<h4>Sätted</h4>
+											<div class="small">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia doloremque ducimus, iste cum molestiae unde recusandae dolorem necessitatibus, quod? Pariatur officia omnis aperiam doloribus, impedit ipsa laborum provident accusamus quos obcaecati mollitia beatae. Placeat, totam, fugiat. Ad architecto repudiandae, non.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 894px; background: rgb(0, 0, 0);"></div>
+							<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div>
+						</div>
+					</div>
+					<!--MODAL CONTENT END
+--------------------------------------------------------------->
+				</div>
+				<!--PAGE END
+--------------------------------------------------------------->
+				<!--FOOTER
+--------------------------------------------------------------->
+				<div class="footer">
+					<div class="pull-right">
+						TTÜ Siseportaal &copy; 2014 - 2015
+					</div>
+				</div>
+				<!--SCRIPTS
+--------------------------------------------------------------->
+				<!-- Main scripts -->
+				<script src="js/jquery-2.1.1.js"></script>
+				<script src="js/bootstrap.min.js"></script>
+				<!-- Plugin javascript -->
+				<script src="js/plugins/moment/moment.min.js"></script>
+				<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+				<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+				<script src="js/inspinia.js"></script>
+				<script src="js/plugins/pace/pace.min.js"></script>
+				<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+				<script src="js/plugins/x-editable/bootstrap-editable.js"></script>
+				<script src="js/plugins/iCheck/icheck.min.js"></script>
+				<script src="js/plugins/switchery/switchery.min.js"></script>
+
+				<!-- Custom javascript -->
+				<script src="js/content_pages.js"></script>
+				<script src="js/lahetus.js"></script>
+				<script src="js/sidebar.js"></script>
+
+			</div>
+			<!--CONTENT END
+--------------------------------------------------------------->
+		</div>
+	</body>
+
+</html>

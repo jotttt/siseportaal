@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!--_____ META _______-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--_____META END_______-->
+		<title>TTÜ | Anna tagasisidet</title>
+		<!--_____ PLUGINS CSS _______-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<!--_____ PAGE CSS _______-->
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+<script src="https://auth-test.ttu.ee/js/1.1/html5shiv.min.js"></script>
+<script src="https://auth-test.ttu.ee/js/1.1/respond.js"></script>
+<![endif]-->
+
+	</head>
+	<body>
+		<button type="button" class="btn btn-primary m" data-toggle="modal" data-target="#myModal5">Anna tagasisidet</button>
+
+		<!-- MODAL CONTENT -->
+		<div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">Anna tagasisidet</h4>
+						<small class="font-bold">Voluptates odit maxime perspiciatis voluptate reiciendis odio quam.</small>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</h3>
+							</div>
+							<div class="row">
+								<fieldset class="rating">
+									<input type="radio" id="a5" name="rating_a" value="5" /><label for="a5" title="Suurepärane">5 stars</label>
+									<input type="radio" id="a4" name="rating_a" value="4" /><label for="a4" title="Päris hea">4 stars</label>
+									<input type="radio" id="a3" name="rating_a" value="3" /><label for="a3" title="Kõlbab">3 stars</label>
+									<input type="radio" id="a2" name="rating_a" value="2" /><label for="a2" title="Vilets">2 stars</label>
+									<input type="radio" id="a1" name="rating_a" value="1" /><label for="a1" title="Väga halb">1 star</label>
+								</fieldset>
+								</div>
+						<div class="row">
+								<textarea name="styled-textarea" class="styled" onfocus="this.value=''; setbg('white');" onblur="setbg('#fafafa')">Kirjuta siia oma kommentaar...</textarea>
+						</div>
+						<div class="row m-t-lg">
+								<h3>At mollitia eum enim voluptates quia voluptatem aspernatur?</h3>
+							</div>
+							<div class="row">
+								<fieldset class="rating">
+									<input type="radio" id="b5" name="rating_b" value="5" /><label for="b5" title="Suurepärane">5 stars</label>
+									<input type="radio" id="b4" name="rating_b" value="4" /><label for="b4" title="Päris hea">4 stars</label>
+									<input type="radio" id="b3" name="rating_b" value="3" /><label for="b3" title="Kõlbab">3 stars</label>
+									<input type="radio" id="b2" name="rating_b" value="2" /><label for="b2" title="Vilets">2 stars</label>
+									<input type="radio" id="b1" name="rating_b" value="1" /><label for="b1" title="Väga halb">1 star</label>
+								</fieldset>
+							</div>
+						<div class="row">
+								<textarea name="styled-textarea" class="styled" onfocus="this.value=''; setbg('white');" onblur="setbg('#fafafa')">Kirjuta siia oma kommentaar...</textarea>
+							</div>
+						</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
+						<button type="button" class="btn btn-primary">Saada tagasiside</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		<!-- JAVASCRIPTS -->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="js/inspinia.js"></script>
+		<script>
+			function setbg(color)
+			{
+				$(".styled").css("background",color);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>TTÜ.AUTH | Login</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+		<div class="middle-box text-center loginscreen animated fadeInDown">
+			<div class="ttu-login">
+				<div class="m-b">
+					<div id="logo-vertical-c" class="center-block"></div>
+				</div>
+				<span class="btn-group m-b pull-left">
+					<a id="uni-id-select" class="btn btn-sm btn-default" type="button">Uni-ID</a>
+					<a id="id-card-select" class="btn btn-sm btn-grey" type="button">ID-Kaart</a>
+					<a id="mobile-id-select" class="btn btn-sm btn-grey" type="button">Mobiil-ID</a>
+				</span>
+
+
+				<form class="m-t" role="form" action="index.html">
+					<!-- UNI-ID CONTENT IS LOADED HERE -->
+					<div id="login-content" class=""></div>
+					<!-- END UNI-ID CONTENT -->
+
+
+					<button type="submit" class="btn btn-primary block full-width m-b">Sisene</button>
+					<div class="row">
+						<div class="col-xs-3" style="padding-right: 0px;"><div class=" btn-group pull-left m-b">
+							<a id="login-est" class="btn btn-xs btn-default">EST</a>
+							<a id="login-eng" class="btn btn-xs btn-grey">ENG</a>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<a href="#" style="margin-left: 0px;"><small>Unustasid salasõna?</small></a>
+						</div>
+						<div class="col-xs-3">
+						<a data-toggle="modal" href="#modal-form" class="fa fa-question-circle pull-right text-muted" style="font-size: 21px;"></a>
+						</div>
+					</div>
+				</form>
+				<p class="row"> <small class="center-block col-xs-12">TTÜ siseveeb ver 0.1 &copy; 2015</small> </p>
+			</div>
+		</div>
+		<!-- MODAL FOR HELP -->
+		<div id="modal-form" class="modal fade" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Sulge">×</button>
+						<h4 class="modal-title">Uni-ID autentimisportaal</h4>
+					</div>
+					<div class="modal-body">
+						<h2 class="sectionedit1" id="mis_on_uni-id">Mis on Uni-ID?</h2>
+						<div class="level2">
+
+							<p>
+								Tallinna Tehnikaülikool on võtnud suuna tsentraalse identiteedihalduse poole mis tähendab, et üleülikooliliste infosüsteemide kasutamiseks on ainult üks kasutajatunnus.
+							</p>
+
+							<p>
+								<a href="/it/et/doc/uni-id" class="wikilink1" title="it:et:doc:uni-id">Uni-ID tunnus</a> tekib ja sulgub vastavalt sisemistel protseduurireeglitele ning on seotud kasutaja isikukoodiga tehes võimalikuks kasutaja tuvastamine paralleelselt ka ID kaardiga / Mobiil-ID'ga.
+							</p>
+
+							<p>
+								Uni-ID juurutusprojekt kestab kuni 2015. aasta keskpaigani - selleks ajaks peaks enamus infosüsteeme olema liidetud keskse autentimisportaaliga.
+							</p>
+
+						</div>
+						<!-- EDIT1 SECTION "Mis on Uni-ID?" [1-572] -->
+						<h3 class="sectionedit2" id="passttuee">pass.ttu.ee</h3>
+						<div class="level3">
+
+							<p>
+								Oma kasutajatunnuse (üldjuhul kujul Ees.Perenimi) parooli saab ise seadistada keskkonnas <a href="https://pass.ttu.ee" class="urlextern" title="https://pass.ttu.ee" rel="nofollow">https://pass.ttu.ee</a> logides sisse oma ID kaardiga. Muudatuste jõustumiseks anna palun aega kuni 5 minutit.
+							</p>
+
+						</div>
+
+						<h4 id="it_kasutajatugi">IT kasutajatugi</h4>
+						<div class="level4">
+
+							<p>
+								Probleemide korral sisselogimisel palun anda sellest viivitamatult teada IT kasutajatoe spetsialistidele helistades 620 3333 või kirjutades <a href="mailto:helpdesk@ttu.ee" class="mail" title="helpdesk@ttu.ee">helpdesk@ttu.ee</a>
+							</p>
+
+						</div>
+						<!-- EDIT2 SECTION "pass.ttu.ee" [573-] -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END MODAL FOR HELP -->
+		<!-- Main scripts -->
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/login_scripts.js"></script>
+	</body>
+
+</html>
