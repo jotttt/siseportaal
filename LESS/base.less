@@ -1,15 +1,18 @@
 // main: style.less
 
+html {
+	min-height: 100%;
+	position: relative;
+}
+
 body {
+	height: 100%;
 	font-family:  "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color: #ffffff;
+	background-color: @bg-color;
 	font-size: 14px;
 	color: @text-color;
 	overflow-x: hidden;
-}
-
-html,body {
-	height: 100%;
+	margin-bottom: 40px; /* Margin bottom by footer height */
 }
 
 body.full-height-layout #wrapper,
@@ -18,8 +21,19 @@ body.full-height-layout #page-wrapper {
 }
 
 #page-wrapper {
-	min-height: auto;
+	min-height: 768px;
 	border-left: 1px solid @lightest-grey;
+}
+
+@media (max-width: 768px) {
+	#page-wrapper {
+		min-height: 100%;
+	}
+}
+
+#page-wrapper.closed {
+	margin: 0 0 0 0px;
+	padding: 0;
 }
 
 #page-wrapper.min.closed {
@@ -56,11 +70,13 @@ body.boxed-layout #wrapper {
 a {
 	cursor: pointer;
 	color: @text-color; //added
+	outline: 0;
 }
 
 a:hover, a:focus {
 	text-decoration: none;
 	color: @cherry; // added
+	outline: 0;
 }
 
 .border-bottom {
@@ -75,10 +91,12 @@ a:hover, a:focus {
 	font-weight: 400;
 }
 
-
-
 .text-uppercase {
 	text-transform: uppercase;
+}
+
+li {
+	list-style-type: none;
 }
 //HIGH CONTRAST CONTENT
 //------------------------------------------------------------------
@@ -229,21 +247,19 @@ a:hover, a:focus {
 }
 
 hr {
-	display: block;
-	width: 150px;
-	height: 1px;
-	border: 0;
-	border-top: 3px solid #f9f9f9;
-	margin: 0 auto;
-	padding: 0;
+
 }
 
 hr.top {
+	display: block;
 	margin: 40px auto 20px;
+	width: 150px;
 }
 
 hr.bottom {
+	display: block;
 	margin: 20px auto;
+	width: 150px;
 }
 
 .hr-line-dashed {
@@ -339,7 +355,7 @@ video {
 #wrapper {
 	width: 100%;
 	overflow: hidden;
-	background: white;
+	background: @bg-color;
 }
 
 .wrapper {
@@ -349,7 +365,14 @@ video {
 .wrapper-content {
 	padding: 20px 10px 40px;
 	min-height: auto;
+}
 
+@media (max-width: 768px) {
+
+	.wrapper-content {
+		padding: 20px 0px 40px 0px;
+		min-height: auto;
+	}
 }
 
 #content-wrapper2 {
@@ -364,8 +387,16 @@ video {
 
 #page-wrapper {
 	padding: 30px 45px 45px 45px;
-	min-height: 568px;
 	position: relative !important;
+}
+
+@media (max-width: 768px) {
+
+	#page-wrapper {
+		padding: 30px 5px 45px 5px;
+		position: relative !important;
+	}
+
 }
 
 #page-wrapper.min {
@@ -374,7 +405,7 @@ video {
 @media (max-width: 768px) {
 	#page-wrapper.min {
 		margin-left: 0px;
-		padding: 30px 15px 45px 15px;
+		padding: 30px 5px 45px 5px;
 	}
 }
 
@@ -386,7 +417,6 @@ video {
 	#page-wrapper {
 		position: inherit;
 		margin: 0 0 0 @sidebar-width;
-		min-height: 1000px;
 	}
 }
 
@@ -418,18 +448,24 @@ ul.unstyled, ol.unstyled {
 }
 
 
-/* FOOTER */
+/*****************************************************************
+FOOTER
+*****************************************************************/
 
 .footer {
-	background: none repeat scroll 0 0 white;
-	border-top: 10px solid white;
-	padding-right: 40px;
-	bottom: 0;
-	left: 0;
 	position: absolute;
-	right: 0;
-	height: 40px;
+	bottom: 0;
+	width: 100%;
+	height: 40px; /* Set the fixed height of the footer here */
+	background-color: white;
+	border-top: @border;
 	overflow-y: hidden;
+}
+
+.footer div {
+	float: right;
+	color: grey;
+	margin: 10px 20px 0 0;
 }
 
 .footer.closed {
@@ -734,6 +770,7 @@ code {
 	margin-bottom: 0;
 	padding: 14px 15px 7px;
 	min-height: 48px;
+	cursor: pointer;
 }
 
 @keyframes glowing {
@@ -878,10 +915,10 @@ table.table-mail tr td {
 /* BACKGROUNDS */
 
 .gray-bg {
-	background-color: #fcfcfc;
+	background-color: @bg-color;
 }
 .gray-darker-bg {
-	background-color: @lightest-grey;
+	background-color: @lightest-grey !important;
 }
 .gray-darkest-bg {
 	background-color: @lighter-grey;
@@ -900,17 +937,43 @@ table.table-mail tr td {
 .cherry-bg > ul > li > a {
 	color: white;
 }
-
+.cherry-bordered-bg {
+	border: 2px solid @cherry;
+}
 .cherry-mod-bg {
-	background-color: @cherry;
 	.voremodulatsioon-nav;
-	background-position: 100% 0;
+	//-moz-background-position-x: 700px;
+	//background-position: 100% 0;
 	background-repeat: no-repeat;
+	position: absolute;
+	width: 400px;
+	float: right;
+	height: 60px;
+	right: 0;
+	z-index: -1;
+}
+
+@media(max-width: 1500px) {
+	.cherry-mod-bg {
+		//background-position-x: 500px;
+	}
+}
+
+@media(max-width: 1200px) {
+	.cherry-mod-bg {
+		//background-position-x: 400px;
+	}
 }
 
 @media(max-width: 992px) {
 	.cherry-mod-bg {
-		background-repeat:repeat;
+		//background-position-x: 270px;
+	}
+}
+@media(max-width: 768px) {
+	.cherry-mod-bg {
+		//background-position-x: 170px;
+		//background-repeat:repeat;
 	}
 }
 
@@ -932,6 +995,10 @@ table.table-mail tr td {
 	background-color: @lazur;
 }
 
+.green-bg {
+	background-color: @lazur;
+}
+
 .yellow-bg {
 	background-color: @yellow;
 }
@@ -944,7 +1011,7 @@ table.table-mail tr td {
 	background-color: #262626;
 }
 .grey-modulation-bg {
-	background: url(../img/vv.svg) top left repeat, url(../img/v2.svg) top left no-repeat;
+	background: url(../img/dummy.png) top left repeat, url(../img/v2.svg) top left no-repeat;
 	background-attachment: fixed;
 	background-position: top left;
 	-webkit-background-size: auto, cover;
@@ -1107,51 +1174,78 @@ table.table-mail tr td {
 	font-size: inherit;
 }
 
+/******************************************************************
+JUMBOTRON
+******************************************************************/
 .jumbotron {
+	background: white;
+	border: 1px solid @lightest-grey;
 	border-radius: 6px;
 	padding: 40px;
 }
 
-.jumbotron h1 {
-	margin-top: 0;
+.jumbotron .logo {
+	margin-bottom: 70px;
 }
+
+@media screen and (max-width: 1500px) {
+	.jumbotron .logo {
+		margin-bottom: 30px;
+	}
+	.jumbotron h1 {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.jumbotron .logo {
+		margin-bottom: 30px;
+	}
+	.jumbotron h1 {
+		font-size: 30px;
+		font-weight: 600;
+	}
+}
+/******************************************************************
+JUMBOTRON END
+******************************************************************/
 
 /* COLORS */
 .text-cherry {
-	color: @cherry;
+	color: @cherry !important;
 }
 
 .text-navy {
-	color: @cherry;
+	color: @cherry !important;
 }
 
 .text-primary {
-	color: inherit;
+	color: inherit ;
 }
 
 .text-success {
-	color: @blue;
+	color: @green !important;
 }
 
 .text-info {
-	color: @lazur;
+	color: @blue !important;
 }
 
 .text-warning {
-	color: @yellow;
+	color: @yellow !important;
 }
 
 .text-danger {
-	color: @red;
+	color: @red !important;
 }
 .text-black {
 	color: #000000;
 }
 .text-muted {
-	color: @grey;
+	color: @grey !important;
 }
 .text-lighter-grey {
-	color: @lighter-grey;
+	color: @lighter-grey !important;
 }
 .text-white {
 	color: white !important;
@@ -1321,7 +1415,7 @@ a.close-canvas-menu:hover {
 }
 
 .m-l-none {
-	margin-left: 0;
+	margin-left: 0 !important;
 }
 
 .m-l-xs {
@@ -1381,7 +1475,7 @@ a.close-canvas-menu:hover {
 }
 
 .m-t-xxs {
-	margin-top: 1px;
+	margin-top: 2px;
 }
 
 .m-t-xs {
@@ -1437,11 +1531,11 @@ a.close-canvas-menu:hover {
 }
 
 .m-r-none {
-	margin-right: 0;
+	margin-right: 0 !important;
 }
 
 .m-r-xxs {
-	margin-right: 1px;
+	margin-right: 2px;
 }
 
 .m-r-xs {
@@ -1466,6 +1560,10 @@ a.close-canvas-menu:hover {
 
 .m-r-xl {
 	margin-right: 40px;
+}
+
+.m-r-none {
+	margin-right: 0px;
 }
 
 .m-r-n-xxs {
@@ -1501,7 +1599,7 @@ a.close-canvas-menu:hover {
 }
 
 .m-b-xxs {
-	margin-bottom: 1px;
+	margin-bottom: 2px;
 }
 
 .m-b-xs {
@@ -1749,10 +1847,23 @@ a.close-canvas-menu:hover {
 }
 //END GRID SYSTEM EXTENSION
 
+
+.right,.left {
+	position: absolute;
+}
+
+.right {
+	right: 2px;
+}
+
+.left{
+	left: 2px;
+}
+
 // Bootstrap issue in 3.3.0 with modal https://github.com/twbs/bootstrap/issues/9855
 // Fix
 body.modal-open {
-	padding-right:inherit !important;
+	//padding-right:inherit !important;
 }
 // IE9 fix
 #lblDisposalDate{

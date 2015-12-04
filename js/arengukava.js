@@ -1,10 +1,11 @@
 /*jshint -W117 */
 $(function() {
 
-	//TOGGLE 1ST LVL BUTTON STATE
+	//TOGGLE 1ST LVL BUTTON STATE AND DISPLAY DETAILS BUTTON
 	//--------------------------------------------------------------
 	$(".goal-badge").click(function(){
 		$(this).toggleClass("active");
+		$("#goal-details").toggleClass("hidden");
 	});
 
 

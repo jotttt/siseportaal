@@ -1,0 +1,278 @@
+<style>
+    .onoffswitch { width: 80px; }
+    .onoffswitch-switch { width: 15px; right: 65px; }
+    .onoffswitch-inner:before { text-transform: uppercase; }
+    .onoffswitch-inner:after { text-transform: uppercase; color: #870042; }
+    .critical:before { content: "$txt_critical$" !important; }
+    .critical:after { content: "$txt_regular$" !important; }
+    .user_lang:before { content: "$txt_en$" !important; }
+    .user_lang:after { content: "$txt_et$" !important; }
+    .send_notice:before { content: "$txt_yes$" !important; }
+    .send_notice:after { content: "$txt_no$" !important; }
+    .disabled_brd:before { background-color: #fff; color: #aaa; }
+    .disabled_brd:after { color: #aaa; }
+</style>
+
+<form method="post" id="request" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
+    <input type="hidden" id="request_method" name="request_method" value="$request_method$">
+    <input type="hidden" name="request_id" value="$request_id$">
+    <input type="hidden" name="domain" value="$request_domain$">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="request_id" class="control-label col-xs-3">$txt_request_id$:</label>
+            <div class="col-xs-9">
+                <input type="text" name="request_id" class="form-control" value="$request_id$" disabled>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group">
+            <label for="requester" class="control-label col-xs-3">$txt_requester$:$req_requester$</label>
+            <div class="col-xs-9">
+                <input type="text" name="requester" id="requester" class="form-control" value="$requester$" autocomplete="off"$task_requester_disabled$>
+                <span id="req_requester" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_requester$</span>
+                <div id="choose_requester" style="display: none"></div>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group">
+            <label for="user_lang" class="control-label col-xs-3" style="padding-top:0px">$txt_user_lang$: </label>
+            <div class="col-xs-9">
+                <div class="switch" style="float: left">
+                    <div class="onoffswitch langswitch">
+                        <input type="checkbox" id="user_lang" name="user_lang" class="onoffswitch-checkbox" value="en"$lang_checked$$lang_disabled$>
+                        <label class="onoffswitch-label$lang_brd_disabled$" for="user_lang">
+                            <span class="onoffswitch-inner user_lang$lang_brd_disabled$"/>
+                            <span class="onoffswitch-switch$lang_brd_disabled$"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group"$hide_creator$>
+            <label for="creator" class="control-label col-xs-3">$txt_creator$:</label>
+            <div class="col-xs-9">
+                <input type="text" name="creator" class="form-control" value="$creator$" autocomplete="off"$creator_disabled$>
+            </div>
+
+            <p class="padding"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="service" class="control-label col-xs-3">$txt_subj$:$req_subject$</label>
+            <div class="col-xs-9">
+                <select name="service" id="service" tabindex="2" class="form-control" style="width:500px"$service_disabled$>
+                    <!--<option value="" data-solve="0" data-solve-critical="0" data-critical="0">$txt_default_select$</option>-->
+                    $fn_list_services$
+                    <option value="$id$:$type_id$" data-solve="$solve$" data-solve-critical="$solve_critical$" data-critical="$default_critical$"$selected$>$seqno$. $descr$</option>
+                    $fn_stop$
+                </select>
+                <span id="req_service" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_service$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="service_specify"$hide_service_specify$>
+            <label for="subject" class="control-label col-xs-3">$txt_specify$:$req_subject$</label>
+            <div class="col-xs-9">
+                <input type="text" name="subject" id="subject" class="form-control" style="width: 500px" value="$subject$"$subject_disabled$>
+                <span id="req_subject" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_subject$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group"$hide_problem_location$>
+            <label for="problem_location" class="control-label col-xs-3">$txt_problem_location$:$req_location$</label>
+            <div class="col-xs-9">
+                <input type="hidden" name="room_id" id="room_id" value="">
+                <input type="text" name="problem_location" id="problem_location" class="form-control" autocomplete="off" style="width: 500px"$location_disbled$>
+                <span id="req_problem_location" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_location$</span>
+                <div id="choose_problem_location" style="display: none"></div>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group"$hide_prio$>
+            <label for="prio" class="control-label col-xs-3" style="padding-top: 0px">$txt_request_prio$: </label>
+            <div class="col-xs-9">
+                <!--<input type="checkbox" name="prio" value=1$prio_high$> $txt_critical$-->
+                <div class="switch" style="float: left">
+                    <div class="onoffswitch">
+                        <input type="checkbox" id="prio" name="prio" class="onoffswitch-checkbox" value=1$prio_disabled$$prio_high$>
+                        <label class="onoffswitch-label$prio_brd_disabled$" for="prio">
+                            <span class="onoffswitch-inner critical$prio_brd_disabled$"/>
+                            <span class="onoffswitch-switch$prio_brd_disabled$"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group"$hide_duedate$>
+            <label for="duedate" class="control-label col-xs-3">$txt_duedate_real$: </label>
+            <div class="col-xs-9">
+                <input name="duedate" id="duedate" tabindex="4" type="text" value="$duedate$" class="datepicker form-control" size="small" style="width: 150px"$duedate_disabled$>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group">
+            <label for="details" class="control-label col-xs-3">$txt_specifications$:$req_details$</label>
+            <div class="col-xs-9">
+                <textarea name="details" id="details" class="form-control" style="width: 500px; height: 100px" rows=8 tabindex="2" maxlength="8192" placeholder="$txt_request_details_title$"$details_disabled$>$details$</textarea>
+                <span id="req_details" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_details$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group">
+            <label for="status" class="control-label col-xs-3">$txt_status$:</label>
+            <div class="col-xs-9">
+                <select id="request_status" name="status" class="form-control" style="width: 200px"$status_disabled$>
+                    $fn_req_list_status$
+                    <option value="$list_value$"$selected$>$list_descr$</option>
+                    $fn_stop$
+                </select>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="hide_closing_reason"$hide_closing_reason$>
+            <label for="closing_reason" class="control-label col-xs-3">$txt_closing_reason$:$req_closing_reason$</label>
+            <div class="col-xs-9">
+                <select name="closing_reason" id="closing_reason" class="form-control" style="width: 200px"$req_closing_reason_disabled$>
+                    <option value="">$txt_default_select$</option>
+                    $fn_list_closing_reason$
+                    <option value="$list_value$"$selected$>$list_descr$</option>
+                    $fn_stop$
+                </select>
+                <span id="req_closing_reason" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_closing_reason$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="used_time"$hide_used_time$>
+            <label for="spent_time" class="control-label col-xs-3">$txt_spent_time$:</label>
+            <div class="col-xs-9">
+                <select name="spent_hrs" class="spent form-control"$task_hrs_disabled$>
+                    $fn_list_hrs$
+                    <option value="$list_value$"$selected$>$list_descr$</option>
+                    $fn_stop$
+                </select>
+                <div class="spent_suf"> h </div>
+                <select name="spent_min" class="spent form-control"$task_min_disabled$>
+                    $fn_list_min$
+                    <option value="$list_value$"$selected$>$list_descr$</option>
+                    $fn_stop$
+                </select>
+                <div class="spent_suf">m</div>
+            </div>
+
+            <br/><br/>
+
+            <label for="notice" class="control-label col-xs-3">$txt_notice$:</label>
+            <div class="col-xs-9">
+                <div class="switch" style="float: left">
+                    <div class="onoffswitch">
+                        <input type="checkbox" id="send_notice" name="send_notice" class="onoffswitch-checkbox" checked value=1 $send_notice$$send_notice_disabled$>
+                        <label class="onoffswitch-label$notice_brd_disabled$" for="send_notice">
+                            <span class="onoffswitch-inner send_notice$notice_brd_disabled$"/>
+                            <span class="onoffswitch-switch$notice_brd_disabled$"/>
+                        </label>
+                    </div>
+                </div>
+                <span style="float: left">&nbsp;$txt_send_notice$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="hide_comment"$hide_chat$>
+            <label for="comment" class="control-label col-xs-3">$txt_comment$:<span id="comment_mark"$hide_req_comment$>$req_comment$</span></label>
+            <div class="col-xs-9">
+                <textarea name="comment" id="commentbox" class="form-control" rows=4 placeholder="$txt_comment_requester$" tabindex="2" maxlength="2048"$task_comment_disabled$></textarea>
+                <span id="req_commentbox" class="req"><i class="fa fa-exclamation-circle"></i> $txt_req_comment$</span>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group">
+            <label for="submit" class="control-label col-xs-3"></label>
+
+            <div class="col-xs-5">
+                <button type="submit" id="request_submit" class="btn btn-primary pull-left" tabindex="1">
+                    <span id="request_add_txt"$hide_add_req$>$txt_save_and_commit$</span>
+                    <span id="request_upd_txt"$hide_update_req$>$txt_update_req$</span>
+                </button>
+            </div>
+
+            <div class="col-xs-3"></div>
+            <div class="col-xs-3">
+                <a href="$request_uri$/parent" class="ajax-load btn btn-warning"$hide_close_btn$>$txt_dismiss$</a>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="tasks"$hide_tasks$>
+            <label for="task_list" class="control-label col-xs-3">$txt_tasks$:</label>
+            <div class="col-xs-9">
+                <div id="task_list"></div>
+                <button type="button" class="btn btn-primary pull-left add_new_task" tabindex="1">$txt_add_new_task$</button>
+            </div>
+        </div>
+
+        <p class="padding"></p>
+
+        <div class="form-group" id="files"$hide_files$>
+            <label for="submit" class="control-label col-xs-3" style="padding-top: 25px">$txt_files$:</label>
+            <div class="col-xs-9">
+                <div class="uploaded-files" style="position: relative; left: 0px; height: 100%;" data-parent="$request_id$"></div>
+                <br/>
+                <div class="dropzone" style="position: relative; width: 500px; border: 1px solid #ccc;$hide_uploads$">
+                    <div class="dropzone-previews">
+                        <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="request_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="$txt_dismiss$"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="request_modal_title">$txt_error$</h4>
+      </div>
+      <div class="modal-body">
+          <i class="fa fa-exclamation-circle"></i> $txt_request_requirements$
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">$txt_dismiss$</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    list_tasks("$request_id$");
+</script>

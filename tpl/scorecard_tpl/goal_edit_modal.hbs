@@ -1,0 +1,66 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title">Eesmärgi detailvaade</h4>
+    <small class="font-bold">Siin saad muuta ja uuendada eesmärgi parameetreid</small>
+</div>
+<div class="modal-body">
+    <!-- TEGEVUSARUANNE -->
+        <div class="row">
+            <div class="col-sm-4 m-t-xs">
+                <h5 class="text-muted text-uppercase">{{t.txt_language}}</h5>
+                    <select id="goal-lang" name="lang" class="form-control m-b">
+                        <option value="et" {{#compare lang "==" "et"}}selected{{/compare}}>{{t.txt_estonian}}</option>
+                        <option value="en" {{#compare lang "==" "en"}}selected{{/compare}}>{{t.txt_english}}</option>
+                    </select>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-xl-6 m-b">
+            <h5 class="text-muted text-uppercase m-b-lg">eesmärgi pealkiri</h5>
+            <a style="display: inline;" class="editable editable-pre-wrapped editable-click" href="#" id="goal-title" data-lang="et" data-type="textarea">{{goal.title}}</a>
+        </div>
+        <div class="col-xl-6 m-b">
+            <h5 class="text-muted text-uppercase m-b-lg">eesmärgi kirjeldus</h5>
+            <p id="wikiText">{{goal.wikiText}}</p>
+        </div>
+
+        <div class="col-xl-6">
+            <h5 class="text-muted text-uppercase m-b-lg">eesmärgiga seotud tegevuste staatus</h5>
+            <ul class="">
+                <li class="m-b">
+                    <button type="button" class="btn btn-info btn-outline m-r-sm">{{goal.actionCount}}</button> Seotud tegevust{{#compare goal.actionCount "!=" 0}}, millest{{/compare}}
+                </li>
+                <hr class="gray-darkest-bg" style="width: 50%">
+                <hr class="">
+                {{#compare goal.actionNotStartedCount "!=" 0}}
+                <li class="m-t m-b-xs">
+                    <button type="button" class="btn btn-danger m-r-sm ">{{goal.actionNotStartedCount}}</button> alustamata
+                </li>
+                {{/compare}}
+                {{#compare goal.actionInProcessCount "!=" 0}}
+                <li class="m-b-xs">
+                    <button type="button" class="btn btn-warning m-r-sm  ">{{goal.actionInProcessCount}}</button> töös
+                </li>
+                {{/compare}}
+                {{#compare goal.actionDoneCount "!=" 0}}
+                <li class="m-b-xs">
+                    <button type="button" class="btn btn-success m-r-sm  ">{{goal.actionDoneCount}}</button> valmis
+                </li>
+                {{/compare}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="">
+                <h5 class="text-muted text-uppercase">{{t.txt_gen_progress}}</h5>
+                <div class="progress m-t" data-toggle="tooltip" data-placement="top" data-original-title="{{goal.progress}}%">
+                    <div style="width: {{goal.progress}}%;" class="progress-bar progress-bar-success"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEGEVUSARUANNE END -->
+</div>
+

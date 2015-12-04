@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-globe"></i> $txt_search_contacts$ </div>
+            <div class="panel-body">
+
+                <form method="post" action="/$focus$/$sess_id$">
+                    <div class="form-group col-md-8">
+
+                        <div id="the-basics" class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-th"></i></span>
+
+                            <input type="text" data-provide="typeahead" name="search_user" maxlength="32" value="$search_user$" class="typeahead form-control">
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary" href="#"><i class="fa fa-search"></i> $txt_search$</button>
+                            </span>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+$search_result$

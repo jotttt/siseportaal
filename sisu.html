@@ -23,20 +23,24 @@
 
 			<!-- TOP NAVBAR
 --------------------------------------------------------------->
-			<nav class="navbar navbar-static-top nav-down cherry-mod-bg" role="navigation">
-				<div class="navbar-header">
-					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed pull-right" type="button">
-						<i class="fa fa-reorder"></i>
-					</button>
-					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+			<div class="cherry-mod-bg"></div>
+				<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+				</span>
+				<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+				</span>
+				<div id="mobile-search" class="hidden">
+					<form>
+						<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					</form>
 				</div>
+				<span class="navbar-header hidden-xs">
+					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
+				</span>
 				<div class="navbar-collapse collapse" id="navbar">
 					<ul class="nav navbar-nav">
-						<li id="dash-mobile-search">
-							<form>
-								<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
-							</form>
-						</li>
 						<li>
 							<a href="#">Dokumendid</a>
 						</li>
@@ -195,6 +199,7 @@
 							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
 					</ul>
 				</div>
+
 			</nav>
 			<!-- end top navbar ------------------------------------->
 

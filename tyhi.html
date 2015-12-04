@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Sisulehe kujundus</title>
+		<title>Starter template</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -18,25 +18,28 @@
 
 	<body>
 
-		<div id="wrapper" class="gray-bg">
-
+		<div id="wrapper" class="">
 
 			<!-- TOP NAVBAR
 --------------------------------------------------------------->
-			<nav class="navbar navbar-static-top nav-down cherry-bg" role="navigation">
-				<div class="navbar-header">
-					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed pull-right" type="button">
-						<i class="fa fa-reorder"></i>
-					</button>
-					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+				<div class="cherry-mod-bg"></div>
+				<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+				</span>
+				<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+				</span>
+				<div id="mobile-search" class="hidden">
+					<form>
+						<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					</form>
 				</div>
+				<span class="navbar-header hidden-xs">
+					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
+				</span>
 				<div class="navbar-collapse collapse" id="navbar">
 					<ul class="nav navbar-nav">
-						<li id="dash-mobile-search">
-							<form>
-								<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
-							</form>
-						</li>
 						<li>
 							<a href="#">Dokumendid</a>
 						</li>
@@ -136,12 +139,18 @@
 						</li>
 					</ul>
 
+					<!-- TOP NAVBAR RIGHT SIDE
+----------------------------------------------------------------->
 					<ul class="nav navbar-top-links navbar-right">
-						<li class="dropdown m-l">
-							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+
+
+						<!-- NAVBAR NOTIFICATIONS
+----------------------------------------------------------------->
+						<li class="dropdown right-sidebar m-l">
+							<a class="dropdown-toggle count-info" href="#">
 								<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
 							</a>
-							<ul class="dropdown-menu dropdown-alerts">
+							<ul class="dropdown-menu">
 								<li>
 									<a href="mailbox.html">
 										<div>
@@ -179,33 +188,162 @@
 								</li>
 							</ul>
 						</li>
-						<li class="show-icon ">
+						<!-- end navbar notifications ----------------------->
+
+						<!-- LOGOUT BUTTON
+----------------------------------------------------------------->
+						<li class="show-icon">
 							<a href="login.html">
 								<i class="fa fa-sign-out"></i>
 							</a>
 						</li>
-						<li  class="show-icon hidden-xs">
-							<a class="right-sidebar-toggle">
+						<!-- end logout button ------------------------------>
+
+						<!-- RIGHT SIDEBAR
+----------------------------------------------------------------->
+						<li class="dropdown right-sidebar">
+							<a href="#">
 								<i class="fa fa-tasks"></i>
 							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<div class="setings-item">
+										<span>
+											Globaalne otsing
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+												<label class="onoffswitch-label" for="example">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Keela messenger
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+												<label class="onoffswitch-label" for="example2">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Luba ajaloo salvestus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+												<label class="onoffswitch-label" for="example3">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Kõrge kontrastsus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+												<label class="onoffswitch-label" for="example4">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Teavitused emailile
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+												<label class="onoffswitch-label" for="example5">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Esilehe moodulite ümberpaigutus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+												<label class="onoffswitch-label" for="example6">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="notifications.html">
+											<strong>Seadistuste detailvaade</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li>
+							</ul>
 						</li>
+						<!-- end right sidebar ------------------------------>
+
 					</ul>
+
+					<!-- NAVBAR SEARCH
+----------------------------------------------------------------->
 					<ul class="nav navbar-top-links navbar-right visible-md visible-lg">
 						<form>
 							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
 					</ul>
+					<!-- end navbar search -------------------------------->
+
+					<!-- end top navbar right side -------------------------->
+
 				</div>
+
 			</nav>
-			<!-- end top navbar ------------------------------------->
+			<!-- end top navbar --------------------------------------->
 
 
-
-			<!-- LEFT NAVBAR
+			<!-- LEFT SIDEBAR
 --------------------------------------------------------------->
-			<nav id="m-menu">
+			<nav id="m-menu" class="min" role="navigation">
 				<ul>
-					<li><a href="#"><i class="fa fa-desktop m-r-sm"></i>Minu Töölaud</a></li>
-					<li><span><i class="fa fa-sliders m-r-sm"></i>IT teenuste haldus</span>
+					<li><a href="#"><i class="fa fa-desktop"></i>Minu Töölaud</a></li>
+					<li><span><i class="fa fa-sliders"></i>IT teenuste haldus</span>
 						<ul>
 							<li><a href="#">Seire</a></li>
 							<li><a href="#">Nimeserver</a></li>
@@ -222,33 +360,56 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="#"><i class="fa fa-pencil m-r-sm"></i>Sisuhaldus</a></li>
+					<li><a href="#"><i class="fa fa-hdd-o"></i>Sisuhaldus</a></li>
+					<li><a href="#"><i class="fa fa-line-chart"></i>Graafikud</a></li>
+					<li><a href="#"><i class="fa fa-calendar"></i>Kalender</a></li>
+					<li><a href="#"><i class="fa fa-building-o"></i>Haldusüksused</a></li>
+					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Arengukava</a></li>
+					<li><a href="#"><i class="fa fa-wifi"></i>Võrgutalitus</a></li>
 				</ul>
 			</nav>
-			<!-- end left navbar ------------------------------------>
+			<!-- end left sidebar ----------------------------------->
 
 			<!-- CONTENT
 --------------------------------------------------------------->
-			<div id="page-wrapper" class="gray-bg">
+			<div id="page-wrapper" class="gray-bg min">
+
+				<!--BREADCRUMB
+--------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="index.html">This is</a>
+							</li>
+							<li class="active">
+								<strong>Breadcrumb</strong>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end breadcrumb ----------------------------------->
 
 				<!--PAGE
 --------------------------------------------------------------->
+				<div class="wrapper-content animated fadeIn">
 
 
-				<!--PAGE END
---------------------------------------------------------------->
 
-				<!--FOOTER
---------------------------------------------------------------->
-				<div class="footer">
-					<div class="pull-right">
-						TTÜ Siseportaal &copy; 2014 - 2015
-					</div>
+
+
+
+
+
+
+
+
 				</div>
+				<!-- end page ----------------------------------------->
 
 				<!-- FULLSCREEN MODE TOGGLE BUTTON
 ------------------------------------------------------------------->
-				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button"><i class="fa fa-arrows"></i></button>
+				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
 
 				<!-- SCROLL TO TOP BUTTON
 ------------------------------------------------------------------->
@@ -260,271 +421,22 @@
 		</div>
 		<!-- end wrapper ------------------------------------------>
 
-
-
-
-
-		<!--MODAL CONTENT ACTION BADGE 1
+		<!--FOOTER
 --------------------------------------------------------------->
-		<div class="modal inmodal fade" id="action-badge-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-						<h4 class="modal-title">Tegevuskaarti 3.1.1 muutmine</h4>
-						<small class="font-bold">Siin saad muuta ja uuendada tegevuse staatust, sisu ja muid parameetreid</small>
-					</div>
-					<div class="modal-body">
-						<div class="m-xs">
-							<div class="row">
-								<div class="col-sm-10">
-									<h5 class="text-muted text-uppercase">Sisu</h5>
-									<a href="#" id="organization" data-type="textarea" data-value="Siin on kirjeldatud esimene tegevus, mis teenib eesmärgi huve. Siin on kirjeldatud esimene tegevus, mis teenib eesmärgi huve." data-pk="1" data-url="/post"></a>
-								</div>
-								<div class="col-sm-2">
-									<h5 class="text-muted text-uppercase m-b">Tag</h5>
-									<a href="#" class=""><div class="label action-label"><i class="fa fa-arrows"></i></div></a>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10 m-t">
-									<h5 class="text-muted text-uppercase">Tulemusnäitaja</h5>
-
-									<strong class="pull-left m-r-xs">Näitaja 1:</strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-									<strong class="pull-left m-r-xs">Näitaja 2:</strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum itaque tempore ullam libero aut.</p>
-									<strong class="pull-left m-r-xs">Näitaja 3:</strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores libero, excepturi pariatur beatae sit. Ipsam consequuntur quibusdam suscipit quidem, inventore quas.</p>
-								</div>
-								<div class="col-sm-2 m-t-xs">
-									<h5 class="text-muted text-uppercase">Progress</h5>
-									<div class=""><strong>26%</strong></div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 m-t">
-									<h5 class="text-muted text-uppercase">Üldvastutaja</h5>
-									<strong class="">Kalle Kuusk</strong>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 m-t">
-									<h5 class="text-muted text-uppercase">Tähtaeg</h5>
-									<div  class=""><strong>01.01.2016</strong></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
-						<button type="button" class="btn btn-primary">Salvesta muutused</button>
-					</div>
-				</div>
+		<div class="footer">
+			<div>
+				TTÜ Siseportaal &copy; 2014 - 2015
 			</div>
 		</div>
-		<!--MODAL CONTENT ACTION BADGE 1 END
---------------------------------------------------------------->
-
-
-
-
 
 		<!--MODAL CONTENT
 --------------------------------------------------------------->
-		<div id="right-sidebar" class="">
-			<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
-				<div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
 
-					<ul class="nav nav-tabs navs-3">
+		<!-- end modal content ------------------------------------>
 
-						<li class="active"><a data-toggle="tab" href="#tab-11" aria-expanded="true">
-							Valik 1
-							</a>
-						</li>
-						<li><a data-toggle="tab" href="#tab-22">
-							Valik 2
-							</a>
-						</li>
-						<li class="">
-							<a data-toggle="tab" href="#tab-33" aria-expanded="false">
-								<i class="fa fa-gear"></i>
-							</a>
-						</li>
-					</ul>
-					<div class="tab-content">
-						<div id="tab-11" class="tab-pane active">
-							<div class="sidebar-title">
-								<h3> <i class="fa fa-folder"></i> Minu failid</h3>
-								<small><i class="fa fa-tim"></i> Kaustas on 2 dokumenti</small>
-							</div>
-							<div>
-								<ul class="sidebar-list">
-									<li class="">
-										<a href="#/" class="">
-											<div class="pull-left text-center m-r">
-												<i class="fa fa-file-text-o fa-3x"></i>
-											</div>
-											<div class="m-l m-b-xs">Puhkuste graafiku koostamise juhend ja soovitused tuleviku mudeli laiendamiseks.pdf</div>
-											<div class="small text-muted pull-right ">Lisatud 15.02.2015</div>
-										</a>
-									</li>
-									<li>
-										<a href="#/">
-											<div class="pull-left text-center m-r">
-												<i class="fa fa-file-text-o fa-3x"></i>
-											</div>
-											<div class="m-l m-b-xs">Majandusaruande kolmas lisa ja seletused.pdf</div>
-											<div class="small text-muted pull-right">Lisatud 12.06.2014</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div id="tab-22" class="tab-pane">
-							<div class="sidebar-title">
-								<h3> <i class="fa fa-cube"></i> Viimased uuendused</h3>
-								<small><i class="fa fa-tim"></i> Paigaldatud 14 uuendust. 1 on paigaldamata.</small>
-							</div>
-
-							<ul class="sidebar-list">
-								<li>
-									<a href="#/">
-										<div class="small pull-right m-t-xs">5 tundi tagasi</div>
-										<h4>Versiooni uuendus 1.0.0.14</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio accusantium saepe id.
-
-										<div class="small">Paigaldatud: 22%</div>
-										<div class="progress progress-mini">
-											<div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-										</div>
-										<div class="small text-muted m-t-xs">Paigalduse lõpuni 3 minutit</div>
-									</a>
-								</li>
-							</ul>
-
-						</div>
-
-						<div id="tab-33" class="tab-pane">
-
-							<div class="sidebar-title">
-								<h3><i class="fa fa-gears"></i> Sätted</h3>
-								<small><i class="fa fa-tim"></i> Siin saad muuta oma põhisätteid</small>
-							</div>
-
-							<div class="setings-item">
-								<span>
-									Näita teateid
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-										<label class="onoffswitch-label" for="example">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Keela messenger
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
-										<label class="onoffswitch-label" for="example2">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Luba ajaloo salvestus
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-										<label class="onoffswitch-label" for="example3">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Näita tabeleid
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-										<label class="onoffswitch-label" for="example4">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Kasutaja teavitused
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-										<label class="onoffswitch-label" for="example5">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Globaalne otsing
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-										<label class="onoffswitch-label" for="example6">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="setings-item">
-								<span>
-									Kõrge kontrastsus
-								</span>
-								<div class="switch">
-									<div class="onoffswitch">
-										<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="high_contrast_content" >
-										<label class="onoffswitch-label" for="high_contrast_content">
-											<span class="onoffswitch-inner"></span>
-											<span class="onoffswitch-switch"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="sidebar-content">
-								<h4>Sätted</h4>
-								<div class="small">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia doloremque ducimus, iste cum molestiae unde recusandae dolorem necessitatibus, quod? Pariatur officia omnis aperiam doloribus, impedit ipsa laborum provident accusamus quos obcaecati mollitia beatae. Placeat, totam, fugiat. Ad architecto repudiandae, non.
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 894px; background: rgb(0, 0, 0);"></div>
-				<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div>
-			</div>
-		</div>
-		<!--MODAL CONTENT END
+		<!--CONTENT MASK FOR MOBILE MENU
 --------------------------------------------------------------->
-
-
-
-
+		<div id="c-mask" class="c-mask"></div>
 
 		<!--SCRIPTS
 --------------------------------------------------------------->
@@ -533,27 +445,14 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<!-- Plugin javascript -->
-		<script src="js/plugins/mmenu/jquery.mmenu.min.js"></script>
+		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
 		<script src="js/plugins/moment/moment.min.js"></script>
-		<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
 		<script src="js/inspinia.js"></script>
 		<script src="js/plugins/pace/pace.min.js"></script>
-		<script src="js/plugins/x-editable/bootstrap-editable.js"></script>
 
 		<!-- Custom javascript -->
 		<script src="js/content_pages.js"></script>
-		<script src="js/arengukava.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$("#m-menu").mmenu({
-					"navbar": {
-						"title":""
-					}
-				});
-				$("#m-menu").find( ".mm-subopen" ).addClass( "mm-fullsubopen" );
-			});
-		</script>
 
 	</body>
 

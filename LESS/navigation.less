@@ -22,6 +22,10 @@
 	//border-top: 2px solid transparent;
 }
 
+.navbar-nav {
+	margin: 0;
+}
+
 .navbar-default .nav > li > a:hover {
 	background-color: transparent;
 	color: @cherry;
@@ -89,8 +93,7 @@
 		margin:0px;
 	}
 	.nav.nav-tabs li.active {
-		border-bottom:1px solid #ddd;
-		margin: 0px;
+
 	}
 
 	.nav.nav-tabs li a {
@@ -99,16 +102,16 @@
 }
 
 /********************************************************
-NAV TABS ALT
+NAV TABS
 ********************************************************/
 
 //NAV TABS
 //------------------------------------------------------
-ul.nav.nav-tabs.alt {
+ul.nav.nav-tabs {
 	border-bottom: none;
 }
 
-ul.nav.nav-tabs.alt li {
+ul.nav.nav-tabs li {
 	background: white;
 	margin: 0 2px 0 0;
 	border: 1px solid @lightest-grey;
@@ -116,24 +119,24 @@ ul.nav.nav-tabs.alt li {
 	color: @lighter-grey;
 }
 
-ul.nav.nav-tabs.alt li.active {
+ul.nav.nav-tabs li.active {
 }
 
-ul.nav.nav-tabs.alt li a {
+ul.nav.nav-tabs li a {
 	text-transform: uppercase;
 	font-weight: 400;
 	color: @lighter-grey;
 	padding: 5px 10px 0;
 }
 
-ul.nav.nav-tabs.alt li a:hover {
+ul.nav.nav-tabs li a:hover {
 	background: transparent;
 	color: @cherry;
 	border: 1px solid @lighter-grey;
 	border-bottom: 1px solid transparent;
 }
 
-ul.nav.nav-tabs.alt > li.active > a, ul.nav.nav-tabs.alt > li.active > a:hover, ul.nav.nav-tabs.alt > li.active > a:focus {
+ul.nav.nav-tabs > li.active > a, ul.nav.nav-tabs > li.active > a:hover, ul.nav.nav-tabs > li.active > a:focus {
 	margin: 1px;
 	color: @grey;
 	border: 0px solid @lightest-grey;
@@ -154,37 +157,42 @@ ul.nav.nav-tabs.alt > li.active > a, ul.nav.nav-tabs.alt > li.active > a:hover, 
 	margin: 0 0 2em 0;
 }
 
-.tab-content.tab-pane {
+.tab-content > .tab-pane {
+	margin: 30px 20px;
 }
 
-//MOBILE STYLES
+.tab-content > .tab-pane > * > * > * > h2 {
+	margin: 0px 0 15px 15px;
+}
+
+// TAB CONTENT MOBILE STYLES
 //--------------------------------------------------------------
 @media(max-width: 768px) {
 
-	ul.nav.nav-tabs.alt li {
+	ul.nav.nav-tabs li {
 		margin: 0 0 10px 0;
 		border: none;
 
 	}
 
-	ul.nav.nav-tabs.alt li.active {
+	ul.nav.nav-tabs li.active {
 		border: none;
 	}
 
-	ul.nav.nav-tabs.alt li a {
+	ul.nav.nav-tabs li a {
 		font-size: 1.5em;
 		padding: 5px 5px;
 		border: 1px solid @lightest-grey;
 		border-radius: 5px;
 	}
 
-	ul.nav.nav-tabs.alt li a:hover {
+	ul.nav.nav-tabs li a:hover {
 
 
 		border: 1px solid @lighter-grey;
 	}
 
-	ul.nav.nav-tabs.alt > li.active > a, ul.nav.nav-tabs.alt > li.active > a:hover, ul.nav.nav-tabs.alt > li.active > a:focus {
+	ul.nav.nav-tabs > li.active > a, ul.nav.nav-tabs > li.active > a:hover, ul.nav.nav-tabs > li.active > a:focus {
 		margin: 0px;
 		color: @cherry;
 		-webkit-box-shadow: 0 0px 0px 0px white;
@@ -201,14 +209,36 @@ ul.nav.nav-tabs.alt > li.active > a, ul.nav.nav-tabs.alt > li.active > a:hover, 
 		background: white;
 		border: 1px solid @lightest-grey;
 		border-radius: 5px;
-		padding: 1em;
+		padding: 0em;
 		margin: 0 0 2em 0;
 	}
 }
 
-//nav tabs alt end
+//nav tabs end
+
+
+/****************************************************************
+DROPDOWNS
+****************************************************************/
+
+
+//DEFAULT DROPDOWN STYLES
+//---------------------------------------------------------------
+.dropdown {
+
+}
+
+.dropdown.open {
+	background: white;
+	color: @cherry;
+}
+
+.dropdown.open > ul {
+	color: @text-color;
+}
 
 //LARGE DROPDOWN MENU MODIFIED VERSION
+//---------------------------------------------------------------
 .dropdown-large {
 	position: static !important;
 }
@@ -405,13 +435,14 @@ white-space: normal;
 	display: none;
 	float: left;
 	font-size: 14px;
-	left: 0;
+	left: inherit;
 	list-style: none outside none;
 	padding: 15px;
+	margin: 0;
 	position: absolute;
 	text-shadow: none;
 	top: 100%;
-	z-index: 1000;
+	z-index: 2002;
 }
 
 .dropdown-menu > li > a {
@@ -484,13 +515,19 @@ white-space: normal;
 	font-size: 12px;
 }
 
+
+/****************************************************************
+END DROPDOWNS
+****************************************************************/
+
+
 .nav-header {
 	padding: 0px 0px;
-	background: @cherry;
+	background: transparent;
 }
 @media(max-width: 992px) {
 	.nav-header {
-		background: #77073D;
+
 	}
 }
 .pace-done .nav-header {
@@ -525,18 +562,18 @@ white-space: normal;
 	color: #8095a8;
 }
 
-.minimalize-styl-2 {
+.navbar-static-top .nav > li > a.minimalize-style-2 {
 	background-color: transparent;
-	color: #fff;
-	padding: 6px 12px;
-	border: 1px solid white;
-	padding: 4px 12px;
-	margin: 14px 5px 5px 20px;
+	color: @darker-cherry;
+	padding: 0px 0px 0px 5.4px;
+	margin: 40px 0px 0px 0px;
 	font-size: 14px;
 	float: left;
 }
-.minimalize-styl-2:active, .minimalize-styl-2:focus, .minimalize-styl-2:hover {
+.navbar-static-top .nav > li > a.minimalize-style-2:hover {
+	background: transparent;
 	color: white;
+	border-color: white;
 }
 .navbar-form-custom {
 	float: left;
@@ -756,7 +793,7 @@ white-space: normal;
 
 .nav-second-level li,
 .nav-third-level li {
-	border-bottom: none !important;
+
 }
 
 .nav-second-level li a {
@@ -849,7 +886,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 	padding: 20px 0;
 }
 
-.pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
+.pace-done .navbar-static-side, .pace-done .nav-header, .pace-done #page-wrapper, .pace-done .footer {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
@@ -929,7 +966,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 	padding-top: 100px;
 }
 
-.fixed-nav .minimalize-styl-2 {
+.fixed-nav .minimalize-style-2 {
 	margin: 14px 5px 5px 15px;
 }
 
@@ -990,6 +1027,10 @@ body.mini-navbar .profile-element, body.mini-navbar .nav-label, body.mini-navbar
 	display: none;
 }
 
+body.mini-navbar .profile-element, body.mini-navbar .nav-label, body.mini-navbar .navbar-default .nav li a span a {
+	display: inline;
+}
+
 body.canvas-menu .profile-element {
 	display: block;
 }
@@ -1012,7 +1053,7 @@ body.canvas-menu .logo-element {
 
 body.mini-navbar .nav-header {
 	padding: 0;
-	background-color: #77073D;
+	background-color:transparent;
 }
 
 body.canvas-menu .nav-header {
@@ -1040,7 +1081,7 @@ body.fixed-sidebar .navbar-static-side,
 body.canvas-menu .navbar-static-side {
 	position: fixed;
 	width: @sidebar-width;
-	z-index: 2001;
+	z-index: 1;
 	height: 100%;
 }
 
@@ -1121,7 +1162,7 @@ body.canvas-menu.mini-navbar .navbar-default .nav li .profile-element a span {
 
 
 body.canvas-menu nav.navbar-static-side {
-	z-index: 2001;
+	z-index: 1;
 	background: #2f4050;
 	height: 100%;
 	position: fixed;

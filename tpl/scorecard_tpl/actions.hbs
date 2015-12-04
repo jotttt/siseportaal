@@ -1,0 +1,13 @@
+<h2 class="text-muted text-uppercase m-l">{{t.txt_action}}</h2>
+<ul class="list-unstyled m-l m-r">
+    <div class="row">
+        {{#each actions}}
+        <!--ACTION START -->
+        <div class="col-md-6 col-lg-4 col-xl-3" id="{{this.uid}}">
+            {{> action .. action=this}} {{! use .. as new input context, FLAG_RUNTIMEPARTIAL required. Also merge t into new context.}}
+        </div>
+        <!--ACTION END -->
+        {{/each}}
+    </div>
+</ul>
+

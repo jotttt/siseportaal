@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		$html_header$
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="navbar navbar-static-top" role="navigation">
+			<div class="cherry-mod-bg"></div>
+
+				<div class="navbar-header">
+
+					<ul class="nav navbar-nav">
+					<li class="hidden-xs">
+							<a class="navbar-minimalize minimalize-style-2" href="#"><i id="mini-icon" class="fa fa-compress"></i> </a>
+						</li>
+						<li class="nav-header">
+							<div class="dropdown profile-element">
+								<span>
+									<a href="#" class="cr-block"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+								</span>
+							</div>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_1$ <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+								$fn_generate_navbar$$navbar_submenu$$fn_stop$
+							</ul>
+						</li>
+
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_2$ <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+								$fn_generate_navbar$$navbar_submenu$$fn_stop$
+							</ul>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_3$ <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+								$fn_generate_navbar$$navbar_submenu$$fn_stop$
+							</ul>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_4$ <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+								$fn_generate_navbar$$navbar_submenu$$fn_stop$
+							</ul>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_5$ <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+								$fn_generate_navbar$$navbar_submenu$$fn_stop$
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<ul class="nav navbar-top-links navbar-right">
+					<!--
+<li class="dropdown">
+<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
+<i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+</a>
+<ul class="dropdown-menu dropdown-messages">
+<li>
+<div class="dropdown-messages-box">
+<a href="profile.html" class="pull-left">
+<i class="fa fa-envelope-o fa-3x"></i>
+</a>
+<div class="media-body">
+<small class="pull-right">14.08.2015</small>
+<strong>Eelarve lisad</strong><br>
+<small class="text-muted">Margus Vooglaid</small>
+</div>
+</div>
+</li>
+<li class="divider"></li>
+<li>
+<div class="dropdown-messages-box">
+<a href="profile.html" class="pull-left">
+<i class="fa fa-envelope-o fa-3x"></i>
+</a>
+<div class="media-body">
+<small class="pull-right">12.08.2015</small>
+<strong>Viiamne võimalus registreerida ennast tuleohutus- koolitusele </strong><br>
+<small class="text-muted">Priit Tamm</small>
+</div>
+</div>
+</li>
+<li class="divider"></li>
+<li>
+<div class="dropdown-messages-box">
+<a href="profile.html" class="pull-left">
+<i class="fa fa-envelope-o fa-3x"></i>
+</a>
+<div class="media-body">
+<small class="pull-right">14.08.2015</small>
+<strong>Huvitavat lugemist</strong><br>
+<small class="text-muted">Sander Marandi</small>
+</div>
+</div>
+</li>
+<li class="divider"></li>
+<li>
+<div class="text-center link-block">
+<a href="mailbox.html">
+<i class="fa fa-envelope"></i> <strong>Loe kõiki emaile</strong>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+</a>
+<ul class="dropdown-menu dropdown-alerts">
+<li>
+<a href="mailbox.html">
+<div>
+<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+<span class="pull-right text-muted small">19 minutit tagasi</span>
+</div>
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="profile.html">
+<div>
+<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+<span class="pull-right text-muted small">56 minutit tagasi</span>
+</div>
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="grid_options.html">
+<div>
+<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+<span class="pull-right text-muted small">4h tagasi</span>
+</div>
+</a>
+</li>
+<li class="divider"></li>
+<li>
+<div class="text-center link-block">
+<a href="notifications.html">
+<strong>Vaata kõiki teavitusi</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+-->
+
+					<li class=" m-l"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> $txt_help$</a></li>
+					<!--
+<li  class="show-icon">
+<a class="right-sidebar-toggle">
+<i class="fa fa-tasks"></i>
+</a>
+</li>
+-->
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> $txt_profile$</a></li>
+							<li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> $txt_settings$</a></li>
+							<li class="divider"></li>
+							<li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> $txt_logout$</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<!--NAVBAR SEARCH
+----------------------------------------------------------------->
+				<ul class="nav navbar-top-links navbar-right visible-lg">
+					<form ole="search" method="post" action="/contacts/$sess_id$">
+						<input type="text" class="form-control" placeholder="$txt_search$..." name="search_user" id="srch-term" style="font-family:Arial, FontAwesome"></form>
+				</ul>
+				<!--NAVBAR SEARCH END
+------------------------------------------------------------------->
+			</nav>
+			<nav class="navbar-default navbar-static-side" role="navigation">
+				<div class="sidebar-collapse">
+					<ul class="nav" id="side-menu">
+						<!--_____________ SIDEBAR SEARCH _______________-->
+						<li id="srch-term2-wrapper" class="">
+							<form class="sidebar-search center-block" method="post" action="/contacts/$sess_id$" role="search">
+								<div class="input-group m-b">
+									<input type="text" class="form-control" name="search_user" maxlength="32" placeholder="$txt_search$" id="srch-term2" style="font-family:Arial, FontAwesome">
+								</div>
+							</form>
+						</li>
+						<!--_____________ SIDEBAR SEARCH END _______________-->
+						$fn_generate_sidebar$<li$is_active$>
+						<a href="#"><i class="fa fa-$module_icon$"></i> <span class="nav-label">$module_title$</span><span class="fa arrow"></span></a>
+						$sidebar_submenu$
+						</li>$fn_stop$
+					</ul>
+				</div>
+			</nav>
+
+			<div id="page-wrapper" class="gray-bg">
+				<div class="row">
+
+				</div>
+				<div id="content-wrapper">
+					$ajax_wrapper$
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="modal fade" id="wiki_help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="help-wrapper"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+		<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button"><i class="fa fa-arrows"></i></button>
+		<!-- FULLSCREEN MODE TOGGLE BUTTON END
+------------------------------------------------------------------->
+		<!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+		<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+		<!-- SCROLL TO TOP BUTTON END
+------------------------------------------------------------------>
+
+<div class="footer">
+    <div>
+        $txt_page_footer$ 2013 - $this_year$
+    </div>
+</div>
+
+
+		<div id="_sess_id" class="$sess_id$"></div>
+		<div id="_lang" class="$lang$"></div>
+
+		$html_footer$
+
+	</body>
+</html>

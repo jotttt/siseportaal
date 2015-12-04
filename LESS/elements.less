@@ -1,8 +1,48 @@
 // main: style.less
 
-// RATING SYSTEM gold
-//------------------------------------------------------------------
+/******************************************************************
+MASONRY STYLE LAYOUT
+******************************************************************/
+.masonry-row {
+	column-width: 24em;
+	-moz-column-width: 24em;
+	-webkit-column-width: 24em;
+	column-gap: 1em;
+	-moz-column-gap: 1em;
+	-webkit-column-gap:1em;
+}
 
+.masonry-item {
+	display: inline-block;
+	padding:  .25rem;
+	width:  100%;
+}
+
+.masonry-item > .well {
+	position:relative;
+	display: block;
+	border: 1px solid @lightest-grey;
+}
+//end masonry--------------------------------------------------
+
+/******************************************************************
+EASTER EGG
+******************************************************************/
+.easter-1 > * {
+	-webkit-transform: rotate(3600deg);	-ms-transform: rotate(3600deg);	transform: rotate(3600deg);
+	-webkit-transition: 5s;	transition: 5s;
+}
+.easter-2 > * {
+	color: chartreuse;
+	background: purple;
+	-webkit-transition: 5s;	transition: 5s;
+}
+
+//end easter egg--------------------------------------------------
+
+/******************************************************************
+RATING SYSTEM gold
+******************************************************************/
 .rating {
 }
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
@@ -13,6 +53,7 @@ it doesn’t make the test unnecessarily selective */
 	top: -9999px;
 	clip: rect(0, 0, 0, 0);
 }
+
 .rating:not(:checked) > label {
 	width: 1.1em;
 	padding: 0em 0em 0em 0.02em;
@@ -25,11 +66,13 @@ it doesn’t make the test unnecessarily selective */
 	top: 0px;
 	left: 0px;
 }
+
 @media (max-width: 768px) {
 	.rating:not(:checked) > label {
 		font-size: 150%;
 	}
 }
+
 .rating:not(:checked) > label:before {
 	font-family: FontAwesome;
 	content: "\f005 \00a0";
@@ -39,17 +82,20 @@ it doesn’t make the test unnecessarily selective */
 	top: 0px;
 	left: 0px;
 }
+
 .rating > input:checked ~ label {
 	color: goldenrod;
 	text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 	top: 0px;
 	left: 0px;
 }
+
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
 	color: goldenrod;
 	text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
+
 .rating > input:checked + label:hover,
 .rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
@@ -58,6 +104,7 @@ it doesn’t make the test unnecessarily selective */
 	color: goldenrod;
 	text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
+
 .rating > label:active{
 	position: relative;
 	top: 2px;
@@ -71,46 +118,11 @@ textarea.styled {
 	padding: 5px;
 	font-size: 1.3em;
 }
+//end-------------------------------------------------------------
 
-/* MY PROFILE
-------------------------------------------------------------------*/
-#my-profile {
-	background: white;
-	color: @text-color;
-	position: static;
-	height: 320px;
-	width: 100%;
-	top: 0px;
-	left: 0px;
-	float: left;
-	display: block;
-	margin: -41px 0 25px 0px;
-	-webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
-	box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
-	border-top: 1px solid @lighter-grey;
-	transition: all 0.7s ease;
-	-moz-transition: all 0.7s ease;
-	-webkit-transition: all 0.7s ease;
-}
-#my-profile.minimized {
-	height: 30px;
-	width: auto;
-	padding: 5px;
-	margin: -41px 0px 10px 0px;
-	color: white;
-	background: @cherry;
-	border-top: 1px solid @darker-cherry;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	-webkit-box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, .1);
-	box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, .1);
-}
-#minimized-profile a {
-	color: @darkest-cherry;
-}
-
-// SCROLL BACK UP BUTTON
-//-----------------------------------------------------------------
+/*****************************************************************
+SCROLL BACK UP BUTTON
+*****************************************************************/
 .scroll-up {
 	background-color: transparent;
 	bottom: 2em;
@@ -124,15 +136,19 @@ textarea.styled {
 	border-radius: 3px;
 	z-index: 1000;
 }
+
 .scroll-up:hover {
 	color: @darker-grey;
 	opacity:1;
 	transition:1s;
 }
+
 .scroll-up:active, .scroll-up:focus {
 	opacity:0.6;
 	color: @darker-grey;
 }
+//end-------------------------------------------------------------
+
 /* TOGGLE SWICH
 ------------------------------------------------------------------*/
 .onoffswitch {
@@ -980,6 +996,10 @@ table.dataTable thead .sorting:after {
 	font-family: "FontAwesome";
 }
 /* INPUTS */
+.input-group .form-control {
+	z-index: auto;
+}
+
 .inline {
 	display: inline-block !important;
 }
@@ -1059,6 +1079,13 @@ table.dataTable thead .sorting:after {
 
 .spinner-buttons.input-group-btn {
 	width: 20%;
+}
+
+/*****************************************************************
+NO-UI-SLIDERS
+*****************************************************************/
+.noUi-tooltip {
+	padding: 3px;
 }
 
 .noUi-connect {
@@ -2112,7 +2139,7 @@ a.forum-item-title:hover {
 
 .datepicker table tr td.active.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:focus, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:focus, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:focus, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:focus, .datepicker table tr td.active:hover:hover, .open .dropdown-toggle.datepicker table tr td.active, .open .dropdown-toggle.datepicker table tr td.active.disabled, .open .dropdown-toggle.datepicker table tr td.active.disabled:hover, .open .dropdown-toggle.datepicker table tr td.active:hover {
 	color: #fff;
-    background-color: @cherry;
-    border-color: @darker-cherry;
+	background-color: @cherry;
+	border-color: @darker-cherry;
 }
 // END DATEPICKER

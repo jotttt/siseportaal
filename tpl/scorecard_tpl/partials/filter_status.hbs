@@ -1,0 +1,11 @@
+    <span class="text-uppercase m-r">Staatus</span>
+
+    <a href="#/" data-id="0" class="m-r{{#if goal.filterNotStarted}} selected{{/if}}">
+        <button type="button" class="btn btn-xs btn-danger m-r-sm">{{goal.actionNotStartedCount}}</button> Alustamata
+    </a>
+    <a href="#/" data-id="1" class="m-r{{#if goal.filterInProcess}} selected{{/if}}">
+        <button type="button" class="btn btn-xs btn-warning m-r-sm">{{goal.actionInProcessCount}}</button> Töös
+    </a>
+    <a href="#/" data-id="2" class="m-r{{#if goal.filterDone}} selected{{/if}}">
+        <button type="button" class="btn btn-xs btn-success m-r-sm">{{goal.actionDoneCount}}</button> Valmis
+    </a>

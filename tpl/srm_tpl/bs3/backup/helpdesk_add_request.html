@@ -1,0 +1,154 @@
+<form method="post" id="hyb" action="/$focus$/$sess_id$" class="form-inline clearfix" role="form">
+    <div class="row">
+        <input type="hidden" name="request_id" value="$parent_id$">
+        <input type="hidden" name="domain" value="$request_domain$">
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row" id="hyb_subject">
+        <label for="specify" class="formlabel col-lg-1">$txt_subj$:</label>
+        <input type="text" name="subject" class="form-control" value="$subject$" style="width: 550px">
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="requester" class="formlabel col-lg-1">$txt_requester$:</label>
+        <input type="text" name="requester" class="form-control" value="$requester$">
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="type" class="formlabel col-lg-1">$txt_type$:</label>
+        <select id="hyb_task_type" name="type_id" class="form-control"$task_type_disabled$>
+            $fn_list_request_type$
+            <option value="$type_id$"$selected$>$request_type$</option>
+            $fn_stop$
+        </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row" id="hyb_service"$hide_service$>
+        <label for="service" class="formlabel col-lg-1">$txt_service$:</label>
+        <select name="service" class="form-control"$task_service_disabled$>
+            $fn_list_service$
+            <option value="$service_id$"$selected$>$service_name$</option>
+            $fn_stop$
+            </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row" id="hyb_prio"$hide_prio$>
+        <label for="prio" class="formlabel col-lg-1">$txt_prio$: </label>
+        <select name="prio" class="form-control"$task_prio_disabled$>
+            $fn_list_prio$
+            <option value="$list_value$"$selected$>$list_descr$</option>
+            $fn_stop$
+        </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="owner_id" class="formlabel col-lg-1">$txt_solver$: </label>
+        <select id="hyb_owner_id" name="owner_id" class="form-control"$task_solver_disabled$>
+            $fn_list_it_service_ppl$
+                <option value="$solver_id$"$selected$>$solver_name$</option>
+            $fn_stop$
+        </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="status" class="formlabel col-lg-1">$txt_status$: </label>
+        <select id="hyb_task_status" name="status" class="form-control"$task_status_disabled$>
+            $fn_list_status$
+            <option value="$list_value$"$selected$>$list_descr$</option>
+            $fn_stop$
+        </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row" id="hyb_closing_reason"$hide_closing_reason$>
+        <label for="closing_reason" class="formlabel col-lg-1">$txt_closing_reason$: </label>
+        <select name="closing_reason" class="form-control"$task_closing_reason_disabled$>
+            <option value="">$txt_default_select$</option>
+            $fn_list_closing_reason$
+            <option value="$list_value$"$selected$>$list_descr$</option>
+            $fn_stop$
+        </select>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row" id="hyb_used_time"$hide_used_time$>
+        <label for="spent_time" class="formlabel col-lg-1">$txt_spent_time$: </label>
+        <select name="spent_hrs" class="form-control"$task_hrs_disabled$>
+            $fn_list_hrs$
+            <option value="$list_value$"$selected$>$list_descr$</option>
+            $fn_stop$
+        </select>
+        h
+        <select name="spent_min" class="form-control"$task_min_disabled$>
+            $fn_list_min$
+            <option value="$list_value$"$selected$>$list_descr$</option>
+            $fn_stop$
+        </select>
+        m
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="details" class="formlabel col-lg-1">$txt_specifications$: </label>
+        <textarea tabindex="2" maxlength="8192" style="width: 550px; height: 100px" class="form-control" placeholder="$txt_request_details_title$" name="details"$task_details_disabled$>$details$</textarea>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="comment" class="formlabel col-lg-1">$txt_comment$: </label>
+        <textarea tabindex="2" maxlength="1024" style="width: 550px; height: 100px" class="form-control" placeholder="$txt_request_comment_title$" name="comment" id="hyb_comment"$task_comment_disabled$></textarea>
+    </div>
+
+    <p class="padding"></p>
+
+    <div class="row">
+        <label for="deadline" class="formlabel col-lg-1">$txt_deadline$: </label>
+        <input name="deadline" tabindex="4" type="text" value="$deadline$" class="datepicker form-control" size="small"$task_deadline_disabled$>
+    </div>
+
+    <br/>
+    <p class="padding"></p>
+
+    <button tabindex="1" class="btn btn-primary pull-left" name="add_request" type="submit">$txt_add_request$</button>
+    <a href="#$focus$" class="ajax-load btn btn-warning">$txt_cancel$</a>
+
+    <div class="form-group col-lg-4">
+        <button class="btn btn-primary pull-left" data-toggle="modal" data-target="#upload" onClick="return false;">$txt_file_upload$</button>
+        <iframe src="$upload_service$/$focus$/$sess_id$/$parent_id$" name="hidden_upload" frameborder="0"></iframe>
+    </div>
+</form>
+
+<div class="modal fade" id="hyb_service_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="$txt_dismiss$"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="hyb_service_modal_title">$txt_error$</h4>
+      </div>
+      <div class="modal-body">
+          <i class="fa fa-exclamation-circle"></i> $txt_service_req$
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">$txt_dismiss$</button>
+      </div>
+    </div>
+  </div>
+</div>

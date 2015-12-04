@@ -2,17 +2,12 @@
 $(document).ready(function(){
 	//Sidebar search functions
 	$("a.navbar-minimalize").click(function(){
-		$("#srch-term2").toggle();
+		$("#srch-term2, #srch-term2-wrapper").toggle();
 	});
 
 	/****************************************************************
 	M-MENU SCRIPTS
 	****************************************************************/
-	//INIT M-MENU
-	$("#m-menu").mmenu({
-		"navbar": {
-			"title":""
-		}
-	});
+
 
 });

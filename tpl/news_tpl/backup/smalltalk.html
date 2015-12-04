@@ -1,0 +1,29 @@
+<div class="small-chat-box fadeIn animated">
+
+    <div class="heading" draggable="true">
+        <small class="chat-date pull-right">$current_date$</small>
+        $txt_smalltalk$
+    </div>
+
+    <div class="content">
+
+        <div class="author-name">$user_displayname$ <small class="chat-date">$datetime$</small></div>
+        <div class="chat-message">$smalltalk$</div>
+
+    </div>
+
+    <div class="form-chat">
+        <div class="input-group input-group-sm">
+            <!--     <form type="post" action="/query/$sess_id$/intranet:chat:srm">  -->
+            <input type="text" class="form-control">
+            <span class="input-group-btn"> <button class="btn btn-primary" type="button">$txt_send$</button></span>
+            <!--    </form>  -->
+        </div>
+    </div>
+
+</div>
+
+<div id="small-chat">
+    <span class="badge badge-warning pull-right">$msg_count$</span>
+    <a class="open-small-chat"><i class="fa fa-comments"></i></a>
+</div>

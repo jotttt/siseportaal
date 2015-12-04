@@ -1,0 +1,10 @@
+<!-- <div class="m">
+    <h2 class="text-muted text-uppercase">{{t.txt_goal}}</h2>
+</div> -->
+<ul class="list-unstyled m-l m-r">
+    {{#each goals}}
+    <li class="goal-badge m-b-xs" id="{{this.uid}}" data-uid="{{this.uid}}">
+        {{> goal goal=this}}
+    </li>
+    {{/each}}
+</ul>

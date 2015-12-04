@@ -1,0 +1,54 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>RACI</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+   <div class="ibox-content" style="display: none;">
+        <div class="">
+            <a id="addPerson" href="#" class="btn btn-primary ">{{t.txt_add_new_person}}</a>
+        </div>
+        <table class="table table-striped table-bordered table-hover table-rapid" id="raciTable" data-count="0">
+            <thead>
+                <tr>
+                    <th>{{t.txt_name}}</th>
+                    <th>R</th>
+                    <th>A</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each raci}}
+                <tr class="gradeX"  data-actionId="{{../action.data.uid}}" data-personId="{{this.id}}">
+                    <td width="60%">
+                        {{this.displayname}}
+                    </td>
+                    <td width="8%">
+                        <input type="radio" name="ra-{{this.id}}" value="r"{{#if this.r}} checked="checked"{{/if}}>
+                    </td>
+                    <td width="8%">
+                        <input type="radio" name="ra-{{this.id}}" value="a"{{#if this.a}} checked="checked"{{/if}}>
+                    </td>
+                    <td width="8%">
+                        <input type="checkbox" name="c" value="c"{{#if this.c}} checked{{/if}}>
+                    </td>
+                    <td width="8%">
+                        <input type="checkbox" name="i" value="i"{{#if this.i}} checked{{/if}}>
+                    </td>
+
+                    <td width="8%">
+                        <a href="#" class="msg_remove fa fa-trash-o btn_border deletePerson"></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
