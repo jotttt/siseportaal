@@ -5,7 +5,14 @@
 </div>
 <div class="modal-body">
     <div class="m-xs">
-
+        {{#compare action.level "==" "2"}}
+        <div class="row">
+            <div class="col-sm-4 m-t-xs">
+                <h5 class="text-muted text-uppercase">{{t.txt_department}}</h5>
+                <input id="department" name="department" class="form-control input-md typeahead" type="text" value="{{action.department}}"><br>
+            </div>
+        </div>
+        {{/compare}}
         <div class="row">
             <div class="col-sm-4 m-t-xs">
                 <h5 class="text-muted text-uppercase">{{t.txt_language}}</h5>
@@ -31,19 +38,24 @@
                 <h5 class="text-muted text-uppercase">{{t.txt_descr}}</h5>
                 <a style="display: inline;" class="editable editable-pre-wrapped editable-click" href="#" id="descr" data-lang="et" data-type="textarea">{{action.descr}}</a>
             </div>
+            {{#if action.hasChildren}}
+            <h5 class="text-muted text-uppercase">{{t.txt_progress}}</h5>
+             <div class="badge badge-info m-l-xs">{{action.progress}}%</div>
+             {{else}}
             <div class="col-sm-2 m-t-xs">
                 <h5 class="text-muted text-uppercase">{{t.txt_progress}}</h5>
-                <div class="" id="progressNo"><strong>{{action.data.progress}}%</strong></div>
+                <div class="" id="progressNo"><strong>{{action.progress}}%</strong></div>
                 <div>
-                    <input type="range" name="progress" id="progress" value="{{action.data.progress}}">
+                    <input type="range" name="progress" id="progress" value="{{action.progress}}">
                 </div>
             </div>
+            {{/if}}
         </div>
         <div class="row">
             <div class="col-sm-4 m-t">
                 <h5 class="text-muted text-uppercase">{{t.txt_due}}</h5>
                 <div>
-                    <input name="due" id="due" type="text" class="datepicker form-control" style="width: 200px" value="{{action.data.due}}">
+                    <input name="due" id="due" type="text" class="datepicker form-control" style="width: 200px" value="{{action.due}}">
                 </div>
             </div>
         </div>

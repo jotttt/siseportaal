@@ -23,7 +23,7 @@ $(document).ready(function () {
 			$('#page-wrapper').css("min-height", $(window).height()  + "px");
 		}
 	}
-	fix_height();
+	//fix_height();
 
 	// Add body-small class if window less than 768px
 	if ($(this).width() < 769) {
@@ -133,11 +133,11 @@ $(document).ready(function () {
 		}
 	});
 
-	$(document).bind("load resize scroll", function() {
+	/*$(document).bind("load resize scroll", function() {
 		if(!$("body").hasClass('body-small')) {
 			fix_height();
 		}
-	});
+	});*\
 
 	$("[data-toggle=popover]")
 		.popover();

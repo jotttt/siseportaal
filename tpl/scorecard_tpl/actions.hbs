@@ -1,12 +1,14 @@
-<h2 class="text-muted text-uppercase m-l">{{t.txt_action}}</h2>
+<div id="action-filter" class="row">
+    {{> action_filter}}
+</div>
 <ul class="list-unstyled m-l m-r">
     <div class="row">
         {{#each actions}}
-        <!--ACTION START -->
+        <!--ACTION L1 START -->
         <div class="col-md-6 col-lg-4 col-xl-3" id="{{this.uid}}">
-            {{> action .. action=this}} {{! use .. as new input context, FLAG_RUNTIMEPARTIAL required. Also merge t into new context.}}
+            {{> action .. action=this}} {{! use .. as new input context, FLAG_RUNTIMEPARTIAL required.}}
         </div>
-        <!--ACTION END -->
+        <!--ACTION L1 END -->
         {{/each}}
     </div>
 </ul>

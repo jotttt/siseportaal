@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-building-o"></i> $txt_title_helpdesk$
+            </div>
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li$class_a_active$><a href="#a"$nav$>$txt_active_requests$ <span class="badge" id="srm_requests_badge"></span></a></li>
+                    <li$class_b_active$><a href="#b"$nav$>$txt_open_requests$ <span class="badge" id="srm_waiting_badge"></span></a></li>
+                    <li$class_c_active$><a href="#c"$nav$>$txt_emails$ <span class="badge" id="srm_inbox_badge"></span></a></li>
+                    <li$class_d_active$ $hide_request$>
+                        <a href="#d" class="nonav">$txt_req$
+                            <i id="request_tab_close" class="close_tab ajax-load fa fa-times" data-url="$request_uri$/parent" title="$txt_close$"></i>
+                        </a>
+                    </li>
+                    <li$class_e_active$ $hide_new_request$>
+                        <a data-url="$request_uri$/$sess_id$/request:add" class="ajax-load"$nav$>
+                        <i class="fa fa-plus" style="color: #870042" title="$txt_add_request$"></i></a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade$tab_a_active$" id="a">$tab_a$</div>
+                    <div class="tab-pane fade$tab_b_active$" id="b">$tab_b$</div>
+                    <div class="tab-pane fade$tab_c_active$" id="c">$tab_c$</div>
+                    <div class="tab-pane fade$tab_d_active$" id="d">$tab_d$</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,7 +5,7 @@
 
 		<!--_____ META _______-->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<!--_____META END_______-->
 		<title>TTÜ | Dashboard</title>
 		<!--_____ PLUGINS CSS _______-->
@@ -345,21 +345,16 @@
 				<!--CONTENT BEGIN
 ------------------------------------------------------------->
 				<div class="wrapper wrapper-content animated fadeIn">
-					<div class="row">
-						<div class="row">
-							<div class="col-lg-12">
+				<h2 id="info"></h2>
 
-
-							</div>
-						</div>
-						<div class="row"  id="sortable-view">
+						<div class="row widget-container"  id="sortable-view">
 							<!--LEFT COLUMN BEGIN
 ----------------------------------------------------------------->
-							<div class="col-lg-3 ui-sortable">
+							<div id ="sortable-left" class="col-lg-3 ui-sortable">
 								<!--MY PROFILE BEGIN
 ----------------------------------------------------------------->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<div id="widget-profile" class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-user"></i> Minu profiil</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -386,8 +381,8 @@
 
 								<!--IN HOUSE TRAINING WIDGET BEGIN
 ----------------------------------------------------------------->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<div id="widget-inhouse-training" class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-mortar-board"></i> Sisekoolitused</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -446,8 +441,8 @@
 ----------------------------------------------------------------->
 								<!--PHONEBOOK WIDGET BEGIN
 ----------------------------------------------------------------->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<div id="widget-phonebook" class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-phone"></i> Telefoniraamat</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -479,17 +474,17 @@
 									</div>
 								</div>
 								<!--PHONEBOOK WIDGET END
------------------------------------------------------->
+---------------------------------------------------------------->
 							</div>
 							<!--LEFT COLUMN END
--------------------------------------------------------->
+---------------------------------------------------------------->
 							<!--MIDDLE COLUMN BEGIN
--------------------------------------------------------->
-							<div class="col-lg-6">
+---------------------------------------------------------------->
+							<div id ="sortable-middle" class="col-lg-6 ui-sortable">
 
-								<!--_________ SPECIAL MESSAGE BEGIN ______-->
-								<div id="ttu-message-desktop" class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<!-- SPECIAL MESSAGE BEGIN ______-->
+								<div id="widget-message"  class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-bullhorn"></i> Sündmus</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -504,10 +499,10 @@
 										<div class="text-center"><img class="img-responsive" src="img/sp2015.jpg"></div>
 									</div>
 								</div>
-								<!--_________ SPECIAL MESSAGE END _______-->
-								<!--_________ NEWS BEGIN ________-->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<!-- SPECIAL MESSAGE END _______-->
+								<!-- NEWS BEGIN ________-->
+								<div id="widget-news"  class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-newspaper-o"></i> Uudised</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -608,16 +603,16 @@
 										</div>
 									</div>
 								</div>
-								<!--_________ NEWS END ________-->
+								<!-- NEWS END ________-->
 							</div>
-							<!--MIDDLE COLUMN END
--------------------------------------------------------->
-							<!--RIGHT COLUMN BEGIN
--------------------------------------------------------->
-							<div class="col-lg-3 ui-sortable">
-								<!--_________ FAVORITES BEGIN __________-->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+							<!-- MIDDLE COLUMN END
+-------------------------------------------------------------->
+							<!-- RIGHT COLUMN BEGIN
+-------------------------------------------------------------->
+							<div id ="sortable-right" class="col-lg-3 ui-sortable">
+								<!-- FAVORITES BEGIN __________-->
+								<div id="widget-favorites"  class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-bookmark"></i> Minu leheküljed</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -664,10 +659,10 @@
 										</div>
 									</div>
 								</div>
-								<!--_________ FAVORITES END ________-->
-								<!--_________ BIRTHDAYS BEGIN __________-->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<!-- FAVORITES END ________-->
+								<!-- BIRTHDAYS BEGIN __________-->
+								<div id="widget-birthdays"  class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-birthday-cake"></i> Tänased sünnipäevad</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -683,10 +678,10 @@
 										<div><i class="fa fa-user"></i> Sander Marandi</div>
 									</div>
 								</div>
-								<!--_________ BIRTHDAYS END ________-->
-								<!--_PICTURES AND VIDEOS BEGIN ______-->
-								<div class="ibox float-e-margins">
-									<div class="ibox-title edit">
+								<!-- BIRTHDAYS END ________-->
+								<!-- PICTURES AND VIDEOS BEGIN -->
+								<div id="widget-media"  class="ibox float-e-margins">
+									<div class="ibox-title">
 										<h5><i class="fa fa-play-circle"></i> Pildid ja  videod</h5>
 										<div class="ibox-tools">
 											<a class="collapse-link">
@@ -704,17 +699,14 @@
 
 									</div>
 								</div>
-								<!--_________ PICTURES AND VIDEOS END ________-->
+								<!-- PICTURES AND VIDEOS END -->
 							</div>
-							<!--RIGHT COLUMN END
--------------------------------------------------------->
+							<!-- RIGHT COLUMN END
+-------------------------------------------------------------->
 						</div>
-					</div>
+
 				</div>
 				<!--CONTENT END
--------------------------------------------------------------->
-
-				<!--MODAL CONTENT BEGIN
 -------------------------------------------------------------->
 
 			</div>
@@ -734,6 +726,7 @@
 		<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
 		<!-- SCROLL TO TOP BUTTON -->
 		<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
 		<!--SCRIPTS
 ------------------------------------------------------------------>
 		<script src="js/jquery-2.1.1.js"></script>
@@ -746,11 +739,7 @@
 		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
 		<!-- My custom scripts -->
 		<script src="js/content_pages.js"></script>
-
-		<script>
-			//DRAG'N'DROP
-			WinMove();
-		</script>
+		<script src="js/dragable_widgets.js"></script>
 
 	</body>
 </html>

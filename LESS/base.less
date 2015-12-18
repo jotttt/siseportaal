@@ -722,7 +722,7 @@ img.circle-border {
 	display: block;
 }
 
-.ui-draggable .ibox-title, .ui-draggable .ibox-title-full {
+.ui-draggable.ibox-title, .ui-draggable.ibox-title-full {
 	cursor: move;
 }
 
@@ -740,6 +740,8 @@ code {
 	margin-bottom: 25px;
 	margin-top: 0;
 	padding: 0;
+	border: 1px solid @lightest-grey;
+	border-radius: 4px;
 }
 
 .ibox.collapsed .ibox-content{
@@ -770,6 +772,10 @@ code {
 	margin-bottom: 0;
 	padding: 14px 15px 7px;
 	min-height: 48px;
+
+}
+
+.ibox-title .raci {
 	cursor: pointer;
 }
 
@@ -779,11 +785,11 @@ code {
 	100% { background-color: white; }
 }
 
-.ibox-title.edit, .ibox-title-full.edit {
+#sortable-view > .ui-sortable > .ibox > .ibox-title, #sortable-view > .ui-sortable > .ibox > .ibox-title-full {
 	border: 2px dashed @cherry;
 }
 
-.ibox-title.edit:hover, .ibox-title-full.edit:hover {
+#sortable-view > .ui-sortable > .ibox > .ibox-title:hover, #sortable-view > .ui-sortable > .ibox > .ibox-title-full:hover {
 	animation: glowing 1500ms infinite;
 }
 
@@ -939,6 +945,7 @@ table.table-mail tr td {
 }
 .cherry-bordered-bg {
 	border: 2px solid @cherry;
+	background: white;
 }
 .cherry-mod-bg {
 	.voremodulatsioon-nav;
@@ -951,30 +958,6 @@ table.table-mail tr td {
 	height: 60px;
 	right: 0;
 	z-index: -1;
-}
-
-@media(max-width: 1500px) {
-	.cherry-mod-bg {
-		//background-position-x: 500px;
-	}
-}
-
-@media(max-width: 1200px) {
-	.cherry-mod-bg {
-		//background-position-x: 400px;
-	}
-}
-
-@media(max-width: 992px) {
-	.cherry-mod-bg {
-		//background-position-x: 270px;
-	}
-}
-@media(max-width: 768px) {
-	.cherry-mod-bg {
-		//background-position-x: 170px;
-		//background-repeat:repeat;
-	}
 }
 
 .cherry-alt-bg {

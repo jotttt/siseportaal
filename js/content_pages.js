@@ -1,4 +1,5 @@
-/*jshint -W117 */
+/*jshint browser: true, jquery: true*/
+
 
 $(function() {
 
@@ -119,6 +120,35 @@ $(function() {
 	//end navbar hiding/showing ------------------------------------
 
 
+	//POPUP
+	//--------------------------------------------------------------
+
+	//open
+	$(".popup-open").click(function() {
+		$(".popup").removeClass("fadeOutUp");
+		$(".popup").addClass("open");
+		$(".popup").addClass("fadeInDown");
+	});
+
+	//close
+	$(".popup-no, .popup-yes").click(function() {
+		setTimeout(function() {
+			$(".popup").removeClass("open");
+		}, 1000);
+		$(".popup").removeClass("fadeInDown");
+		$(".popup").addClass("fadeOutUp");
+
+		if ($(this).hasClass("popup-no")) {
+			console.log("Ei");
+		}
+		else if ($(this).hasClass("popup-yes")) {
+			console.log("Jah");
+		}
+	});
+
+	//end popup ----------------------------------------------------
+
+
 	//FULLSCREEN MODE
 	//--------------------------------------------------------------
 	//display on hover only
@@ -185,6 +215,7 @@ $(function() {
 		if ($(this).hasClass("active") //&& $(this).find("a").hasClass(".goal-details-open-button")
 			 ) {
 			$(this).removeClass("active");
+			$(this).find('i').addClass("fa-chevron-down");
 			$(".goal-badge").show();
 		}
 
@@ -193,26 +224,90 @@ $(function() {
 			$(".goal-badge").hide();
 			$(this).show();
 			$(this).addClass("active");
+			$(this).find('i').removeClass("fa-chevron-down");
 			$(this).find('a').after("<a href='#' class='goal-details-open-button' data-toggle='modal' data-target='#goal-details'><i class='fa fa-search text-white right m-t-xxs'></i></a>");
 			$(this).after("<a href='#' class='add-new-action-button'><i class='fa fa-plus'></i></a>");
 		}
 
 	});
+	//end-----------------------------------------------------------
+
+
+	//BRING ACTIVE 1ST LVL ACTION BADGE TO FRONT OF ROW WITH ANIMATION
+	//--------------------------------------------------------------
+	$(".action-badge-select").click(function(){
+
+		//INIT ARRAYS FOR SORTING
+		var activeArray = [];
+		var inactiveArray = [];
+
+		//CLICK ON ACTIVE BADGE:
+		if($(this).parent().parent()
+			 .parent().parent().hasClass("active")) {
+
+			// TURNS IT OFF
+			$(this).parent().parent()
+				.parent().parent().removeClass("active");
+
+			//ADD ELEMENT TO INACTIVE ARRAY
+			inactiveArray = $(this).parent().parent()
+				.parent().parent().parent().toArray();
+
+			//PREPEND DATA TO "INACTIVE" PLACEHOLDER DIV
+			$("#inactive-action-placeholder").prepend(inactiveArray);
+		}
+
+		//CLICK ON INACTIVE BADGE:
+		else {
+
+			//REMOVE ALL ACTIVE
+			$(".action-badge").removeClass("active").removeClass("inactive");
+
+			//ADD ALL BADGES TO INACTIVE ARRAY
+			inactiveArray = $(".action-badge").parent().toArray();
+
+			//PREPEND DATA TO "INACTIVE" PLACEHOLDER DIV
+			$("#inactive-action-placeholder").prepend(inactiveArray);
+
+			//EMPTY ACTIVE ARRAY
+			activeArray.length = 0;
+
+			//MAKE CURRENT SELECTION ACTIVE AND ANIMATE
+			$(this).parent().parent()
+				.parent().parent().addClass("active").css({'display':'none', 'position':'relative'}).css({'display':'block', 'opacity':'0', 'right':'-90%'}).animate({'opacity':'1','right':'0'}, 500);
+
+			//ADD INACTIVE CLASS TO ALL OTHER BADGES
+			$("#inactive-action-placeholder").addClass("inactive");
+
+			//ANIMATE INACTIVE BADGES CONTAINER
+			$(".inactive").css({'display':'none', 'position':'relative'}).css({'display':'block', 'opacity':'0', 'left':'-25%'}).animate({'opacity':'1','left':'0'}, 500);
+
+			//ADD ACTIVE BADGE TO ACTIVE ARRAY
+			if($(".action-badge").hasClass("active")) {
+				activeArray = $(".action-badge.active").parent().toArray();
+				$("#active-action-placeholder").prepend(activeArray);
+			}
+
+		}
+	});
+	//end badge sorting --------------------------------------------
+
+
 
 
 	//FILTER LOGIC
 	//--------------------------------------------------------------
-	$("#goal-filter").find("a").click(function() {
-		$(this).toggleClass("selected");
+	//$("#action-filter").find("a").click(function() {
+	//	$(this).toggleClass("selected");
 
-	});
+	//});
 
 
 	//GOAL DETAILS
 	//--------------------------------------------------------------
-$(".action-badge-open-details").click(function(){
-	$(this).parent().parent().parent().next("div").find(".action-badge-details").toggleClass("open");
-});
+	$(".action-badge-open-details").click(function(){
+		$(this).parent().parent().parent().next("div").find(".action-badge-details").toggleClass("open");
+	});
 
 	//OPEN GOAL DETAILS
 	//--------------------------------------------------------------
@@ -247,6 +342,5 @@ $(".action-badge-open-details").click(function(){
 		}
 	});
 
-
-	//end everything--------------------------------------------------
+	//end everything------------------------------------------------
 });

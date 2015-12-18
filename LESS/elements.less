@@ -1,6 +1,36 @@
 // main: style.less
 
 /******************************************************************
+POPUP
+******************************************************************/
+.popup {
+	display: none;
+	position: absolute;
+	top: 6%;
+	width: 500px;
+	margin: 0 0 0 -250px;
+	left: 50%;
+	-webkit-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+	-moz-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+	box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+	z-index: 2051;
+}
+
+@media (max-width: 768px) {
+	.popup {
+		top: 4%;
+		width: 318px;
+		margin: 0 0 0 -159px;
+		left: 50%;
+	}
+}
+
+.popup.open {
+	display: block;
+}
+//end popup--------------------------------------------------------
+
+/******************************************************************
 MASONRY STYLE LAYOUT
 ******************************************************************/
 .masonry-row {
@@ -1099,6 +1129,9 @@ NO-UI-SLIDERS
 }
 
 /* UI Sortable */
+.ui-sortable {
+	min-height: 350px;
+}
 
 .ui-sortable .ibox-title {
 	cursor: move;

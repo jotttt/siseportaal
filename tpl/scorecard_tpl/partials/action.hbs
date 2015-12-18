@@ -1,40 +1,41 @@
-
-<li class="action-badge m-b-xs">
-    <a href="#" class="action-badge-edit" data-uid="{{action.data.uid}}" data-toggle="modal" data-target="#action-badge-1"><i class="fa fa-search"></i></a>
-    <div class="m-xs">
-        <div class="row">
-            <div class="col-lg-10">
-                <strong class="pull-left m-r-xs">{{action.title}}</strong>
-            </div>
-            <div class="col-lg-2 m-t-xs">
-                <div class="label action-label pull-right m-r-sm"><i class="fa fa-arrows"></i></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 m-t-xs">
-                <a href="#/">
-                    <div class="label label-white-o pull-right m-r-sm" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vero sequi sapiente optio ex reiciendis harum labore amet quasi, in!" data-original-title="" title="">Tulemusnäitaja
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <h5 class="text-muted text-uppercase">{{t.txt_progress}}</h5>
-                <div class="progress m-t" data-toggle="tooltip" data-placement="top" data-original-title="{{action.data.progress}}%">
-                    <div style="width: {{action.data.progress}}%;" class="progress-bar progress-bar-success"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-6">
-                <h5 class="text-muted text-uppercase">{{t.txt_responsible}}</h5>
-                <strong class="">{{action.data.raci_r_displayname}}</strong>
-            </div>
-            <div class="col-xl-4">
-                <h5 class="text-muted text-uppercase">{{t.txt_due}}</h5>
-                <div class=""><strong>{{action.data.due}}</strong></div>
-            </div>
-        </div>
-    </div>
+<li class="action-badge" data-id="{{action.uid}}" data-parentId="{{action.parent_id}}" data-level="{{action.level}}">
+	<div class="m-xs">
+		<div class="row">
+			<div class="col-lg-12">
+				<strong>{{action.title}}</strong>
+			</div>
+			<div class="badge badge-info m-l-xs">{{action.progress}}%</div>
+		</div>
+		<div class="row ">
+			<div class="col-xl-12 m-t-xs">
+				<a href="#/" class="action-badge-open-details"><i class="fa fa-chevron-down pull-right"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="action-badge-details-container ">
+		<div class="action-badge-details">
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="p-xs p-b-none">{{action.descr}}</p>
+				</div>
+				<div class="col-sm-5">
+					<h5 class="text-muted text-uppercase m-b-xxs m-l">{{t.txt_responsible}}</h5>
+					<strong class="inline m-l">{{action.raci_r_displayname}}</strong>
+				</div>
+				<div class="col-sm-4">
+					<h5 class="text-muted text-uppercase m-b-xxs m-l">{{t.txt_due}}</h5>
+					<div class=""><strong class="m-l">{{action.due}}</strong></div>
+				</div>
+				<div class="col-sm-3">
+				</div>
+			</div>
+			<div class="action-tools">
+				<a href="#/" class="action-badge-edit-btn" data-uid="{{action.uid}}"><span><i class="fa fa-search"></i></span></a>
+				{{#compare action.level "<" "2"}}
+				<a href="#" class="add-new-action-L2-btn"><i class="fa fa-plus"></i></a>
+				{{/compare}}
+				<a href="#" class="delete-action-L2-btn"><i class="fa fa-times"></i></a>
+			</div>
+		</div>
+	</div>
 </li>

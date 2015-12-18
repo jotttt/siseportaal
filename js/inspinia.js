@@ -194,26 +194,3 @@ function SmoothlyMenu() {
 		$('#side-menu').removeAttr('style');
 	}
 }
-
-// Dragable panels
-function WinMove() {
-	var element = "[class*=col-lg]";
-	var handle = ".ibox-title";
-	var connect = "[class*=col]";
-	$(element).sortable(
-		{
-			containment: ".wrapper-content",
-			items: "> div",
-			handle: handle,
-			connectWith: connect,
-			tolerance: 'pointer',
-			forcePlaceholderSize: true,
-			opacity: 0.8
-		});
-
-}
-
-
-
-
-
