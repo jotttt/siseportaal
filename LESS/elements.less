@@ -1,5 +1,13 @@
 // main: style.less
 
+.scrollable-comments {
+	max-height: 600px;
+	overflow: auto;
+	overflow-x: hidden;
+	border: 1px solid @lightest-grey;
+	padding: 10px 10px 0 10px;
+}
+
 /******************************************************************
 POPUP
 ******************************************************************/
@@ -177,92 +185,8 @@ SCROLL BACK UP BUTTON
 	opacity:0.6;
 	color: @darker-grey;
 }
-//end-------------------------------------------------------------
+//end----------------------------------------------------------
 
-/* TOGGLE SWICH
-------------------------------------------------------------------*/
-.onoffswitch {
-	position: relative;
-	width: 64px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-}
-
-.onoffswitch-checkbox {
-	display: none;
-}
-
-.onoffswitch-label {
-	display: block;
-	overflow: hidden;
-	cursor: pointer;
-	border: 2px solid @cherry;
-	border-radius: 2px;
-}
-
-.onoffswitch-inner {
-	width: 200%;
-	margin-left: -100%;
-	-moz-transition: margin 0.3s ease-in 0s;
-	-webkit-transition: margin 0.3s ease-in 0s;
-	-o-transition: margin 0.3s ease-in 0s;
-	transition: margin 0.3s ease-in 0s;
-}
-
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-	float: left;
-	width: 50%;
-	height: 20px;
-	padding: 0;
-	line-height: 20px;
-	font-size: 12px;
-	color: white;
-	font-family: Trebuchet, Arial, sans-serif;
-	font-weight: bold;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.onoffswitch-inner:before {
-	content: "ON";
-	padding-left: 10px;
-	background-color: @cherry;
-	color: #FFFFFF;
-}
-
-.onoffswitch-inner:after {
-	content: "OFF";
-	padding-right: 10px;
-	background-color: #FFFFFF;
-	color: #999999;
-	text-align: right;
-}
-
-.onoffswitch-switch {
-	width: 20px;
-	margin: 0px;
-	background: #FFFFFF;
-	border: 2px solid @cherry;
-	border-radius: 2px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 44px;
-	-moz-transition: all 0.3s ease-in 0s;
-	-webkit-transition: all 0.3s ease-in 0s;
-	-o-transition: all 0.3s ease-in 0s;
-	transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-	margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-	right: 0px;
-}
 
 /* CHOSEN PLUGIN */
 
@@ -1030,6 +954,10 @@ table.dataTable thead .sorting:after {
 	z-index: auto;
 }
 
+.form-horizontal .form-group {
+	margin: 0 0 15px 0;
+}
+
 .inline {
 	display: inline-block !important;
 }
@@ -1147,53 +1075,7 @@ NO-UI-SLIDERS
 	margin: 0px 0px 23px !important;
 }
 
-/* SWITCHES */
-.onoffswitch {
-	position: relative; width: 54px;
-	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-.onoffswitch-checkbox {
-	display: none;
-}
-.onoffswitch-label {
-	display: block; overflow: hidden; cursor: pointer;
-	border: 2px solid #870042; border-radius: 3px;
-}
-.onoffswitch-inner {
-	display: block; width: 200%; margin-left: -100%;
-	-moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-	-o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-	display: block; float: left; width: 50%; height: 16px; padding: 0; line-height: 16px;
-	font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-	content: "ON";
-	padding-left: 7px;
-	background-color: #870042; color: #FFFFFF;
-}
-.onoffswitch-inner:after {
-	content: "OFF";
-	padding-right: 7px;
-	background-color: #FFFFFF; color: #919191;
-	text-align: right;
-}
-.onoffswitch-switch {
-	display: block; width: 18px; margin: 0px;
-	background: #FFFFFF;
-	border: 2px solid #870042; border-radius: 3px;
-	position: absolute; top: 0; bottom: 0; right: 36px;
-	-moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-	-o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-	margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-	right: 0px;
-}
+
 
 /* jqGrid */
 
@@ -1656,6 +1538,10 @@ label.error {
 
 .alert-white hr {
 	border-top: 1px solid white;
+}
+
+.alert-info {
+	color: @text-color;
 }
 
 /* Toastr custom style */

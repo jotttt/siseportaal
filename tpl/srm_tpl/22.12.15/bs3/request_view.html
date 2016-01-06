@@ -1,0 +1,79 @@
+<style>
+    .onoffswitch { width: 80px; margin-top: 7px }
+    .onoffswitch-switch { width: 15px; right: 65px; }
+    .onoffswitch-inner:before { text-transform: uppercase; }
+    .onoffswitch-inner:after { text-transform: uppercase; color: #870042; }
+    .critical:before { content: "$txt_critical$" !important; }
+    .critical:after { content: "$txt_regular$" !important; }
+    .user_lang:before { content: "$txt_en$" !important; }
+    .user_lang:after { content: "$txt_et$" !important; }
+    .send_notice:before { content: "$txt_yes$" !important; }
+    .send_notice:after { content: "$txt_no$" !important; }
+    .disabled_brd:before { background-color: #fff; color: #aaa; }
+    .disabled_brd:after { color: #aaa; }
+</style>
+
+<form method="post" id="request" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
+    <input type="hidden" id="request_method" name="request_method" value="$request_method$">
+    <input type="hidden" name="request_id" value="$request_id$">
+    <input type="hidden" name="domain" id="domain" value="$request_domain$">
+        <h3 class="font-bold">#$request_id$ - $subject$</h3>
+        <!-- <input type="text" name="subject" id="subject" class="form-control" placeholder="$txt_ph_subject$" value="$subject$" disabled> -->
+
+    <br/>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <textarea name="details" id="details" class="form-control" rows=3 maxlength="8192" placeholder="$txt_ph_details$" disabled>$details$</textarea>
+        </div>
+
+        <div class="form-group"$hide_location$>
+            <input type="text" name="location" id="location" class="form-control" value="$location$" placeholder="$txt_ph_location$" autocomplete="off" disabled>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" class="form-control" value="$status$" disabled>
+            </div>
+
+            <div class="col-md-4"$hide_prio$>
+                <input type="text" class="form-control" value="$prio$" disabled>
+            </div>
+
+            <div class="col-md-4"$hide_duedate$>
+                <input type="text" class="form-control" value="$duedate$" disabled>
+            </div>
+        </div>
+
+        <div class="form-group"$hide_comment$>
+            <br/>
+            <textarea name="comment" id="comment" class="form-control" rows=3 placeholder="$txt_ph_comment$" maxlength="8192"$disabled_all$></textarea>
+        </div>
+
+        <br/>
+
+        <div class="form-group" id="files"$hide_files$>
+            <div class="uploaded-files" data-type="request" data-parent="$request_id$"></div><br/>
+            <div class="dropzone" data-parent="$request_id$"$hide_upload$>
+                <div class="dropzone-previews">
+                    <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="request_submit" class="btn btn-primary pull-left" style="margin-right: 50px">$request_commit$</button>
+            <a href="$request_uri$/$sess_id$/discard:$request_id$" class="ajax-load btn btn-default btn-outline"$hide_discard$>$txt_discard$</a>
+            <a href="$request_uri$" class="ajax-load btn btn-default btn-outline pull-right">$txt_dismiss$</a>
+        </div>
+
+        <div class="form-group">
+            <a href="#timeline" class="timeline label label-default" data-parent="request">$txt_changes$ <i id="timeline_request_fa" class="fa fa-level-down"></i></a>
+            <div id="timeline_request" class="ptable no_border" data-parent="$request_id$" style="display: none"></div>
+        </div>
+    </div>
+    <div class="col-md-6 scrollable-comments">
+        $request_chat$
+    </div>
+</form>
+
+<br clear="all"/>

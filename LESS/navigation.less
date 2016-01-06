@@ -145,6 +145,12 @@ ul.nav.nav-tabs > li.active > a, ul.nav.nav-tabs > li.active > a:hover, ul.nav.n
 	box-shadow: 0 3px 0px 1px white;
 }
 
+ul.nav.nav-tabs li a i {
+	padding-bottom: 3px;
+    padding-top: 4px;
+    margin: 0;
+}
+
 //TAB CONTENT
 //------------------------------------------------------
 .tab-content {
@@ -607,81 +613,7 @@ END DROPDOWNS
 	margin: 10px 0 0 0;
 	z-index: 2000;
 }
-/* SEARCH BOX FOR TOP-NAVBAR
---------------------------------------------------------------------*/
-#srch-term {
-	background: @darker-cherry;
-	border: 0 none;
-	color: @text-color;
-	width: 150px;
-	margin: 13px 0 0;
-	padding: 6px 15px 6px 15px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-	-webkit-transition: all 0.7s ease 0s;
-	-moz-transition: all 0.7s ease 0s;
-	-o-transition: all 0.7s ease 0s;
-	transition: all 0.7s ease 0s;
-}
-#srch-term:focus {
-	background: #fcfcfc;
-	color: #6a6f75;
-	width: 190px;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-}
-#srch-term::-webkit-input-placeholder {
-	color: white;
-	webkit-transition: all 0.7s ease 0s;
-	-moz-transition: all 0.7s ease 0s;
-	-o-transition: all 0.7s ease 0s;
-	transition: all 0.7s ease 0s;
-}
 
-#srch-term:-moz-placeholder { /* Firefox 18- */
-	color: white;
-	webkit-transition: all 0.7s ease 0s;
-	-moz-transition: all 0.7s ease 0s;
-	-o-transition: all 0.7s ease 0s;
-	transition: all 0.7s ease 0s;
-}
-
-#srch-term::-moz-placeholder {  /* Firefox 19+ */
-	color: white;
-	webkit-transition: all 0.7s ease 0s;
-	-moz-transition: all 0.7s ease 0s;
-	-o-transition: all 0.7s ease 0s;
-	transition: all 0.7s ease 0s;
-}
-
-#srch-term:-ms-input-placeholder {
-	color: white;
-	webkit-transition: all 0.7s ease 0s;
-	-moz-transition: all 0.7s ease 0s;
-	-o-transition: all 0.7s ease 0s;
-	transition: all 0.7s ease 0s;
-}
-#srch-term:focus::-webkit-input-placeholder {
-	color: @text-color;
-}
-#srch-term:focus:-moz-placeholder {
-	color: @text-color;
-}
-#srch-term:focus::-moz-placeholder {
-	color: @text-color;
-}
-#srch-term:focus:-ms-input-placeholder {
-	color: @text-color;
-}
-/* end
---------------------------------------------------------------------*/
 /* SEARCH BOX FOR SIDEBAR
 --------------------------------------------------------------------*/
 #srch-term2 {
@@ -932,32 +864,6 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 		-o-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
 	}
-}
-
-.navbar-fixed-top, .navbar-static-top {
-	background: @cherry;
-	height: 60px;
-}
-
-.navbar-fixed-top .nav > li > a, .navbar-static-top .nav > li > a {
-	font-size: 14px;
-	padding: 20px 20px;
-	color: white;
-}
-.navbar-fixed-top .nav > li.open > a, .navbar-static-top .nav > li.open > a {
-	color: @cherry;
-}
-.navbar-fixed-top .nav > li a:hover, .navbar-static-top .nav > li a:hover, .top-navigation .nav > li a:focus {
-	background: #fff;
-	color: @cherry;
-
-}
-.navbar-static-top .navbar-top-links li:last-child {
-	margin-right: 0;
-}
-.navbar-static-top .dropdown-menu > li > a {
-	margin: 0;
-	padding: 7px 20px;
 }
 
 .fixed-nav-wrapper {

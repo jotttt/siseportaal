@@ -1,1 +1,98 @@
-$fn_generate_navbar$$navbar_submenu$$fn_stop$
+<div class="cherry-mod-bg"></div>
+<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
+    <button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+</span>
+<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+    <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+</span>
+<div id="mobile-search" class="hidden">
+    <form ole="search" method="post" action="/search">
+        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+    </form>
+</div>
+
+<div class="navbar-header">
+    <ul class="nav navbar-nav">
+        <li class="nav-header">
+            <div class="dropdown profile-element hidden-xs">
+                <span>
+                    <a href="#" class="cr-block"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+            </div>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_1$ <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-about"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_2$ <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-analytics"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_3$ <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_4$ <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-services"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_5$ <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell"></i><span class="label label-primary">$notifications_badge$</span>
+        </a>
+        <ul class="dropdown-menu dropdown-alerts">
+            <div class="core-widget-wrapper" id="alerts"></div>
+        </ul>
+    </li>
+
+    <li class=" m-l"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> $txt_help$</a></li>
+
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> $txt_profile$</a></li>
+            <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> $txt_settings$</a></li>
+            <li class="divider"></li>
+            <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> $txt_logout$</a></li>
+        </ul>
+    </li>
+    <li class="dropdown right-sidebar">
+        <a href="#">
+            <i class="fa fa-tasks"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <div class="core-widget-wrapper" id="confbar"></div>
+        </ul>
+    </li>
+</ul>
+
+
+<!--NAVBAR SEARCH
+----------------------------------------------------------------->
+<ul class="nav navbar-top-links navbar-right visible-lg">
+    <form ole="search" method="post" action="/search">
+        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+    </form>
+</ul>
+<!--NAVBAR SEARCH END
+------------------------------------------------------------------->

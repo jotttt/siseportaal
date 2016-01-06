@@ -206,6 +206,12 @@ $(function(){
 
 	//END GET WIDGETS POSITIONS
 
+	// REMOVE WIDGET WHEN CLOSE BUTTON IS PRESSED AND SAVE POSITIONS TO DB
+	$(".close-link").click(function() {
+		setTimeout(function() {
+			widgetPositions()
+		}, 10);
+	});
 
 	//DRAGABLE WIDGETS
 

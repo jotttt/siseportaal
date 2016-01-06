@@ -45,13 +45,13 @@
 				<div class="navbar-collapse collapse" id="navbar">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#">Dokumendid</a>
+							<a href="#">Ülikoolist <b class="caret"></b></a>
 						</li>
 						<li>
-							<a href="#">Ülikool</a>
+							<a href="#">Analüütika <b class="caret"></b></a>
 						</li>
 						<li>
-							<a href="#">Inimesed</a>
+							<a href="#">Dokumendid ja töökorraldus <b class="caret"></b></a>
 						</li>
 						<li class="dropdown dropdown-large hidden-xs">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
@@ -141,12 +141,14 @@
 								</li>
 							</ul>
 						</li>
+						<li>
+							<a href="#">Koolitused <b class="caret"></b></a>
+						</li>
 					</ul>
 
 					<!-- TOP NAVBAR RIGHT SIDE
 ----------------------------------------------------------------->
 					<ul class="nav navbar-top-links navbar-right">
-
 
 						<!-- NAVBAR NOTIFICATIONS
 ----------------------------------------------------------------->
@@ -328,7 +330,7 @@
 
 					<!-- NAVBAR SEARCH
 ----------------------------------------------------------------->
-					<ul class="nav navbar-top-links navbar-right visible-md visible-lg">
+					<ul class="nav navbar-top-links navbar-right hidden-xs">
 						<form>
 							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
 					</ul>
@@ -346,26 +348,52 @@
 			<!-- LEFT SIDEBAR
 --------------------------------------------------------------->
 			<nav id="m-menu" class="min">
-				<ul>
+				<div>
+					<ul>
 						<li><span><i class="fa fa-desktop"></i>Coverpage</span>
-						<ul>
-							<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
-							<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
-						</ul>
-					</li>
-					<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
-					<li><span><i class="fa fa-plane"></i>Lähetused</span>
-						<ul>
-							<li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
-							<li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
-							<li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
-							<li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
-						</ul>
-					</li>
-					<li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
-				</ul>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+							</ul>
+						</li>
+						<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+						<li><span><i class="fa fa-plane"></i>Lähetused</span>
+							<ul>
+								<li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+								<li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+								<li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+								<li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+							</ul>
+						</li>
+						<li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+						<li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+						<li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+						<li ><span><i class="fa fa-link"></i>Navbari lingid</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<!-- BOTTOM ICONS
+---------------------------------------------------------------->
+					<div class="bottom-icons">
+						<div>
+							<a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
+							<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+
+							<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+						</div>
+					</div>
+					<!-- end bottom icons ------------------------------->
+
+				</div>
 			</nav>
 			<!-- end left sidebar ----------------------------------->
+
+
 
 			<!-- CONTENT
 --------------------------------------------------------------->
@@ -395,31 +423,30 @@
 				</div>
 
 				<!--PAGE END
---------------------------------------------------------------->
+------------------------------------------------------------->
 
 				<!-- FULLSCREEN MODE TOGGLE BUTTON
-------------------------------------------------------------------->
+------------------------------------------------------------->
 				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
 
 				<!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
+------------------------------------------------------------->
 				<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
 			</div>
-			<!-- end content ---------------------------------------->
+			<!-- end content --------------------------------------->
 
 		</div>
-		<!-- end wrapper ------------------------------------------>
+		<!-- end wrapper ----------------------------------------->
 
 
 		<!--FOOTER
---------------------------------------------------------------->
+-------------------------------------------------------------->
 		<div class="footer">
 			<div >
 				TTÜ Siseportaal &copy; 2014 - 2015
 			</div>
 		</div>
-
 
 		<!--MODAL CONTENT
 --------------------------------------------------------------->
@@ -452,8 +479,6 @@
 
 		<!-- Custom javascript -->
 		<script src="js/content_pages.js"></script>
-		<script src="js/sidebar.js"></script>
-
 	</body>
 
 </html>

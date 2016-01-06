@@ -15,6 +15,10 @@ body {
 	margin-bottom: 40px; /* Margin bottom by footer height */
 }
 
+div:empty {
+	//display: none
+};
+
 body.full-height-layout #wrapper,
 body.full-height-layout #page-wrapper {
 	height: 100%;
@@ -1016,7 +1020,13 @@ table.table-mail tr td {
 }
 
 .panel-primary {
-	border-color: @cherry;
+	border: 1px solid @cherry;
+	border-top: 0px solid transparent;
+
+}
+
+.panel-primary:empty {
+	display: none;
 }
 
 .panel-primary > .panel-heading {
@@ -1324,7 +1334,7 @@ a.close-canvas-menu:hover {
 	padding-top: 70px;
 }
 
-/* MARGINS & PADDINGS */
+/* PADDINGS & MARGINS */
 
 .p-xxs {
 	padding: 5px;
@@ -1353,17 +1363,129 @@ a.close-canvas-menu:hover {
 .p-xl {
 	padding: 40px;
 }
+
 .p-t-none {
 	padding-top: 0;
 }
+
+.p-t-xxs {
+	padding-top: 2px;
+}
+
+.p-t-xs {
+	padding-top: 5px;
+}
+
+.p-t-sm {
+	padding-top: 10px;
+}
+
+.p-t {
+	padding-top: 15px;
+}
+
+.p-t-md {
+	padding-top: 20px;
+}
+
+.p-t-lg {
+	padding-top: 30px;
+}
+
+.p-t-xl {
+	padding-top: 40px;
+}
+
 .p-r-none {
 	padding-right: 0;
 }
-.p-b-none {
-	padding-bottom: 0;
+
+.p-r-xxs {
+	padding-right: 2px;
 }
+
+.p-r-xs {
+	padding-right: 5px;
+}
+
+.p-r-sm {
+	padding-right: 10px;
+}
+
+.p-r {
+	padding-right: 15px;
+}
+
+.p-r-md {
+	padding-right: 20px;
+}
+
+.p-r-lg {
+	padding-right: 30px;
+}
+
+.p-r-xl {
+	padding-right: 40px;
+}
+
+.p-b-xxs {
+	padding-bottom: 2px;
+}
+
+.p-b-xs {
+	padding-bottom: 5px;
+}
+
+.p-b-sm {
+	padding-bottom: 10px;
+}
+
+.p-b {
+	padding-bottom: 15px;
+}
+
+.p-b-md {
+	padding-bottom: 20px;
+}
+
+.p-b-lg {
+	padding-bottom: 30px;
+}
+
+.p-b-xl {
+	padding-bottom: 40px;
+}
+
 .p-l-none {
 	padding-left: 0;
+}
+
+.p-l-xxs {
+	padding-left: 2px;
+}
+
+.p-l-xs {
+	padding-left: 5px;
+}
+
+.p-l-sm {
+	padding-left: 10px;
+}
+
+.p-l {
+	padding-left: 15px;
+}
+
+.p-l-md {
+	padding-left: 20px;
+}
+
+.p-l-lg {
+	padding-left: 30px;
+}
+
+.p-l-xl {
+	padding-left: 40px;
 }
 .m-xxs {
 	margin: 2px 4px;
@@ -1399,6 +1521,10 @@ a.close-canvas-menu:hover {
 
 .m-l-none {
 	margin-left: 0 !important;
+}
+
+.m-l-xxs {
+	margin-left: 2px;
 }
 
 .m-l-xs {
