@@ -12,11 +12,14 @@
 </div>
 
 <div class="navbar-header">
-    <span class="navbar-header hidden-xs">
-					<a href="/#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
-				</span>
-       <ul class="nav navbar-nav">
-
+    <ul class="nav navbar-nav">
+        <li class="nav-header">
+            <div class="dropdown profile-element hidden-xs">
+                <span>
+                    <a href="#" class="cr-block"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+            </div>
+        </li>
         <li class="dropdown dropdown-large hidden-xs">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_1$ <b class="caret"></b></a>
             <ul class="dropdown-menu dropdown-menu-large row">
@@ -51,7 +54,7 @@
 </div>
 
 <ul class="nav navbar-top-links navbar-right">
-    <li class="dropdown">
+    <li class="dropdown right-sidebar">
         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
             <i class="fa fa-bell"></i><span class="label label-primary">$notifications_badge$</span>
         </a>
@@ -60,7 +63,7 @@
         </ul>
     </li>
 
-    <li class=" m-l"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> $txt_help$</a></li>
+    <li class=" hidden-xs m-l "><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> $txt_help$</a></li>
 
     <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -73,12 +76,12 @@
             <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> $txt_logout$</a></li>
         </ul>
     </li>
-    <li class="dropdown right-sidebar">
+    <li class="dropdown right-sidebar hidden-xs">
         <a href="#">
             <i class="fa fa-tasks"></i>
         </a>
         <ul class="dropdown-menu">
-            $html_confbar$
+            <div class="core-widget-wrapper" id="confbar"></div>
         </ul>
     </li>
 </ul>
@@ -86,9 +89,9 @@
 
 <!--NAVBAR SEARCH
 ----------------------------------------------------------------->
-<ul class="nav navbar-top-links navbar-right hidden-xs">
+<ul class="nav navbar-top-links navbar-right visible-lg">
     <form ole="search" method="post" action="/search">
-        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" value="$raw_search_string$" maxlength="32" id="srch-term" style="font-family:Arial, FontAwesome">
+        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
     </form>
 </ul>
 <!--NAVBAR SEARCH END

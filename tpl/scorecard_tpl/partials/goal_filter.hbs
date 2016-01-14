@@ -4,20 +4,17 @@
     </div>
 
     <div class="col-md-3">
-        <select class="form-control m-b" name="kolm">
-            <option>Kõik tegevused</option>
-            <option>Õppetegevused</option>
-            <option>Teadustegevused</option>
+        <select class="form-control m-b" id="domainsFilter">
+            {{#each domains}}
+            <option  value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
         </select>
     </div>
+
     <div class="col-md-3">
-        <select class="form-control m-b" name="kolm">
-            <option>Minu üksuse tegevused</option>
-            <option>2. üksuse tegevus</option>
-            <option>3. üksuse tegevus</option>
-            <option>4. üksuse tegevus</option>
-        </select>
+        <input id="departmentFilter" name="department" class="form-control input-md typeahead" type="text" value="{{department}}" placeholder="{{t.txt_department}}" >
     </div>
+
     <div class="col-md-3">
         <select class="form-control m-b" name="kolm">
             <option>Minu tegevused</option>

@@ -1,255 +1,269 @@
 <style>
-    .onoffswitch { width: 80px; margin-top: 7px }
-    .onoffswitch-switch { width: 15px; right: 65px; }
-    .onoffswitch-inner:before { text-transform: uppercase; }
-    .onoffswitch-inner:after { text-transform: uppercase; color: #870042; }
-    .critical:before { content: "$txt_critical$" !important; }
-    .critical:after { content: "$txt_regular$" !important; }
-    .user_lang:before { content: "$txt_en$" !important; }
-    .user_lang:after { content: "$txt_et$" !important; }
-    .send_notice:before { content: "$txt_yes$" !important; }
-    .send_notice:after { content: "$txt_no$" !important; }
-    .disabled_brd:before { background-color: #fff; color: #aaa; }
-    .disabled_brd:after { color: #aaa; }
+	.onoffswitch { width: 80px; margin-top: 7px }
+	.onoffswitch-switch { width: 15px; right: 65px; }
+	.onoffswitch-inner:before { text-transform: uppercase; }
+	.onoffswitch-inner:after { text-transform: uppercase; color: #870042; }
+	.critical:before { content: "$txt_critical$" !important; }
+	.critical:after { content: "$txt_regular$" !important; }
+	.user_lang:before { content: "$txt_en$" !important; }
+	.user_lang:after { content: "$txt_et$" !important; }
+	.send_notice:before { content: "$txt_yes$" !important; }
+	.send_notice:after { content: "$txt_no$" !important; }
+	.disabled_brd:before { background-color: #fff; color: #aaa; }
+	.disabled_brd:after { color: #aaa; }
 </style>
 
 <form method="post" id="request" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
-    <input type="hidden" id="request_method" name="request_method" value="$request_method$">
-    <input type="hidden" name="request_id" value="$request_id$">
-    <input type="hidden" name="domain" id="domain" value="$request_domain$">
-    <input type="hidden" name="msg_id" value="$msg_id$">
-    <div class="col-md-12">
-        <div class="input-group">
-            <span class="input-group-addon">#$request_id$</span>
-            <input type="text" name="subject" id="subject" class="form-control" placeholder="$txt_ph_subject$" value="$subject$"$disabled_subject$$disabled_all$>
-        </div>
-        <br/>
-    </div>
+	<input type="hidden" id="request_method" name="request_method" value="$request_method$">
+	<input type="hidden" name="request_id" value="$request_id$">
+	<input type="hidden" name="domain" id="domain" value="$request_domain$">
+	<input type="hidden" name="msg_id" value="$msg_id$">
+	<div class="col-md-12">
+		<div class="input-group">
+			<span class="input-group-addon">#$request_id$</span>
+			<input type="text" name="subject" id="subject" class="form-control" placeholder="$txt_ph_subject$" value="$subject$"$disabled_subject$$disabled_all$>
+		</div>
+		<br/>
+	</div>
 
-    <div class="col-md-6">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" name="requester" id="requester" class="form-control" value="$requester$" placeholder="$txt_ph_requester$" autocomplete="off"$disabled_requester$$disabled_all$>
-                    <div id="choose_requester" style="display: none"></div>
-                </div>
-            </div>
+	<div class="col-md-6">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<!--
+<input type="text" name="requester" id="requester" class="form-control" value="$requester$" placeholder="$txt_ph_requester$" autocomplete="off"$disabled_requester$$disabled_all$>
+<div id="choose_requester" style="display: none"></div>
+-->
+					<input type="text" name="requester" id="requester" class="autofetch form-control" value="$requester$" placeholder="$txt_ph_requester$" autocomplete="off"$disabled_requester$$disabled_all$>
+					<div id="requester_results" class="autofetch_results" data-parent="requester" style="display: none"></div>
+				</div>
+			</div>
 
-            <div class="col-md-6">
-                <div class="onoffswitch langswitch">
-                    <input type="checkbox" id="user_lang" name="user_lang" class="onoffswitch-checkbox" value="en"$lang_en$$disabled_all$>
-                    <label class="onoffswitch-label$disabled_brd$" for="user_lang">
-                        <span class="onoffswitch-inner user_lang$disabled_brd$"/>
-                        <span class="onoffswitch-switch$disabled_brd$"/>
-                    </label>
-                </div>
-            </div>
-        </div>
+			<div class="col-md-6">
+				<div class="onoffswitch langswitch">
+					<input type="checkbox" id="user_lang" name="user_lang" class="onoffswitch-checkbox" value="en"$lang_en$$disabled_all$>
+					<label class="onoffswitch-label$disabled_brd$" for="user_lang">
+						<span class="onoffswitch-inner user_lang$disabled_brd$"/>
+						<span class="onoffswitch-switch$disabled_brd$"/>
+					</label>
+				</div>
+			</div>
+		</div>
 
-        <div class="form-group">
-            <textarea name="details" id="details" class="form-control" rows=3 maxlength="8192" placeholder="$txt_ph_details$"$disabled_details$$disabled_all$>$details$</textarea>
-        </div>
+		<div class="form-group">
+			<textarea name="details" id="details" class="form-control" rows=3 maxlength="8192" placeholder="$txt_ph_details$"$disabled_details$$disabled_all$>$details$</textarea>
+		</div>
 
-        <div class="form-group"$hide_location$>
-            <input type="hidden" name="room_id" id="room_id" value="$room_id$">
-            <input type="text" name="location" id="location" class="form-control" value="$location$" placeholder="$txt_ph_location$" autocomplete="off"$disabled_all$>
-            <div id="choose_location" style="display: none"></div>
-        </div>
+		<div class="form-group"$hide_location$>
+			<input type="hidden" name="room_id" id="room_id" value="$room_id$">
+			<input type="text" name="location" id="location" class="form-control" value="$location$" placeholder="$txt_ph_location$" autocomplete="off"$disabled_all$>
+			<div id="choose_location" style="display: none"></div>
+		</div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <select name="type_id" id="type_id" class="form-control"$disabled_all$>
-                        $request_type$
-                    </select>
-                </div>
-            </div>
+		<div class="row">
+			<div class="col-xl-4">
+				<div class="form-group">
+					<select name="type_id" id="type_id" class="form-control"$disabled_all$>
+						$request_type$
+					</select>
+				</div>
+			</div>
 
-            <div class="col-md-4">
-                <select name="class_id" id="class" class="form-control"$hide_class$$disabled_all$>
-                    <!--<option value="">$txt_ph_class$</option>-->
-                    $request_class$
-                </select>
-            </div>
+			<div class="col-xl-4">
+				<div class="form-group">
+					<select name="class_id" id="class" class="form-control"$hide_class$$disabled_all$>
+						$request_class$
+					</select>
+				</div>
+			</div>
 
-            <div class="col-md-4">
-                <select name="prio" id="prio" data-regular="$duedate_regular$" data-critical="$duedate_critical$" class="form-control"$disabled_all$>
-                    $request_prio$
-                </select>
-            </div>
-        </div>
+			<div class="col-xl-4">
+				<div class="form-group">
+					<select name="prio" id="prio" data-regular="$duedate_regular$" data-critical="$duedate_critical$" class="form-control"$disabled_all$>
+						$request_prio$
+					</select>
+				</div>
+			</div>
+		</div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <select id="owner_id" name="owner_id" data-user="$current_user$" data-owner="$solver_selected$" class="form-control"$disabled_all$>
-                        <!--<option value="">$txt_ph_solver$</option>-->
-                        $request_solvers$
-                    </select>
-                </div>
-            </div>
+		<div class="row">
+			<div class="col-xl-4">
+				<div class="form-group">
+					<select id="owner_id" name="owner_id" data-user="$current_user$" data-owner="$solver_selected$" class="form-control"$disabled_all$>
+						$request_solvers$
+					</select>
+				</div>
+			</div>
 
-            <div class="col-md-4">
-                <div class="form-group"$hide_duedate$>
-                    <!--<span class="input-group-addon">$txt_duedate_real$:</span>-->
-                    <input name="duedate" id="duedate" type="text" value="$duedate$" placeholder="$txt_ph_duedate$" class="datepicker form-control" size="small"$disabled_all$>
-                </div>
-            </div>
+			<div class="col-xl-4">
+				<div class="form-group"$hide_duedate$>
+					<!--<span class="input-group-addon">$txt_duedate_real$:</span>-->
+					<input name="duedate" id="duedate" type="text" value="$duedate$" placeholder="$txt_ph_duedate$" class="datepicker form-control" size="small"$disabled_all$>
+				</div>
+			</div>
 
-            <div class="col-md-4">
-                <select id="request_status" name="status" class="form-control"$disabled_all$>
-                    $request_status$
-                </select>
-            </div>
-        </div>
+			<div class="col-xl-4">
+				<div class="form-group">
+					<select id="request_status" name="status" class="form-control"$disabled_all$>
+						$request_status$
+					</select>
+				</div>
+			</div>
+		</div>
 
-        <div class="row" id="used_time"$hide_used_time$>
-            <div class="col-md-4">
-                <div class="form-group">
-                    $txt_spent_time$:<br/>
-                    <select name="spent_hrs" class="spent form-control"$disabled_all$>
-                        $spent_hrs$
-                    </select>
-                    <div class="spent_suf"> h </div>
-                    <select name="spent_min" class="spent form-control"$disabled_all$>
-                        $spent_min$
-                    </select>
-                    <div class="spent_suf">m</div>
-                </div>
-            </div>
+		<div class="row" id="used_time"$hide_used_time$>
+			<div class="col-xl-4">
+				<div class="form-group">
+					$txt_spent_time$:<br/>
+					<select name="spent_hrs" class="spent form-control"$disabled_all$>
+						$spent_hrs$
+					</select>
+					<div class="spent_suf"> h </div>
+					<select name="spent_min" class="spent form-control"$disabled_all$>
+						$spent_min$
+					</select>
+					<div class="spent_suf">m</div>
+				</div>
+			</div>
 
-            <div class="col-md-4"></div>
+			<div class="col-xl-4"></div>
 
-            <div class="col-md-4">
-                $txt_send_notice$:<br/>
-                <div class="onoffswitch">
-                    <input type="checkbox" id="send_notice" name="send_notice" class="onoffswitch-checkbox" value=1$send_notice$$disabled_all$>
-                    <label class="onoffswitch-label$disabled_brd$" for="send_notice">
-                        <span class="onoffswitch-inner send_notice$disabled_brd$"/>
-                        <span class="onoffswitch-switch$disabled_brd$"/>
-                    </label>
-                </div>
-            </div>
-        </div>
+			<div class="col-xl-4">
+				$txt_send_notice$:<br/>
+				<div class="onoffswitch">
+					<input type="checkbox" id="send_notice" name="send_notice" class="onoffswitch-checkbox" value=1$send_notice$$disabled_all$>
+					<label class="onoffswitch-label$disabled_brd$" for="send_notice">
+						<span class="onoffswitch-inner send_notice$disabled_brd$"/>
+						<span class="onoffswitch-switch$disabled_brd$"/>
+					</label>
+				</div>
+			</div>
+		</div>
 
-        <div class="form-group" id="hide_comment"$hide_comment$>
-            <textarea name="comment" id="comment" class="form-control" rows=3 placeholder="$txt_comment_requester$" maxlength="8192"$disabled_all$></textarea>
-        </div>
+		<div class="form-group" id="hide_comment"$hide_comment$>
+			<textarea name="comment" id="comment" class="form-control" rows=3 placeholder="$txt_comment_requester$" maxlength="8192"$disabled_all$></textarea>
+		</div>
 
-        <div class="form-group" id="files"$hide_files$>
-            <div class="uploaded-files" data-type="request" data-parent="$request_id$"$request_rm_files$></div><br/>
-            <!--<div class="uploaded-files" data-parent="25MDTT"$request_rm_files$></div><br/>-->
-            <div class="dropzone" data-parent="$request_id$"$hide_upload$>
-                <div class="dropzone-previews">
-                    <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
-                </div>
-            </div>
-        </div>
+		<div class="form-group" id="files"$hide_files$>
+			<div class="uploaded-files" data-type="request" data-parent="$request_id$"$request_rm_files$></div><br/>
+			<!--<div class="uploaded-files" data-parent="25MDTT"$request_rm_files$></div><br/>-->
+			<div class="dropzone" data-parent="$request_id$"$hide_upload$>
+				<div class="dropzone-previews">
+					<div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+				</div>
+			</div>
+		</div>
 
-        <div class="form-group">
-            <button type="submit" id="request_submit" class="btn btn-primary pull-left m-r-xs">$request_commit$</button>
-            <span$hide_new_task_btn$>
-                <a href="$request_uri$/$sess_id$/request:$request_id$:newtask" class="ajax-load btn btn-default btn-outline "><i class="fa fa-plus" style="color: #870042" title="$txt_add_request$"></i> $txt_add_new_task$</a>
-            </span>
-            <a href="$request_uri$" class="ajax-load btn btn-default btn-outline pull-right">$txt_dismiss$</a>
-        </div>
+		<div class="form-group">
+			<button type="submit" id="request_submit" class="btn btn-primary pull-left m-r-xs">$request_commit$</button>
+			<span$hide_new_task_btn$>
+				<a href="$request_uri$/$sess_id$/request:$request_id$:newtask" class="ajax-load btn btn-default btn-outline "><i class="fa fa-plus" style="color: #870042" title="$txt_add_request$"></i> $txt_add_new_task$</a>
+				</span>
+			<a href="$request_uri$" class="ajax-load btn btn-default btn-outline pull-right">$txt_dismiss$</a>
+		</div>
 
-        <div class="form-group">
-            <a href="#timeline" class="timeline label label-default" data-parent="request">$txt_changes$ <i id="timeline_request_fa" class="fa fa-level-down"></i></a>
-            <div id="timeline_request" class="ptable no_border" data-parent="$request_id$" style="display: none"></div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        $request_chat$
-    </div>
+		<div class="form-group">
+			<a href="#timeline" class="timeline label label-default" data-parent="request">$txt_changes$ <i id="timeline_request_fa" class="fa fa-level-down"></i></a>
+			<div id="timeline_request" class="ptable no_border m-t-n-xxs" data-parent="$request_id$" style="display: none"></div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		$request_chat$
+	</div>
 </form>
 
 <br clear="all"/>
 
 <!-- ülesanded -->
 <div class="row m-l-none m-r-none">
-    <div class="col-md-12">
-        <div$hide_tasks$ class="panel panel-primary"$hide_tasks_separator$>
-            <div class="panel-heading m-b">
-                <div class="">$txt_tasks$</div>
-            </div>
+	<div class="col-md-12">
+		<div$hide_tasks$ class="panel panel-primary p-b"$hide_tasks_separator$>
+			<div class="panel-heading m-b">
+				<div class="">$txt_tasks$</div>
+			</div>
 
-            $fn_list_tasks$
-            <form method="post" id="task_$task_id$" action="$request_uri$" data-before="$task_before$" data-after="$task_after$" class="ajax-form form-horizontal" role="form">
-                <input type="hidden" name="domain" value="$request_domain$">
-                <input type="hidden" name="request_id" value="$request_id$">
-                <div class="col-md-12">
-                    <h4 class="border-bottom">$task_count$</h4>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <!--
-                                <select name="owner_id" data-user="$current_user$" data-owner="$solver_selected$" class="form-control"$disabled_task$$disabled_all$>
-                                    $task_solvers$
-                                </select>
-                                -->
-                                <input type="text" name="owner_id" id="$" class="form-control" value="$owner_id$" placeholder="$txt_ph_solver$" autocomplete="off"$disabled_task$$disabled_all$>
-                                <div id="choose_requester" style="display: none"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-addon">$txt_deadline$:</span>
-                                <input name="deadline" type="text" value="$deadline$" class="datepicker form-control$over_deadline$" size="small"$disabled_task$$disabled_all$>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <select name="status" class="task_status form-control" data-id="$task_id$"$disabled_task$$disabled_all$>
-                                $task_status$
-                            </select>
-                        </div>
-                    </div>
+			$fn_list_tasks$
+			<hr>
+			<form method="post" id="task_$task_id$" action="$request_uri$" data-before="$task_before$" data-after="$task_after$" class="ajax-form form-horizontal" role="form">
 
-                    <div class="row" id="spent_time_$task_id$"$hide_spent_time$>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                $txt_spent_time$:<br/>
-                                <select name="spent_hrs" class="spent form-control"$disabled_task$$disabled_all$>
-                                    $spent_hrs$
-                                </select>
-                                <div class="spent_suf"> h </div>
-                                <select name="spent_min" class="spent form-control"$disabled_task$$disabled_all$>
-                                    $spent_min$
-                                </select>
-                                <div class="spent_suf">m</div>
-                            </div>
-                        </div>
-                    </div>
+				<input type="hidden" name="domain" value="$request_domain$">
+				<input type="hidden" name="request_id" value="$request_id$">
+				<div class="col-md-12">
+					<h3>$task_count$</h3>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-xl-4">
+							<div class="form-group">
+								<!--
+<select name="owner_id" data-user="$current_user$" data-owner="$solver_selected$" class="form-control"$disabled_task$$disabled_all$>
+$task_solvers$
+</select>
+-->
+								<input type="text" name="owner_id" id="$task_id$_owner" class="autofetch form-control" value="$owner_id$" placeholder="$txt_ph_solver$" autocomplete="off"$disabled_task$$disabled_all$>
+								<div id="$task_id$_owner_results" class="autofetch_results" data-parent="$task_id$_owner" style="display: none"></div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon">$txt_deadline$:</span>
+								<input name="deadline" type="text" value="$deadline$" class="datepicker form-control$over_deadline$" size="small"$disabled_task$$disabled_all$>
+							</div>
+						</div>
+						</div>
+						<div class="col-xl-4">
+						<div class="form-group">
+							<select name="status" class="task_status form-control" data-id="$task_id$"$disabled_task$$disabled_all$>
+								$task_status$
+							</select>
+						</div>
+						</div>
+					</div>
 
-                    <div class="form-group"$hide_files$>
-                        <div class="uploaded-files" data-type="task" data-parent="$task_id$"$task_rm_files$></div><br/>
-                        <div class="dropzone" data-parent="$task_id$"$hide_upload$>
-                            <div class="dropzone-previews">
-                                <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
-                            </div>
-                        </div>
-                    </div>
+					<div class="row" id="spent_time_$task_id$"$hide_spent_time$>
+						<div class="col-md-6">
+							<div class="form-group">
+								$txt_spent_time$:<br/>
+								<select name="spent_hrs" class="spent form-control"$disabled_task$$disabled_all$>
+									$spent_hrs$
+								</select>
+								<div class="spent_suf"> h </div>
+								<select name="spent_min" class="spent form-control"$disabled_task$$disabled_all$>
+									$spent_min$
+								</select>
+								<div class="spent_suf">m</div>
+							</div>
+						</div>
+					</div>
 
-                    <div class="form-group">
-                        <textarea name="comment" class="form-control" rows=3 placeholder="$txt_comment_solver$" maxlength="8192"$hide_task_comment$$disabled_task$$disabled_all$></textarea><br/>
-                        <button type="submit" id="task_commit_$task_id$" class="btn btn-default btn-outline pull-left"$hide_reopen_task_btn$>$task_commit$</button>
-                    </div>
+					<div class="form-group"$hide_files$>
+						<div class="uploaded-files" data-type="task" data-parent="$task_id$"$task_rm_files$></div><br/>
+						<div class="dropzone" data-parent="$task_id$"$hide_upload$>
+							<div class="dropzone-previews">
+								<div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+							</div>
+						</div>
+					</div>
 
-                    <div class="form-group">
-                        <a href="#timeline" class="timeline label label-default" data-parent="$task_id$">$txt_changes$ <i id="timeline_$task_id$_fa" class="fa fa-level-down"></i></a>
-                        <div id="timeline_$task_id$" class="ptable no_border" data-template="timeline_task" data-parent="$task_id$" style="display: none"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="scrollable-comments m-b">
-                        $task_chat$
-                    </div>
-                </div>
-            </form>
-            <br clear="all"/>
-            $fn_stop$
-        </div>
-    </div>
+					<div class="form-group">
+						<textarea name="comment" class="form-control" rows=3 placeholder="$txt_comment_solver$" maxlength="8192"$hide_task_comment$$disabled_task$$disabled_all$></textarea><br/>
+						<button type="submit" id="task_commit_$task_id$" class="btn btn-primary pull-left"$hide_reopen_task_btn$>$task_commit$</button>
+					</div>
+
+					<div class="form-group">
+						<a href="#timeline" class="timeline label label-default" data-parent="$task_id$">$txt_changes$ <i id="timeline_$task_id$_fa" class="fa fa-level-down"></i></a>
+						<div id="timeline_$task_id$" class="ptable no_border m-t-n-xxs" data-template="timeline_task" data-parent="$task_id$" style="display: none"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="scrollable-comments m-b">
+						$task_chat$
+					</div>
+				</div>
+			</form>
+			<br clear="all"/>
+			$fn_stop$
+			</div>
+	</div>
 </div>

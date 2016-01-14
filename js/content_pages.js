@@ -208,7 +208,7 @@ $(function() {
 
 
 	/****************************************************************
-	ARENGUKAVA SCRIPTS
+	SCORECARD SCRIPTS
 	****************************************************************/
 
 
@@ -217,12 +217,13 @@ $(function() {
 	$(".goal-badge").click(function(){
 
 		$(".goal-details-open-button").remove();
+		$(".goal-delete-button").remove();
 		$(".add-new-action-button").remove();
 
-		if ($(this).hasClass("active") //&& $(this).find("a").hasClass(".goal-details-open-button")
-			 ) {
+		if ($(this).hasClass("active")) {
 			$(this).removeClass("active");
 			$(this).find('i').addClass("fa-chevron-down");
+			$(this).find('a').after("");
 			$(".goal-badge").show();
 		}
 
@@ -232,7 +233,7 @@ $(function() {
 			$(this).show();
 			$(this).addClass("active");
 			$(this).find('i').removeClass("fa-chevron-down");
-			$(this).find('a').after("<a href='#' class='goal-details-open-button' data-toggle='modal' data-target='#goal-details'><i class='fa fa-search text-white right m-t-xxs'></i></a>");
+			$(this).find('a').after("<a href='#' class='goal-details-open-button' data-toggle='modal' data-target='#goal-details'><i class='fa fa-search text-white right m-r-md m-t-xxs'></i></a><a href='#' class='goal-delete-button'><i class='fa fa-trash text-white right m-t-xxs'></i></a>");
 			$(this).after("<a href='#' class='add-new-action-button'><i class='fa fa-plus'></i></a>");
 		}
 
@@ -325,29 +326,9 @@ $(function() {
 
 
 	/****************************************************************
-	ARENGUKAVA SCRIPTS END
+	SCORECARD SCRIPTS END
 	****************************************************************/
 
-
-	/****************************************************************
-	SRM SCRIPTS
-	****************************************************************/
-
-
-	//TOGGLE BETWEEN SRM ORDERS FILTERING/SEARCH AND LOAD CONTENT
-	//--------------------------------------------------------------
-	$(".btn-caret").click(function(){
-		$(this).toggleClass("active").siblings().removeClass("active");
-		//Load content
-		if($("#srm-filter").hasClass("active")) {
-			$("#srm-search-content").addClass("hidden");
-			$("#srm-filter-content").removeClass("hidden");
-		}
-		else if($("#srm-search").hasClass("active")) {
-			$("#srm-filter-content").addClass("hidden");
-			$("#srm-search-content").removeClass("hidden");
-		}
-	});
 
 	//end everything------------------------------------------------
 });

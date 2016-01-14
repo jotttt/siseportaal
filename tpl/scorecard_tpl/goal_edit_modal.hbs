@@ -4,7 +4,18 @@
     <small class="font-bold">Siin saad muuta ja uuendada eesmärgi parameetreid</small>
 </div>
 <div class="modal-body">
-    <!-- TEGEVUSARUANNE -->
+
+         <div class="row">
+            <div class="col-sm-4 m-t-xs">
+                <h5 class="text-muted text-uppercase">{{t.txt_domain}}</h5>
+                    <select id="domain" name="domain" class="form-control m-b">
+                        {{#each domains}}
+                        <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+                        {{/each}}
+                    </select>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-4 m-t-xs">
                 <h5 class="text-muted text-uppercase">{{t.txt_language}}</h5>
@@ -61,6 +72,5 @@
         </div>
     </div>
 
-    <!-- TEGEVUSARUANNE END -->
 </div>
 

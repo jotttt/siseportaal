@@ -1,215 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<title></title>
-        $html_header$
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>$txt_page_title$ [$buildname$@$buildtime$]</title>
+
+        <link href="/portal/1.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/animate.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/x-editable/1.5.1/bootstrap-editable.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/datepicker/1.4.0/datepicker.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/dropzone/4.0.1/min/basic.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/mmenu/5.5.3/jquery.mmenu.all.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/style.css" rel="stylesheet" />
+        <link href="/portal/1.0/css/plugins/ptable/ptable.css" rel="stylesheet" />
     </head>
+
     <body class="gray-bg">
+
         <div id="wrapper" class="gray-bg">
-
             <nav class="navbar navbar-static-top nav-down" role="navigation">
-                <div class="cherry-mod-bg"></div>
-                <span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
-                    <button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
-                </span>
-                <span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
-                    <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
-                </span>
-                <div id="mobile-search" class="hidden">
-                    <form>
-                        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
-                    </form>
-                </div>
-
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-header">
-                            <div class="dropdown profile-element hidden-xs">
-                                <span>
-                                    <a href="#" class="cr-block"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="dropdown dropdown-large hidden-xs">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_1$ <b class="caret"></b></a>
-                            <ul class="dropdown-menu dropdown-menu-large row">
-                                $fn_generate_navbar$$navbar_submenu$$fn_stop$
-                            </ul>
-                        </li>
-
-                        <li class="dropdown dropdown-large hidden-xs">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_2$ <b class="caret"></b></a>
-                            <ul class="dropdown-menu dropdown-menu-large row">
-                                $fn_generate_navbar$$navbar_submenu$$fn_stop$
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-large hidden-xs">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_3$ <b class="caret"></b></a>
-                            <ul class="dropdown-menu dropdown-menu-large row">
-                                $fn_generate_navbar$$navbar_submenu$$fn_stop$
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-large hidden-xs">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_4$ <b class="caret"></b></a>
-                            <ul class="dropdown-menu dropdown-menu-large row">
-                                $fn_generate_navbar$$navbar_submenu$$fn_stop$
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-large hidden-xs">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$txt_menubar_5$ <b class="caret"></b></a>
-                            <ul class="dropdown-menu dropdown-menu-large row">
-                                $fn_generate_navbar$$navbar_submenu$$fn_stop$
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <ul class="nav navbar-top-links navbar-right">
-		    <!--
-		    <li class="dropdown">
-			<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
-			    <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-			</a>
-			<ul class="dropdown-menu dropdown-messages">
-			    <li>
-				<div class="dropdown-messages-box">
-				    <a href="profile.html" class="pull-left">
-					<i class="fa fa-envelope-o fa-3x"></i>
-				    </a>
-				    <div class="media-body">
-					<small class="pull-right">14.08.2015</small>
-					<strong>Eelarve lisad</strong><br>
-					<small class="text-muted">Margus Vooglaid</small>
-				    </div>
-				</div>
-			    </li>
-			    <li class="divider"></li>
-			    <li>
-				<div class="dropdown-messages-box">
-				    <a href="profile.html" class="pull-left">
-					<i class="fa fa-envelope-o fa-3x"></i>
-				    </a>
-				    <div class="media-body">
-					<small class="pull-right">12.08.2015</small>
-					<strong>Viiamne võimalus registreerida ennast tuleohutus- koolitusele </strong><br>
-					<small class="text-muted">Priit Tamm</small>
-				    </div>
-				</div>
-			    </li>
-			    <li class="divider"></li>
-			    <li>
-				<div class="dropdown-messages-box">
-				    <a href="profile.html" class="pull-left">
-					<i class="fa fa-envelope-o fa-3x"></i>
-				    </a>
-				    <div class="media-body">
-					<small class="pull-right">14.08.2015</small>
-					<strong>Huvitavat lugemist</strong><br>
-					<small class="text-muted">Sander Marandi</small>
-				    </div>
-				</div>
-			    </li>
-			    <li class="divider"></li>
-			    <li>
-				<div class="text-center link-block">
-				    <a href="mailbox.html">
-					<i class="fa fa-envelope"></i> <strong>Loe kõiki emaile</strong>
-				    </a>
-				</div>
-			    </li>
-			</ul>
-		    </li>
-		    -->
-		    <li class="dropdown">
-			<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-			    <i class="fa fa-bell"></i><span class="label label-primary">$notifications_badge$</span>
-			</a>
-			<ul class="dropdown-menu dropdown-alerts">
-			    <li>
-				<a href="mailbox.html">
-				    <div>
-					<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
-					<span class="pull-right text-muted small">19 minutit tagasi</span>
-				    </div>
-				</a>
-			    </li>
-			    <li class="divider"></li>
-			    <li>
-				<a href="profile.html">
-				    <div>
-					<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
-					<span class="pull-right text-muted small">56 minutit tagasi</span>
-				    </div>
-				</a>
-			    </li>
-			    <li class="divider"></li>
-			    <li>
-				<a href="grid_options.html">
-				    <div>
-					<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
-					<span class="pull-right text-muted small">4h tagasi</span>
-				    </div>
-				</a>
-			    </li>
-			    <!--
-			    <li class="divider"></li>
-			    <li>
-				<div class="text-center link-block">
-				    <a href="notifications.html">
-					<strong>Vaata kõiki teavitusi</strong>
-					<i class="fa fa-angle-right"></i>
-				    </a>
-				</div>
-			    </li>
-			    -->
-			</ul>
-		    </li>
-
-                    <li class=" m-l"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> $txt_help$</a></li>
-
-		    <li  class="show-icon">
-			<a class="right-sidebar-toggle">
-			    <i class="fa fa-tasks"></i>
-			</a>
-		    </li>
-
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> $txt_profile$</a></li>
-                            <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> $txt_settings$</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> $txt_logout$</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <!--NAVBAR SEARCH
------------------------------------------------------------------>
-                <ul class="nav navbar-top-links navbar-right visible-lg">
-                    <form ole="search" method="post" action="/search/$sess_id$">
-                        <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome"></form>
-                </ul>
-                <!--NAVBAR SEARCH END
-------------------------------------------------------------------->
+                $html_navbar$
             </nav>
 
             <nav id="m-menu" class="min">
                 <ul>
                     $fn_generate_sidebar$<li$is_active$>
                         <span><i class="fa fa-$module_icon$"></i> $module_title$</span>
-                        $sidebar_submenu$
+                        $sidebar_level2$
                     </li>$fn_stop$
                 </ul>
             </nav>
 
             <div id="page-wrapper" class="gray-bg min">
-                <div class="row">
-                </div>
                 <div id="content-wrapper">
-                    $ajax_wrapper$
+                    $html_content$
                 </div>
             </div>
         </div>
@@ -243,7 +71,38 @@
 
         <div id="_sess_id" class="$sess_id$"></div>
         <div id="_lang" class="$lang$"></div>
+        <div id="_build" class="$buildtime$"></div>
 
-        $html_footer$
+        <!--SCRIPTS ------------------------------------------------------------------->
+        <!-- Main scripts -->
+        <script src="/portal/1.0/js/jquery-2.1.4.min.js"></script>
+        <script src="/portal/1.0/js/plugins/jquery-ui/1.10.4/jquery-ui.min.js"></script>
+        <script src="/portal/1.0/js/bootstrap.min.js"></script>
+        <!-- Plugin scripts -->
+        <script src="/portal/1.0/js/plugins/mmenu/5.5.3/jquery.mmenu.min.all.js"></script>
+        <script src="/portal/1.0/js/plugins/slimscroll/jquery.slimscroll.js"></script>
+
+        <script src="/portal/1.0/js/plugins/pace/pace.min.js"></script>
+        <script src="/portal/1.0/js/plugins/handlebars/4.0.3/handlebars.min.js"></script>
+        <script src="/portal/1.0/js/plugins/accounting/0.4.2/accounting.min.js"></script>
+        <script src="/portal/1.0/js/plugins/typeahead/0.11.1/typeahead.bundle.min.js"></script>
+        <script src="/portal/1.0/js/plugins/highcharts/4.1.8/highcharts.js"></script>
+        <script src="/portal/1.0/js/plugins/highcharts/4.1.8/highcharts-3d.js"></script>
+
+        <script src="/portal/1.0/js/plugins/ckeditor/4.5.6-build-1/ckeditor.js"></script>
+        <script src="/portal/1.0/js/plugins/datepicker/1.4.0/bootstrap-datepicker.min.js"></script>
+        <script src="/portal/1.0/js/plugins/dropzone/4.0.1/min/dropzone.min.js"></script>
+
+        <script src="/portal/1.0/js/plugins/placeholder/2.1.3/jquery.placeholder.min.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="/portal/1.0/js/history.js"></script>
+        <script src="/portal/1.0/js/main.js?$buildtime$"></script>
+        <script src="/portal/1.0/js/main_ui.js?$buildtime$"></script>
+        <script src="/portal/1.0/js/widget_ui.js?$buildtime$"></script>
+
+        <script src="/portal/1.0/js/plugins/ptable/store.min.js"></script>
+        <script src="/portal/1.0/js/plugins/ptable/ptable.js?$buildtime$"></script>
+
     </body>
 </html>

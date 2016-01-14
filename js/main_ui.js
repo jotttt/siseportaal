@@ -2,21 +2,21 @@
 (function ($) {
 	$.fn.portalui = function () {
 
-		/**************************************************************
+		/*********************************************************
    	GENERAL SCRIPTS
-  	**************************************************************/
+  	**********************************************************/
 
 		//INIT M-MENU
-		//--------------------------------------------------------------
+		//---------------------------------------------------------
 		$("#m-menu").mmenu({
 			"navbar": {
 				"title": ""
 			}
 		});
-		//end-----------------------------------------------------------
+		//end------------------------------------------------------
 
 		//TOGGLE MOBILE MENU
-		//--------------------------------------------------------------
+		//---------------------------------------------------------
 		$("#open-mobile-menu").click(function () {
 			$("#m-menu.min").addClass("open");
 			$("#c-mask").addClass("active");
@@ -26,17 +26,17 @@
 			$("#m-menu.min").removeClass("open");
 			$("#c-mask").removeClass("active");
 		});
-		//end-----------------------------------------------------------
+		//end-----------------------------------------------------
 
 		//MOBILE SEARCH TOGGLE
-		//--------------------------------------------------------------
+		//--------------------------------------------------------
 		$("#open-mobile-search").click(function () {
 			$("#mobile-search").toggleClass("hidden");
 		});
-		//end-------------------------------------------------------------
+		//end-----------------------------------------------------
 
 		//HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
-		//--------------------------------------------------------------
+		//--------------------------------------------------------
 		var didScroll;
 		var lastScrollTop = 0;
 		var delta = 5;
@@ -75,10 +75,10 @@
 
 			lastScrollTop = st;
 		}
-		//end-------------------------------------------------------------
+		//end-----------------------------------------------------
 
 		//BACK TO TOP BUTTON
-		//--------------------------------------------------------------
+		//--------------------------------------------------------
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
 				$('.scroll-up').fadeIn();
@@ -93,14 +93,14 @@
 			}, 600);
 			return false;
 		});
-		//end-----------------------------------------------------------
+		//end-----------------------------------------------------
 
 
 		//FUNCTION TO DISPLAY PLACEHOLDERS IN IE8+
 		$('input, textarea').placeholder();
 
 		// MEGA MENU SCRIPTS
-		//--------------------------------------------------------------
+		//--------------------------------------------------------
 		//SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
 		$(".l3").hide();
 		$(".level-2 a").mouseenter(function () {
@@ -122,7 +122,7 @@
 
 		//ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
 		$(".l3").prev().children().addClass("menu-chevron");
-		//end-----------------------------------------------------------
+		//end------------------------------------------------------
 
 		/**********************************************************
    	GENERAL SCRIPTS END
@@ -133,7 +133,7 @@
     **********************************************************/
 
 		//NEWS LEAD ON HOVER
-		//--------------------------------------------------------------
+		//---------------------------------------------------------
 		$(".news-module").mouseenter(function () {
 			if (!$(this).find('.news-lead').is(':visible')) {
 				clearTimeout($(this).data('timeoutId'));
@@ -147,119 +147,8 @@
 					}, 500);
 			item.data('timeoutId', timeoutId);
 		});
-		//end-----------------------------------------------------------
+		//end-----------------------------------------------------
 
-
-		//EDIT MODE
-		//--------------------------------------------------------------
-
-		//GET WIDGETS POSITIONS
-
-		function widgetPositions() {
-
-			//clear info div
-			$("#info").empty();
-
-			//column selectors into variables for readability
-			var leftColumn = $("#sortable-left > .widget-wrapper");
-			var middleColumn = $("#sortable-middle > .widget-wrapper");
-			var rightColumn = $("#sortable-right > .widget-wrapper");
-
-			//collect widgets to arrays according to column
-			var array1 = leftColumn.toArray();
-			var array2 = middleColumn.toArray();
-			var array3 = rightColumn.toArray();
-
-			//count widgets in columns
-			var leftCount = leftColumn.length;
-			var middleCount = middleColumn.length;
-			var rightCount = rightColumn.length;
-
-			//init position info array
-			var arrayPos = [[]];
-
-			//add positions info to "arrayPos" array
-			//print the results to info div
-			$("#info").append("left widgets: ");
-
-			var grid = "";
-
-			for (var i = 0; i < leftCount; i++) {
-				arrayPos[0[i]] = $(array1[i]).attr("id");
-				grid += arrayPos[0[i]] + (i < (leftCount - 1) ? ":" : "");
-				$("#info").append("[" + arrayPos[0[i]] + "] ");
-			}
-
-			grid += ";";
-			$("#info").append("<br>middle widgets: ");
-
-			for (var j = 0; j < middleCount; j++) {
-				arrayPos[1[j]] = $(array2[j]).attr("id");
-				grid += arrayPos[1[i]] + (j < (middleCount - 1) ? ":" : "");
-				$("#info").append("[" + arrayPos[1[j]] + "] ");
-			}
-
-			grid += ";";
-			$("#info").append("<br>right widgets: ");
-
-			for (var k = 0; k < rightCount; k++) {
-				arrayPos[2[k]] = $(array3[k]).attr("id");
-				grid += arrayPos[2[i]] + (k < (rightCount - 1) ? ":" : "");
-				$("#info").append("[" + arrayPos[2[k]] + "] ");
-			}
-
-			var ct = Date.now();
-
-			if (!last_update || (ct - last_update) > 500) {
-				$.post("/intranet-widget", {grid: grid});
-				last_update = ct;
-			}
-		}
-
-
-		if (portal_module == "intranet" && portal_focus == "main")
-			widgetPositions();
-
-		//END GET WIDGETS POSITIONS
-		// REMOVE WIDGET WHEN CLOSE BUTTON IS PRESSED AND SAVE POSITIONS TO DB
-		$(".close-link").click(function () {
-			setTimeout(function () {
-				widgetPositions()
-			}, 10);
-		});
-
-		//DRAGABLE WIDGETS
-
-		function WinMove() {
-			var element = "[class*=ui-sortable]";
-			var handle = ".ibox-title";
-			var connect = "[class*=ui-sortable]";
-
-			$(element).sortable(
-				{
-					containment: "#sortable-view",
-					items: "> div",
-					handle: handle,
-					connectWith: connect,
-					helper: 'clone',
-					tolerance: 'pointer',
-					forcePlaceholderSize: true,
-					opacity: 0.8,
-					appendTo: 'body',
-					update: function () {
-						widgetPositions();
-					}
-				}
-			);
-		}
-
-		WinMove();
-
-		/***************************************************************
-    END DRAGABLE WIDGETS
-   ****************************************************************/
-
-		//end-----------------------------------------------------------
 
 		/**********************************************************
     CONTENT PAGES
@@ -267,14 +156,13 @@
 
 
 		//RIGHT SIDEBAR TOGGLE
-		//--------------------------------------------------------------
-		$('.right-sidebar a').click(function () {
-			$(this).parent().toggleClass('open');
+		//--------------------------------------------------------
+		$(document).on('click', '.right-sidebar .dropdown-menu', function (e) {
+			e.stopPropagation();
 		});
 
-
 		//FULLSCREEN MODE
-		//--------------------------------------------------------------
+		//----------------------------------------------------------
 		//display on hover only
 		$("#fullscreen-btn").hover(function () {
 			$(this).css({
@@ -296,68 +184,9 @@
 				$("nav.navbar-static-top, nav.navbar-fixed-top, nav#m-menu, #page-wrapper.min, .breadcrumb, .footer").removeClass("closed");
 			}
 		});
-		//--------------------------------------------------------------
+		//--------------------------------------------------------
 		//FULLSCREEN MODE END
 
-		/***************************************************************
-    ARENGUKAVA SCRIPTS
-   	***************************************************************/
-
-		//TOGGLE 1ST LVL BUTTON STATE
-		//--------------------------------------------------------------
-
-		/*$(".goal-badge").click(function(){
-
-         $(".goal-badge").find(".goal-details-open-button").remove();
-
-         if ($(this).hasClass("active") && $(this).find("a").hasClass(".goal-details-open-button")) {
-         $(this).removeClass("active");
-         $("#goal-details").addClass("hidden");
-         $(this).find('i').addClass("fa-chevron-down");
-         }
-         else  {
-         $(".goal-badge").removeClass("active");
-         $(this).addClass("active");
-         $(this).find('i').removeClass("fa-chevron-down");
-         $(this).find('a').after("<a href='#' class='goal-details-open-button' data-toggle='modal' data-target='#goal-details'><i class='fa fa-search text-white pull-right'></i></a>");
-         $(".goal-details-open-button").click(function(){
-
-         });
-         $("#goal-details").removeClass("hidden");
-         }
-
-         });*/
-
-		//FILTER LOGIC
-		//--------------------------------------------------------------
-		/*$("#right-sidebar-filter").find("a").click(function() {
-         $(this).toggleClass("selected");
-         });*/
-
-
-		//TOGGLE GOAL BADGE WITH BUTTONS TO OPEN GOAL DETAILS AND ADD NEW GOAL
-		//--------------------------------------------------------------
-
-		/*$(".goal-badge").click(function(){
-
-         $(".goal-details-open-button").remove();
-         $(".add-new-action-button").remove();
-
-         if ($(this).hasClass("active") && $(this).find("a").hasClass(".goal-details-open-button")) {
-         $(this).removeClass("active");
-         }
-         else  {
-         $(".goal-badge").removeClass("active");
-         $(this).addClass("active");
-         $(this).find('a').after("<a href='#' class='goal-details-open-button' data-toggle='modal' data-target='#goal-details'><i class='fa fa-search text-white right m-t-xxs'></i></a>");
-         $(this).after("<a href='#' class='add-new-action-button'><i class='fa fa-plus'></i></a>");
-         }
-
-         });*/
-
-		/***************************************************************
-         ARENGUKAVA SCRIPTS END
-         ****************************************************************/
 	};
 
 	$().portalui();

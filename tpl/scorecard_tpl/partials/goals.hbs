@@ -1,17 +1,21 @@
 <ul class="list-unstyled m-l m-r">
-    {{#each goals}}
-    <li class="goal-badge m-b-xs" id="{{this.uid}}" data-uid="{{this.uid}}">
-        {{> goal goal=this}}
-    </li>
-    <!-- ACTIONS -->
-<div id="{{this.uid}}-actions" class="row actionsDiv">
-</div>
-<!-- ACTIONS END -->
+	<li class="add-new-goal m-b-xs">
+		<a href="#/" class="btn btn-xs btn-default btn-outline font-bold">
+			<i class="fa fa-plus"></i> LISA UUS EESMÄRK
+		</a>
+	</li>
+	{{#each goals}}
+	<li class="goal-badge m-b-xs" id="{{this.uid}}" data-uid="{{this.uid}}">
+		{{> goal goal=this}}
+	</li>
+	<!-- ACTIONS -->
+	<div id="{{this.uid}}-actions" class="row actionsDiv">
+	</div>
+	<!-- ACTIONS END -->
 
-    <!-- ACTIONS L2 -->
-<div id="{{this.uid}}-actions2" class="row actionsDiv">
-</div>
-<!-- ACTIONS END L2 -->
-
-    {{/each}}
+	<!-- ACTIONS L2 -->
+	<div id="{{this.uid}}-actions2" class="row actionsDiv">
+	</div>
+	<!-- ACTIONS END L2 -->
+	{{/each}}
 </ul>

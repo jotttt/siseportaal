@@ -1,11 +1,9 @@
 // main: style.less
 
 .scrollable-comments {
-	max-height: 600px;
-	overflow: auto;
-	overflow-x: hidden;
-	border: 1px solid @lightest-grey;
-	padding: 10px 10px 0 10px;
+	   overflow: auto;
+	max-height: 250px;
+
 }
 
 /******************************************************************
@@ -63,9 +61,9 @@ MASONRY STYLE LAYOUT
 }
 //end masonry--------------------------------------------------
 
-/******************************************************************
+/****************************************************************
 EASTER EGG
-******************************************************************/
+****************************************************************/
 .easter-1 > * {
 	-webkit-transform: rotate(3600deg);	-ms-transform: rotate(3600deg);	transform: rotate(3600deg);
 	-webkit-transition: 5s;	transition: 5s;
@@ -78,9 +76,9 @@ EASTER EGG
 
 //end easter egg--------------------------------------------------
 
-/******************************************************************
+/****************************************************************
 RATING SYSTEM gold
-******************************************************************/
+****************************************************************/
 .rating {
 }
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
@@ -187,6 +185,15 @@ SCROLL BACK UP BUTTON
 }
 //end----------------------------------------------------------
 
+
+//FORMS--------------------------------------------------------
+input {
+	padding: 0 2px;
+}
+input:focus {
+	outline-color: @cherry;
+}
+//end----------------------------------------------------------
 
 /* CHOSEN PLUGIN */
 
@@ -841,6 +848,12 @@ table.dataTable thead .sorting:after {
 }
 
 /* WIDGETS */
+
+.widget-wrapper {
+	margin-bottom: 25px;
+	border: 1px solid @lightest-grey;
+	border-radius: 2px;
+}
 
 .widget {
 	border-radius: 5px;
