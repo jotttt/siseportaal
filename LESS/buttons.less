@@ -59,6 +59,28 @@
 	color: @cherry;
 }
 
+.btn-primary.btn-outline:hover {
+	color: @cherry;
+	background: white;
+	box-shadow: 0px 1px 4px 0px #A6A6A6;
+}
+
+.btn-primary.btn-outline:active, .btn-primary.btn-outline:focus {
+	background: white;
+	box-shadow: 0 0 0 #000;
+}
+
+.btn-primary.btn-outline.active {
+	background: white;
+	box-shadow: inset 0px 4px 6px #c9c9c9;
+}
+
+.btn-primary.btn-outline.act {
+	background: white;
+	border-color: @cherry;
+	box-shadow: inset 0px 4px 6px #c9c9c9;
+}
+
 .btn-success.btn-outline {
 	color: @lazur;
 }
@@ -88,7 +110,7 @@
 .btn-info.btn-outline:hover,
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
-	color: #fff;
+
 }
 
 .btn-primary {
@@ -182,6 +204,8 @@
 	background-image: none;
 }
 
+
+
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default.active[disabled], fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
 	background-color: lighten(@lighter-grey, 4%);
 	border-color: lighten(@lighter-grey, 4%);
@@ -272,6 +296,7 @@
 	background-color: @grey-btn;
 	border-color: @grey-btn;
 	color: @text-color;
+
 }
 
 .btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .open .dropdown-toggle.btn-grey {
@@ -282,6 +307,12 @@
 
 .btn-grey:active, .btn-grey.active, .open .dropdown-toggle.btn-grey {
 	background-image: none;
+}
+
+.btn-grey.selected {
+	background-color: #c1c1c1;
+	border-color: #c1c1c1;
+	box-shadow: inset 0px 4px 6px #AAA;
 }
 
 .btn-grey.disabled, .btn-grey.disabled:hover, .btn-grey.disabled:focus, .btn-grey.disabled:active, .btn-grey.disabled.active, .btn-grey[disabled], .btn-grey[disabled]:hover, .btn-grey[disabled]:focus, .btn-grey[disabled]:active, .btn-grey.active[disabled], fieldset[disabled] .btn-grey, fieldset[disabled] .btn-grey:hover, fieldset[disabled] .btn-grey:focus, fieldset[disabled] .btn-grey:active, fieldset[disabled] .btn-grey.active {
@@ -399,90 +430,26 @@ button.dim:active:before {
 	font-size: 50px;
 }
 
-/* TOGGLE SWICH
--------------------------------------------------------------*/
-/*.onoffswitch {
-position: relative;
-width: 64px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
+
+/* BUTTON GROUP */
+
+.btn-group.radio-type {
+
 }
 
-.onoffswitch-checkbox {
-display: none;
+.btn-group.radio-type > .btn {
+	width: inherit;
+	margin-bottom: 0px;
 }
 
-.onoffswitch-label {
-display: block;
-overflow: hidden;
-cursor: pointer;
-border: 2px solid @cherry;
-border-radius: 2px;
+.btn-group.radio-type > .btn:first-child {
+	border-bottom-left-radius: 0px;
 }
 
-.onoffswitch-inner {
-width: 200%;
-margin-left: -100%;
--moz-transition: margin 0.3s ease-in 0s;
--webkit-transition: margin 0.3s ease-in 0s;
--o-transition: margin 0.3s ease-in 0s;
-transition: margin 0.3s ease-in 0s;
+.btn-group.radio-type > .btn:last-child {
+	border-bottom-right-radius: 0px;
 }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-float: left;
-width: 50%;
-height: 20px;
-padding: 0;
-line-height: 20px;
-font-size: 12px;
-color: white;
-font-family: Trebuchet, Arial, sans-serif;
-font-weight: bold;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-.onoffswitch-inner:before {
-content: "ON";
-padding-left: 10px;
-background-color: @cherry;
-color: #FFFFFF;
-}
-
-.onoffswitch-inner:after {
-content: "OFF";
-padding-right: 10px;
-background-color: #FFFFFF;
-color: #999999;
-text-align: right;
-}
-
-.onoffswitch-switch {
-width: 20px;
-margin: 0px;
-background: #FFFFFF;
-border: 2px solid @cherry;
-border-radius: 2px;
-position: absolute;
-top: 0;
-bottom: 0;
-right: 44px;
--moz-transition: all 0.3s ease-in 0s;
--webkit-transition: all 0.3s ease-in 0s;
--o-transition: all 0.3s ease-in 0s;
-transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-right: 0px;
-}*/
 
 /* SWITCHES */
 
@@ -604,27 +571,8 @@ button.btn.btn-caret.active:before {
 	border-left: 12px solid transparent;
 	border-right: 12px solid transparent;
 }
-//end carret buttons ----------------------------------------------
+//end carret buttons ------------------------------------------
 
-
-//ADD NEW ACTION BUTTON
-//-----------------------------------------------------------------
-
-.add-new-action-button {
-	position: absolute;
-	right: 0px;
-	margin: -28px 0 0 0;
-}
-
-@media (max-width: 768px) {
-
-	.add-new-action-button {
-		position: absolute;
-		right: 0px;
-		margin: -28px 0 0 0;
-	}
-
-}
 
 //button behavior
 @media (max-width: 768px) {

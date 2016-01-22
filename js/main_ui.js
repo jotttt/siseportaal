@@ -1,4 +1,4 @@
-/*jshint -W117 */
+/*jshint -W117, -W098 */
 (function ($) {
 	$.fn.portalui = function () {
 
@@ -19,12 +19,12 @@
 		//---------------------------------------------------------
 		$("#open-mobile-menu").click(function () {
 			$("#m-menu.min").addClass("open");
-			$("#c-mask").addClass("active");
+			$("#mobile-mask.c-mask").addClass("active");
 		});
 
-		$("#c-mask").click(function () {
+		$("#mobile-mask.c-mask").click(function () {
 			$("#m-menu.min").removeClass("open");
-			$("#c-mask").removeClass("active");
+			$("#mobile-mask.c-mask").removeClass("active");
 		});
 		//end-----------------------------------------------------
 
@@ -96,75 +96,17 @@
 		//end-----------------------------------------------------
 
 
-		//FUNCTION TO DISPLAY PLACEHOLDERS IN IE8+
-		$('input, textarea').placeholder();
-
-		// MEGA MENU SCRIPTS
-		//--------------------------------------------------------
-		//SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
-		$(".l3").hide();
-		$(".level-2 a").mouseenter(function () {
-			//get height and width of lvl 2 elem. and position lvl 3 elem
-			var height = ($(this).position()).top - 16;
-			var width = $(this).width() + 32;
-			$(this).parent().nextUntil('.level-2').css("left", width).css("top", height).show();
-		});
-
-		//HIDE LEVEL 3 ELEMENT
-		// hide on lvl 3 element box mouse out
-		$(".l3").mouseleave(function () {
-			$(this).hide();
-		});
-		// hide on another lvl 2 element mouse in
-		$(".level-2").mouseenter(function () {
-			$(".l3").hide();
-		});
-
-		//ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
-		$(".l3").prev().children().addClass("menu-chevron");
-		//end------------------------------------------------------
-
-		/**********************************************************
-   	GENERAL SCRIPTS END
-    **********************************************************/
-
-		/**********************************************************
-    DASHBOARD
-    **********************************************************/
-
-		//NEWS LEAD ON HOVER
-		//---------------------------------------------------------
-		$(".news-module").mouseenter(function () {
-			if (!$(this).find('.news-lead').is(':visible')) {
-				clearTimeout($(this).data('timeoutId'));
-				$(this).find('.news-lead').slideDown(300);
-			}
-		}).mouseleave(function () {
-			var item = $(this),
-					timeoutId = setTimeout(function () {
-						item.find('.news-lead').slideUp(900);
-						clearTimeout($(this).data('timeoutId'));
-					}, 500);
-			item.data('timeoutId', timeoutId);
-		});
-		//end-----------------------------------------------------
-
-
-		/**********************************************************
-    CONTENT PAGES
-    **********************************************************/
-
-
 		//RIGHT SIDEBAR TOGGLE
 		//--------------------------------------------------------
 		$(document).on('click', '.right-sidebar .dropdown-menu', function (e) {
 			e.stopPropagation();
 		});
 
+
 		//FULLSCREEN MODE
 		//----------------------------------------------------------
 		//display on hover only
-		$("#fullscreen-btn").hover(function () {
+		$("#fullscreen-btn, #my-coverpage-selector").hover(function () {
 			$(this).css({
 				"opacity": "1",
 				"transition": "opacity .25s ease-in-out",
@@ -186,6 +128,118 @@
 		});
 		//--------------------------------------------------------
 		//FULLSCREEN MODE END
+
+		//LOADING ANIMATION TOGGLE
+		//---------------------------------------------------------
+		function showLoadingAnimation(state) {
+			if(state===1) {
+				$("#loading-mask").addClass("fadeIn");
+				$("#loading-mask").removeClass("fadeOut");
+				$("#loading-mask").addClass("active");
+				$(".loading-animation").removeClass("hidden");
+			}
+			else if(state===0) {
+				$("#loading-mask").removeClass("fadeIn");
+				$("#loading-mask").addClass("fadeOut");
+				$("#loading-mask").removeClass("active");
+				$(".loading-animation").addClass("hidden");
+			}
+		}
+
+		showLoadingAnimation(0);
+		//end------------------------------------------------------
+
+
+		//FUNCTION TO DISPLAY PLACEHOLDERS IN IE8+
+		$('input, textarea').placeholder();
+
+
+		// MEGA MENU SCRIPTS
+		//--------------------------------------------------------
+		//SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
+		$(".l3").hide();
+		$(".level-2 a").mouseenter(function () {
+			//get height and width of lvl 2 elem. and position lvl 3 elem
+			var height = ($(this).position()).top - 16;
+			var width = $(this).width() + 32;
+			$(this).parent().nextUntil('.level-2').css("left", width).css("top", height).show();
+		});
+		//HIDE LEVEL 3 ELEMENT
+		// hide on lvl 3 element box mouse out
+		$(".l3").mouseleave(function () {
+			$(this).hide();
+		});
+		// hide on another lvl 2 element mouse in
+		$(".level-2").mouseenter(function () {
+			$(".l3").hide();
+		});
+		//ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
+		$(".l3").prev().children().addClass("menu-chevron");
+		//end------------------------------------------------------
+
+
+
+		/**********************************************************
+    COVERPAGE
+    **********************************************************/
+
+		//NEWS LEAD ON HOVER
+		//---------------------------------------------------------
+		$(".news-module").mouseenter(function () {
+			if (!$(this).find('.news-lead').is(':visible')) {
+				clearTimeout($(this).data('timeoutId'));
+				$(this).find('.news-lead').slideDown(300);
+			}
+		}).mouseleave(function () {
+			var item = $(this),
+					timeoutId = setTimeout(function () {
+						item.find('.news-lead').slideUp(900);
+						clearTimeout($(this).data('timeoutId'));
+					}, 500);
+			item.data('timeoutId', timeoutId);
+		});
+		//end-----------------------------------------------------
+
+		/**********************************************************
+   	COVERPAGE END
+    **********************************************************/
+
+
+		/**********************************************************
+    CONTENT PAGES
+    **********************************************************/
+
+		//ROOM SEARCH MODULE
+		//---------------------------------------------------------
+
+		//show detailed search
+		$(document).on("click", "#room-detail-search-btn", function() {
+			$("#room-detail-search").toggleClass("hidden");
+			$(this).find("i").toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+			$(this).toggleClass("active");
+		});
+
+		//select one button at a time in detailed search
+		$(document).on("click", ".btn-group.radio-type > .btn", function() {
+			$(this).siblings().removeClass("btn-grey selected");
+			$(this).siblings().addClass("btn-grey");
+			$(this).removeClass("btn-grey");
+			$(this).addClass("btn-grey selected");
+		});
+
+		//init chosen.js
+		$(".chosen-select").chosen({width: "100%"});
+		//end room search module
+
+
+		//SORTABLE CALENDAR
+		//---------------------------------------------------------
+
+
+		/**********************************************************
+    CONTENT PAGES END
+    **********************************************************/
+
 
 	};
 

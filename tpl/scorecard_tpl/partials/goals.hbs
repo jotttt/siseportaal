@@ -4,10 +4,12 @@
 			<i class="fa fa-plus"></i> LISA UUS EESMÄRK
 		</a>
 	</li>
+</ul>
+<ul id="goalsList" class="list-unstyled m-l m-r">
 	{{#each goals}}
-	<li class="goal-badge m-b-xs" id="{{this.uid}}" data-uid="{{this.uid}}">
-		{{> goal goal=this}}
-	</li>
+
+		{{> goal_li goal=this}}
+
 	<!-- ACTIONS -->
 	<div id="{{this.uid}}-actions" class="row actionsDiv">
 	</div>
@@ -19,3 +21,4 @@
 	<!-- ACTIONS END L2 -->
 	{{/each}}
 </ul>
+

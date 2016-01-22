@@ -7,6 +7,7 @@ SCORECARD STYLES
 //SCORECARD BADGES
 //--------------------------------------------------------------
 .goal-badge {
+	width:100%;
 	background-color: transparent;
 	border: 2px solid @lightest-grey;
 	border-radius: 2px;
@@ -26,8 +27,9 @@ SCORECARD STYLES
 	color: @text-color;
 }
 
-.goal-badge a {
+.goal-badge > a {
 	color: @text-color;
+
 }
 
 .goal-badge.active {
@@ -44,15 +46,46 @@ SCORECARD STYLES
 	color: white;
 }
 
+.goal-badge.active > a {
+	display: inline-block;
+	width: 85%;
+}
+
 .add-new-goal a {
 
 }
 
+.goal-tools {
+	display: inline-block;
+	width: 14%;
+	text-align: right;
+}
+
+.goal-tools a {
+	padding: 0px 5px ;
+}
+
+@media (max-width: 768px) {
+
+	.goal-tools  {
+		position: relative;
+		width: auto;
+		margin: 0;
+	}
+
+	.goal-tools a {
+		padding: 10px;
+		font-size: 1.3em
+	}
+
+}
+
+
 .action-container {
 	-webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
+	-moz-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
 }
 
 .action-badge {
@@ -127,8 +160,8 @@ SCORECARD STYLES
 	background-color: white;
 
 	-moz-box-shadow:    inset 0px 4px 6px @lighter-grey;
-   -webkit-box-shadow: inset 0px 4px 6px @lighter-grey;
-   box-shadow:         inset 0px 4px 6px @lighter-grey;
+	-webkit-box-shadow: inset 0px 4px 6px @lighter-grey;
+	box-shadow:         inset 0px 4px 6px @lighter-grey;
 
 	-moz-transition: max-height 0.15s ease-out 0s;
 	-webkit-transition: max-height 0.15s ease-out 0s;
@@ -168,8 +201,8 @@ SCORECARD STYLES
 
 .action-tools  {
 	position: absolute;
-	border-top: 4px solid @cherry;
-	border-left: 4px solid @cherry;
+	border-top: 4px solid @lighter-grey;
+	border-left: 4px solid @lighter-grey;
 	border-top-left-radius: 4px;
 	right: 0px;
 	bottom: 0px;
@@ -177,6 +210,11 @@ SCORECARD STYLES
 
 .action-tools a {
 	padding: 2px;
+}
+
+.action-badge.active .action-tools {
+	border-top: 4px solid @cherry;
+	border-left: 4px solid @cherry;
 }
 
 @media (max-width: 768px) {

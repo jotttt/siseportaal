@@ -10,6 +10,7 @@
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/chosen/chosen.min.css">
 		<link href="css/animate.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
 		<link href="css/style.css" rel="stylesheet">
@@ -17,8 +18,9 @@
 	</head>
 
 	<body>
-
-		<div id="wrapper" class="">
+		<!-- WRAPPER
+--------------------------------------------------------------->
+		<div>
 
 			<!-- TOP NAVBAR
 --------------------------------------------------------------->
@@ -49,8 +51,93 @@
 						<li>
 							<a href="#">Inimesed</a>
 						</li>
-						<li>
-							<a href="#">Teenused</a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+							<ul class="dropdown-menu dropdown-menu-large row">
+
+								<li class="col-sm-4">
+									<ul>
+
+										<li class="level-1 dropdown-header"><a href="#">Põhiline</a></li>
+										<li class="level-2"><a href="#">TTÜ põhikiri</a></li>
+										<div class="l3">
+											<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja paraboolne eksistents</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja kaatet</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja sinusoidne üleminek paberkandjale</a></li>
+										</div>
+										<li class="level-2"><a href="#">TTÜ arengukava 2011−2015</a></li>
+										<li class="level-2"><a href="#">TTÜ kollektiivleping</a></li>
+										<li class="level-2"><a href="#">TTÜ juhtimissüsteemi käsiraamat</a></li>
+										<li class="level-2"><a href="#">TTÜ seadus (Riigi Teataja)</a></li>
+										<li class="level-2"><a href="#">Ülikooliseadus (Riigi Teataja)</a></li>
+										<li class="level-2"><a href="#">Teadus- ja arendustegevuse korralduse seadus (Riigi Teataja)</a></li>
+										<li class="level-2"><a href="#">Kõrgharidusstandard (Riigi Teataja)</a></li>
+										<li class="level-1 dropdown-header"><a href="#">Õigusaktid</a></li>
+										<li class="level-2"><a href="#">Kuratooriumi määrused</a></li>
+										<li class="level-2"><a href="#">Kuratooriumi otsused</a></li>
+										<li class="level-2"><a href="#">Nõukogu määrused</a></li>
+										<li class="level-2"><a href="#">Nõukogu otsused</a></li>
+										<li class="level-2"><a href="#">Üldkäskkirjad</a></li>
+										<li class="level-2"><a href="#">Personalikäskkirjad</a></li>
+										<li class="level-2"><a href="#">Korraldused</a></li>
+										<li class="level-2"><a href="#">Korraldused asendaja määramiseks</a></li>
+										<li class="level-2"><a href="#">Riigihangete korraldused</a></li>
+										<li class="level-2"><a href="#">Dekaani
+											korraldused</a></li>
+										<div class="l3">
+											<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
+											<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
+										</div>
+									</ul>
+								</li>
+								<li class="col-sm-4">
+									<ul>
+										<li class="level-1 dropdown-header"><a href="#">Terviktekstid, vormid</a></li>
+										<li class="level-2"><a href="#">Õppetöö</a></li>
+										<li class="level-2"><a href="#">Teadus- ja arendustöö</a></li>
+										<li class="level-2"><a href="#">Täiendusõpe</a></li>
+										<li class="level-2"><a href="#">Personalitöö</a></li>
+										<li class="level-2"><a href="#">Dokumendihaldus</a></li>
+										<li class="level-2"><a href="#">Lepingud ja volikirjad</a></li>
+										<li class="level-2"><a href="#">Finantstegevus</a></li>
+										<li class="level-2"><a href="#">Haldus-majandustegevus</a></li>
+										<li class="level-2"><a href="#">Statuudid</a></li>
+										<li class="level-2"><a href="#">Hinnakirjad</a></li>
+										<li class="level-2"><a href="#">Arengukavad ja strateegiad</a></li>
+										<li class="level-2"><a href="#">Asutuste põhikirjad</a></li>
+										<li class="level-2"><a href="#">Akadeemiliste struktuuriüksuste põhimäärused</a></li>
+										<li class="level-2"><a href="#">Haldus-tugistruktuuriüksuste põhimäärused</a></li>
+										<li class="level-2"><a href="#">Otsustuskogude töö</a></li>
+										<li class="level-2"><a href="#">TTÜ struktuur ja üldandmed</a></li>
+										<li class="level-1 dropdown-header"><a href="#">Kirjaregister</a></li>
+										<li class="level-2"><a href="#">Volikirjade register</a></li>
+										<li class="level-2"><a href="#">Lepingute register</a></li>
+										<li class="level-2"><a href="#">Lähetuste register</a></li>
+										<li class="level-2"><a href="#">TTÜga seotud juriidiliste isikute register</a></li>
+										<li class="level-2"><a href="#">Õigusaktide audit</a></li>
+										<li class="level-2"><a href="#">Õigusaktide tõlked (regulations and documents)</a></li>
+										<li class="level-2"><a href="#">Ingliskeelne terminoloogia</a></li>
+									</ul></li>
+								<li class="col-sm-4">
+									<ul>
+										<li class="level-1 dropdown-header"><a href="#">Mallid</a></li>
+										<li class="level-2"><a href="#">Dokumendimallid</a></li>
+										<li class="level-2"><a href="#">Näidisdokumendid</a></li>
+										<li class="level-2"><a href="#">Slaidimallid</a></li>
+										<li class="level-1 dropdown-header"><a href="#">Turundusmaterjalid</a></li>
+										<li class="level-2"><a href="#">TTÜ brändi ja tunnusgraafika kogumik</a></li>
+										<li class="level-2"><a href="#">Logod</a></li>
+										<li class="level-2"><a href="#">Rahvusvahelise turunduse käsiraamat</a></li>
+										<li class="level-1 dropdown-header"><a href="#">Infotund, avakoosolekud</a></li>
+										<li class="level-2"><a href="#">Üleülikooliline infotund</a></li>
+										<li class="level-2"><a href="#">Rektori kõned õppeaasta avakoosolekul</a></li>
+									</ul>
+								</li>
+							</ul>
 						</li>
 					</ul>
 
@@ -63,13 +150,13 @@
 ----------------------------------------------------------------->
 						<li class="dropdown right-sidebar m-l">
 							<a class="dropdown-toggle count-info" href="#">
-								<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+								<i class="fa fa-bell"></i> <span class="label label-primary">3</span>
 							</a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="mailbox.html">
 										<div>
-											<i class="fa fa-envelope fa-fw"></i>  Sul on 3 uut sõnumit
+											<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
 											<span class="pull-right text-muted small">19 minutit tagasi</span>
 										</div>
 									</a>
@@ -285,69 +372,35 @@
 			</nav>
 			<!-- end left sidebar ----------------------------------->
 
+
 			<!-- CONTENT
 --------------------------------------------------------------->
 			<div id="page-wrapper" class="gray-bg min">
 
-				<!--BREADCRUMB
---------------------------------------------------------------->
-				<div class="row">
-					<div class="col-md-12">
-						<ol class="breadcrumb">
-							<li>
-								<a href="index.html">This is</a>
-							</li>
-							<li class="active">
-								<strong>Breadcrumb</strong>
-							</li>
-						</ol>
-					</div>
-				</div>
-				<!-- end breadcrumb ----------------------------------->
+				<div id="content-wrapper">
 
-				<!--PAGE
---------------------------------------------------------------->
-				<div class="wrapper-content animated fadeIn">
-
-
-
-
-
+					<select class="chosen-select" multiple="multiple" style="width: 160px">
+						<option value="foo">foo</option>
+						<option value="bar">bar</option>
+						<option value="baz">baz</option>
+						<option value="qux">qux</option>
+					</select>
 
 
 				</div>
-				<!-- end page ----------------------------------------->
-
-				<!-- FULLSCREEN MODE TOGGLE BUTTON
-------------------------------------------------------------------->
-				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-				<!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
-				<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
 			</div>
 			<!-- end content ---------------------------------------->
 
+			<!-- FOOTER
+--------------------------------------------------------------->
+			<div></div>
+			<!-- end footer ----------------------------------------->
+
 		</div>
 		<!-- end wrapper ------------------------------------------>
 
-		<!--FOOTER
---------------------------------------------------------------->
-		<div class="footer">
-			<div>
-				TTÜ Siseportaal &copy; 2014 - 2015
-			</div>
-		</div>
 
-		<!--MODAL CONTENT
---------------------------------------------------------------->
-
-		<!-- end modal content ------------------------------------>
-
-		<!--CONTENT MASK FOR MOBILE MENU
---------------------------------------------------------------->
-		<div id="c-mask" class="c-mask"></div>
 
 		<!--SCRIPTS
 --------------------------------------------------------------->
@@ -355,7 +408,8 @@
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
-		<!-- Plugin script -->
+		<!-- Plugin javascript -->
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
 		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
 		<script src="js/plugins/moment/moment.min.js"></script>
 		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>

@@ -6,6 +6,7 @@
 		var last_update = false;
 
 		function widgetPositions() {
+
 			//clear info div
 			$("#info").empty();
 
@@ -61,6 +62,7 @@
 						arrayPos[0[i]] += "=" + 10;
 					}
 				}
+
 				//Andrese kood
 				grid += arrayPos[0[i]] + (i < (leftCount - 1) ? ":" : "");
 
@@ -189,17 +191,6 @@
 			}, 200);
 		});
 
-
-		var test = $(".close-link").length;
-
-
-
-		console.log(test);
-
-
-
-
-
 		// REMOVE WIDGET WHEN CLOSE BUTTON IS PRESSED AND SAVE POSITIONS TO DB
 		//$(".close-link").click(function () {
 		//});
@@ -231,7 +222,6 @@
 				}
 			);
 		}
-
 		WinMove();
 		//end draggable widgets---------------------------------------
 
