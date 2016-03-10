@@ -1,17 +1,19 @@
+{{#if acl}}
 <ul class="list-unstyled m-l m-r">
 	<li class="add-new-goal m-b-xs">
 		<a href="#/" class="btn btn-xs btn-default btn-outline font-bold">
-			<i class="fa fa-plus"></i> LISA UUS EESMÄRK
+			<i class="fa fa-plus"></i> {{t.txt_add_new_goal}}
 		</a>
 	</li>
 </ul>
+{{/if}}
 <ul id="goalsList" class="list-unstyled m-l m-r">
 	{{#each goals}}
 
-		{{> goal_li goal=this}}
+		{{> goal_li goal=this acl=../acl}}
 
 	<!-- ACTIONS -->
-	<div id="{{this.uid}}-actions" class="row actionsDiv">
+	<div id="{{this.uid}}-actions" class="actionsDiv">
 	</div>
 	<!-- ACTIONS END -->
 

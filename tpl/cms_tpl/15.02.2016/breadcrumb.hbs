@@ -1,0 +1,27 @@
+<div class="crumbDiv">
+
+    {{#each breadcrumb}}
+    {{#if this.first}}
+    <div data-dir="{{this.path}}" class="crumb svg ui-droppable">
+        <a href="/wiki/action/{{this.path}}">
+            <img alt="Home" src="/lemon/plugins/cms/filebrowser/img/places/home.svg" class="svg">
+        </a>
+    </div>
+    {{else}}
+    <div data-dir="{{this.path}}" class="crumb svg {{#if this.last}}last{{/if}}">
+        <a href="/wiki/action/{{this.path}}">{{this.name}}</a>
+    </div>
+    {{/if}}
+    {{/each}}
+
+
+</div>
+{{#compare rootDir "!=" 1}}
+{{#compare acl ">=" 8}} {{! WIKI_AUTH_UPLOAD = 8); }}
+<div id="addBtn" class="actions creatable">
+    <a title="" href="#" class="button new">
+        <img src="/lemon/plugins/cms/filebrowser/img/actions/add.svg" alt="New">
+    </a>
+</div>
+{{/compare}}
+{{/compare}}

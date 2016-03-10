@@ -1,0 +1,9 @@
+{{#each data.resultsData}}
+{{#if this.firstInBlock}}
+;;;;{{! Ploki algusesse tekitame tabelisse tühja rea}}
+{{/if}}
+{{#if this.caption}} {{! Alampealkirjade rida (Kulud/Tulud)}}
+"{{this.caption}}";"{{../../t.txt_budget}}";"{{../../t.txt_enforcement}}";"{{../../t.txt_difference}}";
+{{/if}}
+"{{{this.Description}}}";"{{{this.SumBudget}}}";"{{{this.SumGL}}}";"{{{this.Diff}}}";
+{{/each}}

@@ -1,0 +1,45 @@
+<form id="filesForm">
+    <table id="media_files_table" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th></th>
+                <th>{{t.txt_files}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each mediaFiles}}
+            <tr class="row-links" data-link="{{this.fetch_url}}" data-name="{{this.name}}">
+                {{#compare ../acl ">=" 16}} {{! WIKI_AUTH_DELETE = 16, acl muutujat otsime aste ülevaltpoolt kuna oleme tsüklis}}
+                <td class="special-td">
+                    <input type="checkbox" class="action-favorite" name="files[]" value="{{this.uid}}:{{this.hash}}">
+                </td>
+                {{/compare}}
+                <td  class="filename ui-draggable ui-droppable" data-thumbnail_medium_url="{{thumbnail_medium_url}}">
+                    <label>
+                        {{#if thumbnail_url}}
+                        <div class="thumbnail" style="background-image:url({{thumbnail_url}}); background-size: 32px;" >
+                        {{else}}
+                        <div class="thumbnail" style="background-image:url(/lemon/plugins/cms/filebrowser/img/filetypes/image.svg); background-size: 32px;">
+                        {{/if}}
+                        </div>
+                    </label>
+                    <a href="" class="name">
+                        <span class="nametext">
+                            <span class="innernametext">
+                                {{this.name}}
+                            </span>
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{#if mediaFiles}}
+    {{#compare acl ">=" 16}} {{! WIKI_AUTH_DELETE = 16 }}
+    <input type="submit" name="submit" Value="{{t.txt_delete}}"/>
+    {{/compare}}
+    {{/if}}
+
+</form>
+

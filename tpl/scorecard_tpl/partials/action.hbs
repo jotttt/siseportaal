@@ -4,7 +4,7 @@
 			<div class="col-lg-12">
 				<strong>{{action.title}}</strong>
 			</div>
-			<div class="badge badge-info m-l-xs">{{action.progress}}%</div>
+			<div class="badge badge-info m-l">{{action.progress}}%</div>
 		</div>
 		<div class="row ">
 			<div class="col-xl-12 m-t-xs">
@@ -36,11 +36,13 @@
 				</div>
 			</div>
 			<div class="action-tools">
-				<a href="#/" class="action-badge-edit-btn" data-uid="{{action.uid}}"><span><i class="fa fa-search"></i></span></a>
-				{{#compare action.level "<" "2"}}
-				<a href="#" class="add-new-action-L2-btn"><i class="fa fa-plus"></i></a>
-				{{/compare}}
-				<a href="#" class="delete-action-btn"><i class="fa fa-trash"></i></a>
+                            <a href="#/" class="action-badge-edit-btn" data-uid="{{action.uid}}"><span><i class="fa fa-search"></i></span></a>
+                            {{#if acl_l2}}
+                                    <a href="#" class="add-new-action-L2-btn"><i class="fa fa-plus"></i></a>
+                            {{/if}}
+                            {{#if acl}}
+                                    <a href="#" class="delete-action-btn"><i class="fa fa-trash"></i></a>
+                            {{/if}}
 			</div>
 		</div>
 	</div>

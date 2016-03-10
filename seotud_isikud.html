@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Starter template</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
+		<link rel="stylesheet" href="css/plugins/datapicker/1.6/bootstrap-datepicker3.min.css">
+		<link rel="stylesheet" href="css/plugins/chosen/chosen.min.css">
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<div id="wrapper" class="">
+
+			<!-- TOP NAVBAR
+--------------------------------------------------------------->
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+				<div class="cherry-mod-bg"></div>
+				<span id="open-mobile-menu">
+					<button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
+				</span>
+				<span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+				</span>
+				<div id="mobile-search" class="hidden">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					</form>
+				</div>
+
+				<div class="navbar-header">
+					<ul class="nav navbar-nav">
+						<li class="nav-header">
+							<div class="hidden-xs">
+								<span>
+									<a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+								</span>
+							</div>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+							<i class="fa fa-bell"></i><span class="label label-primary"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<div class="core-widget-wrapper" id="alerts"><li>
+								<a href="/mail">
+
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+										<span class="pull-right text-muted small">19 minutit tagasi</span>
+									</div>
+								</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="/schedule">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+											<span class="pull-right text-muted small">4h tagasi</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="/reports">
+										<div>
+											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+											<span class="pull-right text-muted small">56 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="/alerts">
+											<strong>Vaata kõiki teavitusi</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li></div>
+						</ul>
+					</li>
+
+					<li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+							<i class="fa fa-user fa-fw"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+							<li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+							<li class="divider"></li>
+							<li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+						</ul>
+					</li>
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+							<i class="fa fa-tasks"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="core-widget-wrapper" id="confbar"><li>
+								<div class="setings-item">
+									<span>
+										Globaalne otsing
+									</span>
+									<div class="switch">
+										<div class="onoffswitch">
+											<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+											<label class="onoffswitch-label" for="example">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Keela messenger
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+												<label class="onoffswitch-label" for="example2">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Luba ajaloo salvestus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+												<label class="onoffswitch-label" for="example3">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Kõrge kontrastsus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+												<label class="onoffswitch-label" for="example4">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Teavitused emailile
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+												<label class="onoffswitch-label" for="example5">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Esilehe moodulite ümberpaigutus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+												<label class="onoffswitch-label" for="example6">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="/settings">
+											<strong>Seadistuste detailvaade</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li></div>
+						</ul>
+					</li>
+				</ul>
+
+
+
+				<ul class="nav navbar-top-links navbar-right visible-lg">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+					</form>
+				</ul>
+
+			</nav>
+			<!-- end top navbar ------------------------------------->
+
+
+			<!-- LEFT SIDEBAR
+--------------------------------------------------------------->
+			<nav id="m-menu" class="min">
+				<div>
+					<ul>
+						<li><span><i class="fa fa-desktop"></i>Coverpage</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+								<li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+							</ul>
+						</li>
+						<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+						<li><span><i class="fa fa-plane"></i>Lähetused</span>
+							<ul>
+								<li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+								<li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+								<li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+								<li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+							</ul>
+						</li>
+						<li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+						<li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+						<li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+						<li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+						<li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+							<ul>
+								<li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+								<li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+							</ul>
+						</li>
+						<li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+							<ul>
+								<li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+								<li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+							</ul>
+						</li>
+						<li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+						<div class="m-l m-r-sm m-t">
+							<a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+						</div>
+					</ul>
+
+					<!-- BOTTOM ICONS
+---------------------------------------------------------------->
+					<div class="bottom-icons">
+						<div>
+							<a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
+							<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+
+							<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+						</div>
+					</div>
+					<!-- end bottom icons ------------------------------->
+
+				</div>
+			</nav>
+			<!-- end left sidebar ----------------------------------->
+
+			<!-- CONTENT
+--------------------------------------------------------------->
+			<div id="page-wrapper" class="min gray-bg">
+
+				<!--BREADCRUMB
+--------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="index.html">This is</a>
+							</li>
+							<li class="active">
+								<strong>Breadcrumb</strong>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end breadcrumb ----------------------------------->
+
+				<!--PAGE
+--------------------------------------------------------------->
+				<div class="wrapper-content animated fadeIn">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<i class="fa fa-users"></i> Seotud Isikute Register
+								</div>
+								<div class="panel-body">
+
+									<ul class="nav nav-tabs">
+										<li class="active"><a href="#a" data-toggle="tab" aria-expanded="true">Isikute otsing<span class="badge" id="mission_my_badge"></span></a></li>
+										<li class=""><a href="#b" data-toggle="tab" aria-expanded="false">Firmade otsing<span class="badge" id="mission_accept_badge"></span></a></li>
+										<li class=""><a href="#c" data-toggle="tab" aria-expanded="false">Isiku detailvaade<span class="badge" id="mission_list_badge"></span></a></li>
+									</ul>
+
+									<div class="tab-content">
+
+										<!-- ISIKUTE OTSING
+--------------------------------------->
+										<div class="tab-pane fade active in" id="a"><form method="POST" action="/budget" class="form-horizontal" id="budgetForm" data-div="results">
+											<fieldset>
+
+												<div class="row m-t">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="col-lg-4 control-label" for="budget">Nimi</label>
+															<div class="col-lg-4">
+																<select name="person" id="cover-person" class="chosen-select" data-placeholder="otsi...">
+																	<option value="all">kõik isikud</option>
+																	<option value="Anna Kolossova">Anna Kolossova</option>
+																	<option value="Sander Marandi">Sander Marandi</option>
+																	<option value="Villu Vooglaid">Villu Vooglaid</option>
+																	<option value="Madis Jõhvik">Madis Jõhvik</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="col-lg-4 control-label" for="department">Str. üksus</label>
+															<div class="col-lg-4">
+																<div class="input-group" style="width: 100%;">
+																	<select name="leave_type" id="leave-type" class="chosen-select" data-placeholder="otsi...">
+																		<option value="puhkus">täpsustamata</option>
+																		<option value="puhkus">11019 Arhitektuuri- ja urbanistikainstituut</option>
+																		<option value="lähetus">13012 Arvutiteaduse instituut</option>
+																		<option value="koolitus">13014 Automaatikainstituut</option>
+																		<option value="muu">34011 Avatud ülikool</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="col-lg-4 control-label" for="department">Ametikoht</label>
+															<div class="col-lg-4">
+																<div class="input-group" style="width: 100%;">
+																	<select name="leave_type" id="leave" class="chosen-select" data-placeholder="otsi...">
+																		<option value="puhkus">täpsustamata</option>
+																		<option value="puhkus">personalijuht</option>
+																		<option value="lähetus">lektor</option>
+																		<option value="koolitus">sekretär</option>
+																		<option value="muu">haldur</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="col-lg-4 control-label" for="startDate">Perioodi algus</label>
+															<div class="col-lg-4">
+																<input id="startDate" name="startDate" type="text" class="datepicker form-control"  value="01.01.2016">
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="col-lg-4 control-label" for="endDate">Perioodi lõpp</label>
+															<div class="col-lg-4">
+																<input id="endDate" name="endDate" type="text" class="datepicker form-control" value="25.02.2016">
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<div class="col-lg-4"></div>
+															<div class="col-lg-4">
+																<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</fieldset>
+
+											</form>
+
+											<div class="row m-t">
+												<div class="col-lg-12">
+													<div class="panel panel-default">
+														<div class="panel-heading"><i class="fa fa-th"></i> Otsingu tulemused: 2 isikut, 1st struktuuri üksusest, ajavahemikus 01.04.2012 kuni 25.02.2016</div>
+														<div class="panel-body">
+															<table class="table table-striped table-bordered table-hover table-condensed">
+																<thead>
+																	<tr>
+																		<th>Jrk.</th>
+																		<th>Nimi</th>
+																		<th class="hidden-xs">Str. üksus</th>
+																		<th class="hidden-xs">Ametikoht</th>
+																		<th class="hidden-xs">Lepingu algus</th>
+																		<th>Lepingu lõpp</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+
+																	<tr>
+																		<td>1.</td>
+																		<td><a href="#c" class="ajax-load">Villu Vooglaid</a></td>
+																		<td class="hidden-xs">13014 Automaatikainstituut</td>
+																		<td class="">lektor</td>
+																		<td class="hidden-xs">01.04.2012</td>
+																		<td class="hidden-xs">kehtib veel</td>
+																	</tr>
+
+																	<tr>
+																		<td>2.</td>
+																		<td><a href="#" class="ajax-load">Anna Kolossova</a></td>
+																		<td class="hidden-xs">13014 Automaatikainstituut</td>
+																		<td class="">sekretär</td>
+																		<td class="hidden-xs">01.02.2014</td>
+																		<td class="hidden-xs">01.01.2016</td>
+																	</tr>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<!-- FIRMADE OTSING
+--------------------------------------->
+										<div class="tab-pane fade" id="b">
+											<form method="POST" action="/budget" class="form-horizontal" id="b1" data-div="results">
+												<fieldset>
+
+													<div class="row m-t">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="budget">Firma nimi</label>
+																<div class="col-lg-4">
+																	<select name="firm" id="b2" class="chosen-select" multiple="multiple" data-placeholder="otsi...">
+																		<option value="all">Kõik firmad</option>
+																		<option value="Anna Kolossova">Ehituse ABC</option>
+																		<option value="Sander Marandi">Moodne Valgus</option>
+																		<option value="Villu Vooglaid">Saare Pagarid</option>
+																		<option value="Madis Jõhvik">Büroo Maailm</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="startDate">Perioodi algus</label>
+																<div class="col-lg-4">
+																	<input id="b5" name="startDate" type="text" class="datepicker form-control"  value="01.01.2016">
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="endDate">Perioodi lõpp</label>
+																<div class="col-lg-4">
+																	<input id="b6" name="endDate" type="text" class="datepicker form-control" value="25.02.2016">
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<div class="col-lg-4"></div>
+																<div class="col-lg-4">
+																	<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</fieldset>
+
+											</form>
+
+											<div class="row m-t">
+												<div class="col-lg-12">
+													<div class="panel panel-default">
+														<div class="panel-heading"><i class="fa fa-th"></i> Otsingu tulemused: 5 isikut, 2st firmast, ajavahemikus 01.04.2010 kuni 25.02.2016</div>
+														<div class="panel-body">
+															<table class="table table-striped table-bordered table-hover table-condensed">
+																<thead>
+																	<tr>
+																		<th>Jrk.</th>
+																		<th>Firma nimi</th>
+																		<th class="hidden-xs">Seotud isikud</th>
+																		<th class="hidden-xs">Ametikoht</th>
+																		<th class="hidden-xs">Lepingu algus</th>
+																		<th>Lepingu lõpp</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+
+																	<tr>
+																		<td>1.</td>
+																		<td><a href="#c" class="ajax-load">Büroo Maailm</a></td>
+																		<td class="hidden-xs">Villu Vooglaid <span class="badge badge-primary-o2">TTÜ</span></td>
+																		<td class="">osanik</td>
+																		<td class="hidden-xs">01.04.2012</td>
+																		<td class="hidden-xs">kehtib veel</td>
+																	</tr>
+
+																	<tr>
+																		<td></td>
+																		<td><a href="#" class="ajax-load"></a></td>
+																		<td class="hidden-xs">Peeter Tamm</td>
+																		<td class="">osanik</td>
+																		<td class="hidden-xs">01.02.2014</td>
+																		<td class="hidden-xs">kehtib veel</td>
+																	</tr>
+
+																	<tr>
+																		<td></td>
+																		<td><a href="#" class="ajax-load"></a></td>
+																		<td class="hidden-xs">Silvia Toomet</td>
+																		<td class="">osanik</td>
+																		<td class="hidden-xs">01.04.2012</td>
+																		<td class="hidden-xs">kehtib veel</td>
+																	</tr>
+
+																	<tr>
+																		<td>2.</td>
+																		<td><a href="#c" class="ajax-load">Ehituse ABC</a></td>
+																		<td class="hidden-xs">Anna Kolossova <span class="badge badge-primary-o2">TTÜ</span></td>
+																		<td class="">müügijuht</td>
+																		<td class="hidden-xs">14.11.2015</td>
+																		<td class="hidden-xs">25.01.2016</td>
+																	</tr>
+
+																	<tr>
+																		<td></td>
+																		<td><a href="#" class="ajax-load"></a></td>
+																		<td class="hidden-xs">Greta Tulev</td>
+																		<td class="">strateegia kordinaator</td>
+																		<td class="hidden-xs">01.06.2010</td>
+																		<td class="hidden-xs">kehtib veel</td>
+																	</tr>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+
+										<!-- DETAILVAADE
+--------------------------------------->
+										<div class="tab-pane fade" id="c">
+
+											<form method="POST" action="/budget" class="form-horizontal" id="c1" data-div="results">
+												<fieldset>
+
+													<div class="row m-t">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="budget">Nimi</label>
+																<div class="col-lg-4">
+																	<input id="c2" name="personName" type="text" class="form-control"  value="Villu Vooglaid" disabled>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="budget">Str. üksus</label>
+																<div class="col-lg-4">
+																	<input id="c3" name="personDepartment" type="text" class="form-control"  value="13014 Automaatikainstituut" disabled>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<label class="col-lg-4 control-label" for="budget">Ametikoht</label>
+																<div class="col-lg-4">
+																	<input id="c4" name="personOcupation" type="text" class="form-control"  value="lektor" disabled>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-12">
+															<div class="form-group">
+																<div class="col-lg-4"></div>
+																<div class="col-lg-4">
+																	<a href="#person_modal" data-toggle="modal" class="btn btn-primary"><i class="fa fa-pencil"></i> Lisa andmeid</a>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</fieldset>
+											</form>
+
+											<div class="row m-t">
+
+												<div class="col-lg-6">
+													<div class="panel panel-default">
+														<div class="panel-heading"><i class="fa fa-user"></i> Seotud isikud: </div>
+														<div class="panel-body">
+															<table class="table table-striped table-bordered table-hover table-condensed">
+																<thead>
+																	<tr>
+																		<th>Jrk.</th>
+																		<th>Isiku nimi</th>
+																		<th>Seotus</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+
+																	<tr>
+																		<td>1.</td>
+																		<td><a href="#c" class="ajax-load">Sander Marandi</a></td>
+																		<td>poeg</td>
+																	</tr>
+
+																	<tr>
+																		<td>2.</td>
+																		<td><a href="#" class="ajax-load">Anna Kolossova</a></td>
+																		<td>eksabikaasa</td>
+																	</tr>
+
+																</tbody>
+															</table>
+
+
+
+														</div>
+
+
+													</div>
+													<div class="row m-t-n-md">
+														<div class="col-lg-12">
+															<a href="#c_person_modal" data-toggle="modal" class="btn btn-default btn-panel pull-right"><i class="fa fa-edit"></i> Muuda andmeid</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-lg-6">
+													<div class="panel panel-default">
+														<div class="panel-heading"><i class="fa fa-briefcase"></i> Seotud firmad: </div>
+														<div class="panel-body">
+															<table class="table table-striped table-bordered table-hover table-condensed">
+																<thead>
+																	<tr>
+																		<th>Jrk.</th>
+																		<th>Firma nimi</th>
+																		<th>Seotus</th>
+																	</tr>
+																</thead>
+
+																<tbody>
+
+																	<tr>
+																		<td>1.</td>
+																		<td><a href="#c" class="ajax-load">Moodne Valgus</a></td>
+																		<td>poeg - Sander Marandi</td>
+																	</tr>
+
+																	<tr>
+																		<td>2.</td>
+																		<td><a href="#" class="ajax-load">Ehituse ABC</a></td>
+																		<td>osanik</td>
+																	</tr>
+
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="row m-t-n-md">
+														<div class="col-lg-12">
+															<a href="#c_person_modal" data-toggle="modal" class="btn btn-default btn-panel pull-right"><i class="fa fa-edit"></i> Muuda andmeid</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- end page ----------------------------------------->
+
+				<!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+				<!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+				<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+			</div>
+			<!-- end content ---------------------------------------->
+
+		</div>
+		<!-- end wrapper ------------------------------------------>
+
+		<!--FOOTER
+--------------------------------------------------------------->
+		<div class="footer">
+			<div>
+				TTÜ Siseportaal &copy; 2014 - 2015
+			</div>
+		</div>
+
+		<!--MODAL CONTENT
+--------------------------------------------------------------->
+		<div class="modal inmodal fade" id="person_modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">Uue kirje lisamine</h4>
+						<small class="font-bold">Siin saad lisada Seotud Isikute Registrisse uusi andmeid</small>
+
+					</div>
+					<div class="modal-body">
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Isik</label>
+									<div class="input-group" style="width: 100%;">
+										<input id="m2" name="personName" type="text" class="form-control"  value="Villu Vooglaid" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<i class="fa fa-user"></i> Seotud isikud
+							</div>
+							<div class="panel-body">
+								<table class="table table-striped table-bordered table-hover table-condensed">
+									<thead>
+										<tr>
+											<th>Jrk.</th>
+											<th>Isiku nimi</th>
+											<th>Seotus</th>
+										</tr>
+									</thead>
+
+									<tbody>
+
+										<tr>
+											<td>1.</td>
+											<td><a href="#c" class="ajax-load">Sander Marandi</a></td>
+											<td>poeg</td>
+										</tr>
+
+										<tr>
+											<td>2.</td>
+											<td><a href="#" class="ajax-load">Anna Kolossova</a></td>
+											<td>eksabikaasa</td>
+										</tr>
+
+									</tbody>
+								</table>
+								<div class="row">
+									<div class="col-sm-10">
+										<div class="row">
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Eesnimi</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m21" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Perenimi</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m22" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Isikukood</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m23" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-3">
+												<div class="form-group">
+													<label>Seotus</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m24" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+
+									</div>
+									<div class="col-sm-2">
+										<div class="form-group">
+											<label></label>
+											<div class="input-group" style="width: 100%;">
+												<a href="#" class="btn btn-default btn-block m-t-xs">Lisa</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<i class="fa fa-briefcase"></i> Seotud firmad
+							</div>
+							<div class="panel-body">
+
+								<table class="table table-striped table-bordered table-hover table-condensed">
+									<thead>
+										<tr>
+											<th>Jrk.</th>
+											<th>Firma nimi</th>
+											<th>Seotus</th>
+										</tr>
+									</thead>
+
+									<tbody>
+
+										<tr>
+											<td>1.</td>
+											<td><a href="#c" class="ajax-load">Moodne Valgus</a></td>
+											<td>poeg - Sander Marandi</td>
+										</tr>
+
+										<tr>
+											<td>2.</td>
+											<td><a href="#" class="ajax-load">Ehituse ABC</a></td>
+											<td>osanik</td>
+										</tr>
+
+									</tbody>
+								</table>
+
+								<div class="row">
+									<div class="col-sm-10">
+										<div class="row">
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Firma nimi</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m31" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Firma kood</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m32" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Seotus</label>
+													<div class="input-group" style="width: 100%;">
+														<input id="m33" name="tiedPerson" type="text" class="form-control"  value="">
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="col-sm-2">
+										<div class="form-group">
+											<label></label>
+											<div class="input-group" style="width: 100%;">
+												<a href="#" class="btn btn-default btn-block m-t-xs">Lisa</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<div class="row">
+							<div class="col-sm-4">
+
+							</div>
+							<div class="col-sm-8">
+								<button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
+								<button type="button" class="btn btn-primary">Salvesta</button>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modal content ------------------------------------>
+
+		<!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+		<div id="c-mask" class="c-mask"></div>
+
+		<!--SCRIPTS
+--------------------------------------------------------------->
+		<!-- Main scripts -->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Plugin script -->
+		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+		<script src="js/plugins/pace/pace.min.js"></script>
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="js/plugins/datapicker/1.6/bootstrap-datepicker.min.js"></script>
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+
+		<!-- Custom scripts -->
+		<script src="js/loading_spinner.js"></script>
+		<script src="js/main_ui.js"></script>
+
+		<script>
+			$(function() {
+
+				//init datepicker
+				$('.datepicker').datepicker({
+					format: "dd/mm/yyyy",
+					keyboardNavigation: false,
+					forceParse: false,
+					autoclose: true,
+					ignoreReadonly: true
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>

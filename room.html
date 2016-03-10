@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>TTÜ Siseportaal [arendus@1453837634]</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body class="gray-bg">
+
+		<div id="wrapper" class="gray-bg">
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+				<div class="cherry-mod-bg"></div>
+<span id="open-mobile-menu" class="pull-left hidden-lg hidden-xl">
+    <button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+</span>
+<span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+    <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+</span>
+<div id="mobile-search" class="hidden">
+    <form ole="search" method="post" action="/search">
+        <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+    </form>
+</div>
+
+<div class="navbar-header">
+    <ul class="nav navbar-nav">
+        <li class="nav-header">
+            <div class="dropdown profile-element hidden-xs">
+                <span>
+                    <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+            </div>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-about"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Analüütika <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-analytics"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-services"></div>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-large hidden-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+            <ul class="dropdown-menu dropdown-menu-large row">
+                <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<ul class="nav navbar-top-links navbar-right">
+
+    <li class="dropdown right-sidebar">
+        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell"></i><span class="label label-primary"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-alerts">
+            <div class="core-widget-wrapper" id="alerts"></div>
+        </ul>
+    </li>
+
+    <li class=" hidden-xs m-l "><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+            <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+            <li class="divider"></li>
+            <li><a href="/logout/9252148990762449"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+        </ul>
+    </li>
+    <li class="dropdown right-sidebar">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-tasks"></i>
+        </a>
+        <ul class="dropdown-menu">
+            <div class="core-widget-wrapper" id="confbar">
+            </div>
+        </ul>
+    </li>
+</ul>
+
+
+
+<ul class="nav navbar-top-links navbar-right visible-lg">
+    <form ole="search" method="post" action="/search">
+        <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+    </form>
+</ul>
+
+			</nav>
+
+			<nav id="m-menu" class="min">
+				<ul>
+					<li>
+					<span><i class="fa fa-desktop"></i> Minu töölaud</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/news" id="_news" class="ajax-load">Uudised</a></li>
+    <li><a href="/request" id="_request" class="ajax-load">Iseteenindus</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-play-circle"></i> Meediapank</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/video" id="_video" class="ajax-load">Meediahaldus</a></li>
+    <li><a href="/tube" id="_tube" class="ajax-load">Videosirvik</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-play-circle"></i> DevOps töölaud</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/logs" id="_logs" class="ajax-load">Serveri logid</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-bar-chart"></i> Arengukava</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/timeline" id="_timeline" class="ajax-load">Eesmärgid</a></li>
+    <li><a href="/roadmap" id="_roadmap" class="ajax-load">Tegevuskava</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-group"></i> Juhi töölaud</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/budget" id="_budget" class="ajax-load">Eelarve</a></li>
+    <li><a href="/hrstats" id="_hrstats" class="ajax-load">Koosseisu aruanded</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-sitemap"></i> Minu üksus</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/unit" id="_unit" class="ajax-load">Osakond</a></li>
+    <li><a href="/vacation" id="_vacation" class="ajax-load">Puhkused</a></li>
+    <li><a href="/budget" id="_budget" class="ajax-load">Eelarve</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-at"></i> Kontaktikeskus</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/organizations" id="_organizations" class="ajax-load">Organisatsioonid</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-sliders"></i> IT teenuste haldus</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/helpdesk" id="_helpdesk" class="ajax-load">Kasutajatugi</a></li>
+    <li><a href="/cmdb" id="_cmdb" class="ajax-load">Seadmehaldus</a></li>
+</ul>
+					</li><li>
+					<span><i class="fa fa-play-circle"></i> Lähetused</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/planner" id="_planner" class="ajax-load">Lähetuse haldus</a></li>
+</ul>
+					</li><li class="active">
+					<span><i class="fa fa-building-o"></i> Kinnisvarahaldus</span>
+					<ul class="nav nav-second-level">
+    <li><a href="/room" id="_room" class="ajax-load"><b>Ruumide register</b></a></li>
+    <li><a href="/fmreports" id="_fmreports" class="ajax-load">Aruanded</a></li>
+    <li><a href="/helpline" id="_helpline" class="ajax-load">Murekontor</a></li>
+</ul>
+					</li>
+						<div class="m-l m-r-sm m-t">
+						<button id="navbar-expand" class="btn btn-circle btn-default btn-outline pull-right hidden-xs hidden-sm hidden-md"><i class="fa fa-expand text-muted"></i></button>
+					</div>
+				</ul>
+			</nav>
+
+			<div id="page-wrapper" class="gray-bg min">
+				<div id="content-wrapper">
+
+<div class="row page-wrapper gray-bg">
+    <div class="col-sm-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i> <a href="/main" class="ajax-load">Avaleht</a></li>
+            <li><i class="fa fa-map-marker"></i> <a href="/room" class="ajax-load">Ruumide register</a></li>
+            <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+            <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+            <li><i class="fa fa-shopping-cart"></i> <a href="/request" class="ajax-load">Iseteenindus</a></li>
+            <li><i class="fa fa-play-circle"></i> <a href="/unit" class="ajax-load">Osakond</a></li>
+            <li><i class="fa fa-play-circle"></i> <a href="/hrstats" class="ajax-load">Koosseisu aruanded</a></li>
+        </ol>
+    </div>
+</div>
+
+<div id="_module" class="fm"></div>
+<div id="_focus" class="room"></div>
+
+<div class="wrapper-content animated fadeIn" style="font-size: 1.0em">
+    <div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-building-o"></i> Sisesta ruumi number </div>
+            <div class="panel-body">
+                <form method="post" action="/room" id="fm-search" class="ajax-post">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="input-group">
+                                <input type="text" name="search_room" value="" class="form-control" maxlength="32">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
+                                </span>
+                                <span class="input-group-btn">
+                                    <a href="#" id="room-detail-search-btn" class="btn btn-primary btn-outline">Detailsem otsing <i class="fa fa-chevron-down"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="room-detail-search" class="m-md hidden">
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Kasutusotstarve</label>
+                                <div class="input-group" style="width: 100%;">
+                                    <select class="chosen-select" name="category" multiple="multiple" data-placeholder="Otsi">
+                                        <option value="10">Auditoorium</option>
+                                        <option value="20">Laboratoorium</option>
+                                        <option value="30">Kontor</option>
+                                        <option value="40">Koridor</option>
+                                        <option value="50">Raamatukogu</option>
+                                        <option value="60">Märgruum</option>
+                                        <option value="70">Tehniline ruum</option>
+                                        <option value="80">Muud ruumid</option>
+                                        <option value="0">[--]</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Pindala</label>
+                                <div class="">
+                                    <div class="btn-group radio-type">
+                                        <a href="#" class="btn btn-xs btn-grey">min</a>
+                                        <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
+                                        <a href="#" class="btn btn-xs btn-grey">max</a>
+                                    </div>
+                                </div>
+                                <div class="input-group"><input type="text" name="room_size" maxlength="6" class="form-control"> <span class="input-group-addon">m<sup>2</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Istekohtade arv</label>
+                                <div class="">
+                                    <div class="btn-group radio-type">
+                                        <a href="#" class="btn btn-xs btn-grey">min</a>
+                                        <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
+                                        <a href="#" class="btn btn-xs btn-grey">max</a>
+                                    </div>
+                                </div>
+                                <div class="input-group"><input type="text" name="seats" maxlength="3" value="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 form-group"><label class="control-label">Arvutiga töökoht</label>
+                                <div class="">
+                                    <div class=" btn-group radio-type">
+                                        <a href="#" class="btn btn-xs btn-grey">min</a>
+                                        <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
+                                        <a href="#" class="btn btn-xs btn-grey">max</a>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="input-group"><input type="text" name="workplaces" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Dataprojektor</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="projector"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="projector"> Ei </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Dokumendikaamera</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="doccam"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="diccam"> Ei </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Tahvel (sh. kriiditahvel)</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="whiteboard"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="whiteboard"> Ei </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Tunniplaanis</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="o365"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="o365"> Ei </label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Broneeritav ÕIS'ist</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="schedule"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="schedule"> Ei </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">Kaldauditoorium</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="tilted"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="tilted"> Ei </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label class="control-label">LCD ekraan / TV</label>
+                                <div class="">
+                                    <label class="radio-inline"><input type="radio" value="yes" name="screen"> Jah </label>
+                                    <label class="radio-inline"><input type="radio" value="no" name="screen"> Ei </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="wiki_help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="help-wrapper"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+
+		<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+
+		<div id="c-mask" class="c-mask"></div>
+
+
+		<div id="loading-mask" class="c-mask"></div>
+
+		<div class="loading-animation hidden">
+			<div id="loader-wrapper">
+				<div id="loader"></div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div>
+				TTÜ Siseportaal 2013 - 2016
+			</div>
+		</div>
+
+		<div id="_sess_id" class="9252148990762449"></div>
+		<div id="_lang" class="et"></div>
+		<div id="_build" class="1453837634"></div>
+
+
+
+			<!--SCRIPTS
+--------------------------------------------------------------->
+		<!-- Main scripts -->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Plugin script -->
+		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+		<script src="js/plugins/moment/moment.min.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+		<script src="js/plugins/pace/pace.min.js"></script>
+
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+		<script src="js/plugins/dropzone/dropzone.min.js"></script>
+
+		<!-- Custom scripts -->
+		<script src="js/loading_spinner.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/main_ui.js"></script>
+
+
+	</body>
+</html>

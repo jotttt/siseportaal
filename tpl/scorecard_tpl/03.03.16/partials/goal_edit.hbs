@@ -1,0 +1,47 @@
+<div id="goal-details" class="ibox p-sm">
+    <div class="ibox-title cherry-bordered-bg">
+        <h5 class="">Eesmärgi parameetrid</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content gray-darker-bg cherry-bordered-bg"  style="display: none;">
+        <div class="row">
+            <div class="col-xl-6 m-b">
+                <h5 class="text-muted text-uppercase m-b-lg">eesmärgi kirjeldus</h5>
+                <p>{{goal.descr}}</p>
+            </div>
+
+            <div class="col-xl-6">
+                <h5 class="text-muted text-uppercase m-b-lg">eesmärgiga seotud tegevuste staatus</h5>
+                <ul class="">
+                    <li class="m-b">
+                        <button type="button" class="btn btn-info btn-outline m-r-sm">{{goal.actionCount}}</button> Seotud tegevust, millest
+                    </li>
+                    <hr class="">
+                    <li class="m-t m-b-xs">
+                        <button type="button" class="btn btn-danger m-r-sm ">{{goal.actionNotStartedCount}}</button> alustamata
+                    </li>
+                    <li class="m-b-xs">
+                        <button type="button" class="btn btn-warning m-r-sm  ">{{goal.actionInProcessCount}}</button> töös
+                    </li>
+                    <li class="m-b-xs">
+                        <button type="button" class="btn btn-success m-r-sm  ">{{goal.actionDoneCount}}</button> valmis
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="">
+                    <h5 class="text-muted text-uppercase">üldprogress</h5>
+                    <div class="p-sm m-b-xl">
+                        <div id="progress-slider-1" class="m-t  blue-bg noUi-target noUi-ltr noUi-horizontal noUi-connect"><div class="noUi-base"><div class="noUi-origin noUi-background noUi-stacking" style="left: 70%;"><div class="noUi-handle noUi-handle-lower"><div class="noUi-tooltip">70.00</div></div></div></div><div class="noUi-pips noUi-pips-horizontal"><div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 0.00000%"></div><div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 0.00000%">0</div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 5.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 10.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 15.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 20.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 25.00000%"></div><div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 25.00000%">25</div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 30.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 35.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 40.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 45.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 50.00000%"></div><div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 50.00000%">50</div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 55.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 60.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 65.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 70.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 75.00000%"></div><div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 75.00000%">75</div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 80.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 85.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 90.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-normal" style="left: 95.00000%"></div><div class="noUi-marker noUi-marker-horizontal noUi-marker-large" style="left: 100.00000%"></div><div class="noUi-value noUi-value-horizontal noUi-value-large" style="left: 100.00000%">100</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Starter template</title>
+
+		<link rel="stylesheet" href="css/plugins/chosen/chosen.min.css">
+		<link rel="stylesheet" href="http://taitems.github.io/jQuery.Gantt/css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			.gantt *, *:before, *:after {
+				box-sizing: content-box;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+			<div class="gantt-date">a</div>
+
+			<div class="gantt">a</div>
+
+			<div class="row">
+				<div class="col-md-4">
+
+					<form action="crunch.php" method="post">
+						<h2>Lisa uus sissekanne</h2>
+						<div class="form-group">
+							<label>Isik</label>
+							<div class="input-group" style="width: 100%;">
+								<select name="person" id="person" class="chosen-select" multiple="multiple" data-placeholder="otsi...">
+									<option value="Anna Kolossova">Anna Kolossova</option>
+									<option value="Sander Marandi">Sander Marandi</option>
+									<option value="Villu Vooglaid">Villu Vooglaid</option>
+									<option value="Madis Jõhvik">Madis Jõhvik</option>
+
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Äraoleku vorm</label>
+							<div class="input-group" style="width: 100%;">
+								<select class="form-control" name="type" data-placeholder="vali...">
+									<option value="Puhkus">Puhkus</option>
+									<option value="Lähetus">Lähtus</option>
+									<option value="Koolitus">Koolitus</option>
+									<option value="Muu">Muu</option>
+
+								</select>
+							</div>
+						</div>
+						<div id="data_5" class="form-group">
+							<label>Ajavahemik</label>
+							<div class="input-daterange input-group" id="datepicker">
+								<input id="start-d" type="text" class="input-sm form-control" name="start" value="09/12/2016">
+								<span class="input-group-addon">to</span>
+								<input  id="end-d" type="text" class="input-sm form-control" name="end" value="05/12/2016">
+							</div>
+						</div>
+						<button  type="submit" class="btn btn-primary">Lisa</button>
+					</form>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"></div>
+			</div>
+
+		</div>
+
+		<!-- Main scripts -->
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Plugin script -->
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+		<script src="js/plugins/datapicker/bootstrap-datepicker.min.js"></script>
+		<script src="js/plugins/gantt/jquery.fn.gantt.js"></script>
+		<script src="js/plugins/gantt/gantt-date.js"></script>
+
+		<!-- Custom scripts -->
+		<script>
+			$(function() {
+
+
+
+				$('#data_5 .input-daterange').datepicker({
+					format: "dd/mm/yyyy",
+					keyboardNavigation: false,
+					forceParse: false,
+					autoclose: true
+				});
+
+				//init chosen plugin
+				$(".chosen-select").chosen({width: "100%"});
+
+				"use strict";
+
+
+				$(".gantt").gantt({
+					source: [{
+						name: "Anna Kolossova",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Sander Marandi",
+						values: [{
+							from: "/Date(1453900874000)/",
+							to: "/Date(1455196874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Villu Vooglaid",
+						values: [{
+							from: "/Date(1457184074000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Madis Jõhvik",
+						values: [{
+							from: "/Date(1459689674000)/",
+							to: "/Date(1461072074000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Peeter Kuusik",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455136874000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					},{
+						name: "Mall Pärn",
+						values: [{
+							from: "/Date(1454851274000)/",
+							to: "/Date(1455596874000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}]
+					},{
+						name: "Signe Lepp",
+						values: [{
+							from: "/Date(1465478474000)/",
+							to: "/Date(1465824074000)/",
+							label: "koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Olavi Kesk",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1455196874000)/",
+							label: "Koolitus",
+							customClass: "ganttOrange"
+						}]
+					},{
+						name: "Pärtel Meerits",
+						values: [{
+							from: "/Date(1453296074000)/",
+							to: "/Date(1454246474000)/",
+							label: "Puhkus",
+							customClass: "ganttRed"
+						}, {
+							from: "/Date(1454419274000)/",
+							to: "/Date(1455974474000)/",
+							label: "Lähetus",
+							customClass: "ganttBlue"
+						}]
+					}],
+					months:	["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"],
+					dow:	["P", "E", "T", "K", "N", "R", "L"],
+					navigate: "scroll",
+					maxScale: "months",
+					itemsPerPage: 200,
+					onItemClick: function(data) {
+						alert("Item clicked - show some details");
+					},
+					onAddClick: function(dt, rowId) {
+						alert("Empty space clicked - add an item!");
+					},
+					onRender: function() {
+						if (window.console && typeof console.log === "function") {
+							console.log("chart rendered");
+						}
+					}
+				});
+
+				$(".gantt").popover({
+					selector: ".bar",
+					title: "I'm a popover",
+					content: "And I'm the content of said popover.",
+					trigger: "hover",
+					container: "body",
+					placement: " auto top",
+					mouseOffset: 20,
+					followMouse: true
+				});
+
+				//tooltip fix
+				//---------------------------------------------------------
+
+
+
+			});
+		</script>
+
+	</body>
+
+</html>

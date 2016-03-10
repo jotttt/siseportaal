@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Starter template</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<div id="wrapper" class="">
+
+			<!-- TOP NAVBAR
+--------------------------------------------------------------->
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+				<div class="cherry-mod-bg"></div>
+				<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+				</span>
+				<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+				</span>
+				<div id="mobile-search" class="hidden">
+					<form>
+						<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					</form>
+				</div>
+				<span class="navbar-header hidden-xs">
+					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
+				</span>
+				<div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">Dokumendid</a>
+						</li>
+						<li>
+							<a href="#">Ülikool</a>
+						</li>
+						<li>
+							<a href="#">Inimesed</a>
+						</li>
+						<li>
+							<a href="#">Teenused</a>
+						</li>
+					</ul>
+
+					<!-- TOP NAVBAR RIGHT SIDE
+----------------------------------------------------------------->
+					<ul class="nav navbar-top-links navbar-right">
+
+
+						<!-- NAVBAR NOTIFICATIONS
+----------------------------------------------------------------->
+						<li class="dropdown right-sidebar m-l">
+							<a class="dropdown-toggle count-info" href="#">
+								<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="mailbox.html">
+										<div>
+											<i class="fa fa-envelope fa-fw"></i>  Sul on 3 uut sõnumit
+											<span class="pull-right text-muted small">19 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="profile.html">
+										<div>
+											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+											<span class="pull-right text-muted small">56 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="grid_options.html">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+											<span class="pull-right text-muted small">4h tagasi</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="notifications.html">
+											<strong>Vaata kõiki teavitusi</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<!-- end navbar notifications ----------------------->
+
+						<!-- LOGOUT BUTTON
+----------------------------------------------------------------->
+						<li class="show-icon">
+							<a href="login.html">
+								<i class="fa fa-sign-out"></i>
+							</a>
+						</li>
+						<!-- end logout button ------------------------------>
+
+						<!-- RIGHT SIDEBAR
+----------------------------------------------------------------->
+						<li class="dropdown right-sidebar">
+							<a href="#">
+								<i class="fa fa-tasks"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<div class="setings-item">
+										<span>
+											Globaalne otsing
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+												<label class="onoffswitch-label" for="example">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Keela messenger
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+												<label class="onoffswitch-label" for="example2">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Luba ajaloo salvestus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+												<label class="onoffswitch-label" for="example3">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Kõrge kontrastsus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+												<label class="onoffswitch-label" for="example4">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Teavitused emailile
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+												<label class="onoffswitch-label" for="example5">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Esilehe moodulite ümberpaigutus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+												<label class="onoffswitch-label" for="example6">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="notifications.html">
+											<strong>Seadistuste detailvaade</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<!-- end right sidebar ------------------------------>
+
+					</ul>
+
+					<!-- NAVBAR SEARCH
+----------------------------------------------------------------->
+					<ul class="nav navbar-top-links navbar-right visible-md visible-lg">
+						<form>
+							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
+					</ul>
+					<!-- end navbar search -------------------------------->
+
+					<!-- end top navbar right side -------------------------->
+
+				</div>
+
+			</nav>
+			<!-- end top navbar --------------------------------------->
+
+
+			<!-- LEFT SIDEBAR
+--------------------------------------------------------------->
+			<nav id="m-menu" class="min" role="navigation">
+				<ul>
+					<li><a href="#"><i class="fa fa-desktop"></i>Minu Töölaud</a></li>
+					<li><span><i class="fa fa-sliders"></i>IT teenuste haldus</span>
+						<ul>
+							<li><a href="#">Seire</a></li>
+							<li><a href="#">Nimeserver</a></li>
+							<li><span>Kasutajatugi</span>
+								<ul>
+									<li><a href="#">Minu tellimused</a></li>
+									<li><a href="#">Minu ülesanded</a></li>
+									<li><a href="#">Teiste tellimused</a></li>
+									<li><a href="#">Teiste ülesanded</a></li>
+									<li><a href="#">Kõik tellimused</a></li>
+
+									<li><a href="#">Arhiiv</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-hdd-o"></i>Sisuhaldus</a></li>
+					<li><a href="#"><i class="fa fa-line-chart"></i>Graafikud</a></li>
+					<li><a href="#"><i class="fa fa-calendar"></i>Kalender</a></li>
+					<li><a href="#"><i class="fa fa-building-o"></i>Haldusüksused</a></li>
+					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Arengukava</a></li>
+					<li><a href="#"><i class="fa fa-wifi"></i>Võrgutalitus</a></li>
+					<div class="m-l m-r-sm m-t">
+						<button id="navbar-expand" class="btn btn-circle btn-default btn-outline pull-right hidden-xs hidden-sm hidden-md"><i class="fa fa-expand text-muted"></i></button>
+					</div>
+				</ul>
+
+			</nav>
+			<!-- end left sidebar ----------------------------------->
+
+			<!-- CONTENT
+--------------------------------------------------------------->
+			<div id="page-wrapper" class="min gray-bg">
+
+				<!--BREADCRUMB
+--------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="index.html">This is</a>
+							</li>
+							<li class="active">
+								<strong>Breadcrumb</strong>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end breadcrumb ----------------------------------->
+
+				<!--PAGE
+--------------------------------------------------------------->
+				<div class="wrapper-content animated fadeIn">
+
+					<!-- addressbar rewrite ----------------------------->
+					<div id="_module" class="core"></div>
+					<div id="_focus" class="tagasiside.html"></div>
+					<!-- end rewrite ------------------------------------>
+
+
+
+					<!-- NUPP -->
+					<a href="#tagasiside_modal" data-toggle="modal" class="btn btn-primary"><i class="fa fa-life-ring"></i> Abi</a>
+
+
+
+
+				</div>
+				<!-- end page ----------------------------------------->
+
+				<!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+				<!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+				<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+			</div>
+			<!-- end content ---------------------------------------->
+
+		</div>
+		<!-- end wrapper ------------------------------------------>
+
+		<!--FOOTER
+--------------------------------------------------------------->
+		<div class="footer">
+			<div>
+				TTÜ Siseportaal &copy; 2014 - 2015
+			</div>
+		</div>
+
+		<!--MODAL CONTENT
+--------------------------------------------------------------->
+		<!-- MODAL CONTENT -->
+		<div class="modal inmodal fade" id="tagasiside_modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">Tagasiside</h4>
+						<small class="font-bold">Voluptates odit maxime perspiciatis voluptate reiciendis odio quam.</small>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12 form-group">
+							<label class="control-label">Vali teema
+								</label>
+								<select class="form-control m-b" name="account">
+									<option>valik 1</option>
+									<option>valik 2</option>
+									<option>valik 3</option>
+									<option>valik 4</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<label class="control-label">Kirjuta siia oma kommentaar või küsimus
+								</label>
+								<div class="input-group" style="width: 100%;">
+									<textarea name="styled-textarea" class="styled" onfocus="this.value=''; setbg('white');" onblur="setbg('#fafafa')"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
+						<button type="button" class="btn btn-primary">Saada tagasiside</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modal content ------------------------------------>
+
+		<!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+		<div id="c-mask" class="c-mask"></div>
+
+		<!--SCRIPTS
+--------------------------------------------------------------->
+		<!-- Main scripts -->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Plugin script -->
+		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+		<script src="js/plugins/moment/moment.min.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+		<script src="js/plugins/pace/pace.min.js"></script>
+
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+		<script src="js/plugins/dropzone/dropzone.min.js"></script>
+
+		<!-- Custom scripts -->
+		<script src="js/loading_spinner.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/main_ui.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,47 @@
+{{#if data.resultsData}}
+<div class="row">
+    <table class='strong'>
+        <tr>
+            <td>{{t.txt_budget_period}}:</td>
+            <td>{{data.post.budget}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_period}}:</td>
+            <td>{{data.post.startDate}} - {{data.post.endDate}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_department}}:</td>
+            <td>{{data.post.department}} {{data.departmentName}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_object}}:</td>
+            <td>{{data.post.object}}</td>
+        </tr>
+    </table>
+</div>
+{{/if}}
+
+<div class="row">
+    <table>
+        {{#each data.resultsData}}
+        {{#if this.firstInBlock}}
+        <tr><td>&nbsp;</td></tr>{{! Ploki algusesse tekitame tabelisse tühja rea}}
+        {{/if}}
+
+        {{#if this.caption}} {{! Alampealkirjade rida (Kulud/Tulud)}}
+        <tr>
+            <th>{{this.caption}}</th>
+            <th align="right">{{../../t.txt_budget}}</th>{{! Oleme tsüklis ja lisaks if plokis, seetõttu peame t muutjale ligipääsuks kasutama ../../ }}
+            <th align="right">{{../../t.txt_enforcement}}</th>
+            <th align="right">{{../../t.txt_difference}}</th>
+        </tr>
+        {{/if}}
+        <tr>
+            <td>{{#if this.bold}}<strong>{{/if}}{{{this.Description}}}{{#if this.bold}}</strong>{{/if}}</td>
+            <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.SumBudget}}}{{#if this.bold}}</strong>{{/if}}</td>
+            <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.SumGL}}}{{#if this.bold}}</strong>{{/if}}</td>
+            <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.Diff}}}{{#if this.bold}}</strong>{{/if}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

@@ -1,0 +1,357 @@
+// main: style.less
+/*
+*, *:before, *:after  {
+-webkit-box-sizing: content-box !important;
+-moz-box-sizing: content-box !important;
+box-sizing: content-box !important;
+}
+*/
+
+.advancedTable {
+	border: 10px solid @lightest-grey;
+}
+
+#firstTd {
+	//border: 1px solid @lighter-grey;
+	background: @lightest-grey;
+}
+
+.tableHeader {
+	width:  24px;
+	height: 24px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.tableFixedTop {
+	overflow: hidden;
+	width: 800px;
+}
+
+.tableFixedTop .tableYear {
+	width: 768px;
+	border: 1px solid @lighter-grey;
+	height: 25px;
+	-webkit-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+-moz-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+}
+
+.tableFixedTop .tableYear td .tableHeader {
+	position: fixed;
+	margin-top: -12px;
+	height: 25px;
+	width: 100px;
+	border-right: 1px solid @lighter-grey;
+}
+
+.tableFixedTop .tableMonth {
+-webkit-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+-moz-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+}
+
+.tableFixedTop .tableMonth td .tableHeader {
+	width: 625px;
+	border-left: 1px solid @lighter-grey;
+	text-align: center;
+}
+
+.tableFixedTop .tableMonth td:last-child {
+	border-right: 1px solid @lighter-grey;
+}
+
+.tableFixedTop .tableDay {
+	-webkit-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+-moz-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+}
+
+.tableFixedTop .tableDay td {
+	border: 1px solid @lighter-grey;
+}
+
+.tableFixedTop .tableWeekDay {
+	-webkit-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+-moz-box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+box-shadow: 20px 0px 0px 0px rgba(229,230,231,1);
+}
+
+.tableFixedTop .tableWeekDay td {
+	border: 1px solid @lighter-grey;
+	border-top: 0px solid @lighter-grey;
+}
+
+//NAME COLUMN
+//------------------------------------------------
+#firstcol {
+	overflow: hidden;
+	height: 150px;
+	border-bottom: 17px solid @lightest-grey;
+}
+
+.tableFixedLeft {
+	width: 200px;
+}
+
+.tableFixedLeft tr {
+	border: 1px solid @lighter-grey;
+}
+
+.tableFixedLeft td {
+	height: 25px;
+	padding: 0 10px;
+}
+
+//DATA CONTAINER
+//------------------------------------------------
+.tableDataContainer {
+	overflow: scroll;
+	min-width:200px;
+	height:150px;
+	position:relative;
+}
+
+.tableData {
+	width: 751px;
+}
+
+.tableData tr {
+	//width: 526px;
+}
+
+.tableData td {
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid @lighter-grey;
+	padding: 0;
+	margin: 0;
+}
+
+.tableData td.green {
+	background: #4db74d;
+	//border: 1px solid transparent;
+}
+
+.leaveBar {
+	position: absolute;
+	height: 19px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.leaveBar.green {
+	background: #7aeda6;
+}
+
+.leaveBar.blue {
+	background: #90d8ff;
+}
+
+.leaveBar.red {
+	background: #efa2a2;
+}
+
+.leaveBarText {
+	text-align: center;
+	line-height: 19px;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+
+
+
+//GANTT CALENDAR PLUGIN
+//------------------------------------------------------
+.gantt *, *:before, *:after {
+	box-sizing: content-box;
+}
+
+.gantt, .gantt2 {
+	border: @border;
+}
+
+.fn-gantt .fn-content {
+	//overflow: auto;
+	//height: 503px;
+}
+
+.fn-gantt .dataPanel {
+	//overflow: auto;
+	//height: 503px;
+}
+
+.fn-gantt .rightPanel {
+	//overflow:inherit;
+	//height: 503px;
+}
+
+.fn-gantt .leftPanel {
+	//height: 503px;
+	//overflow: hidden;
+}
+
+.fn-gantt .rightPanel .month, .fn-gantt .rightPanel .year {
+	background: white;
+}
+
+.fn-gantt .wd {
+	background: white;
+}
+
+.fn-gantt .spacer {
+	//position: fixed;
+	background: white;
+	height: 96px;
+	width: 225px !important;
+}
+
+.fn-gantt .row.year {
+	//position: fixed;
+	height: 23px;
+}
+
+.fn-gantt .row.month {
+	//top: 46px;
+	//position: fixed;
+	height: 23px;
+	z-index: 5555;
+}
+
+.fn-gantt .leftPanel .fn-label {
+	margin: 0 0 0 10px;
+}
+
+.fn-gantt .leftPanel .name, .fn-gantt .leftPanel .desc {
+	background: white;
+}
+
+.fn-gantt .bottom {
+	background: white;
+}
+
+.fn-gantt .bar {
+	cursor: pointer;
+}
+
+@media(max-width: 768px) {
+
+	.fn-gantt .leftPanel {
+		width: 150px;
+	}
+
+	.fn-gantt .bottom {
+		height: 100px;
+	}
+
+	.fn-gantt .navigate {
+
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	.fn-gantt .navigate .nav-slider-content {
+		display: block;
+		width: 250px;
+		margin: 10px 0 10px 9px;
+		position: relative;
+		text-align: center;
+	}
+
+	.fn-gantt .navigate .nav-slider-bar {
+		width: 250px;
+	}
+
+	.fn-gantt .navigate .nav-slider-left {
+		display: block;
+		margin: 40px 0 0 0;
+	}
+
+	.fn-gantt .navigate .nav-slider-right {
+		display: block;
+		float: none;
+		margin: 10px 0 0 160px;
+	}
+
+}
+
+/*
+.fn-gantt .nav-link {
+background: @lighter-grey !important;
+font-size: 14px;
+font-family: FontAwesome;
+width: auto;
+height: auto;
+}
+
+.fn-gantt .navigate .nav-page-back {
+position:relative;
+content: "";
+}
+
+.fn-gantt .navigate .nav-page-back:before {
+content: "\f106";
+left: 7px;
+position:absolute;
+top:0;
+color: @text-color;
+background: @lighter-grey;
+}
+
+.fn-gantt .navigate .nav-page-next {
+position:relative;
+content: "";
+}
+
+.fn-gantt .navigate .nav-page-next:before {
+content: "\f107";
+left: 7px;
+position:absolute;
+top:1px;
+color: @text-color;
+background: @lighter-grey;
+}
+
+.fn-gantt .navigate .nav-now {
+position:relative;
+content: "";
+}
+
+.fn-gantt .navigate .nav-now:before {
+content: "\f017";
+left: 4.5px;
+position:absolute;
+top:1;
+color: @text-color;
+background: @lighter-grey;
+}
+
+.fn-gantt .navigate .nav-prev-week {
+position:relative;
+content: "";
+}
+
+.fn-gantt .navigate .nav-prev-week:before {
+//content: "\f100";
+left: 10px;
+position:absolute;
+top:1;
+color: @text-color;
+background: @lighter-grey;
+}
+
+.fn-gantt .navigate .nav-prev-day {
+position:relative;
+content: "";
+}
+
+.fn-gantt .navigate .nav-prev-day:before {
+//content: "\f104";
+left: 4.5px;
+position:absolute;
+top:1;
+color: @text-color;
+background: @lighter-grey;
+}
+*/

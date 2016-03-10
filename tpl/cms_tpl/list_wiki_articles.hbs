@@ -1,0 +1,24 @@
+<table id="wiki_articles_table" class="table table-hover table-condensed">
+	<thead>
+		<tr>
+			<th>{{t.txt_articles}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each wikiArticles}}
+		<tr class="row-links" data-link="{{this.id}}" data-type="{{this.type}}">
+			<td  class="filename ui-draggable ui-droppable">
+				<a href="" class="name">
+					<i class="fa fa-file-text-o fa-2x"></i>
+					<span class="nametext">
+						<span class="innernametext">
+							{{this.name}}
+						</span>
+					</span>
+				</a>
+			</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+

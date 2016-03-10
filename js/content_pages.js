@@ -22,11 +22,13 @@ $(function() {
 	$("#open-mobile-menu").click(function(){
 		$("#m-menu.min").addClass("open");
 		$("#c-mask").addClass("active");
+		$("body").css("position","fixed").css("overflow", "hidden");
 	});
 
 	$("#c-mask").click(function(){
 		$("#m-menu.min").removeClass("open");
 		$("#c-mask").removeClass("active");
+		$("body").css("position","relative").css("overflow", "visible");
 	});
 
 

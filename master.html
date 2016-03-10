@@ -25,70 +25,62 @@
 --------------------------------------------------------------->
 			<nav class="navbar navbar-static-top nav-down" role="navigation">
 				<div class="cherry-mod-bg"></div>
-				<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
-					<button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+				<span class="mobile-logo-minimal-w hidden-lg hidden-md"></span>
+				<span id="open-mobile-menu">
+					<button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
 				</span>
-				<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+				<span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
 					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
 				</span>
 				<div id="mobile-search" class="hidden">
-					<form>
-						<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
 					</form>
 				</div>
-				<span class="navbar-header hidden-xs">
-					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
-				</span>
-				<div class="navbar-collapse collapse" id="navbar">
+
+				<div class="navbar-header">
 					<ul class="nav navbar-nav">
-						<li>
-							<a href="#">Ülikoolist <b class="caret"></b></a>
+						<li class="nav-header">
+							<div class="hidden-xs">
+								<span>
+									<a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+								</span>
+							</div>
 						</li>
-						<li>
-							<a href="#">Analüütika <b class="caret"></b></a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
 						</li>
-						<li>
-							<a href="#">Dokumendid ja töökorraldus <b class="caret"></b></a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
 						</li>
-						<li>
-							<a href="#">Teenused <b class="caret"></b></a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
 						</li>
-						<li>
-							<a href="#">Koolitused <b class="caret"></b></a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
 						</li>
 					</ul>
+				</div>
 
-					<!-- TOP NAVBAR RIGHT SIDE
------------------------------------------------------------------>
-					<ul class="nav navbar-top-links navbar-right">
+				<ul class="nav navbar-top-links navbar-right hidden-sm hidden-xs">
 
-						<!-- NAVBAR NOTIFICATIONS
------------------------------------------------------------------>
-						<li class="dropdown right-sidebar m-l">
-							<a class="dropdown-toggle count-info" href="#">
-								<i class="fa fa-bell"></i>  <span class="label label-primary">3</span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="mailbox.html">
-										<div>
-											<i class="fa fa-envelope fa-fw"></i>  Sul on 3 uut sõnumit
-											<span class="pull-right text-muted small">19 minutit tagasi</span>
-										</div>
-									</a>
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+							<i class="fa fa-bell"></i><span class="label label-primary"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<div class="core-widget-wrapper" id="alerts"><li>
+								<a href="/mail">
+
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+										<span class="pull-right text-muted small">19 minutit tagasi</span>
+									</div>
+								</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="profile.html">
-										<div>
-											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
-											<span class="pull-right text-muted small">56 minutit tagasi</span>
-										</div>
-									</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="grid_options.html">
+									<a href="/schedule">
 										<div>
 											<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
 											<span class="pull-right text-muted small">4h tagasi</span>
@@ -97,56 +89,59 @@
 								</li>
 								<li class="divider"></li>
 								<li>
+									<a href="/reports">
+										<div>
+											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+											<span class="pull-right text-muted small">56 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="divider"></li>
+								<li>
 									<div class="text-center link-block">
-										<a href="notifications.html">
+										<a href="/alerts">
 											<strong>Vaata kõiki teavitusi</strong>
 											<i class="fa fa-angle-right"></i>
 										</a>
 									</div>
-								</li>
-							</ul>
-						</li>
-						<!-- end navbar notifications ----------------------->
+								</li></div>
+						</ul>
+					</li>
 
-						<!-- HELP BUTTON
------------------------------------------------------------------>
-						<li class="show-icon">
-							<a href="#">
-								<i class="fa fa-life-ring"></i>Abi
-							</a>
-						</li>
-						<!-- end help button ------------------------------>
-						<!-- USER BUTTON
---------------------------------------------------------------->
-						<li class="show-icon">
-							<a href="#">
-								<i class="fa fa-user"></i>
-							</a>
-						</li>
-						<!-- end user button ------------------------------>
+					<li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
 
-						<!-- RIGHT SIDEBAR
------------------------------------------------------------------>
-						<li class="dropdown right-sidebar">
-							<a href="#">
-								<i class="fa fa-tasks"></i>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<div class="setings-item">
-										<span>
-											Globaalne otsing
-										</span>
-										<div class="switch">
-											<div class="onoffswitch">
-												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-												<label class="onoffswitch-label" for="example">
-													<span class="onoffswitch-inner"></span>
-													<span class="onoffswitch-switch"></span>
-												</label>
-											</div>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+							<i class="fa fa-user fa-fw"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+							<li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+							<li class="divider"></li>
+							<li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+						</ul>
+					</li>
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+							<i class="fa fa-tasks"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="core-widget-wrapper" id="confbar"><li>
+								<div class="setings-item">
+									<span>
+										Globaalne otsing
+									</span>
+									<div class="switch">
+										<div class="onoffswitch">
+											<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+											<label class="onoffswitch-label" for="example">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
 										</div>
 									</div>
+								</div>
 								</li>
 								<li class="divider"></li>
 								<li>
@@ -236,33 +231,26 @@
 								<li class="divider"></li>
 								<li>
 									<div class="text-center link-block">
-										<a href="notifications.html">
+										<a href="/settings">
 											<strong>Seadistuste detailvaade</strong>
 											<i class="fa fa-angle-right"></i>
 										</a>
 									</div>
-								</li>
-							</ul>
-						</li>
-						<!-- end right sidebar ------------------------------>
+								</li></div>
+						</ul>
+					</li>
+				</ul>
 
-					</ul>
 
-					<!-- NAVBAR SEARCH
------------------------------------------------------------------>
-					<ul class="nav navbar-top-links navbar-right hidden-xs">
-						<form>
-							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
-					</ul>
-					<!-- end navbar search -------------------------------->
 
-					<!-- end top navbar right side -------------------------->
-
-				</div>
+				<ul class="nav navbar-top-links navbar-right visible-lg">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+					</form>
+				</ul>
 
 			</nav>
-			<!-- end top navbar --------------------------------------->
-
+			<!-- end top navbar ------------------------------------->
 
 
 			<!-- LEFT SIDEBAR
@@ -275,6 +263,7 @@
 								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
 								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
 								<li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+								<li><a href="index_well_2.html"><i class="fa fa-desktop"></i>Uudiste widget</a></li>
 							</ul>
 						</li>
 						<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
@@ -290,23 +279,42 @@
 						<li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
 						<li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
 						<li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
-						<li ><span><i class="fa fa-link"></i>Navbari lingid</span>
+						<li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+						<li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
 							<ul>
-								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
-								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+								<li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+								<li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
 							</ul>
 						</li>
-						<li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+						<li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+							<ul>
+								<li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+								<li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+							</ul>
+						</li>
+						<li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+						<li><a href="seotud_isikud.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
+						<div class="m-l m-r-sm m-t">
+							<a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+						</div>
 					</ul>
 
 					<!-- BOTTOM ICONS
 ---------------------------------------------------------------->
 					<div class="bottom-icons">
-						<div>
-							<a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
-							<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
-
-							<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+						<div class="row">
+							<div class="col-xs-3 text-center">
+								<a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
+							</div>
+							<div class="col-xs-3 text-center">
+								<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+							</div>
+							<div class="col-xs-3 text-center">
+								<a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
+							</div>
+							<div class="col-xs-3 text-center">
+								<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+							</div>
 						</div>
 					</div>
 					<!-- end bottom icons ------------------------------->
@@ -337,8 +345,8 @@
 
 				<!--PAGE
 --------------------------------------------------------------->
-				<div class="widget white-bordered-bg text-center p-xl m-xl">
-					<div class="m-b-md">
+				<div class="widget white-bordered-bg text-center p-xl m-xl" style="height: 400px">
+					<div class="m-xl">
 						<i class="fa fa-bullseye fa-4x"></i>
 						<h1 class="m-xs">Siit saab kõigi kujunduse katsetuste juurde </h1>
 					</div>
@@ -391,16 +399,14 @@
 
 		<!-- Plugin javascript -->
 		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
-		<script src="js/plugins/nouslider/nouislider.js"></script>
 		<script src="js/plugins/moment/moment.min.js"></script>
-		<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
 		<script src="js/inspinia.js"></script>
 		<script src="js/plugins/pace/pace.min.js"></script>
 		<script src="js/plugins/x-editable/bootstrap-editable.js"></script>
 
 		<!-- Custom javascript -->
-		<script src="js/content_pages.js"></script>
+		<script src="js/main_ui.js"></script>
 	</body>
 
 </html>

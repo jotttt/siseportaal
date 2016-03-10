@@ -1,25 +1,27 @@
 //var History = window.History, State = History.getState();
-var portal_focus, portal_module, portal_session, portal_lang;
+var portal_focus, portal_module, portal_session, portal_lang, portal_build;
 var dropzone = false;
 var last_tab = "a";
 var focus_js = {
-    "helpdesk": "srm",
-    "helpline": "srm",
-    "request": "srm",
-    "dns": "srm",
-    "room": "fm",
-    "building": "fm",
-    "video": "media",
-    "view": "cms",
-    "wiki": "cms",
-    "msgprep": "multimail",
-    "budget_diagram": "reports",
-    "budget": "reports",
-    "roadmap": "scorecard",
-    "timeline": "scorecard"
+    "helpdesk":         "srm",
+    "helpline":         "srm",
+    "request":          "srm",
+    "dns":              "srm",
+    "room":             "fm",
+    "building":         "fm",
+    "video":            "media",
+    "view":             "cms",
+    "wiki":             "cms",
+    "msgprep":          "multimail",
+    "budget_diagram":   "reports",
+    "budget":           "reports",
+    "roadmap":          "scorecard",
+    "timeline":         "scorecard",
+    "vacation":         "vacation",
+    "planner":          "mission"
 };
 
-$.ajaxSetup({cache: true});
+$.ajaxSetup({cache: false});
 
 /*
  History.Adapter.bind(window, "statechange", function() {
@@ -39,9 +41,10 @@ $(document).ready(function () {
     portal_module = $("#_module").prop("class");
     portal_session = $("#_sess_id").prop("class");
     portal_lang = $("#_lang").prop("class");
+    portal_build = $("#_build").prop("class");
 
     if (focus_js[portal_focus]) {
-        var js_url = "/lemon/plugins/" + focus_js[portal_focus] + "/main.js";
+        var js_url = "/lemon/plugins/" + focus_js[portal_focus] + "/main.js?" + portal_build;
 
         if (!$("script[src='" + js_url + "']").length)
             $.getScript(js_url);
@@ -152,7 +155,6 @@ function push_state(load_url) {
 
 function load_content(url) {
     $("#content-wrapper").load(url, function (response, status, xhr) { // fadeOut(100).
-
         // kui laaditavat lehte ei leitud või kasutaja sessioon on aegunud, mine algsele lehele tagasi
         if (status == "error" && (xhr.status == 404 || xhr.status == 401)) {
             location.reload();
@@ -161,7 +163,7 @@ function load_content(url) {
         // lae vastava mooduli main.js
 
         if (focus_js[portal_focus]) {
-            var js_url = "/lemon/plugins/" + focus_js[portal_focus] + "/main.js";
+            var js_url = "/lemon/plugins/" + focus_js[portal_focus] + "/main.js?" + portal_build;
 
             if (!$("script[src='" + js_url + "']").length) {
                 $.getScript(js_url);
@@ -171,7 +173,12 @@ function load_content(url) {
         portal_module = $("#_module").prop("class");
 
         load_focus_widgets();
+
+        $().widgetui();
         $().portalui();
+
+        if (focus_js[portal_focus] == "fm")
+            $().fm();
 
         if (focus_js[portal_focus] == "srm")
             $().ptable();
@@ -186,8 +193,8 @@ function load_focus_widgets() {
         if ($(this).data("input")) {
             var input = $(this).data("input");
             //var jsonDecoded = JSON.parse(input);// wiki%3Aerkki%20solvak
-//		var encoded = encodeURI(input).replace('%3A', ':');
-//		console.log(encoded);
+            //var encoded = encodeURI(input).replace('%3A', ':');
+            //console.log(encoded);
             var data_w = ':' + input;
         }
         //$(this).load("/" + portal_module + "-widget" + "/get/" + $(this).prop("id") + data_w + "?content");
@@ -225,3 +232,5 @@ $("#wiki_help").on("show.bs.modal", function (e) {
     var url = "/help/get/" + portal_focus + "?content";
     $(this).find(".modal-body").load(url);
 });
+
+showLoadingAnimation(0);

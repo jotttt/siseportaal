@@ -12,10 +12,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 		<link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
-		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
-		<link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
-		<link href="css/plugins/fullcalendar/fullcalendar.print.css" rel="stylesheet" media="print">
-		<link href="css/animate.css" rel="stylesheet">
+				<link href="css/animate.css" rel="stylesheet">
 		<!--_____ PAGE CSS _______-->
 		<link href="css/style.css" rel="stylesheet">
 
@@ -29,151 +26,61 @@
 --------------------------------------------------------------->
 			<nav class="navbar navbar-static-top nav-down" role="navigation">
 				<div class="cherry-mod-bg"></div>
-				<span id="open-mobile-menu" class="pull-left hidden-sm hidden-md hidden-lg hidden-xl">
-					<button class="btn btn-white btn-outline no-borders m-t-sm m-l"><i class="fa fa-bars fa-2x"></i></button>
+				<span id="open-mobile-menu">
+					<button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
 				</span>
-				<span id="open-mobile-search" class="pull-right hidden-sm hidden-md hidden-lg hidden-xl">
+				<span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
 					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
 				</span>
 				<div id="mobile-search" class="hidden">
-					<form>
-						<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="sch-term" id="" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
 					</form>
 				</div>
-				<span class="navbar-header hidden-xs">
-					<a href="#" class="navbar-brand"><div id="logo-minimal-w" class=""></div></a>
-				</span>
-				<div class="navbar-collapse collapse" id="navbar">
+
+				<div class="navbar-header">
 					<ul class="nav navbar-nav">
-						<li>
-							<a href="#">Dokumendid</a>
+						<li class="nav-header">
+							<div class="hidden-xs">
+								<span>
+									<a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+								</span>
+							</div>
 						</li>
-						<li>
-							<a href="#">Ülikool</a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
 						</li>
-						<li>
-							<a href="#">Inimesed</a>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
 						</li>
-						<li class="dropdown dropdown-large">
+						<li class="dropdown dropdown-large hidden-xs">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
-							<ul class="dropdown-menu dropdown-menu-large row">
-
-								<li class="col-sm-4">
-									<ul>
-
-										<li class="level-1 dropdown-header"><a href="#">Põhiline</a></li>
-										<li class="level-2"><a href="#">TTÜ põhikiri</a></li>
-										<div class="l3">
-											<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja paraboolne eksistents</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja kaatet</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja sinusoidne üleminek paberkandjale</a></li>
-										</div>
-										<li class="level-2"><a href="#">TTÜ arengukava 2011−2015</a></li>
-										<li class="level-2"><a href="#">TTÜ kollektiivleping</a></li>
-										<li class="level-2"><a href="#">TTÜ juhtimissüsteemi käsiraamat</a></li>
-										<li class="level-2"><a href="#">TTÜ seadus (Riigi Teataja)</a></li>
-										<li class="level-2"><a href="#">Ülikooliseadus (Riigi Teataja)</a></li>
-										<li class="level-2"><a href="#">Teadus- ja arendustegevuse korralduse seadus (Riigi Teataja)</a></li>
-										<li class="level-2"><a href="#">Kõrgharidusstandard (Riigi Teataja)</a></li>
-										<li class="level-1 dropdown-header"><a href="#">Õigusaktid</a></li>
-										<li class="level-2"><a href="#">Kuratooriumi määrused</a></li>
-										<li class="level-2"><a href="#">Kuratooriumi otsused</a></li>
-										<li class="level-2"><a href="#">Nõukogu määrused</a></li>
-										<li class="level-2"><a href="#">Nõukogu otsused</a></li>
-										<li class="level-2"><a href="#">Üldkäskkirjad</a></li>
-										<li class="level-2"><a href="#">Personalikäskkirjad</a></li>
-										<li class="level-2"><a href="#">Korraldused</a></li>
-										<li class="level-2"><a href="#">Korraldused asendaja määramiseks</a></li>
-										<li class="level-2"><a href="#">Riigihangete korraldused</a></li>
-										<li class="level-2"><a href="#">Dekaani
-											korraldused</a></li>
-										<div class="l3">
-											<li class="level-3"><a href="#">TTÜ põhikirja analüüs</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja ülevaade</a></li>
-											<li class="level-3"><a href="#">TTÜ põhikirja kriitika</a></li>
-										</div>
-									</ul>
-								</li>
-								<li class="col-sm-4">
-									<ul>
-										<li class="level-1 dropdown-header"><a href="#">Terviktekstid, vormid</a></li>
-										<li class="level-2"><a href="#">Õppetöö</a></li>
-										<li class="level-2"><a href="#">Teadus- ja arendustöö</a></li>
-										<li class="level-2"><a href="#">Täiendusõpe</a></li>
-										<li class="level-2"><a href="#">Personalitöö</a></li>
-										<li class="level-2"><a href="#">Dokumendihaldus</a></li>
-										<li class="level-2"><a href="#">Lepingud ja volikirjad</a></li>
-										<li class="level-2"><a href="#">Finantstegevus</a></li>
-										<li class="level-2"><a href="#">Haldus-majandustegevus</a></li>
-										<li class="level-2"><a href="#">Statuudid</a></li>
-										<li class="level-2"><a href="#">Hinnakirjad</a></li>
-										<li class="level-2"><a href="#">Arengukavad ja strateegiad</a></li>
-										<li class="level-2"><a href="#">Asutuste põhikirjad</a></li>
-										<li class="level-2"><a href="#">Akadeemiliste struktuuriüksuste põhimäärused</a></li>
-										<li class="level-2"><a href="#">Haldus-tugistruktuuriüksuste põhimäärused</a></li>
-										<li class="level-2"><a href="#">Otsustuskogude töö</a></li>
-										<li class="level-2"><a href="#">TTÜ struktuur ja üldandmed</a></li>
-										<li class="level-1 dropdown-header"><a href="#">Kirjaregister</a></li>
-										<li class="level-2"><a href="#">Volikirjade register</a></li>
-										<li class="level-2"><a href="#">Lepingute register</a></li>
-										<li class="level-2"><a href="#">Lähetuste register</a></li>
-										<li class="level-2"><a href="#">TTÜga seotud juriidiliste isikute register</a></li>
-										<li class="level-2"><a href="#">Õigusaktide audit</a></li>
-										<li class="level-2"><a href="#">Õigusaktide tõlked (regulations and documents)</a></li>
-										<li class="level-2"><a href="#">Ingliskeelne terminoloogia</a></li>
-									</ul></li>
-								<li class="col-sm-4">
-									<ul>
-										<li class="level-1 dropdown-header"><a href="#">Mallid</a></li>
-										<li class="level-2"><a href="#">Dokumendimallid</a></li>
-										<li class="level-2"><a href="#">Näidisdokumendid</a></li>
-										<li class="level-2"><a href="#">Slaidimallid</a></li>
-										<li class="level-1 dropdown-header"><a href="#">Turundusmaterjalid</a></li>
-										<li class="level-2"><a href="#">TTÜ brändi ja tunnusgraafika kogumik</a></li>
-										<li class="level-2"><a href="#">Logod</a></li>
-										<li class="level-2"><a href="#">Rahvusvahelise turunduse käsiraamat</a></li>
-										<li class="level-1 dropdown-header"><a href="#">Infotund, avakoosolekud</a></li>
-										<li class="level-2"><a href="#">Üleülikooliline infotund</a></li>
-										<li class="level-2"><a href="#">Rektori kõned õppeaasta avakoosolekul</a></li>
-									</ul>
-								</li>
-							</ul>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
 						</li>
 					</ul>
+				</div>
 
-					<!-- TOP NAVBAR RIGHT SIDE
------------------------------------------------------------------>
-					<ul class="nav navbar-top-links navbar-right">
+				<ul class="nav navbar-top-links navbar-right">
 
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+							<i class="fa fa-bell"></i><span class="label label-primary"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<div class="core-widget-wrapper" id="alerts"><li>
+								<a href="/mail">
 
-						<!-- NAVBAR NOTIFICATIONS
------------------------------------------------------------------>
-						<li class="dropdown right-sidebar m-l">
-							<a href="#" class="dropdown-toggle count-info" data-toggle="dropdown"><i class="fa fa-bell"></i>  <span class="label label-primary">3</span></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="mailbox.html">
-										<div>
-											<i class="fa fa-envelope fa-fw"></i>  Sul on 3 uut sõnumit
-											<span class="pull-right text-muted small">19 minutit tagasi</span>
-										</div>
-									</a>
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+										<span class="pull-right text-muted small">19 minutit tagasi</span>
+									</div>
+								</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="profile.html">
-										<div>
-											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
-											<span class="pull-right text-muted small">56 minutit tagasi</span>
-										</div>
-									</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="grid_options.html">
+									<a href="/schedule">
 										<div>
 											<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
 											<span class="pull-right text-muted small">4h tagasi</span>
@@ -182,46 +89,59 @@
 								</li>
 								<li class="divider"></li>
 								<li>
+									<a href="/reports">
+										<div>
+											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+											<span class="pull-right text-muted small">56 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="divider"></li>
+								<li>
 									<div class="text-center link-block">
-										<a href="notifications.html">
+										<a href="/alerts">
 											<strong>Vaata kõiki teavitusi</strong>
 											<i class="fa fa-angle-right"></i>
 										</a>
 									</div>
-								</li>
-							</ul>
-						</li>
-						<!-- end navbar notifications ----------------------->
+								</li></div>
+						</ul>
+					</li>
 
-						<!-- LOGOUT BUTTON
------------------------------------------------------------------>
-						<li class="show-icon">
-							<a href="login.html">
-								<i class="fa fa-sign-out"></i>
-							</a>
-						</li>
-						<!-- end logout button ------------------------------>
+					<li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
 
-						<!-- RIGHT SIDEBAR
------------------------------------------------------------------>
-						<li class="dropdown right-sidebar">
-							<a href="#" class="dropdown-toggle count-info" data-toggle="dropdown"><i class="fa fa-tasks"></i></a>
-							<ul class="dropdown-menu">
-								<li>
-									<div class="setings-item">
-										<span>
-											Globaalne otsing
-										</span>
-										<div class="switch">
-											<div class="onoffswitch">
-												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-												<label class="onoffswitch-label" for="example">
-													<span class="onoffswitch-inner"></span>
-													<span class="onoffswitch-switch"></span>
-												</label>
-											</div>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+							<i class="fa fa-user fa-fw"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+							<li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+							<li class="divider"></li>
+							<li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+						</ul>
+					</li>
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+							<i class="fa fa-tasks"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="core-widget-wrapper" id="confbar"><li>
+								<div class="setings-item">
+									<span>
+										Globaalne otsing
+									</span>
+									<div class="switch">
+										<div class="onoffswitch">
+											<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+											<label class="onoffswitch-label" for="example">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
 										</div>
 									</div>
+								</div>
 								</li>
 								<li class="divider"></li>
 								<li>
@@ -311,30 +231,23 @@
 								<li class="divider"></li>
 								<li>
 									<div class="text-center link-block">
-										<a href="notifications.html">
+										<a href="/settings">
 											<strong>Seadistuste detailvaade</strong>
 											<i class="fa fa-angle-right"></i>
 										</a>
 									</div>
-								</li>
-							</ul>
-						</li>
+								</li></div>
+						</ul>
+					</li>
+				</ul>
 
-						<!-- end right sidebar ------------------------------>
 
-					</ul>
 
-					<!-- NAVBAR SEARCH
------------------------------------------------------------------>
-					<ul class="nav navbar-top-links navbar-right visible-md visible-lg">
-						<form>
-							<input type="text" class="form-control" placeholder="&#xF002; Otsi" name="srch-term" id="srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome"></form>
-					</ul>
-					<!-- end navbar search -------------------------------->
-
-					<!-- end top navbar right side -------------------------->
-
-				</div>
+				<ul class="nav navbar-top-links navbar-right visible-lg">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+					</form>
+				</ul>
 
 			</nav>
 			<!-- end top navbar ------------------------------------->
@@ -342,43 +255,77 @@
 			<!-- LEFT SIDEBAR
 --------------------------------------------------------------->
 			<nav id="m-menu" class="min">
-				<ul>
-					<li><a href="#"><i class="fa fa-desktop"></i>Minu Töölaud</a></li>
-					<li><span><i class="fa fa-sliders"></i>IT teenuste haldus</span>
-						<ul>
-							<li><a href="#">Seire</a></li>
-							<li><a href="#">Nimeserver</a></li>
-							<li><span>Kasutajatugi</span>
-								<ul>
-									<li><a href="#">Minu tellimused</a></li>
-									<li><a href="#">Minu ülesanded</a></li>
-									<li><a href="#">Teiste tellimused</a></li>
-									<li><a href="#">Teiste ülesanded</a></li>
-									<li><a href="#">Kõik tellimused</a></li>
+				<div>
+					<ul>
+						<li><span><i class="fa fa-desktop"></i>Coverpage</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+								<li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+							</ul>
+						</li>
+						<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+						<li><span><i class="fa fa-plane"></i>Lähetused</span>
+							<ul>
+								<li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+								<li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+								<li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+								<li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+							</ul>
+						</li>
+						<li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+						<li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+						<li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+						<li ><span><i class="fa fa-link"></i>Navbari lingid</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+							</ul>
+						</li>
+						<li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+						<li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+							<ul>
+								<li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+								<li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+							</ul>
+						</li>
+						<li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+							<ul>
+								<li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+								<li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+							</ul>
+						</li>
+						<li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+						<div class="m-l m-r-sm m-t">
+						<a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+					</div>
+					</ul>
 
-									<li><a href="#">Arhiiv</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#"><i class="fa fa-hdd-o"></i>Sisuhaldus</a></li>
-					<li><a href="#"><i class="fa fa-line-chart"></i>Graafikud</a></li>
-					<li><a href="#"><i class="fa fa-calendar"></i>Kalender</a></li>
-					<li><a href="#"><i class="fa fa-building-o"></i>Haldusüksused</a></li>
-					<li><a href="#"><i class="fa fa-bar-chart-o"></i>Arengukava</a></li>
-					<li><a href="#"><i class="fa fa-wifi"></i>Võrgutalitus</a></li>
-				</ul>
+					<!-- BOTTOM ICONS
+---------------------------------------------------------------->
+					<div class="bottom-icons">
+						<div>
+							<a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
+							<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+
+							<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+						</div>
+					</div>
+					<!-- end bottom icons ------------------------------->
+
+				</div>
 			</nav>
 			<!-- end left sidebar ----------------------------------->
 
 			<div id="page-wrapper" class="gray-bg min">
 
-				<!--CONTENT BEGIN
+				<!-- CAROUSEL BEGIN
 --------------------------------------------------------------->
 
 				<div id="my-coverpages" class="carousel slide wrapper-content">
 					<!-- Indicators -->
-					<ol id="my-coverpage-selector" class="carousel-indicators" style="opacity: 0;">
+					<ol id="my-coverpage-selector" class="carousel-indicators" style="opacity: 1;">
 						<li data-target="#my-coverpages" data-slide-to="0" class="active"></li>
 						<li data-target="#my-coverpages" data-slide-to="1" class=""></li>
 						<li data-target="#my-coverpages" data-slide-to="2" class=""></li>
@@ -732,15 +679,6 @@
 								<!--CONTENT END
 -------------------------------------------------------------->
 
-
-
-
-
-
-
-
-
-
 							</div>
 						</div>
 						<div class="item">
@@ -750,7 +688,7 @@
 								<!--CONTENT BEGIN
 ------------------------------------------------------------->
 
-								<div class="row widget-container" id="sortable-view">
+								<div class="row widget-container" id="sortable-view2">
 
 									<div id="sortable-left" class="col-lg-3 ui-sortable">						</div>
 
@@ -810,7 +748,7 @@
 ------------------------------------------------------------->
 
 
-								<div class="row widget-container" id="sortable-view">
+								<div class="row widget-container" id="sortable-view3">
 
 									<div id="sortable-left" class="col-lg-3 ui-sortable">
 

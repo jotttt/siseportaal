@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+
+		<title>Esilehe kujundus</title>
+
+		<!-- main css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<!-- plugin css -->
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+		<!-- custom css -->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+
+		<div id="wrapper" class="gray-bg">
+
+			<!-- TOP NAVBAR
+----------------------------------------------------------->
+			<nav class="navbar navbar-static-top nav-down" role="navigation">
+				<div class="cherry-mod-bg"></div>
+				<span id="open-mobile-menu">
+					<button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
+				</span>
+				<span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+					<button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+				</span>
+				<div id="mobile-search" class="hidden">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+					</form>
+				</div>
+
+				<div class="navbar-header">
+					<ul class="nav navbar-nav">
+						<li class="nav-header">
+							<div class="hidden-xs">
+								<span>
+									<a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+								</span>
+							</div>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+						</li>
+						<li class="dropdown dropdown-large hidden-xs">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="nav navbar-top-links navbar-right">
+
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+							<i class="fa fa-bell"></i><span class="label label-primary"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<div class="core-widget-wrapper" id="alerts"><li>
+								<a href="/mail">
+
+									<div>
+										<i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+										<span class="pull-right text-muted small">19 minutit tagasi</span>
+									</div>
+								</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="/schedule">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+											<span class="pull-right text-muted small">4h tagasi</span>
+										</div>
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="/reports">
+										<div>
+											<i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+											<span class="pull-right text-muted small">56 minutit tagasi</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="/alerts">
+											<strong>Vaata kõiki teavitusi</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li></div>
+						</ul>
+					</li>
+
+					<li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+							<i class="fa fa-user fa-fw"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+							<li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+							<li class="divider"></li>
+							<li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+						</ul>
+					</li>
+					<li class="dropdown right-sidebar">
+						<a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+							<i class="fa fa-tasks"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="core-widget-wrapper" id="confbar"><li>
+								<div class="setings-item">
+									<span>
+										Globaalne otsing
+									</span>
+									<div class="switch">
+										<div class="onoffswitch">
+											<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+											<label class="onoffswitch-label" for="example">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Keela messenger
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+												<label class="onoffswitch-label" for="example2">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Luba ajaloo salvestus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+												<label class="onoffswitch-label" for="example3">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Kõrge kontrastsus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+												<label class="onoffswitch-label" for="example4">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Teavitused emailile
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+												<label class="onoffswitch-label" for="example5">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="setings-item">
+										<span>
+											Esilehe moodulite ümberpaigutus
+										</span>
+										<div class="switch">
+											<div class="onoffswitch">
+												<input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+												<label class="onoffswitch-label" for="example6">
+													<span class="onoffswitch-inner"></span>
+													<span class="onoffswitch-switch"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="text-center link-block">
+										<a href="/settings">
+											<strong>Seadistuste detailvaade</strong>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</li></div>
+						</ul>
+					</li>
+				</ul>
+
+
+
+				<ul class="nav navbar-top-links navbar-right visible-lg">
+					<form ole="search" method="post" action="/search">
+						<input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+					</form>
+				</ul>
+
+			</nav>
+			<!-- end top navbar --------------------------------->
+
+			<!-- LEFT SIDEBAR
+----------------------------------------------------------->
+			<nav id="m-menu" class="min">
+				<div>
+					<ul>
+						<li><span><i class="fa fa-desktop"></i>Coverpage</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+								<li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+							</ul>
+						</li>
+						<li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+						<li><span><i class="fa fa-plane"></i>Lähetused</span>
+							<ul>
+								<li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+								<li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+								<li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+								<li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+							</ul>
+						</li>
+						<li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+						<li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+						<li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+						<li ><span><i class="fa fa-link"></i>Navbari lingid</span>
+							<ul>
+								<li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+								<li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+							</ul>
+						</li>
+						<li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+						<li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+							<ul>
+								<li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+								<li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+							</ul>
+						</li>
+						<li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+							<ul>
+								<li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+								<li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+							</ul>
+						</li>
+						<li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+						<div class="m-l m-r-sm m-t">
+							<a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+						</div>
+					</ul>
+
+					<!-- BOTTOM ICONS
+---------------------------------------------------------------->
+					<div class="bottom-icons">
+						<div>
+							<a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
+							<a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+
+							<a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+						</div>
+					</div>
+					<!-- end bottom icons ------------------------------->
+
+				</div>
+			</nav>
+			<!-- end left sidebar ------------------------------->
+
+			<!-- CONTENT
+----------------------------------------------------------->
+			<div id="page-wrapper" class="gray-bg min">
+
+				<!--PAGE
+----------------------------------------------------------->
+				<div class="row">
+					<div class="row">
+						<div class="col-lg-12">
+							<!--SPECIAL MESSAGE FOR MOBILE BEGIN
+------------------------------------------------------->
+							<div id="ttu-message-mobile" class="ibox float-e-margins hidden-lg">
+								<div class="ibox-title-full">
+									<h5><i class="fa fa-bullhorn"></i> Sündmus</h5>
+								</div>
+								<div class="ibox-content-full">
+									<div class="text-center"><img class="img-responsive" src="img/sp2015.jpg"></div>
+								</div>
+							</div>
+							<!--SPECIAL MESSAGE FOR MOBILE END
+----------------------------------------------------------------->
+						</div>
+					</div>
+					<div class="row"  id="sortable-view">
+						<!--LEFT COLUMN BEGIN
+----------------------------------------------------------------->
+						<div class="col-lg-3">
+							<!--MY PROFILE BEGIN
+----------------------------------------------------------------->
+							<div class="ibox float-e-margins hidden-xs hidden-sm hidden-md">
+								<div class="ibox-title">
+									<h5><i class="fa fa-user"></i> Minu profiil</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content text-center">
+									<h3 class="m-b-lg">Teretulemast siseveeb!</h3>
+									<img src="img/a3.jpg" class="img-circle circle-border m-b-md" alt="profile">
+									<div class="m-b-md">
+										<h2 class="font-bold no-margins">
+											Anna Kolossova
+										</h2>
+										<small>IT projektijuht</small>
+									</div>
+								</div>
+							</div>
+							<!--IN MY PROFILE END
+----------------------------------------------------------------->
+
+							<!--IN HOUSE TRAINING WIDGET BEGIN
+----------------------------------------------------------------->
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5><i class="fa fa-mortar-board"></i> Sisekoolitused</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<table class="table table-striped no-margins">
+										<thead>
+											<tr>
+												<th>Aeg</th>
+												<th>Nimi</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="label label-success-o">04.12.2015</span></td>
+												<td>Meeskonnatöö koolitus I tase</td>
+											</tr>
+											<tr>
+												<td><span class="label label-info-o">18.12.2015</span></td>
+												<td>Meeskonnatöö koolitus II tase</td>
+											</tr>
+											<tr>
+												<td><span class="label label-danger-o">23.12.2015</span></td>
+												<td>Ristmeedia koolitus </td>
+											</tr>
+											<tr>
+												<td><span class="label label-danger-o">24.12.2015</span></td>
+												<td>Excel edasijõudnutele</td>
+											</tr>
+											<tr>
+												<td><span class="label label-warning-o">27.12.2015</span></td>
+												<td>Avalik suhtlus I</td>
+											</tr>
+											<tr>
+												<td><span class="label label-info-o">29.12.2015</span></td>
+												<td>Word edasijõudnutele</td>
+											</tr>
+											<tr>
+												<td><span class="label label-info-o">30.12.2015</span></td>
+												<td>Ristmeedia koolitus</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr><td></td><td><button type="button" class="label label-white pull-right m-t" data-container="body" data-toggle="popover" data-placement="top" data-content="">Legend</button></td></tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<!--IN HOUSE TRAINING WIDGET END
+----------------------------------------------------------------->
+							<!--PHONEBOOK WIDGET BEGIN
+----------------------------------------------------------------->
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5><i class="fa fa-phone"></i> Telefoniraamat</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="favorites">
+										<form class="clearfix" role="form" action="#">
+											<div class="form-group">
+												<input type="text" placeholder="Nimi" class="form-control">
+											</div>
+											<div class="form-group">
+												<input type="text" placeholder="Amet" class="form-control">
+											</div>
+											<div class="form-group">
+												<input type="text" placeholder="Üksus" class="form-control">
+											</div>
+											<div class="form-group">
+												<input type="text" placeholder="Telefon" class="form-control">
+											</div>
+											<button class="btn btn-md btn-primary pull-right" type="submit"><strong>Otsi</strong></button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<!--PHONEBOOK WIDGET END
+------------------------------------------------------>
+						</div>
+						<!--LEFT COLUMN END
+-------------------------------------------------------->
+						<!--MIDDLE COLUMN BEGIN
+-------------------------------------------------------->
+						<div class="col-lg-6 ui-sortable">
+
+							<!--_________ SPECIAL MESSAGE 1 BEGIN ______-->
+							<div class="widget-wrapper" id="medi" data-input="open"><div class="widget-feed">
+								<div class="ibox-title">
+									<h5><i class="fa fa-newspaper-o"></i> Uudised </h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+										<a class="close-link">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="row  m-t m-r-xs">
+										<div class="col-sm-4"><img src="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7279_520x347.JPG" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Eelinkubatsiooni programmi avaüritus "Ideede öö" TTÜ Mektorys</a>
+											<div class="news-lead">22. veebruaril toimus TTÜ Mektory How to Start Up äriideede eelinkubatsiooni programmi avaüritus „Ideede öö“. Säravaid tähti ideede öös tervitas TTÜ rektor ja noorte ettevõtlikkuse arendamise programmi patroon akadeemik Jaak Aaviksoo.</div>
+											<div class="news-date">03.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="row m-r-xs">
+										<div class="col-sm-4"><img src="http://ttu.ee/public/a/avaleht/piltidepank/.thumbnails/Euronews_logo_grey_520x357.jpg" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</a>
+											<div class="news-lead">TTÜs ehitatakse 10x10x10 cm satelliiti, mis on täis nanotehnoloogiat. Satelliit valmib TTÜ IT ja mehaanikatudengite ning -professorite koostöös kosmose- ja tehnoloogiatööstusega.</div>
+											<div class="news-date">02.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="m-l m-r"><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:ideede-oo"><span class="news-title">Ideede öö TTÜ Mektorys</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:konkurss-2015-aasta-parimate-oppejoudude-valjaselgitamiseks"><span class="news-title">Konkurss 2015. aasta parimate õppejõudude väljaselgitamiseks on alanud</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:kuratoorium-arutas-uelikooli-arengukava"><span class="news-title">Kuratoorium arutas ülikooli arengukava ja eelarvestrateegiat</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:tunnustus-ttue-raamatukogu"><span class="news-title">Tunnustus TTÜ Raamatukogu bibliograafidele ja TTÜ teadlastele</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis1"><span class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis2"><span class="news-title">Professor Andreksoni optilise kommunikatsiooni uurimistöö sai 5,4 miljoni eurose rahastuse</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:vabariigi-aastapaeva-pidulik-koosolek"><span class="news-title">Vabariigi aastapäeva pidulik koosolek toimub 22. veebruaril kell 14.00</span></a></div></div>
+										<div class="text-center m-t-sm">
+											<a class="text-muted">Vaata vanemaid <i class="fa fa-caret-down"></i></a>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+
+
+							<!--_________ SPECIAL MESSAGE 2 BEGIN ______-->
+							<div class="widget-wrapper" id="medb" data-input="open"><div class="widget-feed">
+								<div class="ibox-title">
+									<h5><i class="fa fa-newspaper-o"></i> Sündmused</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+										<a class="close-link">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="row  m-t m-r-xs">
+										<div class="col-sm-4"><img src="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7371_520x347.JPG" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Eelinkubatsiooni programmi avaüritus "Ideede öö" TTÜ Mektorys</a>
+											<div class="news-lead">22. veebruaril toimus TTÜ Mektory How to Start Up äriideede eelinkubatsiooni programmi avaüritus „Ideede öö“. Säravaid tähti ideede öös tervitas TTÜ rektor ja noorte ettevõtlikkuse arendamise programmi patroon akadeemik Jaak Aaviksoo.</div>
+											<div class="news-date">03.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="row m-r-xs">
+										<div class="col-sm-4"><img src="http://5alfa.com/wp-content/uploads/2015/04/002_RBIAdam-image-1547914.jpeg" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</a>
+											<div class="news-lead">TTÜs ehitatakse 10x10x10 cm satelliiti, mis on täis nanotehnoloogiat. Satelliit valmib TTÜ IT ja mehaanikatudengite ning -professorite koostöös kosmose- ja tehnoloogiatööstusega.</div>
+											<div class="news-date">02.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="m-l m-r"><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:ideede-oo"><span class="news-title">Ideede öö TTÜ Mektorys</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:konkurss-2015-aasta-parimate-oppejoudude-valjaselgitamiseks"><span class="news-title">Konkurss 2015. aasta parimate õppejõudude väljaselgitamiseks on alanud</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:kuratoorium-arutas-uelikooli-arengukava"><span class="news-title">Kuratoorium arutas ülikooli arengukava ja eelarvestrateegiat</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:tunnustus-ttue-raamatukogu"><span class="news-title">Tunnustus TTÜ Raamatukogu bibliograafidele ja TTÜ teadlastele</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis1"><span class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis2"><span class="news-title">Professor Andreksoni optilise kommunikatsiooni uurimistöö sai 5,4 miljoni eurose rahastuse</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:vabariigi-aastapaeva-pidulik-koosolek"><span class="news-title">Vabariigi aastapäeva pidulik koosolek toimub 22. veebruaril kell 14.00</span></a></div></div>
+										<div class="text-center m-t-sm">
+											<a class="text-muted">Vaata vanemaid <i class="fa fa-caret-down"></i></a>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+
+							<!--_________ SPECIAL MESSAGE 3 BEGIN ______-->
+							<div class="widget-wrapper" id="mediw" data-input="open"><div class="widget-feed">
+								<div class="ibox-title">
+									<h5><i class="fa fa-newspaper-o"></i> Muu</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+										<a class="close-link">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="row  m-t m-r-xs">
+										<div class="col-sm-4"><img src="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7279_520x347.JPG" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Eelinkubatsiooni programmi avaüritus "Ideede öö" TTÜ Mektorys</a>
+											<div class="news-lead">22. veebruaril toimus TTÜ Mektory How to Start Up äriideede eelinkubatsiooni programmi avaüritus „Ideede öö“. Säravaid tähti ideede öös tervitas TTÜ rektor ja noorte ettevõtlikkuse arendamise programmi patroon akadeemik Jaak Aaviksoo.</div>
+											<div class="news-date">03.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="row m-r-xs">
+										<div class="col-sm-4"><img src="http://ttu.ee/public/a/avaleht/piltidepank/.thumbnails/Euronews_logo_grey_520x357.jpg" class="img-responsive"><div class="news-title"></div>
+										</div>
+										<div class="col-sm-8 news-module-hero2">
+											<a class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</a>
+											<div class="news-lead">TTÜs ehitatakse 10x10x10 cm satelliiti, mis on täis nanotehnoloogiat. Satelliit valmib TTÜ IT ja mehaanikatudengite ning -professorite koostöös kosmose- ja tehnoloogiatööstusega.</div>
+											<div class="news-date">02.03.2016</div>
+										</div>
+									</div>
+									<hr class="m-t m-b">
+									<div class="m-l m-r"><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:ideede-oo"><span class="news-title">Ideede öö TTÜ Mektorys</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:konkurss-2015-aasta-parimate-oppejoudude-valjaselgitamiseks"><span class="news-title">Konkurss 2015. aasta parimate õppejõudude väljaselgitamiseks on alanud</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:kuratoorium-arutas-uelikooli-arengukava"><span class="news-title">Kuratoorium arutas ülikooli arengukava ja eelarvestrateegiat</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:tunnustus-ttue-raamatukogu"><span class="news-title">Tunnustus TTÜ Raamatukogu bibliograafidele ja TTÜ teadlastele</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis1"><span class="news-title">Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:uudis2"><span class="news-title">Professor Andreksoni optilise kommunikatsiooni uurimistöö sai 5,4 miljoni eurose rahastuse</span></a></div></div><div class="row"><div class="col-md-12"><a class="news-module" href="/wiki/show/pr:et:portal:news:2016:vabariigi-aastapaeva-pidulik-koosolek"><span class="news-title">Vabariigi aastapäeva pidulik koosolek toimub 22. veebruaril kell 14.00</span></a></div></div>
+										<div class="text-center m-t-sm">
+											<a class="text-muted">Vaata vanemaid <i class="fa fa-caret-down"></i></a>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+
+
+
+							<!--_________ SPECIAL MESSAGE BEGIN ______-->
+							<div class="widget-wrapper hidden" id="media-source" data-input="open"><div class="widget-feed">
+								<div class="ibox-title">
+									<h5><i class="fa fa-birthday-cake"></i> Uudised - algne kuva</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+										<a class="close-link">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="masonry-row">
+
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:eelinkubatsiooni-programmi-avaueritus" class="ajax-load">pr:et:portal:news:2016:eelinkubatsiooni-programmi-avaueritus</a>
+												<p>
+												</p><p>
+												23.02.16 @ 12:39
+												</p>
+
+												<h1>Eelinkubatsiooni programmi avaüritus "Ideede öö" TTÜ Mektorys</h1>
+												<div class="level1">
+													<div class="table sectionedit1"><table class="inline">
+														<tbody><tr class="row0">
+															<td class="col0 leftalign"><a href="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7279_520x347.JPG" class="media" target="_blank" title="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7279_520x347.JPG"><img class="img img-responsive" src="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7279_520x347.JPG" style="float:right" title="img_7279_520x347.jpg" alt="img_7279_520x347.jpg" width="400" height="267"></a>  </td>
+															</tr>
+														</tbody></table></div>
+													<!-- EDIT1 TABLE [99-204] -->
+													<p>
+														22. veebruaril toimus TTÜ Mektory How to Start Up äriideede eelinkubatsiooni programmi avaüritus „Ideede öö“. Säravaid tähti ideede öös tervitas TTÜ rektor ja noorte ettevõtlikkuse arendamise programmi patroon akadeemik Jaak Aaviksoo.
+													</p>
+
+													<p>
+														Ajurünnakute ja mõttemängude tulemusel pakkusid noored välja mõned huvitavad äriideed – näiteks „tark kohvitass“, mis ütleks kohvimasinale, millist kohvi-jooki kasutaja eelistab või konverentsikülastaja mobiilirakendus, mis tuletab külastajale meelde, et ta konverentsil uusi tutvusi looks, mitte ei tegeleks nuti-seadmega.Esmaspäevasel avaüritusel osales üle 120 tudengi erinevatest kõrgkoolidest. Noored said harjutada nii uute ideede väljamõtlemist kui ka TTÜ saltopoiste juhtimisel katsetada, kuidas meeskonnatöös üksteisele toetuda. Avaürituse esinejad jagasid oma kogemusi – näiteks start-up ettevõtte VitalFields looja rõhutas järjepidevuse olulisust, et ka pärast rasket autoõnnetust, töötuks jäämist ja 2 lapsega pere kõrvalt on võimalik tuua 250 000 eurone investeering oma ettevõttesse.
+													</p>
+													<div class="table sectionedit2"><table class="inline">
+														<tbody><tr class="row0">
+															<td class="col0 leftalign"><a href="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7371_520x347.JPG" class="media" target="_blank" title="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7371_520x347.JPG"><img class="img img-responsive" src="http://www.ttu.ee/public/m/Mektory/.thumbnails/IMG_7371_520x347.JPG" title="img_7371_520x347.jpg" alt="img_7371_520x347.jpg" width="400" height="267"></a>  </td>
+															</tr>
+														</tbody></table></div>
+													<!-- EDIT2 TABLE [1302-1406] -->
+													<p>
+														Äriideede kasvuprogrammi ehk eelinkubatsiooni käigus arendavad tudengid oma esialgse idee reaalseks ärimudeliks. Programmi on oodatud kõik kõrg- ja kutsekoolide ettevõtlusest huvitatud õppurid üle Eesti. Eelinkubatsiooni programmis toimuvad maikuuni start-up meeskondade koolitused, töötoad ja seminarid erinevatel start-up ettevõtte rajamise teemadel. Igale meeskonna on oma mentor ja juhendaja, programm lõppeb TTÜ Mektory start-up ideede konkursiga. Õppuritele on kõigis tegevustes osalemine tasuta.
+													</p>
+
+													<p>
+														TTÜ Mektory How to Start Up programm on osa ülikoolideülesest ettevõtlikkuse ja ettevõtlusõppe arendamise programmist „Ettevõtlikkuse ja ettevõtlusõppe süsteemne arendamine kõigil haridustasemetel„, mis on ellu kutsutud haridus- ja teadusministeeriumi poolt. Programmi veavad eest 8 Eesti suuremat ülikooli (sh Tartu Ülikool, Tallinna Ülikool ja Tallinna Tehnikaülikool), kuid programmi on kaasatud ka Eesti kõrg- ja kutsekoolid.
+													</p>
+
+													<p>
+														Rohkem infot How to Start Up eelinkubatsiooni programmi kohta kodulehelt – <a href="http://www.ttu.ee/ttu-how-to-start-up" class="urlextern" target="_blank" title="http://www.ttu.ee/ttu-how-to-start-up" rel="nofollow">www.ttu.ee/ttu-how-to-start-up</a>. Start-up meeskondadel on võimalik programmiga liituda kuni 21. märtsini 2016.
+													</p>
+
+													<p>
+														Lisainfo:<br>
+														Anu Oks<br>
+														TTÜ Mektory start-up programmi peaspetsialist<br>
+														TTÜ innovatsiooni ja ettevõtluskeskus Mektory<br>
+														<a href="mailto:anu.oks@ttu.ee" class="mail" title="anu.oks@ttu.ee">anu.oks@ttu.ee</a>
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:energeetikateaduskonda-juhib-arvo-oorn" class="ajax-load">pr:et:portal:news:2016:energeetikateaduskonda-juhib-arvo-oorn</a>
+												<p>
+												</p>
+												<img src="http://5alfa.com/wp-content/uploads/2015/04/002_RBIAdam-image-1547914.jpeg" alt="" class="img img-responsive">
+												<h1>Energeetikateaduskonda juhib Arvo Oorn</h1>
+												<div class="level1">
+
+													<p>
+														Rektor nimetas 1. veebruarist energeetikateaduskonna dekaani kohusetäitjaks elektrotehnika instituudi valgustehnika laboratooriumi juhataja Arvo Oorni.
+													</p>
+
+													<p>
+														Arvo Oorn lõpetas Tallinna Tehnikaülikooli (endise TPI) 1976. aastal elektriinsenerina. Tehnikakandidaadi kraadi kaitses ta 1985. aastal Moskva Energeetika Instituudis, 1990ndatel on ta end täiendanud Saksamaal ja Soomes.
+													</p>
+
+													<p>
+														Tööd TTÜs alustas Arvo Oorn kohe pärast lõpetamist 1977. aastal elektriajamite kateedri assistendina ja on ülikooliga tihedalt tänaseni seotud täites vanemteaduri, dotsendi ja labori juhataja ametikohti. Aastast 1994 on ta AS Volta nõukogu esimees. Arvo Oorn on õpetanud elektriajamite teooriat, nende juhtimisseadmeid ja -süsteeme, programmeerimist ja elektriajamite raalprojekteerimist.
+													</p>
+
+													<p>
+														Energeetikateaduskonna senine dekaan professor Arvi Hamburg on Vabariigi Valitsuse korraldusega nimetatud TTÜ kuratooriumi liikmeks.
+													</p>
+
+													<p>
+														Kai Aviksoo
+													</p>
+
+													<p>
+														Ülikooli sekretär
+													</p>
+
+													<p>
+														tel 620 2010
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:ideede-oo" class="ajax-load">pr:et:portal:news:2016:ideede-oo</a>
+												<p>
+												</p><p>
+												23.02.16 @ 12:45
+												</p>
+
+												<h1>Ideede öö TTÜ Mektorys</h1>
+												<div class="level1">
+
+													<p>
+														22. veebruaril toimus TTÜ Mektory <em>How to Start Up</em> äriideede eelinkubatsiooni programmi avaüritus „Ideede öö“.
+													</p>
+
+													<p>
+														Säravaid tähti ideede öös tervitas TTÜ rektor ja noorte ettevõtlikkuse arendamise programmi patroon akadeemik Jaak Aaviksoo.
+													</p>
+
+													<p>
+														Esmaspäevasel avaüritusel osales üle 120 tudengi erinevatest kõrgkoolidest. Noored said harjutada nii uute ideede väljamõtlemist kui ka TTÜ saltopoiste juhtimisel katsetada, kuidas meeskonnatöös üksteisele toetuda. Avaürituse esinejad jagasid oma kogemusi – näiteks start-up ettevõtte VitalFields looja rõhutas järjepidevuse olulisust, et ka pärast rasket autoõnnetust, töötuks jäämist ja 2 lapsega pere kõrvalt on võimalik tuua 250 000 eurone investeering oma ettevõttesse.
+													</p>
+
+													<p>
+														Ajurünnakute ja mõttemängude tulemusel pakkusid noored välja mõned huvitavad äriideed – näiteks „tark kohvitass“, mis ütleks kohvimasinale, millist kohvi-jooki kasutaja eelistab või konverentsikülastaja mobiilirakendus, mis tuletab külastajale meelde, et ta konverentsil uusi tutvusi looks, mitte ei tegeleks nuti-seadmega.
+													</p>
+
+													<p>
+														Äriideede kasvuprogrammi ehk eelinkubatsiooni käigus arendavad tudengid oma esialgse idee reaalseks ärimudeliks. Programmi on oodatud kõik kõrg- ja kutsekoolide ettevõtlusest huvitatud õppurid üle Eesti. Eelinkubatsiooni programmis toimuvad maikuuni start-up meeskondade koolitused, töötoad ja seminarid erinevatel start-up ettevõtte rajamise teemadel. Igale meeskonna on oma mentor ja juhendaja, programm lõppeb TTÜ Mektory start-up ideede konkursiga. Õppuritele on kõigis tegevustes osalemine tasuta.
+													</p>
+
+													<p>
+														TTÜ Mektory How to Start Up programm on osa ülikoolideülesest ettevõtlikkuse ja ettevõtlusõppe arendamise programmist „Ettevõtlikkuse ja ettevõtlusõppe süsteemne arendamine kõigil haridustasemetel„, mis on ellu kutsutud haridus- ja teadusministeeriumi poolt. Programmi veavad eest 8 Eesti suuremat ülikooli (sh Tartu Ülikool, Tallinna Ülikool ja Tallinna Tehnikaülikool), kuid programmi on kaasatud ka Eesti kõrg- ja kutsekoolid.
+													</p>
+
+													<p>
+														Rohkem infot How to Start Up eelinkubatsiooni programmi kohta kodulehelt – <a href="http://www.ttu.ee/ttu-how-to-start-up" class="urlextern" target="_blank" title="http://www.ttu.ee/ttu-how-to-start-up" rel="nofollow">www.ttu.ee/ttu-how-to-start-up</a>. Start-up meeskondadel on võimalik programmiga liituda kuni 21. märtsini 2016.
+													</p>
+
+													<p>
+														Lisainfo<br>
+														Anu Oks<br>
+														TTÜ Mektory start-up programmi peaspetsialist<br>
+														TTÜ innovatsiooni ja ettevõtluskeskus Mektory<br>
+														<a href="mailto:anu.oks@ttu.ee" class="mail" title="anu.oks@ttu.ee">anu.oks@ttu.ee</a>
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:konkurss-2015-aasta-parimate-oppejoudude-valjaselgitamiseks" class="ajax-load">pr:et:portal:news:2016:konkurss-2015-aasta-parimate-oppejoudude-valjaselgitamiseks</a>
+												<p>
+												</p><h1>Konkurss 2015. aasta parimate õppejõudude väljaselgitamiseks on alanud</h1>
+												<div class="level1">
+
+													<p>
+														Kooskõlas TTÜ aasta õppejõu <a href="http://docs.ttu.ee/dokument/22401" class="urlextern" target="_blank" title="http://docs.ttu.ee/dokument/22401" rel="nofollow">statuudiga</a> kuulutas rektor välja <a href="http://docs.ttu.ee/id/37691" class="urlextern" target="_blank" title="http://docs.ttu.ee/id/37691" rel="nofollow">konkursi</a> 2015. aasta parimate õppejõudude väljaselgitamiseks.
+													</p>
+
+													<p>
+														Konkursi eesmärgiks on väärtustada õpetamist, tulemuslikku juhendamist, teadmiste ja aine edasiandmise oskust, loovust, pidevat enesetäiendamist ning heatahtlikku suhtumist üliõpilastesse, samuti õppejõudude saavutusvajadust ja töömotivatsiooni.
+													</p>
+
+													<p>
+														Aasta õppejõude autasustatakse Eesti Vabariigi aastapäeva pidulikul koosolekul.
+													</p>
+
+													<p>
+														Lisainfo<br>
+														Mare Pihel, TTÜ personaliosakonna juhataja<br>
+														tel 512 1939, <a href="mailto:mare.pihel@ttu.ee" class="mail" title="mare.pihel@ttu.ee">mare.pihel@ttu.ee</a>
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:kuratoorium-arutas-uelikooli-arengukava" class="ajax-load">pr:et:portal:news:2016:kuratoorium-arutas-uelikooli-arengukava</a>
+												<p>
+												</p><h1>Kuratoorium arutas ülikooli arengukava ja eelarvestrateegiat</h1>
+												<div class="level1">
+
+													<p>
+														Reedel, 5. veebruaril toimus TTÜ kuratooriumi koosolek, kus arutluse all olid järgmised punktid.
+													</p>
+
+													<p>
+														1. Kuratoorium arutas ülikooli arengukava (AK) ja juhtkonna tegevuskava aastateks 2016−2020.
+													</p>
+
+													<p>
+														Kuratooriumi liikmed tegid 22. jaanuaril arengukavakomisjonis valminud AK versiooni nii sisulisi kui ka redaktsioonilisi parandusi. Täpsustati ülikooli missiooni ja visiooni, kus rõhutati, et TTÜ, kui tehnika- ja tehnoloogiaülikool, on teaduse, tehnoloogia ja innovatsiooni edendaja ning juhtiv inseneri- ja majandushariduse andja Eestis. Ülikooli põhiline väljund on tänapäevase, teaduspõhise ja õppijakeskse hariduse andmine kõigil kõrgharidusastmetel ja täiendusõppes ning teaduse ja uute tehnoloogiate arendamine. Doktoriõppe tuleks kujundada oma loomult rahvusvaheliseks ja samal ajal tuleks leida talendikaid doktorante nii Eesti ettevõtetest kui mujalt maailmast. Rõhutati teaduskondade reorganiseerimise olulisust ja nende kujundamist TTÜ seadusest tulenevate vastutusvaldkondade juhtimise ülesannete täitmiseks. Kuratoorium pidas vajalikuks, et arengukavas oleks tugevamini rõhutatud vajadus hoida püsivalt kõrgel oma töötajate ja üliõpilaste töövõimet, rahvusvahelise koostöö laiendamine hoolikalt valitud fookuses ning vilistlasliikumise roll ülikooli ees seisvate ülesannete lahendamisel.
+													</p>
+
+													<p>
+														Vastavalt seadusele ja põhikirjale kinnitab kuratoorium arengukava pärast selle vastuvõtmist nõukogus. Samaaegselt kooskõlastas kuratoorium juhtkonna tegevuskava arengukavast tulenevat ülesannete täitmiseks. Tegevuskava koos tulemusnäitajatega kinnitab rektor.
+													</p>
+
+													<p>
+														2. Kuratoorium arutas ülikooli eelarvestrateegiat, mis on ühtlasi ülikooli finantsplaan aastateks 2016−2020 ja peab kindlustama arengukava eesmärkide täitmist. Finantsplaaniga püstitatakse eesmärgid ülikooli tulubaasi suurendamiseks ning karjäärimudeli ja palgapoliitika realiseerimiseks. Finantsstrteegia vaatab läbi ülikooli nõukogu ja esitab selle kinnitamisek kuratooriumile. Pärast seda esitatakse finantsplaan Haridus- ja Teadusministeeriumile rahandusministri kinnitatud vormil.
+													</p>
+
+													<p>
+														3. Kuratoorium kooskõlastas siseauditi juhi ametisse nimetamise. Rektor tutvustas siseauditi juhi konkursi tulemusi ja konkursi võitnud kandidaati Kaire Premsi, kes hakkab uues haldus-tugistruktuuris juhtima siseauditi tegevust.
+													</p>
+
+													<p>
+														4. Kuratoorium otsustas nimetada TTÜ auditikomitee neljandaks liikmeks kuratooriumi liikme akadeemik Ülo Jaaksoo.
+													</p>
+
+													<p>
+														5. Kuratoorium analüüsis 2015. aasta kuratooriumi tööplaani ja tehtud otsuste täitmist.
+													</p>
+
+													<p>
+														Kokkuvõtte koostas:<br>
+														Ardo Kamratov<br>
+														Kuratooriumi aseesimees
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+
+
+
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:tunnustus-ttue-raamatukogu" class="ajax-load">pr:et:portal:news:2016:tunnustus-ttue-raamatukogu</a>
+												<p>
+												</p><h1>Tunnustus TTÜ Raamatukogu bibliograafidele ja TTÜ teadlastele</h1>
+												<div class="level1">
+
+													<p>
+														<b>16. veebruaril 2016 toimus TLÜ Akadeemilises Raamatukogus IX bibliograafiapäev, kus kuulutati välja bibliograafiaauhinna saajad.</b>
+													</p>
+
+													<p>
+														Eesti Raamatukoguhoidjate Ühing (koostöös Tallinna Ülikooli Akadeemiline Raamatukoguga) tunnustas Tallinna Tehnikaülikooli Raamatukogu bibliograafiaosakonda viljaka tegevuse eest asutuse- ja isikubibliograafiate koostamisel.  Ühtlasi tunnustati ka Tallinna Tehnikaülikooli teadlasi oma tegevuse kokkuvõtmisel isikubibliograafiates ja seeläbi Eesti kultuurilukku jälje jätmisel ning innustati teiste ülikoolide teadlasi seda eeskuju järgima.
+													</p>
+
+													<p>
+														Tallinna Tehnikaülikooli Raamatukogu bibliograafiaosakond tänab kõiki, kes on meile usaldanud oma bibliograafia koostamise - tänu Teile saime väärika tunnustuse osaliseks.
+													</p>
+
+													<p>
+														Näiteid bibliograafiatest:
+													</p>
+													<ul>
+														<li class="level1"><div class="li"> <a href="http://www.ester.ee/record=b4480425*est" class="urlextern" target="_blank" title="http://www.ester.ee/record=b4480425*est" rel="nofollow">Anorgaaniliste materjalide teaduslaboratoorium 2002-2014 : bibliograafia</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="http://www.ester.ee/record=b4447719*est" class="urlextern" target="_blank" title="http://www.ester.ee/record=b4447719*est" rel="nofollow">Mihkel Veiderma : bibliograafia</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="https://www.ester.ee/record=b4509776*est" class="urlextern" target="_blank" title="https://www.ester.ee/record=b4509776*est" rel="nofollow">Ants Kukrus : publikatsioonid</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="http://www.ester.ee/record=b4453864*est" class="urlextern" target="_blank" title="http://www.ester.ee/record=b4453864*est" rel="nofollow">Priit Kulu : bibliograafia</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="https://www.ester.ee/record=b4523385*est" class="urlextern" target="_blank" title="https://www.ester.ee/record=b4523385*est" rel="nofollow">Rein Küttner : bibliograafia</a> <a href="https://www.ester.ee/record=b4509776*est" class="urlextern" target="_blank" title="https://www.ester.ee/record=b4509776*est" rel="nofollow">https://www.ester.ee/record=b4509776*est</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="http://www.ester.ee/record=b3083024*est" class="urlextern" target="_blank" title="http://www.ester.ee/record=b3083024*est" rel="nofollow">Karl Tihase 100 : mälestused</a></div>
+														</li>
+														<li class="level1"><div class="li"> <a href="https://www.ester.ee/record=b4485496*est" class="urlextern" target="_blank" title="https://www.ester.ee/record=b4485496*est" rel="nofollow">Rein Vaikmäe : bibliograafia</a> </div>
+														</li>
+													</ul>
+
+													<p>
+														Rohkem teavet: Signe Jantson, TTÜR bibliograafia osakonna juhataja, tel 620 3551.
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:uudis1" class="ajax-load">pr:et:portal:news:2016:uudis1</a>
+												<p>
+												</p><h2>Euronews TTÜ-Mektory satelliidiprogrammist: kas tulevik on kingakarbi suuruste nanotehnoloogiliste satelliitide päralt?</h2>
+												<div class="level2">
+
+													<p>
+														Euronews tutvustab TTÜ-Mektory satelliidiprogrammi.
+													</p>
+
+													<p>
+														TTÜs ehitatakse 10x10x10 cm satelliiti, mis on täis nanotehnoloogiat. Satelliit valmib TTÜ IT ja mehaanikatudengite ning -professorite koostöös kosmose- ja tehnoloogiatööstusega.
+													</p>
+
+													<p>
+														<a href="http://www.euronews.com/2016/01/21/scientists-predict-big-things-for-the-tiny-cubesat-a-satellite-in-a-shoe-box/" class="urlextern" target="_blank" title="http://www.euronews.com/2016/01/21/scientists-predict-big-things-for-the-tiny-cubesat-a-satellite-in-a-shoe-box/" rel="nofollow">Scientists predict big things for the tiny CubeSat: ‘a satellite in a shoe box’</a>
+													</p>
+
+													<p>
+														<a href="http://ttu.ee/public/a/avaleht/piltidepank/.thumbnails/Euronews_logo_grey_520x357.jpg" class="media" target="_blank" title="http://ttu.ee/public/a/avaleht/piltidepank/.thumbnails/Euronews_logo_grey_520x357.jpg"><img class="img img-responsive" src="http://ttu.ee/public/a/avaleht/piltidepank/.thumbnails/Euronews_logo_grey_520x357.jpg" title="euronews_logo_grey_520x357.jpg" alt="euronews_logo_grey_520x357.jpg" width="520" height="357"></a>
+													</p>
+
+													<p>
+														Tiny satellites the size of a small cube, jam-packed with the most advanced nanotechnologies: is this the future of Space missions?
+													</p>
+
+													<p>
+														To find out, we went to Tallinn, <a href="http://www.euronews.com/tag/estonia/" class="urlextern" target="_blank" title="http://www.euronews.com/tag/estonia/" rel="nofollow">Estonia</a>, where students at the Mektory Space Centre are preparing the launch of their first nanosatellite.
+													</p>
+
+													<p>
+														Nanosatellites – tiny cubes of 10cm x 10cm x 10cm, full of nanotechnologies — are going to be more and more important in the future of space exploration, from Mars missions, to the surveillance of asteroids, which could potentially be dangerous for our planet.”
+													</p>
+
+													<p>
+														Also known as <a href="http://www.nanosats.eu/#page-top" class="urlextern" target="_blank" title="http://www.nanosats.eu/#page-top" rel="nofollow">CubeSats</a> these tiny satellites open up a whole world of possibilities for those who want to explore space.
+													</p>
+
+													<p>
+														Their potential is being seized upon by everyone from big space agencies, to small groups of students, such as those at the Mektory Space Centre, at Tallinn’s University of Technology.
+													</p>
+
+													<p>
+														Marta Hang, is the CubeSat Programme assistant at the centre.<br>
+														“I would have never thought that I can build a satellite in my life, because I have always thought that only NASA is building satellites. But no. I can do it in my own university, also,” she said,
+													</p>
+
+													<p>
+														Tashi Dolma Gyeltshen, a Masters student in Industrial Engineering is also working on the project. She added:<br>
+														“We are all coming from different backgrounds in this project and we work as a team, and all of us put in so much effort.”
+													</p>
+
+												</div>
+
+												<h3>Preparation for work in the space industry</h3>
+												<div class="level3">
+
+													<p>
+														The Mektory nanosatellite programme is an international university initiative being worked on by students and professors, in association with space and technology industries.
+													</p>
+
+													<p>
+														Its goal is to prepare students for working in the space industry.
+													</p>
+
+													<p>
+														They are currently working on their first <a href="http://www.euronews.com/tag/space-mission/" class="urlextern" target="_blank" title="http://www.euronews.com/tag/space-mission/" rel="nofollow">space mission</a>.
+													</p>
+
+													<p>
+														Mart Vihmand, the head of the Mektory Space Centre outlined the project:<br>
+														“We are developing one unit cube satellite for a remote sensing mission, which means that the satellite has to take pictures of Earth.”
+													</p>
+
+													<p>
+														This type of satellite can fit in the palm of your hand and weighs between 1 and 10 kilograms. It is low-cost because it is largely based on existing electronic components.
+													</p>
+
+													<p>
+														The launch of the student-made nanosatellite is likely to take two more years of work, as Vihmand explained:<br>
+														“From the project plan until the completion of the satellite takes 3 years, of which 80% of the time is usually meetings and design behind the computer.
+													</p>
+
+													<p>
+														“Actually, when you start to produce this final piece that is going to fly in space, then the machine puts it together, in a certain environment, and places the components within 1 minute.”
+													</p>
+
+													<p>
+														CubeSats deliver into orbit a high concentration of nanotechnologies that you can even build using a 3D printer, as they do in Tallinn.
+													</p>
+
+													<p>
+														CubeSats have also caught the attention of the <a href="http://www.euronews.com/tag/european-space-agency/" class="urlextern" target="_blank" title="http://www.euronews.com/tag/european-space-agency/" rel="nofollow">European Space Agency</a>, which wants to send these tiny satellites deeper into the solar system.
+													</p>
+
+													<p>
+														Roger Walker coordinates ESA’s CubeSat efforts at the Agency’s technical centre in the Netherlands.
+													</p>
+
+													<p>
+														“Computers have themselves been shrinking over time, going from a computer that would be the size of a room to something which you now see on your mobile phone,” he said.
+													</p>
+
+													<p>
+														“In the space industry we see that satellite functions have been shrinking from something the size of a washing machine to now something the size of a CubeSat, basically a satellite in a shoe box.”
+													</p>
+
+													<p>
+														In addition to being valuable educational tools, CubeSats are fit for a wide range of applications. For instance, as an affordable test for in-orbit technologies, or to carry out observations and measurements in space.
+													</p>
+
+													<p>
+														“There is a complete satellite functionality inside this box; so you have the possibility to generate power with solar panels, distribute the power internally, communicate with the ground station on Earth and also to run experiments and transmit the data back down to ground again,” Walker added.
+													</p>
+
+													<p>
+														At the ESA’s radio-testing facility, a Cubesat called QARMAN is being examined.
+													</p>
+
+													<p>
+														This year (2016) it will be used to <a href="http://www.esa.int/spaceinimages/Images/2015/12/Qarman_CubeSat_in_Hertz_test_chamber" class="urlextern" target="_blank" title="http://www.esa.int/spaceinimages/Images/2015/12/Qarman_CubeSat_in_Hertz_test_chamber" rel="nofollow">test re-entry technologies</a> and heat-shield materials.
+													</p>
+
+													<p>
+														But the future for these tiny satellites is even bigger. In 2020 <a href="http://www.esa.int/Our_Activities/Space_Engineering_Technology/Asteroid_Impact_Mission/CubeSat_companions_for_ESA_s_asteroid_mission" class="urlextern" target="_blank" title="http://www.esa.int/Our_Activities/Space_Engineering_Technology/Asteroid_Impact_Mission/CubeSat_companions_for_ESA_s_asteroid_mission" rel="nofollow">an ESA-NASA mission</a> is expected to begin, which is designed to impact and redirect an asteroid.
+													</p>
+
+													<p>
+														It will be a small-scale test to prevent such a threat to our planet.
+													</p>
+
+													<p>
+														“We are studying CubeSats for scientific and exploration purposes in deep space and one of those missions would be piggy-backing on the asteroid impact mission,” Walker explained.
+													</p>
+
+													<p>
+														“Those CubeSats would be taking observations of the asteroid before and after a NASA spacecraft comes in to impact the asteroid itself.”
+													</p>
+
+												</div>
+
+												<h3>Exploring the Moon and Mars</h3>
+												<div class="level3">
+
+													<p>
+														These tiny spacecraft can have multiple applications as the process of miniaturisation is unstoppable.
+													</p>
+
+													<p>
+														CubeSat developments can go from space debris removal to commercial telecom services.
+													</p>
+
+													<p>
+														In the coming years, they will also be embedded in exploration missions to the Moon and Mars
+													</p>
+
+													<p>
+														The cheaper costs of their production and launch are provoking more and more interest in CubeSats within the space industry.
+													</p>
+
+													<p>
+														Their capacity not only as exploration tools, but also as tools of inspiration, is extremely valuable.
+													</p>
+
+													<p>
+														“The younger generation now growing up, they will be the ones to figure out what to do with this technology in the best way,” predicted Walker. “And we will probably see things, which we never saw or even thought of before.”
+													</p>
+
+													<p>
+														Student Tashi Dolma Gyeltshen was excited at the prospect of the launch.<br>
+														“I just can’t wait for it to happen, for our CubeSat to be launched. It will be a great achievement for every one of us,” she said.
+													</p>
+
+													<p>
+														While Vihmand added:<br>
+														“We are making more people capable of doing things for space and also preparing them for the bigger missions.”
+													</p>
+
+													<p>
+														Marta Hang has big hopes for the project.<br>
+														“I also hope that our university will build a bigger satellite and, why not bring one of our students to the moon one day. Why not?”
+													</p>
+
+												</div>
+
+												<h3>Introuducing… Destination Mars</h3>
+												<div class="level3">
+
+													<p>
+														This year on Space we’ll be following a mission called ExoMars. It’s the first to look for direct signs of life on the red planet.
+													</p>
+
+													<p>
+														The first of two spacecraft launches in just a few weeks’ time, and we have exclusive access to the team behind the project.
+													</p>
+
+												</div>
+
+												<h3>This is Destination Mars</h3>
+												<div class="level3">
+
+													<p>
+														Jorge Vago, one of the Exomars Project Scientists at the European Space Agency (ESA), outlined the mission.
+													</p>
+
+													<p>
+														“Mars is a cold, frigid desert, with a very thin atmosphere, that gets bathed in cosmic radiation and intense UV light. It is not a place (where) you want to be.
+													</p>
+
+													<p>
+														“In March, a Russian Proton rocket is going to send our first spacecraft to Mars. We want to solve the mystery of methane on Mars. And a second mission, which will go a few years from now, has a rover and an instrumented surface platform, as well.
+													</p>
+
+													<p>
+														“We really are going for traces of life with the Exomars programme. Once the rover is on Mars, it will encounter fine dust, very challenging for locomotion, and rocks. So, dust, fine dust is not our friend in this mission.
+													</p>
+
+													<p>
+														“It is technically hard, it is scientifically very ambitious and also programmatically it is not often that two agencies get together to do missions on another planet.”
+													</p>
+
+													<p>
+														Autor: Claudio Rosmino.
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:uudis2" class="ajax-load">pr:et:portal:news:2016:uudis2</a>
+												<p>
+												</p><h2>Professor Andreksoni optilise kommunikatsiooni uurimistöö sai 5,4 miljoni eurose rahastuse</h2>
+												<div class="level2">
+
+													<p>
+														Rootsi teadusuuringute nõukogu rahastab Chalmersi Tehnikaülikooli ning TTÜ telekommunikatsiooni professori Peter Andreksoni teadusuuringuid 5,4 miljoni euro (50 miljoni Rootsi krooni) ulatuses.
+													</p>
+
+													<p>
+														Andreksoni uurimistöö teemaks on eriti tundlikud optilised müravabad võimendid ja nende rakendused.
+													</p>
+
+													<p>
+														Telekommunikatsiooni professori Andreksoni erialaks on fotoonika ning ta uurib, millised on optilise kommunikatsiooni nii füüsilised kui ka muud piirid. Tema eesmärgiks on välja selgitada, kuidas neid süsteeme paremini tööle panna, et muuta tõhusamaks ning töökindlamaks fiiberoptikat, mis võimaldab tele, raadio-, mobiili- ning internetisidet.
+													</p>
+
+													<p>
+														Andreksoni nimel on mitmed jõudluse  maailmarekordid  fiiberoptilise edastamisega. Andrekson on koos oma uurimisgrupiga välja arendanud optilise võimendi, mille töötamisel eritub erakordselt vähe müra, mis tähendab, et valgus jõuab fiiberoptilises kaablis neli korda kaugemale.
+													</p>
+
+													<p>
+														Andrekson on sündinud 31. mail 1960 aastal ning ta kaitses oma doktorikraadi pooljuhtlaserite alal. Ta oli järeldoktorantuuris AT&amp;T Bell Lab’is, külalisuurija USAs ja Jaapanis ning seejärel valiti ta Chalmersi ülikooli professoriks. TTÜ professor telekommunikatsiooni alal on Peter Andrekson alates 2014. aasta kevadest. Ta on lisaks teadustööle töötanud ka väiksemates eraettevõtetes ning idufirmades USAs ja Rootsis.
+													</p>
+
+													<p>
+														Peter Andrekson on Rootsi Kuningliku Inseneriteaduste Akadeemia liige ning teadur nii mõjukas rahvusvahelises inseneriorganisatsioonis IEEE (Institute of Electrical and Electronics Engineers) kui ka  Ameerika Optikaseltsis (Optical Society of America) ning talle on antud Euroopa Teadusnõukogu uurimisgrant. Ta on Wallenbergi Fondi teadur ning alates 2014. aastast juhib ta suurt KAW uurimisprogrammi energiatõhususest optilises kommunikatsioonis.
+													</p>
+
+													<p>
+														Lisainfo:<br>
+														Professor, akadeemik Peter Andrekson, tel 5558 7388, <a href="mailto:peter.andrekson@ttu.ee" class="mail" title="peter.andrekson@ttu.ee">peter.andrekson@ttu.ee</a>
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+										<div class="masonry-item">
+											<div class="well">
+												<a href="/wiki/show/pr:et:portal:news:2016:vabariigi-aastapaeva-pidulik-koosolek" class="ajax-load">pr:et:portal:news:2016:vabariigi-aastapaeva-pidulik-koosolek</a>
+												<p>
+												</p><h1>Vabariigi aastapäeva pidulik koosolek toimub 22. veebruaril kell 14.00</h1>
+												<div class="level1">
+
+													<p>
+														Eesti Vabariigi 98. aastapäeva pidulik koosolek toimub esmaspäeval, <b>22. veebruaril kell 14.00</b> TTÜ peamaja aulas (Ehitajate tee 5).
+													</p>
+
+													<p>
+														Kavas:
+													</p>
+													<ul>
+														<li class="level1"><div class="li"> aastapäevakõne „Eesti maapõue ressursid ootavad ratsionaalset lähenemist“ − professor Alvar Soesoo;</div>
+														</li>
+														<li class="level1"><div class="li"> 2015. aasta teadlase, noorteadlase, teadusartiklite autorite ja õppejõudude autasustamine;</div>
+														</li>
+														<li class="level1"><div class="li"> 2015. aasta tudengi-, kultuuri- ja sporditeo laureaatide autasustamine;</div>
+														</li>
+														<li class="level1"><div class="li"> 2015. aasta tudengi väljakuulutamine.</div>
+														</li>
+													</ul>
+
+													<p>
+														Esinevad TTÜ Kammerkoor ja magistrant Artjom Savitski.
+													</p>
+
+													<p>
+														Kõik on oodatud!
+													</p>
+
+													<p>
+														<b>Lisainfo</b>:<br>
+														Tormis Laanisto 620 3507
+													</p>
+
+												</div>
+												<p></p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								</div></div>
+							<!--_________ SPECIAL MESSAGE END _______-->
+
+						</div>
+						<!--MIDDLE COLUMN END
+-------------------------------------------------------->
+						<!--RIGHT COLUMN BEGIN
+-------------------------------------------------------->
+						<div class="col-lg-3">
+							<!--MY PAGES BEGIN
+-------------------------------------------------------->
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5><i class="fa fa-bookmark"></i> Minu leheküljed</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="panel-body">
+										<div class="panel-group" id="accordion">
+											<div class="panel panel-default">
+												<div data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  aria-expanded="true" class="panel-heading">
+													<h4 class="panel-title">
+														Minu viited <i class="fa fa-angle-down"></i>
+													</h4>
+												</div>
+												<div id="collapseThree" class="panel-collapse collapse in" aria-expanded="true">
+													<div class="panel-body">
+														<div class="m-b-sm b-b"><a href="#">Tallinna linnavolikogu kiitis heaks maksukärped</a></div>
+														<div class="m-b-sm b-b"><a href="#">TTÜ võõrustab põhjaveeuurijaid kõikidelt kontinentidelt</a></div>
+														<div class="m-b-sm b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+														<div class="m-b-sm "><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-default">
+												<div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" class="panel-heading closed">
+													<h4 class="panel-title">
+														Viimased <i class="fa fa-angle-down"></i>
+													</h4>
+												</div>
+												<div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+													<div class="panel-body">
+														<div class="m-b-xs b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+														<div class="m-b-xs"><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--MY PAGES END
+-------------------------------------------------------->
+							<!--_________ BIRTHDAYS BEGIN __________-->
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5><i class="fa fa-birthday-cake"></i> Tänased sünnipäevad</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<div class="m-b-xs"><i class="fa fa-user"></i> Priit Tamm</div>
+									<div><i class="fa fa-user"></i> Sander Marandi</div>
+								</div>
+							</div>
+							<!--_________ BIRTHDAYS END ________-->
+							<!--_PICTURES AND VIDEOS BEGIN ______-->
+							<div class="ibox float-e-margins">
+								<div class="ibox-title">
+									<h5><i class="fa fa-play-circle"></i> Pildid ja  videod</h5>
+									<div class="ibox-tools">
+										<a class="collapse-link">
+											<i class="fa fa-chevron-up"></i>
+										</a>
+									</div>
+								</div>
+								<div class="ibox-content">
+									<figure>
+										<iframe width="100%" height="349" src="https://www.youtube.com/embed/rRAB047iefY" frameborder="0" allowfullscreen></iframe>
+									</figure>
+
+								</div>
+							</div>
+							<!--_________ PICTURES AND VIDEOS END ________-->
+						</div>
+						<!--RIGHT COLUMN END
+-------------------------------------------------------->
+					</div>
+				</div>
+
+				<!--PAGE END
+--------------------------------------------------------------->
+
+				<!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+				<button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+				<!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+				<a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+			</div>
+			<!-- end content ---------------------------------------->
+
+		</div>
+		<!-- end wrapper ------------------------------------------>
+
+
+		<!--FOOTER
+--------------------------------------------------------------->
+		<div class="footer">
+			<div>
+				TTÜ Siseportaal &copy; 2014 - 2015
+			</div>
+		</div>
+
+		<!--MODAL CONTENT
+--------------------------------------------------------------->
+
+		<!--MODAL CONTENT END
+--------------------------------------------------------------->
+
+		<!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+		<div id="c-mask" class="c-mask"></div>
+
+
+		<!-- LOADING ANIMATION
+--------------------------------------------------------------->
+		<div id="loading-mask" class="c-mask"></div>
+
+		<div class="loading-animation hidden">
+			<div id="loader-wrapper">
+				<div id="loader"></div>
+			</div>
+		</div>
+
+
+		<!--SCRIPTS
+--------------------------------------------------------------->
+		<!-- Base scripts -->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Plugin scripts -->
+		<script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+		<script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+		<script src="js/plugins/pace/pace.min.js"></script>
+		<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+
+		<!-- My custom scripts -->
+		<script src="js/main.js"></script>
+		<script src="js/main_ui.js"></script>
+		<script src="js/widget_ui.js"></script>
+
+		<script>
+
+			showLoadingAnimation(0);
+
+		</script>
+
+	</body>
+
+</html>

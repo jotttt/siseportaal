@@ -1,0 +1,185 @@
+<div>
+    <form method="POST" class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="title">Title</label>
+                <div class="col-md-4">
+                    <input id="title" name="title" class="form-control input-md typeahead" type="text" value="Üliõpilased teaduskondade kaupa"><br>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="title">Subtitle</label>
+                <div class="col-md-4">
+                    <input id="subtitle" name="subtitle" class="form-control input-md typeahead" type="text" value="Alampealkiri"><br>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="type">Type</label>
+                <div class="col-md-4">
+                    <select id="type" name="type" class="form-control">
+                        <option value="bar">Bar</option>
+                        <option value="column">Column</option>
+                        <option value="pie">Pie</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-4">
+                    <input type="submit" id="submit" class="btn btn-primary pull-left" name="submit" value="Ok">
+                </div>
+            </div>
+
+
+        </fieldset>
+        <input type="hidden" id="department2" name="department2" value="">
+    </form>
+</div>
+
+<div id="assistant" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+<script>
+    document.onreadystatechange = function () {
+        $.getScript('/lemon/plugins/scorecard/bar/bar_theme.js', function () {
+
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                var title = $('#title').val();
+                var subtitle = $('#subtitle').val();
+                var type = $('#type').val();
+                drawChart(title, subtitle, type);
+            });
+        });
+    };
+
+    function drawChart(title, subtitle, type) {
+        var dataLabelsRotation = -90;
+        var dataLabelsX = 0;
+        var dataLabelsY = 0;
+        switch (type) {
+            case 'bar':
+                dataLabelsRotation = 0;
+                dataLabelsX = 0;
+                dataLabelsY = 0;
+                break;
+            case 'column':
+                dataLabelsRotation = -90;
+                dataLabelsX = 0;
+                dataLabelsY = 0;
+                break;
+        }
+        chart = new Highcharts.Chart(Highcharts.merge({
+            chart: {
+                renderTo: 'assistant',
+                type: type, // bar - horizontal, column - vertical
+                width: 480,
+                height: 500
+            },
+            exporting: {
+                chartOptions: {// specific options for the exported image
+                    plotOptions: {
+                        series: {
+                            dataLabels: {
+                                enabled: true
+                            }
+                        }
+                    }
+                },
+                scale: 3,
+                fallbackToExportServer: false
+            },
+            title: {
+                text: title
+            },
+            subtitle: {
+                text: subtitle
+            },
+//            tooltip: {
+//                pointFormat: "Üliõpilasi: {point.y}"
+//            },
+            xAxis: {
+                categories: ["Energeetikateaduskond","Ehitusteaduskond","TTu00dc Eesti Mereakadeemia","Virumaa Kolledu017e","Tartu Kolledu017e","Tallinna Kolledu017e","Kuressaare Kolledu017e","Sotsiaalteaduskond","Mehhaanikateaduskond","Matemaatika- ja loodusteaduskond","Majandusteaduskond","Keemia- ja materjalitehnoloogia teaduskond","Infotehnoloogia teaduskond"],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Üliõpilasi',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: true,
+                        rotation: -90,
+                        color: '#FFFFFF',
+                        align: 'right',
+                        //format: '{point.y:.1f}', // one decimal
+                        y: 10, // 10 pixels down from the top
+                        style: {
+                            fontSize: '11px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                bar: {
+                    dataLabels: {
+                        enabled: true,
+                        rotation: 0,
+                        color: '#FFFFFF',
+                        align: 'right',
+                        verticalAlign: 'bottom',
+                        //format: '{point.y:.1f}', // one decimal
+                        //y: 10, // 10 pixels down from the top
+                        style: {
+                            fontSize: '11px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                    series: {
+        pointPadding: 0, // Defaults to 0.1
+        groupPadding: 0.02 // Defaults to 0.2
+    }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 80,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: true
+            },
+            series: [
+                {"name":2009,"data":[855,1459,0,658,395,1072,206,1678,1138,816,2811,679,2567]},
+                {"name":2010,"data":[781,1462,0,568,371,984,176,1479,1086,749,2915,627,2290]},
+                {"name":2011,"data":[809,1407,0,541,371,966,191,1571,1096,796,2766,660,2338]},
+                {"name":2012,"data":[827,1401,0,614,386,975,193,1602,1083,796,2675,659,2495]},
+                {"name":2013,"data":[766,1400,0,553,348,862,210,1510,1028,762,2518,636,2386]},
+                {"name":2014,"data":[679,1345,625,747,313,544,202,1423,1027,674,2310,574,2400]}]
+//            series: [{
+//                    name: '2009',
+//                    data: [855, 1400, 809],
+//                }, {
+//                    name: '2010',
+//                    data: [781, 1300, 908]
+//                }, {
+//                    name: '2011',
+//                    data: [809, 1500, 1010]
+//                }]
+
+        }, bar_theme));
+    }
+</script>

@@ -1,0 +1,106 @@
+{{#if renderForm}}
+
+<form method="POST"  action="/{{focus}}" class="form-horizontal" id="budgetForm" data-div="results">
+	<fieldset>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-lg-4 control-label" for="department">{{t.txt_department}}</label>
+					<div class="col-lg-4">
+						<select id="department" name="department" class="chosen-select" data-placeholder="otsi...">
+							{{#each data.departments}}
+							<option value="{{this.ouCode}}" {{#if this.selected}}selected{{/if}}>{{this.ouCode}} {{this.ouName}}</option>
+							{{/each}}
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Select Basic -->
+				<div class="form-group">
+					<label class="col-lg-4 control-label" for="budget">{{t.txt_budet_period_name}}</label>
+					<div class="col-lg-4">
+						<select id="budget" name="budget" class="form-control">
+							{{#each data.budgets}}
+							<option value="{{this.Name}}"{{#if this.selected}} selected{{/if}} data-year="{{this.year}}">{{this.Description}}</option>
+							{{/each}}
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-lg-4 control-label" for="object">{{t.txt_object}}</label>
+					<div class="col-lg-4" id="objectSelectDiv">
+						<select id="object" name="object" class="form-control" disabled>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label class="col-lg-4 control-label" for="startDate">{{t.txt_period_start}}</label>
+<div class="col-lg-4">
+<input id="endDate" name="endDate" type="text" class="datepicker form-control" style="width: 200px"  value="{{data.post.endDate}}" readonly>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label class="col-lg-4 control-label" for="endDate">{{t.txt_period_end}}</label>
+<div class="col-lg-4">
+<input id="endDate" name="endDate" type="text" class="datepicker form-control" style="width: 200px"  value="{{data.post.endDate}}" readonly>
+</div>
+</div>
+</div>
+</div> -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-lg-4 control-label">{{t.txt_date_range}}</label>
+					<div class="col-lg-4">
+						<div class="input-daterange input-group" id="datepicker">
+							<input id="startDate" name="startDate" type="text" class="datepicker form-control"  value="{{data.post.startDate}}" readonly>
+							<span class="input-group-addon">{{t.txt_to}}</span>
+							<input id="endDate" name="endDate" type="text" class="datepicker form-control" value="{{data.post.endDate}}" readonly>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-lg-4"></div>
+					<div class="col-lg-4">
+						<input type="submit" class="btn btn-primary pull-left" name="submit" value="{{t.txt_show}}">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</fieldset>
+	<input type="hidden" id="department2" name="department2" value="">
+</form>
+
+</div>
+
+{{{jsVar}}}
+
+{{/if}}

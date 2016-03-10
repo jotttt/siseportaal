@@ -42,6 +42,18 @@
 								</select>
 							</div>
 						</div>
+						<div class="form-group">
+							<label>Äraoleku vorm</label>
+							<div class="input-group" style="width: 100%;">
+								<select class="form-control" name="type" data-placeholder="vali...">
+									<option value="Puhkus">Puhkus</option>
+									<option value="Lähetus">Lähtus</option>
+									<option value="Koolitus">Koolitus</option>
+									<option value="Muu">Muu</option>
+
+								</select>
+							</div>
+						</div>
 						<div id="data_5" class="form-group">
 							<label>Ajavahemik</label>
 							<div class="input-daterange input-group" id="datepicker">
@@ -66,11 +78,13 @@
 		<!-- Plugin script -->
 		<script src="js/plugins/chosen/chosen.jquery.min.js"></script>
 		<script src="js/plugins/datapicker/bootstrap-datepicker.min.js"></script>
-		<script src="js/plugins/jquery.gantt/jquery.fn.gantt.js"></script>
-
+		<script src="js/plugins/gantt/jquery.fn.gantt.js"></script>
+		<script src="js/plugins/bootstrap_dynamic_popover/bootstrap.popover.js"></script>
 		<!-- Custom scripts -->
 		<script>
 			$(function() {
+
+
 
 				$('#data_5 .input-daterange').datepicker({
 					format: "dd/mm/yyyy",
@@ -185,10 +199,17 @@
 					selector: ".bar",
 					title: "I'm a popover",
 					content: "And I'm the content of said popover.",
-					trigger: "hover"
+					trigger: "hover",
+					container: "body",
+					placement: " auto top",
+					mouseOffset: 20,
+					followMouse: true
 				});
 
-				prettyPrint();
+				//tooltip fix
+				//---------------------------------------------------------
+
+
 
 			});
 		</script>

@@ -1,0 +1,28 @@
+<table id="wiki_articles_table" class="table table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>{{t.txt_articles}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each wikiArticles}}
+
+        <tr class="row-links" data-link="{{this.id}}" data-type="{{this.type}}">
+            <td  class="filename ui-draggable ui-droppable">
+
+                <label>
+                    <div class="thumbnail" style="background-image:url(/lemon/plugins/cms/filebrowser/img/filetypes/text.svg); background-size: 32px;">
+                    </div>
+                </label>
+                <a href="" class="name">
+                    <span class="nametext">
+                        <span class="innernametext">
+                            {{this.name}}
+                        </span>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

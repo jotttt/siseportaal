@@ -1,0 +1,27 @@
+<span class="crumbDiv">
+
+    {{#each breadcrumb}}
+    {{#if this.first}}
+    <div data-dir="{{this.path}}" class="crumb svg ui-droppable">
+        <a href="/wiki/action/{{this.path}}">
+            <i class="fa fa-home fa-2x"></i>
+        </a>
+    </div>
+    {{else}}
+    <div style="color: #c9c9c9; margin-top: 13px" data-dir="{{this.path}}" class="fa fa-angle-right fa-2x pull-left {{#if this.last}}last{{/if}}">
+        <a style="font-family: 'Open Sans'; font-size: " href="/wiki/action/{{this.path}}">{{this.name}}</a>
+    </div>
+    {{/if}}
+    {{/each}}
+
+
+</span>
+{{#compare rootDir "!=" 1}}
+{{#compare acl ">=" 8}} {{! WIKI_AUTH_UPLOAD = 8); }}
+<span id="addBtn" class="actions creatable">
+    <a title="" href="#" class="btn btn-white new">
+       <i class="fa fa-plus"></i> Lisa faile
+    </a>
+</span>
+{{/compare}}
+{{/compare}}

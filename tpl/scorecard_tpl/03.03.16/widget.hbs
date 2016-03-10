@@ -1,0 +1,79 @@
+<div id="widget-test" class="diagramm"></div>
+
+<script>
+    $(function () {
+        $.getScript('/lemon/plugins/scorecard/bar/bar_theme.js', function () {
+
+            $.get('/query/' + portal_session + '/scorecard:json1', function (data) {
+                //data = json2array(data);
+                var dataSum = 0;
+                for (var i = 1; i < data.length; i++) {
+                    dataSum += data[i][1];
+                }
+
+                chart = new Highcharts.Chart(Highcharts.merge({
+                    chart: {
+                        renderTo: 'widget-test',
+                        type: 'column', // bar - horizontal, column - vertical
+                        width: 480,
+                        height: 500
+                    },
+                    title: {
+                        text: 'Üliõpilased'
+                    },
+                    subtitle: {
+                        text: '',
+                    },
+                    tooltip: {
+                        pointFormat: "Üliõpilasi: {point.y}"
+                    },
+                    xAxis: {
+                        type: "category",
+                        title: {
+                            text: null
+                        },
+                        labels: {
+                            rotation: -45,
+                            step: 1
+                        }
+                    },
+                    yAxis: {
+                        tickInterval: dataSum / 10,
+                        title: {
+                            text: '%'
+                        },
+                        labels: {
+                            formatter: function () {
+                                var pcnt = (this.value / dataSum) * 100;
+                                return Highcharts.numberFormat(pcnt, 0, ',');
+                            }
+                        }
+                    },
+                    plotOptions: {
+                        series: {
+                            dataLabels: {
+                                enabled: true,
+                                rotation: -90,
+                                verticalAlign: 'middle',
+                                align: 'left',
+                                x: 4,
+                                y: -5,
+                                formatter: function () {
+                                    var pcnt = (this.y / dataSum) * 100;
+                                    return Highcharts.numberFormat(pcnt, 0, ',') + '%';
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    series: {{{data}}}
+
+                }, bar_theme));
+
+            });
+        });
+    });
+
+</script>
