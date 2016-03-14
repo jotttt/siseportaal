@@ -8,6 +8,7 @@ var data =  {
 	source: [{
 		name: "Anna Kolossova",
 		values: [{
+			id: "ABC123",
 			from: "2016-01-17",
 			to: "2016-01-31",
 			type: "Puhkus"
@@ -15,13 +16,25 @@ var data =  {
 	},{
 		name: "Sander Marandi",
 		values: [{
+			id: "A123",
 			from: "2016-01-04",
-			to: "2016-02-15",
+			to: "2016-01-10",
 			type: "Puhkus"
+		},{
+			id: "B123",
+			from: "2016-01-12",
+			to: "2016-01-20",
+			type: "Lähetus"
+		},{
+			id: "C123",
+			from: "2016-01-22",
+			to: "2016-01-30",
+			type: "Koolitus"
 		}]
 	},{
 		name: "Villu Vooglaid",
 		values: [{
+			id: "GFD123",
 			from: "2016-01-25",
 			to: "2016-02-05",
 			type: "Lähetus"
@@ -29,6 +42,7 @@ var data =  {
 	},{
 		name: "Madis Jõhvik",
 		values: [{
+			id: "JHG123",
 			from: "2016-01-02",
 			to: "2016-01-25",
 			type: "Koolitus"
@@ -348,7 +362,7 @@ END DATA
 
 
 /**********************************************************
-TABLE VIEW LOGIC
+TABLE SCROLL AND SIZE LOGIC
 **********************************************************/
 $(document).ready(function(){
 	fnAdjustTable();
@@ -416,15 +430,19 @@ var fnScroll = function(){
 var leaveCalendarWidth = $(".wrapper-content").width()-210;
 var leaveCalendarHeight = $(document).height()-350;
 
-$(".tableFixedTop, .tableDataContainer, .tableData").css({
-	"width": leaveCalendarWidth  + "px"
+$(".tableFixedTop").css({
+	"width": $(".wrapper-content").width()-227  + "px"
+});
+
+$(".tableDataContainer").css({
+	"width": $(".wrapper-content").width()-210  + "px"
 });
 
 $("#firstcol, .tableDataContainer").css({
 	"height": leaveCalendarHeight  + "px"
 });
 /**********************************************************
-END TABLE VIEW LOGIC
+END TABLE SCROLL AND SIZE LOGIC
 **********************************************************/
 
 
@@ -434,13 +452,25 @@ FILL TABLE WITH YEAR DATA
 
 //year to display
 var year = 2016;
+var dataCellWidth = 25;
+var yearLength = yearLength(year);
 
-//find out if leap year
-function leapYear(year)
-{
-	return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+//find out nr of days in that year
+function yearLength(year) {
+	//find out if leap year
+	function leapYear(year)
+	{
+		return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+	}
+	var isLeapYear = leapYear(year);
+
+	if (isLeapYear === true) {
+		return 366;
+	}
+	else {
+		return 365;
+	}
 }
-var isLeapYear = leapYear(year);
 
 //find first weekday of the year
 var indexOfFirstDayOfYear = new Date(year,0,1).getDay();
@@ -461,43 +491,53 @@ var regularYearSeq = [monthA,monthD,monthA,monthB,monthA,monthB,monthA,monthA,mo
 
 var leapYearSeq = [monthA,monthC,monthA,monthB,monthA,monthB,monthA,monthA,monthB,monthA,monthB,monthA];
 
+//find width of table
+//--------------------------------
+function findTableWidth(yearSeq) {
+	var dataCells = 0;
+	var liningCorrectionPixel = 1;
+	for(var j = 0; j < 12; ++j) {
+		dataCells = dataCells + yearSeq[j].length;
+	}
+	return(dataCells * dataCellWidth + liningCorrectionPixel);
+}
+//---------------------------------
 
 //add year element width
 $(".tableYear, .tableData").css({
-	"width": 9151 + "px"
+	"width": findTableWidth(leapYearSeq) + "px"
 });
-
 
 //add year
 $(".tableYear .tableHeader").html(year);
 
-
 //add proper widths to month elements
-$("#month_1,#month_3,#month_5,#month_7,#month_8,#month_10,#month_12 ").css({
-	"width": 775 + "px"
-});
-$("#month_4,#month_6,#month_9,#month_11").css({
-	"width": 750 + "px"
-});
-$("#month_2").css({
-	"width": 700 + "px"
-});
-$("#month_2").css({
-	"width": 725 + "px"
-});
+function findMonthWidths(yearSeq) {
+	var monthsHTML ='<tr>';
+	for(var j = 0; j < 12; ++j) {
+		var monthCellWidth = dataCellWidth * yearSeq[j].length;
+		monthsHTML += '<td><div class="tableHeader" style="width: '+ monthCellWidth +'px"> ' + months[j] + '</div></td>';
+	}
+	monthsHTML += '</tr>';
+	$(".tableMonth").append(monthsHTML);
+}
+findMonthWidths(leapYearSeq);
+
 //----------------------------------
 
 //add days of month
 //----------------------------------
-var daysHTML ='<tr>';
-for(var j = 0; j < leapYearSeq.length; ++j) {
-	for(var i = 0; i < leapYearSeq[j].length; ++i) {
-		daysHTML += '<td><div class="tableHeader">' + leapYearSeq[j][i] + '</div></td>';
+function createDaysOfMonth(yearSeq) {
+	var daysHTML ='<tr>';
+	for(var j = 0; j < yearSeq.length; ++j) {
+		for(var i = 0; i < yearSeq[j].length; ++i) {
+			daysHTML += '<td><div class="tableHeader">' + yearSeq[j][i] + '</div></td>';
+		}
 	}
+	daysHTML +='</tr>';
+	$(".tableDay").append(daysHTML);
 }
-daysHTML +='</tr>';
-$(".tableDay").append(daysHTML);
-console.log($(".tableDay").width());
+createDaysOfMonth(leapYearSeq);
 //----------------------------------
 
 //add days of week
@@ -505,19 +545,38 @@ console.log($(".tableDay").width());
 function createDaysOfWeek() {
 	var weeksHTML ='<tr>';
 	var i = firstDayOfYear;
-	for(var j = 0; j < 53; ++j) {
+	var dayCounter = 0;
+	loop1:
+	for(var j = 0; j < yearLength/7; ++j) {
+		loop2:
 		for(i; i < 7; ++i) {
-			weeksHTML += '<td><div class="tableHeader">' + dow[i] + '</div></td>';
+			dayCounter += 1;
+			if(i === 5 || i === 6) {
+				weeksHTML += '<td><div class="tableHeader" style="background-color:#e5e6e7">' + dow[i] + '</div></td>';
+			}
+			else{
+				weeksHTML += '<td><div class="tableHeader">' + dow[i] + '</div></td>';
+			}
+			if (dayCounter === yearLength) {
+				break loop1;
+			}
 		}
 		if(i === 7) {
 			i = 0;
 		}
+
 	}
 	weeksHTML +='</tr>';
 	$(".tableWeekDay").append(weeksHTML);
+	console.log(dayCounter);
 }
 createDaysOfWeek();
 //----------------------------------
+
+//add weekend markers
+//----------------------------------
+
+//---------------------------------
 
 /**********************************************************
 END FILL TABLE WITH YEAR DATA
@@ -540,13 +599,6 @@ function createPersonList() {
 createPersonList();
 //----------------------------------
 
-//add weekend markers
-//----------------------------------
-$(".tableHeader:contains('L'),.tableHeader:contains('P')").css({
-	"background-color": "#e5e6e7"
-});
-//---------------------------------
-
 //add data cells
 //---------------------------------
 function createDataCells() {
@@ -563,7 +615,7 @@ function createDataCells() {
 	$(".tableData").append(dataCellsHTML);
 }
 createDataCells();
-//--------------------------------
+//---------------------------------
 
 //find the length of leave
 function parseDate(str) {
@@ -604,18 +656,17 @@ function createLeaveIndicators() {
 		var person = data.source[j].name;
 
 		for (var i = 0; i < data.source[j].values.length; i++) {
-
+			var id = data.source[j].values[i].id;
 			var from = data.source[j].values[i].from;
 			var to = data.source[j].values[i].to;
 			var numOfDays = daydiff(parseDate(from), parseDate(to));
 			var leaveType = data.source[j].values[i].type;
 			var pos = $('*[data-date="' + from + '"][data-name="' + person + '"]').position();
-			var cellSize = 25;
-			var barSize = numOfDays * cellSize - 8;
+			var barSize = numOfDays * dataCellWidth - 8;
 			var topLoc = pos.top + 3;
 			var leftLoc = pos.left + 4;
 
-			leaveBarsHTML +='<div style="top: '+ topLoc +'px;left: '+ leftLoc +'px;width: '+ barSize + 'px" class="leaveBar '+ barColorFinder(leaveType) + '"><div class="leaveBarText">'+ leaveType +'</div></div>';
+			leaveBarsHTML +='<div id="' + id + '" style="top: '+ topLoc +'px;left: '+ leftLoc +'px;width: '+ barSize + 'px" class="leaveBar '+ barColorFinder(leaveType) + '"><div class="leaveBarText">'+ leaveType +'</div></div>';
 
 			$(".leaveBars").append(leaveBarsHTML);
 		}
@@ -626,4 +677,18 @@ createLeaveIndicators();
 
 /**********************************************************
 END FILL TABLE WITH PERSON DATA
+**********************************************************/
+
+
+/**********************************************************
+DATA FUNCTIONS
+**********************************************************/
+
+//display leave id
+$(".leaveBar").click(function() {
+	console.log($(this).attr("id"));
+});
+
+/**********************************************************
+END LEAVE DATA FUNCTIONS
 **********************************************************/

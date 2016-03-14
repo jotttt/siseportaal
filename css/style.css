@@ -7250,14 +7250,14 @@ box-sizing: content-box !important;
 .tableFixedTop {
   overflow: hidden;
   width: 800px;
+  -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
+  -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
+  box-shadow: 20px 0px 0px 0px #e5e6e7;
 }
 .tableFixedTop .tableYear {
   width: 768px;
   border: 1px solid #c9c9c9;
   height: 25px;
-  -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  box-shadow: 20px 0px 0px 0px #e5e6e7;
 }
 .tableFixedTop .tableYear td .tableHeader {
   position: absolute;
@@ -7265,11 +7265,6 @@ box-sizing: content-box !important;
   height: 25px;
   width: 100px;
   border-right: 1px solid #c9c9c9;
-}
-.tableFixedTop .tableMonth {
-  -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  box-shadow: 20px 0px 0px 0px #e5e6e7;
 }
 .tableFixedTop .tableMonth td .tableHeader {
   width: 625px;
@@ -7279,18 +7274,10 @@ box-sizing: content-box !important;
 .tableFixedTop .tableMonth td:last-child {
   border-right: 1px solid #c9c9c9;
 }
-.tableFixedTop .tableDay {
-  -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  box-shadow: 20px 0px 0px 0px #e5e6e7;
-}
 .tableFixedTop .tableDay td {
   border: 1px solid #c9c9c9;
 }
 .tableFixedTop .tableWeekDay {
-  -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
-  box-shadow: 20px 0px 0px 0px #e5e6e7;
   overflow: hidden;
 }
 .tableFixedTop .tableWeekDay td {
