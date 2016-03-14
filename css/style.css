@@ -7260,7 +7260,7 @@ box-sizing: content-box !important;
   box-shadow: 20px 0px 0px 0px #e5e6e7;
 }
 .tableFixedTop .tableYear td .tableHeader {
-  position: fixed;
+  position: absolute;
   margin-top: -12px;
   height: 25px;
   width: 100px;
@@ -7291,6 +7291,7 @@ box-sizing: content-box !important;
   -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
   -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
   box-shadow: 20px 0px 0px 0px #e5e6e7;
+  overflow: hidden;
 }
 .tableFixedTop .tableWeekDay td {
   border: 1px solid #c9c9c9;
@@ -7335,6 +7336,7 @@ box-sizing: content-box !important;
   height: 19px;
   border-radius: 5px;
   z-index: 1;
+  cursor: pointer;
 }
 .leaveBar.green {
   background: #7aeda6;
@@ -7343,7 +7345,7 @@ box-sizing: content-box !important;
   background: #90d8ff;
 }
 .leaveBar.red {
-  background: #efa2a2;
+  background: #ffb9b9;
 }
 .leaveBarText {
   text-align: center;

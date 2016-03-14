@@ -1,85 +1,355 @@
 /*jshint browser: true, jquery: true*/
-var data = {
+
+/**********************************************************
+DATA
+**********************************************************/
+
+var data =  {
 	source: [{
 		name: "Anna Kolossova",
 		values: [{
 			from: "2016-01-17",
 			to: "2016-01-31",
-			type: "Puhkus",
-			customClass: "leaveRed"
+			type: "Puhkus"
 		}]
 	},{
 		name: "Sander Marandi",
 		values: [{
-			from: "2016-02-04",
+			from: "2016-01-04",
 			to: "2016-02-15",
-			type: "Puhkus",
-			customClass: "leaveRed"
+			type: "Puhkus"
 		}]
 	},{
 		name: "Villu Vooglaid",
 		values: [{
-			from: "2016-02-01",
+			from: "2016-01-25",
 			to: "2016-02-05",
-			type: "Lähetus",
-			customClass: "leaveBlue"
+			type: "Lähetus"
 		}]
 	},{
 		name: "Madis Jõhvik",
 		values: [{
-			from: "2016-04-17",
-			to: "2016-04-25",
-			type: "Lähetus",
-			customClass: "leaveBlue"
+			from: "2016-01-02",
+			to: "2016-01-25",
+			type: "Koolitus"
 		}]
 	},{
 		name: "Peeter Kuusik",
 		values: [{
 			from: "2016-01-17",
-			to: "2016-01-25",
-			type: "Lähetus",
-			customClass: "leaveBlue"
+			to: "2016-01-29",
+			type: "Lähetus"
 		}]
 	},{
 		name: "Mall Pärn",
 		values: [{
-			from: "2016-01-17",
+			from: "2016-01-14",
 			to: "2016-01-25",
-			type: "Puhkus",
-			customClass: "leaveRed"
+			type: "Puhkus"
 		}]
 	},{
 		name: "Signe Lepp",
 		values: [{
 			from: "2016-01-17",
-			to: "2016-01-25",
-			type: "Koolitus",
-			customClass: "leaveOrange"
+			to: "2016-01-28",
+			type: "Koolitus"
 		}]
 	},{
 		name: "Olavi Kesk",
 		values: [{
-			from: "2016-01-17",
-			to: "2016-01-25",
-			type: "Koolitus",
-			customClass: "leaveOrange"
+			from: "2016-01-11",
+			to: "2016-01-23",
+			type: "Koolitus"
 		}]
 	},{
 		name: "Pärtel Meerits",
 		values: [{
 			from: "2016-01-17",
 			to: "2016-01-25",
-			type: "Puhkus",
-			customClass: "leaveRed"
+			type: "Puhkus"
 		}, {
 			from: "2016-03-17",
 			to: "2016-04-15",
-			type: "Lähetus",
-			customClass: "leaveBlue"
+			type: "Lähetus"
+		}]
+	},{
+		name: "Anna Kolossovaas",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-31",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Sander Marandias",
+		values: [{
+			from: "2016-01-04",
+			to: "2016-02-15",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Villu Vooglaidas",
+		values: [{
+			from: "2016-01-25",
+			to: "2016-02-05",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Madis Jõhvikas",
+		values: [{
+			from: "2016-01-02",
+			to: "2016-01-25",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Peeter Kuusikas",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-29",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Mall Pärnas",
+		values: [{
+			from: "2016-01-14",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Signe Leppas",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-28",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Olavi Keskas",
+		values: [{
+			from: "2016-01-11",
+			to: "2016-01-23",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Pärtel Meeritsas",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}, {
+			from: "2016-03-17",
+			to: "2016-04-15",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Anna Kolossovalo",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-31",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Sander Marandilo",
+		values: [{
+			from: "2016-01-04",
+			to: "2016-02-15",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Villu Vooglaidlo",
+		values: [{
+			from: "2016-01-25",
+			to: "2016-02-05",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Madis Jõhviklo",
+		values: [{
+			from: "2016-01-02",
+			to: "2016-01-25",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Peeter Kuusiklo",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-29",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Mall Pärnlo",
+		values: [{
+			from: "2016-01-14",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Signe Lepplo",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-28",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Olavi Kesklo",
+		values: [{
+			from: "2016-01-11",
+			to: "2016-01-23",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Pärtel Meeritslo",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}, {
+			from: "2016-03-17",
+			to: "2016-04-15",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Anna Kolossovas",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-31",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Sander Marandis",
+		values: [{
+			from: "2016-01-04",
+			to: "2016-02-15",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Villu Vooglaids",
+		values: [{
+			from: "2016-01-25",
+			to: "2016-02-05",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Madis Jõhviks",
+		values: [{
+			from: "2016-01-02",
+			to: "2016-01-25",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Peeter Kuusiks",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-29",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Mall Pärns",
+		values: [{
+			from: "2016-01-14",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Signe Lepps",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-28",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Olavi Kesks",
+		values: [{
+			from: "2016-01-11",
+			to: "2016-01-23",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Pärtel Meeritsis",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}, {
+			from: "2016-03-17",
+			to: "2016-04-15",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Anna Kolossovale",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-31",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Sander Marandile",
+		values: [{
+			from: "2016-01-04",
+			to: "2016-02-15",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Villu Vooglaide",
+		values: [{
+			from: "2016-01-25",
+			to: "2016-02-05",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Madis Jõhvike",
+		values: [{
+			from: "2016-01-02",
+			to: "2016-01-25",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Peeter Kuusike",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-29",
+			type: "Lähetus"
+		}]
+	},{
+		name: "Mall Pärne",
+		values: [{
+			from: "2016-01-14",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}]
+	},{
+		name: "Signe Leppe",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-28",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Olavi Keske",
+		values: [{
+			from: "2016-01-11",
+			to: "2016-01-23",
+			type: "Koolitus"
+		}]
+	},{
+		name: "Pärtel Meeritse",
+		values: [{
+			from: "2016-01-17",
+			to: "2016-01-25",
+			type: "Puhkus"
+		}, {
+			from: "2016-03-17",
+			to: "2016-04-15",
+			type: "Lähetus"
 		}]
 	}]
 };
+/**********************************************************
+END DATA
+**********************************************************/
 
+
+/**********************************************************
+TABLE VIEW LOGIC
+**********************************************************/
 $(document).ready(function(){
 	fnAdjustTable();
 });
@@ -142,17 +412,25 @@ var fnScroll = function(){
 	$('#firstcol').scrollTop($('#table_div').scrollTop());
 };
 
-//determine length of year
-$(".tableYear").css({
-	"width": 1500 + "px"
-});
-
 //determine table size
-var viewPortWidth = $(document).width();
+var leaveCalendarWidth = $(".wrapper-content").width()-210;
+var leaveCalendarHeight = $(document).height()-350;
 
 $(".tableFixedTop, .tableDataContainer, .tableData").css({
-	"width": 825 + "px"
+	"width": leaveCalendarWidth  + "px"
 });
+
+$("#firstcol, .tableDataContainer").css({
+	"height": leaveCalendarHeight  + "px"
+});
+/**********************************************************
+END TABLE VIEW LOGIC
+**********************************************************/
+
+
+/**********************************************************
+FILL TABLE WITH YEAR DATA
+**********************************************************/
 
 //year to display
 var year = 2016;
@@ -169,7 +447,7 @@ var indexOfFirstDayOfYear = new Date(year,0,1).getDay();
 var months =	["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"];
 var dow = ["E", "T", "K", "N", "R", "L", "P"];
 var firstDayOfYear = indexOfFirstDayOfYear-1;
-//---------------------------------------------------------
+//----------------------------------
 
 var monthA = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 
@@ -182,37 +460,6 @@ var monthD = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,
 var regularYearSeq = [monthA,monthD,monthA,monthB,monthA,monthB,monthA,monthA,monthB,monthA,monthB,monthA];
 
 var leapYearSeq = [monthA,monthC,monthA,monthB,monthA,monthB,monthA,monthA,monthB,monthA,monthB,monthA];
-
-
-for(var j = 0; j < 12; ++j) {
-
-	switch(leapYearSeq[j].length) {
-		case 31:
-			$(".tableMonth td .tableHeader").eq(j).css({
-				"width": 775 + "px"
-			});
-			break;
-
-		case 30:
-			$(".tableMonth td .tableHeader").eq(j).css({
-				"width": 750 + "px"
-			});
-			break;
-
-		case 29:
-			$(".tableMonth td .tableHeader").eq(j).css({
-				"width": 725 + "px"
-			});
-			break;
-
-		case 28:
-			$(".tableMonth td .tableHeader").eq(j).css({
-				"width": 700 + "px"
-			});
-			break;
-
-	}
-}
 
 
 //add year element width
@@ -238,10 +485,10 @@ $("#month_2").css({
 $("#month_2").css({
 	"width": 725 + "px"
 });
-//---------------------------------------------------------
+//----------------------------------
 
 //add days of month
-//---------------------------------------------------------
+//----------------------------------
 var daysHTML ='<tr>';
 for(var j = 0; j < leapYearSeq.length; ++j) {
 	for(var i = 0; i < leapYearSeq[j].length; ++i) {
@@ -250,110 +497,133 @@ for(var j = 0; j < leapYearSeq.length; ++j) {
 }
 daysHTML +='</tr>';
 $(".tableDay").append(daysHTML);
-//---------------------------------------------------------
+console.log($(".tableDay").width());
+//----------------------------------
 
 //add days of week
-//---------------------------------------------------------
-var weeksHTML ='<tr>';
-var i = firstDayOfYear;
-for(var j = 0; j < 53; ++j) {
-	for(i; i < 7; ++i) {
-		weeksHTML += '<td><div class="tableHeader">' + dow[i] + '</div></td>';
+//----------------------------------
+function createDaysOfWeek() {
+	var weeksHTML ='<tr>';
+	var i = firstDayOfYear;
+	for(var j = 0; j < 53; ++j) {
+		for(i; i < 7; ++i) {
+			weeksHTML += '<td><div class="tableHeader">' + dow[i] + '</div></td>';
+		}
+		if(i === 7) {
+			i = 0;
+		}
 	}
-	if(i === 7) {
-		i = 0;
-	}
+	weeksHTML +='</tr>';
+	$(".tableWeekDay").append(weeksHTML);
 }
-weeksHTML +='</tr>';
-$(".tableWeekDay").append(weeksHTML);
-//---------------------------------------------------------
+createDaysOfWeek();
+//----------------------------------
+
+/**********************************************************
+END FILL TABLE WITH YEAR DATA
+**********************************************************/
+
+
+/**********************************************************
+FILL TABLE WITH PERSON DATA
+**********************************************************/
 
 //add persons
-//---------------------------------------------------------
-var personsHTML ='';
-for (var i = 0; i < data.source.length; ++i) {
-	personsHTML += '<tr><td><div class="tableFirstCol">' + data.source[i].name + '</div></td></tr>';
+//----------------------------------
+function createPersonList() {
+	var personsHTML ='';
+	for (var i = 0; i < data.source.length; ++i) {
+		personsHTML += '<tr><td><div class="tableFirstCol">' + data.source[i].name + '</div></td></tr>';
+	}
+	$(".tableFixedLeft").append(personsHTML);
 }
-$(".tableFixedLeft").append(personsHTML);
-//---------------------------------------------------------
+createPersonList();
+//----------------------------------
 
 //add weekend markers
-//---------------------------------------------------------
+//----------------------------------
 $(".tableHeader:contains('L'),.tableHeader:contains('P')").css({
 	"background-color": "#e5e6e7"
 });
-//---------------------------------------------------------
+//---------------------------------
 
 //add data cells
-//---------------------------------------------------------
-var dataCellsHTML ='';
-for (var j = 0; j < data.source.length; j++) {
-	dataCellsHTML +='<tr >';
-	for(var k = 0; k < leapYearSeq.length; ++k) {
-		for(var i = 0; i < leapYearSeq[k].length; ++i) {
-			dataCellsHTML += '<td data-name="'+ data.source[j].name +'"data-date="'+ year +'-'+ ('0' + [k+1]).slice(-2) +'-'+  ('0' + leapYearSeq[k][i]).slice(-2) +'"></td>';
+//---------------------------------
+function createDataCells() {
+	var dataCellsHTML ='';
+	for (var j = 0; j < data.source.length; j++) {
+		dataCellsHTML +='<tr >';
+		for(var k = 0; k < leapYearSeq.length; ++k) {
+			for(var i = 0; i < leapYearSeq[k].length; ++i) {
+				dataCellsHTML += '<td data-name="'+ data.source[j].name +'"data-date="'+ year +'-'+ ('0' + [k+1]).slice(-2) +'-'+  ('0' + leapYearSeq[k][i]).slice(-2) +'"></td>';
+			}
 		}
+		dataCellsHTML +='</tr>';
 	}
-	dataCellsHTML +='</tr>';
+	$(".tableData").append(dataCellsHTML);
 }
-$(".tableData").append(dataCellsHTML);
-//---------------------------------------------------------
-
-
-
-//position leave bar
-/*var c = $('*[data-date="2016-01-10"][data-name="Sander Marandi"]').position();
-var cellSize = 25;
-var days = 25;
-$(".leaveBar").css({
-	"top":c.top + 4,
-	"left":c.left + 4,
-	"width": days * cellSize - 8 + "px"
-});*/
-//---------------------------------------------------------
+createDataCells();
+//--------------------------------
 
 //find the length of leave
 function parseDate(str) {
-	var mdy = str.split('-');
-	return new Date( mdy[0], mdy[1]-1, mdy[2]);
+	var dmy = str.split('-');
+	return new Date( dmy[0], dmy[1]-1, dmy[2]);
 }
 
 function daydiff(first, second) {
-	return Math.round((second-first)/(1000*60*60*24));
+	return Math.round((second-first)/(1000*60*60*24)+1);
 }
+//--------------------------------
 
-var leaveDays = daydiff(parseDate(data.source[1].values[0].from), parseDate(data.source[1].values[0].to));
-
-//---------------------------------------------------------
-
-
-//add leave indicator bars
-//---------------------------------------------------------
-var leaveBarsHTML ='';
-for (var j = 0; j < data.source.length; j++) {
-
-	var person = data.source[j].name;
-
-	for (var i = 0; i < data.source[j].values.length; i++) {
-
-		var from = data.source[j].values[i].from;
-		var to = data.source[j].values[i].to;
-		var numOfDays = daydiff(parseDate(from), parseDate(to));
-		var leaveType = data.source[j].values[i].type;
-		var pos = $('*[data-date="' + from + '"][data-name="' + person + '"]').position();
-		var cellSize = 25;
-		var barSize = numOfDays * cellSize - 8;
-		var topLoc = pos.top + 4;
-		var leftLoc = pos.left + 4;
-		/*$(".leaveBar").css({
-			"top":pos.top + 4,
-			"left":pos.left + 4,
-			"width": numOfDays * cellSize - 8 + "px"
-		});*/
-		leaveBarsHTML +='<div style="top: '+ topLoc +'px;left: '+ leftLoc +'px;width: '+ barSize + 'px" class="leaveBar green"><div class="leaveBarText">'+ leaveType +'</div></div>';
-
-		console.log(pos);
-		$(".leaveBars").append(leaveBarsHTML);
+//determine leave indicator bar color
+//--------------------------------
+function barColorFinder(leaveType) {
+	if (leaveType === "Puhkus") {
+		return "green";
+	}
+	if (leaveType === "Lähetus") {
+		return "blue";
+	}
+	if (leaveType === "Koolitus") {
+		return "red";
+	}
+	else {
+		return "default";
 	}
 }
-//---------------------------------------------------------
+//--------------------------------
+
+//add leave indicator bars
+//--------------------------------
+function createLeaveIndicators() {
+
+	for (var j = 0; j < data.source.length; j++) {
+
+		var leaveBarsHTML ='';
+		var person = data.source[j].name;
+
+		for (var i = 0; i < data.source[j].values.length; i++) {
+
+			var from = data.source[j].values[i].from;
+			var to = data.source[j].values[i].to;
+			var numOfDays = daydiff(parseDate(from), parseDate(to));
+			var leaveType = data.source[j].values[i].type;
+			var pos = $('*[data-date="' + from + '"][data-name="' + person + '"]').position();
+			var cellSize = 25;
+			var barSize = numOfDays * cellSize - 8;
+			var topLoc = pos.top + 3;
+			var leftLoc = pos.left + 4;
+
+			leaveBarsHTML +='<div style="top: '+ topLoc +'px;left: '+ leftLoc +'px;width: '+ barSize + 'px" class="leaveBar '+ barColorFinder(leaveType) + '"><div class="leaveBarText">'+ leaveType +'</div></div>';
+
+			$(".leaveBars").append(leaveBarsHTML);
+		}
+	}
+}
+createLeaveIndicators();
+//--------------------------------
+
+/**********************************************************
+END FILL TABLE WITH PERSON DATA
+**********************************************************/
