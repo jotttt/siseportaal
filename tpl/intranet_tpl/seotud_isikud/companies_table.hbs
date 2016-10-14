@@ -1,0 +1,40 @@
+<table  id="companiesTable" class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>Firma nimi</th>
+            <th>Reg. kood</th>
+
+
+            <th>Seotud isik</th>
+            <th>Isikukood</th>
+
+            <th>Seos minuga</th>
+            <th>Seos firmaga</th>
+            {{#unless statusIsDeclared}}
+            <th></th>
+            {{/unless}}
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each companies}}
+        <tr data-id="{{this.id}}">
+            <td>{{this.organization_name}}</td>
+            <td>{{this.organization_regno}}</td>
+
+            <td>{{this.displayname}}</td>
+            <td>{{this.personcode}}</td>
+            <td>{{this.relative_relation_with_me}}</td>
+            <td>{{this.relation_name}}</td>
+            {{#unless ../statusIsDeclared}}
+            <td>
+                <div class="text-center">
+                    <a href="#" class="btn btn-white fa fa-pencil-square-o btn_border editCompany"></a>
+                    <a href="#" class="btn btn-white msg_remove fa fa-trash-o btn_border deleteCompany"></a>
+                </div>
+            </td>
+            {{/unless}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

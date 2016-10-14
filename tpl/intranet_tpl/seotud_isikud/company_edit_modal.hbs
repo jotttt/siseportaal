@@ -1,0 +1,124 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title">Kirje muutmine</h4>
+</div>
+<div class="modal-body">
+    <div class="tab-pane fade active in" id="c">
+
+        <div class="row organization_div" data-id="">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Firma</label>
+                    <div class="input-group" style="width: 100%;">
+                        <input id="organization_name" type="text" class="form-control autofetch organization_name"  value="{{company.organization_name}}" data-api="search_organization" data-select_func="organization_select">
+                        <div class="autofetch_results"></div>
+                        <label style="display: none;" for="organization_name" class="error" id="organization_name-error">See väli on kohustuslik.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Registrikood</label>
+                    <div class="input-group" style="width: 100%;">
+                        <input id="organization_regno" type="text" class="form-control organization_regno" value="{{company.organization_regno}}">
+                        <label style="display: none;" for="organization_regno" class="error" id="organization_regno-error">Registrikood peab olema vähemalt 8 märki pikk.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Firmal on seos</label>
+                    <div class="input-group" style="width: 100%;">
+                        <select id="ownership" class="form-control">
+                            <option value="">Vali...</option>
+                            <option value="1" {{#compare company.ownership "==" 1}}selected{{/compare}}>minuga</option>
+                            <option value="2" {{#compare company.ownership "==" 2}}selected{{/compare}}>minu lähikondlasega</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row relative_owned">
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Lähikondlase nimi</label>
+                    <div class="input-group" style="width: 100%;">
+                        <input id="relative_name" type="text" class="form-control autofetch" value="{{company.displayname}}" data-api="search_people_autofetch" data-select_func="poeple_select">
+                        <div class="autofetch_results"></div>
+                        <label style="display: none;" for="relative_name" class="error" id="relative_name-error">See väli on kohustuslik.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Lähikondlase isikukood</label>
+                    <div class="input-group" style="width: 100%;">
+                        <input id="relative_person_code" name="relative_person_code" type="text" class="form-control" value="{{company.personcode}}">
+                        <label style="display: none;" for="relative_person_code" class="error" id="relative_person_code-error">Palun sisesta korrektne isikukood.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Lähikondlane on minu</label>
+                    <div class="input-group" style="width: 100%;">
+                        <select id="relative_relation_with_me" class="chosen-select form-control" data-placeholder="{{t.txt_search_dot_dot}}">
+                            {{#each relations_people}}
+                            <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Lähikondlane on firmas</label>
+                    <div class="input-group" style="width: 100%;">
+                        <select id="relative_relation_with_business" class="chosen-select form-control" data-placeholder="{{t.txt_search_dot_dot}}">
+                            {{#each relations_business}}
+                            <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my_owned">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Olen firmas</label>
+                    <div class="input-group" style="width: 100%;">
+                        <select id="my_relation_with_business" class="chosen-select form-control" data-placeholder="{{t.txt_search_dot_dot}}">
+                            {{#each relations_business}}
+                            <option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
+            <button type="button" id="saveBtn" class="btn btn-primary" {{#unless company.ownership}}disabled{{/unless}}>Salvesta</button>
+        </div>
+    </div>
+</div>

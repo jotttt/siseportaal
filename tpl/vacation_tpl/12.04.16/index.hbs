@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="nav nav-tabs alt">
+            <li class="active">
+                <a href="#a" data-toggle="tab">Tabel</a>
+            </li>
+            <li>
+                <a href="#b" data-toggle="tab">Graafik</a>
+            </li>
+            <li>
+                <a href="#c" data-toggle="tab">Minu puhkused</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="a">
+            {{> tableTab}}
+        </div>
+        <div class="tab-pane fade" id="b">
+            {{> ganttTab_Johann}}
+        </div>
+        <div class="tab-pane fade" id="c">
+            {{> myVacationsTab}}
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var t = JSON.parse('{{{js_translations}}}');
+</script>

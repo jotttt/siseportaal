@@ -1,0 +1,40 @@
+<!-- ISIKUTE OTSING -->
+<div class="tab-pane fade peopleSearchDiv" id="a">
+    <form method="POST" action="/circles" class="form-horizontal" id="budgetForm" data-div="results">
+        <fieldset>
+
+            <div class="row m-t">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 control-label" for="peopleSelect">Nimi</label>
+                        <div class="col-lg-4">
+                            <select name="peopleSelect" id="peopleSelect" class="chosen-select" multiple="multiple" data-placeholder="otsi...">
+                                <option value="all">kõik isikud</option>
+                                {{#each peopleList}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4">
+                            <button type="submit" id="peopleSearchBtn" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <div id="people_result" class="row m-t">
+    </div>
+
+</div>

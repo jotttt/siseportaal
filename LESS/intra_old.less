@@ -1,0 +1,364 @@
+// main: style.less
+
+/*.wiki-html-old {
+    margin: 0 auto;
+    //width: 844px;
+    //padding: 10px;
+    ul, ol, li, h1, h2, h3, h4, h5, h6, map, area, blockquote, a, span, p, form, fieldset {
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        outline-style: none;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #940143;
+        font-family: Arial, Verdana, sans-serif;
+    }
+    h2 {
+        font-size: 17px;
+        font-weight: normal;
+    }
+    h3 {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    a:link {
+        color: #4D0A1E;
+        text-decoration: none;
+    }
+    p {
+        margin: 1px 0px 14px 0px;
+    }
+    ul, ol {
+        margin: 7px 0px 7px 0px;
+        list-style-position: inside;
+        list-style-type: disc;
+    }
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    table {
+        margin: 7px 0px 7px 0px;
+    }
+    .box {
+        background-color: @bg-color;
+        margin: 0 0 15px;
+        padding: 10px;
+        ul {
+            padding-left: 10px;
+        }
+    }
+    .box-content {
+        color: #333;
+        font-size: 13px;
+        a {
+            text-decoration: underline;
+        }
+        h2.title {
+            font-family: Arial, Verdana, sans-serif;
+            color: #940143;
+            font-size: 24px;
+            margin-bottom: 25px;
+            span {
+                display: block;
+                color: #999;
+                font-size: 11px;
+                font-family: Arial, Helvetica, sans-serif;
+                a {
+                    color: #999;
+                    text-decoration: underline;
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    // THE LEFT SIDE OF THE PAGE, YES REALLY!
+    .column-right {
+        float: left;
+        overflow: hidden;
+        padding: 0 0 0;
+        width: 202px;
+        .box-rightmenu {
+            color: #666;
+            .title {
+                color: #761F39;
+                font-family: Arial, Verdana, sans-serif;
+                font-weight: bold;
+                margin: 0px 0px 5px 0px;
+            }
+            ul {
+                margin: 0px;
+                margin-bottom: 8px;
+                list-style: none;
+                font-size: 13px;
+                font-weight: bold;
+                li {
+                    padding: 2px 0px 2px 0px;
+                }
+            }
+            a:link, .box-rightmenu a:visited {
+                color: #666;
+                font-weight: normal;
+            }
+            img {
+                display: none;
+            }
+        }
+        .content {
+            padding: 0;
+            background-color: @bg-color;
+        }
+    }
+    // THE RIGHT SIDE OF THE PAGE, YES REALLY!
+    .column-left {
+        float: right;
+        padding: 0 20px 0 0;
+        width: 595px;
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+            list-style-type: disc;
+        }
+    }
+    #comments {
+        display: none;
+        margin-bottom: 25px;
+        margin-top: 40px;
+        h3 {
+            border-bottom-color: #CCC;
+            padding-bottom: 5px;
+            border-bottom: 1px solid;
+        }
+        .comment {
+            padding: 10px 20px 5px 10px;
+            border-bottom: 1px solid;
+            .info {
+                color: #942647;
+                font-size: 12px;
+                font-family: Arial, Verdana, sans-serif;
+                a {
+                    color: #942647;
+                }
+                span.date {
+                    color: #999;
+                    font-size: 10px;
+                    font-family: Arial, Verdana, sans-serif;
+                }
+            }
+            p {
+                margin: 5px 0px;
+            }
+        }
+        #add-comment {
+            padding: 10px 0 0 10px;
+            margin-bottom: 50px;
+            color: #060;
+            font-family: Arial, Verdana, sans-serif;
+            font-size: 11px;
+            a {
+                color: #060;
+                text-decoration: underline;
+            }
+        }
+    }
+    #new-comment {
+        display: none;
+        margin-bottom: 50px;
+        h3 {
+            padding-bottom: 5px;
+            border-bottom: 1px solid;
+            font-size: 13px;
+            border-bottom-color: #CCC;
+        }
+        table {
+            width: 100%;
+        }
+    }
+}
+
+///////////////////////////////////
+//NEW DESIGN
+//////////////////////////////////
+
+.wrap-template {
+    margin: 0 auto;
+    width: 844px;
+    padding: 10px;
+
+    a:link {
+        color: #4D0A1E;
+        text-decoration: none;
+    }
+    p {
+        margin: 1px 0px 14px 0px;
+    }
+    ul, ol {
+        margin: 7px 0px 7px 0px;
+        list-style-position: inside;
+        list-style-type: disc;
+    }
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    table {
+        margin: 7px 0px 7px 0px;
+    }
+    .box {
+        background-color: white;
+        border: @border;
+        margin: 0 0 15px;
+        padding: 20px;
+        ul {
+            padding-left: 10px;
+        }
+    }
+    .box-content {
+        color: #333;
+        a {
+            text-decoration: underline;
+        }
+        h2.title {
+            color: @cherry;
+            span {
+                display: block;
+                color: #999;
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+                a {
+                    color: #999;
+                    text-decoration: underline;
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .h-line {
+            margin-bottom: 15px;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+            text-align: left;
+            background-color: rgb(135, 0, 66);
+            font-weight: bold;
+        }
+    }
+    // THE LEFT SIDE OF THE PAGE, YES REALLY!
+    .column-right {
+        float: left;
+        overflow: hidden;
+        padding: 0 0 0;
+        width: 202px;
+        .box-rightmenu {
+            color: #666;
+            .title {
+                color: #761F39;
+                font-family: Arial, Verdana, sans-serif;
+                font-weight: bold;
+                margin: 0px 0px 5px 0px;
+            }
+            ul {
+                margin: 0px;
+                margin-bottom: 8px;
+                list-style: none;
+                font-size: 13px;
+                font-weight: bold;
+                li {
+                    padding: 2px 0px 2px 0px;
+                }
+            }
+            a:link, .box-rightmenu a:visited {
+                color: #666;
+                font-weight: normal;
+            }
+            img {
+                display: none;
+            }
+        }
+        .content {
+            padding: 0;
+            background-color: white;
+        }
+    }
+    // THE RIGHT SIDE OF THE PAGE, YES REALLY!
+    .column-left {
+        float: right;
+        padding: 0 20px 0 0;
+        width: 595px;
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+            list-style-type: disc;
+        }
+    }
+    #comments {
+        display: none;
+        margin-bottom: 25px;
+        margin-top: 40px;
+        h3 {
+            border-bottom-color: #CCC;
+            padding-bottom: 5px;
+            border-bottom: 1px solid;
+        }
+        .comment {
+            padding: 10px 20px 5px 10px;
+            border-bottom: 1px solid;
+            .info {
+                color: #942647;
+                font-size: 12px;
+                font-family: Arial, Verdana, sans-serif;
+                a {
+                    color: #942647;
+                }
+                span.date {
+                    color: #999;
+                    font-size: 10px;
+                    font-family: Arial, Verdana, sans-serif;
+                }
+            }
+            p {
+                margin: 5px 0px;
+            }
+        }
+        #add-comment {
+            padding: 10px 0 0 10px;
+            margin-bottom: 50px;
+            color: #060;
+            font-family: Arial, Verdana, sans-serif;
+            font-size: 11px;
+            a {
+                color: #060;
+                text-decoration: underline;
+            }
+        }
+    }
+    #new-comment {
+        display: none;
+        margin-bottom: 50px;
+        h3 {
+            padding-bottom: 5px;
+            border-bottom: 1px solid;
+            font-size: 13px;
+            border-bottom-color: #CCC;
+        }
+        table {
+            width: 100%;
+        }
+    }
+    .editor-btn {
+        background: white;
+        color: @cherry;
+        border: 1px solid @cherry;
+        border-radius: 5px;
+        padding: 1px 4px;
+        float: right;
+    }
+}
+
+///////////////////////////////////
+//NEW DESIGN 1.1
+//////////////////////////////////
+*/

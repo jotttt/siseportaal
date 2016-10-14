@@ -1,101 +1,418 @@
 // main: style.less
 
-#wikiDiv {
-	background-color: white;
-	border: 1px solid @lightest-grey;
-	border-radius: 5px;
-	padding: 40px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	min-height: 250px;
+/***********************************************************
+ARTICLE STYLES
+***********************************************************/
+
+//VAHELEHTEDE STIILID------------------------------------
+#innerWikiDiv {
+
+  margin: 0 auto;
+  padding: 10px 0;
+
+  img {
+    margin: 0 0 0 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:link {
+    color: @cherry;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: @cherry;
+    text-decoration: none;
+  }
+
+  a.wikilink2 {
+    color:#BCBCBC;
+  }
+
+  p {
+    margin: 8px 0px 14px 0px;
+  }
+  ul {
+    margin: 7px 0px 7px 0px;
+    padding-left: 0px;
+
+    li {
+        list-style-type: none;
+      background: url(../img/list-bullet.png) no-repeat 0 5px;
+      list-style-position: inside;
+      //text-indent: -15px;
+      padding-left: 14px;
+    }
+  }
+
+  ol  {
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      .li {
+        list-style: none;
+        display: inline;
+      }
+
+      p {
+        display: inline;
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 6px
+    }
+
+    li:before {
+      content: counters(item, ".")". ";
+      counter-increment: item
+    }
+
+    ol ol li:before {
+      content: counters(item, ".")". ";
+      counter-increment: item
+    }
+  }
+
+  table {
+    margin: 7px 0px 7px 0px;
+  }
+
+  h1 {
+    color: @cherry;
+  }
+
+  h2 {
+    color: @cherry;
+    font-weight: 100;
+    font-size: 26px;
+
+    span {
+      display: block;
+      color: #999;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      a {
+        color: #999;
+        text-decoration: underline;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h3 {
+    color: #870042;
+    font-weight: 100;
+    font-size: 22px;
+  }
+
+  h4 {
+    color: #870042;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  h5 {
+    color: #870042;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  input {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid;
+    border-radius: @btn-border-radius;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: @cherry;
+    border-color: @cherry;
+    color: #FFFFFF;
+  }
+  input:hover, input:focus {
+    background-color: darken(@cherry, 3%);
+    border-color: darken(@cherry, 3%);
+  }
+  @media(max-width: 768px) {
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+  }
+
+  //TERVIKTEKSTIDE STIILID---------------------------------
+  .wiki-doc {
+    background-color: white;
+    border: 1px solid @lightest-grey;
+    border-radius: 5px;
+    padding: 40px;
+    margin-bottom: 10px;
+    margin: 10px auto;
+    min-height: 250px;
+    //max-width: 840px;
+
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1em;
+      margin: 12px 0;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1em;
+      margin: 6px 0;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1em;
+      margin: 6px 0;
+      color: #333;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1em;
+      margin: 6px 0;
+      color: #333;
+    }
+
+    h5 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1em;
+      margin: 6px 0 0 0;
+      color: #333;
+    }
+
+    ul li {
+      //list-style-type: disc;
+    }
+
+    ol  {
+      counter-reset: item;
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+
+        .li {
+          list-style: none;
+          display: inline;
+        }
+
+        /*p {
+        display: inline;
+      }*/
+      }
+
+      li:last-child {
+        margin-bottom: 6px
+      }
+
+      li:before {
+        content: counters(item, ".")". ";
+        counter-increment: item
+      }
+
+      ol ol li:before {
+        content: counters(item, ".")". ";
+        counter-increment: item
+      }
+    }
+    // end numbered list --------------------------
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: @cherry;
+      text-decoration: underline;
+    }
+
+    a.wikilink2 {
+      color:#BCBCBC;
+    }
+
+    .urlextern {
+      color: #2B69C6;
+
+    }
+
+    .urlextern:hover, .urlextern:active, .urlextern:focus {
+      border-bottom: 1px solid #2B69C6;
+    }
+
+    .wrap_parser_error p {
+      color: @red;
+    }
+
+    //TABLES---------------------------------------------
+    table {
+      border: 1px solid @lightest-grey;
+    }
+
+    thead {
+
+    }
+
+    tbody {
+
+    }
+
+    tr {
+
+    }
+
+    tr:nth-of-type(odd){
+      background-color: #f9f9f9;
+    }
+
+    td {
+      border: 1px solid #e7e7e7;
+      line-height: 1.42857;
+      padding: 8px;
+      vertical-align: top;
+    }
+  }
 }
 
 #wikiTools {
-	float: right;
+  right: 0;
+  background: white;
+  border: 1px solid @lightest-grey;
+  border-right: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position:fixed;
+  top: 140px;
+  right: -10px;
+  height: 40px;
+  width: 60px;
+  z-index: 2;
 
-	ul {
+  .nav {
+    position: static;
+    margin-right: -15px;
 
+  }
 
-		li {
-			display: inline;
-		}
-	}
+  .dropdown-menu {
+    right: 40px;
+    top: 35px;
+  }
+
+  .wiki-edit-btn {
+    color: @lighter-grey;
+    background: #fff;
+    border: 1px solid @lightest-grey;
+    border-radius: 20px;
+    padding: 1px 5px;
+    margin: 7px 42px 0 0;
+    position: static;
+  }
+
+  .dropdown.open {
+    background: none;
+  }
+
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: none;
+    color: darken(@lighter-grey, 10%);
+  }
 }
-/***********************************************************
-WIKI ARTICLE STYLES
-***********************************************************/
 
-#innerWikiDiv {
+@media(max-width:1199px) {
+  #wikiTools {
+    right: -10px;
+  }
+}
 
-	h1 {
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 1em;
-		margin: 12px 0;
-	}
+@media(max-width: @mobile-width) {
+  #wikiTools {
+    width: 40px;
+    right: 0px;
+    top: 70px;
 
-	h2 {
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 1em;
-		margin: 6px 0;
-	}
-
-	li {
-		list-style-type: disc;
-	}
-
-	p {
-
-		.wikilink1 {
-
-		}
-
-		.wikilink2 {
-			color:#BCBCBC;
-		}
-
-	}
-
-	.urlextern {
-		color: #2B69C6;
-
-	}
-
-	.urlextern:hover, .urlextern:active, .urlextern:focus {
-		border-bottom: 1px solid #2B69C6;
-	}
-
-	.wrap_parser_error p {
-		color: @red;
-	}
-
-	//TABLES---------------------------------------------
-	table {
-		border: 1px solid @lightest-grey;
-	}
-
-	thead {
-
-	}
-
-	tbody {
-
-	}
-
-	tr {
-
-	}
-
-	tr:nth-of-type(odd){
-		background-color: #f9f9f9;
-	}
-
-	td {
-		border: 1px solid #e7e7e7;
-		line-height: 1.42857;
-		padding: 8px;
-		vertical-align: top;
-	}
+    .wiki-edit-btn {
+      padding: 1px 5px;
+    margin: 7px 21px 0 0;
+      top: 38px;
+      right: 20px
+    }
+  }
 
 }
+
+//TEMPLATES---------------------------------------------
+div.wiki-template-box {
+  border: 1px solid @lightest-grey;
+  padding: 20px;
+  margin: 0 10px 20px 10px ;
+  background: white;
+
+  h1, h2, h3 {
+    margin-top: 10px;
+  }
+
+}
+
+//CKEDITOR---------------------------------------------
+.cke_editable {
+  a {
+    color: #4D0A1E;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #4D0A1E;
+    text-decoration: none;
+  }
+}
+
+
+@media(max-width:@mobile-width) {
+  #innerWikiDiv {
+    .wiki-doc {padding: 40px 5px;
+    }
+  }
+}
+

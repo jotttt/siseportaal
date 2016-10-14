@@ -1,0 +1,34 @@
+{{#if data.resultsData}}
+<div class="row">
+    <table class='strong'>
+        <tr>
+            <td>{{t.txt_budget_period}}:</td>
+            <td>{{data.post.budget}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_period}}:</td>
+            <td>{{data.post.startDate}} - {{data.post.endDate}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_department}}:</td>
+            <td>{{data.post.department}} {{data.departmentName}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_object}}:</td>
+            <td>{{data.post.object}}</td>
+        </tr>
+    </table>
+</div>
+{{/if}}
+
+<div class="row">
+    <table>
+        {{#each resultsData}}
+        <tr>
+            <td align="left"><a href="#" class="drill2" data-account_no="{{this.G_L_Account_No_}}">{{{this.G_L_Account_No_}}}</a></td>
+            <td align="left">{{{this.Name}}}</td>
+            <td align="right">{{{this.Amount}}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

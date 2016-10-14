@@ -1,0 +1,257 @@
+<style>
+    .onoffswitch-sml { margin-top: 7px }
+    .onoffswitch-sml-inner:after { color: #870042; }
+    .yesno:before { content: "$txt_yes$" !important; }
+    .yesno:after { content: "$txt_no$" !important; }
+    .disabled_brd:before { background-color: #fff; color: #aaa; }
+    .disabled_brd:after { color: #aaa; }
+</style>
+<form method="post" id="$form_id$" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
+    <input type="hidden" name="mission_id" id="mission_id" value="$mission_id$">
+    <input type="hidden" name="method" id="method" value="save">
+    <input type="hidden" name="ou_code" id="ou_code" value="$ou_code$">
+
+    <div class="wrapper wrapper-content animated fadeIn" style="font-size: 1.1em">
+
+       <!--TÖÖLÄHETUSE ARUANNE-->
+        <h3 class="text-center m-b">$txt_report_title$</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular" >$txt_mission_nr$</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" value=" $dlx_id$" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_person_name$</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" value=" $person_name$" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_structure$</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" value=" $ou_name$" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_position$</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" value=" $position$" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_location$</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" value=" $country_name$, $city$" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular" >$txt_duration$<span>*</span></label>
+                    <div class="col-lg-4">
+                        <input type="text" name="date_from" id="mission_from" class="form-control datepicker in_short" value="$date_from$" placeholder="$txt_date_from$"$disabled_all$>
+                        <div>&nbsp;-&nbsp;</div>
+                        <input type="text" name="date_to" id="mission_to" class="form-control datepicker in_short" value="$date_to$" placeholder="$txt_date_to$"$disabled_all$>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular" >$txt_report$<span>*</span></label>
+                    <div class="col-lg-4">
+                        <textarea name="message" id="report" class="form-control m10" placeholder="$txt_report_summary$"$disabled_all$>$report$</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr-line-solid"></div>
+
+        <!--KULUARUANNE-->
+        <h3 class="text-center m-t-lg m-b">$txt_expenses$</h3>
+        <div class="text-center m-t-lg m-b">$txt_expense_expl$</div>
+
+        <div id="expenses" class="">
+               <div class="col-md-12">
+                    <div class="col-lg-2 col-sm-4">$txt_expense_type_title$</div>
+                    <div class="col-lg-1 col-sm-3">$txt_expense_sum$</div>
+                    <div class="col-lg-1 col-sm-3">$txt_expense_obj_title$</div>
+                    <div class="col-lg-2 col-sm-3">$txt_expense_invoice_title$</div>
+                    <div class="col-lg-2 col-sm-3">$txt_expense_comment_title$</div>
+                    <div class="col-lg-1 col-sm-3">$txt_expense_tp_code_title$</div>
+                    <div class="col-lg-1 col-sm-3">$txt_expense_km_title$</div>
+                    <div class="col-lg-1 col-sm-3">$txt_expense_em_title$</div>
+                    <div class="col-lg-1 col-sm-1">$txt_add_row$</div>
+                </div>
+            $fn_expenses$
+            <div class="row" id="expense_$count$" style="margin-bottom: 6px">
+                <div class="col-md-12">
+                    <div class="col-lg-2 col-sm-4">
+                        <select name="expense_type[]" id="expense_type_$count$" class="form-control"$disabled_all$>
+                            <option value="">$txt_expense_type$</option>
+                            $expense_type$
+                        </select>
+                    </div>
+
+                    <div class="col-lg-1 col-sm-3">
+                        <input type="text" name="expense_sum[]" id="expense_sum_$count$" class="form-control expense_sum in_short mr10" value="$expense_sum$" placeholder="$txt_expense_sum$" autocomplete="off"$disabled_all$ style="min-width: 65px">
+                    </div>
+
+                    <div class="col-lg-1 col-sm-3">
+                        <input type="text" name="expense_source[]" id="expense_obj_$count$" class="form-control finance_source expense_obj ae_complete in_short mr10" value="$expense_obj$" placeholder="$txt_expense_obj$" autocomplete="off"$disabled_all$ style="min-width: 80px">
+                    </div>
+
+                    <div class="col-lg-2 col-sm-3">
+                        <input type="text" name="expense_invoice[]" id="expense_invoice_$count$" class="form-control in_short mr10" value="$expense_invoice$" placeholder="$txt_expense_invoice$" autocomplete="off"$accountant_only$$disabled_all$>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-3">
+                        <input type="text" name="expense_comment[]" id="expense_comment_$count$" class="form-control in_short mr10" value="$expense_comment$" placeholder="$txt_expense_comment$" autocomplete="off"$accountant_only$$disabled_all$>
+                    </div>
+
+                    <div class="col-lg-1 col-sm-3">
+                        <input type="text" name="expense_tp_code[]" id="expense_tp_code_$count$" class="form-control in_short mr10" value="$expense_tp_code$" placeholder="$txt_expense_tp_code$" autocomplete="off"$accountant_only$$disabled_all$ style="min-width: 80px">
+                    </div>
+
+                    <div class="col-lg-1 col-sm-3">
+                        <input type="text" name="expense_km[]" id="expense_km_$count$" class="form-control expense_km ae_complete in_short mr10" value="$expense_km$" placeholder="$txt_expense_km$" autocomplete="off"$accountant_only$$disabled_all$ style="min-width: 80px">
+                    </div>
+
+                    <div class="col-lg-1 col-sm-3">
+                        <div class="onoffswitch-sml">
+                            <input type="checkbox" name="expense_em[$count$]" id="expense_em_$count$" class="onoffswitch-sml-checkbox" value="y"$expense_em$ $accountant_only$ $disabled_all$>
+                            <label class="onoffswitch-sml-label$disabled_brd$" for="expense_em_$count$">
+                                <span class="onoffswitch-sml-inner yesno$disabled_brd$"/>
+                                <span class="onoffswitch-sml-switch$disabled_brd$"/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1">
+                        $add_expense_btn$
+                    </div>
+                </div>
+            </div>
+            $fn_stop$
+        </div>
+        <div class="col-md-12 m-t">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <textarea type="text" name="comment" id="expense_comment" class="form-control" value="" placeholder="$txt_expense_summary$" autocomplete="off" rows=3 style="overflow-y: hidden;"$disabled_all$>$comment$</textarea>
+                <br/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label" >$txt_report_total$</label>
+                    <div class="col-lg-4">
+                        <input type="text" id="report_calc" class="form-control in_xshort" value="0" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr-line-solid"></div>
+
+       <!--MANUSTE LAADIMINE-->
+        <div class="row">
+            <div class="col-md-12 m-t-md">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_upload$</label>
+                    <div class="col-lg-4">
+                        <div class="uploaded-files" data-parent="$mission_id$"$mission_rm_files$></div>
+                        <div class="dropzone" data-parent="$mission_id$"$hide_upload$>
+                            <div class="dropzone-previews">
+                                <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr-line-solid"></div>
+
+        <!--ARUANDE KINNITUS-->
+        <div class="row">
+            <div class="col-xs-12 font-bold text-center m-b-lg"><br/>$txt_report_confirm$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-lg-4 control-label-regular">$txt_report_account$</label>
+                    <div class="col-lg-4">
+                        <input type="text" name="adv_account" id="adv_account" class="form-control account in_medium" value="$adv_account$"$disabled_all$>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- aruande staatus -->
+        $fn_report_status$
+            $report_title$
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 control-label-regular" style="margin-top: 5px">$name$</label>
+                        <label class="col-lg-4">$status$</label>
+                    </div>
+                </div>
+            </div>
+        $fn_stop$
+
+        <!--NUPUD-->
+        <div class="row m-t-md">
+            <div class="col-sm-6"$hide_back_btn$>
+                <input type="button" name="back" id="back_btn" class="btn btn-default" value="$txt_btn_back$">
+            </div>
+            <div class="col-sm-6 text-right">
+                <span id="message_bubble" class="btn btn-default btn-outline message_bubble"$hide_message_bubble$>
+                    <i class="fa fa-check-square-o" style="color: #090"></i> <span id="message_bubble_text">$message_bubble$</span>
+                </span>
+
+                <input type="submit" name="save" id="btn_save" class="btn btn-primary" value="$txt_btn_save$"$hide_btn_save$>
+                <input type="submit" name="send" id="btn_send" class="btn btn-primary" value="$txt_btn_send$"$hide_btn_send$>
+
+                <span name="accept" id="btn_report_accept" class="btn btn-primary"$hide_btn_accept$>$txt_btn_accept$</span>
+                <span name="reject" id="btn_report_reject" class="btn btn-primary popup_dialog" data-text="$txt_dialog_reject$" data-ph="$txt_dialog_reject_ph$" data-yes="$txt_btn_comment$" data-no="$txt_btn_cancel$"$hide_btn_reject$>$txt_btn_reject$</span>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    calculate_expenses();
+</script>

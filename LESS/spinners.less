@@ -1,6 +1,32 @@
 // main: style.less
 
+
 //SPINNER FOR PAGE LOADING
+
+.loading-gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+        margin-left: -75px;
+}
+
+.loading-mask {
+	position: absolute;
+	z-index: 1001;
+	overflow: hidden;
+	//width: 1154px;
+	//height: 894px;
+	background-color: white;
+	opacity: 1;
+	transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
+
+.loading-animation {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
 
 /*===============================================
    Chrome Frame prompt
@@ -17,17 +43,17 @@
    Author's custom styles
    ========================================= */
 
-#loader-wrapper {
-    position: fixed;
+.loader-wrapper {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1002;
 }
-#loader {
+.loader {
     display: block;
-    position: relative;
+    position: fixed;
     left: 50%;
     top: 50%;
     width: 150px;
@@ -35,13 +61,13 @@
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color:  @red;
+    border-top-color: @cherry;
 
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 
-    #loader:before {
+    .loader:before {
         content: "";
         position: absolute;
         top: 5px;
@@ -50,13 +76,13 @@
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: @blue;
+        border-top-color: @cherry;
 
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
-    #loader:after {
+    .loader:after {
         content: "";
         position: absolute;
         top: 15px;
@@ -65,7 +91,7 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: @orange;
+        border-top-color: @cherry;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */

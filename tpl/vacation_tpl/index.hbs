@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-calendar"></i> Puhkuste kalender
+            </div>
+            <div class="panel-body">
+
+                {{> filters}}
+
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#a" data-toggle="tab">Tabel</a>
+                    </li>
+                    {{#unless mobile}}
+                    <li>
+                        <a href="#b" data-toggle="tab">Graafik</a>
+                    </li>
+                    {{/unless}}
+                    <li>
+                        <a href="#c" data-toggle="tab">Minu puhkused</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active " id="a">
+                        {{> tableTab}}
+                    </div>
+                    {{#unless mobile}}
+                    <div class="tab-pane fade " id="b">
+                        {{> ganttTab_Johann}}
+                    </div>
+                    {{/unless}}
+                    <div class="tab-pane fade" id="c">
+                        {{> myVacationsTab}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var t = JSON.parse('{{{js_translations}}}');
+    var employee_id = "{{person.employeeId}}";
+</script>

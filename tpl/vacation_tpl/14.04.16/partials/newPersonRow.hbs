@@ -1,0 +1,21 @@
+{{#each replacements}}
+<div class="row"  data-employee_id="{{this.employee_id}}">
+    <div class="col-sm-4">
+        <input name="person" class="form-control input-sm autofetch personInput" type="text" data-id='{{this.id}}' data-employee_id="{{this.employee_id}}" data-display_name="{{this.display_name}}" value="{{this.display_name}}" {{#unless ../acl}}disabled{{/if}}>
+        <div class="autofetch_results"></div>
+    </div>
+    <div class="col-sm-6">
+        <div class="input-daterange input-group" style="width: 100%;">
+            <input type="text" class="input-sm form-control" name="start" value="{{this.start_date}}" {{#unless ../acl}}disabled{{/if}} readonly>
+            <span class="input-group-addon">{{../t.txt_to}}</span>
+            <input type="text" class="input-sm form-control" name="end" value="{{this.end_date}}" {{#unless ../acl}}disabled{{/if}} readonly>
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        {{#if ../acl}}
+        <a href="#" class="btn btn-white msg_remove fa fa-trash-o btn_border deletePerson"></a>
+        {{/if}}
+    </div>
+</div>
+{{/each}}

@@ -1,0 +1,28 @@
+<div class="widget-sessions">
+    <div class="ibox-title">
+	<h5><i class="fa fa-mortar-board"></i> Sessioonid</h5>
+	<div class="ibox-tools">
+	    <a class="collapse-link">
+		<i class="fa $chevron_status$"></i>
+	    </a>
+	    <a class="close-link">
+		<i class="fa fa-times"></i>
+	    </a>
+	</div>
+    </div>
+    <div class="ibox-content"$widget_status$>
+	<table class="table table-striped no-margins">
+	    <thead>
+		<tr>
+		    <th>info</th>
+		</tr>
+	    </thead>
+	    <tbody>
+
+		$fn_list_sessions$
+		<tr><td><span class="label label-info-o">$expires$ $login_name$ $lang$ $remote_addr$ $prefs$ $clicks$ </span></td></tr>$fn_stop$
+	</table>
+    </div>
+</div>
+
+

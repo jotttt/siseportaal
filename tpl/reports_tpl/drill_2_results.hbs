@@ -1,0 +1,51 @@
+{{#if data.resultsData}}
+<div class="row">
+    <table class='strong'>
+        <tr>
+            <td>{{t.txt_budget_period}}:</td>
+            <td>{{data.post.budget}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_period}}:</td>
+            <td>{{data.post.startDate}} - {{data.post.endDate}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_department}}:</td>
+            <td>{{data.post.department}} {{data.departmentName}}</td>
+        </tr>
+        <tr>
+            <td>{{t.txt_object}}:</td>
+            <td>{{data.post.object}}</td>
+        </tr>
+    </table>
+</div>
+{{/if}}
+
+<div class="row">
+    <table>
+        <tr>
+            <th>Kuupäev</th>
+            <th>Dok liik</th>
+            <th>Dok nr</th>
+            <th>Kande nr</th>
+            <th>Välise dok nr</th>
+            <th>Kirjeldus</th>
+            <th>Allika nimi</th>
+            <th>Objekt</th>
+            <th>Summa</th>
+        </tr>
+        {{#each resultsData}}
+        <tr>
+            <td align="left">{{this.Posting_Date}}</td>
+            <td align="left">{{this.Document_type}}</td>
+            <td align="left">{{this.Document_No_}}</td>
+            <td align="left">{{this.entrynr}}</td>
+            <td align="left">{{this.External_Document_No_}}</td>
+            <td align="left">{{this.Description}}</td>
+            <td align="left">{{this.Cust}}</td>
+            <td align="left">{{this.object}}</td>
+            <td align="right">{{this.Amount}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

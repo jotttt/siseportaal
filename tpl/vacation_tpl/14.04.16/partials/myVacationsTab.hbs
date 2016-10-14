@@ -1,0 +1,11 @@
+<div id="myVacations">
+{{> personVacations}}
+</div>
+
+{{#if acl}}
+<div class="row">
+    <div class="col-md-4">
+        <button  id="addMyVacationBtn" class="btn btn-primary">{{t.txt_add}}</button>
+    </div>
+</div>
+{{/if}}

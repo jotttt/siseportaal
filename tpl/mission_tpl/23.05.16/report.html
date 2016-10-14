@@ -1,0 +1,135 @@
+<form method="post" id="$form_id$" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
+    <input type="hidden" name="mission_id" id="mission_id" value="$mission_id$">
+    <input type="hidden" name="method" id="method" value="save">
+    <input type="hidden" name="ou_code" id="ou_code" value="$ou_code$">
+
+    <div class="wrapper wrapper-content animated fadeIn" style="font-size: 1.1em">
+        <div class="row"><div class="col-sm-6 text-center font-bold m-b-xs">$txt_report_title$</div></div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_mission_nr$:</div>
+            <div class="col-xs-9 m10">$dlx_id$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_person_name$:</div>
+            <div class="col-xs-9 m10">$person_name$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_structure$:</div>
+            <div class="col-xs-9 m10">$ou_name$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_position$:</div>
+            <div class="col-xs-9 m10">$position$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_location$:</div>
+            <div class="col-xs-9 m10">$country_name$, $city$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_duration$:<span class="req2">*</span></div>
+            <div class="col-xs-9">
+                <input type="text" name="date_from" id="mission_from" class="form-control datepicker in_short" value="$date_from$" placeholder="$txt_date_from$"$disabled_all$>
+                <div style="float: left; width: 12px; margin-top: 12px">&nbsp;-&nbsp;</div>
+                <input type="text" name="date_to" id="mission_to" class="form-control datepicker in_short" value="$date_to$" placeholder="$txt_date_to$"$disabled_all$>
+                <!--<div id="mission_days" style="float: left; margin-left: 10px; margin-top: 12px"></div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_report$:<span class="req2">*</span></div>
+            <div class="col-xs-9">
+                <textarea name="message" id="report" class="form-control m10" placeholder="$txt_report_summary$"$disabled_all$>$report$</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <div class="hr-line-solid"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 text-center font-bold m-b-xs m-t-md">$txt_expenses$</div>
+        </div>
+
+        <div id="expenses">
+            $fn_expenses$
+            <div class="row" id="expense_$count$">
+                <div class="col-xs-3 text-right">
+                    <select name="finance_type[]" id="expense_type_$count$" class="form_control in_medium m10 pull-right"$disabled_all$>
+                        <option value="">$txt_expense_type$</option>
+                        $expense_type$
+                    </select>
+                </div>
+                <div class="col-xs-9">
+                    <input type="text" name="finance_sum[]" id="expense_sum_$count$" class="form-control expense_sum in_short mr10" value="$expense_sum$" placeholder="$txt_expense_sum$" autocomplete="off"$disabled_all$>
+                    <input type="text" name="finance_source[]" id="expense_obj_$count$" class="form-control finance_source expense_obj ae_complete in_short mr10" value="$expense_obj$" placeholder="$txt_expense_obj$" autocomplete="off"$disabled_all$>
+                    <input type="text" name="finance_comment[]" id="expense_comment_$count$" class="form-control in_long" value="$expense_comment$" placeholder="$txt_expense_comment$" autocomplete="off"$disabled_all$>$add_expense_btn$
+                </div>
+            </div>
+            $fn_stop$
+        </div>
+
+        <br/>
+        <div class="row">
+            <div class="col-xs-3 text-right font-bold m-b-xs">$txt_report_total$</div>
+            <div class="col-xs-9">
+                <input type="text" id="report_calc" class="form-control in_xshort" value="0" disabled>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <div class="hr-line-solid"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs" style="padding-top: 20px">$txt_upload$:</div>
+            <div class="col-xs-9">
+                <div class="uploaded-files" data-parent="$mission_id$"$mission_rm_files$></div><br/>
+                <div class="dropzone" data-parent="$mission_id$"$hide_upload$>
+                    <div class="dropzone-previews">
+                        <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <div class="hr-line-solid"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 font-bold text-left m-b-lg"><br/>$txt_report_confirm$</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 text-right m-b-xs">$txt_report_account$:</div>
+            <div class="col-xs-9">
+                <input type="text" name="adv_account" id="adv_account" class="form-control account in_medium" value="$adv_account$"$disabled_all$>
+            </div>
+        </div>
+
+        <div class="row m-t-md text-center">
+            <div class="col-sm-3"$hide_back_btn$>
+                <input type="button" name="back" id="back_btn" class="btn btn-primary pull-left" value="$txt_btn_back$">
+            </div>
+            <div class="col-sm-3">
+                <input type="submit" name="save" id="btn_save" class="btn btn-primary pull-left" value="$txt_btn_save$"$hide_btn_save$>
+                <input type="submit" name="send" id="btn_send" class="btn btn-primary pull-left" value="$txt_btn_report$"$hide_btn_send$>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    calculate_expenses();
+</script>

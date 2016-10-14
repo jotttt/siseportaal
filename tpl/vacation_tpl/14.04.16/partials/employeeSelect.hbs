@@ -1,0 +1,6 @@
+<label>Töötaja</label>
+<select id="persons" class="chosen-select" data-placeholder="{{t.txt_search_dot_dot}}" multiple>
+    {{#each employees}}
+    <option value="{{this.employeeID}}" {{#if this.selected}}selected{{/if}}>{{this.display_name}}</option>
+    {{/each}}
+</select>

@@ -1,0 +1,48 @@
+<!-- DETAILVAADE -->
+<div class="tab-pane fade active in" id="c">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="col-lg-4">
+                    <a href="#person_modal" id="add_person" data-toggle="modal" class="btn btn-primary"><i class="fa fa-plus"></i> Lisa seotud isik</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row m-t">
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><i class="fa fa-user"></i> Seotud isikud: </div>
+                <div class="panel-body">
+                    {{> persons_table}}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <a href="#company_modal" id="add_company" data-toggle="modal" class="btn btn-primary"><i class="fa fa-plus"></i> Lisa seotud firma</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><i class="fa fa-briefcase"></i> Seotud firmad: </div>
+                <div class="panel-body">
+                   {{> companies_table}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

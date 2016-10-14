@@ -1,0 +1,27 @@
+<div id="controls">
+    {{> breadcrumb}}
+</div>
+
+<div id='filestable'>
+    <div class="row">
+        <div class="col-sm-4">
+            {{> list_wiki_folders}}
+        </div>
+        <div class="col-sm-4">
+            {{> list_wiki_articles}}
+        </div>
+        <div class="col-sm-4">
+            {{> list_media_files}}
+        </div>
+    </div>
+</div>
+
+{{#compare acl ">=" 8}} {{! WIKI_AUTH_UPLOAD = 8); }}
+{{> dropZone}}
+{{/compare}}
+
+<script>
+    wiki_uid = "{{wiki_uid}}";
+    ns = "{{nameSpace}}";
+    wiki_acl = "{{acl}}";
+</script>

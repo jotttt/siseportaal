@@ -1,0 +1,158 @@
+body {
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: #870042;
+}
+
+h2 {
+    color: #870042;
+    font-weight: 100;
+    font-size: 26px;
+}
+
+h2 span {
+    display: block;
+    color: #999;
+    font-size: 12px;
+}
+
+h2 span a {
+    color: #999;
+    text-decoration: underline;
+}
+
+h2 span a:hover {
+    text-decoration: none;
+}
+
+h3 {
+    color: #870042;
+    font-weight: 100;
+    font-size: 22px;
+}
+
+h4 {
+    color: #870042;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h5 {
+    color: #870042;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:link {
+    color: #4D0A1E;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4D0A1E;
+    text-decoration: none;
+}
+
+.wikilink2 {
+    color:#BCBCBC;
+}
+
+p {
+    margin: 1px 0px 14px 0px;
+}
+
+ul{
+    margin: 7px 0px 7px 0px;
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 0px;
+}
+
+ul li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ol  {
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+}
+ol li {
+    list-style: none;
+}
+
+ol li:last-child {
+    margin-bottom: 6px;
+}
+
+ol li .li {
+    list-style: none;
+    display: inline;
+}
+
+ol li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item
+}
+
+ol ol li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item
+}
+
+table {
+    margin: 7px 0px 7px 0px;
+}
+
+input {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid;
+    border-radius: 3px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: #870042;
+    border-color: #870042;
+    color: #FFFFFF;
+}
+input:hover, input:focus {
+    background-color: #870042;
+    border-color: #870042;
+}
+@media(max-width: 768px) {
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+}
+
+div.wiki-template-box {
+    border: 1px solid #e5e6e7;
+    padding: 20px;
+    margin: 10px;
+    background: white;
+}

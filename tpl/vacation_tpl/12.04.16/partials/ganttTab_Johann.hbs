@@ -1,0 +1,59 @@
+{{#if departments}}
+<div class="row">
+    <div class="col-sm-4 m-t-xs">
+        <select id="department" class="chosen-select" data-placeholder="otsi...">
+            {{#each departments}}
+            <option value="{{this.ouCode}}" {{#if this.selected}}selected{{/if}}>{{this.ouName}}</option>
+            {{/each}}
+        </select>
+    </div>
+</div>
+{{/if}}
+
+<div class="row">
+    <div class="col-sm-12 m-t-xs">
+        <!-- Puhkuste tabel start -->
+        <table class="advancedTable">
+            <tr>
+                <td id="firstTd">
+                </td>
+                <td>
+                    <div id="divHeader" class="tableFixedTop">
+                        <table class="tableYear">
+                            <tr>
+                                <td>
+                                    <div class="tableHeader"></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tableMonth"></table>
+                        <table class="tableDay"></table>
+                        <table class="tableWeekDay"></table>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- NAME COLUMN -->
+            <tr>
+                <td>
+                    <div id="firstcol">
+                        <table class="tableFixedLeft"></table>
+                    </div>
+                </td>
+                <td valign="top">
+                    <div id="table_div" class="tableDataContainer">
+                        <div class="leaveBars"></div>
+                        <table class="tableData"></table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- Puhkuste tabel end -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        {{#if acl}}<button  id="addVacationBtn" class="btn btn-primary">{{t.txt_add}}</button>{{/if}}
+    </div>
+</div>

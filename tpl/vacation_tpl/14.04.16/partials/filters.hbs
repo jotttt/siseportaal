@@ -1,0 +1,25 @@
+<div class="row m-t-sm m-b">
+
+    <div class="col-sm-4">
+       <label>Osakond</label>
+        <select id="department" class="chosen-select" multiple>
+            {{#each departments}}
+            <option value="{{this.ouCode}}" {{#if this.selected}}selected{{/if}}>{{this.ouName}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="col-sm-4" id="employeeSelectDiv">
+        {{> employeeSelect}}
+    </div>
+
+    <div class="col-sm-4" id="daterangeDiv">
+        <label>Ajavahemik</label>
+        <div class="input-group input-daterange">
+            <input  id="startDate" name="startDate" type="text" class="form-control" value="{{startDate}}">
+            <span class="input-group-addon">kuni</span>
+            <input id="endDate" name="endDate" type="text" class="form-control" value="{{endDate}}">
+        </div>
+    </div>
+
+</div>

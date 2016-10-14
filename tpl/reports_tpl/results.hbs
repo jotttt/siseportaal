@@ -23,9 +23,9 @@
 </div>
 
 <form method="POST"  action="" data-action="/api/file:fetch:22PB59:" id="hiddenExportForm" class="hiddenForm">
-    <input type="hidden" id="departmentH" name="department" value=""><br>
+    <input type="hidden" id="departmentH" name="department[]" value=""><br>
     <input type="hidden" id="budgetH" name="budget" value=""><br>
-    <input type="hidden" id="objectH" name="object" value=""><br>
+    <input type="hidden" id="objectH" name="object[]" value=""><br>
     <input type="hidden" id="startDateH" name="startDate" value=""><br>
     <input type="hidden" id="endDateH" name="endDate" value=""><br>
     <input type="hidden" name="submit2" value="submit">
@@ -50,7 +50,7 @@
         <tr>
             <td>{{#if this.bold}}<strong>{{/if}}{{{this.Description}}}{{#if this.bold}}</strong>{{/if}}</td>
             <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.SumBudget}}}{{#if this.bold}}</strong>{{/if}}</td>
-            <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.SumGL}}}{{#if this.bold}}</strong>{{/if}}</td>
+            <td align="right">{{#if this.bold}}<strong>{{/if}}<a href="#{{this.Counter}}" class="drill1" data-counter="{{this.Counter}}">{{{this.SumGL}}}</a>{{#if this.bold}}</strong>{{/if}}</td>
             <td align="right">{{#if this.bold}}<strong>{{/if}}{{{this.Diff}}}{{#if this.bold}}</strong>{{/if}}</td>
         </tr>
         {{/each}}

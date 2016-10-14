@@ -1,0 +1,133 @@
+body {
+    padding: 20px;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 12px 0;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 6px 0;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 6px 0;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 6px 0;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 6px 0 0 0;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+.wikilink1 {
+
+}
+
+.wikilink2 {
+    color:#BCBCBC;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ol  {
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+}
+ol li {
+    list-style: none;
+}
+
+ol li:last-child {
+    margin-bottom: 6px;
+}
+
+ol li .li {
+    list-style: none;
+    display: inline;
+}
+
+ol li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item
+}
+
+ol ol li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item
+}
+
+a {
+    color: #870042;
+    text-decoration: underline;
+}
+
+.wikilink2 {
+        color:#BCBCBC;
+    }
+
+.urlextern {
+    color: #2B69C6;
+}
+
+.urlextern:hover, .urlextern:active, .urlextern:focus {
+    border-bottom: 1px solid #2B69C6;
+}
+
+.wrap_parser_error p {
+    color: #ED5565;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #e5e6e7;
+}
+
+thead {
+
+}
+
+tbody {
+
+}
+
+tr {
+
+}
+
+tr:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+
+td {
+    border: 1px solid #e7e7e7;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: top;
+}

@@ -1,0 +1,38 @@
+$fn_list_contracts$
+<div class="tab-pane fade in" id="$tab_id$">
+    <div id="person-$tab_id$">
+        <table>
+            <tr>
+                <td><h3>$givenName$ $Sn$ (<abbr title="$txt_employeeID$">$employeeID$</abbr>) </h3>
+                    <dl class="dl-horizontal">
+                        <dt>$txt_fullname$</dt><dd>$displayname$</dd>
+                        <dt>$txt_title$</dt><dd>$titleName$</dd>
+                        <dt>$txt_mobile$</dt><dd>$workMobile$ ($workMobileShortNo$)</dd>
+                        <dt>$txt_phone$</dt><dd>$workPhoneNo$</dd>
+                        <dt>$txt_email$</dt><dd>$workEmail$</dd>
+                        <dt>$txt_room_no$</dt><dd>$roomNo$</dd>
+                    </dl>
+                </td>
+                <td><a href="/api/get:qrcode:$employeeID$"><img src="/api/get:qrcode:$employeeID$" alt="$displayname$" height="140" width="140"></a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="contract-$tab_id$">
+        <dl class="dl-horizontal">
+            <dt>$txt_contractStartDate$</dt><dd>$contractStartDate$</dd>
+            <dt>$txt_FTE$</dt><dd>$FTE$</dd>
+            <dt>$txt_trackRecord$</dt><dd>$trackRecord$ $txt_days$</dd>
+            <dt>$txt_inVacation$</dt><dd>$inVacation$</dd>
+            <dt>$txt_usedVacationDays$</dt><dd>$usedVacationDays$ $txt_days$</dd>
+        </dl>
+    </div>
+    <div id="unit-$tab_id$">
+        <h3>$txt_ouName$ $ouName$ (<abbr title="$txt_ouCode$">$ouCode$</abbr>, <abbr title="$txt_ouShortName$">$ouShortName$</abbr>)</h3>
+        <dl class="dl-horizontal">
+            <dt>$txt_dvName$</dt><dd>$dvName$ (<abbr title="$txt_dvCode$">$dvCode$</abbr>)</dd>
+            <dt>$txt_address$</dt><dd>$Street$, $City$ $PostalCode$</dd>
+            <dd></dd>
+        </dl>
+    </div>
+</div>$fn_stop$

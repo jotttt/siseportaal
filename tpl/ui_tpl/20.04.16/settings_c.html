@@ -1,0 +1,50 @@
+<br />
+<br />
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <a href="/setlang/to/$lang_inverse$">$txt_setlang$</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <form method="POST" action="/$focus$/$sess_id$">
+                    <select tabindex="1" name="skin" id="skin">
+                        <option value="">$txt_default_select$</option>
+                        $fn_list_theme$
+                        <option$selected$ value="$theme$">$txt_theme_name$</option>$fn_stop$
+                    </select>
+
+                    <input type="submit" name="save_skin" value="$txt_save$">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- kui on staff grupis, siis lase SMS jaoks mobiilinumber seadistada -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <form method="POST" action="/$focus$/$sess_id$">
+                    <input tabindex="2" id="sms_mobile" placeholder="$work_mobile$" type="text" name="sms_mobile" size="12" value="$sms_mobile$" maxlength="9">
+                    <input type="submit" name="save_sms_mobile" value="$txt_save$">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+

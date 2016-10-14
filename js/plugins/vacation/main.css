@@ -1,0 +1,31 @@
+/*.pick_requester, .autofetch_pick {
+    min-width: 160px;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}*/
+
+/* Bootstrap 3.0 re-reset */
+.fn-gantt *,
+.fn-gantt *:after,
+.fn-gantt *:before {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.fn-gantt .ganttBrown {
+    background-color: #b29800;
+}
+.fn-gantt .ganttPurple {
+    background-color: #6699ff;
+}
+.fn-gantt .ganttYellow {
+    background-color: #ffff00;
+}

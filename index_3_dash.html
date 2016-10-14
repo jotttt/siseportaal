@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <!--_____ META _______-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!--_____META END_______-->
+    <title>TTÜ | Dashboard</title>
+    <!--_____ PLUGINS CSS _______-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!--_____ PAGE CSS _______-->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR
+--------------------------------------------------------------->
+      <nav class="navbar navbar-static-top nav-down" role="navigation">
+        <div class="cherry-mod-bg"></div>
+        <span id="open-mobile-menu">
+          <button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
+        </span>
+        <span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+          <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+        </span>
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <li class="nav-header">
+              <div class="hidden-xs">
+                <span>
+                  <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+              </div>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+
+          <li class="dropdown right-sidebar">
+            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <i class="fa fa-bell"></i><span class="label label-primary"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts">
+              <div class="core-widget-wrapper" id="alerts"><li>
+                <a href="/mail">
+
+                  <div>
+                    <i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+                    <span class="pull-right text-muted small">19 minutit tagasi</span>
+                  </div>
+                </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="/schedule">
+                    <div>
+                      <i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+                      <span class="pull-right text-muted small">4h tagasi</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="/reports">
+                    <div>
+                      <i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+                      <span class="pull-right text-muted small">56 minutit tagasi</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="divider"></li>
+                <li>
+                  <div class="text-center link-block">
+                    <a href="/alerts">
+                      <strong>Vaata kõiki teavitusi</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li></div>
+            </ul>
+          </li>
+
+          <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+              <i class="fa fa-user fa-fw"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+              <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+              <li class="divider"></li>
+              <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+            </ul>
+          </li>
+          <li class="dropdown right-sidebar">
+            <a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+              <i class="fa fa-tasks"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="core-widget-wrapper" id="confbar"><li>
+                <div class="setings-item">
+                  <span>
+                    Globaalne otsing
+                  </span>
+                  <div class="switch">
+                    <div class="onoffswitch">
+                      <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                      <label class="onoffswitch-label" for="example">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Keela messenger
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                        <label class="onoffswitch-label" for="example2">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Luba ajaloo salvestus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                        <label class="onoffswitch-label" for="example3">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Kõrge kontrastsus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                        <label class="onoffswitch-label" for="example4">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Teavitused emailile
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                        <label class="onoffswitch-label" for="example5">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Esilehe moodulite ümberpaigutus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                        <label class="onoffswitch-label" for="example6">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="text-center link-block">
+                    <a href="/settings">
+                      <strong>Seadistuste detailvaade</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li></div>
+            </ul>
+          </li>
+        </ul>
+
+
+
+        <ul class="nav navbar-top-links navbar-right visible-lg">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+          </form>
+        </ul>
+
+      </nav>
+      <!-- end top navbar ------------------------------------->
+
+      <!-- LEFT SIDEBAR
+--------------------------------------------------------------->
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li ><span><i class="fa fa-link"></i>Navbari lingid</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+              </ul>
+            </li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+          <!-- BOTTOM ICONS
+---------------------------------------------------------------->
+          <div class="bottom-icons">
+            <div>
+              <a href="#" class="text-muted"><i class="fa fa-bell fa-2x"></i></a>
+              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+
+              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+            </div>
+          </div>
+          <!-- end bottom icons ------------------------------->
+
+        </div>
+      </nav>
+      <!-- end left sidebar ----------------------------------->
+
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!-- CAROUSEL BEGIN
+--------------------------------------------------------------->
+
+        <div id="my-coverpages" class="carousel slide wrapper-content">
+          <!-- Indicators -->
+          <ol id="my-coverpage-selector" class="carousel-indicators" style="opacity: 1;">
+            <li data-target="#my-coverpages" data-slide-to="0" class="active"></li>
+            <li data-target="#my-coverpages" data-slide-to="1" class=""></li>
+            <li data-target="#my-coverpages" data-slide-to="2" class=""></li>
+          </ol>
+
+          <!-- Wrapper for Slides -->
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <div class="fill">
+
+                <!--CONTENT BEGIN
+------------------------------------------------------------->
+
+
+                <div class="row widget-container" id="sortable-view">
+
+                  <div id="sortable-left" class="col-lg-3 ui-sortable">
+
+                    <div class="widget-wrapper" id="sessions" >
+                      <div class="widget-sessions">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-mortar-board"></i> Sessioonid</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+                          <table class="table table-striped no-margins">
+                            <thead>
+                              <tr>
+                                <th>info</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+
+                              <tr><td><span class="label label-info-o">2016-01-08 00:50:54 Thomas.Lepik et 192.168.115.36 {"skin":"ttu"} 2 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 02:08:32 Erkki.Solvak et 192.168.115.15 {"skin":"ttu"} 57 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-07 23:13:30 Virgo.Kadastik et 192.168.134.22  33 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 02:24:31 Johann.Laulik et 192.168.115.7 {"skin":"ttu"} 231 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 00:20:02 Ketlin.Karp et 192.168.115.43 {"skin":"ttu"} 199 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-07 22:08:30 Annika.Altmae et 192.168.134.74  19 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-07 23:27:36 ervin.korts-laur et 192.168.115.33  31 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-07 20:42:41 Margus.Vatko et 192.168.115.52  5 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 01:49:50 Simar.Tuula et 192.168.115.27  20 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 01:09:59 Vladislav.Zautin et 192.168.115.30  23 </span></td></tr>
+                              <tr><td><span class="label label-info-o">2016-01-08 01:37:27 Andres.Pasoke et 192.168.115.10  2 </span></td></tr>
+                            </tbody></table>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="widget-wrapper" id="media" >
+                      <div class="widget-feed">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-birthday-cake"></i> Uudised</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+
+                          <div class="masonry-row">
+
+                            <div class="masonry-item">
+                              <div class="well">
+                                <h3>pr:et:portal:news:2015:0101</h3>
+                                <p>
+                                </p><h1>TTÜs algab Skype'i ja HITSA esimene hackathon</h1>
+                                <div class="level1">
+
+                                  <p>
+                                    24. aprillil algab TTÜs esimene Skype'i ja Hariduse Infotehnoloogia Sihtasutuse (HITSA) IT Akadeemia programmi raames korraldatud arendusnädalavahetus „Skype University Hackathon 2015“.
+                                  </p>
+
+
+
+                                </div>
+                                <p></p>
+                              </div>
+                              <div class="masonry-item">
+                                <div class="well">
+                                  <h3>pr:et:portal:news:2015:0104</h3>
+                                  <p>
+                                  </p><h1>TTÜ doktorant pääses parimate noorteadlaste hulka</h1>
+                                  <div class="level1">
+
+                                    <p>
+                                      TTÜ doktorant Maria Fomitšenko pääses Eesti Teaduste Akadeemias toimunud kolme minuti loengute konkursi finaalis kuue parima noorteadlase hulka.
+                                    </p>
+
+
+                                  </div>
+                                  <p></p>
+                                </div>
+                                <div class="masonry-item">
+                                  <div class="well">
+                                    <h3>pr:et:portal:news:2015:0401</h3>
+                                    <p>
+                                    </p><h1>Ajulaineid stimuleeriv seade avastab ja ravib traumaatilisi ajukahjustusi juba reanimobiilis.</h1>
+                                    <div class="level1">
+
+                                      <p>
+                                        „Selle tehnoloogiaga on kõige enam võita neuroloogial. Näiteks liiklusõnnetuse korral saab patsiendile juba reanimobiilis teha esimese ajukahjustuse mõõtmise, mille alusel edasisi otsuseid vastu võtta,” selgitas unikaalse seadme kasutusvõimalust üks selle väljatöötaja, Tallinna tehnikaülikooli teadur Henrik Herranen. Ka haiglates saab uudse seadeldise abil EEG-mõõtmist teha väljaspool neurolaboreid, kasvõi patsiendi voodi ääres.
+                                      </p>
+
+
+                                    </div>
+                                    <p></p>
+                                  </div>
+                                  <div class="masonry-item">
+                                    <div class="well">
+                                      <h3>pr:et:portal:news:2015:main</h3>
+                                      <p>
+                                      </p><p>
+                                      Uudised
+                                      </p>
+
+                                      <p>
+                                        <a href="https://wiki-test.intra.ttu.ee/pr/et/portal/news/2015/0401" class="wikilink1" title="pr:et:portal:news:2015:0401">0401</a>
+                                      </p>
+                                      <p></p>
+                                    </div>
+                                  </div>
+
+                                </div></div></div></div>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+                    <div class="widget-wrapper" id="contacts">
+
+                    </div>
+                  </div>
+
+                  <div id="sortable-middle" class="col-lg-6 ui-sortable">
+
+                    <div class="widget-wrapper" id="highlight">
+                      <div class="widget-message">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-bullhorn"></i> Sündmus</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content-full">
+                          <div class="text-center"><img class="img-responsive" src="img/sp2015.jpg"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget-wrapper" id="profile">
+                      <div class="widget-profile">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-user"></i> Minu profiil</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content text-center">
+                          <h3 class="m-b-lg">Teretulemast siseveebi!</h3>
+                          <img src="img/a2.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                          <div class="m-b-md">
+                            <h2 class="font-bold no-margins">
+                              <a href="/profile">Johann Laulik</a>
+                            </h2>
+                            <small>kasutajaliidese arendaja</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget-wrapper" id="news-cover">
+                      <div class="widget-news-cover">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-user"></i> Cover uudised</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content text-center">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="sortable-right" class="col-lg-3 ui-sortable">
+
+                    <div class="widget-wrapper" id="bdays">
+                      <div class="widget-birthdays">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-birthday-cake"></i> Tänased sünnipäevad</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+
+                          <div><i class="fa fa-user"></i> Tõnis Timmusk</div>
+                          <div><i class="fa fa-user"></i> Jevgenia Šmõreitšik</div>
+                          <div><i class="fa fa-user"></i> Aet Meerits</div>
+                          <div><i class="fa fa-user"></i> Steffi Witter</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget-wrapper" id="training">
+                      <div class="training">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-mortar-board"></i> Sisekoolitused</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+                          <table class="table table-striped no-margins">
+                            <thead>
+                              <tr>
+                                <th>Aeg</th>
+                                <th>Nimi</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><span class="label label-success-o">04.12.2015</span></td>
+                                <td>Meeskonnatöö koolitus I tase</td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-info-o">18.12.2015</span></td>
+                                <td>Meeskonnatöö koolitus II tase</td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-danger-o">23.12.2015</span></td>
+                                <td>Ristmeedia koolitus </td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-danger-o">24.12.2015</span></td>
+                                <td>Excel edasijõudnutele</td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-warning-o">27.12.2015</span></td>
+                                <td>Avalik suhtlus I</td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-info-o">29.12.2015</span></td>
+                                <td>Word edasijõudnutele</td>
+                              </tr>
+                              <tr>
+                                <td><span class="label label-info-o">30.12.2015</span></td>
+                                <td>Ristmeedia koolitus</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr><td></td><td><button type="button" class="label label-white pull-right m-t" data-container="body" data-toggle="popover" data-placement="top" data-content="">Legend</button></td></tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget-wrapper" id="bookmarks">
+                      <div class="bookmarks">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-bookmark"></i> Minu leheküljed</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+                          <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                              <div class="panel panel-default">
+                                <div data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" class="panel-heading">
+                                  <h4 class="panel-title">
+                                    Minu viited <i class="fa fa-angle-down"></i>
+                                  </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in" aria-expanded="true">
+                                  <div class="panel-body">
+                                    <div class="m-b-sm b-b"><a href="#">Tallinna linnavolikogu kiitis heaks maksukärped</a></div>
+                                    <div class="m-b-sm b-b"><a href="#">TTÜ võõrustab põhjaveeuurijaid kõikidelt kontinentidelt</a></div>
+                                    <div class="m-b-sm b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+                                    <div class="m-b-sm "><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" class="panel-heading closed">
+                                  <h4 class="panel-title">
+                                    Viimased <i class="fa fa-angle-down"></i>
+                                  </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                  <div class="panel-body">
+                                    <div class="m-b-xs b-b"><a href="#">TTÜ-le esitati üle 11 000 sisseastumisavalduse, kasv oli aastaga 11%</a></div>
+                                    <div class="m-b-xs"><a href="#">Vilistlaste tenniseturniir 20. augustil, registreerimine 15. augustini</a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!--CONTENT END
+-------------------------------------------------------------->
+
+              </div>
+</div>
+
+            <div class="item">
+
+              <div class="fill">
+
+                <!--CONTENT BEGIN
+------------------------------------------------------------->
+
+                <div class="row widget-container" id="sortable-view2">
+
+                  <div id="sortable-left" class="col-lg-3 ui-sortable">						</div>
+
+                  <div id="sortable-middle" class="col-lg-6 ui-sortable"><div class="widget-wrapper" id="sessions" >
+                    <div class="widget-sessions">
+                      <div class="ibox-title">
+                        <h5><i class="fa fa-mortar-board"></i> Sessioonid</h5>
+                        <div class="ibox-tools">
+                          <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a class="close-link">
+                            <i class="fa fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="ibox-content">
+                        <table class="table table-striped no-margins">
+                          <thead>
+                            <tr>
+                              <th>info</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+
+                            <tr><td><span class="label label-info-o">2016-01-08 00:50:54 Thomas.Lepik et 192.168.115.36 {"skin":"ttu"} 2 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 02:08:32 Erkki.Solvak et 192.168.115.15 {"skin":"ttu"} 57 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-07 23:13:30 Virgo.Kadastik et 192.168.134.22  33 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 02:24:31 Johann.Laulik et 192.168.115.7 {"skin":"ttu"} 231 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 00:20:02 Ketlin.Karp et 192.168.115.43 {"skin":"ttu"} 199 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-07 22:08:30 Annika.Altmae et 192.168.134.74  19 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-07 23:27:36 ervin.korts-laur et 192.168.115.33  31 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-07 20:42:41 Margus.Vatko et 192.168.115.52  5 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 01:49:50 Simar.Tuula et 192.168.115.27  20 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 01:09:59 Vladislav.Zautin et 192.168.115.30  23 </span></td></tr>
+                            <tr><td><span class="label label-info-o">2016-01-08 01:37:27 Andres.Pasoke et 192.168.115.10  2 </span></td></tr>
+                          </tbody></table>
+                      </div>
+                    </div>
+
+
+                    </div></div>
+
+                  <div id="sortable-right" class="col-lg-3 ui-sortable"></div>
+                </div>
+
+                <!--CONTENT END
+-------------------------------------------------------------->
+              </div>
+</div>
+
+             <div class="item">
+              <!-- Set the third background image using inline CSS below. -->
+              <div class="fill">
+
+                <!--CONTENT BEGIN
+------------------------------------------------------------->
+
+
+                <div class="row widget-container" id="sortable-view3">
+
+                  <div id="sortable-left" class="col-lg-3 ui-sortable">
+
+                  </div>
+
+                  <div id="sortable-middle" class="col-lg-6 ui-sortable">
+
+                    <div class="widget-wrapper" id="media" >
+                      <div class="widget-feed">
+                        <div class="ibox-title">
+                          <h5><i class="fa fa-birthday-cake"></i> Uudised</h5>
+                          <div class="ibox-tools">
+                            <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                              <i class="fa fa-times"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="ibox-content">
+
+                          <div class="masonry-row">
+
+                            <div class="masonry-item">
+                              <div class="well">
+                                <h3>pr:et:portal:news:2015:0101</h3>
+                                <p>
+                                </p><h1>TTÜs algab Skype'i ja HITSA esimene hackathon</h1>
+                                <div class="level1">
+
+                                  <p>
+                                    24. aprillil algab TTÜs esimene Skype'i ja Hariduse Infotehnoloogia Sihtasutuse (HITSA) IT Akadeemia programmi raames korraldatud arendusnädalavahetus „Skype University Hackathon 2015“.
+                                  </p>
+
+
+
+                                </div>
+                                <p></p>
+                              </div>
+                            </div>
+                            <div class="masonry-item">
+                              <div class="well">
+                                <h3>pr:et:portal:news:2015:0104</h3>
+                                <p>
+                                </p><h1>TTÜ doktorant pääses parimate noorteadlaste hulka</h1>
+                                <div class="level1">
+
+                                  <p>
+                                    TTÜ doktorant Maria Fomitšenko pääses Eesti Teaduste Akadeemias toimunud kolme minuti loengute konkursi finaalis kuue parima noorteadlase hulka.
+                                  </p>
+
+
+                                </div>
+                                <p></p>
+                              </div>
+                            </div>
+                            <div class="masonry-item">
+                              <div class="well">
+                                <h3>pr:et:portal:news:2015:0401</h3>
+                                <p>
+                                </p><h1>Ajulaineid stimuleeriv seade avastab ja ravib traumaatilisi ajukahjustusi juba reanimobiilis.</h1>
+                                <div class="level1">
+
+                                  <p>
+                                    „Selle tehnoloogiaga on kõige enam võita neuroloogial. Näiteks liiklusõnnetuse korral saab patsiendile juba reanimobiilis teha esimese ajukahjustuse mõõtmise, mille alusel edasisi otsuseid vastu võtta,” selgitas unikaalse seadme kasutusvõimalust üks selle väljatöötaja, Tallinna tehnikaülikooli teadur Henrik Herranen. Ka haiglates saab uudse seadeldise abil EEG-mõõtmist teha väljaspool neurolaboreid, kasvõi patsiendi voodi ääres.
+                                  </p>
+
+
+                                </div>
+                                <p></p>
+                              </div>
+                            </div>
+                            <div class="masonry-item">
+                              <div class="well">
+                                <h3>pr:et:portal:news:2015:main</h3>
+                                <p>
+                                </p><p>
+                                Uudised
+                                </p>
+
+                                <p>
+                                  <a href="https://wiki-test.intra.ttu.ee/pr/et/portal/news/2015/0401" class="wikilink1" title="pr:et:portal:news:2015:0401">0401</a>
+                                </p>
+                                <p></p>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="sortable-right" class="col-lg-3 ui-sortable">
+
+
+
+                  </div>
+                </div>
+
+
+                <!--CONTENT END
+-------------------------------------------------------------->
+
+
+
+
+
+                <!-- Controls -->
+
+
+
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!--CONTENT END
+-------------------------------------------------------------->
+
+      </div>
+    </div>
+
+    <!--FOOTER BEGIN
+-------------------------------------------------------------->
+    <div class="footer">
+      <div>
+        TTÜ &copy; 2014-2015
+      </div>
+    </div>
+    <!--FOOTER END
+-------------------------------------------------------------->
+
+    <!-- FULLSCREEN TOGGLE BUTTON -->
+    <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+
+    <!--SCRIPTS
+--------------------------------------------------------------->
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+
+  </body>
+
+</html>

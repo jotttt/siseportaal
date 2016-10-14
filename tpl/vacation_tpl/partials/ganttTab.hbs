@@ -1,0 +1,18 @@
+{{#if departments}}
+<div class="row">
+    <div class="col-sm-4 m-t-xs">
+        <select id="department" class="select2-select" data-placeholder="otsi...">
+            {{#each departments}}
+            <option value="{{this.ouCode}}" {{#if this.selected}}selected{{/if}}>{{this.ouName}}</option>
+            {{/each}}
+        </select>
+    </div>
+</div>
+{{/if}}
+<div class="gantt"></div>
+
+<div class="row">
+    <div class="col-md-4">
+        {{#if focusAcl}}<button  id="addVacationBtn" class="btn btn-primary">{{t.txt_add}}</button>{{/if}}
+    </div>
+</div>

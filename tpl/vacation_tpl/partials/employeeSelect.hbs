@@ -1,0 +1,8 @@
+<label>Töötaja</label>
+<div class="input-group">
+<select id="persons" class="select2-select" data-placeholder="{{t.txt_search_dot_dot}}"  multiple="multiple">
+    {{#each employees}}
+    <option value="{{this.employeeID}}" {{#if this.selected}}selected{{/if}}>{{this.display_name}}</option>
+    {{/each}}
+</select>
+</div>

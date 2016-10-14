@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Starter template</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div id="wrapper" class="">
+
+            <!-- TOP NAVBAR
+--------------------------------------------------------------->
+            <nav class="navbar navbar-static-top nav-down" role="navigation">
+                <div class="cherry-mod-bg"></div>
+                <span class="mobile-logo-minimal-w hidden-lg hidden-md"></span>
+                <span id="open-mobile-menu">
+                    <button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
+                </span>
+                <span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+                    <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+                </span>
+                <div id="mobile-search" class="hidden">
+                    <form ole="search" method="post" action="/search">
+                        <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+                    </form>
+                </div>
+
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-header">
+                            <div class="hidden-xs">
+                                <span>
+                                    <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-large hidden-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                        </li>
+                        <li class="dropdown dropdown-large hidden-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                        </li>
+                        <li class="dropdown dropdown-large hidden-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                        </li>
+                        <li class="dropdown dropdown-large hidden-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="nav navbar-top-links navbar-right hidden-sm hidden-xs">
+
+                    <li class="dropdown right-sidebar">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i><span class="label label-primary"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <div class="core-widget-wrapper" id="alerts"><li>
+                                <a href="/mail">
+
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+                                        <span class="pull-right text-muted small">19 minutit tagasi</span>
+                                    </div>
+                                </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/schedule">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+                                            <span class="pull-right text-muted small">4h tagasi</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/reports">
+                                        <div>
+                                            <i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+                                            <span class="pull-right text-muted small">56 minutit tagasi</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="/alerts">
+                                            <strong>Vaata kõiki teavitusi</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li></div>
+                        </ul>
+                    </li>
+
+                    <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+                            <i class="fa fa-user fa-fw"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                            <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown right-sidebar">
+                        <a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <i class="fa fa-tasks"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="core-widget-wrapper" id="confbar"><li>
+                                <div class="setings-item">
+                                    <span>
+                                        Globaalne otsing
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                            <label class="onoffswitch-label" for="example">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="setings-item">
+                                        <span>
+                                            Keela messenger
+                                        </span>
+                                        <div class="switch">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                                                <label class="onoffswitch-label" for="example2">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="setings-item">
+                                        <span>
+                                            Luba ajaloo salvestus
+                                        </span>
+                                        <div class="switch">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                                <label class="onoffswitch-label" for="example3">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="setings-item">
+                                        <span>
+                                            Kõrge kontrastsus
+                                        </span>
+                                        <div class="switch">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                                <label class="onoffswitch-label" for="example4">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="setings-item">
+                                        <span>
+                                            Teavitused emailile
+                                        </span>
+                                        <div class="switch">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                                                <label class="onoffswitch-label" for="example5">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="setings-item">
+                                        <span>
+                                            Esilehe moodulite ümberpaigutus
+                                        </span>
+                                        <div class="switch">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                                <label class="onoffswitch-label" for="example6">
+                                                    <span class="onoffswitch-inner"></span>
+                                                    <span class="onoffswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="/settings">
+                                            <strong>Seadistuste detailvaade</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li></div>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-top-links navbar-right visible-lg">
+                    <form ole="search" method="post" action="/search">
+                        <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+                    </form>
+                </ul>
+
+            </nav>
+            <!-- end top navbar ------------------------------->
+
+
+            <!-- LEFT SIDEBAR
+--------------------------------------------------------------->
+            <nav id="m-menu" class="min">
+                <div>
+                    <ul>
+                        <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+                            <ul>
+                                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+                        <li><span><i class="fa fa-plane"></i>Lähetused</span>
+                            <ul>
+                                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+                        <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+                        <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+                        <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+                        <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+                            <ul>
+                                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+                            </ul>
+                        </li>
+                        <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+                            <ul>
+                                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+                        <div class="m-l m-r-sm m-t">
+                            <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+                        </div>
+                    </ul>
+
+                    <!-- BOTTOM ICONS
+---------------------------------------------------------------->
+                    <div class="bottom-icons">
+                        <div class="row">
+                            <div class="col-xs-3 text-center">
+                                <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
+                            </div>
+                            <div class="col-xs-3 text-center">
+                                <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end bottom icons ------------------------------->
+
+                </div>
+            </nav>
+            <!-- end left sidebar ----------------------------->
+
+            <!-- CONTENT
+--------------------------------------------------------------->
+            <div id="page-wrapper" class="min gray-bg">
+
+                <!--BREADCRUMB
+--------------------------------------------------------------->
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">This is</a>
+                            </li>
+                            <li class="active">
+                                <strong>Breadcrumb</strong>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- end breadcrumb --------------------------->
+
+                <!--PAGE
+--------------------------------------------------------------->
+                <div class="wrapper-content animated fadeIn">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-puzzle-piece"></i> Mooduli nimi
+                        </div>
+                        <div class="panel-body">
+                            <!--START HERE!-->
+
+
+
+
+                            <svg id="swg" class="center-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.233 69.465" width="175" height="256"><style>.style0{fill:	#878787;}.style1{fill:	#9A044C;}</style>
+                                <g stroke="#000" stroke-width="0.5" >
+                                 <path
+     style="fill:#ffffff"
+     d="m 10.342,13.339 4.866,0.476 0,-13.815 -4.866,0 0,13.339 z"
+     id="path4159" /><path
+     style="fill:#ffffff"
+     d="m 0.537,12.381 0.922,0.093 0,-12.474 -0.922,0 0,12.381 z"
+     id="path4157" /><path
+     style="fill:#ffffff"
+     d="m 18.682,14.154 2.933,0.288 2.932,-0.288 0,-14.154 -5.865,0 0,14.154 z"
+     id="path4155" /><path
+     style="fill:#ffffff"
+     d="m 4.397,12.758 3.016,0.294 0,-13.052 -3.016,0 0,12.758 z"
+     id="path4153" /><path
+     style="fill:#ffffff"
+     d="m 41.77,0 0,12.475 0.15,-0.015 0.846,-0.079 0,-12.381 -0.996,0 z"
+     id="path4151"/><path
+     style="fill:#fff"
+     d="m 28.024,13.816 4.863,-0.471 0,-13.345 -4.863,0 0,13.816 z"
+     id="path4149" /><path
+     style="fill:#ffffff"
+     d="m 35.82,13.058 3.013,-0.292 0,-12.766 -3.013,0 0,13.058 z"
+     id="path3" /><path
+     style="fill:#fffffe"
+     d="m 10.342,43.231 4.866,0 0,-13.812 -4.866,0.479 0,13.333 z"
+     id="path4197" /><path
+     style="fill:#fffffe"
+     d="m 0.537,43.231 0.922,0 0,-12.465 -0.922,0.09 0,12.375 z"
+     id="path4195" /><path
+     style="fill:#fffffe"
+     d="m 18.682,43.231 5.865,0 0,-14.149 -2.932,-0.285 -2.933,0.285 0,14.149 z"
+     id="path4193" /><path
+     style="fill:#fffffe"
+     d="m 4.397,43.231 3.016,0 0,-13.046 -3.016,0.294 0,12.752 z"
+     id="path4191" /><path
+     style="fill:#fffffe"
+     d="m 42.766,43.231 0,-12.375 -0.846,-0.083 -0.15,-0.012 0,12.471 0.996,-10e-4 0,0 z"
+     id="path4189" /><path
+     style="fill:#fffffe"
+     d="m 28.024,43.231 4.863,0 0,-13.337 -4.863,-0.475 0,13.812 z"
+     id="path4187" /><path
+     style="fill:#fffffe"
+     d="m 35.82,43.231 3.013,0 0,-12.759 -3.013,-0.292 0,13.051 z"
+     id="path5" /><path
+     style="fill:#ffffff"
+     d="m 0,27.816 2.008,0 0,-12.396 -2.008,0 0,12.396 z"
+     id="path4183" /><path
+     style="fill:#ffffff"
+     d="m 3.934,27.816 3.942,0 0,-12.396 -3.942,0 0,12.396 z"
+     id="path4181" /><path
+     style="fill:#ffffff"
+     d="m 9.803,27.816 5.938,0 0,-12.396 -5.938,0 0,12.396 z"
+     id="path4179" /><path
+     style="fill:#ffffff"
+     d="m 17.673,27.816 7.885,0 0,-12.396 -7.885,0 0,12.396 z"
+     id="path4177" /><path
+     style="fill:#ffffff"
+     d="m 27.478,27.816 5.95,0 0,-12.396 -5.95,0 0,12.396 z"
+     id="path4175" /><path
+     style="fill:#ffffff"
+     d="m 35.358,27.816 3.938,0 0,-12.396 -3.938,0 0,12.396 z"
+     id="path4173" /><path
+     style="fill:#ffffff"
+     d="m 41.224,27.816 2.009,0 0,-12.396 -2.009,0 0,12.396 z"
+     id="path7" /><path
+     style="fill:#ffffff"
+     d="m 0,54.108 5.657,0 0,14.491 2.311,0 0,-14.491 5.66,0 0,-2.011 -13.628,0 0,2.011 z"
+     id="path4169" /><path
+     style="fill:#ffffff"
+     d="m 15.117,54.108 5.659,0 0,14.491 2.311,0 0,-14.491 5.656,0 0,-2.011 -13.626,0 0,2.011 z"
+     id="path4167" /><path
+     style="fill:#ffffff"
+     d="m 40.917,52.098 0,10.614 c 0,2.568 -1.658,4.044 -4.206,4.044 -2.522,0 -4.158,-1.476 -4.158,-4 l 0,-10.658 -2.316,0 0,10.658 c 0,3.671 2.643,6.126 6.5,6.126 3.853,0 6.497,-2.455 6.497,-6.126 l 0,-10.658 -2.317,0 z"
+     id="path4165" /><path
+     style="fill:#ffffff"
+     d="m 39.434,52.098 -1.868,0 0,2.362 1.868,0 0,-2.362 z"
+     id="path4163" /><path
+     style="fill:#fff"
+     d="m 35.904,52.098 -1.87,0 0,2.362 1.87,0 0,-2.362 z"
+     id="path9" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- end page ------------------------------------->
+
+                <!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+                <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+                <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+                <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+            </div>
+            <!-- end content -------------------------------------->
+
+        </div>
+        <!-- end wrapper ------------------------------------------>
+
+        <!--FOOTER
+--------------------------------------------------------------->
+        <div class="footer">
+            <div>
+                TTÜ Siseportaal &copy; 2014 - 2015
+            </div>
+        </div>
+
+        <!--MODAL CONTENT
+--------------------------------------------------------------->
+
+        <!-- end modal content -------------------------------->
+
+        <!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+        <div id="c-mask" class="c-mask"></div>
+
+        <!--SCRIPTS
+--------------------------------------------------------------->
+        <!-- Main scripts -->
+		<script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Plugin script -->
+        <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+        <script src="js/plugins/moment/moment.min.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+        <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+        <script src="js/plugins/draw-svg/jquery.drawsvg.min.js"></script>
+        <!-- Custom scripts -->
+        <script src="js/main_ui.js"></script>
+
+        <script>
+            $svg = $('#swg').drawsvg({
+                duration: 1000,
+                callback: function() {
+                    animate();
+                }
+            });
+
+            function animate() {
+                $svg.drawsvg('animate');
+            }
+
+            animate();
+        </script>
+
+    </body>
+
+</html>

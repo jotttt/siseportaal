@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs">
+    <li{{{class_a_active}}}>
+        <a href="#media_a" id="link_a"{{nav}}>Failid</a>
+    </li>
+
+    <li{{{class_b_active}}}>
+        <a href="#media_b" id="link_b"{{nav}}>Laadi failid serverisse </a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade{{tab_a_active}}" id="media_a">
+        {{> list_media_files}}
+    </div>
+    <div class="tab-pane fade{{tab_b_active}}" id="media_b">
+        {{> dropZone}}
+    </div>
+</div>

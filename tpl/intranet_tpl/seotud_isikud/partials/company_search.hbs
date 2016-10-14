@@ -1,0 +1,46 @@
+<!-- FIRMADE OTSING -->
+<div class="tab-pane fade companySearchDiv" id="b">
+    <form method="POST" action="/circles" class="form-horizontal" id="b1" data-div="results">
+        <fieldset>
+
+            <div class="row m-t">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-4 control-label" for="budget">Firma nimi</label>
+                        <div class="col-lg-4">
+                            <select name="organizationSelect" id="organizationSelect" class="chosen-select" multiple="multiple" data-placeholder="otsi...">
+                                <option value="all">Kõik firmad</option>
+                                {{#each organizationList}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4">
+                            <button id="businessSearchBtn" type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <form method="POST" action="/api/csv:circles" id="hiddenExportForm">
+        <input type="hidden" id="id" name="id" value="all"><br>
+        <input type="hidden" value="submit">
+    </form>
+
+    <div id="companies_result" class="row m-t">
+
+    </div>
+
+</div>

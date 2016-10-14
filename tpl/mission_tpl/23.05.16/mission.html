@@ -1,0 +1,267 @@
+<form method="post" id="$form_id$" action="$request_uri$" data-before="$data_before$" data-after="$data_after$" class="ajax-form form-horizontal" role="form">
+    <input type="hidden" name="mission_id" id="mission_id" value="$mission_id$">
+    <input type="hidden" name="method" id="method" value="save">
+    <input type="hidden" name="ou_code" id="ou_code" value="$ou_code$">
+
+    <div class="wrapper wrapper-content animated fadeIn" style="font-size: 1.1em">
+        <!--1ST BLOCK ERRAND FORM --------------------------------------------------------------->
+        <div>
+            <div class="row"><div class="col-sm-6 text-center font-bold m-b-xs">$txt_general_info$</div></div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_person_name$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <input type="hidden" name="person_id" id="person_val" value="$person_id$">
+                    <input type="text" id="person" class="ae_complete person form-control in_medium" value="$person_name$" title="Uni-ID: $person_id$" autocomplete="off"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row" id="hide_contracts"$hide_contract$>
+                <div class="col-xs-3 text-right m-b-xs">$txt_structure$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <select name="contracts" id="contracts" class="pick_contract form_control in_medium"$disabled_all$>
+                        $pick_contract$
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" id="hide_contract"$hide_ou$>
+                <div class="col-xs-3 text-right m-b-xs">$txt_structure$:</div>
+                <div class="col-xs-9">
+                    <input type="text" id="contract" class="form-control in_medium" value="$ou_name$" disabled>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_position$:</div>
+                <div class="col-xs-9">
+                    <input type="hidden" name="position" id="position" value="$position$">
+                    <input type="text" name="position_title" id="position_title" class="form-control in_medium" value="$position$" disabled>
+                </div>
+            </div>
+        </div>
+        <!--1ST BLOCK ERRAND FORM END --------------------------------------------------------------->
+        <!--2ND BLOCK ERRAND FORM --------------------------------------------------------------->
+        <div>
+            <div class="row"><div class="col-sm-6 text-center font-bold m-b-xs m-t-md">$txt_mission_overview$</div></div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_country$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <input type="hidden" name="country" id="country" value="$country$">
+                    <input type="text" name="country_name" id="country_name" value="$country_name$" class="form-control in_medium" autocomplete="off"$disabled_all$>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_city$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <input type="text" name="city" id="city" class="form-control in_medium" value="$city$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_org$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <input type="text" name="org" id="org" class="form-control in_medium" value="$org$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_duration$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <input type="text" name="date_from" id="date_from" class="form-control datepicker in_short" value="$date_from$" placeholder="$txt_date_from$"$disabled_all$>
+                    <div style="float: left; width: 12px; margin-top: 12px">&nbsp;-&nbsp;</div>
+                    <input type="text" name="date_to" id="date_to" class="form-control datepicker in_short" value="$date_to$" placeholder="$txt_date_to$"$disabled_all$>
+                    <div id="mission_days" style="float: left; margin-left: 10px; margin-top: 12px"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_goal$:<span class="req2">*</span></div>
+                <div class="col-xs-9">
+                    <select name="goal" id="goal" class="form-control in_long"$disabled_all$>$goals$</select><br/><br/>
+                    <textarea name="goal_other" id="goal_other" class="form-control" placeholder="$txt_goal_other$"$disabled_all$ $hide_goal_other$>$goal_other$</textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs" style="padding-top: 20px">$txt_upload$:</div>
+                <div class="col-xs-9">
+                    <br/>
+                    <div class="uploaded-files" data-parent="$mission_id$"$mission_rm_files$></div><br/>
+                    <div class="dropzone" data-parent="$mission_id$"$hide_upload$>
+                        <div class="dropzone-previews">
+                            <div class="dz-message"><span data-dz-message>$txt_file_upload_msg$</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--2ND BLOCK ERRAND FORM END --------------------------------------------------------------->
+        <!--3RD BLOCK ERRAND FORM --------------------------------------------------------------->
+        <div>
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="hr-line-solid"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-center font-bold m-b-xs m-t-md">$txt_calc$</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_daily$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_daily" id="calc_daily" class="form-control calc in_short" value="$calc_daily$"$disabled_all$>
+                    <div id="daily_max" style="margin: 10px; display: none">
+                        &nbsp;&nbsp;($txt_daily_max$ <span id="calc_daily_max" style="font-weight: bold">0</span> EUR)
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_transport$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_transport" id="calc_transport" class="form-control calc in_short" value="$calc_transport$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_accomodation$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_accomodation" id="calc_accomodation" class="form-control calc in_short" value="$calc_accomodation$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_other$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_other" id="calc_other" class="form-control calc in_short" value="$calc_other$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_comment$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_comment" name="calc_comment" class="form-control" value="$calc_comment$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="hr-line-solid"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right font-bold m-b-xs">$txt_total$:</div>
+                <div class="col-xs-9 ">
+                    <input type="text" name="calc_total" id="calc_total" class="form-control in_short" value="$calc_total$" disabled>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_adv$:</div>
+                <div class="col-xs-9">
+                    <input type="text" name="adv_sum" id="adv_sum" class="form-control in_short" value="$adv_sum$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_account$:</div>
+                <div class="col-xs-9">
+                    <input type="text" name="adv_account" id="adv_account" class="form-control account in_medium" value="$adv_account$"$disabled_all$>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="hr-line-solid"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-center font-bold m-b-xs m-t-md">$txt_financed_by$:<span class="req2">*</span></div>
+            </div>
+
+            <div id="finances">
+                $fn_financed_by$
+                <div class="row" id="finance_$count$">
+                    <div class="col-xs-3">
+                        <input type="text" name="finance_source[]" id="finance_source_$count$" class="finance_source form-control in_medium" style="float: right" value="$finance_source$" placeholder="$txt_finance_source$"$disabled_all$>
+                    </div>
+                    <div class="col-xs-2" id="finance_row_$count$"$hide_finance_sum$>
+                        <input type="text" name="finance_sum[]" id="finance_sum_$count$" class="form-control in_short" value="$finance_sum$" placeholder="$txt_finance_sum$"$disabled_all$><div style="margin-top: 12px">&nbsp;EUR</div>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="hidden" name="finance_owner[]" id="finance_owner_$count$_val" value="$finance_owner$">
+                        <input type="text" id="finance_owner_$count$" class="ae_complete person form-control in_medium" value="$finance_owner_name$" placeholder="$txt_finance_owner$" autocomplete="off"$disabled_all$> $approved$ $finance_btn$
+                    </div>
+                </div>
+                $fn_stop$
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <div class="hr-line-solid"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 text-right m-b-xs">$txt_struct_head$:<span class="req2">*</span></div>
+                <div class="col-xs-9 ">
+                    <input type="hidden" name="struct_head" id="struct_head_val" value="$struct_head$">
+                    <input type="text" id="struct_head" class="ae_complete person form-control in_medium" value="$struct_head_name$" autocomplete="off"$disabled_all$> $approved_by_struct_head$
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-center m-b-lg">
+                    <span class="font-bold">$approve_adv$</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div id="message_panel" class="panel panel-primary p-b"$hide_messages$>
+                        <div class="panel-heading m-b">$txt_messages$</div>
+                        <div class="message">
+                            <div id="message_board" class="scrollable-request m-b">$message_board$</div>
+                            <textarea id="message" class="form-control ta_message" rows=3 placeholder="$txt_ph_message$" maxlength="8192"></textarea><br/>
+                            <a href="#" id="add_message_btn" class="btn btn-primary">$txt_add_message$</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-t-md text-center">
+                <div class="col-sm-3"$hide_back_btn$>
+                    <input type="button" name="back" id="back_btn" class="btn btn-primary pull-left" value="$txt_btn_back$">
+
+                    <span id="message_bubble" class="btn btn-default btn-outline message_bubble">
+                        <i class="fa fa-check-square-o" style="color: #090"></i> <span id="message_bubble_text">$message_bubble$</span>
+                    </span>
+                </div>
+
+                <div class="col-sm-4">
+                    <input type="submit" name="save" id="btn_save" class="btn btn-primary pull-left" value="$txt_btn_save$"$hide_btn_save$>
+                    <input type="submit" name="send" id="btn_send" class="btn btn-primary pull-left" value="$txt_btn_send$"$hide_btn_send$>
+
+                    <span name="cancel" id="btn_cancel" class="btn btn-primary pull-left popup_dialog" data-text="$txt_dialog_cancel$" data-yes="$txt_dialog_yes$" data-no="$txt_dialog_no$"$hide_btn_cancel$>$txt_btn_cancel$</span>
+
+                    <span name="accept" id="btn_accept" class="btn btn-primary pull-left"$hide_btn_accept$>$txt_btn_accept$</span>
+                    <span name="reject" id="btn_reject" class="btn btn-primary pull-left popup_dialog" data-text="$txt_dialog_reject$" data-ph="$txt_dialog_reject_ph$" data-yes="$txt_btn_comment$" data-no="$txt_btn_cancel$"$hide_btn_reject$>$txt_btn_reject$</span>
+                </div>
+            </div>
+        </div>
+        <!--3RD BLOCK ERRAND FORM END --------------------------------------------------------------->
+    </div>
+</form>
+
+<script>
+    var mb = document.getElementById("message_board");
+    mb.scrollTop = mb.scrollHeight;
+
+    calculate_total();
+</script>

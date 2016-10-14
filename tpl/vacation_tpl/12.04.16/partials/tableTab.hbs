@@ -1,0 +1,78 @@
+<div class="row">
+
+    {{#if departments}}
+    <div class="col-sm-4 m-t-xs">
+        <select id="department" class="chosen-select" data-placeholder="otsi...">
+            {{#each departments}}
+            <option value="{{this.ouCode}}" {{#if this.selected}}selected{{/if}}>{{this.ouName}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    {{/if}}
+
+    <div class="col-sm-4 m-t-xs">
+        <div class="input-group input-daterange">
+            <input  id="startDate" name="startDate" type="text" class="form-control" value="{{startDate}}">
+            <span class="input-group-addon">kuni</span>
+            <input id="endDate" name="endDate" type="text" class="form-control" value="{{endDate}}">
+        </div>
+    </div>
+    {{! Otsing ei sobi hästi siia, peidan praegu ära
+    <div class="col-sm-3 m-t-xs">
+        <div class="form-group">
+            <div class="input-group" style="width: 100%;">
+                <input id="person_name" type="text" class="form-control autocomplete"  value="" placeholder="Isik...">
+            </div>
+        </div>
+    </div>
+    }}
+    <div class="col-sm-4 m-t-xs">
+        <div class="col-md-4">
+            <button  id="filterPersonsBtn" class="btn btn-primary">{{t.txt_filter}}</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-12 m-t-xs">
+        <div id="results">
+            <table id="vacationsTable" class="table table-striped table-bordered table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Isik</th>
+                        <th>Algus</th>
+                        <th>Lõpp</th>
+                        <th>Tüüp</th>
+                        {{#if canEdit}}
+                        <th></th>
+                        {{/if}}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each persons}}
+                    <tr data-employee_id="{{this.id}}">
+                        {{#each this.values}}
+                        <td><input type="checkbox" class="action-favorite pull-right" name="files[]" value="{{../this.id}}"></td>
+                        <td data-id="{{this.id}}">{{../.name}}</td>
+                        <td>{{this.start_date}}</td>
+                        <td>{{this.end_date}}</td>
+                        <td>{{this.label}}</td>
+                        {{#if ../../canEdit}}
+                        <td>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-white fa fa-pencil-square-o btn_border editVacation"></a>
+                                <a href="#" class="btn btn-white msg_remove fa fa-trash-o btn_border deleteVacation"></a>
+                            </div>
+                        </td>
+                        {{/if}}
+                        {{/each}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

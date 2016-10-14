@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR
+----------------------------------------------------------->
+      <nav class="navbar navbar-static-top nav-down" role="navigation">
+        <div class="cherry-mod-bg"></div>
+        <span class="mobile-logo-minimal-w hidden-lg hidden-md"></span>
+        <span id="open-mobile-menu" class="new">
+          <i class="fa fa-bars fa-2x"></i>
+        </span>
+
+          <div class="navbar new">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle new btn btn-white btn-outline no-borders" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </button>
+
+            <div class="navbar-collapse collapse new">
+              <ul class="nav navbar-nav new">
+                <li class="nav-header">
+                  <div class="">
+                    <span>
+                      <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block hidden-sm hidden-xs m-l-sm m-r-md"></div></a>
+                    </span>
+                  </div>
+                </li>
+
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:struktuur_juhtimine:main" class="ajax-load" target="_top">Struktuur ja juhtimine</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:dokumendid:dokumendid:main" class="ajax-load" target="_top">Dokumendid</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:noukogu:main" class="ajax-load" target="_top">TTÜ nõukogu töö</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:tulemusnaitajad:main" class="ajax-load" target="_top">Tulemusnäitajad</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:eelarved:main" class="ajax-load" target="_top">Eelarved</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:aruanded:main" class="ajax-load" target="_top">Aruanded</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:statistika:main" class="ajax-load" target="_top">TTÜ numbrites</a></li>
+                      <li class="level-3"><a href="/wiki/show/et:ulikoolist:uuringud:main" class="ajax-load" target="_top">Uuringud</a></li></div>
+                  </ul>
+                </li>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                </li>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                </li>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+                <i class="fa fa-user fa-fw"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+              </ul>
+            </li>
+
+            <li class="hidden-xxs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <span class="hidden-xs"> Abi</span></a></li>
+
+            <li>
+              <button id="open-mobile-search" class="btn btn-white btn-outline no-borders hidden-lg hidden-xl">
+                <i class="fa fa-search fa-2x"></i>
+              </button>
+            </li>
+
+          </ul>
+          <ul class="nav navbar-top-links navbar-right visible-lg">
+            <form ole="search" method="post" action="/search">
+              <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+            </form>
+          </ul>
+        </div>
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+
+
+
+
+      </nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR
+----------------------------------------------------------->
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT
+----------------------------------------------------------->
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!--PAGE
+----------------------------------------------------------->
+
+
+
+        <!--PAGE END
+--------------------------------------------------------------->
+
+        <!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+        <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+      </div>
+      <!-- end content ---------------------------------------->
+
+    </div>
+    <!-- end wrapper ------------------------------------------>
+
+
+    <!--FOOTER
+--------------------------------------------------------------->
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+
+    <!--MODAL CONTENT
+--------------------------------------------------------------->
+
+    <!--MODAL CONTENT END
+--------------------------------------------------------------->
+
+    <!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+    <div id="c-mask" class="c-mask"></div>
+
+
+    <!-- LOADING ANIMATION
+--------------------------------------------------------------->
+    <div id="loading-mask" class="c-mask"></div>
+
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+
+
+    <!--SCRIPTS
+--------------------------------------------------------------->
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+
+  </body>
+
+</html>
