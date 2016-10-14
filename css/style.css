@@ -6,20 +6,6 @@
 */
 @font-face {
   font-family: 'Open Sans';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/open-sans-regular/Open-Sans-regular.eot');
-  src: url('../fonts/open-sans-regular/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), local('Open Sans'), local('Open-Sans-regular'), url('../fonts/open-sans-regular/Open-Sans-regular.woff2') format('woff2'), url('../fonts/open-sans-regular/Open-Sans-regular.woff') format('woff'), url('../fonts/open-sans-regular/Open-Sans-regular.ttf') format('truetype'), url('../fonts/open-sans-regular/Open-Sans-regular.svg') format('svg');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/open-sans-700/Open-Sans-700.eot');
-  src: url('../fonts/open-sans-700/Open-Sans-700.eot?#iefix') format('embedded-opentype'), local('Open Sans Bold'), local('Open-Sans-700'), url('../fonts/open-sans-700/Open-Sans-700.woff2') format('woff2'), url('../fonts/open-sans-700/Open-Sans-700.woff') format('woff'), url('../fonts/open-sans-700/Open-Sans-700.ttf') format('truetype'), url('../fonts/open-sans-700/Open-Sans-700.svg') format('svg');
-}
-@font-face {
-  font-family: 'Open Sans';
   font-weight: 300;
   font-style: normal;
   src: url('../fonts/open-sans-300/Open-Sans-300.eot');
@@ -27,10 +13,24 @@
 }
 @font-face {
   font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/open-sans-regular/Open-Sans-regular.eot');
+  src: url('../fonts/open-sans-regular/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), local('Open Sans'), local('Open-Sans-regular'), url('../fonts/open-sans-regular/Open-Sans-regular.woff2') format('woff2'), url('../fonts/open-sans-regular/Open-Sans-regular.woff') format('woff'), url('../fonts/open-sans-regular/Open-Sans-regular.ttf') format('truetype'), url('../fonts/open-sans-regular/Open-Sans-regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
   font-weight: 600;
   font-style: normal;
   src: url('../fonts/open-sans-600/Open-Sans-600.eot');
   src: url('../fonts/open-sans-600/Open-Sans-600.eot?#iefix') format('embedded-opentype'), local('Open Sans Semibold'), local('Open-Sans-600'), url('../fonts/open-sans-600/Open-Sans-600.woff2') format('woff2'), url('../fonts/open-sans-600/Open-Sans-600.woff') format('woff'), url('../fonts/open-sans-600/Open-Sans-600.ttf') format('truetype'), url('../fonts/open-sans-600/Open-Sans-600.svg') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/open-sans-700/Open-Sans-700.eot');
+  src: url('../fonts/open-sans-700/Open-Sans-700.eot?#iefix') format('embedded-opentype'), local('Open Sans Bold'), local('Open-Sans-700'), url('../fonts/open-sans-700/Open-Sans-700.woff2') format('woff2'), url('../fonts/open-sans-700/Open-Sans-700.woff') format('woff'), url('../fonts/open-sans-700/Open-Sans-700.ttf') format('truetype'), url('../fonts/open-sans-700/Open-Sans-700.svg') format('svg');
 }
 html {
   min-height: 100%;
@@ -2828,7 +2828,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     width: auto;
   }
   .navbar-header {
-    float: none;
+    float: left;
   }
   .navbar-toggle {
     display: block;
@@ -2903,8 +2903,12 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
   .navbar-nav.new .dropdown-menu-large li {
     padding: 5px 0;
   }
-  .navbar-right {
+  .navbar .right-side {
     position: fixed;
+    right: 0;
+  }
+  .navbar-right {
+    position: static;
     right: 0;
     top: 0;
   }
@@ -2923,6 +2927,8 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     margin-top: 60px;
     padding: 0 15px;
     width: auto;
+    overflow-x: auto;
+    overflow-y: auto;
   }
   .navbar-collapse.collapse.new a {
     color: #333333;
@@ -2952,7 +2958,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     border-radius: 50%;
     padding: 13px 15px;
     margin: 0;
-    bottom: 70px;
+    bottom: 20px;
     left: 20px;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -3966,6 +3972,102 @@ button.btn.btn-caret.active:before {
   border-top: 12px solid #870042;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
+}
+.btn-round {
+  background: #fff;
+  border: 1px solid #e5e6e7;
+  border-radius: 20px;
+  padding: 2px 7px;
+  float: right;
+  position: absolute;
+}
+.btn-round:hover {
+  border: 1px solid #c9c9c9;
+}
+.btn-round .active {
+  background: #e5e6e7;
+  border: 1px solid #c9c9c9;
+}
+.btn-round i {
+  color: #c9c9c9;
+}
+@media (max-width: 992px) {
+  .bookmark-btn-container {
+    background: white;
+    border: 1px solid #e5e6e7;
+    border-right: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: fixed;
+    top: auto;
+    bottom: 100px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+  }
+  .bookmark-btn {
+    position: static;
+    margin: 7px 6px;
+  }
+}
+#wikiTools {
+  right: 0;
+  background: white;
+  border: 1px solid #e5e6e7;
+  border-right: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: fixed;
+  top: 140px;
+  right: -10px;
+  height: 40px;
+  width: 60px;
+  z-index: 2;
+}
+#wikiTools .nav {
+  position: static;
+  margin-right: -15px;
+}
+#wikiTools .dropdown-menu {
+  right: 40px;
+  top: 35px;
+}
+#wikiTools .wiki-edit-btn {
+  color: #c9c9c9;
+  background: #fff;
+  border: 1px solid #e5e6e7;
+  border-radius: 20px;
+  padding: 1px 5px;
+  margin: 7px 42px 0 0;
+  position: static;
+}
+#wikiTools .dropdown.open {
+  background: none;
+}
+#wikiTools .nav .open > a,
+#wikiTools .nav .open > a:hover,
+#wikiTools .nav .open > a:focus {
+  background: none;
+  color: #b0b0b0;
+}
+@media (max-width: 1199px) {
+  #wikiTools {
+    right: -10px;
+  }
+}
+@media (max-width: 991px) {
+  #wikiTools {
+    width: 40px;
+    right: 0px;
+    top: 70px;
+  }
+  #wikiTools .wiki-edit-btn {
+    padding: 1px 5px;
+    margin: 7px 21px 0 0;
+    top: 38px;
+    right: 20px;
+  }
 }
 @media (max-width: 768px) {
   button.pull-right {
@@ -5637,9 +5739,32 @@ RIGHT SIDEBAR SETTINGS MENU
 /*************************************************************
 AUTH LOGIN PAGE
 *************************************************************/
+.middle-box {
+  max-width: 400px;
+  z-index: 100;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.loginscreen.middle-box {
+  width: 300px;
+}
+.middle-box h1 {
+  font-size: 170px;
+}
+.wrapper .middle-box {
+  margin-top: 140px;
+}
 .ttu-login #logo-minimal-c {
   height: 120px;
   width: 200px;
+}
+.ttu-login .btn {
+  width: auto;
+}
+@media (max-width: 768px) {
+  .ttu-login .btn {
+    margin-bottom: 0px;
+  }
 }
 /*************************************************************
 BREADCRUMB
@@ -5687,44 +5812,8 @@ BREADCRUMB
   padding: 5px;
 }
 .bookmark-btn {
-  background: #fff;
-  border: 1px solid #e5e6e7;
-  border-radius: 20px;
-  padding: 2px 7px;
-  float: right;
-  position: absolute;
   top: 38px;
   right: 15px;
-}
-.bookmark-btn i {
-  color: #c9c9c9;
-}
-.bookmark-btn:hover {
-  border: 1px solid #c9c9c9;
-}
-.bookmark-btn.active {
-  background: #e5e6e7;
-  border: 1px solid #c9c9c9;
-}
-@media (max-width: 992px) {
-  .bookmark-btn-container {
-    background: white;
-    border: 1px solid #e5e6e7;
-    border-right: 0px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    position: fixed;
-    top: auto;
-    bottom: 100px;
-    right: 0px;
-    height: 40px;
-    width: 40px;
-    z-index: 2;
-  }
-  .bookmark-btn {
-    position: static;
-    margin: 7px 6px;
-  }
 }
 /*************************************************************
 DASHBOARD
@@ -5889,6 +5978,13 @@ SEARCH
   padding: 2px 6px;
   font-size: 10px;
   text-transform: uppercase;
+}
+/************************************************************
+REPORTS
+************************************************************/
+.csv-save-btn {
+  right: 30px;
+  top: 8px;
 }
 /************************************************************
 404 PAGE
@@ -7416,64 +7512,6 @@ ARTICLE STYLES
   line-height: 1.42857;
   padding: 8px;
   vertical-align: top;
-}
-#wikiTools {
-  right: 0;
-  background: white;
-  border: 1px solid #e5e6e7;
-  border-right: 0px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  position: fixed;
-  top: 140px;
-  right: -10px;
-  height: 40px;
-  width: 60px;
-  z-index: 2;
-}
-#wikiTools .nav {
-  position: static;
-  margin-right: -15px;
-}
-#wikiTools .dropdown-menu {
-  right: 40px;
-  top: 35px;
-}
-#wikiTools .wiki-edit-btn {
-  color: #c9c9c9;
-  background: #fff;
-  border: 1px solid #e5e6e7;
-  border-radius: 20px;
-  padding: 1px 5px;
-  margin: 7px 42px 0 0;
-  position: static;
-}
-#wikiTools .dropdown.open {
-  background: none;
-}
-#wikiTools .nav .open > a,
-#wikiTools .nav .open > a:hover,
-#wikiTools .nav .open > a:focus {
-  background: none;
-  color: #b0b0b0;
-}
-@media (max-width: 1199px) {
-  #wikiTools {
-    right: -10px;
-  }
-}
-@media (max-width: 991px) {
-  #wikiTools {
-    width: 40px;
-    right: 0px;
-    top: 70px;
-  }
-  #wikiTools .wiki-edit-btn {
-    padding: 1px 5px;
-    margin: 7px 21px 0 0;
-    top: 38px;
-    right: 20px;
-  }
 }
 div.wiki-template-box {
   border: 1px solid #e5e6e7;

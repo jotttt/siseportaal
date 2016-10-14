@@ -22,6 +22,11 @@
   transform: translate(0, -100%);
 }
 
+.navbar .right-side {
+  //position: absolute;
+  //width: 200px;
+}
+
 .nav-header {
   padding: 0px 0px;
   background: transparent;
@@ -355,7 +360,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
   }
 
   .navbar-header {
-    float: none;
+    float: left;
   }
 
   .navbar-toggle {
@@ -451,8 +456,13 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 
   }
 
-  .navbar-right {
+  .navbar .right-side {
     position: fixed;
+    right: 0;
+  }
+
+  .navbar-right {
+    position: static;
     right: 0;
     top: 0;
   }
@@ -474,6 +484,8 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     margin-top: 60px;
     padding: 0 15px;
     width: auto;
+    overflow-x: auto;
+    overflow-y: auto;
 
     a {
       color: @text-color;
@@ -509,7 +521,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     border-radius: 50%;
     padding: 13px 15px;
     margin: 0;
-    bottom: 70px;
+    bottom: 20px;
     left: 20px;
     -webkit-box-shadow:  0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
