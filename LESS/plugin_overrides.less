@@ -1,7 +1,7 @@
 // main: style.less
 
 /*********************************************
-AE TYPEAHEAD
+BOOTSTRAP TOOLTIPS
 **********************************************/
 .tooltip-inner {
   background: @lightest-grey;
@@ -11,7 +11,13 @@ AE TYPEAHEAD
 .tooltip.left .tooltip-arrow {
   border-left-color: @lightest-grey;
 }
-//end auto suggest----------------------------
+
+@media (max-width: @mobile-width){
+    .tooltip {
+       display: none !important;
+    }
+}
+//end tooltips--------------------------------
 
 /*********************************************
 AE TYPEAHEAD
