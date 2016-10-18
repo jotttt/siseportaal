@@ -50,6 +50,16 @@
         });
         //end-----------------------------------------------------------
 
+        //CLOSE TOP MOBILE MENU ON SELECTION
+        //--------------------------------------------------------------
+        $(function(){
+            var navMain = $(".navbar-collapse");
+
+            navMain.on("click", ".dropdown-menu a", null, function () {
+                navMain.collapse('hide');
+            });
+        });
+        //end-----------------------------------------------------------
 
         //MOBILE SEARCH TOGGLE
         //--------------------------------------------------------------
