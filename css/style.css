@@ -2781,6 +2781,9 @@ END DROPDOWNS
   display: inline-block;
   float: right;
 }
+#open-mobile-search {
+  display: none;
+}
 #mobile-search {
   top: 60px;
   position: absolute;
@@ -2818,6 +2821,9 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
   .navbar-top-links li:last-child {
     margin-right: 1px;
   }
+  .navbar-top-links.navbar-right a:last-child {
+    padding-right: 10px;
+  }
   .navbar-static-top .nav > li > a {
     padding: 20px 10px;
   }
@@ -2833,6 +2839,25 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
   }
   .navbar-right li .show-icon {
     display: inline-block;
+  }
+  .navbar-right li.open-mobile-search-container {
+    height: 60px;
+  }
+  .navbar-right li.open-mobile-search-container #open-mobile-search {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+    height: 60px;
+  }
+  .navbar-right li.open-mobile-search-container #open-mobile-search i {
+    position: relative;
+    top: 5px;
+  }
+  .navbar-right li.open-mobile-search-container #open-mobile-search:hover,
+  .navbar-right li.open-mobile-search-container #open-mobile-search:active,
+  .navbar-right li.open-mobile-search-container #open-mobile-search:focus {
+    background: transparent;
+    color: white;
   }
 }
 @media (max-width: 991px) {
@@ -2978,6 +3003,9 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
   }
   #open-mobile-menu.new i {
     color: #818182;
+  }
+  #open-mobile-search {
+    margin-right: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -3280,6 +3308,12 @@ M-MENU
   }
   .mm-panel > .bottom-icons > div > a {
     padding: 20px;
+  }
+  .c-mask.mobile-active {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: opacity 0.3s;
   }
 }
 @media (max-width: 400px) {
@@ -4023,64 +4057,6 @@ button.btn.btn-caret.active:before {
     margin: 7px 6px;
   }
 }
-#wikiTools {
-  right: 0;
-  background: white;
-  border: 1px solid #e5e6e7;
-  border-right: 0px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  position: fixed;
-  top: 140px;
-  right: -10px;
-  height: 40px;
-  width: 60px;
-  z-index: 2;
-}
-#wikiTools .nav {
-  position: static;
-  margin-right: -15px;
-}
-#wikiTools .dropdown-menu {
-  right: 40px;
-  top: 35px;
-}
-#wikiTools .wiki-edit-btn {
-  color: #c9c9c9;
-  background: #fff;
-  border: 1px solid #e5e6e7;
-  border-radius: 20px;
-  padding: 1px 5px;
-  margin: 7px 42px 0 0;
-  position: static;
-}
-#wikiTools .dropdown.open {
-  background: none;
-}
-#wikiTools .nav .open > a,
-#wikiTools .nav .open > a:hover,
-#wikiTools .nav .open > a:focus {
-  background: none;
-  color: #b0b0b0;
-}
-@media (max-width: 1199px) {
-  #wikiTools {
-    right: -10px;
-  }
-}
-@media (max-width: 991px) {
-  #wikiTools {
-    width: 40px;
-    right: 0px;
-    top: 70px;
-  }
-  #wikiTools .wiki-edit-btn {
-    padding: 1px 5px;
-    margin: 7px 21px 0 0;
-    top: 38px;
-    right: 20px;
-  }
-}
 @media (max-width: 768px) {
   button.pull-right {
     float: none !important;
@@ -4744,6 +4720,74 @@ POPUP
   display: block;
 }
 /**********************************************
+WIKI EDIT TOOLS
+**********************************************/
+#wikiTools {
+  right: 0;
+  background: white;
+  border: 1px solid #e5e6e7;
+  border-right: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: fixed;
+  top: 140px;
+  right: -10px;
+  height: 40px;
+  width: 60px;
+  z-index: 2;
+}
+#wikiTools .nav {
+  position: static;
+  margin-right: -15px;
+}
+#wikiTools .dropdown-menu {
+  right: 40px;
+  top: 35px;
+}
+#wikiTools .wiki-edit-btn {
+  color: #c9c9c9;
+  background: #fff;
+  border: 1px solid #e5e6e7;
+  border-radius: 20px;
+  padding: 1px 5px;
+  margin: 7px 42px 0 0;
+  position: static;
+}
+#wikiTools .dropdown.open {
+  background: none;
+}
+#wikiTools .nav .open > a,
+#wikiTools .nav .open > a:hover,
+#wikiTools .nav .open > a:focus {
+  background: none;
+  color: #b0b0b0;
+}
+@media (max-width: 1199px) {
+  #wikiTools {
+    right: -10px;
+  }
+}
+@media (max-width: 991px) {
+  #wikiTools {
+    width: 40px;
+    right: 0px;
+    top: 70px;
+  }
+  #wikiTools .wiki-edit-btn {
+    padding: 1px 5px;
+    margin: 7px 21px 0 0;
+    top: 38px;
+    right: 20px;
+  }
+  #wikiTools .dropdown-menu {
+    right: 40px;
+    top: 35px;
+  }
+  #wikiTools .dropdown-menu .setings-item {
+    padding: 0;
+  }
+}
+/**********************************************
 NEWS-MODULE AND EVENTS-MODULE
 **********************************************/
 .news-module-hero {
@@ -5098,6 +5142,11 @@ SCROLL BACK UP BUTTON
 #fullscreen-btn.active {
   color: #818182;
   opacity: 1;
+}
+@media (max-width: 991px) {
+  #fullscreen-btn {
+    display: none;
+  }
 }
 /* FLOT CHART  */
 .flot-chart {
