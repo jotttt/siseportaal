@@ -336,11 +336,18 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 
 @media (max-width: 1200px) {
 
-
+ #open-mobile-search {
+    display: inline;
+    margin-right: 5px;
+  }
 
   .navbar-top-links li:last-child {
     margin-right: 1px;
   }
+
+  .navbar-top-links.navbar-right a:last-child {
+  padding-right: 10px;
+}
 
   .navbar-static-top .nav > li > a {
     padding: 20px 10px;
@@ -548,6 +555,10 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     }
   }
 
+   #open-mobile-search {
+    margin-right: 20px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -600,6 +611,11 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 
   .nav.navbar-top-links .link-block a {
     font-size: 1.1em;
+  }
+
+  #open-mobile-search {
+    margin-right: 20px;
+    padding: 0 20px 0 0;
   }
 
 }
