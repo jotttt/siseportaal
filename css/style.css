@@ -93,6 +93,7 @@ margin-right: 0px;
 }
 } */
 #page-wrapper {
+  margin-left: 240px;
   padding: 30px 45px 45px 45px;
   position: relative !important;
 }
@@ -100,6 +101,11 @@ margin-right: 0px;
   margin-left: 50px;
 }
 @media (max-width: 991px) {
+  #page-wrapper {
+    margin-left: 0px;
+    padding: 80px 1px 45px 1px;
+    position: relative !important;
+  }
   #page-wrapper.min {
     margin-left: 0px;
     padding: 80px 1px 45px 1px;
@@ -110,10 +116,10 @@ margin-right: 0px;
   margin-left: 240px;
 }
 @media (min-width: 768px) {
-  #page-wrapper {
+  /*#page-wrapper {
     position: inherit;
-    margin: 0 0 0 240px;
-  }
+    margin: 0 0 0 @sidebar-width;
+  }*/
 }
 body.boxed-layout {
   background: url('patterns/shattered.png');
@@ -3226,6 +3232,9 @@ M-MENU
     width: 63%;
     position: fixed;
     z-index: 9999;
+  }
+  #m-menu.max {
+    display: none;
   }
   #mmenu-content-container {
     margin-left: 260px;
