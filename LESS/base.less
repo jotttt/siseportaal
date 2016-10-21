@@ -85,6 +85,7 @@ margin-right: 0px;
 } */
 
 #page-wrapper {
+  margin-left: 240px;
   padding: 30px 45px 45px 45px;
   position: relative !important;
 }
@@ -93,6 +94,12 @@ margin-right: 0px;
   margin-left: 50px;
 }
 @media (max-width: @mobile-width) {
+
+  #page-wrapper {
+    margin-left: 0px;
+    padding: 80px 1px 45px 1px;
+    position: relative !important;
+  }
 
   #page-wrapper.min {
     margin-left: 0px;
@@ -108,10 +115,10 @@ margin-right: 0px;
 
 @media (min-width: 768px) {
 
-  #page-wrapper {
+  /*#page-wrapper {
     position: inherit;
     margin: 0 0 0 @sidebar-width;
-  }
+  }*/
 
 }
 
