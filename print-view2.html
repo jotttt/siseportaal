@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="print-view gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR
+----------------------------------------------------------->
+      <nav class="navbar navbar-static-top nav-down" role="navigation">
+        <div class="cherry-mod-bg"></div>
+        <span class="mobile-logo-minimal-w hidden-lg hidden-md"></span>
+        <span id="open-mobile-menu">
+          <button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
+        </span>
+        <span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+          <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+        </span>
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <li class="nav-header">
+              <div class="hidden-xs">
+                <span>
+                  <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+              </div>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+            </li>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+              <i class="fa fa-user fa-fw"></i> Sandra
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+              <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+              <li class="divider"></li>
+              <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+            </ul>
+          </li>
+
+          <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+        </ul>
+
+        <ul class="nav navbar-top-links navbar-right visible-lg">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+          </form>
+        </ul>
+
+      </nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR
+----------------------------------------------------------->
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT
+----------------------------------------------------------->
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!--PAGE
+----------------------------------------------------------->
+
+        <div id="content-wrapper" class="wrapper-reports"><div class="row page-wrapper gray-bg">
+  <div class="col-sm-12">
+    <ol class="breadcrumb">
+      <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+      <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+    </ol>
+
+  </div>
+  <span class="bookmark-btn-container" style="display:none;">
+    <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+  </span>
+</div>
+
+
+<div id="_workmode" class="dev"></div>
+<div id="_module" class="reports"></div>
+<div id="_focus" class="budget"></div>
+
+<div class="wrapper-content animated fadeIn" style="font-size: 1.0em">
+    <div class="page-container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="budgetPanel_" class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-line-chart"></i>
+
+                    <div class="pull-right" id="download-icons">
+                        <a href="" id="csv" class="csv-save-btn btn-round" data-toggle="tooltip" data-placement="left" title="" data-original-title="Lae alla kui .csv fail" style="display: block;"> <i class="fa fa-file-text-o"></i> </a>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+
+                    <ul class="nav nav-tabs" id="mainTab">
+                        <li class="">
+                            <a href="#tab_form" id="form_tab" data-toggle="tab" aria-expanded="false">Eelarve aruanne</a>
+                        </li>
+                        <li class="active">
+                            <a href="#tab_results" id="results_tab" data-toggle="tab" style="" aria-expanded="true">Tulemused</a>
+                        </li>
+                        <li>
+                            <a href="#tab_budget_line" id="budget_line_tab" data-toggle="tab" style="display:none">Rida</a>
+                        </li>
+                        <li>
+                            <a href="#tab_budget_account" id="budget_account_tab" data-toggle="tab" style="display:none">Konto</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="tab_form">
+                            <form class="form-horizontal" id="budgetForm" data-div="results">
+  <fieldset>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="col-lg-4 control-label" for="oucode">Struktuuriüksus</label>
+          <div class="col-lg-4">
+            <select id="oucode" class="select2-select select2-hidden-accessible" data-placeholder="otsi..." multiple="" tabindex="-1" aria-hidden="true">
+              <option value="10010">10010 Energeetikateaduskond</option>
+              <option value="11010">11010 Ehitusteaduskond</option>
+              <option value="12010">12010 Sotsiaalteaduskond</option>
+              <option value="13010">13010 Infotehnoloogia teaduskond</option>
+              <option value="14010">14010 Keemia- ja materjalitehnoloogia teaduskond</option>
+              <option value="15010">15010 Mehaanikateaduskond</option>
+              <option value="16010">16010 Majandusteaduskond</option>
+              <option value="17010">17010 Matemaatika-loodusteaduskond</option>
+              <option value="17900">17900 Matemaatika-füüsika teaduskond</option>
+              <option value="10011">10011 Energeetikateaduskonna dekanaat</option>
+              <option value="10013">10013 Elektroenergeetika instituut</option>
+              <option value="10015">10015 Mäeinstituut</option>
+              <option value="10016">10016 Elektrotehnika instituut</option>
+              <option value="11011">11011 Ehitusteaduskonna dekanaat</option>
+              <option value="11012">11012 Ehitiste projekteerimise instituut</option>
+              <option value="11013">11013 Ehitustootluse instituut</option>
+              <option value="11014">11014 Teedeinstituut</option>
+              <option value="11015">11015 Keskkonnatehnika instituut</option>
+              <option value="11016">11016 Mehaanikainstituut</option>
+              <option value="11019">11019 Arhitektuuri- ja urbanistikainstituut</option>
+              <option value="12011">12011 Sotsiaalteaduskonna dekanaat</option>
+              <option value="12012">12012 R. Nurkse innovatsiooni ja valitsemise instituut</option>
+              <option value="12013">12013 Keeltekeskus</option>
+              <option value="12014">12014 Spordikeskus</option>
+              <option value="12016">12016 Õiguse instituut</option>
+              <option value="12017">12017 Tööstuspsühholoogia instituut</option>
+              <option value="13011">13011 Infotehnoloogia teaduskonna dekanaat</option>
+              <option value="13012">13012 Arvutiteaduse instituut</option>
+              <option value="13013">13013 Arvutitehnika instituut</option>
+              <option value="13014">13014 Automaatikainstituut</option>
+              <option value="13015">13015 Thomas Johann Seebecki elektroonikainstituut</option>
+              <option value="13016">13016 Informaatikainstituut</option>
+              <option value="13017">13017 Raadio- ja sidetehnika instituut</option>
+              <option value="13018">13018 Biorobootika keskus</option>
+              <option value="14011">14011 Keemia- ja materjalitehnoloogia tead. dekanaat</option>
+              <option value="14012">14012 Keemiatehnika instituut</option>
+              <option value="14013">14013 Materjaliuuringute teaduskeskus</option>
+              <option value="14014">14014 Polümeermaterjalide instituut</option>
+              <option value="14015">14015 Toiduainete instituut</option>
+              <option value="14016">14016 Materjaliteaduse instituut</option>
+              <option value="14017">14017 Anorgaaniliste materjalide teaduslaboratoorium</option>
+              <option value="140161">140161 Keemiliste kiletehnoloogiate teaduslaboratoorium</option>
+              <option value="15011">15011 Mehaanikateaduskonna dekanaat</option>
+              <option value="15012">15012 Mehhatroonikainstituut</option>
+              <option value="15014">15014 Materjalitehnika instituut</option>
+              <option value="15015">15015 Mehaanika ja metroloogia katselaboratoorium</option>
+              <option value="15016">15016 Soojustehnika instituut</option>
+              <option value="15017">15017 Mehaanika ja tööstustehnika instituut</option>
+              <option value="16011">16011 Majandusteaduskonna dekanaat</option>
+              <option value="16015">16015 Rahvusvaheliste programmide keskus</option>
+              <option value="16020">16020 Ärikorralduse instituut</option>
+              <option value="16021">16021 Majandusarvestuse instituut</option>
+              <option value="16022">16022 Rahanduse ja majandusteooria instituut</option>
+              <option value="16025">16025 Rahvusvaheliste suhete instituut</option>
+              <option value="17011">17011 Matemaatika-loodusteaduskonna dekanaat</option>
+              <option value="17013">17013 Füüsikainstituut</option>
+              <option value="17014">17014 Keemiainstituut</option>
+              <option value="17015">17015 Matemaatikainstituut</option>
+              <option value="17017">17017 Geenitehnoloogia instituut</option>
+              <option value="21100">21100 TTÜ Tehnomeedikum</option>
+              <option value="20011">20011 TTÜ Tallinna Kolledž</option>
+              <option value="20012">20012 TTÜ Virumaa Kolledž</option>
+              <option value="20013">20013 TTÜ Kuressaare Kolledž</option>
+              <option value="20014">20014 TTÜ Tartu Kolledž</option>
+              <option value="20015">20015 TTÜ Eesti Mereakadeemia</option>
+              <option value="200121">200121 Põlevkivi kompetentsikeskus</option>
+              <option value="200131">200131 Väikelaevaehituse kompetentsikeskus</option>
+              <option value="21011">21011 TTÜ Geoloogia Instituut</option>
+              <option value="21012">21012 TTÜ Küberneetika Instituut</option>
+              <option value="21013">21013 TTÜ Meresüsteemide Instituut</option>
+              <option value="21014">21014 TTÜ Raamatukogu</option>
+              <option value="21018">21018 TTÜ Muuseum</option>
+              <option value="21101">21101 Biomeditsiinitehnika instituut</option>
+              <option value="21102">21102 TTÜ Tehnomeedikumi administratsioon</option>
+              <option value="21103">21103 Kardiovaskulaarse meditsiini instituut</option>
+              <option value="22011">22011 TTÜ Sertifitseerimisasutus</option>
+              <option value="211031">211031 E-meditsiini laboratoorium</option>
+              <option value="30001">30001 Rektoraat</option>
+              <option value="30002">30002 Üliõpilasesindus</option>
+              <option value="31010">31010 Üldosakond</option>
+              <option value="31015">31015 Personaliosakond</option>
+              <option value="32012">32012 Infotehnoloogia osakond</option>
+              <option value="33011">33011 Teadusosakond</option>
+              <option value="33013">33013 Innovatsiooni- ja ettevõtluskeskus</option>
+              <option value="34011">34011 Avatud ülikool</option>
+              <option value="34014">34014 Õppeosakond</option>
+              <option value="34015">34015 Haridustehnoloogiakeskus</option>
+              <option value="35011">35011 Rahandusosakond</option>
+              <option value="35013">35013 Haldus-ja tugistruktuuri reserv</option>
+              <option value="36011">36011 Ehitusosakond</option>
+              <option value="36012">36012 Kinnisvaraosakond</option>
+              <option value="40000">40000 Üleülikoolilised projektid</option>
+              <option value="40001">40001 Doktoritöö kaitsmine</option>
+              <option value="40002">40002 Doktoritööde premeerimine</option>
+              <option value="40003">40003 Spin 3 programm</option>
+              <option value="40004">40004 Tippkeskused</option>
+              <option value="40005">40005 Õppetegevuse projektid</option>
+              <option value="40006">40006 Maine projekti alla kuuluvad tegevused</option>
+              <option value="40007">40007 Programm DoRa</option>
+              <option value="40008">40008 Programm Mobilitas</option>
+              <option value="40009">40009 Programm Primus</option>
+              <option value="40010">40010 Energiatehnoloogia programm</option>
+              <option value="40099">40099 Üleülikoolilised projektid kokku</option>
+              <option value="50000">50000 Rservid</option>
+              <option value="60000">60000 Kinnisvarahaldus</option>
+              <option value="60001">60001 Kinnisvarahaldus - haldus</option>
+              <option value="60002">60002 Kinnisvarahaldus - tehnika</option>
+              <option value="70000">70000 Kapitalieelarve</option>
+              <option value="70001">70001 Ehitus ja remont</option>
+              <option value="70002">70002 Soetused</option>
+              <option value="80000">80000 Sihtotstarbelised ülekanded</option>
+              <option value="80010">80010 Õppetoetused</option>
+              <option value="80011">80011 Õppetoetuse põhitoetus</option>
+              <option value="80012">80012 Õppetoetuse täiendav toetus</option>
+              <option value="80013">80013 Õppetoetuse doktoranditoetus</option>
+              <option value="80014">80014 Õppetoetuse eritoetusfond</option>
+              <option value="80021">80021 Emeeritus</option>
+              <option value="90001">90001 Tasemeõppe laekumised</option>
+              <option value="90002">90002 Avatud Ülikooli laekumised</option>
+              <option value="90003">90003 Rahvusvaheline õpe</option>
+              <option value="99000">99000 CO2- Virumaa Kolledzi õppehoone</option>
+              <option value="99999">99999 Kogumisestruktuuriüksus (ka hierarhiata objektid)</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 401px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="otsi..." style="width: 457px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="col-lg-4 control-label" for="closedOu">Suletud struktuuriüksus</label>
+          <div class="col-lg-4">
+            <input id="closedOu" name="closedOu[]" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-lg-4 control-label" for="budget">Eelarve nimetus</label>
+          <div class="col-lg-4">
+            <select id="budget" name="budget" class="form-control">
+              <option value="EEK 2010 I" data-year="2010">2010 I muutmine (EEK)</option>
+              <option value="TTÜ 07 II" data-year="2007">TTÜ 2007 II muutmine</option>
+              <option value="TTÜ 08 II" data-year="2008">TTÜ 2008 II muutmine</option>
+              <option value="TTÜ 09 II" data-year="2009">TTÜ 2009 II muutmine</option>
+              <option value="TTÜ 2007" data-year="2007">TTÜ 2007 eelarve</option>
+              <option value="TTÜ 2007 I" data-year="2007">TTÜ 2007 I muutmine</option>
+              <option value="TTÜ 2008" data-year="2008">TTÜ 2008 eelarve</option>
+              <option value="TTÜ 2008 I" data-year="2008">TTÜ 2008 I muutmine</option>
+              <option value="TTÜ 2009" data-year="2009">TTÜ 2009 eelarve</option>
+              <option value="TTÜ 2009 I" data-year="2009">TTÜ 2009 I muutmine</option>
+              <option value="TTÜ 2010" data-year="2010">TTÜ 2010 eelarve</option>
+              <option value="TTÜ 2010 I" data-year="2010">TTÜ 2010 I muutmine</option>
+              <option value="TTÜ 2011" data-year="2011">TTÜ 2011 eelarve</option>
+              <option value="TTÜ 2011 I" data-year="2011">TTÜ 2011 I muutmine</option>
+              <option value="TTÜ 2012" data-year="2012">TTÜ 2012 eelarve</option>
+              <option value="TTÜ 2012 I" data-year="2012">TTÜ 2012 I muutmine</option>
+              <option value="TTÜ 2013" data-year="2013">TTÜ 2013 eelarve</option>
+              <option value="TTÜ 2013 I" data-year="2013">TTÜ 2013 I muutmine</option>
+              <option value="TTÜ 2014" data-year="2014">TTÜ 2014 eelarve</option>
+              <option value="TTÜ 2014 I" data-year="2014">TTÜ 2014 I muutmine</option>
+              <option value="TTÜ 2015" data-year="2015">TTÜ 2015 eelarve</option>
+              <option value="TTÜ 2015 I" data-year="2015">TTÜ 2015 I muutmine</option>
+              <option value="TTÜ 2016" selected="" data-year="2016">TTÜ 2016 eelarve</option>
+              <option value="TTÜ 2016 I" data-year="2016">TTÜ 2016 muutmine</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="col-lg-4 control-label" for="object">Finantsallikas</label>
+          <div class="col-lg-4" id="objectSelectDiv">
+            <select id="object" name="object[]" data-placeholder="otsi..." class="select2-select select2-hidden-accessible" multiple="" tabindex="-1" aria-hidden="true">
+              <option value="01AE" data-oucode="10013">01AE; AE; Elektroenergeetika instituut</option>
+              <option value="01AK" data-oucode="21011">01AK; AK; Mäeinstituut</option>
+              <option value="01AT" data-oucode="10016">01AT; AT;Elektrotehnika instituut</option>
+              <option value="01AV" data-oucode="10011">01AV; AV; Energeetikateaduskonna dekanaat</option>
+              <option value="01B" data-oucode="20011">01B; B; TTÜ Tallinna Kolledž</option>
+              <option value="01CA" data-oucode="22011">01CA; CA; TTÜ Sertifitseerimisasutus</option>
+              <option value="01CD" data-oucode="33011">01CD; CD;Kaitse- ja julgeoleku-uuringute keskus</option>
+              <option value="01CI" data-oucode="32012">01CI; CI; Infotehnoloogia osakond</option>
+              <option value="01CM" data-oucode="34014">01CM; CM;Haridustehnoloogiakeskus</option>
+              <option value="01CT" data-oucode="34011">01CT; CT; Avatud Ülikool</option>
+              <option value="01CV" data-oucode="30002">01CV; CV; TTÜ Üliõpilasesindus</option>
+              <option value="01DK" data-oucode="21103">01DK; DK; Kardiovaskulaarse meditsiini instituut</option>
+              <option value="01EE" data-oucode="11012">01EE; EE; Ehitiste projekteerimise instituut</option>
+              <option value="01EG" data-oucode="11019">01EG; EA (EG); Insenerigraafika keskus</option>
+              <option value="01EK" data-oucode="11015">01EK; EK; Keskkonnatehnika instituut</option>
+              <option value="01EM" data-oucode="11016">01EM; EM; Mehaanikainstituut</option>
+              <option value="01EP" data-oucode="11013">01EP; EP; Ehitustootluse instituut</option>
+              <option value="01ET" data-oucode="11014">01ET; ET; Teedeinstituut</option>
+              <option value="01EV" data-oucode="11011">01EV; EV; Ehitusteaduskonna dekanaat</option>
+              <option value="01GI" data-oucode="21011">01GI; NG;Geoloogia Instituut</option>
+              <option value="01HH" data-oucode="12012">01HH; HH; Avaliku halduse instituut</option>
+              <option value="01HL" data-oucode="12013">01HL; HL; Keeltekeskus</option>
+              <option value="01HO" data-oucode="12016">01HO; HO;Õiguse instituut</option>
+              <option value="01HP" data-oucode="12017">01HP; HP;Tööstuspsühholoogia instituut</option>
+              <option value="01HPI" data-oucode="12017">01HPI; HP;HPI; Tööstuspsühholoogia instituut</option>
+              <option value="01HS" data-oucode="12014">01HS; HS; Spordikeskus</option>
+              <option value="01HV" data-oucode="12011">01HV; HV; Sotsiaalteaduskonna dekanaat</option>
+              <option value="01IA" data-oucode="13013">01IA; IA; Arvutitehnika instituut</option>
+              <option value="01IB" data-oucode="13018">01IB; IB;Biorobootika keskus</option>
+              <option value="01ID" data-oucode="13016">01ID; ID; Informaatikainstituut</option>
+              <option value="01IE" data-oucode="13015">01IE; IE; Thomas Johann Seebecki elektroonikainstituut</option>
+              <option value="01IS" data-oucode="13014">01IS; IS;  Automaatika instituut</option>
+              <option value="01IT" data-oucode="13012">01IT; IT; Arvutiteaduse instituut</option>
+              <option value="01IV" data-oucode="13011">01IV; IV; Infotehnika teaduskond</option>
+              <option value="01JU" data-oucode="30001">01JU; RE;Juhtimisstruktuurid (kuratoorium,auditikomitee)</option>
+              <option value="01KA" data-oucode="14012">01KA; KA; Keemiatehnika instituut</option>
+              <option value="01KA1" data-oucode="14012">01KA1; KA; instituudi reservfond</option>
+              <option value="01KC" data-oucode="14013">01KC; KC; Materjaliuuringute keskus</option>
+              <option value="01KL" data-oucode="14017">01KL; KL; Anorgaaniliste materjalide teaduslaboratooriu</option>
+              <option value="01KM" data-oucode="14014">01KM; KM; Polümeermaterjalide instituut</option>
+              <option value="01KT" data-oucode="14015">01KT; KT; Toiduainete instituut</option>
+              <option value="01KV" data-oucode="14011">01KV; KV; Keemiateaduskonna dekanaat</option>
+              <option value="01KY" data-oucode="14016">01KY; KY; Materjaliteaduse instituut</option>
+              <option value="01ME" data-oucode="15017">01ME; ME; Masinaehituse instituut</option>
+              <option value="01MH" data-oucode="15012">01MH; MH;  Mehhatroonika instituut</option>
+              <option value="01ML" data-oucode="15015">01ML; ML; Mehaanika ja metroloogia katselaboratoorium</option>
+              <option value="01MS" data-oucode="15016">01MS; MS; Soojustehnika instituut</option>
+              <option value="01MT" data-oucode="15014">01MT; MT; Materjalitehnika instituut</option>
+              <option value="01MV" data-oucode="15011">01MV; MV; Mehaanikateaduskonna dekanaat</option>
+              <option value="01NB" data-oucode="21101">01NB; DB; Biomeditsiinitehnika keskus</option>
+              <option value="01NR" data-oucode="21014">01NR; NR; Raamatukogu</option>
+              <option value="01NRM" data-oucode="21018">01NRM; NM;TTÜ muuseum</option>
+              <option value="01NS" data-oucode="21013">01NS; NS;Meresüsteemide instituut</option>
+              <option value="01NT" data-oucode="20014">01NT; NT; TTÜ Tartu Kolledž</option>
+              <option value="01NY" data-oucode="21012">01NY; NY;TTÜ Küberneetika Instituut</option>
+              <option value="01PA" data-oucode="35011">01PA; PA; Raamatupidamise ja eelarve osakond</option>
+              <option value="01PK" data-oucode="36012">01PK; PK;Kinnisvaraosakond</option>
+              <option value="01PL" data-oucode="31010">01PL; PL; Kantselei</option>
+              <option value="01PL1" data-oucode="31010">01PL1; PL;Üldosakond</option>
+              <option value="01PN" data-oucode="31010">01PN; PN; Siseauditi osakond</option>
+              <option value="01PO" data-oucode="34014">01PO; PO; Õppeosakond</option>
+              <option value="01PP" data-oucode="31015">01PP; PP; Personaliosakond</option>
+              <option value="01PR" data-oucode="31010">01PR; PR; Turundus-  ja kommunikatsiooniosakond</option>
+              <option value="01PS" data-oucode="31010">01PS; PS; Juriidiline osakond</option>
+              <option value="01PT" data-oucode="33011">01PT; PT; Teadusosakond</option>
+              <option value="01RE" data-oucode="30001">01RE; RE; Rektoraat</option>
+              <option value="01RV" data-oucode="20012">01RV; RV; TTÜ Virumaa Kolledž</option>
+              <option value="01S" data-oucode="20013">01S; S; TTÜ Kuressaare Kolledž</option>
+              <option value="01SK" data-oucode="21014">01SK; NR;  Kirjastus, J.Veerits</option>
+              <option value="01TA" data-oucode="16021">01TA; TA: Majandusarvestuse instituut</option>
+              <option value="01TE" data-oucode="16022">01TE; TE: Rahanduse ja majandusteooria instituut</option>
+              <option value="01TM" data-oucode="16020">01TM; TM: Ärikorralduse instituut</option>
+              <option value="01TS" data-oucode="16025">01TS; TS;Rahvusvaheliste suhete instituut</option>
+              <option value="01TV" data-oucode="16011">01TV; TV: Majandusteaduskonna dekanaat</option>
+              <option value="01V" data-oucode="20015">01V; V; TTÜ Eesti Mereakadeemia</option>
+              <option value="01V1" data-oucode="20015">01V1; V;EMERA tugistruktuuri haldamine</option>
+              <option value="01V10" data-oucode="20015">01V10; V;EMERA turundus ja kommunikatsioonitegevused</option>
+              <option value="01V11" data-oucode="20015">01V11; V;EMERA IT tegevused</option>
+              <option value="01V12" data-oucode="20015">01V12; V;EMERA ja TTÜ ühisõppekava "Väikelaevandus"</option>
+              <option value="01V13" data-oucode="20015">01V13; V;EMERA MSOS üliõpilaste toitlustus ja koolitus</option>
+              <option value="01V2" data-oucode="20015">01V2; V;EMERA üld- ja alusõppe keskus</option>
+              <option value="01V3" data-oucode="20015">01V3; V;EMERA raamatukogu</option>
+              <option value="01V4" data-oucode="20015">01V4; V;EMERA Simulaatorikeskus</option>
+              <option value="01V5" data-oucode="20015">01V5; V;EMERA Laevanduskeskus</option>
+              <option value="01V6" data-oucode="20015">01V6; V;EMERA Merenduskeskus</option>
+              <option value="01V7" data-oucode="20015">01V7; V;EMERA Üliõpilasnõukogu</option>
+              <option value="01V8" data-oucode="20015">01V8; V;EMERA Teadus-arenduskeskus tegevustoetus</option>
+              <option value="01V9" data-oucode="20015">01V9; V;EMERA Kaitseväe Ühendatud Õppeasutuste õppekava</option>
+              <option value="01YF" data-oucode="17013">01YF; YF: Füüsika instituut</option>
+              <option value="01YK" data-oucode="17014">01YK; YK: Keemiainstituut</option>
+              <option value="01YM" data-oucode="17015">01YM; YM: Matemaatikainstituut</option>
+              <option value="01YT" data-oucode="17017">01YT; YT: Geenitehnoloogia instituut</option>
+              <option value="01YV" data-oucode="17011">01YV; YV: Matemaatika-loodusteaduskonna dekanaat</option>
+              <option value="02GI" data-oucode="21011">02GI; NG;HTM rahastamine ja teaduskollektsioonid</option>
+              <option value="02NS" data-oucode="21013">02NS; NS:TTÜ Meresüsteemide Instituut (Infrastruktuuri</option>
+              <option value="02NY" data-oucode="21012">02NY; NY;TTÜ Küberneetika Instituut; Infrastruktuur</option>
+              <option value="02TI" data-oucode="16015">02TI; TI;Rahvusvaheliste programmide keskus</option>
+              <option value="110" data-oucode="80021">110; SÜ; Emeriitprofessorite ja -dotsentide  tasu</option>
+              <option value="AR12129" data-oucode="15014">AR12129; MT; R.Veinthal; SA Archimedes; 539 895  €</option>
+              <option value="AR12131" data-oucode="15014">AR12131; MT;R.Veinthal; SA Archimedes; 17.03.12-31.12.14</option>
+              <option value="AR12132" data-oucode="15014">AR12132; MT;P.Kulu; SA Archimedes; 01.07.12-31.12.14</option>
+              <option value="AR12133" data-oucode="15014">AR12133; MT; J.Kübarsepp; SA ARchimedes; 01.08.12-31.12.201</option>
+              <option value="AR12134" data-oucode="15014">AR12134; MT; P.Peetsalu; SA Archimedes; 01-06.12-31.12.2014</option>
+              <option value="AR14121" data-oucode="31010">AR14121; PV;R.Karu;SA Archimedes</option>
+              <option value="AR15009" data-oucode="15017">AR15009; ME;K.Karjust;SA Archimedes</option>
+              <option value="AR15017" data-oucode="31010">AR15017; PV;R.Karu;SA Archimedes</option>
+              <option value="AR15026" data-oucode="17015">AR15026; YM;M.Pihlak;SA Archimedes</option>
+              <option value="AR16022" data-oucode="34014">AR16022; PO;K.Kiissel;SA Archimedes (Tartu kontor)</option>
+              <option value="AR16031" data-oucode="15012">AR16031; MH;R.Laaneots; SA Archimedes</option>
+              <option value="AR16032" data-oucode="20015">AR16032; V;V.Kala;SA Archimedes</option>
+              <option value="AR16053" data-oucode="33011">AR16053; PT;M.Lunden;SA Archimedes</option>
+              <option value="AR16054" data-oucode="33011">AR16054; PT;M.Lunden;SA Archimedes</option>
+              <option value="AR16066" data-oucode="33011">AR16066; PT;R.Vilgats;SA Archimedes (Tartu kontor)</option>
+              <option value="AR8095" data-oucode="40007">AR8095; ÜP;Liina Kotkas;SA Archimedes;</option>
+              <option value="ARDORANY" data-oucode="21012">ARDORANY; NY;A.Salupere</option>
+              <option value="ASTRA1" data-oucode="70001">ASTRA1; KAP;I.Jakobson; SA Archimedes</option>
+              <option value="ASTRA2" data-oucode="33011">ASTRA2; PT;A.Auväärt SA Archimedes</option>
+              <option value="ASTRA3" data-oucode="34014">ASTRA3; PO;T.Vihand;SA Archimedes</option>
+              <option value="ASTRA3-1" data-oucode="34014">ASTRA3-1; PO;T.Plamus;SA Archimedes</option>
+              <option value="ASTRA3-2" data-oucode="34014">ASTRA3-2; PO;G.Piho;SA Archimedes</option>
+              <option value="ASTRA4" data-oucode="33011">ASTRA4; PT;A.Auväärt SA Archimedes</option>
+              <option value="ASTRA5-1" data-oucode="14011">ASTRA5-1; KV;M.Krunks SA Archimedes</option>
+              <option value="ASTRA5-10" data-oucode="11011">ASTRA5-10; EV;S.Idnurm; SA Archimedes</option>
+              <option value="ASTRA5-11" data-oucode="10011">ASTRA5-11; AV;A.Oorn; SA Archimedes</option>
+              <option value="ASTRA5-12" data-oucode="31015">ASTRA5-12; PP;I.Stõun;SA Archimedes</option>
+              <option value="ASTRA5-2" data-oucode="17011">ASTRA5-2; YV;T.Kanger; SA Archimedes</option>
+              <option value="ASTRA5-3" data-oucode="13011">ASTRA5-3; IV;A.Kurrel; SA Archimedes</option>
+              <option value="ASTRA5-4" data-oucode="11011">ASTRA5-4; EV;S.Idnurm; SA Archimedes</option>
+              <option value="ASTRA5-5" data-oucode="10011">ASTRA5-5; AV;A.Oorn; SA Archimedes</option>
+              <option value="ASTRA5-6" data-oucode="15011">ASTRA5-6; MV;T.Otto; SA Archimedes</option>
+              <option value="ASTRA5-7" data-oucode="14011">ASTRA5-7; KV;M.Krunks; SA Archimedes</option>
+              <option value="ASTRA5-8" data-oucode="17011">ASTRA5-8; YV;T.Kanger; SA Archimedes</option>
+              <option value="ASTRA5-9" data-oucode="13011">ASTRA5-9; IV;A.Kurrel; SA Archimedes</option>
+              <option value="ASTRA6" data-oucode="33011">ASTRA6; PT;A.Auväärt; SA Arhimedes</option>
+              <option value="ASTRA7" data-oucode="33013">ASTRA7; CE;T.Ojasalu; SA Archimedes</option>
+              <option value="B16" data-oucode="11013">B16; EP;2013;20 000€;R.liiase uurimisgrupp</option>
+              <option value="B18" data-oucode="11016">B18; EM;K.Tabri;01.09.2013-30.09.2016</option>
+              <option value="B19" data-oucode="10016">B19; AT;A.Belahcen;01.05.2013-30.04.2016</option>
+              <option value="B23" data-oucode="10016">B23; AT;J.Zakis;01.04.2013-31.12.2014</option>
+              <option value="B24" data-oucode="140161">B24; KY;I.Acik;2013-2015</option>
+              <option value="B28" data-oucode="17017">B28; YT;M.Kelve</option>
+              <option value="B36" data-oucode="21011">B36; AK;I.Valgma</option>
+              <option value="B37" data-oucode="13012">B37; IT;S.Nõmm</option>
+              <option value="B38" data-oucode="13015">B38; IE;Y.Le Moullec</option>
+              <option value="B39" data-oucode="16020">B39; TM;U.Venesaar</option>
+              <option value="B40" data-oucode="17017">B40; YT;M.Piirsoo</option>
+              <option value="B41" data-oucode="15017">B41; ME;E.Ševtšenko</option>
+              <option value="B42" data-oucode="12012">B42; HH;R.Krimmer</option>
+              <option value="B43" data-oucode="13016">B43; ID;K.Taveter;</option>
+              <option value="B46E" data-oucode="11011">B46E; EV;R.Liias, J.Kurnitski</option>
+              <option value="B48" data-oucode="17015">B48; YM;L.J.Päivärinta</option>
+              <option value="B49A" data-oucode="10011">B49A; AV;A.Rosin</option>
+              <option value="B50" data-oucode="14012">B50; KA;V.Oja</option>
+              <option value="B51" data-oucode="10016">B51; AT;I.Roasto</option>
+              <option value="B52" data-oucode="12012">B52; HH;V.Kostakis</option>
+              <option value="B53" data-oucode="13018">B53; IB;J.A.Tuhtan</option>
+              <option value="B54" data-oucode="14016">B54; KY;N.Revathi</option>
+              <option value="B55" data-oucode="15016">B55; MS;A.Volkova</option>
+              <option value="B56" data-oucode="15014">B56; MT;M.Antonov</option>
+              <option value="B57" data-oucode="16022">B57; TE;K.Jõeveer</option>
+              <option value="B58" data-oucode="17014">B58; YK;D.Kananovich</option>
+              <option value="B60" data-oucode="17017">B60; YT;A.Olspert</option>
+              <option value="B61" data-oucode="17017">B61; YT;P.Spuul</option>
+              <option value="B62" data-oucode="17014">B62; YK;P.Starkov</option>
+              <option value="BAAS" data-oucode="99999">BAAS; BK; Teadusprojektide arendusfond</option>
+              <option value="BAK" data-oucode="21011">BAK; AK;Baasfinantseerimine</option>
+              <option value="BAT" data-oucode="10016">BAT; AT;Baasfinantseerimine</option>
+              <option value="BAV" data-oucode="10011">BAV; AV;Baasfinantseerimine</option>
+              <option value="BEV" data-oucode="11011">BEV; EV;Baasfinantseerimine</option>
+              <option value="BF14" data-oucode="17017">BF14; YT; T.Timmusk, baasfin.(2006-2008), 150  000 kr</option>
+              <option value="BFGI" data-oucode="21011">BFGI; NG;Baasfinantseerimine</option>
+              <option value="BFNS" data-oucode="21013">BFNS; NS: TTÜ Meresüsteemide Instituudi baasfinantseeri</option>
+              <option value="BFNS01" data-oucode="21013">BFNS01; NS;I.Lips;Mereökoloogia labori analüüsid</option>
+              <option value="BHV" data-oucode="12011">BHV; HV;Baasfinantseerimine</option>
+              <option value="BIV" data-oucode="13011">BIV; IV;Baasfinantseerimine</option>
+              <option value="BKV" data-oucode="14011">BKV; KV;Baasfinantseerimine</option>
+              <option value="BMV" data-oucode="15011">BMV; MV;Baasfinantseerimine</option>
+              <option value="BNT" data-oucode="20014">BNT; NT;Baasfinantseerimine</option>
+              <option value="BNY" data-oucode="21012">BNY; NY;A.Salupere</option>
+              <option value="BR" data-oucode="20012">BR; RV;TTÜ Virumaa Kolledž</option>
+              <option value="BTV" data-oucode="16011">BTV; TV;Baasfinantseerimine</option>
+              <option value="BYF" data-oucode="17013">BYF; YF;teaduskonnasisene baasfinantseerimine</option>
+              <option value="BYKL" data-oucode="17014">BYKL; YK;M.Lopp;Teaduskonnasisene baasfin</option>
+              <option value="BYM" data-oucode="17015">BYM; YM;teaduskonnasisene baasfinantseerimine</option>
+              <option value="BYV" data-oucode="17011">BYV; YV;Baasfinantseerimine</option>
+              <option value="DAR16024" data-oucode="21013">DAR16024; NS;S.Keevallik;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16025" data-oucode="17017">DAR16025; YT;P.Spuul;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16026" data-oucode="17017">DAR16026; YT;P.Spuul;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16027" data-oucode="17015">DAR16027; YM;G.Tamberg;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16028" data-oucode="13011">DAR16028; IV;E.Petlenkov;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16029" data-oucode="10016">DAR16029; AT;D.Vinnikov;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16030" data-oucode="14011">DAR16030; KV;I.Oja Acik;SA Archimedes (Tartu kontor)</option>
+              <option value="DAR16051" data-oucode="11011">DAR16051; EV;R.Liias; SA Archimedes</option>
+              <option value="DAR16052" data-oucode="16011">DAR16052; TV;K.Jõeveer; SA Archimedes</option>
+              <option value="DORA4" data-oucode="21011">DORA4; NG;Välistudengite fin toetus</option>
+              <option value="EITSA16" data-oucode="13011">EITSA16; IV;A.Kurreli, HITSA</option>
+              <option value="EITSA17" data-oucode="21012">EITSA17; NY;T.Uustalu;HITSA</option>
+              <option value="EITSA18" data-oucode="13014">EITSA18; IS;M.Jaanus;HITSA</option>
+              <option value="EITSA19" data-oucode="13016">EITSA19; ID;G.Piho;HITSA</option>
+              <option value="EITSA20" data-oucode="33013">EITSA20; CE;T.Varrak;HITSA</option>
+              <option value="EITSA22" data-oucode="20014">EITSA22; NT;L.Nei;HITSA</option>
+              <option value="EITSA23" data-oucode="211031">EITSA23; DE;P.Ross;HITSA</option>
+              <option value="EITSA24" data-oucode="16022">EITSA24; TE;A.Hazak;HITSA</option>
+              <option value="EITSA25" data-oucode="34011">EITSA25; CT;M.Aru;HITSA</option>
+              <option value="EITSA26" data-oucode="14014">EITSA26; KM;T.Plamus;HITSA (omafin ASTRA3-1-st)</option>
+              <option value="EKY" data-oucode="14016">EKY; KY: Keemia ja materjaliteaduse tippkeskus</option>
+              <option value="ERALDIS" data-oucode="99999">ERALDIS; Ülikooli üldkulude katteks võetav eraldis</option>
+              <option value="ERALDIS1" data-oucode="99999">ERALDIS1; Sihtfin.projektidelt kogutav overhead</option>
+              <option value="ETAG13159" data-oucode="11016">ETAG13159; EM;A.Kartušinkski;Eesti Teadusagentuur</option>
+              <option value="ETAG13160" data-oucode="12012">ETAG13160; HH;R.Kattel;Eesti Teadusagentuur</option>
+              <option value="ETAG13161" data-oucode="17017">ETAG13161; YT;T.Timmusk;Eesti Teadusagentuur</option>
+              <option value="ETAG15028" data-oucode="14016">ETAG15028; KY;S.Bereznev;SA Eesti Teadusagentuur</option>
+              <option value="ETAG16014" data-oucode="21012">ETAG16014; NY;T.Soomere;SA Eesti Teadusagentuur</option>
+              <option value="ETAG16021" data-oucode="200131">ETAG16021; S; A.Keerberg; SA ETAG</option>
+              <option value="ETAG16023" data-oucode="13011">ETAG16023; IV;G.Jervan; SA ETAG</option>
+              <option value="ETAG16063" data-oucode="21011">ETAG16063; NG;V.Karu;SA ETAG</option>
+              <option value="EVSK" data-oucode="11011">EVSK; EV;sisekäive,üldkulueraldiste kogumine inst-delt</option>
+              <option value="F13012" data-oucode="17014">F13012; YK;M.Koel;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F15027" data-oucode="15017">F15027; ME;K.Karjust;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F15033" data-oucode="11013">F15033; EP;R.Liias;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16002" data-oucode="211031">F16002; DE;P.Ross;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16015" data-oucode="20012">F16015; RV;M.Roosileht;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16056" data-oucode="13015">F16056; IE;O.Märtens;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16057" data-oucode="200121">F16057; RV;M.Roosileht;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16058" data-oucode="200131">F16058; S;I.Tilts;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16059" data-oucode="16022">F16059; TE;A.Hazak;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="F16065" data-oucode="20013">F16065; S;A.Keerberg;Ettevõtluse Arendamise Sihtasutus</option>
+              <option value="G9258" data-oucode="20014">G9258; NT;A.Kuu;2012-2015</option>
+              <option value="G9369" data-oucode="14016">G9369; KY;M.Grossberg 2012-2015</option>
+              <option value="GI028" data-oucode="21011">GI028; NG;Teaduskogud 2011</option>
+              <option value="GI08091" data-oucode="21011">GI08091; NG; Sihtfin taristu</option>
+              <option value="GI08093" data-oucode="21011">GI08093; NG;Aparaat</option>
+              <option value="GR08094" data-oucode="21011">GR08094; NG;Uurimistoetuste GI %</option>
+              <option value="GR9031" data-oucode="21011">GR9031; NG;A.Poska</option>
+              <option value="GRJD4" data-oucode="21011">GRJD4; NG;Järeldoktor Triin Reitalu</option>
+              <option value="GRJD407" data-oucode="21011">GRJD407; NG;Tonarova</option>
+              <option value="H01" data-oucode="36012">H01; Ehitajate tee 5; Õppehoone nr 1</option>
+              <option value="H02" data-oucode="36012">H02; Ehitajate tee 5; Üliõpilasmaja</option>
+              <option value="H03" data-oucode="36012">H03; Ehitajate tee 5; Õppehoone nr 2</option>
+              <option value="H04" data-oucode="36012">H04; Ehitajate tee 5; Õppehoone nr 3</option>
+              <option value="H05" data-oucode="36012">H05; Ehitajate tee 5; Õppehoone nr 4</option>
+              <option value="H06" data-oucode="36012">H06; Ehitajate tee 5; Õppehoone nr 4b</option>
+              <option value="H07" data-oucode="36012">H07; Ehitajate tee 5; GI hoone</option>
+              <option value="H08" data-oucode="36012">H08; Ehitajate tee 5; Õppehoone nr 5</option>
+              <option value="H09" data-oucode="36012">H09; Ehitajate tee 5; Õppehoone nr 5B</option>
+              <option value="H10" data-oucode="36012">H10; Ehitajate tee 5; Õppehoone nr 6</option>
+              <option value="H11" data-oucode="36012">H11; Ehitajate tee 5; Õppehoone nr 7</option>
+              <option value="H12" data-oucode="36012">H12; Akadeemia tee 1/Ehitajate tee 7; Raamatukogu</option>
+              <option value="H13" data-oucode="36012">H13; Akadeemia tee 3; Õppehoone nr 10</option>
+              <option value="H14" data-oucode="36012">H14; Akadeemia tee 15; Loodusteaduste maja</option>
+              <option value="H15" data-oucode="36012">H15; Akadeemia tee 15a; ICT maja</option>
+              <option value="H16" data-oucode="36012">H16; Raja 15a; Mektory maja</option>
+              <option value="H17" data-oucode="36012">H17; Mäepealse 3; Autotranspordi ja ehituskonstr.labor</option>
+              <option value="H18" data-oucode="36012">H18; Mäepealse 3; Testhoone</option>
+              <option value="H19" data-oucode="36012">H19; Teaduspargi 5; Puidumaja</option>
+              <option value="H20" data-oucode="36012">H20; Vana-Mustamäe 48; Glehni loss</option>
+              <option value="H21" data-oucode="36012">H21; Tähetorni 2; TTÜ tähetorn</option>
+              <option value="H22" data-oucode="36012">H22; Männiliiva 1; Tekstiilimaja</option>
+              <option value="H23" data-oucode="36012">H23; Männiliiva 7; Spordihoone</option>
+              <option value="H24" data-oucode="36012">H24; Akadeemia tee 5a; Ühiselamu nr 7</option>
+              <option value="H25" data-oucode="36012">H25; Akadeemia tee 7a; Korterelamu</option>
+              <option value="H26" data-oucode="36012">H26; Akadeemia tee 5; Ühiselamu nr 1</option>
+              <option value="H27" data-oucode="36012">H27; Akadeemia tee 7; Ühiselamu nr 2</option>
+              <option value="H28" data-oucode="36012">H28; Akadeemia tee 7; Maa-alune parkla</option>
+              <option value="H29" data-oucode="36012">H29; Akadeemia tee 7; Ühiselamu nr 3</option>
+              <option value="H30" data-oucode="36012">H30; TTÜ Campus</option>
+              <option value="H31" data-oucode="36012">H31; Kopli 101; EMERA õppehoone</option>
+              <option value="H32" data-oucode="36012">H32; Kopli 101; Õuehoone</option>
+              <option value="H33" data-oucode="36012">H33; EMERA Viilhall</option>
+              <option value="H34" data-oucode="36012">H34; Kopli 116; Õppehoone nr 9</option>
+              <option value="H35" data-oucode="36012">H35; Rävala pst 13/1; Külaliskorter</option>
+              <option value="H37" data-oucode="36012">H37; Rävala pst 15; Keldriruum</option>
+              <option value="H38" data-oucode="36012">H38; Tõnismägi 14; Tallinna Kolledzi hoone</option>
+              <option value="H39" data-oucode="36012">H39; Tõnismägi 12; Veetorn</option>
+              <option value="H40" data-oucode="36012">H40; Siidisaba 7; Ühiselamu</option>
+              <option value="H41" data-oucode="36012">H41; Järveküla tee 75;Virumaa Kolledz õppehoone</option>
+              <option value="H42" data-oucode="36012">H42; Põlevkivi kompetentsikeskuse hoone</option>
+              <option value="H43" data-oucode="36012">H43; Järveküla tee 35; Õppehoone</option>
+              <option value="H44" data-oucode="36012">H44; Kalevi 4, Kohtla-Järve; Ühiselamu</option>
+              <option value="H45" data-oucode="36012">H45; Puiestee 76,78,80,80a;Tartu Kolledzi hooned</option>
+              <option value="H46" data-oucode="36012">H46; Tallinna 19; Kuressaare Kolledzi õppehoone</option>
+              <option value="H47" data-oucode="36012">H47; Tallinna 19; Kuressaare Kolledzi hoovimaja</option>
+              <option value="H48" data-oucode="36012">H48; Särghaua; Peahoone</option>
+              <option value="H49" data-oucode="36012">H49; Särghaua; Kivimaja</option>
+              <option value="H50" data-oucode="36012">H50; Särghaua; Söögimaja</option>
+              <option value="H51" data-oucode="36012">H51; Särghaua; Puursüdamike hoidlad ja teised hooned</option>
+              <option value="H52" data-oucode="36012">H52; Akadeemie tee 21;Küberneetika maja</option>
+              <option value="HTR" data-oucode="50000">HTR; RD: Haldus-tugistruktuuride reserv</option>
+              <option value="HTR1" data-oucode="35013">HTR1; HTR;Haldus-tugistruktuuride reserv</option>
+              <option value="IN15031" data-oucode="16020">IN15031; TM;U.Venesaar;SA Innove</option>
+              <option value="IN16060" data-oucode="12017">IN16060; HP;T.Rüütmann;SA Innove</option>
+              <option value="IUT0108" data-oucode="21011">IUT0108; NG;S.Veski</option>
+              <option value="IUT107" data-oucode="14012">IUT107; KA;M.Trapido;2013-2018</option>
+              <option value="IUT115" data-oucode="11012">IUT115; EE;T.Kalamees;2013-2018</option>
+              <option value="IUT115EK" data-oucode="11015">IUT115EK; EK;T.Kõiv;2013-2018</option>
+              <option value="IUT115EP" data-oucode="11013">IUT115EP; EP;I.Lill;2013-2018</option>
+              <option value="IUT115KC" data-oucode="14013">IUT115KC; KC;U.Kallavus;2013-2018</option>
+              <option value="IUT191" data-oucode="13013">IUT191; IA;J.Raik;2014-2019</option>
+              <option value="IUT1911" data-oucode="13015">IUT1911; IE;M.Min;2014-2019</option>
+              <option value="IUT1913" data-oucode="12012">IUT1913; HH;W.J.M.Drechsler;2014-2019</option>
+              <option value="IUT1917" data-oucode="11016">IUT1917; EM;T.Koppel;2014-2019</option>
+              <option value="IUT1918" data-oucode="17017">IUT1918; YT;T.Timmusk;2014-2019</option>
+              <option value="IUT192" data-oucode="21101">IUT192; DB;I.Fridolin;2014-2019</option>
+              <option value="IUT1922" data-oucode="21011">IUT1922; NG;Vaikmäe</option>
+              <option value="IUT1927" data-oucode="14015">IUT1927; KT;T.Paalme;2014-2019</option>
+              <option value="IUT1927A" data-oucode="17014">IUT1927A; YK;R.Vilu</option>
+              <option value="IUT1928" data-oucode="14016">IUT1928; KY;M.Grossberg;2014-2019</option>
+              <option value="IUT1929" data-oucode="15014">IUT1929; MT;J.Kübarsepp;2014-2019</option>
+              <option value="IUT1929A" data-oucode="14013">IUT1929A; KC;U.Kallavus</option>
+              <option value="IUT193" data-oucode="17017">IUT193; YT;E.Truve;2014-2019</option>
+              <option value="IUT1932" data-oucode="17014">IUT1932; YK;M.Lopp;2014-2019</option>
+              <option value="IUT194" data-oucode="140161">IUT194; KY;M.Krunks;2014-2019</option>
+              <option value="IUT196A" data-oucode="21013">IUT196A; NS;U.Lips;2014-2019</option>
+              <option value="IUT196B" data-oucode="21013">IUT196B; NS;U.Raudsepp;2014-2019</option>
+              <option value="IUT196C" data-oucode="21013">IUT196C; NS;I.Lips;2014-2019</option>
+              <option value="IUT198" data-oucode="17017">IUT198; YT;P.Palumaa;2014-2019</option>
+              <option value="IUT199" data-oucode="17014">IUT199; YK;N.Samel;2014-2019</option>
+              <option value="IUT3313" data-oucode="21012">IUT3313; NY;T.Uustalu</option>
+              <option value="IUT3313A" data-oucode="13012">IUT3313A; IT;J.Vain;2015-2020</option>
+              <option value="IUT3319" data-oucode="14017">IUT3319; KL;A.Trikkel</option>
+              <option value="IUT3320" data-oucode="17014">IUT3320; YK;M.Vaher</option>
+              <option value="IUT3324" data-oucode="21012">IUT3324; NY;A.Salupere</option>
+              <option value="IUT333" data-oucode="21012">IUT333; NY;T.Soomre</option>
+              <option value="IUT337" data-oucode="21012">IUT337; NY;M.Vendelin</option>
+              <option value="IUT339" data-oucode="13018">IUT339; IB;M.Kruusmaa</option>
+              <option value="IUTT1" data-oucode="21013">IUTT1; NS;U.Lips</option>
+              <option value="IUTT2" data-oucode="11014">IUTT2; ET;A.Ellmann</option>
+              <option value="IUTT3" data-oucode="32012">IUTT3; CI;T.Lepik</option>
+              <option value="IUTT4" data-oucode="14016">IUTT4; KY;M.Kauk-Kuusik</option>
+              <option value="IUTT5" data-oucode="21011">IUTT5; NG;O.Hints</option>
+              <option value="IUTTEKRK" data-oucode="21012">IUTTEKRK; NY;E.Meister</option>
+              <option value="IVUK" data-oucode="13011">IVUK; IV;IT akadeemia programm</option>
+              <option value="K102" data-oucode="15012">K102; MH;M.Tamre;metroloogia koolitus (E.Kulderknup,</option>
+              <option value="K104" data-oucode="34014">K104; SE: Eelõppeosakond</option>
+              <option value="K107" data-oucode="20011">K107; B;U.Meriste;Tallinna Kolledži koolitused</option>
+              <option value="K110" data-oucode="16025">K110; TS;Vene ärikeel</option>
+              <option value="K111" data-oucode="21011">K111; AK;täiendkoolitused</option>
+              <option value="K112" data-oucode="34011">K112; CT;Suvekool</option>
+              <option value="K113" data-oucode="34011">K113; CT;Suvekool</option>
+              <option value="K116" data-oucode="34011">K116; CT;MOOC kursuste läbiviimine</option>
+              <option value="K117" data-oucode="34011">K117; CT;MOOC kursuste läbiviimine</option>
+              <option value="K23" data-oucode="99999">K23; Täiendõpe kogumisobjekt</option>
+              <option value="K501" data-oucode="15012">K501; MH: A.Kiitam: Täiendkoolitus KM-ga</option>
+              <option value="K52" data-oucode="11012">K52; EE;K.Loorits;Ehitusins.euronormidealane t/koolitu</option>
+              <option value="K60" data-oucode="90001">K60; Tasemeõppe õppemaks (kogumisobjekt)</option>
+              <option value="K602" data-oucode="90001">K602; Välistudengite õppeteenused</option>
+              <option value="K62" data-oucode="16020">K62; TM: T.Piliste: ärikorralduse inst. täiendkoolitu</option>
+              <option value="K621" data-oucode="16020">K621; TM: T.Piliste: Töökeskkonnaspetsialisti akad. Koo</option>
+              <option value="K73" data-oucode="13011">K73; IV: IT TÄIENDKOOLITUS</option>
+              <option value="K731" data-oucode="13011">K731; IV; IT täiendkoolitus</option>
+              <option value="K77" data-oucode="16020">K77; TM: Ärikursus : T.Piliste</option>
+              <option value="K83IB" data-oucode="13018">K83IB; IB;M.Kruusmaa;M.Listak -09-03-00-26,09-03-0022 EIT</option>
+              <option value="K83IE" data-oucode="13015">K83IE; IE; Tiigriülikooli projekt</option>
+              <option value="K83IS" data-oucode="13014">K83IS; IS; Tiigriülikooli projekt</option>
+              <option value="K83IT" data-oucode="13012">K83IT; IT; Tiigriülikooli projekt</option>
+              <option value="K94" data-oucode="34011">K94; CT;R.Linnas;Energiasäästu koolitusprogramm;</option>
+              <option value="KAA" data-oucode="10016">KAA; AT:T.Lehtla: Elektriajam.ja jõuelektr.inst.täien</option>
+              <option value="KAE" data-oucode="10013">KAE; AE: Elektroenergeetika inst. täienduskoolitus</option>
+              <option value="KCE" data-oucode="33013">KCE; CE;Innovatsiooni- ja ettevõtluskeskus koolitused</option>
+              <option value="KCT" data-oucode="34011">KCT; CT: Avatud Ülikool</option>
+              <option value="KCT1" data-oucode="33013">KCT1; CE,Tehnoloogiakool</option>
+              <option value="KEA" data-oucode="11019">KEA; EA;Arhitektuuri- ja urbanistika täienduskoolitused</option>
+              <option value="KEA1" data-oucode="11019">KEA1; EA;Arhitektuuri- ja urbanistika täienduskoolitused</option>
+              <option value="KEK" data-oucode="11015">KEK; EK;Keskkonnatehnika instituudi täienduskoolitused</option>
+              <option value="KEK1" data-oucode="11015">KEK1; EK;Keskkonnatehnika instituudi täienduskoolitused</option>
+              <option value="KEP" data-oucode="11013">KEP; EP: Ehitustootluse inst.täiendkoolitus</option>
+              <option value="KEP1" data-oucode="11013">KEP1; EP: Ehitustootluse inst.täiendkoolitus km-ga</option>
+              <option value="KET" data-oucode="11014">KET; ET: Teedeinstituudi täiendkoolitus</option>
+              <option value="KHPI" data-oucode="12017">KHPI; HP;Tööstuspsühholoogia instituudi täiendkoolitused</option>
+              <option value="KHPI1" data-oucode="12017">KHPI1; HP;Tööstuspsühholoogia instituudi täiendkoolitused</option>
+              <option value="KIA" data-oucode="13013">KIA; IA: M.Kruus: Koolitus</option>
+              <option value="KID" data-oucode="13016">KID; ID: Informaatikainstituudi täiendõpe</option>
+              <option value="KIK11126" data-oucode="21013">KIK11126; NS;A.Erm;SA KIK;135 313,50 €;1.11.11 - 31.05.13</option>
+              <option value="KIK12137" data-oucode="21013">KIK12137; NS;A.Erm;25.06.2012-05.06.2014;78462 eur</option>
+              <option value="KIK13112" data-oucode="21013">KIK13112; NS;P.Lagemaa 01.06.2013-31.05.2015</option>
+              <option value="KIK14176" data-oucode="21013">KIK14176; NS;R.Uiboupin;Keskkonnainvesteeringute Keskus SA</option>
+              <option value="KIK150001" data-oucode="21011">KIK150001; NG;M.Rattas;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK15013" data-oucode="21011">KIK15013; AK;I.Valgma;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK15014" data-oucode="21011">KIK15014; NG;A.Heinsalu;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK15023" data-oucode="21013">KIK15023; NS;S.Enok;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16001" data-oucode="14014">KIK16001; KM;A.Krumme;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16005" data-oucode="21011">KIK16005; AK;M.Kolats;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16006" data-oucode="21011">KIK16006; AK;V.KAru;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16007" data-oucode="21011">KIK16007; AK;G.Grossfeldt;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16008" data-oucode="21011">KIK16008; AK;I.Valgma;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16009" data-oucode="20014">KIK16009; NT;L.Nei;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16010" data-oucode="21013">KIK16010; NS;N.Kolesova;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16011" data-oucode="21011">KIK16011; NG;O.Hints;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16062" data-oucode="14013">KIK16062; KC;U.Kallavus;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16064" data-oucode="15016">KIK16064; MS;A.Siirde;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIK16069" data-oucode="11015">KIK16069; EK;K.Pachel;SA Keskkonnainvesteeringute Keskus</option>
+              <option value="KIS" data-oucode="13014">KIS; IS: Täiendkoolitus: E. Rüstern</option>
+              <option value="KIV" data-oucode="13011">KIV; IV; M.Kruus; Õppetegevus IT Kolledzis</option>
+              <option value="KKM" data-oucode="14014">KKM; KM;A.Krumme;Täienduskoolitused km-ga</option>
+              <option value="KKM1" data-oucode="14014">KKM1; KM;A.Krumme;Täienduskoolitused km-ta</option>
+              <option value="KKT" data-oucode="14015">KKT; KT: Toiduainete instituudi täiendõpe</option>
+              <option value="KME" data-oucode="15017">KME; ME;Masinaehituse instituudi täienduskoolitus</option>
+              <option value="KME1" data-oucode="15017">KME1; ME;Masinaehituse instituudi täienduskoolitus</option>
+              <option value="KMH" data-oucode="15012">KMH; MH: Mehhatroonikainstituut - koolitus</option>
+              <option value="KND" data-oucode="21102">KND; ND; TTÜ Tehnomeedikumi täienduskoolitused km-ga</option>
+              <option value="KND1" data-oucode="21102">KND1; ND; TTÜ Tehnomeedikumi täienduskoolitused km-ta</option>
+              <option value="KNG" data-oucode="21011">KNG; NG; Geoloogia instituut koolitused km-ga</option>
+              <option value="KNG1" data-oucode="21011">KNG1; NG; Geoloogia instituut koolitused km-ta</option>
+              <option value="KNT" data-oucode="20014">KNT; NT; TTÜ Tartu Kolledži täiendkoolitus</option>
+              <option value="KRV" data-oucode="20012">KRV; RV: Virumaa Kolledzi täiendkoolitus</option>
+              <option value="KRV1" data-oucode="20012">KRV1; RV; Virumaa Kolledž täienduskoolitus km-ta</option>
+              <option value="KSC" data-oucode="20013">KSC; S;Kuressaare Kolledži täienduskoolitused (km-ga)</option>
+              <option value="KSC1" data-oucode="20013">KSC1; S;Kuressaare Kolledži täienduskoolitused (km-ta)</option>
+              <option value="KTA" data-oucode="16021">KTA; TA: Majandusarvestuse instituut, täiendkoolitus</option>
+              <option value="KTA1" data-oucode="16021">KTA1; TA: Majandusarvestuse instituut, täiendkoolitus K</option>
+              <option value="KTK" data-oucode="34011">KTK; CT(TK): Majanduskoolitukeskus, täiendkoolitus</option>
+              <option value="KVC" data-oucode="20015">KVC; V;EMERA täiendusõppe keskus (koolitus km-ga)</option>
+              <option value="KVC1" data-oucode="20015">KVC1; V;EMERA täiendusõppekeskus (koolitus km-ta)</option>
+              <option value="LD15092" data-oucode="33011">LD15092; CD;K.Idla;Kaitseministeerium</option>
+              <option value="LD15092A" data-oucode="13014">LD15092A; IS;B.Gordon;</option>
+              <option value="LEP10025" data-oucode="10016">LEP10025; AT;A.Kilk;GOLIATH Wind OÜ;8.02.2010;400kr/h+km</option>
+              <option value="LEP11025" data-oucode="15014">LEP11025; MT;R.Veinthal;Norma AS;18.03.11-31.12.2016</option>
+              <option value="LEP11033" data-oucode="21013">LEP11033; NS;J.Elken;K.Enno Arhitektuuribüroo;18 406,55 eur</option>
+              <option value="LEP12058" data-oucode="15014">LEP12058; MT;R.Veinthal;Ropeye OÜ;2.03-20.12.2012</option>
+              <option value="LEP12065" data-oucode="14016">LEP12065; KY;M.Kauk;Crystalsol OÜ;01.04.2012-30.09.2013</option>
+              <option value="LEP12116" data-oucode="14017">LEP12116; KL;R.Kuusik; Eesti Energia AS; esit.kp.31.12.2013</option>
+              <option value="LEP12121" data-oucode="10016">LEP12121; AT;A.Rosin; Elering AS, Tarbimise juhtimine-</option>
+              <option value="LEP13106" data-oucode="21011">LEP13106; AK;I.Valgma;AS Kunda Nordic Tsement</option>
+              <option value="LEP13118" data-oucode="10013">LEP13118; AE;I.Palu;Elering AS;26.03.13-31.12.13</option>
+              <option value="LEP13180" data-oucode="15016">LEP13180; MS;D.Nešumajev;Eesti Energia Õlitööstus AS</option>
+              <option value="LEP14030" data-oucode="15016">LEP14030; MS;T.Pihu;Eesti Energia Narva Elektrijaamad AS</option>
+              <option value="LEP14036" data-oucode="21013">LEP14036; NS;U.Lips;Ramboll Eesti AS</option>
+              <option value="LEP14050" data-oucode="21011">LEP14050; AK;I.Valgma;Horizon Tselluloosi ja Paberi AS</option>
+              <option value="LEP14076" data-oucode="15017">LEP14076; ME;T.Otto;Eesti Rakenduslingvistika Ühing</option>
+              <option value="LEP14078" data-oucode="15017">LEP14078; EL;D.Antov;Tallinna Transpordiamet</option>
+              <option value="LEP14083" data-oucode="10016">LEP14083; AT;Tõnu Lehtla; Ubik Solutions OÜ</option>
+              <option value="LEP14114" data-oucode="13014">LEP14114; IS; A.Udal; Finetrek OÜ</option>
+              <option value="LEP14130" data-oucode="21011">LEP14130; AK;I.Valgma;Alpter Grupp OÜ</option>
+              <option value="LEP14135" data-oucode="33013">LEP14135; CE -T.Varrak;Elgery Group  OÜ</option>
+              <option value="LEP14148" data-oucode="21013">LEP14148; NS;U.Lips; SA Säästva Eesti Instituut...</option>
+              <option value="LEP14148A" data-oucode="16020">LEP14148A; TM;Ü.Erlich;SA Säästva Eesti Instituut</option>
+              <option value="LEP14160" data-oucode="13014">LEP14160; IS;A.Udal; Decto OÜ</option>
+              <option value="LEP14167" data-oucode="33011">LEP14167; CD;K.Idla;Kaitseministeerium jt.</option>
+              <option value="LEP14177" data-oucode="11013">LEP14177; EP;L.Raado;Kunda Nordic Tsement AS</option>
+              <option value="LEP15006" data-oucode="10016">LEP15006; AT;T.Lehtla;Ubik Solutions OÜ</option>
+              <option value="LEP15011" data-oucode="11012">LEP15011; EE;T.Kalamees;Tallinna Linnavaraamet</option>
+              <option value="LEP15015" data-oucode="10013">LEP15015; AE;J.Kilter;Estonian Cell AS</option>
+              <option value="LEP15016" data-oucode="17014">LEP15016; YK;M.Kaljurand;Toidu- ja Ferment.Arenduskeskus AS</option>
+              <option value="LEP15018" data-oucode="11014">LEP15018; ET;A.Aavik;Tallinna Kommunaalamet</option>
+              <option value="LEP15019" data-oucode="21013">LEP15019; NS;U.Lips;Saarte Liinid AS</option>
+              <option value="LEP15028" data-oucode="14015">LEP15028; KT;S.Adamberg;Solbritt AS</option>
+              <option value="LEP15036" data-oucode="15016">LEP15036; MS;I.Klevtsov;Eesti Energia Narva Elektrijaamad AS</option>
+              <option value="LEP15039" data-oucode="21011">LEP15039; AK;I.Valgma;Lemminkäinen Eesti AS</option>
+              <option value="LEP15044" data-oucode="13012">LEP15044; IT;T.Tammet;Politsei- ja Piirivalveamet</option>
+              <option value="LEP15045" data-oucode="15012">LEP15045; MH; M.Tamre;Baltic Workboats AS</option>
+              <option value="LEP15046" data-oucode="21013">LEP15046; NS;T.Kõuts;Paldiski Sadamate AS</option>
+              <option value="LEP15049" data-oucode="11013">LEP15049; EP;E.Pikas;Riigi Kinnisvara AS</option>
+              <option value="LEP15052" data-oucode="14012">LEP15052; KA;V.Oja;Baltimere Invest AS</option>
+              <option value="LEP15054" data-oucode="11012">LEP15054; EE;J.Kurnitski;Tallinna Linnakantselei</option>
+              <option value="LEP15058" data-oucode="21013">LEP15058; NS;T.Liblik;Eesti Keskkonnauuringute Keskus</option>
+              <option value="LEP15062" data-oucode="10013">LEP15062; AE; I.Palu; VKG Energia OÜ</option>
+              <option value="LEP15064" data-oucode="11013">LEP15064; EP;R.Liias;Riigikinnisvara AS</option>
+              <option value="LEP15066" data-oucode="10013">LEP15066; AE; I.Palu; AS Elering</option>
+              <option value="LEP15068" data-oucode="33013">LEP15068; CE; T.Varrak;Horizon Tselluloosi ja Paberi AS</option>
+              <option value="LEP15070" data-oucode="10013">LEP15070; AE; I.Palu; AS Elering</option>
+              <option value="LEP15071" data-oucode="10013">LEP15071; AE; I. Palu; AS Elering</option>
+              <option value="LEP15077" data-oucode="10013">LEP15077; AE;I.Palu; Elering AS</option>
+              <option value="LEP15080" data-oucode="17014">LEP15080; YK;K.Tuulik;Politsei- ja Piirivalveamet</option>
+              <option value="LEP15082" data-oucode="11014">LEP15082; ET;T.Metsvahi;Eesti Standardikeskus MTÜ</option>
+              <option value="LEP15087" data-oucode="11014">LEP15087; ET;J.Idnurm;Maanteeamet</option>
+              <option value="LEP15088" data-oucode="10013">LEP15088; AE;I.Palu;Elering AS</option>
+              <option value="LEP15089" data-oucode="10013">LEP15089; AE;I.Palu;Elektrilevi OÜ</option>
+              <option value="LEP15094" data-oucode="10013">LEP15094; AE;J.Valtin;Elektrilevi OÜ</option>
+              <option value="LEP15099" data-oucode="10013">LEP15099; AE;H.Koduvere;Elering AS</option>
+              <option value="LEP15101" data-oucode="21011">LEP15101; AK;K.Kuusemäe;Kiviluks AS</option>
+              <option value="LEP15102" data-oucode="21011">LEP15102; AK;K.Kuusemäe;Kiviluks AS</option>
+              <option value="LEP15103" data-oucode="21011">LEP15103; AK;K.Kuusemäe;Kiviluks AS</option>
+              <option value="LEP15105" data-oucode="21011">LEP15105; AK;K.Kuusemäe;Lemminkäinen Eesti AS</option>
+              <option value="LEP15108" data-oucode="10013">LEP15108; AE;P.Taklaja;Elektrilevi OÜ</option>
+              <option value="LEP15110" data-oucode="21103">LEP15110; DK;P.Ross;Sentab Estonia OÜ</option>
+              <option value="LEP15111" data-oucode="33013">LEP15111; CE;E.Petlenkov;Ergo Insurance SE</option>
+              <option value="LEP15111A" data-oucode="13014">LEP15111A; IS;E.Petlenkov;Ergo Insurance SE</option>
+              <option value="LEP15115" data-oucode="10013">LEP15115; AE;I.Palu;Elektrilevi OÜ</option>
+              <option value="LEP15118" data-oucode="11012">LEP15118; EE;T.Kalamees;Haapsalu ja Läänemaa muuseumid</option>
+              <option value="LEP15119" data-oucode="11013">LEP15119; EP;L.Raado;Eesti Energia AS</option>
+              <option value="LEP15121" data-oucode="11016">LEP15121; EM;A.Klauson;Inseneribüroo Steiger OÜ</option>
+              <option value="LEP15123" data-oucode="10013">LEP15123; AE;A.Hamburg;Maailma Energ.nõukogu Eesti Rahvusk.</option>
+              <option value="LEP16003" data-oucode="16025">LEP16003; TS;K.Paadam;Eesti Arhitektuurikeskus MTÜ</option>
+              <option value="LEP16004" data-oucode="10016">LEP16004; AT;D.Vinnikov;Ubik Solutions OÜ</option>
+              <option value="LEP16005" data-oucode="10016">LEP16005; AT;D.Vinnikov;Ubik Solutions OÜ</option>
+              <option value="LEP16008" data-oucode="15017">LEP16008; ME;M.Eerme;Ripet OÜ</option>
+              <option value="LEP16011" data-oucode="33013">LEP16011; CE;J.Fomina;Bosmon OÜ</option>
+              <option value="LEP16012" data-oucode="15014">LEP16012; MT;V.Podgurski;Artech Carbon OÜ</option>
+              <option value="LEP16013" data-oucode="17014">LEP16013; YK;O.Parve;RMK</option>
+              <option value="LEP16016" data-oucode="21011">LEP16016; AK;I.Valgma;Nordkalk AS</option>
+              <option value="LEP16017" data-oucode="14015">LEP16017; KT;K.Laos;Baltic Seaweed Solutions OÜ</option>
+              <option value="LEP16018" data-oucode="21013">LEP16018; NS;R.Uiboupin;EAS</option>
+              <option value="LEP16023" data-oucode="11012">LEP16023; EE;E.Arumägi;Kodasema OÜ</option>
+              <option value="LEP16024" data-oucode="15014">LEP16024; MT;F.Sergejev;Roofit Solar Energy OÜ</option>
+              <option value="LEP16025" data-oucode="33013">LEP16025; CE;I.Penkov;William OÜ</option>
+              <option value="LEP16026" data-oucode="20015">LEP16026; V;M.Kopti;Reyktal AS</option>
+              <option value="LEP16027" data-oucode="11014">LEP16027; ET;A.Ellmann;Reach-U AS</option>
+              <option value="LEP16029" data-oucode="17014">LEP16029; YK;M.Lopp;Galv-Est AS</option>
+              <option value="LEP16032" data-oucode="11014">LEP16032; ET;A.Aavik;Lääne Regionaalne Maanteeamet</option>
+              <option value="LEP16033" data-oucode="15016">LEP16033; MS;A.Siirde;Elering AS</option>
+              <option value="LEP16034" data-oucode="33013">LEP16034; CE;M.Pohlak;Krause Disain OÜ</option>
+              <option value="LEP16035" data-oucode="16021">LEP16035; TA;J.Alver;Eesti Raamatupidajate Kogu</option>
+              <option value="LEP16038" data-oucode="21013">LEP16038; NS;A.Erm;škepast&amp;Puhkim AS</option>
+              <option value="LEP16039" data-oucode="10013">LEP16039; AE;I.Palu;Elektrilevi OÜ</option>
+              <option value="LEP16042" data-oucode="33013">LEP16042; CE;H.Kallakas;Fieldtec OÜ</option>
+              <option value="LEP16043" data-oucode="33013">LEP16043; CE;A.Goi;Abiprint OÜ</option>
+              <option value="LEP16044" data-oucode="17013">LEP16044; YF;L.Kurik;Muinsuskaitseamet</option>
+              <option value="LEP16045" data-oucode="17014">LEP16045; YK;P.Pitk;Estover Piimatööstus OÜ</option>
+              <option value="LEP16046" data-oucode="33013">LEP16046; CE;R.Vokk;TerveElu Terve OÜ</option>
+              <option value="LEP16047" data-oucode="10013">LEP16047; AE;J.Kilter;Cicer OÜ</option>
+              <option value="LEP16048" data-oucode="10016">LEP16048; AT;A.Rosin;Elektrilevi OÜ</option>
+              <option value="LEP16049" data-oucode="33013">LEP16049; CE;J.Fomina;Belmond Excelsior OÜ</option>
+              <option value="LEP16050" data-oucode="17017">LEP16050; YT;A.Valkna;myInnerGo OÜ</option>
+              <option value="LEP16051" data-oucode="17014">LEP16051; YK;R.Vilu; Toidu- ja Fermatsioonitehnoloogia</option>
+              <option value="LEP16053" data-oucode="17014">LEP16053; YK;R.Vilu; Toidu- ja Fermatsioonitehnoloogia</option>
+              <option value="LEP16054" data-oucode="17014">LEP16054; YK;R.Vilu; Toidu- ja Fermatsioonitehnoloogia</option>
+              <option value="LEP16055" data-oucode="15012">LEP16055; MH;M.Tamre;Eesti Rakenduslingvistika Ühing</option>
+              <option value="LEP16059" data-oucode="33013">LEP16059; CE; E.Ševtšenko; Ericsson Eesti AS</option>
+              <option value="LEP16060" data-oucode="14015">LEP16060; KT;L.Timberg; Heyday Organic OÜ</option>
+              <option value="LEP16061" data-oucode="200121">LEP16061; RV;O.Pihl; Portlabor OÜ</option>
+              <option value="LEP16062" data-oucode="11014">LEP16062; ET; A.Ellmann; Lemminkäinen Eesti AS</option>
+              <option value="LEP16063" data-oucode="11015">LEP16063; EK; K.Roosalu; OÜ Kekkilä Eesti</option>
+              <option value="LEP16065" data-oucode="33013">LEP16065; CE; P.Põdra; 3Selli OÜ</option>
+              <option value="LEP16066" data-oucode="200121">LEP16066; RV;K.Pirk;OÜ ATI Profiil</option>
+              <option value="LEP16069" data-oucode="21013">LEP16069; NS;I.Lips;Keskkonnaagentuur</option>
+              <option value="LEP16070" data-oucode="211031">LEP16070; DE;P.Ross;Celsius Healthcare OÜ</option>
+              <option value="LEP16071" data-oucode="14015">LEP16071; KT;S.Adamberg;AS Solbritt</option>
+              <option value="LEP16072" data-oucode="21013">LEP16072; NS;N.Kolesova;Keskkonnaamet</option>
+              <option value="LEP16073" data-oucode="10013">LEP16073; AE;I.Palu;Elering AS</option>
+              <option value="LEP16075" data-oucode="21013">LEP16075; NS;T.Liblik; Alkranel OÜ</option>
+              <option value="LEP16076" data-oucode="33013">LEP16076; CE;A.Goi; BOS Engineering OÜ</option>
+              <option value="LEP16077" data-oucode="14016">LEP16077; KY,O.Volobujeva;Skeleton Technologies OÜ</option>
+              <option value="LEP16080" data-oucode="11012">LEP16080; EE;I.Talvik;Tallinna Lauluväljak SA</option>
+              <option value="LEP16082" data-oucode="14015">LEP16082; KT;L.Timberg;OÜ Vaba Vili</option>
+              <option value="LEP16083" data-oucode="13012">LEP16083; IT;T.Lepik;Riigi Infosüsteemi Amet</option>
+              <option value="LEP16088" data-oucode="11012">LEP16088; EE;J.Kurnitski;SA Kredex</option>
+              <option value="LEP16089" data-oucode="33013">LEP16089; CE;A.Goi;Toru Arst OÜ</option>
+              <option value="LEP16090" data-oucode="21013">LEP16090; NS;U.Lips;AS Infragate Eesti</option>
+              <option value="LEP16096" data-oucode="21013">LEP16096; NS;U.Lips;Estonian Cell AS</option>
+              <option value="LEP16099" data-oucode="10013">LEP16099; AE;I.Palu;Elektrilevi OÜ</option>
+              <option value="LEP16100" data-oucode="20014">LEP16100; NT;M.Ivask;Põllumajandusuuringute Keskus</option>
+              <option value="LEP16101" data-oucode="13014">LEP16101; IS;L.Mõtus;Eesti Kaitsevägi</option>
+              <option value="LEP16105" data-oucode="10013">LEP16105; AE;P.Taklaja;Elering AS</option>
+              <option value="LEP16106" data-oucode="17014">LEP16106; YK;M.Kulp;VKG OIL AS</option>
+              <option value="LEP16107" data-oucode="13014">LEP16107; IS;A.Udal;Laser Diagnostic Instruments AS</option>
+              <option value="LEP589" data-oucode="17017">LEP589; YT: E.Truve: VTAK: 68 985 kr+KM: tähtajatu</option>
+              <option value="LEPGI08095" data-oucode="21011">LEPGI08095; NG;Lepingute GI %</option>
+              <option value="LEPGI230" data-oucode="21011">LEPGI230; NG;T.Kiipli</option>
+              <option value="LEPGI230A" data-oucode="21011">LEPGI230A; NG;T.Kiipli;füüsikalise meetodid</option>
+              <option value="LEPGI236" data-oucode="21011">LEPGI236; NG;Kaup-isotoopuuringud (välis)</option>
+              <option value="LEPGI236A" data-oucode="21011">LEPGI236A; NG;Kaup-isotoopuuringud (sise)</option>
+              <option value="LEPGI244" data-oucode="21011">LEPGI244; NG;A.Molodkov;</option>
+              <option value="LEPGI250" data-oucode="21011">LEPGI250; NG;Auto</option>
+              <option value="LEPGI251" data-oucode="21011">LEPGI251; NG;Paljundus</option>
+              <option value="LEPGI266" data-oucode="21011">LEPGI266; NG;A.Heinsalu; Paleolim</option>
+              <option value="LEPGI278" data-oucode="21011">LEPGI278; NG;G.Baranov; Fototööd</option>
+              <option value="LEPGI284" data-oucode="21011">LEPGI284; NG;K.Urtson;Kivimipurustamine</option>
+              <option value="LEPGI288" data-oucode="21011">LEPGI288; NG;T.Martma;Mass-spektomeeter (välis)</option>
+              <option value="LEPGI288A" data-oucode="21011">LEPGI288A; NG;T.Martma;Mass-spektomeeter (sise)</option>
+              <option value="LEPGI297" data-oucode="21011">LEPGI297; NG;O.Hints;SEM</option>
+              <option value="LEPGI297A" data-oucode="21011">LEPGI297A; NG;O.Hints;SEM</option>
+              <option value="LEPGI299" data-oucode="21011">LEPGI299; NG;A.Shogenova;Sofia Univercity</option>
+              <option value="LEPGI304" data-oucode="21011">LEPGI304; NG;M.Voolmaa;ICP-MS labor</option>
+              <option value="LEPGI307" data-oucode="21011">LEPGI307; NG;T.Alliksaar;Laserdiagraafi analüüsid</option>
+              <option value="LEPGI320" data-oucode="21011">LEPGI320; NG;O.Hints;PalStrat teenused</option>
+              <option value="LEPGI333" data-oucode="21011">LEPGI333; NG;S.Veski;Jütja</option>
+              <option value="LEPGI334" data-oucode="21011">LEPGI334; NG;O.Hints;Balticdiversity</option>
+              <option value="LEPGI342" data-oucode="21011">LEPGI342; NG;O.Hints;KESTA ERMAS</option>
+              <option value="LEPGI347" data-oucode="21011">LEPGI347; NG;A.Heinsalu;Karjala</option>
+              <option value="LEPGI350" data-oucode="21011">LEPGI350; NG;R.Vaikmäe;IAEA</option>
+              <option value="LEPGI351" data-oucode="21011">LEPGI351; NG;A.Soesoo, Geoprotsessid</option>
+              <option value="LEPGI356" data-oucode="21011">LEPGI356; NG;T.Alliksaar;Mereseire</option>
+              <option value="LEPGI357" data-oucode="21011">LEPGI357; NG;SH õppekeskus</option>
+              <option value="LEPGI359" data-oucode="21011">LEPGI359; NG;O.Hints;KESTA omafinantseering</option>
+              <option value="LEPK16037" data-oucode="16021">LEPK16037; TA;J.Alver;Rahandusministeerium</option>
+              <option value="LEPK16041" data-oucode="12012">LEPK16041; HH;v.Lember;PRAXIS</option>
+              <option value="LEPK16067" data-oucode="21103">LEPK16067; DK;P.Ross;erinevad rahastajad</option>
+              <option value="LEPK16067A" data-oucode="21103">LEPK16067A; DK;P.Ross;erinevad rahastajad</option>
+              <option value="LKM12179" data-oucode="15014">LKM12179; MT;J.Kers;Kaitseministeerium;19.11.2012</option>
+              <option value="LKM12182A" data-oucode="33011">LKM12182A; CD;Katrin Idla;Kaitseministeerium</option>
+              <option value="LKM12190" data-oucode="17014">LKM12190; YK;Katrin Idla;Kaitseministeerium</option>
+              <option value="LKM15083" data-oucode="13012">LKM15083; IT;R.Ottis;Kaitseministeerium</option>
+              <option value="LMIN14084" data-oucode="13016">LMIN14084; ID;I.Pappel, Välisministeerium</option>
+              <option value="LMIN14136" data-oucode="34014">LMIN14136; PV;M.Lugus;Välisministeerium</option>
+              <option value="LMIN15120" data-oucode="11013">LMIN15120; EP;I.Lill;Majandus-ja Kommunikatsiooniministeerium</option>
+              <option value="LMIN16019" data-oucode="21013">LMIN16019; NS;U.Lips;Keskkonnaministeerium</option>
+              <option value="LMIN16022" data-oucode="21013">LMIN16022; NS;U.Lips;Keskkonnaministeerium</option>
+              <option value="LMIN16028" data-oucode="11012">LMIN16028; EE;T.Kalamees;Keskkonnaministeerium</option>
+              <option value="LMIN16036" data-oucode="21013">LMIN16036; NS;I.Lips;Keskkonnaministeerium</option>
+              <option value="LMIN16057" data-oucode="20015">LMIN16057; V;T.Hunt;Majandus- ja kommunikatsiooniministeerium</option>
+              <option value="LMIN16058" data-oucode="15016">LMIN16058; MS;A.Siirde;Keskkonnaministeerium</option>
+              <option value="LMIN16086" data-oucode="12012">LMIN16086; HH;V.Lember;MKM</option>
+              <option value="LMIN16087" data-oucode="21013">LMIN16087; NS;K.Künnis-Beres;Keskkonnaministeerium</option>
+              <option value="LMIN16092" data-oucode="12016">LMIN16092; HO;A.Chochia;Välisministeerium</option>
+              <option value="LMIN16102" data-oucode="11012">LMIN16102; EE; J.Kurnitski;MKM</option>
+              <option value="LMIN16104" data-oucode="21013">LMIN16104; NS;R.Uiboupin;Rahandusministeerium</option>
+              <option value="LMIN16108" data-oucode="20015">LMIN16108; V;E.Merirand;MKM</option>
+              <option value="MEKTORY" data-oucode="40000">MEKTORY; ÜP;Mektory haldus-ja turundustegevus</option>
+              <option value="MEKTORY1" data-oucode="40000">MEKTORY1; ÜP;Mektory üritused</option>
+              <option value="MOB01" data-oucode="40008">MOB01; ÜP;M.Lunden;Mobilitas+</option>
+              <option value="PAT" data-oucode="10016">PAT; AT;L.Kütt;Elektrotehnika professuur</option>
+              <option value="PHAM" data-oucode="36012">PHAM; PH: Haldusosakond: Logistikatalitus</option>
+              <option value="PHEH" data-oucode="36012">PHEH; PH: Haldusosakond: Hooldustalitus</option>
+              <option value="PHET" data-oucode="36012">PHET; PH: Haldusosakond: Esitlustehnika talitus</option>
+              <option value="PHS" data-oucode="36012">PHS; PH: Haldusosakonna erivahendid</option>
+              <option value="PHT" data-oucode="36012">PHT; PH: Haldusosakond: Turva-Kallaste</option>
+              <option value="PID" data-oucode="13016">PID; ID;D.Draheim;Infoühiskonna tehnoloogiate prof</option>
+              <option value="PKA" data-oucode="14012">PKA; KA;V.Oja; Keemiatehnika professuur</option>
+              <option value="PKM" data-oucode="14014">PKM; KM;J.Kers;Puidutöötlemise professuur</option>
+              <option value="PME" data-oucode="15017">PME; ME;T.Otto;Tootmistehnika professuur</option>
+              <option value="PMT" data-oucode="15014">PMT; MT;J.Kübarsepp;Metallide tehnoloogia professuur</option>
+              <option value="PPT" data-oucode="31015">PPT; PP;Töötervishoid</option>
+              <option value="PRIA10029A" data-oucode="17014">PRIA10029A; YK - LUKUS 01.01.2012;avatud uuesti 16.07.13</option>
+              <option value="PROF" data-oucode="33013">PROF; CE;ProtoFond</option>
+              <option value="PTDOK" data-oucode="33011">PTDOK; PT;M.Piirsoo;Doktoriõppe stimuleerimise reservfond</option>
+              <option value="PUT1063" data-oucode="15014">PUT1063; MT;I.Hussainova;Eesti Teadusagentuur SA</option>
+              <option value="PUT1093" data-oucode="17015">PUT1093; YM;L.J.Päivärinta;Eesti Teadusagentuur SA</option>
+              <option value="PUT110" data-oucode="17017">PUT110; YT;U.Arumäe;01.01.2013-31.12.2016</option>
+              <option value="PUT1130" data-oucode="17017">PUT1130; YT;P.Spuul;Eesti Teadusagentuur SA</option>
+              <option value="PUT1142" data-oucode="12012">PUT1142; HH;R.Raudla;Eesti Teadusagentuur SA</option>
+              <option value="PUT1146" data-oucode="21012">PUT1146; NY;H.Herrmann;Eesti Teadusagentuur SA</option>
+              <option value="PUT1221" data-oucode="17017">PUT1221; YT;M.Speek;Eesti Teadusagentuur SA</option>
+              <option value="PUT126" data-oucode="21102">PUT126; ND;A.Samoson;01.01.2013-31.12.2016</option>
+              <option value="PUT1260" data-oucode="10016">PUT1260; AT;A.Belahcen;Eesti Teadusagentuur SA</option>
+              <option value="PUT1266" data-oucode="21012">PUT1266; NY;T.Torsvik;Eesti Teadusagentuur SA</option>
+              <option value="PUT1290" data-oucode="17014">PUT1290; YK;P.Starkov;Eesti Teadusagentuur SA</option>
+              <option value="PUT1300" data-oucode="15017">PUT1300; ME;J.Majak;Eesti Teadusagentuur SA</option>
+              <option value="PUT1305" data-oucode="12012">PUT1305; HH;A.-V. Piettarinen;Eesti Teadusagentuur SA</option>
+              <option value="PUT150" data-oucode="14016">PUT150; KY;V.Sõritski;01.01.2013-31.12.2016</option>
+              <option value="PUT265" data-oucode="14016">PUT265; KY;D.Meissner;01.01.2013-31.12.2016</option>
+              <option value="PUT315" data-oucode="16022">PUT315; TE;A.Hazak;2014-2017</option>
+              <option value="PUT378" data-oucode="21011">PUT378; NG;P.Männik 2014-2017</option>
+              <option value="PUT391" data-oucode="17014">PUT391; YK;M.Koel;2014-2016</option>
+              <option value="PUT431" data-oucode="20014">PUT431; NT;E.Rauwel;2014-2017</option>
+              <option value="PUT434" data-oucode="21012">PUT434; NY;A.Berezovski</option>
+              <option value="PUT481" data-oucode="21012">PUT481; NY;M.Tõnso</option>
+              <option value="PUT533" data-oucode="10013">PUT533; AE;I.Palu;2014-2016</option>
+              <option value="PUT568" data-oucode="17015">PUT568; YM;J.Janno;</option>
+              <option value="PUT611" data-oucode="21011">PUT611; NG;T.Martma 2015-2018</option>
+              <option value="PUT633" data-oucode="10016">PUT633; AT;O.Husev 2015-2016</option>
+              <option value="PUT652" data-oucode="11015">PUT652; EK;H.Voll 2015-2018</option>
+              <option value="PUT685" data-oucode="17017">PUT685; YT;S.Rüütel Boudinot 2015-2018</option>
+              <option value="PUT692" data-oucode="17014">PUT692; YK;R.Aav 2015-2018</option>
+              <option value="PUT698" data-oucode="17017">PUT698; YT;A.Valkna 2015-2016</option>
+              <option value="PUT744" data-oucode="10016">PUT744; AT;A.Blinov 2015-2018</option>
+              <option value="PUT763" data-oucode="21012">PUT763; NY;W.Jeltsch</option>
+              <option value="PUT773" data-oucode="12012">PUT773; HH;T.Kalvet 2015-2018</option>
+              <option value="PUT794" data-oucode="11012">PUT794; EE;A.Just 2015-2018</option>
+              <option value="PUT95" data-oucode="17014">PUT95; YK;D.Dobchev;01.01.2013-31.12.2015</option>
+              <option value="PUTJD127" data-oucode="21011">PUTJD127; NG;V.Raidla;Eesti Teadusagentuur SA</option>
+              <option value="PUTJD134" data-oucode="10016">PUTJD134; AT;T.Vaimann;Eesti Teadusagentuur SA</option>
+              <option value="PUTJD145" data-oucode="17017">PUTJD145; YT;L.Uusküla-Reimand;Eesti Teadusagentuur SA</option>
+              <option value="PUTJD566" data-oucode="15016">PUTJD566; MS;S.Link;Eesti Teadusagentuur SA</option>
+              <option value="PUTJD66" data-oucode="21101">PUTJD66; DB;J.Holmar;Eesti Teadusagentuur SA</option>
+              <option value="PUTJD72" data-oucode="12012">PUTJD72; HH;F.Bellucci;Eesti Teadusagentuur SA</option>
+              <option value="RDAF" data-oucode="50000">RDAF; RD: Arendusfond</option>
+              <option value="RDIR" data-oucode="50000">RDIR; RD: Innovats. ja rahvusvah. suh. prorektori reserv</option>
+              <option value="RDRR" data-oucode="50000">RDRR; RD: Rektori reserv</option>
+              <option value="RDTR1" data-oucode="50000">RDTR1; RD: Teadusprorektori reserv</option>
+              <option value="RDÕR" data-oucode="50000">RDÕR; RD: Õppeprorektori reserv</option>
+              <option value="RENT-10" data-oucode="60001">RENT-10; RENT:Kopli õppehoonete haldus</option>
+              <option value="RENT-A" data-oucode="60001">RENT-A; RENT: Tehnopol (Põlevkivi,energ.inst)</option>
+              <option value="RENT-AM" data-oucode="60001">RENT-AM; RENT; Logistikaosakonna majandustegevus</option>
+              <option value="RENT-EH" data-oucode="60001">RENT-EH; RENT: Kardioloogiakeskus alates 2011</option>
+              <option value="RENT-G" data-oucode="60001">RENT-G; RENT: Glehni loss</option>
+              <option value="RENT-G1" data-oucode="60001">RENT-G1; RENT: Glehni lossi sisekäive</option>
+              <option value="RENT-K" data-oucode="60001">RENT-K; RENT: Küberneetika inst, Akad. 21</option>
+              <option value="RENT-KT" data-oucode="60001">RENT-KT; RENT: Tartu Kolledz</option>
+              <option value="RENT-LT" data-oucode="60001">RENT-LT; RENT: Tallinna Linnateater (Gravimeetri</option>
+              <option value="RENT-M" data-oucode="60001">RENT-M; RENT: Ehitajate tee 5</option>
+              <option value="RENT-ML" data-oucode="60001">RENT-ML; RENT: Matemaatika-loodusteaduskonna h</option>
+              <option value="RENT-MT" data-oucode="60001">RENT-MT; RENT: Majandusteaduskonna hoone</option>
+              <option value="RENT-MÜÜK" data-oucode="60001">RENT-MÜÜK; RENT;</option>
+              <option value="RENT-MY" data-oucode="60001">RENT-MY; RENT: Mectory, Raja 15</option>
+              <option value="RENT-NY" data-oucode="60001">RENT-NY; RENT: Küberneetika instituut</option>
+              <option value="RENT-PHAM" data-oucode="60001">RENT-PHAM; RENT; Automajand</option>
+              <option value="RENT-R" data-oucode="60001">RENT-R; RENT: Rävala korter</option>
+              <option value="RENT-RK" data-oucode="60001">RENT-RK; RENT: Raamatukogu</option>
+              <option value="RENT-RV" data-oucode="60001">RENT-RV; RENT;Virumaa Kolledž</option>
+              <option value="RENT-T" data-oucode="60001">RENT-T; RENT; TTÜ tähetorni kulud</option>
+              <option value="RENT-TK" data-oucode="60001">RENT-TK; RENT;TTÜ ehitusteaduskond Tallinna Kolledzis</option>
+              <option value="RENT-TP3" data-oucode="60001">RENT-TP3; RENT; Akadeemia tee 15a rent, üür</option>
+              <option value="RENT-TP31" data-oucode="60001">RENT-TP31; RENT; Arvutifarm</option>
+              <option value="RENT-TS" data-oucode="60001">RENT-TS; RENT: TTÜ Sport, Ehitajate tee 4</option>
+              <option value="RENT-TS1" data-oucode="60001">RENT-TS1; RENT: TTÜ Sport, Ehitajate tee 4</option>
+              <option value="RENT-Y" data-oucode="60001">RENT-Y; RENT; Üliõpilasmaja</option>
+              <option value="RP14037" data-oucode="17017">RP14037; YT;K.Järve;Põllumajandusministeerium</option>
+              <option value="RP14038" data-oucode="17017">RP14038; YT;K.Järve;Põllumajandusministeerium</option>
+              <option value="RPOR07" data-oucode="21012">RPOR07; NY;E.Meister;HTM</option>
+              <option value="RPOR08" data-oucode="21012">RPOR08; NY;T.Alumäe;HTM</option>
+              <option value="RSAE" data-oucode="10013">RSAE; AE;Elektroenergeetika instituut-reserv</option>
+              <option value="RSAK" data-oucode="21011">RSAK; AK;Mäeinstituut-reserv</option>
+              <option value="RSCA" data-oucode="22011">RSCA; CA;Sertifitseerimisasutus-reserv</option>
+              <option value="RSEE" data-oucode="11012">RSEE; EE;Ehitise projekteerimise instituut-reserv</option>
+              <option value="RSEV" data-oucode="11011">RSEV; EV;Ehitusteaduskonna dekanaat-reserv</option>
+              <option value="RSGI" data-oucode="21011">RSGI; NG;TTÜ Geoloogia Instituudi reserv</option>
+              <option value="RSHV" data-oucode="12011">RSHV; HV;Sotsiaalteaduskonna dekanaat-reserv</option>
+              <option value="RSIA" data-oucode="13013">RSIA; IA;Arvutitehnika instituudi reserv</option>
+              <option value="RSIE" data-oucode="13015">RSIE; IE;Elektroonikainstituut-reserv</option>
+              <option value="RSKA" data-oucode="14012">RSKA; KA;Keemiatehnika instituut-reserv</option>
+              <option value="RSKC" data-oucode="14013">RSKC; KC;Materjaliuuringute keskus-reserv</option>
+              <option value="RSML" data-oucode="15015">RSML; ML;Mehaanika ja metroloogia katselab.-reserv</option>
+              <option value="RSMT" data-oucode="15014">RSMT; MT;Materjalitehnika instituut-reserv</option>
+              <option value="RSMV" data-oucode="15011">RSMV; MV;Mehaanikateaduskonna dekanaat-reserv</option>
+              <option value="RSNY" data-oucode="21012">RSNY; NY;Küberneetikainstituudi reserv</option>
+              <option value="RSRV" data-oucode="20012">RSRV; RV;Virumaa Kolledž-reserv</option>
+              <option value="RSRV1" data-oucode="200121">RSRV1; RV;Kütuste tehnoloogia teadus- ja katselab.-reserv</option>
+              <option value="RSTA" data-oucode="16021">RSTA; TA;Majandusarvestuse instituut-reserv</option>
+              <option value="RSYM" data-oucode="17015">RSYM; YM;Matemaatikainstituut-reserv</option>
+              <option value="RSYS" data-oucode="17010">RSYS; Y;Integreeritud süst. bioloogia keskus- reserv</option>
+              <option value="RSYT" data-oucode="17017">RSYT; YT;reservobj suletud 09.11.15;taasavatud 07.10.16</option>
+              <option value="RSYV" data-oucode="17011">RSYV; YV;Matemaatika-loodusteaduskonna dekanaat-reserv</option>
+              <option value="S146" data-oucode="33013">S146; CE; E.Teder; Tasulised teenused ja grandid</option>
+              <option value="S155" data-oucode="12012">S155; HH; Trükiste müük</option>
+              <option value="S188" data-oucode="11012">S188; EE; T.Hallang; Prof. H.Laulu Nimel. Fond</option>
+              <option value="S189" data-oucode="11013">S189; EP; E.Kindel;  Prof. H.Laulu Nimel. Fond</option>
+              <option value="S218" data-oucode="17017">S218; YT; Vivaarium</option>
+              <option value="S266" data-oucode="34014">S266; CM;M.Kusmin;EITSA;leping nr 4-7/08-13;</option>
+              <option value="S273" data-oucode="33013">S273; CE; IEK üldhaldamise kulud</option>
+              <option value="S280" data-oucode="21013">S280; NS;Laev Salme siselaekumised</option>
+              <option value="S286" data-oucode="17017">S286; YT;A.Veske;mikroskoopia tuumiklabori teenused</option>
+              <option value="S291" data-oucode="31010">S291; PV;M.Hein;IAESTE</option>
+              <option value="S346" data-oucode="15017">S346; ME;T.Otto;Tehnoloogiapõhine ettev.ja innovats.I/II</option>
+              <option value="S348" data-oucode="11019">S348; EA;D.Jäger;Euroopa arhitektuuri EVEM14 õppekava</option>
+              <option value="S349" data-oucode="211031">S349; DE;P.Ross;Sisekäive ja maksuvabad teenused</option>
+              <option value="S350" data-oucode="13014">S350; IS;E.Petlenkov;Õppeaine ISP0051 Rakenduslik andmes</option>
+              <option value="S352" data-oucode="13016">S352; ID; Suvekool BaSoTi 2016</option>
+              <option value="S353" data-oucode="21103">S353; DK;E.Vanker;Välisministeerium</option>
+              <option value="S354" data-oucode="13016">S354; ID;I.Pappel;Välisministeerium</option>
+              <option value="S355" data-oucode="34011">S355; CT;M.Lukas;Avatud Ülikooli konverentsiteenused</option>
+              <option value="S356" data-oucode="34014">S356; PV;R.Karu;Välisministeerium</option>
+              <option value="S359" data-oucode="21012">S359; NY;A.Salupere;Lepingute üldkulud</option>
+              <option value="S360" data-oucode="200121">S360; RV;K.Pirk;Toetused mittemajandustegevuseks</option>
+              <option value="S362" data-oucode="15016">S362; MS;A.Siirde; Eesti Energia AS</option>
+              <option value="S363" data-oucode="13016">S363; ID;I.Pappel;Välisministeerium</option>
+              <option value="S364" data-oucode="21103">S364; DK;P.Ross;Välisministeerium</option>
+              <option value="S365" data-oucode="34014">S365; PO;K.-A.Matson;Välisministeerium</option>
+              <option value="S366" data-oucode="20015">S366; V;K.Koit;Tallinna Spordi- ja Noorsooamet</option>
+              <option value="S367" data-oucode="20015">S367; V;K.Koit;Tallinna Spordi- ja Noorsooamet</option>
+              <option value="SAA" data-oucode="10016">SAA; AT; Elektriajam. ja jõuelektr. inst erivahendid</option>
+              <option value="SAE" data-oucode="10013">SAE; AE;  Elektroenergeetika inst.erivahendid</option>
+              <option value="SAK" data-oucode="21011">SAK; AK; Mäeinstituudi erivahendid</option>
+              <option value="SAM" data-oucode="10016">SAM; AT; Elektrotehnika aluste ja elektrimasin. inst.</option>
+              <option value="SCA" data-oucode="22011">SCA; CA; TTÜ Sertifitseerimisasutuse erivahendid</option>
+              <option value="SCC" data-oucode="200131">SCC; S;Väikelaevaehituse Kompetentsikeskus</option>
+              <option value="SCT" data-oucode="34011">SCT; CT;M.Lukas;Sisekäibe laekumised,käibemaksuta tul</option>
+              <option value="SCV" data-oucode="30002">SCV; CV; TTÜ Üliõpilasesindus</option>
+              <option value="SCV2" data-oucode="30002">SCV2; CV;Tudengiorganisatsioonid</option>
+              <option value="SEA" data-oucode="11019">SEA; EA;I.Raud</option>
+              <option value="SEE" data-oucode="11012">SEE; EE; Ehituse projekteerimise inst. erivahendid</option>
+              <option value="SEK" data-oucode="11015">SEK; EK; Keskkonnatehnika instituudi erivahendid</option>
+              <option value="SEK2" data-oucode="11015">SEK2; EK;E.Loigu;kütte ja ventilatsiooni õppetooli</option>
+              <option value="SEK3" data-oucode="11015">SEK3; EK;H.Voll;</option>
+              <option value="SEM" data-oucode="11016">SEM; EM;lõppenud teadusobjektide jäägid</option>
+              <option value="SEP" data-oucode="11013">SEP; EP; Ehitustootluse instituudi erivahendid</option>
+              <option value="SERI" data-oucode="80010">SERI; ÕT;Erialastipendiumid;SA Archimedes</option>
+              <option value="SERI2" data-oucode="80010">SERI2; ÕT;Erialastipendiumid;SA Archimedes</option>
+              <option value="SET" data-oucode="11014">SET; ET; Teedeinstituudi erivahendid</option>
+              <option value="SEV" data-oucode="11011">SEV; EV;lõppenud teadusobjektide jäägid</option>
+              <option value="SIA" data-oucode="13013">SIA; IA; Arvutitehnika inst. erivahendid</option>
+              <option value="SID" data-oucode="13016">SID; ID; Informaatikainstituudi erivahendid</option>
+              <option value="SIV" data-oucode="13011">SIV; IV; 10% teadusk. e/v laekumistest</option>
+              <option value="SKA" data-oucode="14012">SKA; KA; Keemiatehnika instituudi erivahendid</option>
+              <option value="SKA1" data-oucode="14012">SKA1; KA; Ühekordsed tellimustööd ja teenused</option>
+              <option value="SKA2" data-oucode="14012">SKA2; KA;keskkonnatehnika õppetool tööd ja teenused</option>
+              <option value="SKC" data-oucode="14013">SKC; KC; Materjaliuuringute keskuse erivahendid</option>
+              <option value="SKT" data-oucode="14015">SKT; KT: Toiduainete instituudi erivahendid</option>
+              <option value="SKV" data-oucode="14011">SKV; KV;V.Oja</option>
+              <option value="SME" data-oucode="15017">SME; ME: Masinaehituse instituudi erivahendid</option>
+              <option value="SMH" data-oucode="15012">SMH; MH: Mehhatroonika instituudi erivahendid</option>
+              <option value="SML" data-oucode="15015">SML; ML: Mehaanika ja metroloogia katselaboratooriumi </option>
+              <option value="SMS" data-oucode="15016">SMS; MS: Eraldised erivahenditelt (7%)</option>
+              <option value="SMT" data-oucode="15014">SMT; MT; Materjalitehnika instituudi erivahendid</option>
+              <option value="SMT1" data-oucode="15014">SMT1; MT; Materjalitehnika instituudi eraldised KM-ta</option>
+              <option value="SMT2" data-oucode="15014">SMT2; MT;Pindamislabori teenused</option>
+              <option value="SNM" data-oucode="21018">SNM; NM; Muuseumitoodete ja meenete tootmine ja müük</option>
+              <option value="SNR" data-oucode="21014">SNR; NR; Raamatukogu erivahendid</option>
+              <option value="SNS" data-oucode="21013">SNS; NS;TTÜ Eesti Meresüsteemide Instituudi REV laekum</option>
+              <option value="SNT" data-oucode="20014">SNT; NT; TTÜ Tartu Kolledži erivahendi</option>
+              <option value="SPO" data-oucode="34014">SPO; PO; Õppeosakonna erivahendid</option>
+              <option value="SPR" data-oucode="31010">SPR; PR;Meenete ost- ja müük (avatud uuesti 21.01.2013)</option>
+              <option value="SRV" data-oucode="20012">SRV; RV; Virumaa Kolledeži  halduskulud</option>
+              <option value="SS002" data-oucode="200121">SS002; RV Soone (end.KP); Põlevkivi instituudi teenused</option>
+              <option value="SS003" data-oucode="14014">SS003; KM;A.Krumme;Tekstiilitehnoloogia õppetool</option>
+              <option value="SS011" data-oucode="14014">SS011; KM; A.Viikna: Teenused</option>
+              <option value="SS012" data-oucode="14014">SS012; KM; A.Viikna, Polümeermaterj. inst. (KM)</option>
+              <option value="SS013" data-oucode="15016">SS013; MS;A.Konist; (AS) Soojustehnika inst. : USAID</option>
+              <option value="SS016" data-oucode="11014">SS016; ET; Uuringud; 31.12.2001</option>
+              <option value="SS020" data-oucode="15012">SS020; MH; A.Kiitam: Kvaliteeditehnika</option>
+              <option value="SS021" data-oucode="11016">SS021; EM; T.Koppel  EMD (KM-ga)</option>
+              <option value="SS023" data-oucode="14017">SS023; KL; R.Kuusik; MINER</option>
+              <option value="SS148" data-oucode="11016">SS148; EM; T.Koppel; Päästeameti Uurimiskeskuse</option>
+              <option value="SS160" data-oucode="15012">SS160; MH; M.Tamre: AS Norma</option>
+              <option value="SS165" data-oucode="16020">SS165; TM; U.Venesaar;Teaduslepingud</option>
+              <option value="SS174" data-oucode="17014">SS174; YK; M.Kaljurand;  Keemiainstituut , teenused</option>
+              <option value="SS179" data-oucode="15012">SS179; MH; P.Põdra: Konsultatsiooniteenused</option>
+              <option value="SS186" data-oucode="11013">SS186; EP; R.Liias, Tead.töö aruande kirjastamine</option>
+              <option value="SS191" data-oucode="15012">SS191; MH; I.Penkov; Teenus- ja tellimistööd</option>
+              <option value="SS226" data-oucode="21102">SS226; ND;EAS eeluuringute projektid</option>
+              <option value="SS234" data-oucode="21011">SS234; AK;Ingo Valgma;koolitus "Maavarade kaevandamise</option>
+              <option value="SS241" data-oucode="15017">SS241; ME;L.Roosimölder;DAAAM Baltic 2010</option>
+              <option value="SS25" data-oucode="11013">SS25; EP; TSEMENT</option>
+              <option value="SS255" data-oucode="21011">SS255; AK;I.Valgma;Mäenduse ja geoloogia teadusklubi</option>
+              <option value="SS258" data-oucode="17017">SS258; YT;P.Palumaa;Proteoomika teenuslaboratoorium</option>
+              <option value="SS261" data-oucode="10016">SS261; AT;T.Lehtla;doktorikool "Energia ja geotehnika"</option>
+              <option value="SS263" data-oucode="21011">SS263; AK;I.Valgma;labori teenused</option>
+              <option value="SS278" data-oucode="17017">SS278; YT;A.Veske;mikroskoopia tuumiklabori teenused</option>
+              <option value="SS279" data-oucode="21013">SS279; NS;Laev Salme käibemaksuga laekumised</option>
+              <option value="SS283" data-oucode="17014">SS283; YK;M.Kaljurand;Cambrex AS;20.01-31.12.2010;</option>
+              <option value="SS284" data-oucode="13015">SS284; IE;T.Rang;Balti Elektroonika konverents (BEC)</option>
+              <option value="SS285" data-oucode="16022">SS285; TE;A.Hazak; konverents</option>
+              <option value="SS293" data-oucode="21014">SS293; NR;J.Veerits;Eestikeelsete kõrgkooliõpikute</option>
+              <option value="SS295" data-oucode="21102">SS295; ND;K.Meigas;Sergei Nazarenko teaduskoostöö</option>
+              <option value="SS297" data-oucode="21102">SS297; ND;A.Samoson;NMR tulud ja kulud</option>
+              <option value="SS299" data-oucode="10013">SS299; AE;I.Palu;Elering OÜ ja Nelja Energia OÜ</option>
+              <option value="SS302" data-oucode="15017">SS302; ME;seminar "Paindtootmissüsteemid ja nende optimaa</option>
+              <option value="SS303" data-oucode="13015">SS303; IE;väikesed teenuslepingud;Clifton AS lep 110308</option>
+              <option value="SS304" data-oucode="13016">SS304; ID;I.Liiv;labor</option>
+              <option value="SS306" data-oucode="16022">SS306; TE;K.Lutsoja;Mälardaleni Ülikool;Nordpluss prog</option>
+              <option value="SS307" data-oucode="34014">SS307; CM;M.Kusmin;videokonverentsid</option>
+              <option value="SS308" data-oucode="13016">SS308; ID;e-riigi arendustehnoloogiate labor</option>
+              <option value="SS311" data-oucode="16011">SS311; TV;Ü.Ehrlich;17th International Scientific Confer.</option>
+              <option value="SS315" data-oucode="11013">SS315; EP;I.Lill;lõppenud teadustööde rahalised jäägid</option>
+              <option value="SS320" data-oucode="11012">SS320; EE;J.Pello;lepingute jäägid</option>
+              <option value="SS323" data-oucode="33013">SS323; CE;T.Varrak;Eesti Energia AS raamlep nr 47</option>
+              <option value="SS329" data-oucode="10016">SS329; AT;T.Lehtla</option>
+              <option value="SS332" data-oucode="17017">SS332; YT;A.Veske;IVIS Lumina teenused</option>
+              <option value="SS334" data-oucode="200121">SS334; RV; projekt Aerogel; 32500 eur</option>
+              <option value="SS337" data-oucode="10016">SS337; AT;T.Lehtla;Konverentside korraldamine</option>
+              <option value="SS340" data-oucode="211031">SS340; DE;eMeditsiini laboratoorium</option>
+              <option value="SS341" data-oucode="21103">SS341; DK; M.Viigimaa Teadusteenused</option>
+              <option value="SS342" data-oucode="17014">SS342; YK; R.Vilu EBKK loomine</option>
+              <option value="SS343" data-oucode="17014">SS343; YK;M.Kaljurand</option>
+              <option value="SS344" data-oucode="33011">SS344; PT;K.Idla</option>
+              <option value="SS346" data-oucode="15017">SS346; ME;F.Auriemma;</option>
+              <option value="SS347" data-oucode="17013">SS347; YF;P.Suurvarik</option>
+              <option value="SS353" data-oucode="15014">SS353; MT:I.Hussainova</option>
+              <option value="SS354" data-oucode="14014">SS354; KM;L.Luik;Põlevkivi ja taastuvkütuste teaduslabor</option>
+              <option value="SS357" data-oucode="21013">SS357; NS;J.Elken;Mektory satelliidiprojekt,tööpakett 3</option>
+              <option value="SS358" data-oucode="17013">SS358; YF;P.Suurvarik;Mektory satelliidiprojekt, tööpak.5</option>
+              <option value="SS360" data-oucode="11013">SS360; EP;I.Lill;Teadustööde jäägid</option>
+              <option value="SS361" data-oucode="11014">SS361; ET;A.Aavik; Teadusteenused</option>
+              <option value="SS362" data-oucode="17011">SS362; YV;M.Lopp; BOS konverentsid 2016,2018</option>
+              <option value="SS363" data-oucode="14016">SS363; KY;A.Öpik;Teadustööd</option>
+              <option value="SS364" data-oucode="21103">SS364; DK;M.Viigimaa;Teadustööd</option>
+              <option value="SS365" data-oucode="21011">SS365; NG;Särghaua õppekeskus</option>
+              <option value="SS366" data-oucode="21011">SS366; NG;T. Alliksaar; Laserdiagraafia analüüsid</option>
+              <option value="SS367" data-oucode="15017">SS367; ME;M.Eerme;Teadustööd (km-ga)</option>
+              <option value="SS371" data-oucode="10016">SS371; AT;D.Vinnikov;teadustööde jäägid</option>
+              <option value="SS372" data-oucode="21013">SS372; NS;I.Lips;Laboriteenused</option>
+              <option value="SS373" data-oucode="14014">SS373; KM;A.Krumme;</option>
+              <option value="SS374" data-oucode="11012">SS374; EE;L.Kadaru;KredEx SA</option>
+              <option value="SS375" data-oucode="15012">SS375; MH;M.Tamre</option>
+              <option value="SS376" data-oucode="13014">SS376; IS;L.Mõtus</option>
+              <option value="SS377" data-oucode="10013">SS377; AE;I.Palu;Kõrgepingetehnika lep jäägid</option>
+              <option value="SS378" data-oucode="10013">SS378; AE;I.Palu;Energiasüsteemide lep jäägid</option>
+              <option value="SS379" data-oucode="17014">SS379; YK;J.Gorbatšova;UniveR DID</option>
+              <option value="SS380" data-oucode="200131">SS380; S;A.Keerberg;Kompetentiskeskuse teadustööd km-ta</option>
+              <option value="SS381" data-oucode="17014">SS381; YK;S.Erm;Bioreaktorite süsteem</option>
+              <option value="SS382" data-oucode="17014">SS382; YK;M.Strandberg</option>
+              <option value="SS384" data-oucode="21012">SS384; NY;A.Salupere;PUT üldkulud</option>
+              <option value="SS385" data-oucode="21012">SS385; NY;H.Herrmann;EuroMech konverents</option>
+              <option value="SS386" data-oucode="21012">SS386; NY;Ü.Kotta;</option>
+              <option value="SS387" data-oucode="21012">SS387; NY;J.Janno</option>
+              <option value="SS388" data-oucode="21012">SS388; NY;J.Engelbrecht</option>
+              <option value="SS389" data-oucode="21012">SS389; NY;T.Uustalu</option>
+              <option value="SS390" data-oucode="21012">SS390; NY;T.Soomere</option>
+              <option value="SS391" data-oucode="21012">SS391; NY;T.Uustalu</option>
+              <option value="SS392" data-oucode="21012">SS392; NY;T.Uustalu</option>
+              <option value="SS393" data-oucode="21012">SS393; NY;T.Soomere</option>
+              <option value="SS394" data-oucode="21012">SS394; NY;E.Meister</option>
+              <option value="SS395" data-oucode="21012">SS395; NY;V.Kotkas</option>
+              <option value="SS396" data-oucode="17015">SS396; YM;J.Janno;</option>
+              <option value="SS397" data-oucode="13016">SS397; ID;D.Draheim</option>
+              <option value="SS398" data-oucode="13016">SS398; ID;K.Taveter;Uurimisrühm</option>
+              <option value="SS399" data-oucode="16020">SS399; TM;T.Piliste</option>
+              <option value="SS400" data-oucode="21018">SS400; NM;A.Tarvas HTM</option>
+              <option value="SS401" data-oucode="16022">SS401; TE;teadustegevuse rahastamise ühisfond</option>
+              <option value="SS402" data-oucode="20013">SS402; S;A.Keerberg</option>
+              <option value="SS403" data-oucode="13012">SS403; IT;R.Ottis</option>
+              <option value="SS404" data-oucode="21011">SS404; NG;M.Viiul</option>
+              <option value="SS405" data-oucode="10016">SS405; AT;A.Blinov</option>
+              <option value="SS406" data-oucode="15014">SS406; MT;M.Aghayan</option>
+              <option value="SS407" data-oucode="15014">SS407; MT;I.Hussainova</option>
+              <option value="SSEK" data-oucode="11015">SSEK; EK;Keskkonnatehnika instituudi tööd</option>
+              <option value="SSKY" data-oucode="14016">SSKY; KY; Materjaliteaduste instituudi teenustööd</option>
+              <option value="SSKY1" data-oucode="140161">SSKY1; KY;M.Krunks;Keemil.kiletehn teaduslabori teenused</option>
+              <option value="SSNB" data-oucode="21101">SSNB; DB; TTÜ Tehnomeedikum: tellimustööd, eksperthinnan</option>
+              <option value="SSTA" data-oucode="16021">SSTA; TA; Majandusarvestuse instituut-teenused</option>
+              <option value="STM" data-oucode="16020">STM; TM; Ärikorralduse instituudi erivahendid</option>
+              <option value="SYK" data-oucode="17014">SYK; YK; M.Kulp: Keemiainstituudi erivahendid</option>
+              <option value="T016" data-oucode="10016">T016; AT;D.Vinnikov 2011-2016</option>
+              <option value="TAR16012" data-oucode="11012">TAR16012; EE;J.Kurnitski;SA Archimedes</option>
+              <option value="TAR16012AT" data-oucode="10016">TAR16012AT; AT;D.Vinnikov;SA Archimedes</option>
+              <option value="TAR16012ME" data-oucode="15017">TAR16012ME; ME;M.Pohlak;SA Archimedes</option>
+              <option value="TAR16013" data-oucode="13018">TAR16013; IB;M.Kruusmaa;SA Archimedes</option>
+              <option value="TAR16013DB" data-oucode="21101">TAR16013DB; DB;I.Fridolin; SA Arcimedes</option>
+              <option value="TAR16013IA" data-oucode="13013">TAR16013IA; IA;J.Raik;SA Archimedes</option>
+              <option value="TAR16013IE" data-oucode="13015">TAR16013IE; IE;M.Min; SA Archimedes</option>
+              <option value="TAR16013NY" data-oucode="21012">TAR16013NY; NY;T.Uustalu; SA Archimedes</option>
+              <option value="TAR16016" data-oucode="14016">TAR16016; KY;L.Kotkas;SA Archimedes</option>
+              <option value="TAR16017" data-oucode="17014">TAR16017; YK;L.Kotkas;SA Archimedes</option>
+              <option value="TAR16018" data-oucode="17017">TAR16018; YT;L.Kotkas;SA Archimedes</option>
+              <option value="TAR16019" data-oucode="20014">TAR16019; NT:E.Rauwel;SA Archimedes</option>
+              <option value="TAR16020" data-oucode="21012">TAR16020; NY;E.Meister;SA Archimedes</option>
+              <option value="UPHH" data-oucode="12012">UPHH; HH;R.Kattel;</option>
+              <option value="V000" data-oucode="99999">V000; Objektita laekumine (ajutine)</option>
+              <option value="V15008" data-oucode="10013">V15008; AE;I.Palu;UAB Axis Tecnologies</option>
+              <option value="V15028" data-oucode="16025">V15028; TS; P.Müürsepp; King Sejong Institute Foundation</option>
+              <option value="V15028A" data-oucode="16025">V15028A; TS; V15028  finantsallika omafinantseering</option>
+              <option value="V16011" data-oucode="16020">V16011; TM;G.Klaus-Prause;Euroopa Komisjon</option>
+              <option value="V16018" data-oucode="11016">V16018; EM;A.Klauson;Euroopa Komisjon</option>
+              <option value="V16022" data-oucode="21011">V16022; NG;A.Šogenova; Euroopa Komisjon</option>
+              <option value="V16023" data-oucode="21011">V16023; AK;V.Karu;Euroopa Liit</option>
+              <option value="V16025" data-oucode="12012">V16025; HH;R.J.Krimmer;šveitsi parlament</option>
+              <option value="V16027" data-oucode="21013">V16027; NS;R.Uiboupin; Euroopa Komisjon</option>
+              <option value="V16030" data-oucode="13012">V16030; IT;S.Mäses;ENISA</option>
+              <option value="V16031" data-oucode="13012">V16031; IT;T.Lepik;ENISA</option>
+              <option value="V188" data-oucode="14016">V188; KY: E.Siimer: DDBST GmbH Oldenburg</option>
+              <option value="V276" data-oucode="20011">V276; B:U.Meriste:Leon.2004 I-04-B-F-PP-154061:a/a10022</option>
+              <option value="V30" data-oucode="13015">V30; IE: T.Rang:  Balti Elektroonikakonverents (BEC):-</option>
+              <option value="V649" data-oucode="11012">V649; EE;T.Kalamees</option>
+              <option value="V653" data-oucode="16022">V653; TE;K.Lutsoja;Norra Finantsemehhanism</option>
+              <option value="V665" data-oucode="21013">V665; NS;U.Lips;Eesti Geoloogiakeskus OÜ</option>
+              <option value="V687" data-oucode="21013">V687; NS;T.Kõuts;Euroopa Liit</option>
+              <option value="VA15009" data-oucode="21011">VA15009; NG;A.Soesoo;European Inst.of Innovation &amp; Tehnolog</option>
+              <option value="VA15012" data-oucode="14017">VA15012; KL;T.Kaljuvee;Eesti Teaduste Akadeemia</option>
+              <option value="VA15014" data-oucode="21011">VA15014; NG;V.Raidla;Balassi Institute</option>
+              <option value="VA15018" data-oucode="21011">VA15018; NG;A.Heinsalu;BRGM</option>
+              <option value="VA15019" data-oucode="16020">VA15019; TM;M.Järvis;EU-OSHA</option>
+              <option value="VA15020" data-oucode="21011">VA15020; NG;R.Vaikmäe;UNESCO;INQUA</option>
+              <option value="VA15022" data-oucode="21013">VA15022; NS;P.Lagemaa;Euroopa Parlament</option>
+              <option value="VA15025" data-oucode="16025">VA15025; TS;K.Paadam;Chalmers University of Technology</option>
+              <option value="VA15029" data-oucode="21013">VA15029; NS; I.Lips; Danish Meteorological Institute</option>
+              <option value="VA15029A" data-oucode="21012">VA15029A; NY;T.Soomere;Danish Meteorological Institute</option>
+              <option value="VA15037" data-oucode="10013">VA15037; AE;J.Kilter;Almaty Univercity of Power Engineering</option>
+              <option value="VA15044" data-oucode="12016">VA15044; HO;K.Nyman;Folke Bernadotte Academy</option>
+              <option value="VA16002" data-oucode="15014">VA16002; MT;F.Sergejev;Swatch Group R&amp;D Ltd</option>
+              <option value="VA16006" data-oucode="14016">VA16006; KY;M.Kauk-Kuusik;European Space Agency</option>
+              <option value="VA16010" data-oucode="21013">VA16010; NS;V.Alari;Mercator Ocean</option>
+              <option value="VA16012" data-oucode="16020">VA16012; TM;U.Venesaar;Saksa Välisministeerium</option>
+              <option value="VA16017" data-oucode="17017">VA16017; YT;T.Timmusk;University of Pennsylvania</option>
+              <option value="VA16020" data-oucode="16022">VA16020; TE;K.Männasoo;Swedish Institute</option>
+              <option value="VA16021" data-oucode="10016">VA16021; AT;D.Vinnikov;Eesti Teaduste Akadeemia</option>
+              <option value="VA16024" data-oucode="21011">VA16024; AK;V.Karu;Euroopa Liit</option>
+              <option value="VA16035" data-oucode="13012">VA16035; IT;A.Kull;European Spallation Source ERIC</option>
+              <option value="VA16038" data-oucode="21013">VA16038; NS;U.Lips;European Commission</option>
+              <option value="VA16039" data-oucode="13015">VA16039; IE;A.Koel;European Spallation Source ERIC</option>
+              <option value="VA16047" data-oucode="15017">VA16047; ME;T.Otto;Georg-August-Universität Göttingen</option>
+              <option value="VA598" data-oucode="13014">VA598; IS;J.Preden;Euroopa Kaitseagentuur</option>
+              <option value="VA621" data-oucode="15012">VA621; MH;M.Tamre;Euroopa Komisjon;01.1013-31.12.2015</option>
+              <option value="VA631" data-oucode="17014">VA631; YK;M.Kaljurand;Euroopa Kosmoseagentuur</option>
+              <option value="VA633" data-oucode="21013">VA633; NS;I.Lips;Euroopa Komisjon</option>
+              <option value="VE15035" data-oucode="200121">VE15035; RV;O.Pihl;Alstom Estonia AS</option>
+              <option value="VE16007" data-oucode="13018">VE16007; IB;G.Toming;SJE Ecohydraulic Engineering GmbH</option>
+              <option value="VE16046" data-oucode="11012">VE16046; EE;J.Kurnitski;WSB Sweden AB</option>
+              <option value="VE402" data-oucode="13015">VE402; IE;R.Land;NSC;50 000 USD, 2009,pikend 31.12.12</option>
+              <option value="VE602" data-oucode="10016">VE602; AT;D.Vinnikov; ECPE Joint Research Programme</option>
+              <option value="VE617" data-oucode="16020">VE617; TM;P.Tint;Milleu Ltd</option>
+              <option value="VE675" data-oucode="21013">VE675; NS;U.Lips;ETT S.p.A</option>
+              <option value="VE682" data-oucode="11012">VE682; EE;J.Kurnitski; Ruukki Construction OY</option>
+              <option value="VE693" data-oucode="11012">VE693; EE;A.Just;Saint-Gobain Isover</option>
+              <option value="VEEA" data-oucode="21012">VEEA; NY;T.Soomere</option>
+              <option value="VER15007" data-oucode="34014">VER15007; PV;R.Karu;Euroopa Komisjon</option>
+              <option value="VER15036" data-oucode="31010">VER15036; PV;R.Karu;Euroopa Komisjon</option>
+              <option value="VER16028" data-oucode="34014">VER16028; PO;R.Potter;Euroopa Komisjon</option>
+              <option value="VER16032" data-oucode="34014">VER16032; PO;R.Potter;SA Archimedes (Tallinna kontor)</option>
+              <option value="VER530" data-oucode="31010">VER530; PV;M.Hein,A.Sinijärv;Euroopa Komisjon;1 039 746 €</option>
+              <option value="VER575" data-oucode="16022">VER575; TE;K.Lutsoja;Euroopa Komisjon;23 465 eur</option>
+              <option value="VER620" data-oucode="16022">VER620; TE;K.Lutsoja;Euroopa Komisjon</option>
+              <option value="VER674" data-oucode="34014">VER674; PV;M.Hein;SA Archimedes</option>
+              <option value="VER690" data-oucode="12016">VER690; HO;T.Kerikmäe;Euroopa Komisjon</option>
+              <option value="VERT150001" data-oucode="12016">VERT150001; HO;T.Kerikmäe;Euroopa Komisjon</option>
+              <option value="VERT15010" data-oucode="21011">VERT15010; AK;I.Valgma;Euroopa Komisjon</option>
+              <option value="VERT15027" data-oucode="13016">VERT15027; ID;R.Kuusik;Euroopa Komisjon</option>
+              <option value="VERT15039" data-oucode="34014">VERT15039; PO;M.Olander;Euroopa Komisjon</option>
+              <option value="VERT15041" data-oucode="11013">VERT15041; EP;I.Lill;Euroopa Komisjon</option>
+              <option value="VERT15042" data-oucode="16020">VERT15042; TM;G.K.Prause;Euroopa Komisjon</option>
+              <option value="VERT15043" data-oucode="31010">VERT15043; PV;R.Karu;Euroopa Komisjon</option>
+              <option value="VERT15048" data-oucode="10016">VERT15048; AT;E.Pettai;Euroopa Komisjon</option>
+              <option value="VERT15050" data-oucode="13013">VERT15050; IA;P.Ellervee;Euroopa Komisjon</option>
+              <option value="VERT15052" data-oucode="16020">VERT15052; TM;P.Tint;Euroopa Komisjon</option>
+              <option value="VERT15056" data-oucode="11012">VERT15056; EE;T.Kalamees;Euroopa Komisjon</option>
+              <option value="VERT16001" data-oucode="11013">VERT16001; EP;I.Lill,Euroopa Komisjon</option>
+              <option value="VERT16009" data-oucode="13016">VERT16009; ID;J.Tepandi;Euroopa Komisjon</option>
+              <option value="VERT585" data-oucode="13013">VERT585; IA;G.Jervan;Euroopa Komisjon</option>
+              <option value="VERT610" data-oucode="12016">VERT610; HO;T.Kerikmäe;Euroopa Komisjon</option>
+              <option value="VERT627" data-oucode="11013">VERT627; EP;I.Lill;University of Salford</option>
+              <option value="VERT662" data-oucode="13013">VERT662; IA;A.Sudnitsõn;Euroopa Kimosjon</option>
+              <option value="VERT672" data-oucode="12016">VERT672; HO;D.R.Troitino;Euroopa Komisjon</option>
+              <option value="VERT686" data-oucode="11013">VERT686; EP;I.Lill;Euroopa Komisjon</option>
+              <option value="VEU15015" data-oucode="11016">VEU15015; EM;K.Tabri;Euroopa Komisjon</option>
+              <option value="VEU15017" data-oucode="21013">VEU15017; NS;U.Raudsepp;ETAG SA</option>
+              <option value="VEU15021" data-oucode="16025">VEU15021; TS;K.Paadam;Euroopa Komisjon</option>
+              <option value="VEU15024" data-oucode="16020">VEU15024; TM;M.Järvis; Agency for Safety and Health at Work</option>
+              <option value="VEU15040" data-oucode="16020">VEU15040; TM;P.Tint;Agency for Safety and Health at Work</option>
+              <option value="VEU15047" data-oucode="16020">VEU15047; TM;A.Leppiman;Euroopa Komisjon</option>
+              <option value="VEU16003" data-oucode="12016">VEU16003; HO;M.Poola;Euroopa Komisjon</option>
+              <option value="VEU16005" data-oucode="13012">VEU16005; IT;R.Ottis;Euroopa Komisjon</option>
+              <option value="VEU16013" data-oucode="11014">VEU16013; ET;A.Ellmann;Euroopa Komisjon</option>
+              <option value="VEU16026" data-oucode="13014">VEU16026; IS; E. Petlenkov; Euroopa Komisjon</option>
+              <option value="VEU570" data-oucode="11016">VEU570; EM;J.Laanearu;Euroopa Komisjon;4 577 315 €</option>
+              <option value="VEU642" data-oucode="13018">VEU642; IB;M.Kruusmaa;Euroopa Komisjon</option>
+              <option value="VEU660" data-oucode="11015">VEU660; EK;A.Iital;Euroopa Komisjon</option>
+              <option value="VEU663" data-oucode="21013">VEU663; NS;T.Kõuts;Euroopa Komisjon</option>
+              <option value="VEU664" data-oucode="33013">VEU664; CE;H.Pihlak;Euroopa Komisjon</option>
+              <option value="VEU670" data-oucode="21013">VEU670; NS;T.Kõuts;Euroopa Komisjon</option>
+              <option value="VEU676" data-oucode="21013">VEU676; NS;T.Kõuts;Euroopa Komisjon</option>
+              <option value="VEU678" data-oucode="13013">VEU678; IA;J.Raik;Euroopa Komisjon</option>
+              <option value="VEU684" data-oucode="17015">VEU684; YM;L.Päivärintä;Euroopa Komisjon;InvProb</option>
+              <option value="VFP15002" data-oucode="13013">VFP15002; IA;J.Raik;Euroopa Komisjon</option>
+              <option value="VFP15003" data-oucode="16025">VFP15003; TS;A.Polese;Euroopa Komisjon</option>
+              <option value="VFP15004" data-oucode="15017">VFP15004; EL;D.Antov;Euroopa Komisjon</option>
+              <option value="VFP15006" data-oucode="13016">VFP15006; ID;B.Kordon;Euroopa Komisjon</option>
+              <option value="VFP15013" data-oucode="21011">VFP15013; NG;R.Vaikmäe;Euroopa Komisjon</option>
+              <option value="VFP15016" data-oucode="13018">VFP15016; IB;M.Kruusma;Euroopa Komisjon</option>
+              <option value="VFP15016A" data-oucode="21013">VFP15016A; NS;J.Elken;Euroopa Komisjon</option>
+              <option value="VFP15026" data-oucode="12012">VFP15026; HH;R.Kattel;Euroopa Komisjon</option>
+              <option value="VFP15031" data-oucode="13013">VFP15031; IA;G.Jervan;Euroopa Komisjon</option>
+              <option value="VFP15051" data-oucode="13015">VFP15051; IE;A.Kurrel;Euroopa Komisjon</option>
+              <option value="VFP15055" data-oucode="13013">VFP15055; IA;J.Raik;Euroopa Komisjon</option>
+              <option value="VFP15059" data-oucode="10013">VFP15059; AE;I.Palu;Euroopa Komisjon</option>
+              <option value="VFP16004" data-oucode="12012">VFP16004; HH;R.J.Krimmer;Euroopa Komisjon</option>
+              <option value="VFP16008" data-oucode="15016">VFP16008; MS;I.Roos;Euroopa Komisjon</option>
+              <option value="VFP16014" data-oucode="13018">VFP16014; IB;M.Kruusmaa;Euroopa Komisjon</option>
+              <option value="VFP16016" data-oucode="21013">VFP16016; NS;T.Kõuts;Euroopa Komisjon</option>
+              <option value="VFP16040" data-oucode="21011">VFP16040; NG;A.Šogenova;Euroopa Komisjon</option>
+              <option value="VFP432" data-oucode="140161">VFP432; KY (str.140161);J.Hiie;Euroopa Komisjon</option>
+              <option value="VFP440" data-oucode="21013">VFP440; NS;T.Kõuts;Euroopa Komisjon;474 000 €</option>
+              <option value="VFP494" data-oucode="13015">VFP494; IE;O.Märtens;Euroopa Komisjon;202 287,2 €</option>
+              <option value="VFP534" data-oucode="13013">VFP534; IA;G.Jervan;Euroopa Komisjon;58 200 eur</option>
+              <option value="VFP545" data-oucode="12012">VFP545; HH;R.Kattel;Euroopa Komisjon;484 280 €</option>
+              <option value="VFP558" data-oucode="33011">VFP558; PT;R.Sepper;Euroopa Komisjon;278 288 €</option>
+              <option value="VFP566" data-oucode="15014">VFP566; MT;R.Veinthal;Euroopa Komisjon;01.09.12-28.02.16</option>
+              <option value="VFP567" data-oucode="13015">VFP567; IE;O.Märtens;Euroopa Komisjon;11 315,68€</option>
+              <option value="VFP592" data-oucode="21013">VFP592; NS;U.Lips;Euroopa Komisjon;01.03.2013-28.02.2017</option>
+              <option value="VFP593" data-oucode="16020">VFP593; TM;U.Venesaar;Euroopa Komisjon;01.12.2012-30.11.20</option>
+              <option value="VFP597" data-oucode="12012">VFP597; HH;R.Kattel;Euroopa Komisjon;01.02.2013-31.07.2016</option>
+              <option value="VFP599" data-oucode="17017">VFP599; YT;M.Kelve</option>
+              <option value="VFP608" data-oucode="13013">VFP608; IA;J.Raik;Euroopa Komisjon</option>
+              <option value="VFP616" data-oucode="11015">VFP616; EK;K.Pachel;Euroopa Komisjon;01.10.2013-30.09.2016</option>
+              <option value="VFP618" data-oucode="11013">VFP618; EP;I.Lill;Euroopa Komisjon;01.10.2013-31.03.2015</option>
+              <option value="VFP629" data-oucode="15017">VFP629; ME;K.Karjust;Euroopa Komisjon</option>
+              <option value="VFP635" data-oucode="13018">VFP635; IB;M.Kruusmaa;Euroopa Komisjon</option>
+              <option value="VFP638" data-oucode="14016">VFP638; KY;M.Grossberg;Euroopa Komisjon</option>
+              <option value="VFP651" data-oucode="16025">VFP651; TS;K.Paadam</option>
+              <option value="VFP655" data-oucode="17014">VFP655; YK;A.Auväärt;Euroopa Komisjon</option>
+              <option value="VFP657" data-oucode="13012">VFP657; IT;M.Kääramees;Euroopa Komisjon</option>
+              <option value="VFP658" data-oucode="211031">VFP658; DE;P.Ross;Euroopa Komisjon</option>
+              <option value="VFP692" data-oucode="11012">VFP692; EE;T.Kalamees;Euroopa Komisjon</option>
+              <option value="VIE622" data-oucode="34011">VIE622; CT;R.Linnas;Euroopa Komisjon;01.10.2013-30.09.2016</option>
+              <option value="VIE647" data-oucode="11012">VIE647; EE;T.Kalamees;Euroopa Komisjon</option>
+              <option value="VIR15034" data-oucode="11016">VIR15034; EM;I.Annus;Central Baltic Interreg</option>
+              <option value="VIR15045" data-oucode="16020">VIR15045; TM;G.Klaus-Pause;Euroopa Komisjon</option>
+              <option value="VIR15054" data-oucode="16020">VIR15054; TM;G.Klaus-Pause;Euroopa Komisjon</option>
+              <option value="VIR16015EK" data-oucode="11015">VIR16015EK; EK;K.Pachel;EL Regioonide Komitee</option>
+              <option value="VIR16015KA" data-oucode="14012">VIR16015KA; KA;N.Dulova;EL Regioonide Komitee</option>
+              <option value="VIR484" data-oucode="21013">VIR484; NS;U.Raudsepp;ERF;1.11.2010 - 31.10.2012</option>
+              <option value="VIR488" data-oucode="11015">VIR488; EK;E.Loigu;ERDF;303 820 €</option>
+              <option value="VIR492" data-oucode="16020">VIR492; TM;U.Venesaar;ERF;170 000 €;</option>
+              <option value="VIR506" data-oucode="11013">VIR506; EP;I.Lill;ERF;266 600 €;1.1.2011 - 31.12.2013</option>
+              <option value="VIR515" data-oucode="21013">VIR515; NS;U.Lips;ERDF;1 472 648 €;01.06.2011 - 31.12.2013</option>
+              <option value="VIR519" data-oucode="11016">VIR519; EM;K.Tabri;ERDF;163 092 €;01.05.2011- 31.12.2013</option>
+              <option value="VIR523" data-oucode="21101">VIR523; DB;K.Meigas;ERF;571 793 €  (TTÜ 172 847€)</option>
+              <option value="VIR548" data-oucode="11012">VIR548; EE;T.Kalamees;ERDF;277 581 €;</option>
+              <option value="VNF15057" data-oucode="10013">VNF15057; AE;I.Palu;Norden</option>
+              <option value="VNF573" data-oucode="10013">VNF573; AE;I.Palu;Nordic Research Energy;1 200 000 NOK</option>
+              <option value="VNF611" data-oucode="17014">VNF611; YK;M.Kaljurand;NATO</option>
+              <option value="VNG16019" data-oucode="16022">VNG16019; TE;K.Põder;Norra finantsmehhanism</option>
+              <option value="VNP15038" data-oucode="11012">VNP15038; EE;F.De Luca;CIMO</option>
+              <option value="VNP15049" data-oucode="20013">VNP15049; S;A.Keerberg;Klaipeda Satate Univercity</option>
+              <option value="VNP16029" data-oucode="16022">VNP16029; TE;K.Männasoo;CIMO</option>
+              <option value="VNP16033" data-oucode="20014">VNP16033; NT;M.Meriste;CIMO</option>
+              <option value="VNP16043" data-oucode="20013">VNP16043; S;R.Nelis;CIMO</option>
+              <option value="VNT681" data-oucode="16025">VNT681; TS;V.A.Vernygora;NATO</option>
+              <option value="VSESREMO" data-oucode="21012">VSESREMO; NY;T.Soomere</option>
+              <option value="VY0008" data-oucode="34014">VY0008; PV:Archimedes lep nr.16-6.3.2/491,nr16-6.3.2/238</option>
+              <option value="VY571" data-oucode="34014">VY571; PV;R.Karu;Euroopa Komisjon;2 999 875 eur</option>
+              <option value="VY576" data-oucode="16020">VY576; TM;U.Venesaar;Euroopa Komisjon;863 824,37 eur</option>
+              <option value="VY577" data-oucode="11012">VY577; EE;T.Kalamees;Euroopa Komisjon;1 147 353 eur</option>
+              <option value="VY578" data-oucode="31010">VY578; PV;R.Karu;Euroopa Komisjon;810 730,82 €</option>
+              <option value="VY582" data-oucode="11013">VY582; EP;I.Lill;Euroopa Komisjon;892 177,77€</option>
+              <option value="VY590" data-oucode="10016">VY590; AT;E.Pettai;Euroopa Komisjon;15.10.2012-14.10.2015</option>
+              <option value="VY600" data-oucode="31010">VY600; PV;R.Karu;Euroopa Komisjon;15.12.2012-15.12.2015</option>
+              <option value="VY612" data-oucode="34014">VY612; PV; M.Lugus; Euroopa Komisjon;1.10.2013-30.09.2016</option>
+              <option value="VY613" data-oucode="34014">VY613; PV; M.Lugus; Euroopa Komisjon;1.10.2013-30.09.2016</option>
+              <option value="VY614" data-oucode="34014">VY614; PV; M.Lugus; Euroopa Komisjon;1.10.2013-30.09.2016</option>
+              <option value="VY615" data-oucode="34014">VY615; PV; M.Lugus; Euroopa Komisjon;1.10.2013-30.09.2016</option>
+              <option value="VY632" data-oucode="13012">VY632; IT;J.Vain;Euroopa Komisjon</option>
+              <option value="VY637" data-oucode="12016">VY637; HO;K.Nyman;Euroopa Komisjon</option>
+              <option value="VY643" data-oucode="13012">VY643; IT;M.Käärmees;Euroopa Komisjon</option>
+              <option value="ÕLAEN" data-oucode="80000">ÕLAEN; SÜ: Õppelaenu kustutamine</option>
+              <option value="ÕNT" data-oucode="80000">ÕNT; SÜ: Nooremteaduritega seonduvate kulude finantseer</option>
+              <option value="ÕT" data-oucode="80011">ÕT; SÜ: Õppetoetused-laekumine</option>
+              <option value="ÕTA" data-oucode="80010">ÕTA; ÕT;Õppetoetused - Energeetika teaduskond</option>
+              <option value="ÕTB" data-oucode="80010">ÕTB; ÕT;Õppetoetused - TTÜ Tallinna Kolledž</option>
+              <option value="ÕTE" data-oucode="80010">ÕTE; ÕT;Õppetoetused - Ehitusteaduskond</option>
+              <option value="ÕTERI" data-oucode="80010">ÕTERI; ÕT;Õppetoetused - vajaduspõhine eritoetus</option>
+              <option value="ÕTH" data-oucode="80010">ÕTH; ÕT;Õppetoetused - Sotsiaalteaduskond</option>
+              <option value="ÕTI" data-oucode="80010">ÕTI; ÕT;Õppetoetused - Infotehnoloogia teaduskond</option>
+              <option value="ÕTK" data-oucode="80010">ÕTK; ÕT;Õppetoetused - Keemia- ja mat.tehnoloogia te</option>
+              <option value="ÕTM" data-oucode="80010">ÕTM; ÕT;Õppetoetused - Mehaanikateaduskond</option>
+              <option value="ÕTN" data-oucode="80010">ÕTN; ÕT;Õppetoetused - Tartu Kolledž</option>
+              <option value="ÕTR" data-oucode="80010">ÕTR; ÕT;Õppetoetused - Virumaa Kolledz</option>
+              <option value="ÕTS" data-oucode="80010">ÕTS; ÕT;Õppetoetused - Kuressaare Kolledz</option>
+              <option value="ÕTT" data-oucode="80010">ÕTT; ÕT;Õppetoetused - Majandusteaduskond</option>
+              <option value="ÕTV" data-oucode="80010">ÕTV; ÕT;Õppetoetused - TTÜ Eesti Mereakadeemia</option>
+              <option value="ÕTY" data-oucode="80010">ÕTY; ÕT;Õppetoetused - Matemaatika-loodusteaduskond</option>
+              <option value="ÜEKSP" data-oucode="50000">ÜEKSP; Ülikooli eksperthinnangute reserv</option>
+              <option value="ÜLKAP1" data-oucode="70001">ÜLKAP1; KAP;Üleülikoolilised remonttööd</option>
+              <option value="ÜLKAP106" data-oucode="70001">ÜLKAP106; KAP: Siidisaba 7 rekonstrueerimine</option>
+              <option value="ÜLKAP107" data-oucode="70001">ÜLKAP107; KAP; EMERA hoonete rem,viilhalli ehit.territ.kor.</option>
+              <option value="ÜLKAP109" data-oucode="70001">ÜLKAP109; KAP;Akadeemia tee 5a rekonstrueerimine</option>
+              <option value="ÜLKAP110" data-oucode="70001">ÜLKAP110; KAP;Akadeemia tee 15a parkla</option>
+              <option value="ÜLKAP111" data-oucode="70002">ÜLKAP111; KAP;IT kaabeldus VB hoones</option>
+              <option value="ÜLKAP112" data-oucode="70001">ÜLKAP112; KAP; TTÜ 100</option>
+              <option value="ÜLKAP16" data-oucode="70002">ÜLKAP16; KAP - MS Dynamics NAV arendustööd</option>
+              <option value="ÜLKAP2" data-oucode="70002">ÜLKAP2; KAP; Keskinfra ja t-kaardi, jm KAP sihtfin  omafin</option>
+              <option value="ÜLKAP40" data-oucode="70001">ÜLKAP40; KAP;Detailplaneeringutega seotud tööd</option>
+              <option value="ÜLKAP5" data-oucode="70000">ÜLKAP5; KAP;Üleülekoolilised laenu- ja liisingukohustused</option>
+              <option value="ÜLKAP84" data-oucode="70001">ÜLKAP84; KAP; Särghaua renoveerimine</option>
+              <option value="ÜLKAP87" data-oucode="70001">ÜLKAP87; KAP; MTÜ Kuressaare Campus "Väikelaevaehituse kom-</option>
+              <option value="ÜPEIP" data-oucode="40000">ÜPEIP; ÜP; Ettevõtlus- ja innovatsiooniprojektid</option>
+              <option value="ÜPHUT" data-oucode="40000">ÜPHUT; ÜP; Aalto ja TTÜ koostööleping/toetus õpilastele</option>
+              <option value="ÜPIOM" data-oucode="40000">ÜPIOM; ÜP,Intellektuaalomand</option>
+              <option value="ÜPIRP" data-oucode="40000">ÜPIRP; ÜP;Innovatsiooni- ja rahvusvahelistumise projektid</option>
+              <option value="ÜPIT07" data-oucode="70002">ÜPIT07; KAP:IT projektid</option>
+              <option value="ÜPIT08" data-oucode="40000">ÜPIT08; ÜP: IT projektid, opereerimiskulud e OPEX</option>
+              <option value="ÜPJ100" data-oucode="40000">ÜPJ100; ÜP; Ülikooli juubel 100</option>
+              <option value="ÜPLM" data-oucode="40000">ÜPLM; ÜP; Liikmemaksud</option>
+              <option value="ÜPLÜ" data-oucode="40000">ÜPLÜ; ÜP; Tehnoloogiakool</option>
+              <option value="ÜPMOTIV" data-oucode="40000">ÜPMOTIV; ÜP; Motivatsioonisüsteem</option>
+              <option value="ÜPPK" data-oucode="40000">ÜPPK; ÜP; Personalikoolitus</option>
+              <option value="ÜPRA" data-oucode="40000">ÜPRA; ÜP; Raamatukogu teavikud</option>
+              <option value="ÜPST" data-oucode="40006">ÜPST; ÜP; Ühisürituse projekt</option>
+              <option value="ÜPVK" data-oucode="40006">ÜPVK; ÜP: Väliskülaliste vastuvõtt</option>
+              <option value="ÜPWP" data-oucode="40006">ÜPWP; ÜP; Välisveebi projekt</option>
+              <option value="ÜPVVM" data-oucode="40006">ÜPVVM; ÜP: Vastuvõtu parendamine ja mainekujundus</option>
+              <option value="ÜPVÜ" data-oucode="40000">ÜPVÜ; ÜP;Liikmeskonna välisvahetus ja mobiilsus</option>
+              <option value="ÜPVÜV" data-oucode="40006">ÜPVÜV; ÜP, Välisüliõpilaste värbamistegevused</option>
+              <option value="ÜPVÜV1" data-oucode="40006">ÜPVÜV1; ÜP;Rahvusvahelise koostöö korraldustegevused</option>
+              <option value="ÜPÕTLM" data-oucode="99999">ÜPÕTLM; Õppetulemuslikkus</option>
+              <option value="XREF" data-oucode="99999">XREF; ÜP;Finantsallikate miinuste katmine</option>
+              <option value="XXXX" data-oucode="99999">XXXX; üldine</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 461px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="otsi..." style="width: 457px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="col-lg-4 control-label" for="closedObject">Suletud finantsallikas</label>
+          <div class="col-lg-4">
+            <input id="closedObject" name="closedObject[]" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="col-lg-4 control-label">Ajavahemik</label>
+          <div class="col-lg-4">
+            <div class="input-group" id="datepicker">
+              <input id="start" name="start" type="text" class="datepicker form-control" value="01.01.2016">
+              <span class="input-group-addon">kuni</span>
+              <input id="end" name="end" type="text" class="datepicker form-control" value="31.12.2016">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+            <button type="button" id="submitBtn" class="btn btn-primary">Vaata</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
+                        </div>
+                        <div class="tab-pane fade in active" id="tab_results"><div class="row">
+    <table class="strong">
+        <tbody><tr>
+            <td>Eelarve:</td>
+            <td>TTÜ 2016</td>
+        </tr>
+        <tr>
+            <td>Periood:</td>
+            <td>01.01.2016 - 31.12.2016</td>
+        </tr>
+        <tr>
+            <td>Struktuuriüksus:</td>
+            <td>Kõik</td>
+        </tr>
+        <tr>
+            <td>Finantsallikas:</td>
+            <td>Kõik</td>
+        </tr>
+    </tbody></table>
+</div>
+
+<form method="POST" action="" data-action="/api/file:fetch:22PB59:" id="hiddenExportForm" class="hiddenForm">
+    <input type="hidden" id="oucodeH" name="oucode" value="">
+    <input type="hidden" id="closedOu" name="closedOu" value="">
+    <input type="hidden" id="budgetH" name="budget" value="">
+    <input type="hidden" id="objectH" name="object" value="">
+    <input type="hidden" id="closedObjectH" name="closedObject" value="">
+    <input type="hidden" id="startH" name="start" value="">
+    <input type="hidden" id="endH" name="end" value="">
+    <input type="hidden" id="lineH" name="line" value="">
+    <input type="hidden" id="LineNameH" name="LineName" value="">
+    <input type="hidden" id="accountH" name="account" value="">
+    <input type="hidden" id="AccNameH" name="AccName" value="">
+    <input type="hidden" id="drillNoH" name="drillNo" value="">
+    <input type="hidden" name="submit2" value="submit">
+</form>
+
+<div class="row">
+    <table>
+
+
+        <tbody><tr>
+            <th>Tulud</th>
+            <th align="right">Eelarve</th>
+            <th align="right">Täitmine</th>
+            <th align="right">Erinevus</th>
+        </tr>
+        <tr>
+            <td><strong>Eelarve jääk eelmisest aastast</strong></td>
+            <td align="right"><strong>7&nbsp;892&nbsp;383,86</strong></td>
+            <td align="right"><strong><a href="#10" class="budget_line" data-line="10" data-line_name="Eelarve jääk eelmisest aastast">15&nbsp;465&nbsp;135,38</a></strong></td>
+            <td align="right"><strong>-7&nbsp;572&nbsp;751,52</strong></td>
+        </tr>
+
+                <tr>
+            <td><strong>Tulu õppetegevusest</strong></td>
+            <td align="right"><strong>46&nbsp;740&nbsp;287,51</strong></td>
+            <td align="right"><strong><a href="#20" class="budget_line" data-line="20" data-line_name="Tulu õppetegevusest">41&nbsp;499&nbsp;140,32</a></strong></td>
+            <td align="right"><strong>5&nbsp;241&nbsp;147,19</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh tegevustoetus</td>
+            <td align="right">37&nbsp;518&nbsp;122,35</td>
+            <td align="right"><a href="#30" class="budget_line" data-line="30" data-line_name="&nbsp;&nbsp; sh tegevustoetus">32&nbsp;311&nbsp;900,00</a></td>
+            <td align="right">5&nbsp;206&nbsp;222,35</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus üliõpilastele</td>
+            <td align="right">3&nbsp;113&nbsp;857,00</td>
+            <td align="right"><a href="#40" class="budget_line" data-line="40" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus üliõpilastele">4&nbsp;052&nbsp;418,43</a></td>
+            <td align="right">-938&nbsp;561,43</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus avatud ülikooli õppurile</td>
+            <td align="right">1&nbsp;164&nbsp;700,00</td>
+            <td align="right"><a href="#50" class="budget_line" data-line="50" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus avatud ülikooli õppurile">1&nbsp;115&nbsp;898,00</a></td>
+            <td align="right">48&nbsp;802,00</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendkoolitus</td>
+            <td align="right">1&nbsp;698&nbsp;644,50</td>
+            <td align="right"><a href="#60" class="budget_line" data-line="60" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendkoolitus">1&nbsp;299&nbsp;272,83</a></td>
+            <td align="right">399&nbsp;371,67</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu õppetegevus (sh toetused struktuurfondidest)</td>
+            <td align="right">3&nbsp;244&nbsp;963,66</td>
+            <td align="right"><a href="#70" class="budget_line" data-line="70" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu õppetegevus (sh toetused struktuurfondidest)">2&nbsp;719&nbsp;651,06</a></td>
+            <td align="right">525&nbsp;312,60</td>
+        </tr>
+
+                <tr>
+            <td><strong>Tulud teadustegevusest</strong></td>
+            <td align="right"><strong>24&nbsp;899&nbsp;134,23</strong></td>
+            <td align="right"><strong><a href="#80" class="budget_line" data-line="80" data-line_name="Tulud teadustegevusest">19&nbsp;236&nbsp;473,48</a></strong></td>
+            <td align="right"><strong>5&nbsp;662&nbsp;660,75</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;sh institutsionaalsed uurimistoetused</td>
+            <td align="right">4&nbsp;288&nbsp;839,92</td>
+            <td align="right"><a href="#90" class="budget_line" data-line="90" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;sh institutsionaalsed uurimistoetused">4&nbsp;368&nbsp;473,00</a></td>
+            <td align="right">-79&nbsp;633,08</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; institutsionaalse uurimistoetuse üldkulu eraldis</td>
+            <td align="right">1&nbsp;189&nbsp;800,00</td>
+            <td align="right"><a href="#100" class="budget_line" data-line="100" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; institutsionaalse uurimistoetuse üldkulu eraldis">1&nbsp;189&nbsp;800,00</a></td>
+            <td align="right">0,00</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; baasfinantseerimine</td>
+            <td align="right">3&nbsp;129&nbsp;570,00</td>
+            <td align="right"><a href="#110" class="budget_line" data-line="110" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; baasfinantseerimine">3&nbsp;044&nbsp;790,00</a></td>
+            <td align="right">84&nbsp;780,00</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu finantseerimine riigieelarvest HTM eelarve kaudu</td>
+            <td align="right">736&nbsp;118,00</td>
+            <td align="right"><a href="#120" class="budget_line" data-line="120" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu finantseerimine riigieelarvest HTM eelarve kaudu">737&nbsp;064,00</a></td>
+            <td align="right">-946,00</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETAg personaalsed uurimistoetused</td>
+            <td align="right">2&nbsp;049&nbsp;674,88</td>
+            <td align="right"><a href="#130" class="budget_line" data-line="130" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETAg personaalsed uurimistoetused">2&nbsp;202&nbsp;711,53</a></td>
+            <td align="right">-153&nbsp;036,65</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; teadus- ja arenduslepingud</td>
+            <td align="right">5&nbsp;381&nbsp;849,95</td>
+            <td align="right"><a href="#140" class="budget_line" data-line="140" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; teadus- ja arenduslepingud">2&nbsp;905&nbsp;100,44</a></td>
+            <td align="right">2&nbsp;476&nbsp;749,51</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh välislaekumised teadus- ja arenduslepingutest</td>
+            <td align="right">1&nbsp;004&nbsp;680,00</td>
+            <td align="right"><a href="#150" class="budget_line" data-line="150" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh välislaekumised teadus- ja arenduslepingutest">530&nbsp;827,64</a></td>
+            <td align="right">473&nbsp;852,36</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh Eesti sisesed teadus- ja arenduslepingud</td>
+            <td align="right">4&nbsp;377&nbsp;169,95</td>
+            <td align="right"><a href="#160" class="budget_line" data-line="160" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh Eesti sisesed teadus- ja arenduslepingud">2&nbsp;374&nbsp;272,80</a></td>
+            <td align="right">2&nbsp;002&nbsp;897,15</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toetused struktuurfondidest</td>
+            <td align="right">3&nbsp;438&nbsp;665,58</td>
+            <td align="right"><a href="#161" class="budget_line" data-line="161" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toetused struktuurfondidest">2&nbsp;039&nbsp;387,10</a></td>
+            <td align="right">1&nbsp;399&nbsp;278,48</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; välislaekumised projektidest</td>
+            <td align="right">4&nbsp;494&nbsp;375,90</td>
+            <td align="right"><a href="#162" class="budget_line" data-line="162" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; välislaekumised projektidest">2&nbsp;748&nbsp;547,41</a></td>
+            <td align="right">1&nbsp;745&nbsp;828,49</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu teadus- ja arendustegevus</td>
+            <td align="right">190&nbsp;240,00</td>
+            <td align="right"><a href="#163" class="budget_line" data-line="163" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu teadus- ja arendustegevus">600,00</a></td>
+            <td align="right">189&nbsp;640,00</td>
+        </tr>
+
+                <tr>
+            <td><strong>Muud tulud</strong></td>
+            <td align="right"><strong>4&nbsp;046&nbsp;648,13</strong></td>
+            <td align="right"><strong><a href="#169" class="budget_line" data-line="169" data-line_name="Muud tulud">2&nbsp;413&nbsp;478,74</a></strong></td>
+            <td align="right"><strong>1&nbsp;633&nbsp;169,39</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; majandustegevus</td>
+            <td align="right">2&nbsp;572&nbsp;481,52</td>
+            <td align="right"><a href="#170" class="budget_line" data-line="170" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; majandustegevus">51&nbsp;836,67</a></td>
+            <td align="right">2&nbsp;520&nbsp;644,85</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendavad tegevustulud</td>
+            <td align="right">1&nbsp;474&nbsp;166,61</td>
+            <td align="right"><a href="#180" class="budget_line" data-line="180" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendavad tegevustulud">2&nbsp;361&nbsp;642,07</a></td>
+            <td align="right">-887&nbsp;475,46</td>
+        </tr>
+
+                <tr>
+            <td><strong>Tulu sisemisest arveldamisest</strong></td>
+            <td align="right"><strong>22&nbsp;380&nbsp;827,78</strong></td>
+            <td align="right"><strong><a href="#190" class="budget_line" data-line="190" data-line_name="Tulu sisemisest arveldamisest">22&nbsp;125&nbsp;274,66</a></strong></td>
+            <td align="right"><strong>255&nbsp;553,12</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh finantseerimine ülikooli üldkuludest</td>
+            <td align="right">17&nbsp;919&nbsp;957,92</td>
+            <td align="right"><a href="#191" class="budget_line" data-line="191" data-line_name="&nbsp;&nbsp; sh finantseerimine ülikooli üldkuludest">15&nbsp;180&nbsp;948,73</a></td>
+            <td align="right">2&nbsp;739&nbsp;009,19</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muud eraldised</td>
+            <td align="right">4&nbsp;060&nbsp;518,86</td>
+            <td align="right"><a href="#192" class="budget_line" data-line="192" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muud eraldised">6&nbsp;262&nbsp;764,58</a></td>
+            <td align="right">-2&nbsp;202&nbsp;245,72</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tulu siseteenustest</td>
+            <td align="right">400&nbsp;351,00</td>
+            <td align="right"><a href="#193" class="budget_line" data-line="193" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tulu siseteenustest">681&nbsp;561,35</a></td>
+            <td align="right">-281&nbsp;210,35</td>
+        </tr>
+
+                <tr>
+            <td><strong>Tulud kokku</strong></td>
+            <td align="right"><strong>105&nbsp;959&nbsp;281,51</strong></td>
+            <td align="right"><strong><a href="#200" class="budget_line" data-line="200" data-line_name="Tulud kokku">100&nbsp;739&nbsp;502,58</a></strong></td>
+            <td align="right"><strong>5&nbsp;219&nbsp;778,93</strong></td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+
+
+        <tr>
+            <th>Kulud</th>
+            <th align="right">Eelarve</th>
+            <th align="right">Täitmine</th>
+            <th align="right">Erinevus</th>
+        </tr>
+        <tr>
+            <td><strong>Tööjõukulud</strong></td>
+            <td align="right"><strong>46&nbsp;000&nbsp;249,56</strong></td>
+            <td align="right"><strong><a href="#300" class="budget_line" data-line="300" data-line_name="Tööjõukulud">32&nbsp;444&nbsp;929,31</a></strong></td>
+            <td align="right"><strong>13&nbsp;555&nbsp;320,25</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; palgakulu</td>
+            <td align="right">34&nbsp;557&nbsp;666,51</td>
+            <td align="right"><a href="#310" class="budget_line" data-line="310" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; palgakulu">24&nbsp;377&nbsp;114,87</a></td>
+            <td align="right">10&nbsp;180&nbsp;551,64</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sotsiaalmaks</td>
+            <td align="right">11&nbsp;171&nbsp;752,48</td>
+            <td align="right"><a href="#320" class="budget_line" data-line="320" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sotsiaalmaks">7&nbsp;877&nbsp;771,96</a></td>
+            <td align="right">3&nbsp;293&nbsp;980,52</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tööandja töötuskindlustusmakse</td>
+            <td align="right">270&nbsp;830,57</td>
+            <td align="right"><a href="#330" class="budget_line" data-line="330" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tööandja töötuskindlustusmakse">190&nbsp;042,48</a></td>
+            <td align="right">80&nbsp;788,09</td>
+        </tr>
+
+                <tr>
+            <td>Kinnistute hoolduskulud</td>
+            <td align="right">6&nbsp;773&nbsp;946,00</td>
+            <td align="right"><a href="#340" class="budget_line" data-line="340" data-line_name="Kinnistute hoolduskulud">4&nbsp;331&nbsp;964,66</a></td>
+            <td align="right">2&nbsp;441&nbsp;981,34</td>
+        </tr>
+
+                <tr>
+            <td>Lähetused</td>
+            <td align="right">2&nbsp;050&nbsp;371,84</td>
+            <td align="right"><a href="#350" class="budget_line" data-line="350" data-line_name="Lähetused">1&nbsp;743&nbsp;668,09</a></td>
+            <td align="right">306&nbsp;703,75</td>
+        </tr>
+
+                <tr>
+            <td>Kulud väikevahenditele</td>
+            <td align="right">2&nbsp;370&nbsp;047,53</td>
+            <td align="right"><a href="#360" class="budget_line" data-line="360" data-line_name="Kulud väikevahenditele">1&nbsp;776&nbsp;394,98</a></td>
+            <td align="right">593&nbsp;652,55</td>
+        </tr>
+
+                <tr>
+            <td>Kulud allhangetele</td>
+            <td align="right">3&nbsp;487&nbsp;552,69</td>
+            <td align="right"><a href="#370" class="budget_line" data-line="370" data-line_name="Kulud allhangetele">1&nbsp;485&nbsp;468,33</a></td>
+            <td align="right">2&nbsp;002&nbsp;084,36</td>
+        </tr>
+
+                <tr>
+            <td>Kontorikulud</td>
+            <td align="right">875&nbsp;103,12</td>
+            <td align="right"><a href="#380" class="budget_line" data-line="380" data-line_name="Kontorikulud">909&nbsp;766,55</a></td>
+            <td align="right">-34&nbsp;663,43</td>
+        </tr>
+
+                <tr>
+            <td>Transpordikulud</td>
+            <td align="right">374&nbsp;000,40</td>
+            <td align="right"><a href="#430" class="budget_line" data-line="430" data-line_name="Transpordikulud">231&nbsp;578,62</a></td>
+            <td align="right">142&nbsp;421,78</td>
+        </tr>
+
+                <tr>
+            <td>Esinduskulud koos erisoodustusega</td>
+            <td align="right">450&nbsp;126,00</td>
+            <td align="right"><a href="#470" class="budget_line" data-line="470" data-line_name="Esinduskulud koos erisoodustusega">444&nbsp;962,39</a></td>
+            <td align="right">5&nbsp;163,61</td>
+        </tr>
+
+                <tr>
+            <td>Reklaamikulud</td>
+            <td align="right">650&nbsp;169,60</td>
+            <td align="right"><a href="#480" class="budget_line" data-line="480" data-line_name="Reklaamikulud">398&nbsp;815,97</a></td>
+            <td align="right">251&nbsp;353,63</td>
+        </tr>
+
+                <tr>
+            <td>Investeeringud põhivarasse</td>
+            <td align="right">3&nbsp;728&nbsp;780,00</td>
+            <td align="right"><a href="#490" class="budget_line" data-line="490" data-line_name="Investeeringud põhivarasse">4&nbsp;636&nbsp;206,06</a></td>
+            <td align="right">-907&nbsp;426,06</td>
+        </tr>
+
+                <tr>
+            <td>Koolitus</td>
+            <td align="right">260&nbsp;744,40</td>
+            <td align="right"><a href="#500" class="budget_line" data-line="500" data-line_name="Koolitus">113&nbsp;625,40</a></td>
+            <td align="right">147&nbsp;119,00</td>
+        </tr>
+
+                <tr>
+            <td>Stipendiumid</td>
+            <td align="right">5&nbsp;249&nbsp;721,24</td>
+            <td align="right"><a href="#510" class="budget_line" data-line="510" data-line_name="Stipendiumid">4&nbsp;805&nbsp;792,49</a></td>
+            <td align="right">443&nbsp;928,75</td>
+        </tr>
+
+                <tr>
+            <td>Muud tegevuskulud</td>
+            <td align="right">3&nbsp;355&nbsp;108,68</td>
+            <td align="right"><a href="#515" class="budget_line" data-line="515" data-line_name="Muud tegevuskulud">729&nbsp;364,27</a></td>
+            <td align="right">2&nbsp;625&nbsp;744,41</td>
+        </tr>
+
+                <tr>
+            <td><strong>Kulu sisemisest arveldamisest</strong></td>
+            <td align="right"><strong>23&nbsp;183&nbsp;481,40</strong></td>
+            <td align="right"><strong><a href="#520" class="budget_line" data-line="520" data-line_name="Kulu sisemisest arveldamisest">22&nbsp;125&nbsp;274,66</a></strong></td>
+            <td align="right"><strong>1&nbsp;058&nbsp;206,74</strong></td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh ülikooli ja teaduskonna üldkuludeks</td>
+            <td align="right">18&nbsp;488&nbsp;287,54</td>
+            <td align="right"><a href="#530" class="budget_line" data-line="530" data-line_name="&nbsp;&nbsp; sh ülikooli ja teaduskonna üldkuludeks">20&nbsp;057&nbsp;311,87</a></td>
+            <td align="right">-1&nbsp;569&nbsp;024,33</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh IT osalustasu</td>
+            <td align="right">205&nbsp;705,20</td>
+            <td align="right"><a href="#531" class="budget_line" data-line="531" data-line_name="&nbsp;&nbsp; sh IT osalustasu">70&nbsp;091,28</a></td>
+            <td align="right">135&nbsp;613,92</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh kulu siseteenustest</td>
+            <td align="right">303&nbsp;711,00</td>
+            <td align="right"><a href="#540" class="budget_line" data-line="540" data-line_name="&nbsp;&nbsp; sh kulu siseteenustest">611&nbsp;543,98</a></td>
+            <td align="right">-307&nbsp;832,98</td>
+        </tr>
+
+                <tr>
+            <td>&nbsp;&nbsp; sh muud eraldised</td>
+            <td align="right">4&nbsp;185&nbsp;777,66</td>
+            <td align="right"><a href="#542" class="budget_line" data-line="542" data-line_name="&nbsp;&nbsp; sh muud eraldised">1&nbsp;386&nbsp;327,53</a></td>
+            <td align="right">2&nbsp;799&nbsp;450,13</td>
+        </tr>
+
+                <tr>
+            <td><strong>Kulud kokku</strong></td>
+            <td align="right"><strong>98&nbsp;809&nbsp;402,46</strong></td>
+            <td align="right"><strong><a href="#550" class="budget_line" data-line="550" data-line_name="Kulud kokku">76&nbsp;177&nbsp;811,78</a></strong></td>
+            <td align="right"><strong>22&nbsp;631&nbsp;590,68</strong></td>
+        </tr>
+
+                <tr>
+            <td><strong>Jääk järgnevaks kuuks</strong></td>
+            <td align="right"><strong>7&nbsp;149&nbsp;879,05</strong></td>
+            <td align="right"><strong><a href="#560" class="budget_line" data-line="560" data-line_name="Jääk järgnevaks kuuks">24&nbsp;561&nbsp;690,80</a></strong></td>
+            <td align="right"><strong>-17&nbsp;411&nbsp;811,75</strong></td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+
+                <tr>
+            <td>Saadud ettamaksed</td>
+            <td align="right">0,00</td>
+            <td align="right"><a href="#600" class="budget_line" data-line="600" data-line_name="Saadud ettamaksed">-414&nbsp;282,89</a></td>
+            <td align="right">414&nbsp;282,89</td>
+        </tr>
+
+                <tr>
+            <td>Laekumata arved</td>
+            <td align="right">0,00</td>
+            <td align="right"><a href="#610" class="budget_line" data-line="610" data-line_name="Laekumata arved">-1&nbsp;355&nbsp;300,70</a></td>
+            <td align="right">1&nbsp;355&nbsp;300,70</td>
+        </tr>
+
+                <tr>
+            <td><strong>Raha jääk perioodi lõpus</strong></td>
+            <td align="right"><strong>7&nbsp;149&nbsp;879,05</strong></td>
+            <td align="right"><strong><a href="#620" class="budget_line" data-line="620" data-line_name="Raha jääk perioodi lõpus">25&nbsp;502&nbsp;708,61</a></strong></td>
+            <td align="right"><strong>-18&nbsp;352&nbsp;829,56</strong></td>
+        </tr>
+    </tbody></table>
+</div>
+
+</div>
+                        <div class="tab-pane fade in" id="tab_budget_line"></div>
+                        <div class="tab-pane fade in" id="tab_budget_account"></div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div></div>
+        <!-- end content ---------------------------------------->
+
+      </div>
+      <!-- end wrapper ------------------------------------------>
+
+
+      <!--FOOTER
+--------------------------------------------------------------->
+      <div class="footer">
+        <div>
+          TTÜ Siseportaal &copy; 2014 - 2015
+        </div>
+      </div>
+
+      <!--MODAL CONTENT
+--------------------------------------------------------------->
+
+      <!--MODAL CONTENT END
+--------------------------------------------------------------->
+
+      <!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+      <div id="c-mask" class="c-mask"></div>
+
+
+      <!-- LOADING ANIMATION
+--------------------------------------------------------------->
+      <div id="loading-mask" class="c-mask"></div>
+
+      <div class="loading-animation hidden">
+        <div id="loader-wrapper">
+          <div id="loader"></div>
+        </div>
+      </div>
+
+
+      <!--SCRIPTS
+--------------------------------------------------------------->
+      <!-- Base scripts -->
+      <script src="js/jquery-2.1.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Plugin scripts -->
+      <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+      <script src="js/plugins/spin.js/spin.min.js"></script>
+      <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+      <script src="js/plugins/pace/pace.min.js"></script>
+      <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+      <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+      <!-- My custom scripts -->
+      <script src="js/main_ui.js"></script>
+      <script src="js/widget_ui.js"></script>
+
+      </body>
+
+    </html>
