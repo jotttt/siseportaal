@@ -57,6 +57,97 @@ ul {
   background: @bg-color;
 }
 
+/**********************************************
+PRINT VIEW
+**********************************************/
+.print-btn {
+  float: right;
+  margin: 15px;
+  position: relative;
+}
+
+body.print-view {
+  margin: 0 10px;
+
+  #m-menu {
+    display: none;
+  }
+
+  .navbar-static-top {
+    display: none;
+  }
+
+  #wikiTools {
+    display: none;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .bookmark-btn-container {
+    display: none;
+  }
+
+  #page-wrapper {
+    background: white;
+    margin: 0;
+    padding: 0;
+
+    .wrapper-content {
+      margin: 0;
+      padding: 0;
+
+      .nav.nav-tabs {
+        display: none;
+      }
+
+      .tab-content {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .tab-pane {
+        margin: 0;
+      }
+
+      .panel {
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        .panel-heading {
+          display: none;
+        }
+
+        .panel-body {
+          border: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+      }
+
+      .wiki-doc {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+    }
+
+  }
+
+  .footer {
+    display: none;
+  }
+
+}
+
+
+// end print ----------------------------------
+
 .wrapper {
   padding: 0 20px;
 }
@@ -116,9 +207,9 @@ margin-right: 0px;
 @media (min-width: 768px) {
 
   /*#page-wrapper {
-    position: inherit;
-    margin: 0 0 0 @sidebar-width;
-  }*/
+  position: inherit;
+  margin: 0 0 0 @sidebar-width;
+}*/
 
 }
 
@@ -178,7 +269,7 @@ a:hover, a:focus {
 }
 
 .center-item {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 li {
@@ -1468,9 +1559,9 @@ a.close-canvas-menu:hover {
 }
 
 @media(max-width: 500px) {
-.hidden-xxs {
+  .hidden-xxs {
     display: none!important;
-    }
+  }
 }
 
 /* PADDINGS & MARGINS */
