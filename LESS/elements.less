@@ -101,8 +101,8 @@ input:focus {
   font-size: 1em;
 }
 
-.form-control:focus, .single-line:focus {
-  //order-color: @cherry !important;
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: inherit;
 }
 
 .has-success.form-control {
