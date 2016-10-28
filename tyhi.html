@@ -25,55 +25,62 @@
 
       <!-- TOP NAVBAR
 ----------------------------------------------------------->
-      <nav class="navbar navbar-top nav-down" role="navigation">
+      <nav class="navbar-top" role="navigation">
 
-         <div class="cherry-mod-bg"></div>
+        <background class="cherry-mod-bg"></background>
 
-        <a href="/start" class="mobile-logo-minimal-w hidden-lg hidden-md"></a>
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
 
-        <span id="open-mobile-menu" class="new">
+        <btn id="open-mobile-menu" class="">
           <i class="fa fa-bars fa-2x"></i>
-        </span>
+        </btn>
+        <!--end mobile-->
 
-        <div class="navbar new">
+        <div class="navbar">
           <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle new btn btn-white btn-outline no-borders" data-toggle="collapse" data-target=".navbar-collapse">
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <i class="fa fa-bars fa-2x"></i>
-            </button>
+            </btn>
 
-            <div class="navbar-collapse collapse new">
-              <ul class="nav navbar-nav new">
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
 
                 <li class="nav-header">
-                  <div>
-                    <span>
-                      <a href="/start" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block hidden-sm hidden-xs m-l-sm m-r-md"></div></a>
-                    </span>
-                  </div>
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
                 </li>
 
-                <li class="dropdown dropdown-large">
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
-                  <ul class="dropdown-menu dropdown-menu-large row">
-                    <div class="core-widget-wrapper" id="wikimenu-about"></div>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li>Inimesed</li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
                   </ul>
                 </li>
-                <li class="dropdown dropdown-large">
+
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
-                  <ul class="dropdown-menu dropdown-menu-large row">
+                  <ul class="dropdown-menu">
                     <div class="core-widget-wrapper" id="wikimenu-documents"></div>
                   </ul>
                 </li>
-                <li class="dropdown dropdown-large">
+
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
-                  <ul class="dropdown-menu dropdown-menu-large row">
+                  <ul class="dropdown-menu">
                     <div class="core-widget-wrapper" id="wikimenu-services"></div>
                   </ul>
                 </li>
-                <li class="dropdown dropdown-large">
+
+                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
-                  <ul class="dropdown-menu dropdown-menu-large row">
+                  <ul class="dropdown-menu">
                     <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
                   </ul>
                 </li>
@@ -83,18 +90,12 @@
             </div>
 
           </div>
-          <div class="right-side">
-            <ul class="nav navbar-top-links navbar-right">
 
-              <!--$fn_is_developer$
-<li class="dropdown right-sidebar">
-<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-<i class="fa fa-bell"></i><span class="label label-primary">$notifications_badge$</span>
-</a>
-<ul class="dropdown-menu dropdown-alerts">
-<div class="core-widget-wrapper" id="alerts"></div>
-</ul>
-</li>$fn_stop-->
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+
 
               <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -108,7 +109,9 @@
                 </ul>
               </li>
 
-              <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a>
+              </li>
 
               <li class="open-mobile-search-container">
                 <a id="open-mobile-search">
@@ -118,15 +121,14 @@
 
             </ul>
 
-
             <!--NAVBAR SEARCH
------------------------------------------------------------------>
-            <ul class="nav navbar-top-links navbar-right visible-lg">
+------------------------------>
+            <ul class="desktop-search">
               <form ole="search" method="post" action="/search">
                 <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
               </form>
             </ul>
-            <!--end---------------------------------------------------------->
+            <!--end------------------------------>
           </div>
         </div>
         <!--MOBILE SEARCH

@@ -323,7 +323,7 @@ SEARCH RESULTS FOR PEOPLE
     background: @lightest-grey;
   }
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background: darken(white, 5%);
 
     &:hover {
@@ -358,10 +358,7 @@ SEARCH RESULTS FOR PEOPLE
 /************************************************************
 REPORTS
 ************************************************************/
-.csv-save-btn {
-  right: 30px;
-  top: 8px;
-}
+
 //end reports -----------------------------------------------
 
 /************************************************************
@@ -655,7 +652,31 @@ SRM
 /************************************************************
 REPORTS
 ************************************************************/
+.csv-save-btn {
+  right: 30px;
+  top: 8px;
+}
+
 #budgetPanel_ {
+
+  .report-results {
+
+    .collapsed {
+      cursor: pointer;
+
+      /*&:before {
+        position: absolute;
+        content: ">";
+      }*/
+
+    }
+
+    .collapsing {
+ 	-webkit-transition:height .01s ease;
+  	transition:height .01s ease;
+}
+
+  }
 
   .diagramm {
     margin: 10px;
