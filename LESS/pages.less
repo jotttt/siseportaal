@@ -96,6 +96,41 @@ BREADCRUMB
   right: 15px;
 }
 
+.print-btn {
+  padding: 2px 6px;
+  top: 23px;
+  right: 43px;
+}
+
+@media (max-width: @mobile-width) {
+
+  .breadcrumb-btn-container {
+    background: white;
+    border: 1px solid @lightest-grey;
+    border-right: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position:fixed;
+    top: auto;
+    bottom: 100px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+  }
+
+  .bookmark-btn {
+    position: static;
+    margin: 7px 6px;
+  }
+
+  .print-btn {
+  display: none;
+}
+
+}
+
+
 //end breadcrumb---------------------------------------------
 
 
@@ -214,72 +249,6 @@ HELP MODAL
 
 //end--------------------------------------------------------
 
-
-/************************************************************
-MAILBOX
-************************************************************/
-.mail-box {
-  background-color: #ffffff;
-  border: 1px solid @border-color;
-  border-top: 0;
-  padding: 0px;
-  margin-bottom: 20px;
-}
-
-.mail-box-header {
-  background-color: #ffffff;
-  border: 1px solid @border-color;
-  border-bottom: 0;
-  padding: 30px 20px 20px 20px;
-}
-
-.mail-box-header h2 {
-  margin-top: 0px;
-}
-
-.mailbox-content .tag-list li a {
-  background: #ffffff;
-}
-
-.mail-body {
-  border-top: 1px solid @border-color;
-  padding: 20px;
-}
-
-.mail-text {
-  border-top: 1px solid @border-color;
-}
-
-.mail-text .note-toolbar {
-  padding: 10px 15px;
-}
-
-.mail-body .form-group {
-  margin-bottom: 5px;
-}
-
-.mail-text .note-editor .note-toolbar {
-  background-color: #F9F8F8;
-}
-
-.mail-attachment {
-  border-top: 1px solid @border-color;
-  padding: 20px;
-  font-size: 12px;
-}
-
-.mailbox-content {
-  background: none;
-  border: none;
-  padding: 10px;
-}
-
-.mail-ontact {
-  width: 23%;
-}
-//end mailbox -----------------------------------------------
-
-
 /************************************************************
 SEARCH
 ************************************************************/
@@ -354,12 +323,6 @@ SEARCH RESULTS FOR PEOPLE
 
 }
 //end search -----------------------------------------------
-
-/************************************************************
-REPORTS
-************************************************************/
-
-//end reports -----------------------------------------------
 
 /************************************************************
 SRM
@@ -653,8 +616,14 @@ SRM
 REPORTS
 ************************************************************/
 .csv-save-btn {
-  right: 30px;
-  top: 8px;
+      right: 62px;
+    top: 125px;
+}
+
+@media(max-width: @mobile-width) {
+  .csv-save-btn {
+    display: none !important;
+  }
 }
 
 #budgetPanel_ {

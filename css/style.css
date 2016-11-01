@@ -689,7 +689,30 @@ body.body-small .footer.fixed {
   padding: 8px;
   vertical-align: top;
 }
+.example-mobi {
+  /* Zebra striping */
+}
+.example-mobi table {
+  border-collapse: collapse;
+}
+.example-mobi tr:nth-of-type(odd) {
+  background: #eee;
+}
+.example-mobi th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+.example-mobi td,
+.example-mobi th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
 @media (max-width: 991px) {
+  table {
+    width: 100%;
+  }
   .table {
     margin-bottom: 0;
   }
@@ -699,6 +722,56 @@ body.body-small .footer.fixed {
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
+  }
+  .example-mobi {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+    /*
+    Label the data
+    */
+    /*td:nth-of-type(1):before { content: "First Name"; }
+    td:nth-of-type(2):before { content: "Last Name"; }
+    td:nth-of-type(3):before { content: "Job Title"; }
+    td:nth-of-type(4):before { content: "Favorite Color"; }
+    td:nth-of-type(5):before { content: "Wars of Trek?"; }
+    td:nth-of-type(6):before { content: "Porn Name"; }
+    td:nth-of-type(7):before { content: "Date of Birth"; }
+    td:nth-of-type(8):before { content: "Dream Vacation City"; }
+    td:nth-of-type(9):before { content: "GPA"; }
+    td:nth-of-type(10):before { content: "Arbitrary Data"; }*/
+  }
+  .example-mobi table,
+  .example-mobi thead,
+  .example-mobi tbody,
+  .example-mobi th,
+  .example-mobi td,
+  .example-mobi tr {
+    display: block;
+  }
+  .example-mobi thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .example-mobi tr {
+    border: 1px solid #ccc;
+  }
+  .example-mobi td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .example-mobi td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
   }
 }
 .invoice-table thead > tr > th:last-child,
@@ -3185,7 +3258,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     padding: 15px 0;
   }
   .navbar-top .navbar .right-side .navbar-right .dropdown .dropdown-toggle {
-    padding: 15px 5px;
+    padding: 15px 15px;
   }
   .navbar-top .navbar .right-side .navbar-right .help-button a {
     padding: 20px 10px 20px 5px;
@@ -4184,26 +4257,6 @@ button.btn.btn-caret.active:before {
 }
 .btn-round i {
   color: #c9c9c9;
-}
-@media (max-width: 992px) {
-  .bookmark-btn-container {
-    background: white;
-    border: 1px solid #e5e6e7;
-    border-right: 0px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    position: fixed;
-    top: auto;
-    bottom: 100px;
-    right: 0px;
-    height: 40px;
-    width: 40px;
-    z-index: 2;
-  }
-  .bookmark-btn {
-    position: static;
-    margin: 7px 6px;
-  }
 }
 @media (max-width: 768px) {
   button.pull-right {
@@ -6048,6 +6101,34 @@ BREADCRUMB
   top: 38px;
   right: 15px;
 }
+.print-btn {
+  padding: 2px 6px;
+  top: 23px;
+  right: 43px;
+}
+@media (max-width: 991px) {
+  .breadcrumb-btn-container {
+    background: white;
+    border: 1px solid #e5e6e7;
+    border-right: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: fixed;
+    top: auto;
+    bottom: 100px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+  }
+  .bookmark-btn {
+    position: static;
+    margin: 7px 6px;
+  }
+  .print-btn {
+    display: none;
+  }
+}
 /*************************************************************
 DASHBOARD
 *************************************************************/
@@ -6131,57 +6212,6 @@ HELP MODAL
   text-decoration: none;
 }
 /************************************************************
-MAILBOX
-************************************************************/
-.mail-box {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-top: 0;
-  padding: 0px;
-  margin-bottom: 20px;
-}
-.mail-box-header {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom: 0;
-  padding: 30px 20px 20px 20px;
-}
-.mail-box-header h2 {
-  margin-top: 0px;
-}
-.mailbox-content .tag-list li a {
-  background: #ffffff;
-}
-.mail-body {
-  border-top: 1px solid #dddddd;
-  padding: 20px;
-}
-.mail-text {
-  border-top: 1px solid #dddddd;
-}
-.mail-text .note-toolbar {
-  padding: 10px 15px;
-}
-.mail-body .form-group {
-  margin-bottom: 5px;
-}
-.mail-text .note-editor .note-toolbar {
-  background-color: #F9F8F8;
-}
-.mail-attachment {
-  border-top: 1px solid #dddddd;
-  padding: 20px;
-  font-size: 12px;
-}
-.mailbox-content {
-  background: none;
-  border: none;
-  padding: 10px;
-}
-.mail-ontact {
-  width: 23%;
-}
-/************************************************************
 SEARCH
 ************************************************************/
 .faq-question {
@@ -6236,9 +6266,6 @@ SEARCH RESULTS FOR PEOPLE
     font-weight: 600;
   }
 }
-/************************************************************
-REPORTS
-************************************************************/
 /************************************************************
 SRM
 ************************************************************/
@@ -6487,8 +6514,13 @@ SRM
 REPORTS
 ************************************************************/
 .csv-save-btn {
-  right: 30px;
-  top: 8px;
+  right: 62px;
+  top: 125px;
+}
+@media (max-width: 991px) {
+  .csv-save-btn {
+    display: none !important;
+  }
 }
 #budgetPanel_ .report-results .collapsed {
   cursor: pointer;
@@ -9063,6 +9095,67 @@ box-sizing: content-box !important;
 //NEW DESIGN 1.1
 //////////////////////////////////
 */
+@media print {
+  body {
+    margin: 0 10px;
+  }
+  #m-menu {
+    display: none;
+  }
+  .navbar-top {
+    display: none;
+  }
+  #wikiTools {
+    display: none;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .breadcrumb-btn-container {
+    display: none;
+  }
+  #page-wrapper {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content {
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .nav.nav-tabs {
+    display: none;
+  }
+  #page-wrapper .wrapper-content .tab-content {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .tab-pane {
+    margin: 0;
+  }
+  #page-wrapper .wrapper-content .panel {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .panel .panel-heading {
+    display: none;
+  }
+  #page-wrapper .wrapper-content .panel .panel-body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .wiki-doc {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .footer {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .navbaar-collapse.collapse {
     display: block!important;
