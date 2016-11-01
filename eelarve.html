@@ -791,12 +791,11 @@
     <script src="js/widget_ui.js"></script>
 
     <script>
-      $('.collapsed').each(function(index) {
+      $('#budgetPanel_ .collapsed').each(function(index) {
         $(this).attr('data-toggle', 'collapse');
         $(this).attr('data-target', '.accordion_' + index);
-
-        //$(this).nextUntil('.collapsed').css('color','green');
-        $(this).nextUntil('.collapsed').addClass('collapse accordion_' + index);
+        $(this).children().first().addClass('first-child');
+        $(this).nextUntil('.collapsed, .no-indent, .bold').addClass('collapse accordion_' + index);
       });
     </script>
 

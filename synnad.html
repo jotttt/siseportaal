@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR -------------------------------------->
+      <nav class="navbar-top" role="navigation">
+
+        <background class="cherry-mod-bg"></background>
+
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
+
+        <btn id="open-mobile-menu" class="">
+          <i class="fa fa-bars fa-2x"></i>
+        </btn>
+        <!--end mobile-->
+
+        <div class="navbar">
+          <div class="navbar-header">
+
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </btn>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="nav-header">
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li><a href="">Inimesed</a></li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-services"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                  <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                </ul>
+              </li>
+
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
+              </li>
+
+              <li class="open-mobile-search-container">
+                <a id="open-mobile-search">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </li>
+
+            </ul>
+
+            <!--NAVBAR SEARCH
+------------------------------>
+            <ul class="desktop-search">
+              <form ole="search" method="post" action="/search">
+                <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+              </form>
+            </ul>
+            <!--end------------------------------>
+          </div>
+        </div>
+        <!--MOBILE SEARCH
+----------------------------------------------------------------->
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+        <!--end---------------------------------------------------------->
+
+      </nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR ------------------------------------>
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT ------------------------------------------>
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!-- PAGE ----------------------------------------->
+
+        <div id="content-wrapper" class="wrapper-intranet">
+
+
+          <div id="_workmode" class="dev"></div>
+          <div id="_module" class="intranet"></div>
+          <div id="_focus" class="main"></div>
+
+          <div class="wrapper-content animated fadeIn" style="font-size: 1.0em">
+            <div class="row widget-container" id="sortable-view">
+              <div id="sortable-left" class="col-lg-3 ui-sortable">
+                <div class="widget-wrapper" id="highlight-mobile" data-input="open"><div id="widget-message-moblie" class="ibox-full float-e-margins hidden-xl hidden-lg">
+                  <div class="ibox-content-full">
+                    <div class="text-center">
+                      <div class="carousel slide carousel-fade" id="carousel1" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <a href="/wiki/show/et:ulikoolist:struktuurireform:main" target="_top" class="ajax-load">
+                              <img alt="image" class="img-responsive" src="https://upload.ttu.ee/show/file/LD3YC6:3e71ec7c807af72e14d4d3f11d742e72.png">
+                            </a>
+                          </div>
+
+                          <div class="item">
+                            <a href="http://www.ttu.ee/?id=144372" target="_blank" class="">
+                              <img alt="image" class="img-responsive" src="https://upload.ttu.ee/show/file/LD3YC6:00eb8afcd3e5b3f129c433df9a4eec35.png">
+                            </a>
+                          </div>
+
+                          <div class="item">
+                            <a href="http://www.ttu.ee/ttu-uudised/uudised/avaleht-8/tehnikaulikoolis-avati-siseterviserada-akadeemiline-veerandmiil/" target="_blank" class="">
+                              <img alt="image" class="img-responsive" src="https://upload.ttu.ee/show/file/LD3YC6:f56bc0e030a133dc7c4416ac9bc3128f.png">
+                            </a>
+                          </div>
+                        </div>
+                        <a data-slide="prev" href="#carousel1" class="left carousel-control">
+                          <span class="icon-prev"></span>
+                        </a>
+                        <a data-slide="next" href="#carousel1" class="right carousel-control">
+                          <span class="icon-next"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  </div></div>
+
+                <div class="widget-wrapper" id="bdays" data-input="open"><div class="ibox-title">
+                  <h5><i class="fa fa-birthday-cake"></i> Sünnipäevad</h5>
+                  <div class="ibox-tools">
+                    <a class="collapse-link">
+                      <i class="fa fa-chevron-up"></i>
+                    </a>
+                  </div>
+                  </div>
+                  <div class="ibox-content">
+                    <div class="birthdays-container">
+                      <div id="birthdayCarousel" class="carousel slide" data-interval="false">
+
+                       <div class="control-container">
+                         <a class="left carousel-control" href="#birthdayCarousel" role="button" data-slide="prev">
+                          <span class="fa fa-angle-left" aria-hidden="true"></span>
+                          <span class="sr-only">Eelmised</span>
+                        </a>
+                        <a class="right carousel-control" href="#birthdayCarousel" role="button" data-slide="next">
+                          <span class="fa fa-angle-right" aria-hidden="true"></span>
+                          <span class="sr-only">Järgmised</span>
+                        </a>
+                        <div id="birthday-time" class="text text-center small">vaata veel sünnipäevi</div>
+                       </div>
+
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <small><strong>Täna, 31. oktoobril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs">
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/QWl2YXIgQXV2w6TDpHJ0" class="load_into" data-target="birthday_details_311020161" data-toggle="birthday_details">Aivar Auväärt</a>
+                              </div>
+                              <div id="birthday_details_311020161" class="birthday_details" style="display: none"></div>
+
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/UGVldGVyIExpbm5hcw,," class="load_into" data-target="birthday_details_311020162" data-toggle="birthday_details">Peeter Linnas</a>, <font color="#870042">60</font>
+                              </div>
+                              <div id="birthday_details_311020162" class="birthday_details" style="display: none"></div>
+
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/TWFyaXMgUGlsdmV0" class="load_into" data-target="birthday_details_311020163" data-toggle="birthday_details">Maris Pilvet</a>
+                              </div>
+                              <div id="birthday_details_311020163" class="birthday_details" style="display: none"></div>
+
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/TWFpdCBSdW5naQ,," class="load_into" data-target="birthday_details_311020164" data-toggle="birthday_details">Mait Rungi</a>
+                              </div>
+                              <div id="birthday_details_311020164" class="birthday_details" style="display: none"></div>
+
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/WGlhb3NvbmcgWmhlbmc," class="load_into" data-target="birthday_details_311020165" data-toggle="birthday_details">Xiaosong Zheng</a>
+                              </div>
+                              <div id="birthday_details_311020165" class="birthday_details" style="display: none"></div>
+
+                              <div>
+                                <span class="fa fa-user"></span>
+                                <a href="/search/bday/UmVpbW8gw4RybQ,," class="load_into" data-target="birthday_details_311020166" data-toggle="birthday_details">Reimo Ärm</a>
+                              </div>
+                              <div id="birthday_details_311020166" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Teisipäeval, 1. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/TWFydGluIEVlcm1l" class="load_into birthday" data-target="birthday_details_011120161" data-toggle="birthday_details">Martin Eerme</a></div><div id="birthday_details_011120161" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/RG9yaXMgS2FsanVzdGU," class="load_into birthday" data-target="birthday_details_011120162" data-toggle="birthday_details">Doris Kaljuste</a></div><div id="birthday_details_011120162" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/TGlpbmEgTGFyZXRlaQ,," class="load_into birthday" data-target="birthday_details_011120163" data-toggle="birthday_details">Liina Laretei</a>, <font color="#870042">40</font></div><div id="birthday_details_011120163" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/RG1pdHJpIE1paGhhaWxvdg,," class="load_into birthday" data-target="birthday_details_011120164" data-toggle="birthday_details">Dmitri Mihhailov</a></div><div id="birthday_details_011120164" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QW51IFBpaXJpbWFh" class="load_into birthday" data-target="birthday_details_011120165" data-toggle="birthday_details">Anu Piirimaa</a></div><div id="birthday_details_011120165" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Kolmapäeval, 2. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/VGlpYSBCcmF1bg,," class="load_into birthday" data-target="birthday_details_021120166" data-toggle="birthday_details">Tiia Braun</a></div><div id="birthday_details_021120166" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/SGlpZSBIaW5yaWt1cw,," class="load_into birthday" data-target="birthday_details_021120167" data-toggle="birthday_details">Hiie Hinrikus</a></div><div id="birthday_details_021120167" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/RXN0ZWxsZSBTaWxt" class="load_into birthday" data-target="birthday_details_021120168" data-toggle="birthday_details">Estelle Silm</a></div><div id="birthday_details_021120168" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/T2xldiBTb2tr" class="load_into birthday" data-target="birthday_details_021120169" data-toggle="birthday_details">Olev Sokk</a></div><div id="birthday_details_021120169" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/S2FqYSBUaWtz" class="load_into birthday" data-target="birthday_details_0211201610" data-toggle="birthday_details">Kaja Tiks</a>, <font color="#870042">65</font></div><div id="birthday_details_0211201610" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Neljapäeval, 3. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/SGVsZ2kgQWl0" class="load_into birthday" data-target="birthday_details_0311201611" data-toggle="birthday_details">Helgi Ait</a></div><div id="birthday_details_0311201611" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QXJkbyBBbGxpaw,," class="load_into birthday" data-target="birthday_details_0311201612" data-toggle="birthday_details">Ardo Allik</a></div><div id="birthday_details_0311201612" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/UmluZ28gTGllcGthbG5z" class="load_into birthday" data-target="birthday_details_0311201613" data-toggle="birthday_details">Ringo Liepkalns</a></div><div id="birthday_details_0311201613" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/TGlpbmEgUGVldmVy" class="load_into birthday" data-target="birthday_details_0311201614" data-toggle="birthday_details">Liina Peever</a></div><div id="birthday_details_0311201614" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QW50b25pbmEgWmd1cm8," class="load_into birthday" data-target="birthday_details_0311201615" data-toggle="birthday_details">Antonina Zguro</a></div><div id="birthday_details_0311201615" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Reedel, 4. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/T2xhdiBBYXJuYQ,," class="load_into birthday" data-target="birthday_details_0411201616" data-toggle="birthday_details">Olav Aarna</a></div><div id="birthday_details_0411201616" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/V29sZmdhbmcgSmVsdHNjaA,," class="load_into birthday" data-target="birthday_details_0411201617" data-toggle="birthday_details">Wolfgang Jeltsch</a>, <font color="#870042">40</font></div><div id="birthday_details_0411201617" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/S2FpZGkgS2FsbGFzdGU," class="load_into birthday" data-target="birthday_details_0411201618" data-toggle="birthday_details">Kaidi Kallaste</a></div><div id="birthday_details_0411201618" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/TWFyZSBMZXBpaw,," class="load_into birthday" data-target="birthday_details_0411201619" data-toggle="birthday_details">Mare Lepik</a></div><div id="birthday_details_0411201619" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/VGFpdm8gTGludHM," class="load_into birthday" data-target="birthday_details_0411201620" data-toggle="birthday_details">Taivo Lints</a></div><div id="birthday_details_0411201620" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QXVyaWthIE7DtW1t" class="load_into birthday" data-target="birthday_details_0411201621" data-toggle="birthday_details">Aurika Nõmm</a></div><div id="birthday_details_0411201621" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QWh0aS1WZWlra28gUGlldGFyaW5lbg,," class="load_into birthday" data-target="birthday_details_0411201622" data-toggle="birthday_details">Ahti-Veikko Pietarinen</a>, <font color="#870042">45</font></div><div id="birthday_details_0411201622" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/UmluZ2EgUmF1ZGxh" class="load_into birthday" data-target="birthday_details_0411201623" data-toggle="birthday_details">Ringa Raudla</a></div><div id="birthday_details_0411201623" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/TWFyZWsgVGFycmFzdGU," class="load_into birthday" data-target="birthday_details_0411201624" data-toggle="birthday_details">Marek Tarraste</a></div><div id="birthday_details_0411201624" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Laupäeval, 5. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/TWFyaS1MaWlzIEthc2VtZXRz" class="load_into birthday" data-target="birthday_details_0511201625" data-toggle="birthday_details">Mari-Liis Kasemets</a></div><div id="birthday_details_0511201625" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QWxla3NlaSBMZWJlZGV2" class="load_into birthday" data-target="birthday_details_0511201626" data-toggle="birthday_details">Aleksei Lebedev</a>, <font color="#870042">30</font></div><div id="birthday_details_0511201626" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/VGFubm8gTWVl" class="load_into birthday" data-target="birthday_details_0511201627" data-toggle="birthday_details">Tanno Mee</a></div><div id="birthday_details_0511201627" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/UmluYWxkbyBSw7zDvHRsaQ,," class="load_into birthday" data-target="birthday_details_0511201628" data-toggle="birthday_details">Rinaldo Rüütli</a></div><div id="birthday_details_0511201628" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/SGVsbGUgVGloZW1ldHM," class="load_into birthday" data-target="birthday_details_0511201629" data-toggle="birthday_details">Helle Tihemets</a></div><div id="birthday_details_0511201629" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/UmFpa2VyIFdpdHRlcg,," class="load_into birthday" data-target="birthday_details_0511201630" data-toggle="birthday_details">Raiker Witter</a>, <font color="#870042">45</font></div><div id="birthday_details_0511201630" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <small><strong>Pühapäeval, 6. novembril</strong></small>
+                            <hr class="m-t-xs">
+                            <div class="m-t-xs m-b">
+                              <div><span class="fa fa-user"></span> <a href="/search/bday/U3ZldGxhbmEgQmFiaXTFoWVua28," class="load_into birthday" data-target="birthday_details_0611201631" data-toggle="birthday_details">Svetlana Babitšenko</a>, <font color="#870042">60</font></div><div id="birthday_details_0611201631" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QW5kcmVpIEJvZ2F0b3Y," class="load_into birthday" data-target="birthday_details_0611201632" data-toggle="birthday_details">Andrei Bogatov</a></div><div id="birthday_details_0611201632" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/QW50cyBLYWxsYXN0ZQ,," class="load_into birthday" data-target="birthday_details_0611201633" data-toggle="birthday_details">Ants Kallaste</a></div><div id="birthday_details_0611201633" class="birthday_details" style="display: none"></div><div><span class="fa fa-user"></span> <a href="/search/bday/VsOkaW5vIFJhamFuZ3U," class="load_into birthday" data-target="birthday_details_0611201634" data-toggle="birthday_details">Väino Rajangu</a></div><div id="birthday_details_0611201634" class="birthday_details" style="display: none"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- PAGE END ------------------------------->
+
+        <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
+        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+        <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+      </div>
+      <!-- end content ---------------------------------------->
+
+    </div>
+    <!-- end wrapper ------------------------------------------>
+
+
+    <!-- FOOTER ------------------------------------>
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+
+    <!-- MODAL CONTENT ------------------------->
+
+    <!-- MODAL CONTENT END ---------------------->
+
+    <!-- CONTENT MASK FOR MOBILE MENU ------------->
+    <div id="c-mask" class="c-mask"></div>
+
+
+    <!-- LOADING ANIMATION -------------------------->
+    <div id="loading-mask" class="c-mask"></div>
+
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+
+
+    <!-- SCRIPTS ------------------------------------>
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+
+  </body>
+
+</html>
