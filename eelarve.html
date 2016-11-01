@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR
+----------------------------------------------------------->
+      <nav class="navbar-top" role="navigation">
+
+        <background class="cherry-mod-bg"></background>
+
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
+
+        <btn id="open-mobile-menu" class="">
+          <i class="fa fa-bars fa-2x"></i>
+        </btn>
+        <!--end mobile-->
+
+        <div class="navbar">
+          <div class="navbar-header">
+
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </btn>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="nav-header">
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li>Inimesed</li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-services"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+
+
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                  <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                </ul>
+              </li>
+
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a>
+              </li>
+
+              <li class="open-mobile-search-container">
+                <a id="open-mobile-search">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </li>
+
+            </ul>
+
+            <!--NAVBAR SEARCH
+------------------------------>
+            <ul class="desktop-search">
+              <form ole="search" method="post" action="/search">
+                <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+              </form>
+            </ul>
+            <!--end------------------------------>
+          </div>
+        </div>
+        <!--MOBILE SEARCH
+----------------------------------------------------------------->
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+        <!--end---------------------------------------------------------->
+
+      </nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR
+----------------------------------------------------------->
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT
+----------------------------------------------------------->
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!--PAGE
+----------------------------------------------------------->
+
+        <div id="budgetPanel_" class="<!--panel panel-default-->">
+          <!-- <div class="panel-heading">
+<i class="fa fa-line-chart"></i>
+
+<div class="pull-right" id="download-icons">
+<a href=""  id="csv" class="csv-save-btn btn-round" data-toggle="tooltip" data-placement="left" title="" data-original-title="Lae alla kui .csv fail"> <i class="fa fa-file-text-o"></i> </a>
+</div>
+
+</div>
+<div class="panel-body">-->
+
+          <ul class="nav nav-tabs" id="mainTab">
+            <li class="">
+              <a href="#tab_form" id="form_tab" data-toggle="tab" aria-expanded="false">Eelarve aruanne</a>
+            </li>
+            <li class="active">
+              <a href="#tab_results" id="results_tab" data-toggle="tab" style="display: block;" aria-expanded="true">Tulemused</a>
+            </li>
+            <li>
+              <a href="#tab_budget_line" id="budget_line_tab" data-toggle="tab" style="display:none">Rida</a>
+            </li>
+            <li>
+              <a href="#tab_budget_account" id="budget_account_tab" data-toggle="tab" style="display:none">Konto</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade" id="tab_form"></div>
+           <div class="tab-pane fade in active" id="tab_results"><div class="tab-pane fade in active" id="tab_results"><div class="row">
+  <div class="col-lg-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Eelarve</th>
+          <th>Periood</th>
+          <th>Struktuuriüksus</th>
+          <th>Finantsallikas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TTÜ 2016</td>
+          <td>01.01.2016 - 31.12.2016</td>
+          <td>Kõik</td>
+          <td>Kõik</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form method="POST" action="" data-action="/api/file:fetch:22PB59:" id="hiddenExportForm" class="hiddenForm">
+      <input type="hidden" id="oucodeH" name="oucode" value="">
+      <input type="hidden" id="closedOu" name="closedOu" value="">
+      <input type="hidden" id="budgetH" name="budget" value="">
+      <input type="hidden" id="objectH" name="object" value="">
+      <input type="hidden" id="closedObjectH" name="closedObject" value="">
+      <input type="hidden" id="startH" name="start" value="">
+      <input type="hidden" id="endH" name="end" value="">
+      <input type="hidden" id="lineH" name="line" value="">
+      <input type="hidden" id="LineNameH" name="LineName" value="">
+      <input type="hidden" id="accountH" name="account" value="">
+      <input type="hidden" id="AccNameH" name="AccName" value="">
+      <input type="hidden" id="drillNoH" name="drillNo" value="">
+      <input type="hidden" name="submit2" value="submit">
+    </form>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="report-results">
+
+
+      <tbody><tr class="bold">
+          <th>Tulud</th>
+        <th align="right">Eelarve</th>
+        <th align="right">Täitmine</th>
+        <th align="right">Erinevus</th>
+        <th align="right">Erinevus %</th>
+      </tr>
+      <tr class="bold">
+          <td><strong>Eelarve jääk eelmisest aastast</strong></td>
+        <td align="right"><strong>7&nbsp;892&nbsp;383,86</strong></td>
+        <td align="right"><strong><a href="#10" class="budget_line" data-line="10" data-line_name="Eelarve jääk eelmisest aastast">15&nbsp;465&nbsp;135,38</a></strong></td>
+        <td align="right"><strong>-7&nbsp;572&nbsp;751,52</strong></td>
+        <td align="right"><strong>195,95%</strong></td>
+      </tr>
+
+            <tr class="collapsed">
+          <td><strong>Tulu õppetegevusest</strong></td>
+        <td align="right"><strong>46&nbsp;740&nbsp;287,51</strong></td>
+        <td align="right"><strong><a href="#20" class="budget_line" data-line="20" data-line_name="Tulu õppetegevusest">41&nbsp;749&nbsp;177,95</a></strong></td>
+        <td align="right"><strong>4&nbsp;991&nbsp;109,56</strong></td>
+        <td align="right"><strong>89,32%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh tegevustoetus</td>
+        <td align="right">37&nbsp;518&nbsp;122,35</td>
+        <td align="right"><a href="#30" class="budget_line" data-line="30" data-line_name="&nbsp;&nbsp; sh tegevustoetus">32&nbsp;311&nbsp;900,00</a></td>
+        <td align="right">5&nbsp;206&nbsp;222,35</td>
+        <td align="right">86,12%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus üliõpilastele</td>
+        <td align="right">3&nbsp;113&nbsp;857,00</td>
+        <td align="right"><a href="#40" class="budget_line" data-line="40" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus üliõpilastele">4&nbsp;054&nbsp;513,43</a></td>
+        <td align="right">-940&nbsp;656,43</td>
+        <td align="right">130,21%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus avatud ülikooli õppurile</td>
+        <td align="right">1&nbsp;164&nbsp;700,00</td>
+        <td align="right"><a href="#50" class="budget_line" data-line="50" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; õppeteenus avatud ülikooli õppurile">1&nbsp;115&nbsp;898,00</a></td>
+        <td align="right">48&nbsp;802,00</td>
+        <td align="right">95,81%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendkoolitus</td>
+        <td align="right">1&nbsp;698&nbsp;644,50</td>
+        <td align="right"><a href="#60" class="budget_line" data-line="60" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendkoolitus">1&nbsp;307&nbsp;639,46</a></td>
+        <td align="right">391&nbsp;005,04</td>
+        <td align="right">76,98%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu õppetegevus (sh toetused struktuurfondidest)</td>
+        <td align="right">3&nbsp;244&nbsp;963,66</td>
+        <td align="right"><a href="#70" class="budget_line" data-line="70" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu õppetegevus (sh toetused struktuurfondidest)">2&nbsp;959&nbsp;227,06</a></td>
+        <td align="right">285&nbsp;736,60</td>
+        <td align="right">91,19%</td>
+      </tr>
+
+            <tr class="collapsed">
+          <td><strong>Tulud teadustegevusest</strong></td>
+        <td align="right"><strong>24&nbsp;899&nbsp;134,23</strong></td>
+        <td align="right"><strong><a href="#80" class="budget_line" data-line="80" data-line_name="Tulud teadustegevusest">19&nbsp;069&nbsp;191,91</a></strong></td>
+        <td align="right"><strong>5&nbsp;829&nbsp;942,32</strong></td>
+        <td align="right"><strong>76,59%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;sh institutsionaalsed uurimistoetused</td>
+        <td align="right">4&nbsp;288&nbsp;839,92</td>
+        <td align="right"><a href="#90" class="budget_line" data-line="90" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;sh institutsionaalsed uurimistoetused">4&nbsp;368&nbsp;473,00</a></td>
+        <td align="right">-79&nbsp;633,08</td>
+        <td align="right">101,86%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; institutsionaalse uurimistoetuse üldkulu eraldis</td>
+        <td align="right">1&nbsp;189&nbsp;800,00</td>
+        <td align="right"><a href="#100" class="budget_line" data-line="100" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; institutsionaalse uurimistoetuse üldkulu eraldis">1&nbsp;189&nbsp;800,00</a></td>
+        <td align="right">0,00</td>
+        <td align="right">100,00%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; baasfinantseerimine</td>
+        <td align="right">3&nbsp;129&nbsp;570,00</td>
+        <td align="right"><a href="#110" class="budget_line" data-line="110" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; baasfinantseerimine">3&nbsp;044&nbsp;790,00</a></td>
+        <td align="right">84&nbsp;780,00</td>
+        <td align="right">97,29%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu finantseerimine riigieelarvest HTM eelarve kaudu</td>
+        <td align="right">736&nbsp;118,00</td>
+        <td align="right"><a href="#120" class="budget_line" data-line="120" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu finantseerimine riigieelarvest HTM eelarve kaudu">737&nbsp;064,00</a></td>
+        <td align="right">-946,00</td>
+        <td align="right">100,13%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETAg personaalsed uurimistoetused</td>
+        <td align="right">2&nbsp;049&nbsp;674,88</td>
+        <td align="right"><a href="#130" class="budget_line" data-line="130" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETAg personaalsed uurimistoetused">1&nbsp;742&nbsp;434,35</a></td>
+        <td align="right">307&nbsp;240,53</td>
+        <td align="right">85,01%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; teadus- ja arenduslepingud</td>
+        <td align="right">5&nbsp;381&nbsp;849,95</td>
+        <td align="right"><a href="#140" class="budget_line" data-line="140" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; teadus- ja arenduslepingud">3&nbsp;022&nbsp;936,13</a></td>
+        <td align="right">2&nbsp;358&nbsp;913,82</td>
+        <td align="right">56,17%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh välislaekumised teadus- ja arenduslepingutest</td>
+        <td align="right">1&nbsp;004&nbsp;680,00</td>
+        <td align="right"><a href="#150" class="budget_line" data-line="150" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh välislaekumised teadus- ja arenduslepingutest">540&nbsp;608,64</a></td>
+        <td align="right">464&nbsp;071,36</td>
+        <td align="right">53,81%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh Eesti sisesed teadus- ja arenduslepingud</td>
+        <td align="right">4&nbsp;377&nbsp;169,95</td>
+        <td align="right"><a href="#160" class="budget_line" data-line="160" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh Eesti sisesed teadus- ja arenduslepingud">2&nbsp;482&nbsp;327,49</a></td>
+        <td align="right">1&nbsp;894&nbsp;842,46</td>
+        <td align="right">56,71%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toetused struktuurfondidest</td>
+        <td align="right">3&nbsp;438&nbsp;665,58</td>
+        <td align="right"><a href="#161" class="budget_line" data-line="161" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toetused struktuurfondidest">2&nbsp;214&nbsp;547,02</a></td>
+        <td align="right">1&nbsp;224&nbsp;118,56</td>
+        <td align="right">64,40%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; välislaekumised projektidest</td>
+        <td align="right">4&nbsp;494&nbsp;375,90</td>
+        <td align="right"><a href="#162" class="budget_line" data-line="162" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; välislaekumised projektidest">2&nbsp;748&nbsp;547,41</a></td>
+        <td align="right">1&nbsp;745&nbsp;828,49</td>
+        <td align="right">61,16%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu teadus- ja arendustegevus</td>
+        <td align="right">190&nbsp;240,00</td>
+        <td align="right"><a href="#163" class="budget_line" data-line="163" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muu teadus- ja arendustegevus">600,00</a></td>
+        <td align="right">189&nbsp;640,00</td>
+        <td align="right">0,32%</td>
+      </tr>
+
+            <tr class="collapsed">
+          <td><strong>Muud tulud</strong></td>
+        <td align="right"><strong>4&nbsp;046&nbsp;648,13</strong></td>
+        <td align="right"><strong><a href="#169" class="budget_line" data-line="169" data-line_name="Muud tulud">2&nbsp;453&nbsp;599,84</a></strong></td>
+        <td align="right"><strong>1&nbsp;593&nbsp;048,29</strong></td>
+        <td align="right"><strong>60,63%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; majandustegevus</td>
+        <td align="right">2&nbsp;572&nbsp;481,52</td>
+        <td align="right"><a href="#170" class="budget_line" data-line="170" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; majandustegevus">51&nbsp;836,67</a></td>
+        <td align="right">2&nbsp;520&nbsp;644,85</td>
+        <td align="right">2,02%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendavad tegevustulud</td>
+        <td align="right">1&nbsp;474&nbsp;166,61</td>
+        <td align="right"><a href="#180" class="budget_line" data-line="180" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; täiendavad tegevustulud">2&nbsp;401&nbsp;763,17</a></td>
+        <td align="right">-927&nbsp;596,56</td>
+        <td align="right">162,92%</td>
+      </tr>
+
+            <tr class="collapsed">
+          <td><strong>Tulu sisemisest arveldamisest</strong></td>
+        <td align="right"><strong>22&nbsp;380&nbsp;827,78</strong></td>
+        <td align="right"><strong><a href="#190" class="budget_line" data-line="190" data-line_name="Tulu sisemisest arveldamisest">22&nbsp;258&nbsp;610,74</a></strong></td>
+        <td align="right"><strong>122&nbsp;217,04</strong></td>
+        <td align="right"><strong>99,45%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh finantseerimine ülikooli üldkuludest</td>
+        <td align="right">17&nbsp;919&nbsp;957,92</td>
+        <td align="right"><a href="#191" class="budget_line" data-line="191" data-line_name="&nbsp;&nbsp; sh finantseerimine ülikooli üldkuludest">15&nbsp;180&nbsp;948,73</a></td>
+        <td align="right">2&nbsp;739&nbsp;009,19</td>
+        <td align="right">84,72%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muud eraldised</td>
+        <td align="right">4&nbsp;060&nbsp;518,86</td>
+        <td align="right"><a href="#192" class="budget_line" data-line="192" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muud eraldised">6&nbsp;377&nbsp;563,19</a></td>
+        <td align="right">-2&nbsp;317&nbsp;044,33</td>
+        <td align="right">157,06%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tulu siseteenustest</td>
+        <td align="right">400&nbsp;351,00</td>
+        <td align="right"><a href="#193" class="budget_line" data-line="193" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tulu siseteenustest">700&nbsp;098,82</a></td>
+        <td align="right">-299&nbsp;747,82</td>
+        <td align="right">174,87%</td>
+      </tr>
+
+            <tr class="bold">
+          <td><strong>Tulud kokku</strong></td>
+        <td align="right"><strong>105&nbsp;959&nbsp;281,51</strong></td>
+        <td align="right"><strong><a href="#200" class="budget_line" data-line="200" data-line_name="Tulud kokku">100&nbsp;995&nbsp;715,82</a></strong></td>
+        <td align="right"><strong>4&nbsp;963&nbsp;565,69</strong></td>
+        <td align="right"><strong>95,32%</strong></td>
+      </tr>
+      <tr class="empty"><td>&nbsp;</td></tr>
+
+
+      <tr>
+          <th>Kulud</th>
+        <th align="right">Eelarve</th>
+        <th align="right">Täitmine</th>
+        <th align="right">Erinevus</th>
+        <th align="right">Erinevus %</th>
+      </tr>
+      <tr class="collapsed">
+          <td><strong>Tööjõukulud</strong></td>
+        <td align="right"><strong>46&nbsp;000&nbsp;249,56</strong></td>
+        <td align="right"><strong><a href="#300" class="budget_line" data-line="300" data-line_name="Tööjõukulud">32&nbsp;444&nbsp;929,31</a></strong></td>
+        <td align="right"><strong>13&nbsp;555&nbsp;320,25</strong></td>
+        <td align="right"><strong>70,53%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; palgakulu</td>
+        <td align="right">34&nbsp;557&nbsp;666,51</td>
+        <td align="right"><a href="#310" class="budget_line" data-line="310" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; palgakulu">24&nbsp;377&nbsp;114,87</a></td>
+        <td align="right">10&nbsp;180&nbsp;551,64</td>
+        <td align="right">70,54%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sotsiaalmaks</td>
+        <td align="right">11&nbsp;171&nbsp;752,48</td>
+        <td align="right"><a href="#320" class="budget_line" data-line="320" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sotsiaalmaks">7&nbsp;877&nbsp;771,96</a></td>
+        <td align="right">3&nbsp;293&nbsp;980,52</td>
+        <td align="right">70,52%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tööandja töötuskindlustusmakse</td>
+        <td align="right">270&nbsp;830,57</td>
+        <td align="right"><a href="#330" class="budget_line" data-line="330" data-line_name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tööandja töötuskindlustusmakse">190&nbsp;042,48</a></td>
+        <td align="right">80&nbsp;788,09</td>
+        <td align="right">70,17%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Kinnistute hoolduskulud</td>
+        <td align="right">6&nbsp;773&nbsp;946,00</td>
+        <td align="right"><a href="#340" class="budget_line" data-line="340" data-line_name="Kinnistute hoolduskulud">4&nbsp;338&nbsp;184,03</a></td>
+        <td align="right">2&nbsp;435&nbsp;761,97</td>
+        <td align="right">64,04%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Lähetused</td>
+        <td align="right">2&nbsp;050&nbsp;371,84</td>
+        <td align="right"><a href="#350" class="budget_line" data-line="350" data-line_name="Lähetused">1&nbsp;776&nbsp;769,16</a></td>
+        <td align="right">273&nbsp;602,68</td>
+        <td align="right">86,66%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Kulud väikevahenditele</td>
+        <td align="right">2&nbsp;370&nbsp;047,53</td>
+        <td align="right"><a href="#360" class="budget_line" data-line="360" data-line_name="Kulud väikevahenditele">1&nbsp;828&nbsp;286,76</a></td>
+        <td align="right">541&nbsp;760,77</td>
+        <td align="right">77,14%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Kulud allhangetele</td>
+        <td align="right">3&nbsp;487&nbsp;552,69</td>
+        <td align="right"><a href="#370" class="budget_line" data-line="370" data-line_name="Kulud allhangetele">1&nbsp;495&nbsp;751,34</a></td>
+        <td align="right">1&nbsp;991&nbsp;801,35</td>
+        <td align="right">42,89%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Kontorikulud</td>
+        <td align="right">875&nbsp;103,12</td>
+        <td align="right"><a href="#380" class="budget_line" data-line="380" data-line_name="Kontorikulud">936&nbsp;630,44</a></td>
+        <td align="right">-61&nbsp;527,32</td>
+        <td align="right">107,03%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Transpordikulud</td>
+        <td align="right">374&nbsp;000,40</td>
+        <td align="right"><a href="#430" class="budget_line" data-line="430" data-line_name="Transpordikulud">233&nbsp;262,81</a></td>
+        <td align="right">140&nbsp;737,59</td>
+        <td align="right">62,37%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Esinduskulud koos erisoodustusega</td>
+        <td align="right">450&nbsp;126,00</td>
+        <td align="right"><a href="#470" class="budget_line" data-line="470" data-line_name="Esinduskulud koos erisoodustusega">448&nbsp;950,68</a></td>
+        <td align="right">1&nbsp;175,32</td>
+        <td align="right">99,74%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Reklaamikulud</td>
+        <td align="right">650&nbsp;169,60</td>
+        <td align="right"><a href="#480" class="budget_line" data-line="480" data-line_name="Reklaamikulud">401&nbsp;623,02</a></td>
+        <td align="right">248&nbsp;546,58</td>
+        <td align="right">61,77%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Investeeringud põhivarasse</td>
+        <td align="right">3&nbsp;728&nbsp;780,00</td>
+        <td align="right"><a href="#490" class="budget_line" data-line="490" data-line_name="Investeeringud põhivarasse">4&nbsp;646&nbsp;203,96</a></td>
+        <td align="right">-917&nbsp;423,96</td>
+        <td align="right">124,60%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Koolitus</td>
+        <td align="right">260&nbsp;744,40</td>
+        <td align="right"><a href="#500" class="budget_line" data-line="500" data-line_name="Koolitus">114&nbsp;031,24</a></td>
+        <td align="right">146&nbsp;713,16</td>
+        <td align="right">43,73%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Stipendiumid</td>
+        <td align="right">5&nbsp;249&nbsp;721,24</td>
+        <td align="right"><a href="#510" class="budget_line" data-line="510" data-line_name="Stipendiumid">5&nbsp;566&nbsp;364,49</a></td>
+        <td align="right">-316&nbsp;643,25</td>
+        <td align="right">106,03%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Muud tegevuskulud</td>
+        <td align="right">3&nbsp;355&nbsp;108,68</td>
+        <td align="right"><a href="#515" class="budget_line" data-line="515" data-line_name="Muud tegevuskulud">740&nbsp;463,60</a></td>
+        <td align="right">2&nbsp;614&nbsp;645,08</td>
+        <td align="right">22,07%</td>
+      </tr>
+
+            <tr class="collapsed">
+          <td><strong>Kulu sisemisest arveldamisest</strong></td>
+        <td align="right"><strong>23&nbsp;183&nbsp;481,40</strong></td>
+        <td align="right"><strong><a href="#520" class="budget_line" data-line="520" data-line_name="Kulu sisemisest arveldamisest">22&nbsp;258&nbsp;610,74</a></strong></td>
+        <td align="right"><strong>924&nbsp;870,66</strong></td>
+        <td align="right"><strong>96,01%</strong></td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh ülikooli ja teaduskonna üldkuludeks</td>
+        <td align="right">18&nbsp;488&nbsp;287,54</td>
+        <td align="right"><a href="#530" class="budget_line" data-line="530" data-line_name="&nbsp;&nbsp; sh ülikooli ja teaduskonna üldkuludeks">20&nbsp;152&nbsp;110,48</a></td>
+        <td align="right">-1&nbsp;663&nbsp;822,94</td>
+        <td align="right">109,00%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh IT osalustasu</td>
+        <td align="right">205&nbsp;705,20</td>
+        <td align="right"><a href="#531" class="budget_line" data-line="531" data-line_name="&nbsp;&nbsp; sh IT osalustasu">70&nbsp;091,28</a></td>
+        <td align="right">135&nbsp;613,92</td>
+        <td align="right">34,07%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh kulu siseteenustest</td>
+        <td align="right">303&nbsp;711,00</td>
+        <td align="right"><a href="#540" class="budget_line" data-line="540" data-line_name="&nbsp;&nbsp; sh kulu siseteenustest">630&nbsp;081,45</a></td>
+        <td align="right">-326&nbsp;370,45</td>
+        <td align="right">207,46%</td>
+      </tr>
+
+            <tr>
+          <td>&nbsp;&nbsp; sh muud eraldised</td>
+        <td align="right">4&nbsp;185&nbsp;777,66</td>
+        <td align="right"><a href="#542" class="budget_line" data-line="542" data-line_name="&nbsp;&nbsp; sh muud eraldised">1&nbsp;406&nbsp;327,53</a></td>
+        <td align="right">2&nbsp;779&nbsp;450,13</td>
+        <td align="right">33,60%</td>
+      </tr>
+
+            <tr class="bold">
+          <td><strong>Kulud kokku</strong></td>
+        <td align="right"><strong>98&nbsp;809&nbsp;402,46</strong></td>
+        <td align="right"><strong><a href="#550" class="budget_line" data-line="550" data-line_name="Kulud kokku">77&nbsp;230&nbsp;061,58</a></strong></td>
+        <td align="right"><strong>21&nbsp;579&nbsp;340,88</strong></td>
+        <td align="right"><strong>78,16%</strong></td>
+      </tr>
+
+            <tr class="bold">
+          <td><strong>Jääk järgnevaks kuuks</strong></td>
+        <td align="right"><strong>7&nbsp;149&nbsp;879,05</strong></td>
+        <td align="right"><strong><a href="#560" class="budget_line" data-line="560" data-line_name="Jääk järgnevaks kuuks">23&nbsp;765&nbsp;654,24</a></strong></td>
+        <td align="right"><strong>-16&nbsp;615&nbsp;775,19</strong></td>
+        <td align="right"><strong>332,39%</strong></td>
+      </tr>
+      <tr class="empty"><td>&nbsp;</td></tr>
+
+            <tr class="no-indent">
+          <td>Saadud ettemaksed</td>
+        <td align="right">0,00</td>
+        <td align="right"><a href="#600" class="budget_line" data-line="600" data-line_name="Saadud ettemaksed">-224&nbsp;862,57</a></td>
+        <td align="right">224&nbsp;862,57</td>
+        <td align="right">0,00%</td>
+      </tr>
+
+            <tr class="no-indent">
+          <td>Laekumata arved</td>
+        <td align="right">0,00</td>
+        <td align="right"><a href="#610" class="budget_line" data-line="610" data-line_name="Laekumata arved">-2&nbsp;349&nbsp;390,01</a></td>
+        <td align="right">2&nbsp;349&nbsp;390,01</td>
+        <td align="right">0,00%</td>
+      </tr>
+
+            <tr class="bold">
+          <td><strong>Raha jääk perioodi lõpus</strong></td>
+        <td align="right"><strong>7&nbsp;149&nbsp;879,05</strong></td>
+        <td align="right"><strong><a href="#620" class="budget_line" data-line="620" data-line_name="Raha jääk perioodi lõpus">25&nbsp;890&nbsp;181,68</a></strong></td>
+        <td align="right"><strong>-18&nbsp;740&nbsp;302,63</strong></td>
+        <td align="right"><strong>362,11%</strong></td>
+      </tr>
+    </tbody></table>
+
+  </div>
+</div>
+
+</div>
+</div>
+            <div class="tab-pane fade in" id="tab_budget_line"></div>
+            <div class="tab-pane fade in" id="tab_budget_account"></div>
+
+          </div>
+
+        </div>
+
+        <!--PAGE END
+--------------------------------------------------------------->
+
+        <!-- FULLSCREEN MODE TOGGLE BUTTON
+------------------------------------------------------------------->
+        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+        <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+      </div>
+      <!-- end content ---------------------------------------->
+
+    </div>
+    <!-- end wrapper ------------------------------------------>
+
+
+    <!--FOOTER
+--------------------------------------------------------------->
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+
+    <!--MODAL CONTENT
+--------------------------------------------------------------->
+
+    <!--MODAL CONTENT END
+--------------------------------------------------------------->
+
+    <!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+    <div id="c-mask" class="c-mask"></div>
+
+
+    <!-- LOADING ANIMATION
+--------------------------------------------------------------->
+    <div id="loading-mask" class="c-mask"></div>
+
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+
+
+    <!--SCRIPTS
+--------------------------------------------------------------->
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+
+    <script>
+      $('#budgetPanel_ .collapsed').each(function(index) {
+        $(this).attr('data-toggle', 'collapse');
+        $(this).attr('data-target', '.accordion_' + index);
+        $(this).children().first().addClass('first-child');
+        $(this).nextUntil('.collapsed, .no-indent, .bold').addClass('collapse accordion_' + index);
+      });
+    </script>
+
+  </body>
+
+</html>
