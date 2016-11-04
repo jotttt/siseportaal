@@ -117,8 +117,8 @@ margin-right: 0px;
 }
 @media (min-width: 768px) {
   /*#page-wrapper {
-  position: inherit;
-  margin: 0 0 0 @sidebar-width;
+    position: inherit;
+    margin: 0 0 0 @sidebar-width;
 }*/
 }
 body.boxed-layout {
@@ -622,25 +622,8 @@ body.body-small .footer.fixed {
   padding: 8px;
   vertical-align: top;
 }
-.example-mobi {
-  /* Zebra striping */
-}
-.example-mobi table {
+table {
   border-collapse: collapse;
-}
-.example-mobi tr:nth-of-type(odd) {
-  background: #eee;
-}
-.example-mobi th {
-  background: #333;
-  color: white;
-  font-weight: bold;
-}
-.example-mobi td,
-.example-mobi th {
-  padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
 }
 @media (max-width: 991px) {
   table {
@@ -656,47 +639,32 @@ body.body-small .footer.fixed {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
-  .example-mobi {
-    /* Force table to not be like tables anymore */
-    /* Hide table headers (but not display: none;, for accessibility) */
-    /*
-    Label the data
-    */
-    /*td:nth-of-type(1):before { content: "First Name"; }
-    td:nth-of-type(2):before { content: "Last Name"; }
-    td:nth-of-type(3):before { content: "Job Title"; }
-    td:nth-of-type(4):before { content: "Favorite Color"; }
-    td:nth-of-type(5):before { content: "Wars of Trek?"; }
-    td:nth-of-type(6):before { content: "Porn Name"; }
-    td:nth-of-type(7):before { content: "Date of Birth"; }
-    td:nth-of-type(8):before { content: "Dream Vacation City"; }
-    td:nth-of-type(9):before { content: "GPA"; }
-    td:nth-of-type(10):before { content: "Arbitrary Data"; }*/
-  }
-  .example-mobi table,
-  .example-mobi thead,
-  .example-mobi tbody,
-  .example-mobi th,
-  .example-mobi td,
-  .example-mobi tr {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     display: block;
   }
-  .example-mobi thead tr {
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  .example-mobi tr {
+  tr {
     border: 1px solid #ccc;
   }
-  .example-mobi td {
+  td {
     /* Behave  like a "row" */
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
     padding-left: 50%;
   }
-  .example-mobi td:before {
+  td:before {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
@@ -6204,15 +6172,15 @@ SRM
 ************************************************************/
 .wrapper-srm {
   /*.btn-default {
-  color: #870042;
-  border-color: #870042;
-  background-color: #fff;
+    color: #870042;
+    border-color: #870042;
+    background-color: #fff;
 }
 
-  .btn-default:hover {
-  color: #870042;
-  border-color: #870042;
-  background-color: #ddd;
+    .btn-default:hover {
+    color: #870042;
+    border-color: #870042;
+    background-color: #ddd;
 }*/
 }
 .wrapper-srm hr {
@@ -6443,17 +6411,64 @@ SRM
 .wrapper-srm .nonav {
   padding: 7px 10px 0px 10px;
 }
+@media (max-width: 1300px) {
+  .wrapper-srm {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .wrapper-srm table {
+    width: 100%;
+  }
+  .wrapper-srm .table {
+    margin-bottom: 0;
+  }
+  .wrapper-srm .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+  }
+  .wrapper-srm table,
+  .wrapper-srm thead,
+  .wrapper-srm tbody,
+  .wrapper-srm th,
+  .wrapper-srm td,
+  .wrapper-srm tr {
+    display: block;
+  }
+  .wrapper-srm thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .wrapper-srm tr {
+    border: 1px solid #ccc;
+  }
+  .wrapper-srm td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  .wrapper-srm td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
 /************************************************************
 REPORTS
 ************************************************************/
 .csv-save-btn {
   right: 62px;
   top: 125px;
-}
-@media (max-width: 991px) {
-  .csv-save-btn {
-    display: none !important;
-  }
 }
 #budgetPanel_ .report-results .collapsed {
   cursor: pointer;
@@ -6491,6 +6506,9 @@ REPORTS
 #budgetPanel_ .report-results .collapsed2 .first-child2.open:before {
   content: "\f068";
 }
+#budgetPanel_ .report-results .accordion2_0 {
+  font-style: italic;
+}
 #budgetPanel_ .report-results .collapsing {
   -webkit-transition: height .01s ease;
   transition: height .01s ease;
@@ -6526,8 +6544,8 @@ REPORTS
 }
 #budgetPanel_ .strong {
   /*
-    font-size: 120%;
-    */
+        font-size: 120%;
+        */
   font-weight: bold;
 }
 #budgetPanel_ .displayNone {
@@ -6594,6 +6612,19 @@ REPORTS
 }
 #budgetPanel_ form {
   margin-top: 10px;
+}
+@media (max-width: 991px) {
+  .csv-save-btn {
+    display: none !important;
+  }
+  #budgetPanel_ .report-results .collapsed .first-child:before {
+    left: -10px;
+    margin-top: 0px;
+  }
+  #budgetPanel_ .report-results .collapsed2 .first-child2:before {
+    left: 15px;
+    margin-top: 0px;
+  }
 }
 #small-chat {
   position: fixed;

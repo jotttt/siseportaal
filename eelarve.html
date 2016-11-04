@@ -809,15 +809,16 @@
 
       });
 
+      $('#budgetPanel_').on('click', '.first-child, first-child2', function() {
+        $(this).toggleClass('open');
+      })
+
       $('#budgetPanel_ .collapsed[data-target=".accordion_1"]').on('click', '.first-child', function() {
         if ($(this).hasClass('open')) {
+          $('.first-child2').click();
           if ($('.first-child2').hasClass('open')) {
             $('.first-child2').click();
           }
-          $(this).removeClass('open');
-        }
-        else {
-          $(this).addClass('open');
         }
       });
 
