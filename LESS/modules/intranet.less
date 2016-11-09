@@ -139,3 +139,38 @@ SEARCH RESULTS FOR PEOPLE
 
 }
 //end people search -----------------------------------------------
+
+/************************************************************
+BIRTHDAYS FULLVIEW
+************************************************************/
+.birthdays-fullview {
+                border: 1px solid @lightest-grey;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    .row {
+        margin-right: 0px;
+    margin-left: 0px;
+
+        .col-md-1 {
+            padding: 0px;
+
+            .day {
+                height: 300px;
+                border: 1px solid @lightest-grey;
+                padding: 10px;
+
+                &.not-current-month {
+                //color: @lighter-grey;
+                background: @lightest-grey;
+                border: 1px solid @lighter-grey;
+            }
+
+            }
+
+        }
+
+    }
+
+}
+//end birthdays -----------------------------------------------
