@@ -6,35 +6,41 @@
  *
 */
 
-// Fonts
-@import "fonts.less";
-
-// Variables, Mixins
-@import "variables.less";
+// Base
+@import "base/fonts.less";
+@import "base/variables.less";
+@import "base/base.less";
+@import "base/print.less";
+@import "base/typography.less";
+@import "base/logos.less";
 
 // Elements
-@import "base.less";
-@import "typography.less";
-@import "navigation.less";
-@import "navigation_top.less";
-@import "navigation_left.less";
-@import "buttons.less";
-@import "badgets_labels.less";
-@import "plugin_overrides.less";
-@import "elements.less";
-@import "sidebar.less";
-@import "sidebar_right.less";
-@import "pages.less";
-@import "chat.less";
-@import "spinners.less";
-@import "logos.less";
-@import "wiki.less";
-@import "scorecard.less";
-@import "carousel.less";
-@import "calendar.less";
-@import "intra_old.less";
+@import "elements/badgets_labels.less";
+@import "elements/buttons.less";
+@import "elements/calendar.less";
+@import "elements/carousel.less";
+@import "elements/elements.less";
+@import "elements/plugin_overrides.less";
+@import "elements/spinners.less";
 
+// Layout
+@import "layout/navigation.less";
+@import "layout/navigation_left.less";
+@import "layout/navigation_top.less";
+@import "layout/sidebar.less";
+@import "layout/sidebar_right.less";
 
-// Media query style
-@import "print.less";
+// modules
+@import "modules/auth.less";
+@import "modules/cms.less";
+@import "modules/fm.less";
+@import "modules/intranet.less";
+@import "modules/mission.less";
+@import "modules/reports.less";
+@import "modules/scorecard.less";
+@import "modules/srm.less";
+@import "modules/ui.less";
+@import "modules/wiki.less";
+
+// mobile
 @import "media.less";

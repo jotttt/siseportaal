@@ -1,20 +1,20 @@
-// main: style.less
+// main: ../style.less
 
 /*********************************************
 BOOTSTRAP TOOLTIPS
 **********************************************/
 .tooltip-inner {
-  background: @lightest-grey;
-  color: @text-color;
+    background: @lightest-grey;
+    color: @text-color;
 }
 
 .tooltip.left .tooltip-arrow {
-  border-left-color: @lightest-grey;
+    border-left-color: @lightest-grey;
 }
 
 @media (max-width: @mobile-width){
     .tooltip {
-       display: none !important;
+        display: none !important;
     }
 }
 //end tooltips--------------------------------
@@ -143,9 +143,30 @@ MASONRY STYLE LAYOUT
 /*******************************************
 DATEPICKER
 *******************************************/
+.datepicker {
+
+    span {
+
+        &.active.active  {
+            background: @cherry !important;
+            color: white !important;
+
+            &:hover {
+                background:  darken(@cherry, 5%) !important;
+            }
+
+        }
+
+    }
+
+}
+
 .datepicker-dropdown {
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     border: 1px solid @lightest-grey;
+
+
+
 }
 
 .datepicker-dropdown:before {
@@ -194,12 +215,176 @@ DATEPICKER
     background-image: linear-gradient(top, @grey, @grey);
 }
 
+@media(max-width: @mobile-width) {
+
+    .datepicker {
+
+        table {
+
+            thead {
+                display: table-row;
+            }
+
+            tr {
+                display: table-header-group;
+                position: relative;
+                border: 0px solid;
+
+                td, th {
+                    padding: 3px;
+
+                    &.next {
+                        float: right;
+                    }
+
+                    &.datepicker-switch {
+                        margin-left: 20px;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+    .datepicker-days {
+
+        table {
+            display: table;
+            border-collapse: separate;
+
+            thead {
+                display: table-header-group;
+
+                tr {
+                    display: table-row;
+                    position: relative;
+                    border: 0px solid transparent;
+
+                    th {
+                        display: inline-block;
+                    }
+
+                }
+
+            }
+
+            tbody {
+                display: table-row;
+
+                tr {
+                    display: table-row;
+                    border: none;
+
+                    td {
+                        display: table-cell;
+                        width: 30px;
+                        position: relative;
+                        padding-left: 3px;
+                    }
+
+                    td:before {
+                        position: relative;
+                        top: 6px;
+                        left: 6px;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            tfoot {
+                display: none;
+            }
+
+        }
+
+    }
+
+    .datepicker-months {
+
+        table {
+
+            tr {
+
+                th {
+                    display: inline-block;
+                }
+
+                td {
+                    width: 271px;
+
+                    span {
+
+                        &.active.active  {
+                            background: @cherry;
+                            color: white;
+
+                            &:hover {
+                                background:  darken(@cherry, 5%);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .datepicker-years {
+
+        table {
+
+            tr {
+
+                th {
+                    display: inline-block;
+                }
+
+                td {
+                    width: 271px;
+
+                    span {
+
+                        &.active.active  {
+                            background: @cherry;
+                            color: white;
+
+                            &:hover {
+                                background:  darken(@cherry, 5%);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 @media(max-width: 480px) {
 
     .datepicker-dropdown {
-        top: 25% !important;
-        left:0 !important;
-        right:0;
+        //top: 25% !important;
+        //left:0 !important;
+        //right:0;
         margin-left:auto;
         margin-right:auto;
     }
@@ -217,7 +402,7 @@ DATEPICKER
     }
 
 }
-//end datepicker -------------------------------------
+//end datepicker ---------------------------
 
 /*******************************************
 PACE
@@ -328,6 +513,6 @@ TOASTR
 }
 
 .toast-top-center {
-  top: 5px;
+    top: 5px;
 }
 //toastr --------------------------
