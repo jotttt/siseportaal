@@ -590,7 +590,22 @@ body.body-small .footer.fixed {
     color: @cherry;
 }
 
-/* TABLES */
+/*************************************************************
+TABLES
+*************************************************************/
+
+table {
+    border-collapse: collapse;
+
+    tr {
+
+        td {
+           padding: 3px 6px;
+        }
+
+    }
+
+}
 
 .table-bordered {
     border: 1px solid #EBEBEB;
@@ -617,10 +632,6 @@ body.body-small .footer.fixed {
     vertical-align: top;
 }
 
-
-table {
-    border-collapse: collapse;
-}
 
 @media(max-width: @mobile-width) {
 
@@ -660,7 +671,7 @@ table {
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%;
+    //padding-left: 50%;
     }
 
     td:before {
