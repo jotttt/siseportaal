@@ -1,1 +1,113 @@
 // main: ../style.less
+
+/**********************************************
+WIKI EDIT TOOLS
+**********************************************/
+#wikiTools {
+  right: 0;
+  background: white;
+  border: 1px solid @lightest-grey;
+  border-right: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position:fixed;
+  top: 140px;
+  right: -10px;
+  height: 40px;
+  width: 60px;
+  z-index: 2;
+
+  .nav {
+    position: static;
+    margin-right: -15px;
+
+  }
+
+  .dropdown-menu {
+    right: 40px;
+    top: 35px;
+
+    .setings-item {
+        padding: 5px 5px;
+
+      .switch {
+        display: inline-block;
+        float: right;
+        margin-top: -7px;
+
+          select {
+              margin-top: 6px;
+          }
+
+      }
+
+    }
+
+  }
+
+  .wiki-edit-btn {
+    color: @lighter-grey;
+    background: #fff;
+    border: 1px solid @lightest-grey;
+    border-radius: 20px;
+    padding: 1px 5px;
+    margin: 7px 42px 0 0;
+    position: static;
+  }
+
+  .dropdown.open {
+    background: none;
+  }
+
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: none;
+    color: darken(@lighter-grey, 10%);
+  }
+}
+
+@media(max-width:1199px) {
+  #wikiTools {
+    right: -10px;
+  }
+}
+
+@media(max-width: @mobile-width) {
+  #wikiTools {
+    width: 40px;
+    right: 0px;
+    top: 90px;
+
+    .wiki-edit-btn {
+      padding: 1px 5px;
+      margin: 7px 21px 0 0;
+      top: 38px;
+      right: 20px
+    }
+
+    .dropdown-menu {
+      right: 40px;
+      top: 35px;
+
+      .setings-item {
+        padding: 5px 5px;
+
+        span {
+        }
+
+        .switch {
+          display: inline-block;
+          float: right;
+          padding: 0;
+
+          a {
+            padding: 0;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+//end tools---------------------------------
