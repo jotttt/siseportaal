@@ -644,7 +644,7 @@ table tr td {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
-  /* Force table to not be like tables anymore */
+  /* tables as cards */
   table,
   thead,
   tbody,
@@ -8003,16 +8003,100 @@ BIRTHDAYS FULLVIEW
   margin-top: 10px;
 }
 @media (max-width: 991px) {
-  .csv-save-btn {
-    display: none !important;
+  #budgetPanel_ {
+    /*thead tr {
+        position: relative;
+        top: auto;
+        left: auto;
+    }*/
   }
-  #budgetPanel_ .report-results .collapsed .first-child:before {
-    left: -10px;
-    margin-top: 0px;
+  #budgetPanel_ #tab_results {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
-  #budgetPanel_ .report-results .collapsed2 .first-child2:before {
-    left: 15px;
-    margin-top: 0px;
+  #budgetPanel_ .csv-save-btn {
+    right: 22px;
+    top: 125px;
+  }
+  #budgetPanel_ table,
+  #budgetPanel_ thead,
+  #budgetPanel_ tbody,
+  #budgetPanel_ th,
+  #budgetPanel_ td,
+  #budgetPanel_ tr {
+    display: table-cell;
+    font-size: 12px;
+  }
+  #budgetPanel_ table {
+    display: table;
+    max-width: 750px;
+  }
+  #budgetPanel_ thead {
+    display: table-header-group;
+  }
+  #budgetPanel_ tbody {
+    display: table-row-group;
+  }
+  #budgetPanel_ tfoot {
+    display: table-footer-group;
+  }
+  #budgetPanel_ tbody > tr:hover,
+  #budgetPanel_ tbody > tr {
+    display: table-row;
+  }
+  #budgetPanel_ tbody > tr:hover > td,
+  #budgetPanel_ tbody > tr > td {
+    display: table-cell;
+  }
+  #budgetPanel_ tbody,
+  #budgetPanel_ tbody > tr:hover,
+  #budgetPanel_ tbody > tr,
+  #budgetPanel_ tbody > tr:hover > td,
+  #budgetPanel_ tbody > tr > td,
+  #budgetPanel_ tbody > tr:hover > th,
+  #budgetPanel_ tbody > tr > th,
+  #budgetPanel_ thead > tr:hover > td,
+  #budgetPanel_ thead > tr > td,
+  #budgetPanel_ thead > tr:hover > th,
+  #budgetPanel_ thead > tr > th,
+  #budgetPanel_ tfoot > tr:hover > td,
+  #budgetPanel_ tfoot > tr > td,
+  #budgetPanel_ tfoot > tr:hover > th,
+  #budgetPanel_ tfoot > tr > th {
+    background: transparent;
+    border: 0px solid #000;
+    border-spacing: 0px;
+    border-collapse: separate;
+    empty-cells: show;
+    padding: 0px;
+    margin: 0px;
+    outline: 0px;
+    font-size: 100%;
+    color: #000;
+    vertical-align: top;
+    text-align: left;
+    font-family: sans-serif;
+    table-layout: auto;
+    caption-side: top;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+  #budgetPanel_ tr {
+    border: 1px solid #ccc;
+  }
+  #budgetPanel_ td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #budgetPanel_ td:before {
+    display: none;
   }
 }
 /******************************************************************
