@@ -76,7 +76,7 @@
             //text-decoration: underline;
             //border-bottom: 1px solid grey;
         }
-/**/
+        /**/
         .collapsing {
             -webkit-transition:height .01s ease;
             transition:height .01s ease;
@@ -204,61 +204,113 @@
         margin-top: 10px;
     }
 
-}
+    @media(max-width: @mobile-width) {
 
-@media(max-width: @mobile-width) {
+        #tab_results {
+            width: 100%;
+            margin-bottom: 15px;
+            overflow-y: hidden;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
 
-    .csv-save-btn {
-        display: none !important;
-    }
+        .csv-save-btn {
+            right: 22px;
+            top: 125px;
+        }
 
-    #budgetPanel_ {
+        table, thead, tbody, th, td, tr {
+            display: table-cell;
+            font-size: 12px;
 
-        .report-results {
+        }
 
-            .collapsed {
+        table {
+            display: table;
+            max-width: 750px;
+            //table-layout: fixed;
+            //width: 100%;
+            //white-space: nowrap;
+        }
 
-                .first-child {
+        thead {
+            display: table-header-group;
+        }
 
-                    &:before {
-                        left: -10px;
-                        margin-top: 0px;
-                    }
+        tbody {
+            display: table-row-group;
+        }
 
-                    &.open {
+        tfoot {
+            display: table-footer-group;
+        }
 
-                        &:before {
-                        }
+        tbody>tr:hover,
+        tbody>tr {
+            display: table-row;
+        }
 
-                    }
+        tbody>tr:hover>td,
+        tbody>tr>td {
+            display: table-cell;
+        }
 
-                }
+        tbody,
+        tbody>tr:hover,
+        tbody>tr,
+        tbody>tr:hover>td,
+        tbody>tr>td,
+        tbody>tr:hover>th,
+        tbody>tr>th,
+        thead>tr:hover>td,
+        thead>tr>td,
+        thead>tr:hover>th,
+        thead>tr>th,
+        tfoot>tr:hover>td,
+        tfoot>tr>td,
+        tfoot>tr:hover>th,
+        tfoot>tr>th {
+            background: transparent;
+            border: 0px solid #000;
+            border-spacing: 0px;
+            border-collapse: separate;
+            empty-cells: show;
+            padding: 0px;
+            margin: 0px;
+            outline: 0px;
+            font-size: 100%;
+            color: #000;
+            vertical-align: top;
+            text-align: left;
+            font-family: sans-serif;
+            table-layout: auto;
+            caption-side: top;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+        }
 
-            }
+        /*thead tr {
+        position: relative;
+        top: auto;
+        left: auto;
+    }*/
 
-            .collapsed2 {
+        tr { border: 1px solid #ccc; }
 
-                .first-child2 {
+        td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-                    &:before {
-                        left: 15px;
-                        margin-top: 0px;
-                    }
-
-                    &.open {
-
-                        &:before {
-
-                        }
-
-                    }
-
-                }
-
-            }
-
+        td:before {
+            display: none;
         }
 
     }
 
 }
+
