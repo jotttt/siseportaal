@@ -227,149 +227,6 @@ li {
     padding: 0 5px;
   }
 }
-.high-contrast-content {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content #wrapper {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content h1,
-.high-contrast-content h2,
-.high-contrast-content h3,
-.high-contrast-content h4,
-.high-contrast-content h5,
-.high-contrast-content h6 {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content strong {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content span {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content div {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content div a {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content div a:hover {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content div:hover {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content div .card.active {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content .sub-action-badge {
-  border: 2px solid white;
-}
-.high-contrast-content nav {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content .navbar-top .nav > li > a {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content > .navbar-default .nav > li > a:hover,
-.high-contrast-content > .navbar-default .nav > li > a:focus {
-  background: white;
-  color: yellow;
-}
-.high-contrast-content ol {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content ul {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content ul li {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content ul li.active {
-  background: black;
-  color: yellow;
-  border: 2px solid white;
-}
-.high-contrast-content ul li a {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content ul li a:visited,
-.high-contrast-content ul li a:hover {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content select {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content input {
-  background: black;
-  color: yellow;
-}
-.high-contrast-content button {
-  background: black;
-  color: yellow;
-  border-color: white;
-}
-.high-contrast-content button:hover {
-  background: black;
-  color: yellow;
-  border-color: white;
-}
-.high-contrast-content input::-webkit-input-placeholder {
-  background: yellow;
-  color: black;
-}
-.high-contrast-content input:-moz-placeholder {
-  background: yellow;
-  color: black;
-}
-.high-contrast-content high-contrast-content input::-moz-placeholder {
-  background: yellow;
-  color: black;
-}
-.high-contrast-content input:-ms-input-placeholder {
-  background: yellow;
-  color: black;
-}
-.high-contrast-content #srch-term {
-  background: yellow;
-  color: black;
-}
-.high-contrast-content #srch-term::-webkit-input-placeholder {
-  color: #333333;
-}
-.high-contrast-content #srch-term:-moz-placeholder {
-  /* Firefox 18- */
-  color: #333333;
-}
-.high-contrast-content #srch-term::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #333333;
-}
-.high-contrast-content #srch-term:-ms-input-placeholder {
-  color: #333333;
-}
-.high-contrast-content #fullscreen-btn {
-  background: yellow;
-  color: black;
-}
 .b-r {
   border-right: 1px solid #dddddd;
 }
@@ -4975,6 +4832,23 @@ TOASTR
 .toast-top-center {
   top: 5px;
 }
+.ttu-loading-gif {
+  position: fixed;
+  top: 50%;
+  margin-top: -70px;
+  left: 50%;
+  margin-left: -70px;
+}
+.ttu-loading-mask {
+  position: absolute;
+  overflow: hidden;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
 .loading-gif {
   position: fixed;
   top: 50%;
@@ -9072,5 +8946,215 @@ div.wiki-template-box h3 {
     text-align: left;
     display: inline-block;
   }
+}
+.high-contrast-content {
+  background: black;
+  color: yellow;
+  /*ul li.active {
+        background: black;
+        color: yellow;
+        border: 0px solid yellow;
+    }
+*/
+}
+.high-contrast-content #wrapper {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content #page-wrapper.min {
+  border: 1px solid yellow;
+}
+.high-contrast-content h1,
+.high-contrast-content h2,
+.high-contrast-content h3,
+.high-contrast-content h4,
+.high-contrast-content h5,
+.high-contrast-content h6 {
+  background: black;
+  color: yellow !important;
+}
+.high-contrast-content a:hover,
+.high-contrast-content a:focus {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content strong {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content span {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content div {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content div a {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content div a:hover {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content div:hover {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content div .card.active {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content .sub-action-badge {
+  border: 2px solid white;
+}
+.high-contrast-content nav {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content .navbar-top .nav > li > a {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content > .navbar-default .nav > li > a:hover,
+.high-contrast-content > .navbar-default .nav > li > a:focus {
+  background: white;
+  color: yellow;
+}
+.high-contrast-content ol {
+  background: black;
+  color: yellow;
+  border: 1px solid #ff0;
+}
+.high-contrast-content ul {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content ul li {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content ul li a {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content ul li a:visited,
+.high-contrast-content ul li a:hover {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content select {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content input {
+  background: black;
+  color: yellow;
+}
+.high-contrast-content button {
+  background: black;
+  color: yellow;
+  border-color: white;
+}
+.high-contrast-content button:hover {
+  background: black;
+  color: yellow;
+  border-color: white;
+}
+.high-contrast-content input::-webkit-input-placeholder {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content input:-moz-placeholder {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content high-contrast-content input::-moz-placeholder {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content input:-ms-input-placeholder {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content .btn-round i {
+  color: yellow;
+}
+.high-contrast-content .text-muted {
+  color: yellow !important;
+}
+.high-contrast-content .navbar-top {
+  border-bottom: 1px solid yellow;
+}
+.high-contrast-content .navbar-top .navbar .navbar-header .navbar-collapse.collapse .nav.navbar-nav .dropdown .dropdown-menu {
+  border: 1px solid yellow;
+}
+.high-contrast-content .navbar-top .navbar .navbar-header .navbar-collapse.collapse .nav.navbar-nav .dropdown .dropdown-menu li a:hover {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content .navbar-top .navbar .right-side .navbar-right li a {
+  color: yellow;
+}
+.high-contrast-content .navbar-top .navbar .right-side .navbar-right .dropdown:hover a {
+  color: black;
+  background: yellow;
+}
+.high-contrast-content .navbar-top .navbar .right-side .navbar-right .dropdown .dropdown-toggle {
+  color: yellow;
+}
+.high-contrast-content .navbar-top .navbar .right-side .navbar-right .help-button:hover a {
+  color: black;
+  background: yellow;
+}
+.high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term::-webkit-input-placeholder {
+  color: #333333;
+}
+.high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term:-moz-placeholder {
+  /* Firefox 18- */
+  color: #333333;
+}
+.high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #333333;
+}
+.high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term:-ms-input-placeholder {
+  color: #333333;
+}
+.high-contrast-content #m-menu.min {
+  box-shadow: 1px 1px 1px 1px yellow;
+}
+.high-contrast-content ul.nav.nav-tabs li {
+  background: yellow;
+  color: black;
+  border-color: yellow;
+}
+.high-contrast-content ul.nav.nav-tabs li.active a {
+  color: black;
+}
+.high-contrast-content ul.nav.nav-tabs li a {
+  color: yellow;
+}
+.high-contrast-content ul.nav.nav-tabs li a:hover {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content .tab-content {
+  border: 1px solid yellow;
+}
+.high-contrast-content #fullscreen-btn {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content .scroll-up {
+  color: yellow;
+}
+.high-contrast-content .footer {
+  border-top: 1px solid yellow;
 }
 /*# sourceMappingURL=style.css.map */
