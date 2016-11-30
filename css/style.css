@@ -54,7 +54,7 @@ ul {
   padding: 0;
 }
 /* WRAPPERS */
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #page-wrapper {
     min-height: 100%;
   }
@@ -77,7 +77,7 @@ ul {
   padding: 20px 10px 0px;
   min-height: auto;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .wrapper-content {
     padding: 0px 0px 40px 0px;
     min-height: auto;
@@ -87,7 +87,7 @@ ul {
 margin-right: 230px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 #content-wrapper2 {
 margin-right: 0px;
 }
@@ -100,7 +100,7 @@ margin-right: 0px;
 #page-wrapper.min {
   margin-left: 50px;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #page-wrapper {
     margin-left: 0px;
     padding: 80px 1px 45px 1px;
@@ -115,7 +115,7 @@ margin-right: 0px;
 #page-wrapper.max {
   margin-left: 240px;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /*#page-wrapper {
     position: inherit;
     margin: 0 0 0 @sidebar-width;
@@ -172,7 +172,7 @@ a:focus {
 li {
   list-style-type: none;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .row {
     margin: 0;
   }
@@ -487,7 +487,7 @@ table tr td {
   padding: 8px;
   vertical-align: top;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   table {
     width: 100%;
   }
@@ -566,7 +566,7 @@ table tr td {
   background: none;
   margin: 0;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .panel-body {
     padding: 0;
   }
@@ -1235,7 +1235,7 @@ a.close-canvas-menu:hover {
   height: 200px;
   padding-top: 70px;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .hidden-xxs {
     display: none!important;
   }
@@ -1598,7 +1598,7 @@ a.close-canvas-menu:hover {
   padding-right: 15px;
   padding-left: 15px;
 }
-@media (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
   .col-xl-1,
   .col-xl-2,
   .col-xl-3,
@@ -1784,7 +1784,7 @@ a.close-canvas-menu:hover {
   padding-right: 5px;
   padding-left: 5px;
 }
-@media (min-width: 150px) {
+@media screen and (min-width: 150px) {
   .col-xxs-1,
   .col-xxs-2,
   .col-xxs-3,
@@ -1953,7 +1953,7 @@ a.close-canvas-menu:hover {
     margin-left: 0;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -1961,7 +1961,7 @@ a.close-canvas-menu:hover {
     *width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -1973,7 +1973,7 @@ a.close-canvas-menu:hover {
  *  The following is not really needed in this case
  *  Only to demonstrate the usage of @media for large screens
  */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -1990,67 +1990,6 @@ a.close-canvas-menu:hover {
 }
 #lblDisposalDate {
   position: relative;
-}
-@media print {
-  body {
-    margin: 0 10px;
-  }
-  #m-menu {
-    display: none;
-  }
-  .navbar-top {
-    display: none;
-  }
-  #wikiTools {
-    display: none;
-  }
-  .breadcrumb {
-    display: none;
-  }
-  .breadcrumb-btn-container {
-    display: none;
-  }
-  #page-wrapper {
-    background: white;
-    margin: 0;
-    padding: 0;
-  }
-  #page-wrapper .wrapper-content {
-    margin: 0;
-    padding: 0;
-  }
-  #page-wrapper .wrapper-content .nav.nav-tabs {
-    display: none;
-  }
-  #page-wrapper .wrapper-content .tab-content {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  #page-wrapper .wrapper-content .tab-pane {
-    margin: 0;
-  }
-  #page-wrapper .wrapper-content .panel {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  #page-wrapper .wrapper-content .panel .panel-heading {
-    display: none;
-  }
-  #page-wrapper .wrapper-content .panel .panel-body {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  #page-wrapper .wrapper-content .wiki-doc {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .footer {
-    display: none;
-  }
 }
 h1,
 h2,
@@ -2095,6 +2034,12 @@ h5 {
   height: 60px;
   width: 100px;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgNTczLjQ4NiAxMjgwIDM1My4wMjciID48Zz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNODIuODk4LDY4MC40MDhsMzguOTgsMy44MjNWNTczLjQ4NmgtMzguOThWNjgwLjQwOHogTTQuMzA0LDY3Mi43MjlsNy4zOTEsMC43Mjl2LTk5Ljk3Mkg0LjMwNFY2NzIuNzI5eiBNMTQ5Ljc0OSw2ODcuMzFsMjMuNTI2LDIuMzAxbDIzLjQ4Ni0yLjMwMVY1NzMuNDg2aC00Ny4wMTJ2MTEzLjQ2MlY2ODcuMzF6IE0zNS4yMzcsNjc1Ljc1OWwyNC4xNjcsMi4zNzNWNTczLjQ4NkgzNS4yMzdWNjc1Ljc1OSB6IE0zMzQuODA3LDU3My40ODZ2OTkuOTg4bDEuMjAzLTAuMDg5bDYuNzg5LTAuNjU3di05OS4yNDJIMzM0LjgwN3ogTTIyNC42MjQsNjg0LjI0N2wzOC45OTYtMy44MDdWNTczLjQ4NmgtMzguOTk2VjY4NC4yNDd6IE0yODcuMTE0LDY3OC4xNDdsMjQuMTQzLTIuMzU2VjU3My40ODZoLTI0LjE0M1Y2NzguMTQ3eiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04Mi44OTgsOTIwLjAxM2gzOC45OFY4MDkuMzE2bC0zOC45OCwzLjgyM1Y5MjAuMDEzeiBNNC4zMDQsOTIwLjAxM2g3LjM5MXYtOTkuOTE2bC03LjM5MSwwLjczOFY5MjAuMDEzeiBNMTQ5Ljc0OSw5MjAuMDEzaDQ3LjAxMlY4MDYuNTkxbC0yMy40ODYtMi4yNzZsLTIzLjUyNiwyLjI3NlY5MjAuMDEzeiBNMzUuMjM3LDkyMC4wMTNoMjQuMTY3VjgxNS40NGwtMjQuMTY3LDIuMzRWOTIwLjAxM3ogTTM0Mi43OTksOTE5Ljc2NHYtOTguOTM4bC02Ljc4OS0wLjY4MWwtMS4yMDMtMC4wOTd2OTkuOTY0aDcuOTkyVjkxOS43NjR6IE0yMjQuNjI0LDkyMC4wMTNoMzguOTk2VjgxMy4xMDdsLTM4Ljk5Ni0zLjgwOCBWOTIwLjAxM3ogTTI4Ny4xMTQsOTIwLjAxM2gyNC4xNDN2LTEwMi4yOGwtMjQuMTQzLTIuMzMyVjkyMC4wMTN6Ii8+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTAsNzk2LjQ2N2gxNi4wOTV2LTk5LjM3SDBWNzk2LjQ2N3ogTTMxLjUzNCw3OTYuNDY3aDMxLjU5OHYtOTkuMzdIMzEuNTM0Vjc5Ni40Njd6IE03OC41NzgsNzk2LjQ2NyBoNDcuNjA1di05OS4zN0g3OC41NzhWNzk2LjQ2N3ogTTE0MS42NjEsNzk2LjQ2N2g2My4xOTV2LTk5LjM3aC02My4xOTVWNzk2LjQ2N3ogTTIyMC4yNTUsNzk2LjQ2N2g0Ny42ODV2LTk5LjM3aC00Ny42ODVWNzk2LjQ2NyBMMjIwLjI1NSw3OTYuNDY3eiBNMjgzLjQyNiw3OTYuNDY3SDMxNXYtOTkuMzdoLTMxLjU3NFY3OTYuNDY3eiBNMzMwLjQzMSw2OTcuMDk3djk5LjM3aDE2LjEwNHYtOTkuMzdIMzMwLjQzMXoiLz48L2c+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTcwOS4zNTUsNjA2LjIzOWgxMTMuMzY2djMxNC4yMTRoMzkuMzE2VjYwNi4yMzlIOTc1LjM4di0zMi43NTNINzA5LjM1NVY2MDYuMjM5eiBNNDA5LjY2NSw2MDYuMjM5aDExMy4zNTggdjMxNC4yMTRoMzkuMzE2VjYwNi4yMzloMTEzLjM0MnYtMzIuNzUzSDQwOS42NjVWNjA2LjIzOXogTTEyNDAuNjg0LDU3My40ODZWNzk4LjE1YzAsNTcuNDMzLTM3LjA0OSw5My4xMjYtOTYuNjc4LDkzLjEyNiBjLTU4Ljk3OSwwLTk1LjYyNy0zNS4zMDEtOTUuNjI3LTkyLjEyNFY1NzMuNDg2aC0zOS4zMDl2MjI1LjY2NmMwLDc2LjE0OCw1NC41MDYsMTI3LjQ0OSwxMzUuNDY1LDEyNy4zNjEgYzgxLjAzOCwwLDEzNS40OC01MS4yMDQsMTM1LjQ4LTEyNy4zNjFWNTczLjQ4NkgxMjQwLjY4NHogTTExOTcuNjM5LDU3My40ODZoLTI5LjY1djQwLjM2N2gyOS42NVY1NzMuNDg2eiBNMTEyMS4wOTgsNTczLjQ4NiBoLTI5LjY1OHY0MC4zNjdoMjkuNjU4VjU3My40ODZ6Ii8+PHJlY3QgeD0iMjk4Ljk4NCIgeT0iLTUxNi42NDYiIGZpbGw9Im5vbmUiIHdpZHRoPSIxMC40MjEiIGhlaWdodD0iODI0LjgxMyIvPjwvc3ZnPg==) no-repeat center center;
+}
+#logo-minimal-yellow {
+  display: block;
+  height: 60px;
+  width: 100px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgNTczLjUgMTI4MCAzNTMiPjxzdHlsZT4uYXtmaWxsOiNmZjA7fTwvc3R5bGU+PGcgY2xhc3M9ImEiPjxwYXRoIGQ9Ik04Mi45IDY4MC40bDM5IDMuOFY1NzMuNWgtMzlWNjgwLjR6TTQuMyA2NzIuN2w3LjQgMC43di0xMDBINC4zVjY3Mi43ek0xNDkuNyA2ODcuM2wyMy41IDIuMyAyMy41LTIuM1Y1NzMuNWgtNDd2MTEzLjVWNjg3LjN6TTM1LjIgNjc1LjhsMjQuMiAyLjRWNTczLjVIMzUuMlY2NzUuOHpNMzM0LjggNTczLjV2MTAwbDEuMi0wLjEgNi44LTAuN3YtOTkuMkgzMzQuOHpNMjI0LjYgNjg0LjJsMzktMy44VjU3My41aC0zOVY2ODQuMnpNMjg3LjEgNjc4LjFsMjQuMS0yLjRWNTczLjVoLTI0LjFWNjc4LjF6IiBjbGFzcz0iYSIvPjxwYXRoIGQ9Ik04Mi45IDkyMGgzOVY4MDkuM2wtMzkgMy44VjkyMHpNNC4zIDkyMGg3LjR2LTk5LjlsLTcuNCAwLjdWOTIwek0xNDkuNyA5MjBoNDdWODA2LjZsLTIzLjUtMi4zIC0yMy41IDIuM1Y5MjB6TTM1LjIgOTIwaDI0LjJWODE1LjRsLTI0LjIgMi4zVjkyMHpNMzQyLjggOTE5Ljh2LTk4LjlsLTYuOC0wLjcgLTEuMi0wLjF2MTAwaDhWOTE5Ljh6TTIyNC42IDkyMGgzOVY4MTMuMWwtMzktMy44VjkyMHpNMjg3LjEgOTIwaDI0LjF2LTEwMi4zbC0yNC4xLTIuM1Y5MjB6IiBjbGFzcz0iYSIvPjxwYXRoIGQ9Ik0wIDc5Ni41aDE2LjF2LTk5LjRIMFY3OTYuNXpNMzEuNSA3OTYuNWgzMS42di05OS40SDMxLjVWNzk2LjV6TTc4LjYgNzk2LjVoNDcuNnYtOTkuNEg3OC42Vjc5Ni41ek0xNDEuNyA3OTYuNWg2My4ydi05OS40aC02My4yVjc5Ni41ek0yMjAuMyA3OTYuNWg0Ny43di05OS40aC00Ny43Vjc5Ni41TDIyMC4zIDc5Ni41ek0yODMuNCA3OTYuNUgzMTV2LTk5LjRoLTMxLjZWNzk2LjV6TTMzMC40IDY5Ny4xdjk5LjRoMTYuMXYtOTkuNEgzMzAuNHoiIGNsYXNzPSJhIi8+PC9nPjxwYXRoIGQ9Ik03MDkuNCA2MDYuMmgxMTMuNHYzMTQuMmgzOS4zVjYwNi4ySDk3NS40di0zMi44SDcwOS40VjYwNi4yek00MDkuNyA2MDYuMmgxMTMuNHYzMTQuMmgzOS4zVjYwNi4yaDExMy4zdi0zMi44SDQwOS43VjYwNi4yek0xMjQwLjcgNTczLjVWNzk4LjJjMCA1Ny40LTM3IDkzLjEtOTYuNyA5My4xIC01OSAwLTk1LjYtMzUuMy05NS42LTkyLjFWNTczLjVoLTM5LjN2MjI1LjdjMCA3Ni4xIDU0LjUgMTI3LjQgMTM1LjUgMTI3LjQgODEgMCAxMzUuNS01MS4yIDEzNS41LTEyNy40VjU3My41SDEyNDAuN3pNMTE5Ny42IDU3My41aC0yOS42djQwLjRoMjkuN1Y1NzMuNXpNMTEyMS4xIDU3My41aC0yOS43djQwLjRoMjkuN1Y1NzMuNXoiIGNsYXNzPSJhIi8+PHJlY3QgeD0iMjk5IiB5PSItNTE2LjYiIHdpZHRoPSIxMC40IiBoZWlnaHQ9IjgyNC44IiBmaWxsPSJub25lIi8+PC9zdmc+) no-repeat center center;
 }
 .mobile-logo-minimal-w {
   margin: 0 0 0 -50px;
@@ -2173,6 +2118,11 @@ h5 {
 .badge-default {
   background-color: #e5e6e7 !important;
   color: #333333 !important;
+}
+.label-light,
+.badge-light {
+  background-color: #e5e6e7 !important;
+  color: #818182 !important;
 }
 .label-primary,
 .badge-primary {
@@ -2353,7 +2303,7 @@ h5 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .btn {
     display: block;
     width: 100%;
@@ -2834,7 +2784,7 @@ fieldset[disabled] .btn-grey.active {
   background: #78003b;
   color: white;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .btn-panel {
     margin: 0 0 20px 0;
     border-radius: 3px;
@@ -3051,7 +3001,7 @@ button.btn.btn-caret.active:before {
 .btn-round i {
   color: #c9c9c9;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   button.pull-right {
     float: none !important;
   }
@@ -3160,7 +3110,7 @@ button.btn.btn-caret.active:before {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/*@media (max-width: @mobile-width) {
+/*@media screen and (max-width: @mobile-width) {
     .tableFixedLeft td div {
         width: 100px;
     }
@@ -3283,7 +3233,7 @@ button.btn.btn-caret.active:before {
 .fn-gantt .bar {
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .fn-gantt .leftPanel {
     width: 150px;
   }
@@ -3456,7 +3406,7 @@ body.modal-open,
   left: 0;
   z-index: 1040;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .modal-open .modal {
     left: 1%;
     right: 1%;
@@ -3468,7 +3418,7 @@ FORMS
 .form-horizontal .control-label-regular {
   font-weight: normal;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .form-horizontal .control-label-regular {
     padding-top: 7px;
     margin-bottom: 0;
@@ -3595,7 +3545,7 @@ POPUP
   box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
   z-index: 2051;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .popup {
     top: 30%;
     width: 318px;
@@ -3699,7 +3649,7 @@ NEWS-MODULE AND EVENTS-MODULE
 .news-module-hero .fadeline.o01 {
   opacity: 0.1;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .news-module-hero .news-read-more {
     position: absolute;
     height: 20px;
@@ -3843,7 +3793,7 @@ it doesn’t make the test unnecessarily selective */
   top: 0px;
   left: 0px;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .rating:not(:checked) > label {
     font-size: 150%;
   }
@@ -3962,7 +3912,7 @@ SCROLL BACK UP BUTTON
   color: #818182;
   opacity: 1;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #fullscreen-btn {
     display: none;
   }
@@ -4325,12 +4275,12 @@ table.table-mail tr td {
 .widget .flot-chart {
   height: 100px;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   #highlight {
     display: none;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   #highlight-mobile {
     display: none;
   }
@@ -4462,7 +4412,7 @@ BOOTSTRAP TOOLTIPS
 .tooltip.left .tooltip-arrow {
   border-left-color: #e5e6e7;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .tooltip {
     display: none !important;
   }
@@ -4524,13 +4474,13 @@ MASONRY STYLE LAYOUT
   width: 25%;
   padding: 10px;
 }
-@media (max-width: 1399px) {
+@media screen and (max-width: 1399px) {
   .grid-sizer {
     width: 50%;
     padding: 10px;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .grid-sizer {
     width: 100%;
     padding: 10px;
@@ -4636,7 +4586,7 @@ DATEPICKER
   background-image: -o-linear-gradient(top, #818182, #818182);
   background-image: linear-gradient(top, #818182, #818182);
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .datepicker table thead {
     display: table-row;
   }
@@ -4723,7 +4673,7 @@ DATEPICKER
     background: #6e0036;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .datepicker-dropdown {
     margin-left: auto;
     margin-right: auto;
@@ -6397,7 +6347,7 @@ M-MENU
   -moz-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.57);
   box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.57);
 }
-@media (min-width: 991px) {
+@media screen and (min-width: 991px) {
   #m-menu.min:hover {
     width: 240px;
   }
@@ -7227,12 +7177,12 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 /**********************************************************
 SPECIAL CASES
 ***********************************************************/
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .menu-visible-md {
     display: block !important;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .menu-visible-lg {
     display: block !important;
   }
@@ -7505,7 +7455,7 @@ RIGHT SIDEBAR SETTINGS MENU
 .loginscreen .ttu-login .btn {
   width: auto;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .loginscreen .ttu-login .btn {
     margin-bottom: 0px;
   }
@@ -7515,13 +7465,11 @@ WIKI EDIT TOOLS
 **********************************************/
 #wikiTools {
   right: 0;
-  background: white;
-  border: 1px solid #e5e6e7;
   border-right: 0px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  position: fixed;
-  top: 140px;
+  position: absolute;
+  top: 80px;
   right: -10px;
   height: 40px;
   width: 60px;
@@ -7535,6 +7483,29 @@ WIKI EDIT TOOLS
   right: 40px;
   top: 35px;
 }
+#wikiTools .dropdown-menu:after,
+#wikiTools .dropdown-menu:before {
+  bottom: 100%;
+  left: 96.5%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+#wikiTools .dropdown-menu:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: white;
+  border-width: 5px;
+  margin-left: -5px;
+}
+#wikiTools .dropdown-menu:before {
+  border-color: rgba(196, 192, 192, 0);
+  border-bottom-color: #afaeae;
+  border-width: 6px;
+  margin-left: -6px;
+}
 #wikiTools .dropdown-menu .setings-item {
   padding: 5px 5px;
 }
@@ -7542,6 +7513,10 @@ WIKI EDIT TOOLS
   display: inline-block;
   float: right;
   margin-top: -7px;
+}
+#wikiTools .dropdown-menu .setings-item .switch a {
+  display: inline-block;
+  padding: 6px 12px;
 }
 #wikiTools .dropdown-menu .setings-item .switch select {
   margin-top: 6px;
@@ -7561,19 +7536,23 @@ WIKI EDIT TOOLS
 #wikiTools .nav .open > a,
 #wikiTools .nav .open > a:hover,
 #wikiTools .nav .open > a:focus {
-  background: none;
+  background: white;
   color: #b0b0b0;
 }
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   #wikiTools {
     right: -10px;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #wikiTools {
+    position: fixed;
     width: 40px;
+    background: white;
+    border: 1px solid #e5e6e7;
+    border-right: 0px solid transparent;
     right: 0px;
-    top: 90px;
+    top: 100px;
   }
   #wikiTools .wiki-edit-btn {
     padding: 1px 5px;
@@ -7582,19 +7561,48 @@ WIKI EDIT TOOLS
     right: 20px;
   }
   #wikiTools .dropdown-menu {
-    right: 40px;
-    top: 35px;
+    right: 70px;
+    top: -50px;
+    width: 250px;
+  }
+  #wikiTools .dropdown-menu:after,
+  #wikiTools .dropdown-menu:before {
+    left: 100%;
+    top: 17%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  #wikiTools .dropdown-menu:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #ffffff;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+  #wikiTools .dropdown-menu:before {
+    border-color: rgba(215, 224, 223, 0);
+    border-left-color: #cdcccc;
+    border-width: 6px;
+    margin-top: -6px;
+    margin-left: 0px;
   }
   #wikiTools .dropdown-menu .setings-item {
-    padding: 5px 5px;
+    padding: 0px 5px;
   }
   #wikiTools .dropdown-menu .setings-item .switch {
     display: inline-block;
     float: right;
     padding: 0;
+    margin-top: 0;
+  }
+  #wikiTools .dropdown-menu .setings-item .switch select {
+    margin-top: -1px;
   }
   #wikiTools .dropdown-menu .setings-item .switch a {
-    padding: 0;
+    padding: 0px;
   }
 }
 /*************************************************************
@@ -7627,7 +7635,7 @@ DASHBOARD
 ul.clear-list:first-child {
   border-top: none !important;
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   #sortable-left,
   #sortable-right {
     min-height: 300px;
@@ -7696,7 +7704,7 @@ SEARCH RESULTS FOR PEOPLE
 .search-item at {
   display: block;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .search-item name {
     font-size: 16px;
     font-weight: 600;
@@ -7876,7 +7884,7 @@ BIRTHDAYS FULLVIEW
 #budgetPanel_ form {
   margin-top: 10px;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #budgetPanel_ {
     /*thead tr {
         position: relative;
@@ -8021,7 +8029,7 @@ SCORECARD STYLES
 .goal-tools a {
   padding: 0px 5px ;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .goal-tools {
     position: relative;
     width: auto;
@@ -8072,7 +8080,7 @@ SCORECARD STYLES
   right: 15px;
   z-index: 10;
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .action-badge-edit {
     bottom: 0px;
   }
@@ -8146,7 +8154,7 @@ SCORECARD STYLES
   border-top: 4px solid #870042;
   border-left: 4px solid #870042;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .action-tools {
     float: right;
     position: relative;
@@ -8419,7 +8427,7 @@ SCORECARD STYLES
 .wrapper-srm .nonav {
   padding: 7px 10px 0px 10px;
 }
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   .wrapper-srm {
     /* Force table to not be like tables anymore */
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -8495,7 +8503,7 @@ SCORECARD STYLES
     white-space: nowrap;
   }
 }
-@media (max-width: 520px) {
+@media screen and (max-width: 520px) {
   .wrapper-srm .header .header_right {
     float: left;
   }
@@ -8687,7 +8695,7 @@ ARTICLE STYLES
   background-color: #78003b;
   border-color: #78003b;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #innerWikiDiv input {
     display: block;
     width: 100%;
@@ -8816,12 +8824,12 @@ div.wiki-template-box h3 {
   color: #4D0A1E;
   text-decoration: none;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   #innerWikiDiv .wiki-doc {
     padding: 40px 5px;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .navbaar-collapse.collapse {
     display: block!important;
     height: auto!important;
@@ -8846,7 +8854,7 @@ div.wiki-template-box h3 {
     margin-right: -15px;
   }
 }
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   #ttu-alert-desktop {
     display: none;
   }
@@ -8854,7 +8862,7 @@ div.wiki-template-box h3 {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .navbar-form {
     float: left;
     height: 30px;
@@ -8876,7 +8884,7 @@ div.wiki-template-box h3 {
     width: 240px;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .body-small .navbar-static-side {
     display: none;
     z-index: 2001;
@@ -8918,7 +8926,7 @@ div.wiki-template-box h3 {
     display: block;
   }
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .timeline-item .date {
     text-align: left;
     width: 110px;
@@ -8951,11 +8959,11 @@ div.wiki-template-box h3 {
   background: black;
   color: yellow;
   /*ul li.active {
-        background: black;
-        color: yellow;
-        border: 0px solid yellow;
-    }
-*/
+    background: black;
+    color: yellow;
+    border: 0px solid yellow;
+}
+    */
 }
 .high-contrast-content #wrapper {
   background: black;
@@ -8971,7 +8979,7 @@ div.wiki-template-box h3 {
 .high-contrast-content h5,
 .high-contrast-content h6 {
   background: black;
-  color: yellow !important;
+  color: #ffff00 !important;
 }
 .high-contrast-content a:hover,
 .high-contrast-content a:focus {
@@ -8993,6 +9001,7 @@ div.wiki-template-box h3 {
 .high-contrast-content div a {
   background: black;
   color: yellow;
+  border-color: yellow;
 }
 .high-contrast-content div a:hover {
   background: black;
@@ -9120,7 +9129,7 @@ div.wiki-template-box h3 {
   color: #333333;
 }
 .high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term::-moz-placeholder {
-  /* Firefox 19+ */
+  /*Firefox 19+*/
   color: #333333;
 }
 .high-contrast-content .navbar-top .navbar .right-side .desktop-search #srch-term:-ms-input-placeholder {
@@ -9128,6 +9137,14 @@ div.wiki-template-box h3 {
 }
 .high-contrast-content #m-menu.min {
   box-shadow: 1px 1px 1px 1px yellow;
+}
+.high-contrast-content #m-menu.mm-menu .mm-panels .mm-panel.mm-hasnavbar .mm-navbar {
+  border-top: 1px solid yellow;
+  background: yellow;
+}
+.high-contrast-content #m-menu.mm-menu .mm-panels .mm-panel.mm-hasnavbar .mm-navbar a {
+  background: yellow;
+  color: black;
 }
 .high-contrast-content ul.nav.nav-tabs li {
   background: yellow;
@@ -9156,5 +9173,92 @@ div.wiki-template-box h3 {
 }
 .high-contrast-content .footer {
   border-top: 1px solid yellow;
+}
+.high-contrast-content #innerWikiDiv .wiki-doc {
+  background: #000;
+  color: #ff0;
+  border: 1px solid yellow;
+}
+.high-contrast-content #innerWikiDiv .wiki-doc .urlextern {
+  background: yellow;
+  color: black;
+}
+.high-contrast-content #wikiTools .wiki-edit-btn {
+  color: yellow;
+  background: black;
+  border-color: yellow;
+}
+@media print {
+  body {
+    margin: 0 10px;
+  }
+  #page-wrapper.min {
+    padding: 0;
+  }
+  #m-menu {
+    display: none;
+  }
+  .navbar-top .mobile-logo-minimal-w {
+    display: none;
+  }
+  .navbar-top .navbar {
+    display: none;
+  }
+  .navbar-top .navbar .navbar-toggle {
+    display: none;
+  }
+  .navbar-top #open-mobile-menu {
+    display: none;
+  }
+  #wikiTools {
+    display: none;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .breadcrumb-btn-container {
+    display: none;
+  }
+  #page-wrapper {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content {
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .nav.nav-tabs {
+    display: none;
+  }
+  #page-wrapper .wrapper-content .tab-content {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .tab-pane {
+    margin: 0;
+  }
+  #page-wrapper .wrapper-content .panel {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .panel .panel-heading {
+    display: none;
+  }
+  #page-wrapper .wrapper-content .panel .panel-body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #page-wrapper .wrapper-content .wiki-doc {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

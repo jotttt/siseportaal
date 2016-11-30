@@ -15,7 +15,7 @@
 
     h1,h2,h3,h4,h5,h6 {
         background: black;
-        color: yellow !important;
+        color: #ffff00 !important;
     }
 
     a:hover, a:focus {
@@ -41,6 +41,7 @@
     div a {
         background: black;
         color: yellow;
+        border-color: yellow;
     }
 
     div a:hover {
@@ -94,11 +95,11 @@
     }
 
     /*ul li.active {
-        background: black;
-        color: yellow;
-        border: 0px solid yellow;
-    }
-*/
+    background: black;
+    color: yellow;
+    border: 0px solid yellow;
+}
+    */
     ul li a {
         background: black;
         color: yellow;
@@ -238,7 +239,7 @@
                         color:  @text-color;
                     }
 
-                    #srch-term::-moz-placeholder {  /* Firefox 19+ */
+                    #srch-term::-moz-placeholder {  /*Firefox 19+*/
                         color:  @text-color;
                     }
 
@@ -251,8 +252,35 @@
         }
     }
 
-    #m-menu.min {
-        box-shadow:  1px 1px 1px 1px yellow;
+    #m-menu {
+
+        &.min {
+            box-shadow:  1px 1px 1px 1px yellow;
+        }
+
+        &.mm-menu {
+
+            .mm-panels {
+
+                .mm-panel {
+
+                    &.mm-hasnavbar {
+
+                        .mm-navbar {
+                            border-top: 1px solid yellow;
+                            background: yellow;
+
+                            a {
+                                background: yellow;
+                                color: black;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     ul.nav.nav-tabs li {
@@ -289,6 +317,32 @@
 
     .footer {
         border-top: 1px solid yellow;
+    }
+
+    #innerWikiDiv {
+
+        .wiki-doc {
+            background: #000;
+            color: #ff0;
+            border: 1px solid yellow;
+
+            .urlextern {
+                background: yellow;
+                color: black;
+            }
+
+        }
+
+    }
+
+    #wikiTools {
+
+        .wiki-edit-btn {
+            color: yellow;
+            background: black;
+            border-color: yellow;
+        }
+
     }
 
 }

@@ -4,110 +4,173 @@
 WIKI EDIT TOOLS
 **********************************************/
 #wikiTools {
-  right: 0;
-  background: white;
-  border: 1px solid @lightest-grey;
-  border-right: 0px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  position:fixed;
-  top: 140px;
-  right: -10px;
-  height: 40px;
-  width: 60px;
-  z-index: 2;
+    right: 0;
 
-  .nav {
-    position: static;
-    margin-right: -15px;
-
-  }
-
-  .dropdown-menu {
-    right: 40px;
-    top: 35px;
-
-    .setings-item {
-        padding: 5px 5px;
-
-      .switch {
-        display: inline-block;
-        float: right;
-        margin-top: -7px;
-
-          select {
-              margin-top: 6px;
-          }
-
-      }
-
-    }
-
-  }
-
-  .wiki-edit-btn {
-    color: @lighter-grey;
-    background: #fff;
-    border: 1px solid @lightest-grey;
-    border-radius: 20px;
-    padding: 1px 5px;
-    margin: 7px 42px 0 0;
-    position: static;
-  }
-
-  .dropdown.open {
-    background: none;
-  }
-
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background: none;
-    color: darken(@lighter-grey, 10%);
-  }
-}
-
-@media(max-width:1199px) {
-  #wikiTools {
+    border-right: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position:absolute;
+    top: 80px;
     right: -10px;
-  }
-}
+    height: 40px;
+    width: 60px;
+    z-index: 2;
 
-@media(max-width: @mobile-width) {
-  #wikiTools {
-    width: 40px;
-    right: 0px;
-    top: 90px;
-
-    .wiki-edit-btn {
-      padding: 1px 5px;
-      margin: 7px 21px 0 0;
-      top: 38px;
-      right: 20px
+    .nav {
+        position: static;
+        margin-right: -15px;
     }
 
     .dropdown-menu {
-      right: 40px;
-      top: 35px;
+        right: 40px;
+        top: 35px;
 
-      .setings-item {
-        padding: 5px 5px;
-
-        span {
+        &:after, &:before {
+            bottom: 100%;
+            left: 96.5%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
         }
 
-        .switch {
-          display: inline-block;
-          float: right;
-          padding: 0;
-
-          a {
-            padding: 0;
-          }
+        &:after {
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-color: white;
+            border-width: 5px;
+            margin-left: -5px;
         }
 
-      }
+        &:before {
+            border-color: rgba(196, 192, 192, 0);
+            border-bottom-color: #afaeae;
+            border-width: 6px;
+            margin-left: -6px;
+        }
+
+        .setings-item {
+            padding: 5px 5px;
+
+            .switch {
+                display: inline-block;
+                float: right;
+                margin-top: -7px;
+
+                a {
+                        display: inline-block;
+                        padding: 6px 12px;
+                    }
+
+                select {
+                    margin-top: 6px;
+                }
+
+            }
+
+        }
+
     }
 
-  }
+    .wiki-edit-btn {
+        color: @lighter-grey;
+        background: #fff;
+        border: 1px solid @lightest-grey;
+        border-radius: 20px;
+        padding: 1px 5px;
+        margin: 7px 42px 0 0;
+        position: static;
+    }
+
+    .dropdown.open {
+        background: none;
+    }
+
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        background: white;
+        color: darken(@lighter-grey, 10%);
+    }
+}
+
+@media screen and (max-width:1199px) {
+    #wikiTools {
+        right: -10px;
+    }
+}
+
+@media screen and (max-width: @mobile-width) {
+    #wikiTools {
+        position: fixed;
+        width: 40px;
+        background: white;
+        border: 1px solid @lightest-grey;
+        border-right: 0px solid transparent;
+        right: 0px;
+        top: 100px;
+
+        .wiki-edit-btn {
+            padding: 1px 5px;
+            margin: 7px 21px 0 0;
+            top: 38px;
+            right: 20px
+        }
+
+        .dropdown-menu {
+            right: 70px;
+            top: -50px;
+            width: 250px;
+
+            &:after, &:before {
+                left: 100%;
+                top: 17%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            &:after {
+                border-color: rgba(255, 255, 255, 0);
+                border-left-color: #ffffff;
+                border-width: 5px;
+                margin-top: -5px;
+            }
+
+            &:before {
+                border-color: rgba(215, 224, 223, 0);
+                border-left-color: #cdcccc;
+                border-width: 6px;
+                margin-top: -6px;
+                margin-left: 0px
+            }
+
+            .setings-item {
+                padding: 0px 5px;
+
+                span {
+                }
+
+                .switch {
+                    display: inline-block;
+                    float: right;
+                    padding: 0;
+                    margin-top: 0;
+
+                    select {
+                       margin-top: -1px;
+                    }
+
+                    a {
+
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
 
 }
 //end tools---------------------------------
