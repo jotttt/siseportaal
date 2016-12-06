@@ -292,6 +292,32 @@
 .btn-white.disabled, .btn-white.disabled:hover, .btn-white.disabled:focus, .btn-white.disabled:active, .btn-white.disabled.active, .btn-white[disabled], .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled]:active, .btn-white.active[disabled], fieldset[disabled] .btn-white, fieldset[disabled] .btn-white:hover, fieldset[disabled] .btn-white:focus, fieldset[disabled] .btn-white:active, fieldset[disabled] .btn-white.active {
   color: #cacaca;
 }
+
+.btn-white-borderless {
+  color: inherit;
+  background: white;
+  border: 1px solid white;
+}
+
+.btn-white-borderless:hover, .btn-white-borderless:focus, .btn-white-borderless:active, .btn-white-borderless.active, .open .dropdown-toggle.btn-white-borderless {
+  color: inherit;
+  border: 1px solid white;
+}
+
+.btn-white-borderless:active, .btn-white-borderless.active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+}
+
+.btn-white-borderless:active, .btn-white-borderless.active, .open .dropdown-toggle.btn-white-borderless {
+  background-image: none;
+}
+
+.btn-white-borderless.disabled, .btn-white.disabled:hover, .btn-white-borderless.disabled:focus, .btn-white-borderless.disabled:active, .btn-white-borderless.disabled.active, .btn-white-borderless[disabled], .btn-white-borderless[disabled]:hover, .btn-white-borderless[disabled]:focus, .btn-white-borderless[disabled]:active, .btn-white-borderless.active[disabled], fieldset[disabled] .btn-white-borderless, fieldset[disabled] .btn-white-borderless:hover, fieldset[disabled] .btn-white-borderless:focus, fieldset[disabled] .btn-white-borderless:active, fieldset[disabled] .btn-white-borderless.active {
+  color: white;
+}
+
+
+
 .btn-grey {
   background-color: @grey-btn;
   border-color: @grey-btn;

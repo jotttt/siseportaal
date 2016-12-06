@@ -2124,6 +2124,11 @@ h5 {
   background-color: #e5e6e7 !important;
   color: #818182 !important;
 }
+.label-transparent,
+.badge-transparent {
+  background-color: transparent !important;
+  color: #818182 !important;
+}
 .label-primary,
 .badge-primary {
   background-color: #870042 !important;
@@ -2677,6 +2682,45 @@ fieldset[disabled] .btn-white:focus,
 fieldset[disabled] .btn-white:active,
 fieldset[disabled] .btn-white.active {
   color: #cacaca;
+}
+.btn-white-borderless {
+  color: inherit;
+  background: white;
+  border: 1px solid white;
+}
+.btn-white-borderless:hover,
+.btn-white-borderless:focus,
+.btn-white-borderless:active,
+.btn-white-borderless.active,
+.open .dropdown-toggle.btn-white-borderless {
+  color: inherit;
+  border: 1px solid white;
+}
+.btn-white-borderless:active,
+.btn-white-borderless.active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+}
+.btn-white-borderless:active,
+.btn-white-borderless.active,
+.open .dropdown-toggle.btn-white-borderless {
+  background-image: none;
+}
+.btn-white-borderless.disabled,
+.btn-white.disabled:hover,
+.btn-white-borderless.disabled:focus,
+.btn-white-borderless.disabled:active,
+.btn-white-borderless.disabled.active,
+.btn-white-borderless[disabled],
+.btn-white-borderless[disabled]:hover,
+.btn-white-borderless[disabled]:focus,
+.btn-white-borderless[disabled]:active,
+.btn-white-borderless.active[disabled],
+fieldset[disabled] .btn-white-borderless,
+fieldset[disabled] .btn-white-borderless:hover,
+fieldset[disabled] .btn-white-borderless:focus,
+fieldset[disabled] .btn-white-borderless:active,
+fieldset[disabled] .btn-white-borderless.active {
+  color: white;
 }
 .btn-grey {
   background-color: #dddddd;
@@ -6986,7 +7030,7 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
     border: medium none;
     border-radius: 3px;
     box-shadow: 0 0 3px rgba(86, 96, 117, 0.7);
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     width: auto;
   }
   .navbar-top .navbar .navbar-header .navbar-collapse.collapsing .nav.navbar-nav .nav-header {
@@ -7733,6 +7777,57 @@ BIRTHDAYS FULLVIEW
 .birthdays-fullview .row .col-md-1 .day.not-current-month {
   background: #e5e6e7;
   border: 1px solid #c9c9c9;
+}
+.wrapper-mission #expenses .col-xs-1,
+.wrapper-mission #expenses .col-sm-1,
+.wrapper-mission #expenses .col-md-1,
+.wrapper-mission #expenses .col-lg-1,
+.wrapper-mission #expenses .col-xs-2,
+.wrapper-mission #expenses .col-sm-2,
+.wrapper-mission #expenses .col-md-2,
+.wrapper-mission #expenses .col-lg-2,
+.wrapper-mission #expenses .col-xs-3,
+.wrapper-mission #expenses .col-sm-3,
+.wrapper-mission #expenses .col-md-3,
+.wrapper-mission #expenses .col-lg-3,
+.wrapper-mission #expenses .col-xs-4,
+.wrapper-mission #expenses .col-sm-4,
+.wrapper-mission #expenses .col-md-4,
+.wrapper-mission #expenses .col-lg-4,
+.wrapper-mission #expenses .col-xs-5,
+.wrapper-mission #expenses .col-sm-5,
+.wrapper-mission #expenses .col-md-5,
+.wrapper-mission #expenses .col-lg-5,
+.wrapper-mission #expenses .col-xs-6,
+.wrapper-mission #expenses .col-sm-6,
+.wrapper-mission #expenses .col-md-6,
+.wrapper-mission #expenses .col-lg-6,
+.wrapper-mission #expenses .col-xs-7,
+.wrapper-mission #expenses .col-sm-7,
+.wrapper-mission #expenses .col-md-7,
+.wrapper-mission #expenses .col-lg-7,
+.wrapper-mission #expenses .col-xs-8,
+.wrapper-mission #expenses .col-sm-8,
+.wrapper-mission #expenses .col-md-8,
+.wrapper-mission #expenses .col-lg-8,
+.wrapper-mission #expenses .col-xs-9,
+.wrapper-mission #expenses .col-sm-9,
+.wrapper-mission #expenses .col-md-9,
+.wrapper-mission #expenses .col-lg-9,
+.wrapper-mission #expenses .col-xs-10,
+.wrapper-mission #expenses .col-sm-10,
+.wrapper-mission #expenses .col-md-10,
+.wrapper-mission #expenses .col-lg-10,
+.wrapper-mission #expenses .col-xs-11,
+.wrapper-mission #expenses .col-sm-11,
+.wrapper-mission #expenses .col-md-11,
+.wrapper-mission #expenses .col-lg-11,
+.wrapper-mission #expenses .col-xs-12,
+.wrapper-mission #expenses .col-sm-12,
+.wrapper-mission #expenses .col-md-12,
+.wrapper-mission #expenses .col-lg-12 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .csv-save-btn {
   right: 62px;
