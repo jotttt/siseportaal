@@ -118,10 +118,7 @@
         margin: 10px;
     }
 
-    .strong {
-        /*
-        font-size: 120%;
-        */
+    .strong, .bold, .collapsed {
         font-weight: bold;
     }
 
@@ -218,6 +215,28 @@
             top: 125px;
         }
 
+        .report-results {
+
+            td {
+                padding-left: 20px;
+            }
+
+            .collapsed {
+
+                .first-child:before {
+                    margin-top: -2px;
+                }
+            }
+
+            .collapsed2 {
+
+                .first-child2:before {
+                    margin-top: -2px;
+                    margin-left: -4px;
+                }
+            }
+        }
+
         table, thead, tbody, th, td, tr {
             display: table-cell;
             font-size: 12px;
@@ -274,7 +293,7 @@
             border-spacing: 0px;
             border-collapse: separate;
             empty-cells: show;
-            padding: 0px;
+            //padding: 0px;
             margin: 0px;
             outline: 0px;
             font-size: 100%;
@@ -304,10 +323,6 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-
-        td:before {
-            display: none;
         }
 
     }

@@ -1,7 +1,7 @@
 // main: ../style.less
 
 .high-contrast-content {
-    background: black;
+    //background: black;
     color: yellow;
 
     #wrapper {
@@ -19,8 +19,8 @@
     }
 
     a:hover, a:focus {
-        background: yellow;
-        color: black;
+        //background: yellow;
+        //color: black;
     }
 
     strong {
@@ -45,7 +45,7 @@
     }
 
     div a:hover {
-        background: black;
+        //background: black;
         color: yellow;
     }
 
@@ -105,10 +105,11 @@
         color: yellow;
     }
 
-    ul li a:visited,ul li a:hover {
+    ul li a:visited {
         background: black;
         color: yellow;
     }
+
 
     select {
         background: black;
@@ -252,7 +253,14 @@
         }
     }
 
+    // LEFTSIDE-MENU /////////////////////////////////////////////////////
     #m-menu {
+
+        &.max .mm-listview > li .mm-next:after, #m-menu.max .mm-menu .mm-listview > li .mm-arrow:after {
+            border-color: yellow;
+        }
+
+
 
         &.min {
             box-shadow:  1px 1px 1px 1px yellow;
@@ -263,6 +271,23 @@
             .mm-panels {
 
                 .mm-panel {
+
+                    &.mm-highest {
+
+                        .mm-listview {
+
+                            li {
+
+                                a {
+
+                                    i {
+                                        color: yellow;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
 
                     &.mm-hasnavbar {
 
@@ -275,6 +300,31 @@
                                 color: black;
                             }
 
+                            .mm-btn:before, .mm-btn:after {
+                                border-color: black;
+                            }
+
+                        }
+                    }
+
+                    .mm-listview {
+
+                        li {
+
+                            a {
+                                &:hover {
+
+                                }
+                            }
+
+                            span {
+
+                                i {
+                                    color: yellow;
+                                    background: black;
+                                }
+
+                            }
                         }
                     }
                 }
