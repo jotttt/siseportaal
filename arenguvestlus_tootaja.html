@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katsetused - arenguvestlused</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
+    <link rel="stylesheet" href="css/plugins/datapicker/1.6/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="css/plugins/chosen/chosen.min.css">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div id="wrapper" class="">
+
+      <!-- TOP NAVBAR ------------------------------------->
+      <nav class="navbar-top" role="navigation">
+
+        <background class="cherry-mod-bg"></background>
+
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
+
+        <btn id="open-mobile-menu" class="">
+          <i class="fa fa-bars fa-2x"></i>
+        </btn>
+        <!--end mobile-->
+
+        <div class="navbar">
+          <div class="navbar-header">
+
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </btn>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="nav-header">
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li><a href="">Inimesed</a></li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-services"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                  <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                </ul>
+              </li>
+
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
+              </li>
+
+              <li class="open-mobile-search-container">
+                <a id="open-mobile-search">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </li>
+
+            </ul>
+
+            <!--NAVBAR SEARCH
+------------------------------>
+            <ul class="desktop-search">
+              <form ole="search" method="post" action="/search">
+                <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+              </form>
+            </ul>
+            <!--end------------------------------>
+          </div>
+        </div>
+        <!--MOBILE SEARCH
+----------------------------------------------------------------->
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+        <!--end---------------------------------------------------------->
+
+      </nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR ------------------------------------>
+      <nav id="m-menu" class="min">
+        <div>
+          <ul>
+            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+              <ul>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
+                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
+                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+              </ul>
+            </li>
+            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+            <li><span><i class="fa fa-plane"></i>Lähetused</span>
+              <ul>
+                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+              </ul>
+            </li>
+            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+              <ul>
+                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+              <ul>
+                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+              </ul>
+            </li>
+            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <div class="m-l m-r-sm m-t">
+              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+            </div>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT
+--------------------------------------------------------------->
+
+      <div id="page-wrapper" class="min gray-bg">
+        <div id="content-wrapper" class="wrapper-appraisal">
+
+          <!--BREADCRUMB
+--------------------------------------------------------------->
+          <div class="row">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li>
+                  <a href="index.html">This is</a>
+                </li>
+                <li class="active">
+                  <strong>Breadcrumb</strong>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!-- end breadcrumb ----------------------------------->
+
+          <!--PAGE
+--------------------------------------------------------------->
+          <div class="wrapper-content animated fadeIn">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <i class="fa fa-comments-o"></i> Arenguvestluste keskkond - töötaja vaade
+                  </div>
+                  <div class="panel-body">
+
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#a" data-toggle="tab" aria-expanded="true">Ametijuhend<span class="badge" id="mission_my_badge"></span></a></li>
+                      <li class=""><a href="#b" data-toggle="tab" aria-expanded="false">Eelmised perioodid<span class="badge" id="mission_accept_badge"></span></a></li>
+                      <li class=""><a href="#c" data-toggle="tab" aria-expanded="false">Järgmine periood<span class="badge" id="mission_list_badge"></span></a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                      <!-- AMETIJUHEND
+------------------------------------------------------------->
+                      <div class="tab-pane fade active in" id="a">
+
+                        <div class="row m-t">
+                          <div class="col-xl-2"></div>
+                          <div class="col-xl-8">
+                            <div class="panel panel-default">
+                              <div class="panel-heading"><i class="fa fa-file-text-o"></i> Kasutajaliidese arendaja - Johann Laulik</div>
+                              <div class="pos-guide panel-body">
+                                <h1>Kasutajaliidese arendaja</h1>
+                                <div>
+                                  <p>
+                                    <strong>Johann Laulik</strong>, infotehnoloogia osakond, tarkvaraarenduse talitus
+                                  </p>
+                                  <p>
+                                    <strong>Töölepingu nr 200, 25.06.2015.a lisa nr 3</strong>
+                                  </p>
+                                  <p>
+                                    Kasutajaliidese arendaja tegeleb infosüsteemide kasutajaliideste disaini, loomise ja parendamisega. Osaleb tarkvaraarendusprotsessis kasutajapoolsete interaktsioonide disainerina tagades TTÜ infosüsteemide korrektse visuaali ja kasutajakogemuse.
+                                  </p>
+                                  <div>
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td>AMETIKOHA JUHT</td>
+                                          <td>Tarkvaraarenduse peaspetsialist</td>
+                                        </tr>
+                                        <tr>
+                                          <td>ASENDAJA</td>
+                                          <td>Tarkvaraarendaja</td>
+                                        </tr>
+                                        <tr>
+                                          <td>KEDA ASENDAB</td>
+                                          <td>Tarkvaraarendaja</td>
+                                        </tr>
+                                        <tr>
+                                          <td>ALLUVAD</td>
+                                          <td>-</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <hr>
+                                </div>
+                                <h2>Põhiülesanded</h2>
+                                <div>
+                                  <ul>
+                                    <li><div> Arendustellimustel tellija nõustamine infosüsteemide kasutajaliideste kirjeldamisel;</div>
+                                    </li>
+                                    <li><div> Olemasolevate ja uute infosüsteemide </div>
+                                      <ul>
+                                        <li><div> kasutajaliideste ja kasutusloogika planeerimine ning analüüs, </div>
+                                        </li>
+                                        <li><div> interaktsioonidisaini prototüüpimine, </div>
+                                        </li>
+                                        <li><div> kasutajaliideste loomine või hankimise koordineerimine (nii graafiline disain kui ka html+css jms);</div>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li><div> Tarkvaraarendajate konsulteerimine loodavate või olemasolevate infosüsteemide kasutajaliidestega seotud küsimustes;</div>
+                                    </li>
+                                    <li><div> Infosüsteemide kasutajaliideste testimine ning vigade parandamine vajaliku tagasiside vahendamisega arendusmeeskonnale:</div>
+                                      <ul>
+                                        <li><div> vastavus seatud nõuetele ja ülesandepüstitusele,</div>
+                                        </li>
+                                        <li><div> vastavus kokkulepitud rahvusvahelistele standarditele (nt. <abbr>W3C</abbr>, WCAG vms);</div>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li><div> Teistes IT osakonna projektides ja töödes osalemine vastavalt nende vajadusele selle eriala oskuste järgi; </div>
+                                    </li>
+                                    <li><div> Kasutajaliidestega seotud arendusettepanekute kogumine ning iseseisev lahendusvariantide pakkumine; </div>
+                                    </li>
+                                    <li><div> TTÜ infosüsteemide kasutajate mugavuse ja töökiiruse eest seismine nii parimate graafiliste kui ka interaktsioonidisaini lahenduste pakkumisega;</div>
+                                    </li>
+                                    <li><div> Muude otsese juhi poolt antavate seaduslike korralduste täitmine, mis on seotud töölepingus ja ametijuhendis ettenähtud tööülesande täitmisega. </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <h2>Tulemusnäitajad</h2>
+                                <div>
+                                  <ul>
+                                    <li><div> Kasutajaliides on loodud vastavalt kokkulepitud lähteülesandele;</div>
+                                    </li>
+                                    <li><div> Kasutajaliides täidab ülesandepüstituses/analüüsidokumendis ettenähtud funktsioone ettenähtud ulatuses;</div>
+                                    </li>
+                                    <li><div> Töörutiinid ja protseduurid on nõuetekohaselt kirjeldatud;</div>
+                                    </li>
+                                    <li><div> Kasutajad on suutelised täitma projektülesandes ettenähtud funktsioone;</div>
+                                    </li>
+                                    <li><div> Ettepanekud on asjakohased ja rakendatavad;</div>
+                                    </li>
+                                    <li><div> Tellitava infosüsteemi ja seadusloome vastavus ja infosüsteemile mõistliku toimimise võimaldamine, tööprotsesside maksimaalne optimeeritus; väljatöötatud muudatusettepanekud;</div>
+                                    </li>
+                                    <li><div> Pidev enesetäiendamine nii tehniliste kui ka teoreetiliste teadmistega;</div>
+                                    </li>
+                                    <li><div> Asjatundlikud ülevaated ja korrektne dokumentatsioon;</div>
+                                    </li>
+                                    <li><div> Rakendatud muudatused/täiendused kasutajaliidestes;</div>
+                                    </li>
+                                    <li><div> Vajadusel dokumenteeritud interaktsioonidisaini lahendus ning kasutajaliidese elementide kasutamiskord.</div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <h2>Õigused</h2>
+                                <div>
+                                  <ul>
+                                    <li><div> Saada tööülesannete täitmiseks vajalikku informatsiooni ja ressurssi; </div>
+                                    </li>
+                                    <li><div> Saada tööks vajalikku täiendkoolitust; </div>
+                                    </li>
+                                    <li><div> Saada tööks vajalikku kontoritehnikat ja –tarbeid ning tehnilist abi oma tööülesannete täitmisel; </div>
+                                    </li>
+                                    <li><div> Saada tööks vajalikku erialast riist- ja tarkvara;</div>
+                                    </li>
+                                    <li><div> Kokku kutsuda nõupidamisi oma pädevusse kuuluvate ülesannete lahendamisel;</div>
+                                    </li>
+                                    <li><div> Avaldada arvamust ja anda kooskõlastusi oma pädevuse ulatuses; </div>
+                                    </li>
+                                    <li><div> Teha ettepanekuid oma pädevusse kuuluvas valdkonnas töö paremaks korraldamiseks;</div>
+                                    </li>
+                                    <li><div> Teha ettepanekuid TTÜ tööprotsesside paremaks korraldamiseks IT vahendite abil;</div>
+                                    </li>
+                                    <li><div> Keelduda ülesannete täitmisest, mis on vastuolus seadusega.</div>
+                                    </li>
+                                  </ul>
+
+                                </div>
+                                <h2 >Vastutus</h2>
+                                <div>
+                                  <ul>
+                                    <li><div> Vastutab töökohustuste õigeaegse ja korrektse täitmise eest; </div>
+                                    </li>
+                                    <li><div> Vastutab ametialase informatsiooni sihipärase kasutamise ja hoidmise eest; </div>
+                                    </li>
+                                    <li><div> Vastutab viisaka, korrektse ja õigeaegse kliendisuhtluse eest; </div>
+                                    </li>
+                                    <li><div> Vastutab enda käsutuses olevate dokumentide ja vara nõuetekohase säilimise ja korrasoleku eest;  </div>
+                                    </li>
+                                    <li><div> Vastutab ametiseisundi tõttu teatavaks saanud konfidentsiaalse informatsiooni salajashoidmise eest.</div>
+                                    </li>
+                                  </ul>
+
+                                </div>
+                                <h2 >Nõutud kvalifikatsioon</h2>                                                              <div>
+                                <div>
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                        <td> Haridus:          </td><td > Kesk- või kõrgharidus  </td>
+                                      </tr>
+                                      <tr>
+                                        <td> Töökogemus:       </td><td > Vähemalt 3-aastane töökogemus kasutajaliideste loomisel (soovitavalt veebi-, interaktsioonidisaineri või kasutatavuse eksperdina) </td>
+                                      </tr>
+                                      <tr>
+                                        <td> Keelteoskus:      </td><td > Eesti keele suuline ja kirjalik valdamine kõrgtasemel, inglise keele oskus kesktasemel erialase sõnavara valdamisega </td>
+                                      </tr>
+                                      <tr>
+                                        <td> Isiksuseomadused: </td><td > Hea suhtlemisoskus ja koostöövõime, otsustus- ja vastutusvõime, analüüsi ja üldistusvõime, loomingulisus, kõrge visuaali- ja esteetikatunnetus, täpsus, järjekindlus ja kohusetunne </td>
+                                      </tr>
+                                    </tbody></table></div>
+
+                                </div>
+                                <h2>Erialased oskused ja teadmised</h2>
+                                <div>
+                                  <ul>
+                                    <li><div> Frontend arendusoskused (HTML5, CSS3, JS);</div>
+                                    </li>
+                                    <li><div> Head teadmised prototüüpimisest (Wireframing)</div>
+                                    </li>
+                                    <li><div> Oskused töötada graafikatöötluskeskkondades</div>
+                                    </li>
+                                  </ul>
+
+                                  <p>
+                                    <strong>Käesolev ametijuhend jõustub alates 27.10.2016.</strong>
+                                  </p>
+                                </div>
+                                <h2></h2>
+                                <div>
+                                  <p>
+                                    Töötaja: <strong>Johann Laulik</strong> <em>allkirjastatud digitaalselt</em>
+                                  </p>
+
+                                  <p>
+                                    Vahetu juht: <strong>Ketlin Karp</strong> <em>allkirjastatud digitaalselt</em>
+                                  </p>
+
+                                  <p>
+                                    Osakonna juhataja: <strong>Thomas Lepik</strong> <em>allkirjastatud digitaalselt</em>
+                                  </p>
+
+                                  <p>
+                                    Tööandja esindaja: <strong>Mare Pihel</strong> <em>allkirjastatud digitaalselt</em>
+                                  </p>
+
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="text-right">
+                              <a class="btn btn-grey">prindi</a>
+                              <a class="btn btn-primary">Kinnita</a>
+                            </div>
+
+                          </div>
+
+                          <div class="col-xl-2"></div>
+                        </div>
+                      </div>
+
+                      <!-- EELMINE PERIOOD
+------------------------------------------------------------->
+                      <div class="tab-pane fade" id="b">
+
+                        <div class="text-center m">
+                          <h2><a class="badge badge-default m-r"><i class="fa fa-angle-left fa-2x"></i></a>
+                            <i class="fa fa-calendar m-r-sm"></i>2016
+                            <a class="badge badge-default m-l"><i class="fa fa-angle-right fa-2x"></i></a></h2>
+                        </div>
+
+                        <div class="row m-t">
+                          <div class="col-lg-12">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <h3>Eesmärgid</h3>
+                              </div>
+                              <div class="col-xs-6">
+                                <h3>Tulemused</h3>
+                              </div>
+                            </div>
+                            <hr class="m-b">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perspiciatis nam iusto, dignissimos nemo iure quas recusandae maiores magnam debitis veritatis quae, eveniet voluptates quibusdam amet assumenda perferendis quaerat sit aliquam pariatur nisi? </div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aliquam dicta asperiores quia iste mollitia labore voluptatem in quisquam quasi sequi, nam nemo aliquid nostrum, deleniti, cupiditate culpa dolor at exercitationem cum. Voluptate assumenda, ducimus molestiae dolorum, sit harum nihil expedita similique explicabo ut quis, vero natus itaque eius commodi pariatur deleniti aperiam omnis neque necessitatibus! Ex culpa dolorum ad quasi quae non aut animi corrupti, cum beatae odio totam ipsam repudiandae molestiae reprehenderit distinctio quo itaque. Itaque odio ratione accusamus nobis error adipisci eos ipsum qui. Nam adipisci sint ipsum aperiam ad amet molestiae, molestias, impedit accusantium sequi, quaerat.</div>
+                              </div>
+                            </div>
+                            <hr class="m-b m-t">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div>Consectetur adipisicing elit. Cum dolorum vero eius quos, fugit nobis odio tempora veritatis ea quam aspernatur omnis praesentium ex suscipit dolores consequatur. Eum, asperiores, quos. </div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div> Ex culpa dolorum ad quasi quae non aut animi corrupti, cum beatae odio totam ipsam repudiandae molestiae reprehenderit distinctio quo itaque. Itaque odio ratione accusamus nobis error adipisci eos ipsum qui. Nam adipisci sint ipsum aperiam ad amet molestiae, molestias, impedit accusantium sequi, quaerat.</div>
+                              </div>
+                            </div>
+                            <hr class="m-b m-t">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div>Magnam debitis veritatis quae, eveniet voluptates quibusdam amet assumenda perferendis quaerat sit aliquam pariatur nisi. </div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div>Nam adipisci sint ipsum aperiam ad amet molestiae, molestias, impedit accusantium sequi, quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est iste cupiditate et, voluptatem qui? Quis veritatis, minus, labore mollitia sit nostrum quisquam. Voluptas sint repellat, totam, optio, distinctio illo nam corporis harum rerum veniam cupiditate aliquid neque. Aut suscipit facilis, omnis cum quia molestiae, deleniti sit porro mollitia consequatur a, architecto inventore rerum culpa tempora veritatis eaque labore asperiores, doloremque.</div>
+                              </div>
+                            </div>
+                            <hr class="m-b m-t">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div>Dignissimos nemo iure quas recusandae maiores magnam debitis veritatis quae, eveniet voluptates quibusdam amet assumenda perferendis quaerat sit aliquam pariatur nisi? </div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div> Distinctio quo itaque. Itaque odio ratione accusamus nobis error adipisci eos ipsum qui. Nam adipisci sint ipsum aperiam ad amet molestiae, molestias, impedit accusantium sequi, quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque harum ipsam animi sapiente soluta eos iure culpa modi, iste illo tempore esse dolorum atque, deserunt id magnam. Quod, blanditiis vero? </div>
+                              </div>
+                            </div>
+                            <hr class="m-b m-t">
+                            <div class="row">
+                              <div class="col-xs-6">
+                                <div>Eveniet voluptates quibusdam amet assumenda perferendis quaerat sit aliquam pariatur nisi? </div>
+                              </div>
+                              <div class="col-xs-6">
+                                <div> Lestias, impedit accusantium sequi, quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque harum ipsam animi sapiente soluta eos iure culpa modi, iste illo tempore esse dolorum atque, deserunt id magnam. Quod, blanditiis vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ab harum sequi eius rem molestiae culpa ea nihil delectus officia ducimus esse quasi earum molestias placeat quaerat nostrum accusamus odio, error soluta, incidunt quo. Veritatis eius iure dignissimos? Quibusdam, rem. </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <!-- JÄRGMINE PER
+------------------------------------------------------------->
+                      <div class="tab-pane fade" id="c">
+                        <div class="employee-suggestions">
+                          <h2>Töötaja ettepanekud</h2>
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <h3>Eesmärgid/Tegevused</h3>
+                            </div>
+                            <div class="col-xs-6">
+                              <h3>Juhi kommentaar</h3>
+                            </div>
+                          </div>
+                          <hr class="m-b">
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="m-b m-t">
+                          <a class="btn btn-white"><i class="fa fa-plus"></i> Lisa uus rida</a>
+                        </div>
+
+                        <div class="employer-suggestions">
+                          <h2>Juhi ettepanekud</h2>
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <h3>Eesmärgid/Tegevused</h3>
+                            </div>
+                            <div class="col-xs-6">
+                              <h3>Kommentaarid</h3>
+                            </div>
+                          </div>
+                          <hr class="m-b">
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <div> Lestias, impedit accusantium sequi, quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque harum ipsam animi sapiente soluta eos iure culpa modi, iste illo tempore esse dolorum atque, deserunt id magnam. Quod, blanditiis vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ab harum sequi eius rem molestiae culpa ea nihil delectus officia ducimus esse quasi earum molestias placeat quaerat nostrum accusamus odio, error soluta, incidunt quo. Veritatis eius iure dignissimos? Quibusdam, rem. </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="m-b m-t">
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <div> Quod, blanditiis vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ab harum sequi eius rem molestiae culpa ea nihil delectus officia ducimus esse quasi earum molestias placeat quaerat nostrum accusamus odio, error soluta, incidunt quo. Veritatis eius iure dignissimos?</div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="m-b m-t">
+                          <div class="row">
+                            <div class="col-xs-6">
+                              <div> Harum sequi eius rem molestiae culpa ea nihil delectus officia ducimus esse quasi earum molestias placeat quaerat nostrum accusamus odio, error soluta, incidunt quo. Veritatis eius iure dignissimos? Quibusdam, rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fugit aliquam, necessitatibus incidunt amet repudiandae distinctio. Soluta et veritatis corrupti enim eius tenetur iure, minima! Placeat, et! Enim fuga perferendis maiores, corrupti, ad, dolore ipsam quis saepe eum ratione culpa. </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="m-b m-t">
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- end page ----------------------------------------->
+
+          <!-- FULLSCREEN MODE TOGGLE BUTTON
+--------------------------------------------------------------->
+          <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+          <!-- SCROLL TO TOP BUTTON
+--------------------------------------------------------------->
+          <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+        </div>
+        <!-- end content ---------------------------------------->
+
+      </div></div>
+    <!-- end wrapper ------------------------------------------>
+
+    <!--FOOTER
+--------------------------------------------------------------->
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+
+    <!--MODAL CONTENT
+--------------------------------------------------------------->
+    <div class="modal inmodal fade" id="person_modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Uue kirje lisamine</h4>
+            <small class="font-bold">Siin saad lisada Seotud Isikute Registrisse uusi andmeid</small>
+
+          </div>
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Isik</label>
+                  <div class="input-group" style="width: 100%;">
+                    <input id="m2" name="personName" type="text" class="form-control"  value="Villu Vooglaid" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <i class="fa fa-user"></i> Seotud isikud
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Jrk.</th>
+                      <th>Isiku nimi</th>
+                      <th>Seotus</th>
+                      <th>Firma</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td>1.</td>
+                      <td><a href="#c" class="ajax-load">Sander Marandi</a></td>
+                      <td>poeg</td>
+                      <td>Moodne Valgus</td>
+                    </tr>
+
+                    <tr>
+                      <td>2.</td>
+                      <td><a href="#" class="ajax-load">Anna Kolossova</a></td>
+                      <td>eksabikaasa</td>
+                      <td>Ehituse ABC</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <div class="row">
+
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Eesnimi</label>
+                      <div class="input-group" style="width: 100%;">
+                        <input id="m21" name="tiedPerson" type="text" class="form-control"  value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Perenimi</label>
+                      <div class="input-group" style="width: 100%;">
+                        <input id="m22" name="tiedPerson" type="text" class="form-control"  value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Isikukood</label>
+                      <div class="input-group" style="width: 100%;">
+                        <input id="m23" name="tiedPerson" type="text" class="form-control"  value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Seotus</label>
+                      <div class="input-group" style="width: 100%;">
+                        <input id="m24" name="tiedPerson" type="text" class="form-control"  value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Firma</label>
+                      <div class="input-group" style="width: 100%;">
+                        <input id="m26" name="tiedPerson" type="text" class="form-control"  value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label></label>
+                      <div class="input-group" style="width: 100%;">
+                        <a href="#" class="btn btn-default btn-block m-t-xs">Lisa</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <i class="fa fa-briefcase"></i> Seotud firmad
+              </div>
+              <div class="panel-body">
+
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Jrk.</th>
+                      <th>Firma nimi</th>
+                      <th>Seotus</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <td>1.</td>
+                      <td><a href="#c" class="ajax-load">Moodne Valgus</a></td>
+                      <td>poeg - Sander Marandi</td>
+                    </tr>
+
+                    <tr>
+                      <td>2.</td>
+                      <td><a href="#" class="ajax-load">Ehituse ABC</a></td>
+                      <td>osanik</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+                <div class="row">
+                  <div class="col-sm-10">
+                    <div class="row">
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Firma nimi</label>
+                          <div class="input-group" style="width: 100%;">
+                            <input id="m31" name="tiedPerson" type="text" class="form-control"  value="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Firma kood</label>
+                          <div class="input-group" style="width: 100%;">
+                            <input id="m32" name="tiedPerson" type="text" class="form-control"  value="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label>Seotus</label>
+                          <div class="input-group" style="width: 100%;">
+                            <input id="m33" name="tiedPerson" type="text" class="form-control"  value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label></label>
+                      <div class="input-group" style="width: 100%;">
+                        <a href="#" class="btn btn-default btn-block m-t-xs">Lisa</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-sm-4">
+
+              </div>
+              <div class="col-sm-8">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Sule</button>
+                <button type="button" class="btn btn-primary">Salvesta</button>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal content ------------------------------------>
+
+    <!--CONTENT MASK FOR MOBILE MENU
+--------------------------------------------------------------->
+    <div id="c-mask" class="c-mask"></div>
+
+    <!-- SCRIPTS ------------------------------------>
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+    <script src="js/plugins/datapicker/1.6/bootstrap-datepicker.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+
+    <script>
+      $(function() {
+
+        //init datepicker
+        $('.datepicker').datepicker({
+          format: "dd/mm/yyyy",
+          keyboardNavigation: false,
+          forceParse: false,
+          autoclose: true,
+          ignoreReadonly: true
+        });
+
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,23 @@
+.ae_complete_results {
+    position: absolute;
+    z-index: 101;
+    background: #FFF;
+    -webkit-box-shadow: 0px 2px 3px 0px #b3b1b3;
+    -moz-box-shadow: 0px 2px 3px 0px #b3b1b3;
+    box-shadow: 0px 2px 3px 0px #b3b1b3;
+    cursor: pointer;
+    width: 90%;
+}
+.ae_complete_results > .ae_complete_pick {
+    border: 0px solid;
+    padding: 6px;
+    margin: 0px;
+}
+.ae_complete_results > .selected {
+    background: #870042;
+    color: white;
+}
+.ae_complete_results > .ae_complete_pick:hover {
+    background: #870042;
+    color: white;
+}

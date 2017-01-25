@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Test page</title>
+
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <style>
+      body {
+      width: 700px;
+      }
+
+      h3 {
+        font-weight: 300;
+        margin: 5px 0 10px 0;
+      }
+
+      hr {
+
+      }
+
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+      }
+
+      td.form-data {
+        display:table-cell;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 0 10px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .form-data-container {
+        width: 800px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        width: 33.333333%;
+        display: inline-block;
+      }
+
+      label:after {
+        content: ": ";
+      }
+
+      .form-data {
+        width: 66.666666%;
+        display: inline;
+        font-size: 15px;
+        font-weight: bold;
+
+      }
+
+      .requisites {
+        position:	absolute;
+        left:		0px;
+        bottom:		0px;
+      }
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- WRAPPER
+--------------------------------------------------------------->
+    <div>
+
+      <!-- ÜLDANDMED --------------->
+      <div>
+        <h3 class="text-center">$txt_general_info$</h3>
+
+        <div class="form-data-container">
+          <label>$txt_mission_id$</label>
+          <div class="form-data">$mission_id$&nbsp;</div>
+        </div>
+
+        <div class="form-data-container">
+          <label>$txt_report_dlx$</label>
+          <div class="form-data">$report_dlx_id$&nbsp;</div>
+        </div>
+
+        <div class="form-data-container">
+          <label>$txt_person_name$</label>
+          <div class="form-data">$person_name$&nbsp;</div>
+        </div>
+
+        <div class="form-data-container">
+          <label>$txt_structure$</label>
+          <div class="form-data">$ou_name$&nbsp;</div>
+        </div>
+
+        <div class="form-data-container">
+          <label>$txt_position$</label>
+          <div class="form-data">$position$&nbsp;</div>
+        </div>
+
+      </div>
+      <!-- ÜLDANDMED END --------->
+
+      <hr>
+
+  <!-- LÄHETUSE SISU ------------->
+  <div>
+
+    <h3 class="text-center">$txt_mission_overview$</h3>
+
+    <div class="form-data-container">
+      <label>$txt_country$</label>
+      <div class="form-data">$country_name$&nbsp;</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>$txt_city$</label>
+      <div class="form-data">$city$&nbsp;</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>$txt_org$</label>
+      <div class="form-data">$org$&nbsp;</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>$txt_duration$</label>
+      <div class="form-data">$date_from$ - $date_to$ ($mission_days$)</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>$txt_goal$</label>
+      <div class="form-data">$mission_goal$&nbsp;$mission_goal_other$</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>$txt_project_code$</label>
+      <div class="form-data">$project_code$&nbsp;</div>
+    </div>
+
+    <div class="form-data-container">
+      <label>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, sit.</label>
+      <div class="form-data">$uploaded_files$&nbsp;</div>
+    </div>
+
+        <div class="form-data">$txt_approve$</div>
+
+
+  </div>
+  <!-- LÄHETUSE SISU END ------------>
+
+     <table>
+      <tr>
+        <td>$txt_finance_obj$</td>
+        <td>$txt_finance_owner$</td>
+        <td>$txt_approval$</td>
+      </tr>
+      <tr>
+        <td class="form-data">$finance_obj$&nbsp;</td>
+        <td class="form-data">$finance_owner_name$&nbsp;</td>
+        <td class="form-data">$approved$&nbsp;</td>
+      </tr>
+    </table>
+
+
+    </div>
+    <!-- end wrapper ------------------------------------------>
+
+
+
+    <!-- SCRIPTS
+--------------------------------------------------------------->
+    <!--  Main scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--  Custom javascript -->
+  </body>
+
+</html>

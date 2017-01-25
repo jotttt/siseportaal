@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kujunduskatsetused</title>
+    <title>Kelluke</title>
 
     <!-- main css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -96,7 +96,7 @@
 
               <li class="dropdown">
                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="false">
-                  <i class="fa fa-user"></i>  <span class="label label-info">8</span>Paula-Petrina
+                  <i class="fa fa-user"></i>  <span id="qm-count" class="label label-info"></span>Paula-Petrina
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
@@ -105,15 +105,15 @@
 
 
 
-                   <li id="qm-container">
-                    <div class="level-1">
-                     <span class="title">Teavitused</span><span class="badge badge-danger">2</span>
-                      <div class="level-2"><a href=""><i class="fa fa-angle-right"></i> Töötõend aegub 30.04</a></div>
-                      <div class="level-2"><a href=""><i class="fa fa-angle-right"></i> Puhkuse päevade teatamise tähtaeg on 26.04</a></div>
-                    </div>
-                    <div class="level-1">Kooskõlastused <span class="badge badge-warning">5</span></div>
-                    <div class="level-1">Sõnumid <span class="badge badge-success">1</span></div>
+                  <li class="panel-group" id="qm-container">
+
                   </li>
+
+
+
+
+
+
 
                   <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
                   <li class="divider"></li>
@@ -290,6 +290,14 @@
     <!-- My custom scripts -->
     <script src="js/main_ui.js"></script>
     <script src="js/widget_ui.js"></script>
+
+    <script src="js/kelluke_script.js"></script>
+
+    <script>
+    $(document).on('click', '.navbar-right .dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+    </script>
 
   </body>
 

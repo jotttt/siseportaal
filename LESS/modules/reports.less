@@ -201,6 +201,41 @@
         margin-top: 10px;
     }
 
+    .panel {
+        margin-bottom: 0;
+        background: transparent;
+
+        .panel-heading {
+            padding: 0;
+
+            .panel-title {
+
+                .btn-primary {
+                    color: white;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .panel-collapse {
+        //border: 1px solid @text-color;
+
+        .panel-body {
+            padding: 0;
+
+            div.btn {
+                cursor: default;
+                white-space: normal;
+            }
+
+            a {
+                white-space: normal;
+            }
+        }
+    }
+
+
     @media screen and (max-width: @mobile-width) {
 
         #tab_results {

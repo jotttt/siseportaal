@@ -62,7 +62,7 @@ ul {
 }
 
 .wrapper-content {
-    padding: 20px 10px 0px;
+    padding: 10px 0px 0px;
     min-height: auto;
 }
 
@@ -206,45 +206,53 @@ hr {
     padding: 0px;
     margin: 0px;
     border-top: 1px solid @border-color;
+
+    &.strong {
+        border-color: @lighter-grey;
+    }
+
+    &.cherry {
+        background: @cherry;
+        border:none;
+        margin:1em 0;
+    }
+
+    &.grey {
+        border-top: 1px solid @lighter-grey;
+        color: #ffffff;
+        background-color: #ffffff;
+        height: 1px;
+        margin: 20px 0;
+    }
+
+    &.grey.dashed {
+        border-top: 1px dashed @lighter-grey;
+        color: #ffffff;
+        background-color: #ffffff;
+        height: 1px;
+        margin: 20px 0;
+    }
+
+    &.top {
+        display: block;
+        margin: 40px auto 20px;
+        width: 150px;
+    }
+
+    &.bottom {
+        display: block;
+        margin: 20px auto;
+        width: 150px;
+    }
+
+    &.vertical {
+        width: 1px;
+        border-top: 20px solid @border-color;
+        margin: 0 auto;
+    }
 }
 
-hr.strong {
-    border-color: @lighter-grey;
-}
 
-hr.cherry {
-    background: @cherry;
-    border:none;
-    margin:1em 0;
-}
-
-hr.grey {
-    border-top: 1px solid @lighter-grey;
-    color: #ffffff;
-    background-color: #ffffff;
-    height: 1px;
-    margin: 20px 0;
-}
-
-hr.grey.dashed {
-    border-top: 1px dashed @lighter-grey;
-    color: #ffffff;
-    background-color: #ffffff;
-    height: 1px;
-    margin: 20px 0;
-}
-
-hr.top {
-    display: block;
-    margin: 40px auto 20px;
-    width: 150px;
-}
-
-hr.bottom {
-    display: block;
-    margin: 20px auto;
-    width: 150px;
-}
 
 .hr-line-dashed {
     border-top: 1px dashed @border-color;
@@ -260,6 +268,8 @@ hr.bottom {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+
 
 video {
     width: 100%    !important;
@@ -360,6 +370,24 @@ ul.unstyled, ol.unstyled {
     color: #e5e6e7;
 }
 
+.fa {
+    &.green {
+        color: @green;
+    }
+    &.orange {
+        color: @orange;
+    }
+    &.red {
+        color: @red;
+    }
+    &.blue {
+        color: @blue;
+    }
+    &.grey {
+        color: @grey;
+    }
+}
+
 
 /*************************************************************
 FOOTER
@@ -458,7 +486,7 @@ table {
     tr {
 
         td {
-           padding: 3px 6px;
+            padding: 3px 6px;
         }
 
     }
@@ -525,11 +553,11 @@ table {
     tr { border: 1px solid #ccc; }
 
     td {
-       //Behave  like a "row"
+        //Behave  like a "row"
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
-    //padding-left: 50%;
+        //padding-left: 50%;
     }
 
     td:before {
@@ -2168,34 +2196,34 @@ a.close-canvas-menu:hover {
 
 //GRID SYSTEM EXTENSION FOR 7 EQUAL COLUMNS
 @media screen and (min-width: 768px){
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1  {
-    width: 100%;
-    *width: 100%;
-  }
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1  {
+        width: 100%;
+        *width: 100%;
+    }
 }
 
 @media screen and (min-width: 992px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-  }
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
 }
 
 /**
- *  The following is not really needed in this case
- *  Only to demonstrate the usage of @media for large screens
- */
+*  The following is not really needed in this case
+*  Only to demonstrate the usage of @media for large screens
+*/
 @media screen and (min-width: 1200px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-  }
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
 }
 //END GRID SYSTEM EXTENSION FOR 7
 
