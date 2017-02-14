@@ -1,0 +1,171 @@
+// main: ../style.less
+
+/* PANELS */
+.panel {
+
+    .panel-heading {
+
+    }
+
+    .panel-body {
+
+        &.grey {
+            background-color: @bg-color;
+            border: 1px solid @lightest-grey;
+        }
+    }
+}
+
+
+
+.page-heading {
+    border-top: 0;
+    padding: 0px 10px 20px 10px;
+}
+
+.panel-heading h1, .panel-heading h2 {
+    margin-bottom: 5px;
+}
+
+.panel .panel-heading .panel-options ul li a {
+    color: @text-color;
+    padding: 10px 15px;
+}
+.panel .panel-heading .panel-options ul li.active a {
+    color: @cherry;
+}
+
+.panel-default > .panel-heading {
+    background-color: white;
+    border-color: @lightest-grey;
+    cursor: pointer;
+}
+
+.panel.blank-panel {
+    background: none;
+    margin: 0;
+}
+
+.blank-panel .panel-heading {
+    padding-bottom: 0;
+}
+
+.panel-group {
+    margin: 0px;
+}
+
+.panel-primary {
+    border: 1px solid @cherry;
+    border-top: 0px solid transparent;
+}
+
+.panel-primary:empty {
+    display: none;
+}
+
+.panel-primary > .panel-heading {
+    background-color: @cherry;
+    border-color: @cherry;
+}
+
+.panel-primary-alt {
+    border: 1px solid @cherry;
+}
+
+.panel-primary-alt:empty {
+    display: none;
+}
+
+.panel-primary-alt > .panel-heading {
+    background-color: white;
+    border-color: @cherry;
+}
+
+.panel-grey {
+    border: 1px solid @lightest-grey;
+    border-top: 0px solid transparent;
+
+    &:empty {
+        display: none;
+    }
+
+    .panel-heading {
+        background-color: @lightest-grey;
+        border-color: @lightest-grey;
+    }
+}
+
+.panel-success {
+    border-color: @blue;
+}
+
+.panel-success > .panel-heading {
+    background-color: @blue;
+    border-color: @blue;
+    color: #ffffff;
+}
+
+.panel-info {
+    border-color: @lazur;
+}
+
+.panel-info > .panel-heading {
+    background-color: @lazur;
+    border-color: @lazur;
+    color: #ffffff;
+}
+
+.panel-warning {
+    border-color: @yellow;
+}
+
+.panel-warning > .panel-heading {
+    background-color: @yellow;
+    border-color: @yellow;
+    color: #ffffff;
+}
+
+.panel-danger {
+    border-color: @red;
+}
+
+.panel-danger > .panel-heading {
+    background-color: @red;
+    border-color: @red;
+    color: #ffffff;
+}
+
+.errand-panel-title {
+    color: @text-color;
+}
+.errand-panel {
+    background: white;
+    border: 1px solid @lightest-grey;
+    border-radius: 0px;
+}
+.errand-panel .panel-footer {
+    border-top: 1px solid @lightest-grey;
+    background: white;
+}
+
+@media screen and (max-width: @mobile-width) {
+
+    .panel-body {
+        padding: 0;
+    }
+
+    .panel.panel-default {
+        border: 0px solid;
+        background: transparent;
+    }
+
+    .panel-default > .panel-heading {
+        background-color: transparent;
+        border-color: transparent;
+        cursor: default;
+        text-align: center;
+        font-size: large;
+        margin-bottom: 10px;
+    }
+
+}

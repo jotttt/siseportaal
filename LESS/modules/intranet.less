@@ -143,32 +143,132 @@ SEARCH RESULTS FOR PEOPLE
 /************************************************************
 BIRTHDAYS FULLVIEW
 ************************************************************/
-.birthdays-fullview {
-                border: 1px solid @lightest-grey;
-    margin-right: -15px;
-    margin-left: -15px;
+#innerWikiDiv {
 
-    .row {
-        margin-right: 0px;
-    margin-left: 0px;
+    .birthdays {
 
-        .col-md-1 {
-            padding: 0px;
+        .panel {
 
-            .day {
-                height: 300px;
-                border: 1px solid @lightest-grey;
-                padding: 10px;
+            .panel-heading {
 
-                &.not-current-month {
-                //color: @lighter-grey;
-                background: @lightest-grey;
-                border: 1px solid @lighter-grey;
+                h1 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: @text-color;
+                    display: inline;
+                }
+
             }
+
+            .panel-body {
+
+                ul.nav {
+                    margin: 0;
+
+                    li {
+                        background: transparent;
+                        padding-left: 0px;
+
+                        a {
+                            color: @text-color;
+                        }
+                    }
+                }
+
+                .birthdays-fullview {
+
+                    .row {
+                        margin-right: 0px;
+                        margin-left: 0px;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-flex-wrap: wrap;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+
+
+                        .col-sm-1, .col-md-1, .col-lg-1 {
+                            position: relative;
+                            width: 100%;
+                            min-height: 300px;
+                            padding: 0px;
+                            -webkit-box-flex: 0;
+                            -webkit-flex: 0 0 14.285714285714285714285714285714%;
+                            -ms-flex: 0 0 14.285714285714285714285714285714%;
+                            flex: 0 0 14.285714285714285714285714285714%;
+                            max-width: 14.285714285714285714285714285714%;
+                            border: 1px solid @lightest-grey;
+                            padding: 10px;
+
+                            &.today {
+                                //background: white;
+                                border: 3px solid @cherry;
+                            }
+
+                            &.not-current-month {
+                                background: @lightest-grey;
+                                border: 1px solid @lighter-grey;
+
+                                hr {
+                                    border-top: 1px solid @lighter-grey;
+                                }
+
+                                &.today {
+                                    border: 3px solid @cherry;
+                                }
+                            }
+                            &.weekend {
+
+                                strong {
+                                    color: @red;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: @mobile-width) {
+                    .birthdays-fullview {
+
+                        .row {
+                            margin-right: 0px;
+                            margin-left: 0px;
+
+                            .col-sm-1, .col-md-1, .col-lg-1 {
+                                position: relative;
+                                width: 100%;
+                                min-height: 300px;
+                                padding: 0px;
+                                -webkit-box-flex: 0;
+                                -webkit-flex: 0 0 100%;
+                                -ms-flex: 0 0 100%;
+                                flex: 0 0 100%;
+                                max-width: 100%;
+                                border: 1px solid @lightest-grey;
+                                padding: 10px;
+
+                                &.not-current-month {
+
+
+                                    hr {
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
 
             }
 
         }
+
 
     }
 

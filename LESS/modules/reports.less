@@ -122,6 +122,9 @@
         font-weight: bold;
     }
 
+    .collapsed {
+    }
+
     .displayNone {
         display:none;
     }
@@ -201,6 +204,15 @@
         margin-top: 10px;
     }
 
+    .fixed-width-l {
+        padding: 6px 12px;
+        cursor: default;
+
+        .checkbox-inline {
+            padding-top: 0;
+        }
+    }
+
     .panel {
         margin-bottom: 0;
         background: transparent;
@@ -208,11 +220,16 @@
         .panel-heading {
             padding: 0;
 
-            .panel-title {
+            .btn-primary {
+                color: white;
+                font-weight: 400;
 
-                .btn-primary {
-                    color: white;
-                    font-weight: 400;
+                i.fa-plus-circle {
+                    cursor: pointer;
+                }
+
+                .checkbox-inline {
+                    padding-top: 0;
                 }
             }
         }
@@ -220,9 +237,12 @@
 
     .panel-collapse {
         //border: 1px solid @text-color;
+        width: 400px;
+        margin: 0 auto;
 
         .panel-body {
             padding: 0;
+
 
             div.btn {
                 cursor: default;
@@ -358,6 +378,27 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .panel-collapse {
+        width: 100%;
+        margin: 0 auto;
+
+            .panel-body {
+
+                .btn {
+                    margin-bottom: 1px;
+                }
+
+            }
+        }
+
+        .fixed-width-l {
+            margin-bottom: 1px;
         }
 
     }

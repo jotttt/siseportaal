@@ -21,7 +21,6 @@
         width: 300px;
     }
 
-
 }
 
 .float-e-margins .btn {
@@ -198,23 +197,6 @@
     border-color: lighten(@red, 4%);
 }
 
-.btn-link {
-    color: inherit;
-}
-
-.btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .open .dropdown-toggle.btn-link {
-    color: @cherry;
-    text-decoration: none;
-}
-
-.btn-link:active, .btn-link.active, .open .dropdown-toggle.btn-link {
-    background-image: none;
-}
-
-.btn-link.disabled, .btn-link.disabled:hover, .btn-link.disabled:focus, .btn-link.disabled:active, .btn-link.disabled.active, .btn-link[disabled], .btn-link[disabled]:hover, .btn-link[disabled]:focus, .btn-link[disabled]:active, .btn-link.active[disabled], fieldset[disabled] .btn-link, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus, fieldset[disabled] .btn-link:active, fieldset[disabled] .btn-link.active {
-    color: #cacaca;
-}
-
 .btn-white {
     color: inherit;
     background: white;
@@ -292,6 +274,23 @@
 
 .form-control, .form-control:focus, .has-error .form-control:focus, .has-success .form-control:focus, .has-warning .form-control:focus, .navbar-collapse, .navbar-form, .navbar-form-custom .form-control:focus, .navbar-form-custom .form-control:hover, .open .btn.dropdown-toggle, .panel, .popover, .progress, .progress-bar {
     box-shadow: none;
+}
+
+.btn-link {
+    color: inherit;
+}
+
+.btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .open .dropdown-toggle.btn-link {
+    color: @cherry;
+    text-decoration: none;
+}
+
+.btn-link:active, .btn-link.active, .open .dropdown-toggle.btn-link {
+    background-image: none;
+}
+
+.btn-link.disabled, .btn-link.disabled:hover, .btn-link.disabled:focus, .btn-link.disabled:active, .btn-link.disabled.active, .btn-link[disabled], .btn-link[disabled]:hover, .btn-link[disabled]:focus, .btn-link[disabled]:active, .btn-link.active[disabled], fieldset[disabled] .btn-link, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus, fieldset[disabled] .btn-link:active, fieldset[disabled] .btn-link.active {
+    color: #cacaca;
 }
 
 .btn-outline {
@@ -390,47 +389,6 @@
     width: 90px;
     height: 90px;
     font-size: 42px;
-}
-
-.btn-panel {
-    border: 1px solid @lightest-grey;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top: 0px;
-    margin: -20px 5px 20px 5px;
-    -moz-box-shadow: inset 0px 4px 6px #EDEDED;
-    -webkit-box-shadow: inset 0px 4px 6px #EDEDED;
-    box-shadow: inset 0px 4px 6px #EDEDED;
-}
-
-.btn-panel:hover {
-    border: 1px solid @lightest-grey;
-    border-top: 0px;
-}
-
-.btn-panel.btn-default {
-    background: @bg-color;
-}
-
-.btn-panel.btn-default:hover {
-    background:  darken(@bg-color, 3%);
-    border-color: darken(@lightest-grey, 3%);
-    -moz-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
-    -webkit-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
-    box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
-}
-
-.btn-panel.btn-primary {
-    background: @cherry;
-    color: white;
-    -moz-box-shadow: inset 0px 4px 6px @darker-cherry;
-    -webkit-box-shadow: inset 0px 4px 6px @darker-cherry;
-    box-shadow: inset 0px 4px 6px @darker-cherry;
-}
-
-.btn-panel.btn-primary:hover {
-    background:  darken(@cherry, 3%);
-    color: white;
 }
 
 button.dim {
@@ -691,6 +649,63 @@ button.btn.btn-caret.active:before {
     }
 }
 
+//PANEL BUTTONS
+//-----------------------------------------------------------------
+.btn-panel {
+    font-weight: bold;
+    border: 1px solid @lightest-grey;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: 0px;
+    margin: -21px 5px 20px 5px;
+    -moz-box-shadow: inset 0px 4px 6px #EDEDED;
+    -webkit-box-shadow: inset 0px 4px 6px #EDEDED;
+    box-shadow: inset 0px 4px 6px #EDEDED;
+
+    &:hover {
+        border: 1px solid @lightest-grey;
+        border-top: 0px;
+    }
+
+    &.btn-default {
+        background: @bg-color;
+
+        &:hover {
+            background:  darken(@bg-color, 3%);
+            border-color: darken(@lightest-grey, 3%);
+            -moz-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+            -webkit-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+            box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+        }
+    }
+
+    &.btn-primary {
+        background: @cherry;
+        color: white;
+        -moz-box-shadow: inset 0px 4px 6px @darker-cherry;
+        -webkit-box-shadow: inset 0px 4px 6px @darker-cherry;
+        box-shadow: inset 0px 4px 6px @darker-cherry;
+
+        &:hover {
+            background:  darken(@cherry, 3%);
+            color: white;
+        }
+    }
+}
+
+//EDGE BUTTONS
+//-----------------------------------------------------------------
+.btn-edge {
+
+    &.bottom {
+        margin-bottom: -72px;
+    }
+
+}
+
+/*************************************************************
+MOBILE STYLES
+**************************************************************/
 @media screen and (max-width: 768px) {
 
     .btn {
