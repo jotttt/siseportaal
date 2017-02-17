@@ -3010,6 +3010,9 @@ MOBILE STYLES
 .advancedTable {
   border: 10px solid #e5e6e7;
 }
+.advancedTable tr td {
+  padding: 0;
+}
 .advancedTable .we {
   background-color: #e5e6e7;
 }
@@ -7614,6 +7617,43 @@ RIGHT SIDEBAR SETTINGS MENU
 .right-sidebar > ul {
   width: 400px;
 }
+.wrapper-appraisal .pos-guide table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #EBEBEB;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0);
+  border-spacing: 0;
+}
+.wrapper-appraisal .pos-guide table tr td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border: 1px solid #e7e7e7;
+}
+.wrapper-appraisal .pos-guide ul li {
+  list-style-type: none;
+  background: url(../img/list-bullet.png) no-repeat 0 5px;
+  list-style-position: inside;
+  padding-left: 14px;
+  margin-left: 3px;
+}
+.wrapper-appraisal textarea {
+  width: 100%;
+}
+.wrapper-appraisal .statistics-pie {
+  margin: 0 auto;
+}
+.wrapper-appraisal .person-name {
+  cursor: pointer;
+}
+#flotTip {
+  background: #e5e6e7;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
 .loginscreen .middle-box {
   max-width: 400px;
   z-index: 100;
@@ -8929,6 +8969,42 @@ HELP MODAL
   color: #870042;
   text-decoration: none;
 }
+.wrapper-vacation .vacation-admin .panel {
+  margin: 0;
+  border: 0;
+}
+.wrapper-vacation .vacation-admin .panel .panel-heading {
+  padding: 0;
+  border: 0;
+}
+.wrapper-vacation .vacation-admin .panel .panel-heading .btn {
+  text-align: left;
+  margin-bottom: 3px;
+}
+.wrapper-vacation .vacation-admin .panel .panel-heading .btn .checkbox-inline {
+  display: inline;
+  margin-left: 10px;
+}
+.wrapper-vacation .vacation-admin .panel .panel-heading .btn .checkbox-inline.no-children {
+  margin-left: 22px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body {
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 0;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2 {
+  text-align: left;
+  margin: 0 0 3px 36px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2 .checkbox-inline {
+  display: inline;
+  margin-left: 10px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3 {
+  text-align: left;
+  margin: 0 0 3px 72px;
+}
 /***********************************************************
 ARTICLE STYLES
 ***********************************************************/
@@ -9205,43 +9281,6 @@ div.wiki-template-box h3 {
   #innerWikiDiv .wiki-doc {
     padding: 40px 5px;
   }
-}
-.wrapper-appraisal .pos-guide table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  border: 1px solid #EBEBEB;
-  border-collapse: collapse;
-  background-color: rgba(0, 0, 0, 0);
-  border-spacing: 0;
-}
-.wrapper-appraisal .pos-guide table tr td {
-  padding: 8px;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border: 1px solid #e7e7e7;
-}
-.wrapper-appraisal .pos-guide ul li {
-  list-style-type: none;
-  background: url(../img/list-bullet.png) no-repeat 0 5px;
-  list-style-position: inside;
-  padding-left: 14px;
-  margin-left: 3px;
-}
-.wrapper-appraisal textarea {
-  width: 100%;
-}
-.wrapper-appraisal .statistics-pie {
-  margin: 0 auto;
-}
-.wrapper-appraisal .person-name {
-  cursor: pointer;
-}
-#flotTip {
-  background: #e5e6e7;
-  padding: 5px;
-  border: 2px solid white;
-  border-radius: 5px;
 }
 @media screen and (min-width: 1200px) {
   .navbaar-collapse.collapse {
