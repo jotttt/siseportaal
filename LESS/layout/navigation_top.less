@@ -986,7 +986,7 @@ BREADCRUMB
 }
 
 .bookmark-btn {
-    top: 38px;
+    top: 28px;
     right: 15px;
 }
 
@@ -994,6 +994,18 @@ BREADCRUMB
     padding: 2px 6px;
     top: 23px;
     right: 43px;
+}
+
+@media (max-width: @laptop-width) {
+    .breadcrumb {
+        margin-left: -25px;
+    }
+
+    .bookmark-btn {
+        top: 28px;
+        right: 15px;
+    }
+
 }
 
 @media (max-width: @mobile-width) {

@@ -3,8 +3,8 @@
     $.fn.portalui = function () {
 
         /**************************************************************
-   	GENERAL SCRIPTS
-  	**************************************************************/
+        GENERAL SCRIPTS
+        **************************************************************/
 
         //INIT M-MENU
         //--------------------------------------------------------------
@@ -35,9 +35,14 @@
         //end-----------------------------------------------------
 
 
-        //TOGGLE MOBILE MENU
+        //TOGGLE M-MOBILE MENU
         //--------------------------------------------------------------
         $("#open-mobile-menu").click(function () {
+            if($('#m-menu').hasClass('max')) {
+                $("#m-menu").removeClass("max");
+                $("#m-menu").addClass("min");
+                $("#page-wrapper").addClass("min");
+            }
             $("#m-menu.min").addClass("open");
             $("#c-mask").addClass("active");
             $("html, body").css("overflow","hidden");
@@ -61,17 +66,26 @@
         });
         //end-----------------------------------------------------------
 
+
         //MOBILE SEARCH TOGGLE
         //--------------------------------------------------------------
-        $("#open-mobile-search").click(function () {
-            $("#mobile-search").toggleClass("hidden");
+        $(document).on('click', '#open-mobile-search', function (e) {
+
+            if($('#mobile-search').hasClass('hidden')) {
+                $("#mobile-search").removeClass("hidden");
+                e.preventDefault();
+            }
+            else {
+                $("#mobile-search").addClass("hidden");
+                e.preventDefault();
+            }
         });
         //end-------------------------------------------------------------
 
 
         //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
         //--------------------------------------------------------------
-        var didScroll;
+        /*var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
         var navbarHeight = $('.navbar-static-top').outerHeight();
@@ -107,7 +121,7 @@
             }
 
             lastScrollTop = st;
-        }
+        }*/
         //end------------------------------------------------------
 
         //BACK TO TOP BUTTON
@@ -129,7 +143,7 @@
         //end--------------------------------------------------
 
 
-        //SPINNER WHILE LOADING CONTENT
+        //SPINNER WHILE LOADING PAGE CONTENT
         //------------------------------------------------------
         (function(factory) {
 
@@ -167,7 +181,9 @@
             };
 
             $.fn.spin.presets = {
-                tiny:  { lines:  8, length: 2, width: 2, radius: 3 }, small: { lines:  8, length: 4, width: 3, radius: 5 }, large: { lines: 10, length: 8, width: 4, radius: 8 },
+                tiny:  { lines:  8, length: 2, width: 2, radius: 3 },
+                small: { lines:  8, length: 4, width: 3, radius: 5 },
+                large: { lines: 10, length: 8, width: 4, radius: 8 },
                 ttu: {
                     lines: 13, // The number of lines to draw
                     length: 28, // The length of each line
@@ -193,13 +209,21 @@
             };
 
         }));
+        //end--------------------------------------------------
+
+
+        //SPINNER WHILE LOADING SEARCH
+        //------------------------------------------------------
+        $(".search-loading").empty().append("<div class='sk-spinner sk-spinner-circle'><div class='sk-circle1 sk-circle'></div><div class='sk-circle2 sk-circle'></div><div class='sk-circle3 sk-circle'></div><div class='sk-circle4 sk-circle'></div><div class='sk-circle5 sk-circle'></div><div class='sk-circle6 sk-circle'></div><div class='sk-circle7 sk-circle'></div><div class='sk-circle8 sk-circle'></div><div class='sk-circle9 sk-circle'></div><div class='sk-circle10 sk-circle'></div><div class='sk-circle11 sk-circle'></div><div class='sk-circle12 sk-circle'></div></div>");
+
+        $(".search-ready").empty().addClass("badge badge-primary");
         //end spinner -------------------------------------------
 
 
         //FUNCTION TO DISPLAY PLACEHOLDERS IN IE8+
         $('input, textarea').placeholder();
 
-        // MEGA MENU SCRIPTS
+        /*// MEGA MENU SCRIPTS
         //---------------------------------------------------
         //SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
         $(".l3").hide();
@@ -222,28 +246,34 @@
 
         //ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
         $(".l3").prev().children().addClass("menu-chevron");
-        //end---------------------------------------------------
+        //end---------------------------------------------------*/
 
 
-        /**********************************************************
-		GENERAL SCRIPTS END
-    **********************************************************/
+        //init chosen.js
+        $(".chosen-select").chosen({width: "100%"});
 
-        /**********************************************************
-		DASHBOARD
-		**********************************************************/
+        /****************************************************
+        GENERAL SCRIPTS END
+        ****************************************************/
 
+        /*****************************************************
+        DASHBOARD
+        *****************************************************/
 
-
-        /**********************************************************
-		DASHBOARD SCRIPTS END
-		**********************************************************/
-
-
-        /*********************************************************
-   	CONTENT PAGES
-    *********************************************************/
-
+        //Carousels
+        //----------------------------------------------------
+        function playcarousel(){
+            $('#carousel_desktop').carousel({
+                interval: 10000
+            });
+            $('#carousel1').carousel({
+                interval: 10000
+            });
+        }
+        window.setTimeout(playcarousel, 1000);
+        /*****************************************************
+        CONTENT PAGES
+        *****************************************************/
 
         //RIGHT SIDEBAR TOGGLE
         //-------------------------------------------------------
@@ -269,26 +299,36 @@
         $("#fullscreen-btn").click(function () {
             $(this).toggleClass("active");
             if ($("#fullscreen-btn").hasClass("active")) {
-                $("nav.navbar-static-top, nav.navbar-fixed-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .breadcrumb, .footer").addClass("closed");
+                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .wrapper-content, .breadcrumb, .footer").addClass("closed");
             }
             else {
-                $("nav.navbar-static-top, nav.navbar-fixed-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .breadcrumb, .footer").removeClass("closed");
+                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .wrapper-content, .breadcrumb, .footer").removeClass("closed");
             }
         });
         //--------------------------------------------------
         //FULLSCREEN MODE END
 
 
-        /********************************************************
-    		SRM SCRIPTS
-   		*****************************************************/
+        //INIT TOOLTIPS
+        //----------------------------------------------------
+        $('[data-toggle="tooltip"]').tooltip();
+        //--------------------------------------------------
+        //TOOLTIPS END
+
+
+        //MASONRY BEHAVIOUR
+        //----------------------------------------------------
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-sizer',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+        //--------------------------------------------------
+        //MASONRY BEHAVIOUR END
 
 
 
-        /*******************************************************
-    		SRM SCRIPTS END
-   		*****************************************************/
     };
-
     $().portalui();
 }(jQuery));
