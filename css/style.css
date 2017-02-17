@@ -7418,7 +7418,7 @@ BREADCRUMB
     margin-left: -25px;
   }
   .bookmark-btn {
-    top: 28px;
+    top: 18px;
     right: 15px;
   }
 }
@@ -7816,6 +7816,16 @@ DASHBOARD
 ul.clear-list:first-child {
   border-top: none !important;
 }
+.birthdays-container .all-bdays {
+  width: 160px;
+  text-align: center;
+  border: 1px solid #e5e6e7;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 2px 5px 2px 5px;
+  margin: 15px auto -20px auto;
+}
 @media screen and (min-width: 1200px) {
   #sortable-left,
   #sortable-right {
@@ -7910,26 +7920,80 @@ BIRTHDAYS FULLVIEW
 #innerWikiDiv .birthdays .panel .panel-body ul.nav li a {
   color: #333333;
 }
-#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview {
-  border: 1px solid #e5e6e7;
-  margin-right: -15px;
-  margin-left: -15px;
-}
 #innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row {
   margin-right: 0px;
   margin-left: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
-#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1 {
-  padding: 0px;
-}
-#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1 .day {
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1 {
+  position: relative;
+  width: 100%;
   min-height: 300px;
+  padding: 0px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 14.285714285714285714285714285714%;
+  -ms-flex: 0 0 14.285714285714285714285714285714%;
+  flex: 0 0 14.285714285714285714285714285714%;
+  max-width: 14.285714285714285714285714285714%;
   border: 1px solid #e5e6e7;
   padding: 10px;
 }
-#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1 .day.not-current-month {
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1.today,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1.today,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1.today {
+  border: 3px solid #870042;
+}
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1.not-current-month,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1.not-current-month,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1.not-current-month {
   background: #e5e6e7;
   border: 1px solid #c9c9c9;
+}
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1.not-current-month hr,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1.not-current-month hr,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1.not-current-month hr {
+  border-top: 1px solid #c9c9c9;
+}
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1.not-current-month.today,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1.not-current-month.today,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1.not-current-month.today {
+  border: 3px solid #870042;
+}
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1.weekend strong,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1.weekend strong,
+#innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1.weekend strong {
+  color: #ed5565;
+}
+@media screen and (max-width: 991px) {
+  #innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-sm-1,
+  #innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-md-1,
+  #innerWikiDiv .birthdays .panel .panel-body .birthdays-fullview .row .col-lg-1 {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border: 1px solid #e5e6e7;
+    padding: 10px;
+  }
 }
 .wrapper-mission #expenses .col-xs-1,
 .wrapper-mission #expenses .col-sm-1,
