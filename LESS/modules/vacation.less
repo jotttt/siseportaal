@@ -1,6 +1,10 @@
 // main: ../style.less
 .wrapper-vacation {
 
+    .radio, .checkbox {
+        display: inline;
+    }
+
     .vacation-admin {
 
         .panel {
@@ -50,6 +54,89 @@
                     margin: 0 0 3px 72px;
                 }
             }
+
+            .employee-table {
+                margin-left: 72px;
+
+                table {
+                    border-radius: 3px;
+                    margin-bottom: 3px;
+
+                    thead {
+
+                        th {
+                            padding: 2px 12px;
+                        }
+                    }
+
+                    tbody {
+
+                        tr {
+                            line-height: 0.3;
+
+                            td {
+                                padding: 2px 12px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
         }
     }
+
+    .employee-table-details {
+
+        table {
+            margin-bottom: 10px;
+        }
+
+        .btn-block {
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .vacation-admin {
+
+            .panel-collapse {
+
+                .employee-table {
+                    margin-left: 36px;
+                }
+
+                .panel-body {
+
+                    .level-2.btn {
+                        width: auto;
+                        margin-left: 18px
+                    }
+
+                    .level-2.btn + .level-2.btn {
+                        margin-left: 18px !important;
+                    }
+
+                    .level-3.btn {
+                        width: auto;
+                        margin-left: 36px
+                    }
+
+                    .level-3.btn + .level-3.btn {
+                        margin-left: 36px !important;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+    }
+
 }
+

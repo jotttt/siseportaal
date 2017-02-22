@@ -215,12 +215,12 @@
           <!-- breadcrumb end -->
 
           <div class="panel panel-default m-t">
-            <div class="panel-heading"><i class="fa fa-sun-o"></i> Puhkused</div>
+            <div class="panel-heading"><i class="fa fa-sun-o"></i> Puhkused - osakonna kontaktisikuvaade </div>
             <div class="panel-body">
 
               <ul class="nav nav-tabs" id="mainTab">
                 <li class="active">
-                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Puhkuste osakonnavaade</a>
+                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Osakond</a>
                 </li>
                 <li>
                   <a href="#budget_fill" id="budget_fill_tab" data-toggle="tab" >Statistika</a>
@@ -230,34 +230,81 @@
               <div class="tab-content">
 
                 <div class="tab-pane fade in active" id="tab_admin">
+
                   <div class=" vacation-unit m-t">
-                    <table class="table table-striped table-bordered table-hover table-condensed">
+                    <table class="table table-bordered table-hover table-condensed ">
                       <thead>
                         <tr>
                           <th>Nimi</th>
-                          <th>Ametinimetus</th>
                           <th>Puhkusepäevi kokku</th>
                           <th>Puhatud</th>
                           <th>Kasutamata päevi</th>
+                          <th>Kasutamata päevi eelmisest perioodist</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td><strong class="visible-sm visible-xs">Nimi </strong>Mihhail Boriskov</td>
-                          <td><strong class="visible-sm visible-xs">Ametinimetus</strong>andmesidetehnik</td>
+                          <td><strong class="visible-sm visible-xs">Nimi </strong><span data-toggle="collapse" data-target="#collapse-111" href="#collapse-111" class="open-structure collapsed" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                            </span><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a>
+                            <div id="collapse-111" class="panel-collapse collapse employee-table-details" aria-expanded="false" >
+                              <table id="vacationsTable" class="table table-bordered table-hover table-condensed">
+                                <thead>
+                                  <tr>
+                                    <th>Algus</th>
+                                    <th>Lõpp</th>
+                                    <th>Tüüp</th>
+                                    <th>Staatus</th>
+                                    <th>Muuda</th>
+                                    <th>Tühista</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>20.02.2017</td>
+                                    <td>26.02.2017</td>
+                                    <td>Korraline puhkus</td>
+                                    <td> <span class="fa fa-info-circle orange"></span> Kooskõlastamisel</td>
+                                    <td><button class="btn btn-info btn-outline btn-block"><i class="fa fa-edit"></i></button></td>
+                                    <td><button class="btn btn-danger btn-outline btn-block"><i class="fa fa-trash"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                    <td>01.03.2017</td>
+                                    <td>07.03.2017</td>
+                                    <td>Korraline puhkus</td>
+                                    <td><span class="fa fa-info-circle green"></span> Kinnitatud</td>
+                                    <td><button class="btn btn-info btn-outline btn-block"><i class="fa fa-edit"></i></button></td>
+                                    <td><button class="btn btn-danger btn-outline btn-block"><i class="fa fa-trash"></i></button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="pull-right">
+                                <a class="fa fa-plus green m-r-xs"></a>
+                              </div>
+
+                            </div>
+                          </td>
+
 
                           <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
                           <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
+
                           <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
+
+                          <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>8</td>
                         </tr>
                         <tr>
-                          <td><strong class="visible-sm visible-xs">Nimi </strong>Sander Marandi</td>
-                          <td><strong class="visible-sm visible-xs">Ametinimetus</strong>kasutajatoe spetsialist</td>
+                          <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Sander Marandi</a></td>
 
                           <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
                           <td><strong class="visible-sm visible-xs">Puhatud</strong>19</td>
+
                           <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>16</td>
+
+                          <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>13</td>
                         </tr>
                       </tbody>
                     </table>
@@ -328,6 +375,17 @@
     <!-- My custom scripts -->
     <script src="js/main_ui.js"></script>
     <script src="js/widget_ui.js"></script>
+
+    <script>
+      $(document).on('click', '.open-structure', function() {
+        if ($(this).hasClass('collapsed')) {
+          $(this).children('i').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+        }
+        else {
+          $(this).children('i').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+        }
+      });
+    </script>
 
   </body>
 

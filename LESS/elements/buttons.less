@@ -297,6 +297,10 @@
     color: inherit;
     background-color: transparent;
     transition: all .3s;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
 }
 
 .btn-default.btn-outline {
@@ -328,16 +332,11 @@
 .btn-primary.btn-outline {
     color: @cherry;
     background-color: white;
-}
 
-.btn-primary.btn-outline:hover {
-    color: darken(@cherry, 5%);
-    background-color:  white;
-    border-color: darken(@cherry, 3%);
-}
-
-.btn-primary.btn-outline:active, .btn-primary.btn-outline:focus {
-    background: white;
+    &:hover, &:focus, &:active {
+        color: white;
+        background: @cherry;
+    }
 }
 
 .btn-primary.btn-outline.active {
@@ -351,18 +350,34 @@
 
 .btn-success.btn-outline {
     color: @lazur;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
 }
 
 .btn-info.btn-outline {
     color: @blue;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
 }
 
 .btn-warning.btn-outline {
     color: @yellow;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
 }
 
 .btn-danger.btn-outline {
     color: @red;
+
+    &:hover, &:focus, &:active {
+        color: white;
+    }
 }
 
 .btn-white.btn-outline {

@@ -380,6 +380,9 @@ ol.unstyled {
   font-size: 160px;
   color: #e5e6e7;
 }
+.fa.cherry {
+  color: #870042;
+}
 .fa.green {
   color: #1ab394;
 }
@@ -1997,6 +2000,12 @@ h5 {
   /* padding: 3px 8px; */
   text-shadow: none;
   text-transform: uppercase;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .badge {
   background-color: #d1dade;
@@ -2010,6 +2019,12 @@ h5 {
   padding-right: 6px;
   margin-bottom: 1px;
   text-shadow: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .label-default,
 .badge-default {
@@ -2136,7 +2151,7 @@ h5 {
 .badge-info-o {
   background-color: transparent;
   color: #333333;
-  border: 1px solid #1ab394;
+  border: 1px solid #2ba9c6;
 }
 .label-white-o,
 .badge-white-o {
@@ -2648,6 +2663,11 @@ fieldset[disabled] .btn-link.active {
   background-color: transparent;
   transition: all .3s;
 }
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: white;
+}
 .btn-default.btn-outline {
   color: #333333;
   background: #e5e6e7;
@@ -2674,14 +2694,11 @@ fieldset[disabled] .btn-link.active {
   color: #870042;
   background-color: white;
 }
-.btn-primary.btn-outline:hover {
-  color: #6e0036;
-  background-color: white;
-  border-color: #78003b;
-}
-.btn-primary.btn-outline:active,
-.btn-primary.btn-outline:focus {
-  background: white;
+.btn-primary.btn-outline:hover,
+.btn-primary.btn-outline:focus,
+.btn-primary.btn-outline:active {
+  color: white;
+  background: #870042;
 }
 .btn-primary.btn-outline.active {
   background: white;
@@ -2693,14 +2710,34 @@ fieldset[disabled] .btn-link.active {
 .btn-success.btn-outline {
   color: #1ab394;
 }
+.btn-success.btn-outline:hover,
+.btn-success.btn-outline:focus,
+.btn-success.btn-outline:active {
+  color: white;
+}
 .btn-info.btn-outline {
   color: #2ba9c6;
+}
+.btn-info.btn-outline:hover,
+.btn-info.btn-outline:focus,
+.btn-info.btn-outline:active {
+  color: white;
 }
 .btn-warning.btn-outline {
   color: #f8ac59;
 }
+.btn-warning.btn-outline:hover,
+.btn-warning.btn-outline:focus,
+.btn-warning.btn-outline:active {
+  color: white;
+}
 .btn-danger.btn-outline {
   color: #ed5565;
+}
+.btn-danger.btn-outline:hover,
+.btn-danger.btn-outline:focus,
+.btn-danger.btn-outline:active {
+  color: white;
 }
 .btn-white.btn-outline {
   color: white;
@@ -4290,6 +4327,17 @@ table.table-mail tr td {
 }
 .glyphicon.fa {
   font-family: "FontAwesome";
+}
+/************************************************
+CUSTOM ICONS
+************************************************/
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.icon.balloon {
+  background: url(../img/balloon_ico.png);
 }
 /************************************************
 NO-UI-SLIDERS
@@ -8969,6 +9017,10 @@ HELP MODAL
   color: #870042;
   text-decoration: none;
 }
+.wrapper-vacation .radio,
+.wrapper-vacation .checkbox {
+  display: inline;
+}
 .wrapper-vacation .vacation-admin .panel {
   margin: 0;
   border: 0;
@@ -9004,6 +9056,47 @@ HELP MODAL
 .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3 {
   text-align: left;
   margin: 0 0 3px 72px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .employee-table {
+  margin-left: 72px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .employee-table table {
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .employee-table table thead th {
+  padding: 2px 12px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .employee-table table tbody tr {
+  line-height: 0.3;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .employee-table table tbody tr td {
+  padding: 2px 12px;
+}
+.wrapper-vacation .employee-table-details table {
+  margin-bottom: 10px;
+}
+.wrapper-vacation .employee-table-details .btn-block {
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .wrapper-vacation .vacation-admin .panel-collapse .employee-table {
+    margin-left: 36px;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn {
+    width: auto;
+    margin-left: 18px;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn + .level-2.btn {
+    margin-left: 18px !important;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn {
+    width: auto;
+    margin-left: 36px;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn + .level-3.btn {
+    margin-left: 36px !important;
+  }
 }
 /***********************************************************
 ARTICLE STYLES

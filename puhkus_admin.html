@@ -214,331 +214,488 @@
           </div>
           <!-- breadcrumb end -->
 
-        <div class="panel panel-default m-t">
-          <div class="panel-heading"><i class="fa fa-sun-o"></i> Puhkused</div>
-          <div class="panel-body">
+          <div class="panel panel-default m-t-md">
+            <div class="panel-heading"><i class="fa fa-sun-o"></i> Puhkused - koordinaatorivaade</div>
+            <div class="panel-body">
 
-             <ul class="nav nav-tabs" id="mainTab">
-            <li class="active">
-              <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Puhkuste administreerimine</a>
-            </li>
-            <li>
-              <a href="#budget_fill" id="budget_fill_tab" data-toggle="tab" >Statistika</a>
-            </li>
-          </ul>
+              <ul class="nav nav-tabs" id="mainTab">
+                <li class="active">
+                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Puhkuste administreerimine</a>
+                </li>
+                <li>
+                  <a href="#budget_fill" id="budget_fill_tab" data-toggle="tab" >Statistika</a>
+                </li>
+              </ul>
 
-          <div class="tab-content">
+              <div class="tab-content">
 
-            <div class="tab-pane fade in active" id="tab_admin">
-              <div class="row vacation-admin m-t">
+                <div class="tab-pane fade in active m-t" id="tab_admin">
+                  <div class="vacation-admin">
 
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-1" href="#collapse-1" class="open-structure collapsed" aria-expanded="false">
-                          <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1" class=""> Infotehnoloogia teaduskond
-                        </label>
-                        <span class="pull-right info-label"><div class="badge badge-default">saadetud 15.01</div></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="collapse-1" class="panel-collapse collapse" aria-expanded="false" >
-                    <div class="panel-body" style="">
-                      <div class="level-2 btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-11" href="#collapse-11" class="open-structure collapsed" aria-expanded="false">
-                          <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Arvutisüsteemide instituut
-                        </label>
-                      </div>
+                    <form class="form-horizontal m-b" id="budgetForm" data-div="results">
 
-                      <div id="collapse-11" class="panel-collapse collapse" aria-expanded="false" >
-                        <div class="level-3 btn btn-white block">
-                            <i class="fa fa-user m-r-xs"></i> Sander Marandi
+                      <div class="panel">
+                        <div class="panel-body grey">
+
+                          <div class="options-container">
+                            <div class="row">
+
+                              <div class="col-md-4 m-b">
+                                <label class="block">Filter</label>
+                                <div class="by-department m-l m-b">
+                                  <label class="block">teaduskonna järgi</label>
+
+                                  <a class="label label-primary">Infotehnoloogia teaduskond</a>
+
+                                  <a class="label label-default">Inseneriteaduskond</a>
+
+                                  <a class="label label-default">Loodusteaduskond</a>
+
+                                  <a class="label label-default">Majandusteaduskond</a>
+
+                                  <a class="label label-default">Eesti Mereakadeemia</a>
+
+                                  <a class="label label-default">Haldus- ja Tugistruktuur </a>
+
+                                </div>
+                                <div class="m-l by-institute">
+                                  <label class="block">instituudi järgi</label>
+
+                                  <a class="label label-default">Arvutisüsteemide instituut</a>
+
+                                  <a class="label label-default">Tarkvarateaduse instituut</a>
+
+                                  <a class="label label-default">Tervisetehnoloogiate instituut</a>
+
+                                  <a class="label label-primary">Thomas Johann Seebecki elektroonikainstituut</a>
+
+                                  <a class="label label-default">IT kolledž</a>
+
+                                </div>
+                              </div>
+
+                              <div class="col-md-4 m-b">
+                                <label class="block">Otsing</label>
+
+                                <input type="text" placeholder="Otsi töötajat" class="form-control">
+
+                              </div>
+
+                              <div class="col-md-4 m-b">
+
+                                <label class="block">Puhkuseajakavad</label>
+                                <div class="m-b">
+                                  <a class="label label-default">Saada täitmiseks valitud üksustele</a>
+
+                                  <a class="label label-default">Saada meeldetuletus valitud üksustele</a>
+                                </div>
+
+                                <label class="block">Rollid</label>
+                                <div class="m-b">
+                                  <input type="text" class="form-control m-b-sm" placeholder="Otsi isikut">
+                                  <a class="label label-default">Määra isik kinnitajaks valitud üksustele</a>
+
+                                  <a class="label label-default">Määra isik raamatupidajaks valitud üksustele</a>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div>
+
                         </div>
-                         <div class="level-3 btn btn-white block">
-                         <i class="fa fa-user m-r-xs"></i> Anna Kolossova
+                      </div>
+                    </form>
+
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-1" href="#collapse-1" class="open-structure collapsed" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id="" class=""> Infotehnoloogia teaduskond
+                          </label>
+                          <span class="info-label"><div class="badge badge-warning-o">saadetud 15.01</div></span>
                         </div>
-                         <div class="level-3 btn btn-white block">
-                         <i class="fa fa-user m-r-xs"></i> Peeter Mudist
+                      </div>
+                    </div>
+                    <div id="collapse-1" class="panel-collapse collapse" aria-expanded="false" >
+                      <div class="panel-body" style="">
+                        <div class="level-2 btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-11" href="#collapse-11" class="open-structure collapsed" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Arvutisüsteemide instituut
+                          </label>
+                        </div>
+
+                        <div id="collapse-11" class="panel-collapse collapse employee-table" aria-expanded="false" >
+                          <table class="table table-bordered table-hover table-condensed ">
+                            <thead>
+                              <tr>
+                                <th>Nimi</th>
+                                <th>Puhkusepäevi kokku</th>
+                                <th>Puhatud</th>
+                                <th>Kasutamata päevi</th>
+                                <th>Kasutamata päevi eelmisest perioodist</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td><strong class="visible-sm visible-xs">Nimi </strong><span data-toggle="collapse" data-target="#collapse-111" href="#collapse-111" class="open-structure collapsed" aria-expanded="false">
+                                  <i class="fa fa-plus-circle"></i>
+                                  </span><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a>
+                                  <div id="collapse-111" class="panel-collapse collapse employee-table-details" aria-expanded="false" >
+                                    <table id="vacationsTable" class="table table-bordered table-hover table-condensed">
+                                      <thead>
+                                        <tr>
+                                          <th>Algus</th>
+                                          <th>Lõpp</th>
+                                          <th>Tüüp</th>
+                                          <th>Staatus</th>
+                                          <th>Muuda</th>
+                                          <th>Tühista</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>20.02.2017</td>
+                                          <td>26.02.2017</td>
+                                          <td>Korraline puhkus</td>
+                                          <td> <span class="fa fa-info-circle orange"></span> Kooskõlastamisel</td>
+                                          <td><button class="btn btn-info btn-outline btn-block"><i class="fa fa-edit"></i></button></td>
+                                          <td><button class="btn btn-danger btn-outline btn-block"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                          <td>01.03.2017</td>
+                                          <td>07.03.2017</td>
+                                          <td>Korraline puhkus</td>
+                                          <td><span class="fa fa-info-circle green"></span> Kinnitatud</td>
+                                          <td><button class="btn btn-info btn-outline btn-block"><i class="fa fa-edit"></i></button></td>
+                                          <td><button class="btn btn-danger btn-outline btn-block"><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </td>
+
+
+                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
+                                <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>8</td>
+                              </tr>
+                              <tr>
+                                <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Sander Marandi</a></td>
+
+                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
+                                <td><strong class="visible-sm visible-xs">Puhatud</strong>19</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>16</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>13</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="level-2 btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-12" href="#collapse-12" class="open-structure collapsed" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Tarkvarateaduse instituut
+                          </label>
+                        </div>
+                        <div id="collapse-12" class="panel-collapse collapse employee-table" aria-expanded="false" >
+
+                          <table class="table table-bordered table-hover table-condensed ">
+                            <thead>
+                              <tr>
+                                <th>Nimi</th>
+                                <th>Puhkusepäevi kokku</th>
+                                <th>Puhatud</th>
+                                <th>Kasutamata päevi</th>
+                                <th>Kasutamata päevi eelmisest perioodist</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a></td>
+
+                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
+                                <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>8</td>
+                              </tr>
+                              <tr>
+                                <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Sander Marandi</a></td>
+
+                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
+                                <td><strong class="visible-sm visible-xs">Puhatud</strong>19</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>16</td>
+
+                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>13</td>
+                              </tr>
+                            </tbody>
+                          </table>
 
                         </div>
-                         <div class="level-3 btn btn-white block">
-                        <i class="fa fa-user m-r-xs"></i> Kalev Tamm
+
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Tervisetehnoloogiate instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Thomas Johann Seebecki elektroonikainstituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> IT kolledž
+                          </label>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="level-2 btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_2"> Tarkvarateaduse instituut
-                        </label>
-                      </div>
-                      <div class="level-2 btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Tervisetehnoloogiate instituut
-                        </label>
-                      </div>
-                      <div class="level-2 btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Thomas Johann Seebecki elektroonikainstituut
-                        </label>
-                      </div>
-                      <div class="level-2 btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> IT kolledž
-                        </label>
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-2" href="#collapse-2" class="open-structure collapsed pull-left" aria-expanded="false">
+                            <i class="fa fa-plus-circle "></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Inseneriteaduskond
+                          </label>
+                          <span class="info-label"><div class="badge badge-info-o">kinnitatud 27.01</div></span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                    <div id="collapse-2" class="panel-collapse collapse" aria-expanded="false" >
+                      <div class="panel-body" style="">
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Ehituse ja arhitektuuri instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Elektroenergeetika ja mehhatroonika instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Energiatehnoloogia instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Materjali- ja keskkonnatehnoloogia instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Mehaanika ja tööstustehnika instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Tartu kolledž
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Virumaa kolledž
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-2" href="#collapse-2" class="open-structure collapsed pull-left" aria-expanded="false">
-                          <i class="fa fa-plus-circle "></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Inseneriteaduskond
-                        </label>
-                        <span class="pull-right info-label"><div class="badge badge-info">kinnitatud 27.01</div></span>
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-3" href="#collapse-3" class="open-structure collapsed pull-left" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Loodusteaduskond
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div id="collapse-2" class="panel-collapse collapse" aria-expanded="false" >
-                    <div class="panel-body" style="">
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Ehituse ja arhitektuuri instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Elektroenergeetika ja mehhatroonika instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Energiatehnoloogia instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Materjali- ja keskkonnatehnoloogia instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Mehaanika ja tööstustehnika instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Tartu kolledž
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Virumaa kolledž
-                        </label>
+                    <div id="collapse-3" class="panel-collapse collapse" aria-expanded="false" >
+                      <div class="panel-body" style="">
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Geoloogia instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Keemia ja biotehnoloogia instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Küberneetika instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Meresüsteemide instituut
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-3" href="#collapse-3" class="open-structure collapsed pull-left" aria-expanded="false">
-                          <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Loodusteaduskond
-                        </label>
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-4" href="#collapse-4" class="open-structure collapsed pull-left" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Majandusteaduskond
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div id="collapse-3" class="panel-collapse collapse" aria-expanded="false" >
-                    <div class="panel-body" style="">
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Geoloogia instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Keemia ja biotehnoloogia instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Küberneetika instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Meresüsteemide instituut
-                        </label>
+                    <div id="collapse-4" class="panel-collapse collapse" aria-expanded="false" >
+                      <div class="panel-body" style="">
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Majandusanalüüsi ja rahanduse instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Ragnar Nurkse innovatsiooni ja valitsemise instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Õiguse instituut
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Ärikorralduse instituut
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-4" href="#collapse-4" class="open-structure collapsed pull-left" aria-expanded="false">
-                          <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Majandusteaduskond
-                        </label>
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+
+                          <label class="checkbox-inline no-children">
+                            <input type="checkbox" value="selected" id=""> Eesti Mereakadeemia
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div id="collapse-4" class="panel-collapse collapse" aria-expanded="false" >
-                    <div class="panel-body" style="">
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Majandusanalüüsi ja rahanduse instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Ragnar Nurkse innovatsiooni ja valitsemise instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Õiguse instituut
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Ärikorralduse instituut
-                        </label>
+
+                    <div class="panel" id="">
+                      <div class="panel-heading">
+                        <div class="btn btn-white block">
+                          <span data-toggle="collapse" data-target="#collapse-5" href="#collapse-5" class="open-structure collapsed pull-left" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Haldus- ja Tugistruktuur
+                          </label>
+                          <span class="info-label"><div class="badge badge-success-o">navisse 27.01</div></span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-
-                        <label class="checkbox-inline no-children">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Eesti Mereakadeemia
-                        </label>
+                    <div id="collapse-5" class="panel-collapse collapse" aria-expanded="false" >
+                      <div class="panel-body" style="">
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Avatud ülikool
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Infotehnoloogia osakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Innovatsiooni- ja ettevõtluskeskus
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Kinnisvaraosakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Personaliosakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Raamatukogu
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Rahandusosakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Teadusosakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Õppeosakond
+                          </label>
+                        </div>
+                        <div class="level-2 btn btn-white block">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="selected" id=""> Üldosakond
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="col-xl-12">
-                  <div class="panel" id="">
-                    <div class="panel-heading">
-                      <div class="btn btn-white block">
-                        <span data-toggle="collapse" data-target="#collapse-5" href="#collapse-5" class="open-structure collapsed pull-left" aria-expanded="false">
-                          <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Haldus- ja Tugistruktuur
-                        </label>
-                        <span class="pull-right info-label"><div class="badge badge-success">kantud navisse 27.01</div></span>
-                      </div>
-                    </div>
                   </div>
-                  <div id="collapse-5" class="panel-collapse collapse" aria-expanded="false" >
-                    <div class="panel-body" style="">
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Avatud ülikool
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Infotehnoloogia osakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Innovatsiooni- ja ettevõtluskeskus
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Kinnisvaraosakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Personaliosakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Raamatukogu
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Rahandusosakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Teadusosakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Õppeosakond
-                        </label>
-                      </div>
-                      <div class="btn btn-white block">
-                        <label class="checkbox-inline">
-                          <input type="checkbox" value="selected" id="report_tree_checkbox_1"> Üldosakond
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-xl-12 m-t">
-                  <label for="">Saada puhkuseajakavad valitud osakondadele täitmiseks</label>
-                </div>
+                  <!-- PAGE END ------------------------------->
 
-                <div class="col-xl-12">
-                  <div class="btn btn-primary">Saada</div>
+                  <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
+                  <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+                  <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+                  <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
                 </div>
-
+                <div class="tab-pane fade in" id="budget_fill"></div>
               </div>
 
-              <!-- PAGE END ------------------------------->
-
-              <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
-              <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-              <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
-              <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
             </div>
-            <div class="tab-pane fade in" id="budget_fill"></div>
           </div>
-
-          </div>
-        </div>
 
 
 
@@ -586,9 +743,35 @@
     <script src="js/plugins/pace/pace.min.js"></script>
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+    <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
     <script src="js/main_ui.js"></script>
     <script src="js/widget_ui.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        $(document).on('click', '.by-department .label, .by-institute .label', function() {
+          if($(this).hasClass('label-default')) {
+            $(this).removeClass('label-default').addClass('label-primary');
+          }
+          else {
+            $(this).removeClass('label-primary').addClass('label-default');
+          }
+        });
+
+        $(document).on('click', '.open-structure', function() {
+          if ($(this).hasClass('collapsed')) {
+            $(this).children('i').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+          }
+          else {
+            $(this).children('i').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+          }
+        });
+
+      });
+    </script>
 
   </body>
 

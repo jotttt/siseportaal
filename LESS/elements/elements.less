@@ -6,27 +6,27 @@ MODAL
 body.modal-open,
 .modal-open .navbar-fixed-top,
 .modal-open .navbar-fixed-bottom {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .modal.container {
-  max-width: none;
+    max-width: none;
 }
 
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
 }
 
 @media screen and (max-width: @mobile-width) {
-  .modal-open .modal {
-    left: 1%;
-    right: 1%;
-  }
+    .modal-open .modal {
+        left: 1%;
+        right: 1%;
+    }
 }
 //end modal---------------------------------
 
@@ -34,17 +34,17 @@ body.modal-open,
 FORMS
 **********************************************/
 .form-horizontal .control-label-regular {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
 
-  .form-horizontal .control-label-regular {
-    padding-top: 7px;
-    margin-bottom: 0;
-    text-align: right;
-    font-weight: normal;
-  }
+    .form-horizontal .control-label-regular {
+        padding-top: 7px;
+        margin-bottom: 0;
+        text-align: right;
+        font-weight: normal;
+    }
 
 }
 //end forms---------------------------------
@@ -53,108 +53,108 @@ FORMS
 INPUTS
 **********************************************/
 input {
-  padding: 0 2px;
+    padding: 0 2px;
 }
 
 input:focus {
-  //outline-color: @cherry;
+    //outline-color: @cherry;
 }
 
 .input-group .form-control {
-  z-index: auto;
+    z-index: auto;
 }
 
 .form-horizontal .form-group {
-  margin: 0 0 15px 0;
+    margin: 0 0 15px 0;
 }
 
 .inline {
-  display: inline-block !important;
+    display: inline-block !important;
 }
 
 .input-s-sm {
-  width: 120px;
+    width: 120px;
 }
 
 .input-s {
-  width: 200px;
+    width: 200px;
 }
 
 .input-s-lg {
-  width: 250px;
+    width: 250px;
 }
 
 .i-checks {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .form-control, .single-line {
-  background-color: #FFFFFF;
-  background-image: none;
-  border: 1px solid #e5e6e7;
-  border-radius: 1px;
-  color: inherit;
-  display: block;
-  padding: 3px 12px;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-  width: 100%;
-  font-size: 1em;
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 3px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    font-size: 1em;
 }
 
 .form-control[disabled], fieldset[disabled] .form-control {
-  cursor: inherit;
+    cursor: inherit;
 }
 
 .has-success.form-control {
-  border-color: @cherry;
+    border-color: @cherry;
 }
 
 .has-warning.form-control {
-  border-color: @yellow;
+    border-color: @yellow;
 }
 
 .has-error.form-control {
-  border-color: @red;
+    border-color: @red;
 }
 
 .required.form-control {
-  border-color: @red;
+    border-color: @red;
 }
 
 .valid.form-control {
-  border-color: @green;
+    border-color: @green;
 }
 
 .has-success.control-label {
-  color: @cherry;
+    color: @cherry;
 }
 
 .has-warning.control-label {
-  color: @yellow;
+    color: @yellow;
 }
 
 .has-error.control-label {
-  color: @red;
+    color: @red;
 }
 
 .input-group-addon {
-  background-color: #fff;
-  border: 1px solid #E5E6E7;
-  border-radius: 1px;
-  color: inherit;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1;
-  padding: 6px 12px;
-  text-align: center;
+    background-color: #fff;
+    border: 1px solid #E5E6E7;
+    border-radius: 1px;
+    color: inherit;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1;
+    padding: 6px 12px;
+    text-align: center;
 }
 
 .spinner-buttons.input-group-btn .btn-xs {
-  line-height: 1.13;
+    line-height: 1.13;
 }
 
 .spinner-buttons.input-group-btn {
-  width: 20%;
+    width: 20%;
 }
 // end input ---------------------------------
 
@@ -163,13 +163,13 @@ input:focus {
 SCROLLABLE
 **********************************************/
 .scrollable-request {
-  overflow: auto;
-  max-height: 400px;
+    overflow: auto;
+    max-height: 400px;
 }
 
 .scrollable-task {
-  overflow: auto;
-  max-height: 250px;
+    overflow: auto;
+    max-height: 250px;
 }
 // end scrollable -----------------------------
 
@@ -178,9 +178,9 @@ SCROLLABLE
 NATURAL-EDIT FORM PLUGIN
 **********************************************/
 .natural.display {
-  border-bottom: 1px dashed @text-color;
-  cursor: pointer;
-  margin: 14px;
+    border-bottom: 1px dashed @text-color;
+    cursor: pointer;
+    margin: 14px;
 }
 // end natural-edit ---------------------------
 
@@ -188,29 +188,29 @@ NATURAL-EDIT FORM PLUGIN
 POPUP
 **********************************************/
 .popup {
-  display: none;
-  position: fixed;
-  top: 30%;
-  width: 500px;
-  margin: 0 0 0 -250px;
-  left: 50%;
-  -webkit-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
-  -moz-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
-  box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
-  z-index: 2051;
+    display: none;
+    position: fixed;
+    top: 30%;
+    width: 500px;
+    margin: 0 0 0 -250px;
+    left: 50%;
+    -webkit-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+    -moz-box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+    box-shadow: 9px 10px 5px -6px rgba(230, 225, 230, 0.87);
+    z-index: 2051;
 }
 
 @media screen and (max-width: 768px) {
-  .popup {
-    top: 30%;
-    width: 318px;
-    margin: 0 0 0 -159px;
-    left: 50%;
-  }
+    .popup {
+        top: 30%;
+        width: 318px;
+        margin: 0 0 0 -159px;
+        left: 50%;
+    }
 }
 
 .popup.open {
-  display: block;
+    display: block;
 }
 //end popup---------------------------------
 
@@ -220,70 +220,70 @@ POPUP
 NEWS-MODULE AND EVENTS-MODULE
 **********************************************/
 .news-module-hero {
-  position:relative;
-  display: block;
-  padding: 0;
-  padding: 0px 10px;
-  height: 200px;
-  overflow: hidden;
+    position:relative;
+    display: block;
+    padding: 0;
+    padding: 0px 10px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .events-module-hero {
-  position:relative;
-  display: block;
-  padding: 0;
-  padding: 0px 10px;
-  overflow: hidden;
+    position:relative;
+    display: block;
+    padding: 0;
+    padding: 0px 10px;
+    overflow: hidden;
 }
 
 .news-module-hero h1, .news-module-hero h2, .news-module-hero h3, .events-module-hero h1, .events-module-hero h2, .events-module-hero h3 {
-  bottom: 0;
-  width: 100%;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 600;
-  color: @cherry;
-  margin: 0 0 0px;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: @cherry;
+    margin: 0 0 0px;
 }
 
 .news-module-hero .level2 {
-  font-weight: normal;
-  margin-top: 10px;
+    font-weight: normal;
+    margin-top: 10px;
 }
 
 .news-module-hero .level1 img, .news-module-hero .level2 img {
-  display: none;
+    display: none;
 }
 
 .news-module-hero b {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .news-module-hero .news-read-more {
-  position: absolute;
-  height: 20px;
-  background: white;
-  width: 66%;
-  margin-left: 33%;
-  top: 180px;
+    position: absolute;
+    height: 20px;
+    background: white;
+    width: 66%;
+    margin-left: 33%;
+    top: 180px;
 }
 
 .events-module-hero .events-read-more {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .news-module-hero .news-fade {
-  position: absolute;
-  height: 67px;
-  width: 100%;
-  width: 66%;
-  margin-left: 33%;
-  bottom: 0px;
+    position: absolute;
+    height: 67px;
+    width: 100%;
+    width: 66%;
+    margin-left: 33%;
+    bottom: 0px;
 }
 
 .news-module-hero .fadeline {
-  height: 3px;
-  background: white repeat fixed;
+    height: 3px;
+    background: white repeat fixed;
 }
 
 .news-module-hero .fadeline.o10 {  }
@@ -298,122 +298,122 @@ NEWS-MODULE AND EVENTS-MODULE
 .news-module-hero .fadeline.o01 { opacity: 0.1; }
 
 @media screen and (max-width: 768px) {
-  .news-module-hero .news-read-more {
-    position: absolute;
-    height: 20px;
-    background: white;
-    width: 100%;
-    margin-left: 0;
-    top: 180px;
-  }
+    .news-module-hero .news-read-more {
+        position: absolute;
+        height: 20px;
+        background: white;
+        width: 100%;
+        margin-left: 0;
+        top: 180px;
+    }
 
-  .news-module-hero .news-fade {
-    width: 100%;
-    margin-left: 0;
-  }
+    .news-module-hero .news-fade {
+        width: 100%;
+        margin-left: 0;
+    }
 
-  .news-module-hero .news-fade .fadeline{
-    height: 3px;
-    background: white repeat fixed;
-  }
+    .news-module-hero .news-fade .fadeline{
+        height: 3px;
+        background: white repeat fixed;
+    }
 }
 
 .news-module-hero > a.news-title:hover {
-  color: lighten(@cherry, 10%);
-  border-bottom: 1px solid transparent;
+    color: lighten(@cherry, 10%);
+    border-bottom: 1px solid transparent;
 }
 
 .news-module-hero > .news-lead {
-  display: block;
-  margin: 10px 0px 0;
+    display: block;
+    margin: 10px 0px 0;
 }
 
 .news-module-hero > .news-date {
-  //float: right;
-  font-size: 12px;
-  margin: 5px 0 0;
+    //float: right;
+    font-size: 12px;
+    margin: 5px 0 0;
 }
 
 .news-module-short {
-  padding: 0px 0px;
-  margin: 0px 15px;
-  position: relative;
+    padding: 0px 0px;
+    margin: 0px 15px;
+    position: relative;
 }
 
 .news-module-short span h1, .news-module-short span h2, .news-module-short span h3 {
-  display: inline;
-  border-bottom: 1px solid transparent;
-  color: #870042;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.1em;
+    display: inline;
+    border-bottom: 1px solid transparent;
+    color: #870042;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1em;
 }
 
 .news-module-short span h1:hover, .news-module-short span h2:hover, .news-module-short span h3:hover {
-  border-bottom: 1px solid @cherry;
+    border-bottom: 1px solid @cherry;
 }
 
 .news-module-short .level1, .news-module-short .level2, .news-module-short .level3, .news-module-short h1, .news-module-short h2, .news-module-short h3, .news-module-short p {
-  display: none;
+    display: none;
 }
 
 .news-module {
-  padding: 5px 0px;
-  position: relative;
-  display: inline-block
+    padding: 5px 0px;
+    position: relative;
+    display: inline-block
 }
 
 .news-title {
-  color: @cherry;
-  border-bottom: 1px solid transparent;
+    color: @cherry;
+    border-bottom: 1px solid transparent;
 }
 
 .news-title:hover {
-  border-bottom: 1px solid @cherry;
+    border-bottom: 1px solid @cherry;
 }
 
 .news-heading {
-  position: relative;
-  color: #333;
-  background-color: transparent;
+    position: relative;
+    color: #333;
+    background-color: transparent;
 
 }
 .news-heading img {
-  display: block;
+    display: block;
 
 }
 .news-text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  margin: 0px;
-  font-size: 14px;
-  color: @text-color;
-  background: white;
-  max-height: 115px;
-  overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+    font-size: 14px;
+    color: @text-color;
+    background: white;
+    max-height: 115px;
+    overflow: hidden;
 }
 
 .news-lead-wrapper {
-  //padding-bottom: 20px;
+    //padding-bottom: 20px;
 }
 
 .news-lead {
-  margin: 0px 0 0;
-  display: none;
+    margin: 0px 0 0;
+    display: none;
 }
 
 .read-more {
-  position: absolute;
-  bottom: 10px;
+    position: absolute;
+    bottom: 10px;
 }
 
 .news-tags .tag-item {
-  background: @lightest-grey;
-  padding: 2px 6px;
-  font-size: 10px;
-  text-transform: uppercase;
+    background: @lightest-grey;
+    padding: 2px 6px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 // news-module end ------------------------
 
@@ -421,13 +421,13 @@ NEWS-MODULE AND EVENTS-MODULE
 EASTER EGG
 *******************************************/
 .easter-1 > * {
-  -webkit-transform: rotate(3600deg);	-ms-transform: rotate(3600deg);	transform: rotate(3600deg);
-  -webkit-transition: 5s;	transition: 5s;
+    -webkit-transform: rotate(3600deg);	-ms-transform: rotate(3600deg);	transform: rotate(3600deg);
+    -webkit-transition: 5s;	transition: 5s;
 }
 .easter-2 > * {
-  color: chartreuse;
-  background: purple;
-  -webkit-transition: 5s;	transition: 5s;
+    color: chartreuse;
+    background: purple;
+    -webkit-transition: 5s;	transition: 5s;
 }
 //end easter egg----------------------------
 
@@ -440,51 +440,51 @@ RATING SYSTEM gold
 follow these rules. Every browser that supports :checked also supports :not(), so
 it doesn’t make the test unnecessarily selective */
 .rating:not(:checked) > input {
-  position: relative;
-  top: -9999px;
-  clip: rect(0, 0, 0, 0);
+    position: relative;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
 }
 
 .rating:not(:checked) > label {
-  width: 1.1em;
-  padding: 0em 0em 0em 0.02em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 300%;
-  line-height: 1.2;
-  color: #c9c9c9;
-  top: 0px;
-  left: 0px;
+    width: 1.1em;
+    padding: 0em 0em 0em 0.02em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 300%;
+    line-height: 1.2;
+    color: #c9c9c9;
+    top: 0px;
+    left: 0px;
 }
 
 @media screen and (max-width: 768px) {
-  .rating:not(:checked) > label {
-    font-size: 150%;
-  }
+    .rating:not(:checked) > label {
+        font-size: 150%;
+    }
 }
 
 .rating:not(:checked) > label:before {
-  font-family: FontAwesome;
-  content: "\f005 \00a0";
-  display: inline-block;
-  padding: 0 0px 0 0px;
-  vertical-align: middle;
-  top: 0px;
-  left: 0px;
+    font-family: FontAwesome;
+    content: "\f005 \00a0";
+    display: inline-block;
+    padding: 0 0px 0 0px;
+    vertical-align: middle;
+    top: 0px;
+    left: 0px;
 }
 
 .rating > input:checked ~ label {
-  color: goldenrod;
-  text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
-  top: 0px;
-  left: 0px;
+    color: goldenrod;
+    text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-  color: goldenrod;
-  text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    color: goldenrod;
+    text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
 .rating > input:checked + label:hover,
@@ -492,22 +492,22 @@ it doesn’t make the test unnecessarily selective */
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: goldenrod;
-  text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+    color: goldenrod;
+    text-shadow: 1px 1px darkgoldenrod, 2px 2px darkgoldenrod, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
 }
 
 .rating > label:active{
-  position: relative;
-  top: 2px;
-  left: 2px;
+    position: relative;
+    top: 2px;
+    left: 2px;
 }
 
 textarea.styled {
-  width: 100%;
-  height: 120px;
-  border: 1px solid @lightest-grey;
-  padding: 5px;
-  font-size: 1em;
+    width: 100%;
+    height: 120px;
+    border: 1px solid @lightest-grey;
+    padding: 5px;
+    font-size: 1em;
 }
 //end---------------------------------------------------------
 
@@ -515,174 +515,174 @@ textarea.styled {
 SCROLL BACK UP BUTTON
 *************************************************************/
 .scroll-up {
-  background-color: transparent;
-  bottom: 2em;
-  color: @darker-grey;
-  display: none;
-  opacity:0.6;
-  padding: 1em;
-  position: fixed;
-  right: 1.5em;
-  text-decoration: none;
-  border-radius: 3px;
-  z-index: 1000;
+    background-color: transparent;
+    bottom: 2em;
+    color: @darker-grey;
+    display: none;
+    opacity:0.6;
+    padding: 1em;
+    position: fixed;
+    right: 1.5em;
+    text-decoration: none;
+    border-radius: 3px;
+    z-index: 1000;
 }
 
 .scroll-usp:hover {
-  color: @darker-grey;
-  opacity:1;
-  transition:1s;
+    color: @darker-grey;
+    opacity:1;
+    transition:1s;
 }
 
 .scroll-up:active, .scroll-up:focus {
-  opacity:0.6;
-  color: @darker-grey;
+    opacity:0.6;
+    color: @darker-grey;
 }
 //end----------------------------------------------------------
 
 /* EASY PIE CHART*/
 
 .easypiechart {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .easypiechart .h2 {
-  margin-left: 10px;
-  margin-top: 10px;
-  display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .easypiechart canvas {
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
 }
 
 .easypiechart .easypie-text {
-  line-height: 1;
-  position: absolute;
-  top: 33px;
-  width: 100%;
-  z-index: 1;
+    line-height: 1;
+    position: absolute;
+    top: 33px;
+    width: 100%;
+    z-index: 1;
 }
 
 .easypiechart img {
-  margin-top: -4px;
+    margin-top: -4px;
 }
 
 .jqstooltip {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 //Full screen view
 //----------------------------------------------
 #fullscreen-btn {
-  color: @grey;
-  opacity: 0.6;
-  position: fixed;
-  bottom: 10px;
-  left: 7px;
-  z-index: 3000;
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+    color: @grey;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 10px;
+    left: 7px;
+    z-index: 3000;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
 }
 
 #fullscreen-btn:hover {
-  color: @grey;
-  opacity: 1;
+    color: @grey;
+    opacity: 1;
 }
 
 #fullscreen-btn.active {
-  color: @grey;
-  opacity: 1;
+    color: @grey;
+    opacity: 1;
 }
 
 @media screen and (max-width: @mobile-width) {
-  #fullscreen-btn {
-    display: none;
-  }
+    #fullscreen-btn {
+        display: none;
+    }
 }
 
 /* FLOT CHART  */
 
 .flot-chart {
-  display: block;
-  height: 200px;
+    display: block;
+    height: 200px;
 }
 
 .widget .flot-chart.dashboard-chart {
-  display: block;
-  height: 120px;
-  margin-top: 40px;
+    display: block;
+    height: 120px;
+    margin-top: 40px;
 }
 
 .flot-chart.dashboard-chart {
-  display: block;
-  height: 180px;
-  margin-top: 40px;
+    display: block;
+    height: 180px;
+    margin-top: 40px;
 }
 
 .flot-chart-content {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .flot-chart-pie-content {
-  width: 200px;
-  height: 200px;
-  margin: auto;
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .jqstooltip {
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 0px;
-  visibility: hidden;
-  background: rgb(43, 48, 58);
-  background-color: rgba(43, 48, 58, 0.8);
-  color: white;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 10000;
-  padding: 5px 5px 5px 5px;
-  min-height: 22px;
-  border-radius: 3px;
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    background: rgb(43, 48, 58);
+    background-color: rgba(43, 48, 58, 0.8);
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 10000;
+    padding: 5px 5px 5px 5px;
+    min-height: 22px;
+    border-radius: 3px;
 }
 
 .jqsfield {
-  color: white;
-  text-align: left;
+    color: white;
+    text-align: left;
 }
 
 .h-200 {
-  min-height: 200px;
+    min-height: 200px;
 }
 
 .legendLabel {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 .stat-list li:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .stat-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .stat-percent {
-  float: right;
+    float: right;
 }
 
 .stat-list li {
-  margin-top: 15px;
-  position: relative;
+    margin-top: 15px;
+    position: relative;
 }
 
 //X-EDIT
@@ -693,7 +693,7 @@ SCROLL BACK UP BUTTON
 .editable-container.editable-inline .control-group.form-group .editable-input textarea,
 .editable-container.editable-inline .control-group.form-group .editable-input select,
 .editable-container.editable-inline .control-group.form-group .editable-input input:not([type=radio]):not([type=checkbox]):not([type=submit]) {
-  width: 100%!important;
+    width: 100%!important;
 }
 //end x-edit --------------------------------------
 
@@ -701,206 +701,206 @@ SCROLL BACK UP BUTTON
 //IBOX
 //-------------------------------------------------
 .ibox {
-  clear: both;
-  margin-bottom: 25px;
-  margin-top: 0;
-  padding: 0;
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
 }
 
 .ibox.collapsed .ibox-content {
-  display: none;
+    display: none;
 }
 
 .ibox.collapsed .fa.fa-chevron-up:before {
-  content: "\f078";
+    content: "\f078";
 }
 
 .ibox.collapsed .fa.fa-chevron-down:before {
-  content: "\f077";
+    content: "\f077";
 }
 
 .ibox:after,
 .ibox:before {
-  display: table;
+    display: table;
 }
 
 .ibox-title {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: #ffffff;
-  border-color: #eee;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 4px 0px 0;
-  color: inherit;
-  margin-bottom: 0;
-  padding: 14px 15px 7px;
-  min-height: 48px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #eee;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0px 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
 }
 
 @keyframes glowing {
-  0% {
-    background-color: white;
-  }
-  50% {
-    background-color: #870042;
-    color: white;
-    border-color: white;
-  }
-  100% {
-    background-color: white;
-  }
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: #870042;
+        color: white;
+        border-color: white;
+    }
+    100% {
+        background-color: white;
+    }
 }
 
 .ibox-title.edit,
 .ibox-title-full.edit {
-  border: 2px dashed #870042;
+    border: 2px dashed #870042;
 }
 
 .ibox-title.edit:hover,
 .ibox-title-full.edit:hover {
-  animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
 }
 
 .ibox-content {
-  background-color: #ffffff;
-  color: inherit;
-  padding: 15px 20px 20px 20px;
-  border-color: #eee;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 1px 0px;
-  clear: both;
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: #eee;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0px;
+    clear: both;
 }
 
 .ibox-content hr:last-child {
-  display: none;
+    display: none;
 }
 
 .ibox-full {
-  clear: both;
-  margin-bottom: 0px;
-  margin-top: 0;
-  padding: 0;
+    clear: both;
+    margin-bottom: 0px;
+    margin-top: 0;
+    padding: 0;
 }
 
 .ibox-title-full {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: white;
-  border-color: #eee;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 4px 0px 0;
-  color: #333333;
-  margin-bottom: 0;
-  padding: 14px 15px 7px;
-  min-height: 48px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: white;
+    border-color: #eee;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0px 0;
+    color: #333333;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
 }
 
 .ibox-title-full .ibox-tools a {
-  color: #c9c9c9;
+    color: #c9c9c9;
 }
 
 .ibox-content-full {
-  background-color: white;
-  color: inherit;
-  padding: 0px;
-  border-color: #eee;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 0px 0px;
+    background-color: white;
+    color: inherit;
+    padding: 0px;
+    border-color: #eee;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 0px 0px;
 }
 
 .ibox-heading {
-  background-color: #f3f6fb;
-  border-bottom: none;
+    background-color: #f3f6fb;
+    border-bottom: none;
 }
 
 .ibox-heading h3 {
-  font-weight: 200;
-  font-size: 24px;
+    font-weight: 200;
+    font-size: 24px;
 }
 
 .ibox-title h5,
 .ibox-title-full h5 {
-  display: inline-block;
-  font-size: 14px;
-  margin: 0 0 7px;
-  padding: 0;
-  text-overflow: ellipsis;
-  float: left;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
 }
 
 .ibox-title .label,
 .ibox-title-full .label {
-  float: left;
-  margin-left: 4px;
+    float: left;
+    margin-left: 4px;
 }
 
 .ibox-tools {
-  display: inline-block;
-  float: right;
-  margin-top: 0;
-  position: relative;
-  padding: 0;
+    display: inline-block;
+    float: right;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
 }
 
 .ibox-tools a {
-  cursor: pointer;
-  margin-left: 5px;
-  color: #c4c4c4;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #c4c4c4;
 }
 
 .ibox-tools a.close-link {
-  display: none;
+    display: none;
 }
 
 .ibox-tools a.btn-primary {
-  color: #fff;
+    color: #fff;
 }
 
 .ibox-tools .dropdown-menu > li > a {
-  padding: 4px 10px;
-  font-size: 12px;
+    padding: 4px 10px;
+    font-size: 12px;
 }
 
 .ibox .open > .dropdown-menu {
-  left: auto;
-  right: 0;
+    left: auto;
+    right: 0;
 }
 //end ibox ----------------------------------------
 
 
 table.table-mail tr td {
-  padding: 12px;
+    padding: 12px;
 }
 .table-mail .check-mail {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 .table-mail .mail-date {
-  padding-right: 20px;
+    padding-right: 20px;
 }
 .star-mail,
 .check-mail {
-  width: 40px;
+    width: 40px;
 }
 .unread td a,
 .unread td {
-  font-weight: 600;
-  color: inherit;
+    font-weight: 600;
+    color: inherit;
 }
 .read td a,
 .read td {
-  font-weight: normal;
-  color: inherit;
+    font-weight: normal;
+    color: inherit;
 }
 .unread td {
-  background-color: #f9f8f8;
+    background-color: #f9f8f8;
 }
 
 /* SELECTBOX correction */
@@ -909,161 +909,176 @@ table.table-mail tr td {
 /* CIRCLE */
 
 .img-circle {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .btn-circle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.428571429;
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.428571429;
 }
 
 .btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  border-radius: 25px;
-  font-size: 18px;
-  line-height: 1.33;
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
 }
 
 .btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 24px;
-  line-height: 1.33;
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
 }
 
 .show-grid [class^="col-"] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #ddd;
-  background-color: #eee !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #eee !important;
 }
 
 .show-grid {
-  margin: 15px 0;
+    margin: 15px 0;
 }
 
 /* ANIMATION */
 
 .css-animation-box h1 {
-  font-size: 44px;
+    font-size: 44px;
 }
 
 .animation-efect-links a {
-  padding: 4px 6px;
-  font-size: 12px;
+    padding: 4px 6px;
+    font-size: 12px;
 }
 
 #animation_box {
-  background-color: #f9f8f8;
-  border-radius: 16px;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 80px;
+    background-color: #f9f8f8;
+    border-radius: 16px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 80px;
 }
 
 .animation-text-box {
-  position: absolute;
-  margin-top: 40px;
-  left: 50%;
-  margin-left: -100px;
-  width: 200px;
+    position: absolute;
+    margin-top: 40px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
 }
 
 .animation-text-info {
-  position: absolute;
-  margin-top: -60px;
-  left: 50%;
-  margin-left: -100px;
-  width: 200px;
-  font-size: 10px;
+    position: absolute;
+    margin-top: -60px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    font-size: 10px;
 }
 
 .animation-text-box h2 {
-  font-size: 54px;
-  font-weight: 600;
-  margin-bottom: 5px;
+    font-size: 54px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .animation-text-box p {
-  font-size: 12px;
-  text-transform: uppercase;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 /* WIDGETS */
 
 .ui-sortable > .widget-wrapper {
-  margin-bottom: 25px;
-  border: 1px solid @lightest-grey;
-  border-radius: 2px;
+    margin-bottom: 25px;
+    border: 1px solid @lightest-grey;
+    border-radius: 2px;
 }
 
 .widget {
-  border-radius: 5px;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .widget.style1 h2 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .widget h2, .widget h3 {
-  margin-top: 5px;
-  margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .widget-text-box {
-  padding: 20px;
-  border: 1px solid @border-color;
-  background: #ffffff;
+    padding: 20px;
+    border: 1px solid @border-color;
+    background: #ffffff;
 }
 
 .widget-head-color-box {
-  border-radius: 5px 5px 0px 0px;
-  margin-top: 10px;
+    border-radius: 5px 5px 0px 0px;
+    margin-top: 10px;
 
 }
 
 .widget .flot-chart {
-  height: 100px;
+    height: 100px;
 }
 
 @media screen and (max-width: @mobile-width-dash) {
-  #highlight {
-    display: none;
-  }
+    #highlight {
+        display: none;
+    }
 }
 
 @media screen and (min-width: @mobile-width-dash) {
-  #highlight-mobile {
-    display: none;
-  }
+    #highlight-mobile {
+        display: none;
+    }
 }
 //end widget ---------------------------------------
 
 
 .vertical-align div {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .vertical-align h2, .vertical-align h3 {
-  margin: 0;
+    margin: 0;
 }
 
 .glyphicon.fa {
-  font-family: "FontAwesome";
+    font-family: "FontAwesome";
 }
+
+/************************************************
+CUSTOM ICONS
+************************************************/
+.icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+
+    &.balloon {
+        background: url(../img/balloon_ico.png);
+
+    }
+}
+//end icons ------------------------------------
 
 
 
@@ -1072,83 +1087,83 @@ table.table-mail tr td {
 NO-UI-SLIDERS
 ************************************************/
 .noUi-tooltip {
-  padding: 3px;
+    padding: 3px;
 }
 
 .noUi-connect {
-  background: none repeat scroll 0 0 @cherry;
-  box-shadow: none;
+    background: none repeat scroll 0 0 @cherry;
+    box-shadow: none;
 }
 
 .slider_red .noUi-connect {
-  background: none repeat scroll 0 0 @red;
-  box-shadow: none;
+    background: none repeat scroll 0 0 @red;
+    box-shadow: none;
 }
 
 /* UI Sortable */
 .ui-sortable {
-  //min-height: 350px;
+    //min-height: 350px;
 }
 
 .ui-sortable .ibox-title {
-  cursor: move;
+    cursor: move;
 }
 
 .ui-sortable-placeholder {
-  border: 1px dashed #cecece !important;
-  visibility: visible !important;
-  background: #e7eaec;
+    border: 1px dashed #cecece !important;
+    visibility: visible !important;
+    background: #e7eaec;
 }
 
 .ibox.ui-sortable-placeholder {
-  margin: 0px 0px 23px !important;
+    margin: 0px 0px 23px !important;
 }
 
 /* Validation */
 label.error {
-  color: #cc5965;
-  display: block;
-  margin-left: 5px;
-  text-align: left;
+    color: #cc5965;
+    display: block;
+    margin-left: 5px;
+    text-align: left;
 }
 
 .form-control.error {
-  border: 1px dotted #cc5965;
+    border: 1px dotted #cc5965;
 }
 
 
 /* ALERTS*/
 .alert-white {
-  color: @text-color;
-  background-color: @lightest-grey;
-  border-color: @lightest-grey;
+    color: @text-color;
+    background-color: @lightest-grey;
+    border-color: @lightest-grey;
 }
 
 .alert-white hr {
-  border-top: 1px solid white;
+    border-top: 1px solid white;
 }
 
 .alert-info {
-  color: @text-color;
+    color: @text-color;
 }
 
 // DASHBOARD NOTIFICATION
 .btn-teade {
-  color: white;
-  &:focus, &:hover {
-    color: @light-gray;
-  }
+    color: white;
+    &:focus, &:hover {
+        color: @light-gray;
+    }
 }
 // END DASHBOARD NOTIFICATION
 
 // RAPID PLANNING MODULE
 table.table-rapid {
-  th {
-    text-align: center;
-  }
-  td {
-    text-align: center;
-  }
+    th {
+        text-align: center;
+    }
+    td {
+        text-align: center;
+    }
 }
 // END RAPID PLANNING MODULE
 
@@ -1156,60 +1171,60 @@ table.table-rapid {
 
 // BUDGET MODULE
 #budgetPanel {
-  .diagramm {
-    margin: 10px;
-  }
+    .diagramm {
+        margin: 10px;
+    }
 
-  th, td {
-    padding: 6px !important;
-  }
+    th, td {
+        padding: 6px !important;
+    }
 
-  table {
-    margin: 10px;
-  }
+    table {
+        margin: 10px;
+    }
 
-  td
-  {
-    text-align:right;
-    vertical-align:middle;
-  }
+    td
+    {
+        text-align:right;
+        vertical-align:middle;
+    }
 
-  #bar1, #sliders {
-    min-width: 310px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+    #bar1, #sliders {
+        min-width: 310px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-  #bar1 {
-    height: 400px;
-  }
+    #bar1 {
+        height: 400px;
+    }
 
-  #container {
-    height: 400px;
-    min-width: 310px;
-    max-width: 800px;
-    margin: 10px;
-  }
+    #container {
+        height: 400px;
+        min-width: 310px;
+        max-width: 800px;
+        margin: 10px;
+    }
 
-  .strong {
-    font-size: 120%;
-    font-weight: bold;
-  }
+    .strong {
+        font-size: 120%;
+        font-weight: bold;
+    }
 
-  .displayNone {
-    display:none;
-  }
+    .displayNone {
+        display:none;
+    }
 
-  .bootstrap-tagsinput input {
-    width: 100%;
-  }
+    .bootstrap-tagsinput input {
+        width: 100%;
+    }
 
-  .hiddenForm {
-    height: 0px !important;
-  }
+    .hiddenForm {
+        height: 0px !important;
+    }
 
-  form {
-    margin-top: 10px;
-  }
+    form {
+        margin-top: 10px;
+    }
 }
 // END BUDGET MODULE
