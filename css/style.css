@@ -3000,7 +3000,7 @@ button.btn.btn-caret.active:before {
 /*************************************************************
 MOBILE STYLES
 **************************************************************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .btn {
     display: block;
     width: 100%;
@@ -3039,9 +3039,6 @@ MOBILE STYLES
   }
   .btn + .btn {
     margin-left: 0px !important;
-  }
-  table .btn {
-    width: auto;
   }
 }
 .advancedTable {
@@ -9020,6 +9017,20 @@ HELP MODAL
 .wrapper-vacation .radio,
 .wrapper-vacation .checkbox {
   display: inline;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.wrapper-vacation .open-structure {
+  cursor: pointer;
+}
+.wrapper-vacation .open-structure:hover,
+.wrapper-vacation .open-structure:focus,
+.wrapper-vacation .open-structure:active {
+  color: #870042;
 }
 .wrapper-vacation .vacation-admin .panel {
   margin: 0;
@@ -9084,14 +9095,12 @@ HELP MODAL
     margin-left: 36px;
   }
   .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn {
-    width: auto;
     margin-left: 18px;
   }
   .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn + .level-2.btn {
     margin-left: 18px !important;
   }
   .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn {
-    width: auto;
     margin-left: 36px;
   }
   .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn + .level-3.btn {

@@ -246,8 +246,8 @@
                       <tbody>
                         <tr>
                           <td><strong class="visible-sm visible-xs">Nimi </strong><span data-toggle="collapse" data-target="#collapse-111" href="#collapse-111" class="open-structure collapsed" aria-expanded="false">
-                            <i class="fa fa-plus-circle"></i>
-                            </span><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a>
+                            <i class="fa fa-plus-circle"></i> <i class="fa fa-user"></i> Mihhail Boriskov
+                            </span>
                             <div id="collapse-111" class="panel-collapse collapse employee-table-details" aria-expanded="false" >
                               <table id="vacationsTable" class="table table-bordered table-hover table-condensed">
                                 <thead>
@@ -296,7 +296,7 @@
                           <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>8</td>
                         </tr>
                         <tr>
-                          <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Sander Marandi</a></td>
+                          <td><strong class="visible-sm visible-xs">Nimi </strong><span class="open-structure"><i class="fa fa-user"></i> Sander Marandi</span></td>
 
                           <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
 
@@ -377,14 +377,14 @@
     <script src="js/widget_ui.js"></script>
 
     <script>
-      $(document).on('click', '.open-structure', function() {
-        if ($(this).hasClass('collapsed')) {
-          $(this).children('i').removeClass('fa-minus-circle').addClass('fa-plus-circle');
-        }
-        else {
-          $(this).children('i').removeClass('fa-plus-circle').addClass('fa-minus-circle');
-        }
-      });
+     $(document).on('click', '.open-structure', function() {
+          if ($(this).hasClass('collapsed')) {
+            $(this).children('i.fa-minus-circle').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+          }
+          else {
+            $(this).children('i.fa-plus-circle').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+          }
+        });
     </script>
 
   </body>

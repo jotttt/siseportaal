@@ -346,8 +346,8 @@
                             <tbody>
                               <tr>
                                 <td><strong class="visible-sm visible-xs">Nimi </strong><span data-toggle="collapse" data-target="#collapse-111" href="#collapse-111" class="open-structure collapsed" aria-expanded="false">
-                                  <i class="fa fa-plus-circle"></i>
-                                  </span><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a>
+                                  <i class="fa fa-plus-circle"></i> <i class="fa fa-user"></i> Mihhail Boriskov
+                                  </span>
                                   <div id="collapse-111" class="panel-collapse collapse employee-table-details" aria-expanded="false" >
                                     <table id="vacationsTable" class="table table-bordered table-hover table-condensed">
                                       <thead>
@@ -407,54 +407,10 @@
                         </div>
 
                         <div class="level-2 btn btn-white block">
-                          <span data-toggle="collapse" data-target="#collapse-12" href="#collapse-12" class="open-structure collapsed" aria-expanded="false">
-                            <i class="fa fa-plus-circle"></i>
-                          </span>
                           <label class="checkbox-inline">
                             <input type="checkbox" value="selected" id=""> Tarkvarateaduse instituut
                           </label>
                         </div>
-                        <div id="collapse-12" class="panel-collapse collapse employee-table" aria-expanded="false" >
-
-                          <table class="table table-bordered table-hover table-condensed ">
-                            <thead>
-                              <tr>
-                                <th>Nimi</th>
-                                <th>Puhkusepäevi kokku</th>
-                                <th>Puhatud</th>
-                                <th>Kasutamata päevi</th>
-                                <th>Kasutamata päevi eelmisest perioodist</th>
-                              </tr>
-                            </thead>
-
-                            <tbody>
-                              <tr>
-                                <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Mihhail Boriskov</a></td>
-
-                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
-
-                                <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
-
-                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
-
-                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>8</td>
-                              </tr>
-                              <tr>
-                                <td><strong class="visible-sm visible-xs">Nimi </strong><a href=""><i class="fa fa-user"></i> Sander Marandi</a></td>
-
-                                <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
-
-                                <td><strong class="visible-sm visible-xs">Puhatud</strong>19</td>
-
-                                <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>16</td>
-
-                                <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>13</td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-                        </div>
-
                         <div class="level-2 btn btn-white block">
                           <label class="checkbox-inline">
                             <input type="checkbox" value="selected" id=""> Tervisetehnoloogiate instituut
@@ -763,10 +719,10 @@
 
         $(document).on('click', '.open-structure', function() {
           if ($(this).hasClass('collapsed')) {
-            $(this).children('i').removeClass('fa-minus-circle').addClass('fa-plus-circle');
+            $(this).children('i.fa-minus-circle').removeClass('fa-minus-circle').addClass('fa-plus-circle');
           }
           else {
-            $(this).children('i').removeClass('fa-plus-circle').addClass('fa-minus-circle');
+            $(this).children('i.fa-plus-circle').removeClass('fa-plus-circle').addClass('fa-minus-circle');
           }
         });
 

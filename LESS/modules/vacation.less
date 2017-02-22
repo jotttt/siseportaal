@@ -3,6 +3,22 @@
 
     .radio, .checkbox {
         display: inline;
+        cursor: pointer;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .open-structure {
+        cursor: pointer;
+
+        &:hover,&:focus,&:active {
+            color: @cherry;
+        }
+
     }
 
     .vacation-admin {
@@ -111,7 +127,7 @@
                 .panel-body {
 
                     .level-2.btn {
-                        width: auto;
+                        //width: auto;
                         margin-left: 18px
                     }
 
@@ -120,7 +136,7 @@
                     }
 
                     .level-3.btn {
-                        width: auto;
+                        //width: auto;
                         margin-left: 36px
                     }
 
