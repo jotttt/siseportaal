@@ -22,9 +22,42 @@ BOOTSTRAP TOOLTIPS
 /*********************************************
 noUiSlider
 **********************************************/
+// Slider handle
+.noUi-horizontal .noUi-handle {
+    left: -18px;
+}
+
+.noUi-handle {
+    border: 2px solid @cherry;
+    background: @cherry;
+    box-shadow: none;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    background: white;
+    left: 13px;
+}
+
+.noUi-handle:after {
+    left: 16px;
+}
+
+.noUi-handle.noUi-handle-lower.noUi-active {
+    border: 2px solid @darker-cherry;
+    background: @darker-cherry;
+    box-shadow: none;
+}
+
+// slider path
+.noUi-base {
+    background: white;
+}
+
+// slider value pips
 .noUi-rtl .noUi-value-horizontal {
     transform: translate3d(50%,50%,0);
     margin-top: 10px;
+    color: @text-color;
 }
 
 /*********************************************

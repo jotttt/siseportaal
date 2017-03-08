@@ -274,7 +274,8 @@ hr.bottom {
 hr.vertical {
   width: 1px;
   border-top: 20px solid #dddddd;
-  margin: 0 auto;
+  position: absolute;
+  left: 50%;
 }
 .hr-line-dashed {
   border-top: 1px dashed #dddddd;
@@ -1441,6 +1442,9 @@ a.close-canvas-menu:hover {
 .m-b-xxl {
   margin-bottom: 60px;
 }
+.m-b-xxxl {
+  margin-bottom: 80px;
+}
 .m-b-n-xxs {
   margin-bottom: -2px;
 }
@@ -1891,6 +1895,25 @@ a.close-canvas-menu:hover {
 #lblDisposalDate {
   position: relative;
 }
+.fixed-width-s {
+  width: 100px;
+  display: block;
+}
+.fixed-width-m {
+  width: 220px;
+  display: block;
+}
+.fixed-width-l {
+  width: 340px;
+  display: block;
+}
+@media screen and (max-width: 991px) {
+  .fixed-width-s,
+  .fixed-width-m,
+  .fixed-width-l {
+    width: auto;
+  }
+}
 h1,
 h2,
 h3,
@@ -2219,15 +2242,6 @@ h5 {
   border-radius: 3px;
   -webkit-transition: all .3s;
   transition: all .3s;
-}
-.btn.fixed-width-s {
-  width: 100px;
-}
-.btn.fixed-width-m {
-  width: 200px;
-}
-.btn.fixed-width-l {
-  width: 300px;
 }
 .float-e-margins .btn {
   margin-bottom: 5px;
@@ -4588,9 +4602,34 @@ BOOTSTRAP TOOLTIPS
 /*********************************************
 noUiSlider
 **********************************************/
+.noUi-horizontal .noUi-handle {
+  left: -18px;
+}
+.noUi-handle {
+  border: 2px solid #870042;
+  background: #870042;
+  box-shadow: none;
+}
+.noUi-handle:after,
+.noUi-handle:before {
+  background: white;
+  left: 13px;
+}
+.noUi-handle:after {
+  left: 16px;
+}
+.noUi-handle.noUi-handle-lower.noUi-active {
+  border: 2px solid #6d0036;
+  background: #6d0036;
+  box-shadow: none;
+}
+.noUi-base {
+  background: white;
+}
 .noUi-rtl .noUi-value-horizontal {
   transform: translate3d(50%, 50%, 0);
   margin-top: 10px;
+  color: #333333;
 }
 /*********************************************
 DROPZONE
@@ -7735,7 +7774,7 @@ WIKI EDIT TOOLS
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   position: absolute;
-  top: 80px;
+  top: 62px;
   right: -10px;
   height: 40px;
   width: 60px;
@@ -7805,9 +7844,10 @@ WIKI EDIT TOOLS
   background: white;
   color: #b0b0b0;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1400px) {
   #wikiTools {
     right: -10px;
+    top: 82px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -7818,7 +7858,7 @@ WIKI EDIT TOOLS
     border: 1px solid #e5e6e7;
     border-right: 0px solid transparent;
     right: 0px;
-    top: 100px;
+    top: 120px;
   }
   #wikiTools .wiki-edit-btn {
     padding: 1px 5px;
@@ -8185,6 +8225,19 @@ BIRTHDAYS FULLVIEW
   -webkit-transition: height .01s ease;
   transition: height .01s ease;
 }
+#budgetPanel_ hr.vertical {
+  border-top: solid 200px #dddddd;
+}
+@media screen and (max-width: 1200px) {
+  #budgetPanel_ hr.vertical {
+    border-top: solid 300px #dddddd;
+  }
+}
+@media screen and (max-width: 991px) {
+  #budgetPanel_ hr.vertical {
+    border-top: solid 0px #dddddd;
+  }
+}
 #budgetPanel_ .diagramm {
   margin: 10px;
 }
@@ -8284,12 +8337,34 @@ BIRTHDAYS FULLVIEW
 #budgetPanel_ form {
   margin-top: 10px;
 }
+#budgetPanel_ .fixed-width-m,
 #budgetPanel_ .fixed-width-l {
-  padding: 6px 12px;
+  text-align: left;
+  padding: 3px 6px 5px 6px;
   cursor: default;
+  margin: 0 auto;
 }
+#budgetPanel_ .fixed-width-m .open-structure,
+#budgetPanel_ .fixed-width-l .open-structure {
+  margin-top: 1px;
+}
+#budgetPanel_ .fixed-width-m .checkbox-inline,
 #budgetPanel_ .fixed-width-l .checkbox-inline {
   padding-top: 0;
+  margin-left: 5px;
+  font-weight: 600;
+}
+#budgetPanel_ .fixed-width-m .checkbox-inline input,
+#budgetPanel_ .fixed-width-l .checkbox-inline input {
+  margin: -1px -18px;
+}
+#budgetPanel_ .fixed-width-m.label-white,
+#budgetPanel_ .fixed-width-l.label-white {
+  width: 328px;
+}
+#budgetPanel_ .fixed-width-m.label-white .checkbox-inline,
+#budgetPanel_ .fixed-width-l.label-white .checkbox-inline {
+  margin-left: 0px;
 }
 #budgetPanel_ .panel {
   margin-bottom: 0;
@@ -8309,8 +8384,7 @@ BIRTHDAYS FULLVIEW
   padding-top: 0;
 }
 #budgetPanel_ .panel-collapse {
-  width: 400px;
-  margin: 0 auto;
+  margin: 0 0 2px 12px;
 }
 #budgetPanel_ .panel-collapse .panel-body {
   padding: 0;
@@ -8433,7 +8507,8 @@ BIRTHDAYS FULLVIEW
   #budgetPanel_ .panel-collapse .panel-body .btn {
     margin-bottom: 1px;
   }
-  #budgetPanel_ .fixed-width-l {
+  #budgetPanel_ .fixed-width-l,
+  #budgetPanel_ .fixed-width-m {
     margin-bottom: 1px;
   }
 }

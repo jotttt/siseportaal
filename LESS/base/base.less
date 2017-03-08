@@ -255,7 +255,8 @@ hr {
     &.vertical {
         width: 1px;
         border-top: 20px solid @border-color;
-        margin: 0 auto;
+        position: absolute;
+        left: 50%;
     }
 }
 
@@ -1661,6 +1662,10 @@ a.close-canvas-menu:hover {
     margin-bottom: 60px;
 }
 
+.m-b-xxxl {
+    margin-bottom: 80px;
+}
+
 .m-b-n-xxs {
     margin-bottom: -2px;
 }
@@ -2110,4 +2115,25 @@ body.modal-open {
 
 .script-error {
     //position
+}
+
+.fixed-width-s {
+    width: 100px;
+    display: block;
+}
+
+.fixed-width-m {
+    width: 220px;
+    display: block;
+}
+
+.fixed-width-l {
+    width: 340px;
+    display: block;
+}
+
+@media screen and (max-width: @mobile-width){
+    .fixed-width-s, .fixed-width-m, .fixed-width-l {
+        width: auto;
+    }
 }
