@@ -220,7 +220,7 @@
 
               <ul class="nav nav-tabs" id="mainTab">
                 <li class="active">
-                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Töötaja puhkused</a>
+                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Minu puhkused</a>
                 </li>
               </ul>
 
@@ -229,45 +229,11 @@
                 <div class="tab-pane fade in active" id="tab_admin">
                   <div class="vacation-employee">
 
-                    <div class="panel">
-                      <div class="panel-body grey">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="employee-table-stats">
-                              <table id="" class="table table-bordered ">
-                                <thead>
-                                  <tr>
-                          <th>Puhkusepäevi kokku</th>
-                          <th>Puhatud</th>
-                          <th>Kasutamata päevi</th>
-                          <th>Kasutamata päevi eelmisest perioodist</th>
-                        </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
 
-                                    <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
-
-                                    <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
-
-                                    <td><strong class="visible-sm visible-xs">Kasutamata päevi eelmisest perioodist </strong>13</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <button class="btn btn-primary btn-outline btn-block"><i class="fa fa-file-o"></i> Lisa ajakavasse uus puhkus</button>
-                          </div>
-                          <div class="col-md-6"><button class="btn btn-primary btn-outline btn-block" disabled><i class="fa fa-file-o"></i> Loo uus puhkuse ajakava</button></div>
-                        </div>
-                      </div>
-                    </div>
-                    <h2>Puhkuste ajakava</h2>
-                    <div class="employee-table-details">
+                    <!--<h2>Minu puhkused</h2>-->
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="employee-table-details">
                       <table id="vacationsTable" class="table table-bordered table-hover table-condensed">
                         <thead>
                           <tr>
@@ -299,6 +265,45 @@
                         </tbody>
                       </table>
                     </div>
+                      </div>
+                      <div class="col-md-4">
+                      <div class="panel">
+                      <div class="panel-body grey">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="employee-table-stats">
+                              <table id="" class="table table-bordered ">
+                                <thead>
+                                  <tr>
+                                    <th>Puhkuse norm aastas</th>
+                                    <th>Puhatud käesoleval aastal</th>
+                                    <th>Kasutamata päevi käesoleval aastal</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><strong class="visible-sm visible-xs">Puhkusepäevi kokku</strong>35</td>
+
+                                    <td><strong class="visible-sm visible-xs">Puhatud</strong>14</td>
+
+                                    <td><strong class="visible-sm visible-xs">Kasutamata päevi</strong>21</td>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <button class="btn btn-primary btn-outline btn-block"><i class="fa fa-file-o"></i> Lisa uus puhkus</button>
+                          </div>
+                          <div class="col-md-6"><button class="btn btn-primary btn-outline btn-block" disabled><i class="fa fa-file-o"></i> Loo uus puhkuse ajakava</button></div>
+                        </div>
+                      </div>
+                    </div></div>
+                    </div>
+
 
 
 
