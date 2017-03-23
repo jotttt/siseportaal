@@ -277,6 +277,9 @@ hr.vertical {
   position: absolute;
   left: 50%;
 }
+hr.vertical.xs {
+  border-top: 10px solid #dddddd;
+}
 .hr-line-dashed {
   border-top: 1px dashed #dddddd;
   color: #ffffff;
@@ -2143,7 +2146,7 @@ h5 {
 .label-primary-o,
 .badge-primary-o {
   background-color: transparent;
-  color: #333333;
+  color: #870042;
   border: 1px solid #870042;
 }
 .label-primary-o2,
@@ -3500,7 +3503,7 @@ input {
 .single-line {
   background-color: #FFFFFF;
   background-image: none;
-  border: 1px solid #e5e6e7;
+  border: 2px solid #e5e6e7;
   border-radius: 1px;
   color: inherit;
   display: block;
@@ -8228,6 +8231,9 @@ BIRTHDAYS FULLVIEW
 #budgetPanel_ hr.vertical {
   border-top: solid 200px #dddddd;
 }
+#budgetPanel_ hr.vertical.xs {
+  border-top: solid 30px #dddddd;
+}
 @media screen and (max-width: 1200px) {
   #budgetPanel_ hr.vertical {
     border-top: solid 300px #dddddd;
@@ -8235,6 +8241,9 @@ BIRTHDAYS FULLVIEW
 }
 @media screen and (max-width: 991px) {
   #budgetPanel_ hr.vertical {
+    border-top: solid 0px #dddddd;
+  }
+  #budgetPanel_ hr.vertical.xs {
     border-top: solid 0px #dddddd;
   }
 }
