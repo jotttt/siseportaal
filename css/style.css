@@ -8178,6 +8178,11 @@ BIRTHDAYS FULLVIEW
   background: #870042;
   color: white;
 }
+@media screen and (max-width: 991px) {
+  .wrapper-mission .ptable .nav_btm {
+    height: 29px;
+  }
+}
 .csv-save-btn {
   right: 62px;
   top: 125px;
@@ -9152,6 +9157,18 @@ HELP MODAL
   text-align: left;
   margin: 0 0 3px 72px;
 }
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3 .checkbox-inline {
+  display: inline;
+  margin-left: 10px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-4 {
+  text-align: left;
+  margin: 0 0 3px 108px;
+}
+.wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-4 .checkbox-inline {
+  display: inline;
+  margin-left: 10px;
+}
 .wrapper-vacation .vacation-admin .panel-collapse .employee-table {
   margin-left: 72px;
 }
@@ -9174,21 +9191,30 @@ HELP MODAL
 .wrapper-vacation .employee-table-details .btn-block {
   padding: 0;
 }
+.wrapper-vacation .plus-row td {
+  border: 1px solid transparent;
+}
 @media screen and (max-width: 768px) {
   .wrapper-vacation .vacation-admin .panel-collapse .employee-table {
     margin-left: 36px;
   }
-  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn {
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2 {
     margin-left: 18px;
   }
-  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2.btn + .level-2.btn {
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-2 + .level-2 {
     margin-left: 18px !important;
   }
-  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn {
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3 {
     margin-left: 36px;
   }
-  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3.btn + .level-3.btn {
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-3 + .level-3 {
     margin-left: 36px !important;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-4 {
+    margin-left: 54px;
+  }
+  .wrapper-vacation .vacation-admin .panel-collapse .panel-body .level-4 + .level-4 {
+    margin-left: 54px !important;
   }
 }
 /***********************************************************
