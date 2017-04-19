@@ -3513,8 +3513,11 @@ input {
   font-size: 1em;
 }
 .form-control[disabled],
-fieldset[disabled] .form-control {
+fieldset[disabled] .form-control,
+.form-control.disabled {
   cursor: inherit;
+  line-height: 20px;
+  background: #eeeeee;
 }
 .has-success.form-control {
   border-color: #870042;
@@ -6208,7 +6211,7 @@ ul.nav.nav-tabs li a i {
   }
   .nav.nav-tabs li {
     border-bottom: 1px solid transparent;
-    display: block !important;
+    display: block;
     width: 100%;
     margin: 0px;
   }
@@ -8179,8 +8182,18 @@ BIRTHDAYS FULLVIEW
   color: white;
 }
 @media screen and (max-width: 991px) {
+  .wrapper-mission .ptable .header_right {
+    margin-bottom: 10px;
+  }
   .wrapper-mission .ptable .nav_btm {
     height: 29px;
+    padding: 0px 5px;
+  }
+  .wrapper-mission .ptable .nav_btm .records_found {
+    padding: 0;
+  }
+  .wrapper-mission .ptable .nav_btm .navigation {
+    margin: 17px -10px 0 0;
   }
 }
 .csv-save-btn {
@@ -9242,7 +9255,7 @@ ARTICLE STYLES
   text-decoration: none;
 }
 #innerWikiDiv a.wikilink2 {
-  color: #BCBCBC;
+  color: #870042;
 }
 #innerWikiDiv p {
   margin: 8px 0px 14px 0px;
@@ -9439,7 +9452,7 @@ ARTICLE STYLES
   text-decoration: underline;
 }
 #innerWikiDiv .wiki-doc a.wikilink2 {
-  color: #BCBCBC;
+  color: #870042;
 }
 #innerWikiDiv .wiki-doc .urlextern {
   color: #2B69C6;

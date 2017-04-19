@@ -101,8 +101,10 @@ input:focus {
     font-size: 1em;
 }
 
-.form-control[disabled], fieldset[disabled] .form-control {
+.form-control[disabled], fieldset[disabled] .form-control, .form-control.disabled {
     cursor: inherit;
+    line-height: 20px;
+    background: @disabled-bg;
 }
 
 .has-success.form-control {
