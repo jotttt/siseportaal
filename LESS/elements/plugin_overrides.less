@@ -1,15 +1,44 @@
 // main: ../style.less
 
-/*********************************************
-BOOTSTRAP TOOLTIPS
+/**********************************************
+TOOLTIP
 **********************************************/
-.tooltip-inner {
-    background: @lightest-grey;
-    color: @text-color;
-}
+.tooltip {
+  &.top, &.right, &.bottom, &.left {
+    opacity: 1;
 
-.tooltip.left .tooltip-arrow {
-    border-left-color: @lightest-grey;
+    .tooltip-inner {
+      color: @text-color;
+    background: @lightest-grey;
+      opacity: 1;
+    border: 1px solid @grey;
+    }
+  }
+
+  &.top {
+    .tooltip-arrow {
+    border-top-color: @grey;
+    }
+  }
+
+  &.right {
+    .tooltip-arrow {
+    border-right-color: @grey;
+    }
+  }
+
+  &.bottom {
+    .tooltip-arrow {
+    border-bottom-color: @grey;
+    }
+  }
+
+  &.left {
+    .tooltip-arrow {
+    border-left-color: @grey;
+    }
+  }
+
 }
 
 @media screen and (max-width: @mobile-width){
@@ -108,25 +137,34 @@ SELECT2
 
 .select2-container--default .select2-selection--multiple {
     border-radius: 1px;
-    border: @border;
+    border: 2px solid @lightest-grey;
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border-color: #4D90FE;
+    border: 2px solid #66afe9;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0;
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
     min-width: 200px !important;
+    height: 24px;
+    padding: 4px 12px 0px;
+    margin-top: 1px;
 }
 
 .select2-container--open .select2-dropdown--below {
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    border: 1px solid @lightest-grey;
+    border: 2px solid @lightest-grey;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background: @cherry;
 }
+
+select2-search__field
 //end select2--------------------------------
 
 /*******************************************

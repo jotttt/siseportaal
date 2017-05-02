@@ -24,12 +24,10 @@
     <div id="wrapper" class="gray-bg">
 
       <!-- TOP NAVBAR ------------------------------------->
-      <nav class="navbar-top" role="navigation">
-
-        <background class="cherry-mod-bg"></background>
+      <nav class="navbar-top" role="navigation">  <background class="cherry-mod-bg"></background>
 
         <!--mobile-->
-        <a href="/start" class="logo-minimal-yellow"></a>
+        <a href="/start" class="mobile-logo-minimal-w"></a>
 
         <btn id="open-mobile-menu" class="">
           <i class="fa fa-bars fa-2x"></i>
@@ -48,7 +46,7 @@
 
                 <li class="nav-header">
                   <span>
-                    <a href="/start" class="ajax-load"><div id="logo-minimal-yellow"></div></a>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
                   </span>
                 </li>
 
@@ -135,20 +133,17 @@
             <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
           </form>
         </div>
-        <!--end---------------------------------------------------------->
-
-      </nav>
+        <!--end----------------------------------------------------------></nav>
       <!-- end top navbar --------------------------------->
 
       <!-- LEFT SIDEBAR ------------------------------------>
-      <nav id="m-menu" class="min">
-        <div>
+      <nav id="m-menu" class="min">   <div>
+
           <ul>
             <li><span><i class="fa fa-desktop"></i>Coverpage</span>
               <ul>
-                <li><a href="index.html"><i class="fa fa-desktop"></i>Default</a></li>
-                <li><a href="index_edit.html"><i class="fa fa-desktop"></i>Edit</a></li>
-                <li><a href="index_test.html"><i class="fa fa-desktop"></i>Test</a></li>
+                <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
+                <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
               </ul>
             </li>
             <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
@@ -161,14 +156,20 @@
               </ul>
             </li>
             <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
-            <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+            <li><span><i class="fa fa-newspaper-o"></i>Uudised</span>
+              <ul>
+                <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+                <li><a href="uudised_1.1.html"><i class="fa fa-newspaper-o"></i>Uudised 1.1</a></li>
+              </ul>
+            </li>
             <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
             <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
             <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
             <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
               <ul>
-                <li><a href="kalender.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+                <li><a href="puhkused2-4.html"><i class="fa fa-calendar"></i>Kalender</a></li>
                 <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+                <li><a href="../puhkused_dev"><i class="fa fa-calendar"></i>Uus kalender</a></li>
               </ul>
             </li>
             <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
@@ -178,13 +179,75 @@
               </ul>
             </li>
             <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+            <li><a href="seotud_isikud2.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
+            <li><span><i class="fa fa-money"></i>Sisearved</span>
+              <ul>
+                <li><a href="sisearved.html"><i class="fa fa-money"></i>Esita arve</a></li>
+                <li><a href="sisearved_esitatud.html"><i class="fa fa-money"></i>Esitatud arve</a></li>
+                <li><a href="sisearved_esitatud_konteerimine.html"><i class="fa fa-money"></i>Arve konteerimine</a></li>
+                <li><a href="sisearved_list.html"><i class="fa fa-money"></i>Arvete koondvaade</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-edit"></i>Sisulehtede mallid</span>
+              <ul>
+                <li><a href="mall_1.html"><i class="fa fa-edit"></i>Baasmall 1</a></li>
+                <li><a href="mall_2.html"><i class="fa fa-edit"></i>Baasmall 2</a></li>
+                <li><a href="mall_3.html"><i class="fa fa-edit"></i>Baasmall 3</a></li>
+                <li><a href="mall_4.html"><i class="fa fa-edit"></i>Baasmall 4</a></li>
+              </ul>
+            </li>
+            <li><a href="seadistused.html"><i class="fa fa-wrench"></i>Seadistused</a></li>
+            <li><span><i class="fa fa-ban"></i>Veateated</span>
+              <ul>
+                <li><a href="404.html"><i class="fa fa-ban"></i>404 viga</a></li>
+                <li><a href="503.html"><i class="fa fa-ban"></i>503 viga</a></li>
+                <li><a href="error_request_et.html"><i class="fa fa-ban"></i>päringu viga EST</a></li>
+                <li><a href="error_request_en.html"><i class="fa fa-ban"></i>päringu viga ENG</a></li>
+                <li><a href="error_session.html"><i class="fa fa-ban"></i>Sessioon aegunud</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-comments-o"></i>Arenguvestlused</span>
+              <ul>
+                <li><a href="arenguvestlus_tootaja.html"><i class="fa fa-comments-o"></i>Töötaja vaade</a></li>
+                <li><a href="arenguvestlus_juht.html"><i class="fa fa-comments-o"></i>Juhi vaade</a></li>
+                <li><a href="arenguvestlus_koordinaator.html"><i class="fa fa-comments-o"></i>Koordinaatori vaade</a></li>
+              </ul>
+            </li>
+            <li><span><i class="fa fa-sun-o"></i>Puhkused</span>
+              <ul>
+                <li><a href="puhkus_admin.html"><i class="fa fa fa-sun-o"></i>Koordinaatori vaade</a></li>
+                <li><a href="puhkus_juht.html"><i class="fa fa fa-sun-o"></i>Juhivaade</a></li>
+                <li><a href="puhkus_osakond.html"><i class="fa fa fa-sun-o"></i>Osakonna vaade</a></li>
+                <li><a href="puhkus_tootaja.html"><i class="fa fa fa-sun-o"></i>Töötaja vaade</a></li>
+              </ul>
+            </li>
+
             <div class="m-l m-r-sm m-t">
               <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
             </div>
           </ul>
 
-        </div>
-      </nav>
+          <!-- BOTTOM ICONS
+---------------------------------------------------------------->
+          <div class="bottom-icons">
+            <div class="row">
+              <div class="col-xs-3 text-center">
+                <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
+              </div>
+              <div class="col-xs-3 text-center">
+                <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+              </div>
+              <div class="col-xs-3 text-center">
+                <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
+              </div>
+              <div class="col-xs-3 text-center">
+                <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- end bottom icons ------------------------------->
+
+        </div></nav>
       <!-- end left sidebar ------------------------------->
 
       <!-- CONTENT ------------------------------------------>
@@ -260,8 +323,7 @@
 
     <!-- SCRIPTS ------------------------------------>
     <!-- Base scripts -->
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
     <!-- Plugin scripts -->
     <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/plugins/spin.js/spin.min.js"></script>
@@ -269,9 +331,10 @@
     <script src="js/plugins/pace/pace.min.js"></script>
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+    <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
-    <script src="js/main_ui.js"></script>
-    <script src="js/widget_ui.js"></script>
+    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
 
   </body>
 
