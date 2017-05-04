@@ -286,10 +286,10 @@
 
           <!-- TAB NAVIGATION -->
           <ul class="nav nav-tabs" id="mainTab">
-            <li class="active">
+            <li>
               <a href="#budget" id="budget_tab" data-toggle="tab" aria-expanded="false">Ülikooli eelarve</a>
             </li>
-            <li>
+            <li class="active">
               <a href="#budget_fill_report" id="budget_fill_report_tab" data-toggle="tab" >Eelarve täitmise aruanne</a>
             </li>
             <li>
@@ -304,7 +304,7 @@
           <div class="tab-content">
 
             <!-- BUDGET -->
-            <div class="tab-pane fade in active" id="budget">
+            <div class="tab-pane fade in " id="budget">
               <form class="form-horizontal" id="budgetForm" data-div="results">
 
                 <div class="row m-b-md">
@@ -361,7 +361,7 @@
             </div>
 
             <!-- BUDGET FILL REPORT -->
-            <div class="tab-pane fade in" id="budget_fill_report">
+            <div class="tab-pane fade in active" id="budget_fill_report">
               <form class="form-horizontal" id="budgetForm" data-div="results">
 
                 <div class="row m-b-md">
@@ -658,7 +658,7 @@
                                   <label class="col-lg-4 control-label" for="budget">Eelarve nimetus</label>
                                   <div class="col-lg-8">
                                     <select id="budget" name="budget" class="form-control">
-                                      <option value="TTÜ 2017" selected="" data-year="2017">TTÜ 2017 eelarve</option>
+                                      <option value="TTÜ 2017" selected="" data-year="2017">TTÜ 2016 eelarve</option>
                                     </select>
                                   </div>
                                 </div>
@@ -668,9 +668,9 @@
                                   <div class="col-lg-8">
                                     <select id="oucode" class="select2-select"  data-placeholder="otsi..."  multiple="multiple">
 
-                                      <option selected value="info">1012 Arvutisüsteemide instituut</option>
-                                      <option selected value="info">1013 Tarkvarateaduse instituut</option>
-                                      <option selected value="info">1014 Tervisetehnoloogiate instituut</option>
+                                      <option value="info">1012 Arvutisüsteemide instituut</option>
+                                      <option value="info">1013 Tarkvarateaduse instituut</option>
+                                      <option value="info">1014 Tervisetehnoloogiate instituut</option>
 
                                     </select>
                                   </div>
@@ -688,9 +688,9 @@
                                   <label class="col-lg-4 control-label">Ajavahemik</label>
                                   <div class="col-lg-8">
                                     <div class="input-group" id="datepicker">
-                                      <input id="start" name="start" value="01.01.2017" type="text" class="datepicker form-control">
+                                      <input id="start" name="start" value="01.01.2016" type="text" class="datepicker form-control">
                                       <span class="input-group-addon">kuni</span>
-                                      <input id="end" name="end" value="31.12.2017" type="text"  class="datepicker form-control">
+                                      <input id="end" name="end" value="31.12.2016" type="text"  class="datepicker form-control">
                                     </div>
                                   </div>
                                 </div>
@@ -724,7 +724,7 @@
                           <tbody>
                             <tr>
                               <td>TTÜ 2017 eelarve</td>
-                              <td>01.01.2017 - 31.12.2017</td>
+                              <td>01.01.2016 - 31.12.2016</td>
                               <td>Kõik</td>
                               <td>Kõik</td>
                             </tr>
@@ -1201,7 +1201,7 @@
         };
         noUiSlider.create(slider2, {
           range: range_all_sliders,
-          start: 2017,
+          start: 2016,
           direction: 'rtl',
           snap: true,
           pips: {
@@ -1214,6 +1214,8 @@
         $(".select2-select").select2();
 
       });
+
+      $('.vertical, .tree-view').hide();
 
     </script>
 
