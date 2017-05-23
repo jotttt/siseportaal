@@ -31,6 +31,31 @@
                 margin-left: 3px;
             }
         }
+
+        #wikiTools {
+            right: -35px;
+            top: -20px;
+            ul {
+                li {
+                    background: transparent;
+                }
+            }
+        }
+
+        @media screen and (max-width:1400px) {
+            #wikiTools {
+                right: -35px;
+                top: -20px;
+            }
+        }
+
+        @media screen and (max-width: @mobile-width) {
+            #wikiTools {
+                right: 0px;
+                top: 64px;
+            }
+        }
+
     }
     textarea {
         width: 100%;
@@ -54,3 +79,5 @@
     border: 2px solid white;
     border-radius: 5px;
 }
+
+
