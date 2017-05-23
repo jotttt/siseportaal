@@ -7772,6 +7772,25 @@ RIGHT SIDEBAR SETTINGS MENU
   padding-left: 14px;
   margin-left: 3px;
 }
+.wrapper-appraisal .pos-guide #wikiTools {
+  right: -35px;
+  top: -20px;
+}
+.wrapper-appraisal .pos-guide #wikiTools ul li {
+  background: transparent;
+}
+@media screen and (max-width: 1400px) {
+  .wrapper-appraisal .pos-guide #wikiTools {
+    right: -35px;
+    top: -20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .wrapper-appraisal .pos-guide #wikiTools {
+    right: 0px;
+    top: 64px;
+  }
+}
 .wrapper-appraisal textarea {
   width: 100%;
 }
@@ -7834,8 +7853,8 @@ WIKI EDIT TOOLS
   margin-right: -15px;
 }
 #wikiTools .dropdown-menu {
-  right: 40px;
-  top: 35px;
+  right: 75px;
+  top: 40px;
 }
 #wikiTools .dropdown-menu:after,
 #wikiTools .dropdown-menu:before {
@@ -7880,8 +7899,8 @@ WIKI EDIT TOOLS
   background: #fff;
   border: 1px solid #e5e6e7;
   border-radius: 20px;
-  padding: 1px 5px;
-  margin: 7px 42px 0 0;
+  padding: 2px 6px;
+  margin: 29px 76px 0 0;
   position: static;
 }
 #wikiTools .dropdown.open {
@@ -7895,8 +7914,8 @@ WIKI EDIT TOOLS
 }
 @media screen and (max-width: 1400px) {
   #wikiTools {
-    right: -10px;
-    top: 82px;
+    right: -40px;
+    top: 42px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -7917,7 +7936,7 @@ WIKI EDIT TOOLS
   }
   #wikiTools .dropdown-menu {
     right: 70px;
-    top: -50px;
+    top: -25px;
     width: 250px;
   }
   #wikiTools .dropdown-menu:after,
