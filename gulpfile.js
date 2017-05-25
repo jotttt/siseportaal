@@ -26,3 +26,17 @@ gulp.task('css', function () {
         .pipe(concat('app.css'))
         .pipe(gulp.dest('build'));
 });
+
+gulp.task('copy', function () {
+    //CSS
+    gulp.src([
+        'css/style.css',
+        'css/style.css.map'
+    ])
+        .pipe(gulp.dest('../htdocs/portal/1.0/css'));
+    // LESS
+    gulp.src([
+        'less/**/*.less'
+    ])
+        .pipe(gulp.dest('../htdocs/portal/1.0/less'));
+});
