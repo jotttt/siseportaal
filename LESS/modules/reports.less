@@ -1,8 +1,8 @@
 // main: ../style.less
 
 .csv-save-btn {
-    right: 62px;
-    top: 125px;
+    right: 56px;
+    top: 147px;
 }
 
 #budgetPanel_ {
@@ -300,6 +300,307 @@
         }
     }
 
+    // EXCEL STYLES -------------------------------------------
+    /*VERTICAL TEXTFIELDS*/
+    #excel_table {
+        td {
+            padding: 2px;
+            border-collapse: collapse;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        td[rowspan="2"], tr[height="154"] td {
+            color: white;
+            white-space: normal;
+            background: transparent;
+            vertical-align:middle;
+            text-align:left;
+            -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+            -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+            -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+        }
+
+        td[rowspan="2"] {
+            position: relative;
+            top: 50px;
+        }
+
+        td[rowspan="2"] .font522173 {
+            color: white;
+        }
+
+        td[rowspan="2"]:first-child {
+            color: white;
+            top: 0px;
+            white-space: normal;
+            background: transparent;
+            vertical-align:middle;
+            text-align:center;
+            -moz-transform: rotate(0.0deg);  /* FF3.5+ */
+            -o-transform: rotate(0.0deg);  /* Opera 10.5 */
+            -webkit-transform: rotate(0.0deg);  /* Saf3.1+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0);  /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)"; /* IE8 */
+        }
+
+        tr[height="154"] td {
+            color: white;
+            position: relative;
+            top: 30px;
+        }
+
+        /*CHERRY ROWS*/
+        tr[height="33"] {
+            background: #870042;
+            color: white;
+        }
+
+        tr[height="154"] {
+            background: #870042;
+        }
+
+        td[colspan="5"] {
+            background: #870042;
+            color: white;
+        }
+
+        td[colspan="2"] {
+            background: #870042;
+            color: white;
+        }
+
+        .xl17722173 {
+            background: #870042;
+            color: white;
+        }
+
+        .xl17822173 {
+            background: #870042;
+            color: white;
+        }
+
+        .xl19722173 {
+            background: #870042;
+            color: white;
+        }
+
+        .xl19122173 {
+            background: #870042;
+            color: white;
+        }
+
+        .xl19022173 {
+            background: #870042;
+            color: white;
+        }
+
+        .xl17122173 {
+            background: #870042;
+            color: white;
+        }
+
+        /*GREY ROWS*/
+        .xl17922173 {
+            background: #c9c9c9;
+        }
+
+        .xl18022173 {
+            background: #c9c9c9;
+        }
+
+        .xl17322173 {
+            background: #c9c9c9;
+        }
+
+        .xl18522173 {
+            background: #c9c9c9;
+        }
+        // INFOTEHNOLOOGIA TEADUSKOND
+        // cherry styles
+        .xl17119474, .xl17119474 a, .xl26119474, .xl20319474, .xl26619474, .xl22519474, .xl19419474, .xl21519474, .xl22619474, .xl26719474, .xl26819474, .xl22819474, .xl22719474, .xl26019474, .xl18519474, .xl18519474, .xl17619474, .xl21919474, .xl17919474, .xl19919474, .xl22219474, .xl25419474, .xl18019474, .xl18219474, .xl18419474, .xl18819474, .xl18119474, .xl22019474, .xl17519474, .xl25319474 {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl20619474, .xl20919474, .xl21219474, .xl21419474, .xl21719474, .xl19519474, .xl20019474, .xl21819474, .xl24719474, .xl24419474, .xl24819474, .xl22319474, .xl20119474, .xl25219474, .xl20219474, .xl22419474 {
+            background: @lighter-grey;
+        }
+        // lightest grey styles
+        .xl20719474, .xl19619474, .xl17819474, .xl20519474, .xl20819474, .xl19719474, .xl20419474, .xl19819474, .xl21019474, .xl24519474, .xl22119474, .xl24919474, .xl21119474, .xl26219474, .xl21319474, .xl21619474 {
+            background: @lightest-grey;
+        }
+
+        // INSENERITEADUSKOND --------
+        // cherry styles
+        .xl17131481, .xl17131481 a, .xl26731481, .xl18431481, .xl18031481, .xl17331481, .xl20931481, .xl20931481, .xl29231481, .xl23131481, .xl17931481, .xl30231481, .xl28331481, .xl17531481, .xl28831481, .xl27131481, .xl28431481, .xl30331481, .xl17431481, .xl30431481, .xl27231481, .xl18131481, .xl27331481, .xl30731481, .xl18231481, .xl30531481, .xl23231481, .xl30831481, .xl26531481, .xl28531481, .xl30931481, .xl18331481, .xl21631481, .xl30631481, .xl21531481, .xl22031481, .xl23531481, .xl21831481, .xl29631481, .xl22431481, .xl29731481, .xl22831481 {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl24731481, .xl18531481, .xl26931481, .xl21031481, .xl25131481, .xl19231481, .xl25731481, .xl17631481, .xl17631481, .xl24231481, .xl26031481, .xl21331481, .xl21431481, .xl27931481, .xl27631481, .xl26431481, .xl27031481, .xl21131481, .xl28031481, .xl17831481 {
+            background: @lighter-grey;
+
+        }
+        // lightest grey styles
+        .xl24831481, .xl18631481, .xl18731481, .xl24931481, .xl23931481, .xl18831481, .xl25331481, .xl25831481, .xl20231481, .xl17731481, .xl25831481, .xl20231481, .xl17731481, .xl24031481, .xl20331481, .xl26131481, .xl20331481, .xl24031481, .xl24631481, .xl27831481, .xl27431481 {
+            background: @lightest-grey;
+        }
+        // LOODUSTEADUSKOND ----------
+        .xl2411107, .xl2401107, .xl3001107 {
+            font-size: 10pt;
+        }
+        // cherry styles
+        .xl1711107, .xl1711107 a, .xl2411107, .xl1761107, .xl2401107, .xl3021107, .xl2731107, .xl2971107, .xl3031107, .xl2981107, .xl3001107, .xl2461107, .xl3041107, .xl2991107, .xl1821107, .xl1831107, .xl2081107, .xl1841107, .xl1851107, .xl2421107, .xl2831107, .xl2741107, .xl1871107, .xl2331107, .xl2261107, .xl2841107, .xl2511107, .xl2291107, .xl2371107, .xl3011107, .xl2471107, .xl2501107, .xl3101107, .xl2951107, .xl2481107, .xl2491107, .xl3061107, .xl2961107, .xl2451107, .xl3051107, .xl3071107, .xl1861107, .xl2251107 {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl2571107, .xl1881107, .xl2611107, .xl2091107, .xl1951107, .xl2681107, .xl1731107, .xl2941107, .xl1771107, .xl2711107, .xl2761107, .xl2881107, .xl1741107, .xl2231107, .xl2881107, .xl1741107, .xl2121107, .xl2561107, .xl1801107, .xl1811107, .xl2791107, .xl2241107, .xl2771107, .xl1791107, .xl2631107 {
+            background: @lighter-grey;
+        }
+        // lightest grey styles
+        .xl2581107, .xl1891107, .xl2851107, .xl1901107, .xl2591107, .xl1911107, .xl1791107, .xl2631107, .xl2861107, .xl2651107, .xl2051107, .xl1781107, .xl2691107, .xl2931107, .xl2131107, .xl2801107, .xl2151107, .xl214110, .xl2811107, .xl2141107, .xl2161107, .xl2041107 {
+            background: @lightest-grey;
+        }
+
+        // MAJANDUSTEADUSKOND --------
+        .xl22126691, .xl22326691 {
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+        // cherry styles
+        .xl17126691, .xl17126691 a, .xl22126691, .xl29826691, .xl27126691, .xl28126691, .xl19126691, .xl27226691, .xl29926691, .xl27326691, .xl30026691, .xl27426691, .xl18126691, .xl27526691, .xl30126691, .xl28826691, .xl28926691, .xl29126691, .xl30226691, .xl28026691, .xl18726691, .xl29026691, .xl22826691, .xl22326691, .xl18226691, .xl29226691, .xl23826691, .xl24126691, .xl23526691, .xl28326691 , .xl28726691, .xl24226691, .xl29326691, .xl29626691, .xl18826691, .xl18926691, .xl19026691, .xl22726691, .xl29426691, .xl25126691, .xl25326691, .xl24026691, .xl24026691, .xl29526691, .xl24026691, .xl22426691, .xl21526691, .xl25226691, .xl25526691, .xl22226691, .xl21926691, .xl25026691, .xl29726691, .xl22526691, .xl25026691, .xl25426691, .xl28426691, .xl25626691  {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl17326691, .xl19226691, .xl17626691, .xl20826691, .xl17926691, .xl30926691, .xl28226691, .xl20026691, .xl18626691, .xl18326691, .xl26526691, .xl26926691, .xl27926691, .xl23626691, .xl24326691, .xl24926691, .xl24526691, .xl24926691, .xl31226691 {
+            background: @lighter-grey;
+        }
+        // lightest grey styles
+        .xl17426691, .xl19326691, .xl27626691, .xl19426691, .xl17526691, .xl19526691, .xl18526691, .xl27726691, .xl26326691, .xl23126691, .xl30626691, .xl17726691, .xl17826691, .xl18026691, .xl31026691, .xl23726691, .xl31126691, .xl18426691, .xl24626691, .xl24726691 {
+            background: @lightest-grey;
+        }
+
+        // MEREAKADEEMIA --------
+        // cherry styles
+        .xl6814490, .xl6814490 a, .xl6914490, .xl10814490, .xl10914490, .xl11014490, .xl11214490, .xl11114490, .xl11314490, .xl11414490, .xl9014490, .xl11514490, .xl11614490, .xl11814490, .xl11914490, .xl11714490, .xl9714490, .xl9814490, .xl12014490, .xl9914490, .xl12114490, .xl12214490, .xl10114490, .xl12314490, .xl10214490, .xl10414490, .xl10714490 {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl7114490, .xl7614490, .xl8314490, .xl8614490, .xl7114490, .xl9614490 {
+            background: @lighter-grey;
+        }
+
+        // lightest grey styles
+        .xl7214490, .xl7314490, .xl7814490, .xl8014490, .xl8414490, .xl9114490 {
+            background: @lightest-grey;
+
+        }
+
+        // HTS -----------------------
+        #budgetPanel_ td {
+            padding: 4px;
+            border-collapse: collapse;
+            line-height: normal;
+        }
+
+        tr[height="138"], tr[height="137"] {
+            background: @cherry;
+        }
+
+        tr[height="138"] td, tr[height="137"] td {
+            padding: 0px;
+            white-space: normal;
+            background: transparent;
+            vertical-align:middle;
+            text-align:left;
+            -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+            -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+            -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+            -ms-transform: rotate(-90.0deg);  /* IE 9+ */
+            filter:   progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+        }
+
+        /*FIRST VERTICAL ROW*/
+        tr[height="138"] td {
+            position: relative;
+            top: 35px;
+            line-height: 1;
+        }
+
+        tr[height="138"] td[width="76"] {
+            top: 25px;
+        }
+
+        tr[height="138"] td[width="47"] {
+            top: 40px;
+        }
+
+        tr[height="138"] td[width="66"] {
+            top: 30px;
+        }
+
+        /*SECOND VERTICAL ROW*/
+        tr[height="137"] td {
+            position: relative;
+            top: 30px;
+            line-height: 1;
+            font-size: 10pt;
+            height: 166px;
+        }
+
+        tr[height="138"] td:first-child, tr[height="137"] td:first-child {
+            top: 0px;
+            white-space: normal;
+            background: transparent;
+            vertical-align:middle;
+            text-align:center;
+            -moz-transform: rotate(0.0deg);  /* FF3.5+ */
+            -o-transform: rotate(0.0deg);  /* Opera 10.5 */
+            -webkit-transform: rotate(0.0deg);  /* Saf3.1+, Chrome */
+            -ms-transform: rotate(0.0deg);  /* IE 9+ */
+            filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0);  /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)"; /* IE8 */
+        }
+
+        td[colspan="5"].xl17013794 {
+            background: white;
+        }
+
+        .xl23613794 {
+            border-left: 1.0pt solid windowtext;
+        }
+
+        // cherry styles
+        .xl17113794, .xl17113794 a, .xl29213794, .xl29713794, .xl29313794, .xl29413794, .xl29513794, .xl29613794, .xl30513794, .xl30613794, .xl30713794, .xl30913794, .xl30813794, .xl26013794, .xl27913794, .xl18213794, .xl22113794, .xl28613794, .xl28013794, .xl28013794, .xl25813794, .xl28113794, .xl28213794, .xl27113794, .xl28713794, .xl28813794, .xl18813794, .xl25913794, .xl18913794, .xl19013794, .xl19113794, .xl23613794, .xl28513794, .xl23413794, .xl23513794, .xl29113794, .xl25113794, .xl19213794, .xl23813794, .xl25613794, .xl25613794, .xl24413794, .xl24813794, .xl25513794, .xl25413794, .xl24013794 {
+            background: @cherry;
+            color: white;
+        }
+        // lighter grey styles
+        .xl17313794, .xl19313794, .xl17613794, .xl26113794, .xl28313794, .xl28413794, .xl20113794, .xl18313794, .xl26513794, .xl17913794, .xl18113794, .xl25013794, .xl22213794, .xl27213794, .xl30013794, .xl18713794, .xl27313794, .xl30313794, .xl18613794, .xl23213794, .xl23313794, .xl27813794 {
+            background: @lighter-grey;
+        }
+        // lightest grey styles
+        .xl17413794, .xl19413794, .xl19513794, .xl26213794, .xl17513794, .xl19613794, .xl18513794, .xl26313794, .xl17713794, .xl17813794, .xl18013794, .xl21413794, .xl21513794, .xl18413794, .xl30213794, .xl22413794, .xl27013794, .xl30113794, .xl27413794, .xl27513794, .xl22513794 {
+            background: @lightest-grey;
+        }
+    }
+    // end excel styles ---------------------------------------
+
+    @media screen and (max-width: 1400px) {
+
+        .csv-save-btn {
+            right: 30px;
+            top: 128px;
+        }
+
+    }
 
     @media screen and (max-width: @mobile-width) {
 
@@ -423,6 +724,27 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        #excel_table {
+
+            tbody,
+            tbody>tr:hover,
+            tbody>tr,
+            tbody>tr:hover>td,
+            tbody>tr>td,
+            tbody>tr:hover>th,
+            tbody>tr>th,
+            thead>tr:hover>td,
+            thead>tr>td,
+            thead>tr:hover>th,
+            thead>tr>th,
+            tfoot>tr:hover>td,
+            tfoot>tr>td,
+            tfoot>tr:hover>th,
+            tfoot>tr>th {
+                border: 1px solid black;
+            }
         }
 
     }

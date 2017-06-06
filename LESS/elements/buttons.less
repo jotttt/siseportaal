@@ -11,13 +11,27 @@
 
 }
 
-.float-e-margins .btn {
-    margin-bottom: 5px;
-}
+//ROUNDED BUTTONS
+//-----------------------------------------------------------------
+.btn-round {
+    background: #fff;
+    color: @lighter-grey;
+    border: 1px solid @lightest-grey;
+    border-radius: 20px;
+    padding: 2px 7px;
+    float:right;
+    position: absolute;
 
-.btn-w-m {
-    min-width: 120px;
+    &:hover {
+        border: 1px solid @lighter-grey;
+    }
+
+    .active {
+        background: @lightest-grey;
+        border: 1px solid @lighter-grey;
+    }
 }
+//end-----------------------------------------------------------------
 
 .btn-primary {
     background-color: @cherry;
@@ -628,30 +642,6 @@ button.btn.btn-caret.active:before {
 //end carret buttons ------------------------------------------
 
 
-//ROUNDED BUTTONS
-//-----------------------------------------------------------------
-.btn-round {
-    background: #fff;
-    border: 1px solid @lightest-grey;
-    border-radius: 20px;
-    padding: 2px 7px;
-    float:right;
-    position: absolute;
-
-    &:hover {
-        border: 1px solid @lighter-grey;
-    }
-
-    .active {
-        background: @lightest-grey;
-        border: 1px solid @lighter-grey;
-    }
-
-    i {
-        color: @lighter-grey;
-    }
-}
-
 //PANEL BUTTONS
 //-----------------------------------------------------------------
 .btn-panel {
@@ -695,6 +685,7 @@ button.btn.btn-caret.active:before {
         }
     }
 }
+//end-------------------------------------------------------------
 
 //EDGE BUTTONS
 //-----------------------------------------------------------------
@@ -703,7 +694,16 @@ button.btn.btn-caret.active:before {
     &.bottom {
         margin-bottom: -72px;
     }
+}
+//end-------------------------------------------------------------
 
+
+.float-e-margins .btn {
+    margin-bottom: 5px;
+}
+
+.btn-w-m {
+    min-width: 120px;
 }
 
 /*************************************************************

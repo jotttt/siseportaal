@@ -2026,7 +2026,7 @@ h5 {
   font-family: 'Open Sans';
   font-size: 10px;
   font-weight: 600;
-  /* padding: 3px 8px; */
+  padding: .5em .6em .3em;
   text-shadow: none;
   text-transform: uppercase;
   touch-action: manipulation;
@@ -2249,11 +2249,21 @@ h5 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.float-e-margins .btn {
-  margin-bottom: 5px;
+.btn-round {
+  background: #fff;
+  color: #c9c9c9;
+  border: 1px solid #e5e6e7;
+  border-radius: 20px;
+  padding: 2px 7px;
+  float: right;
+  position: absolute;
 }
-.btn-w-m {
-  min-width: 120px;
+.btn-round:hover {
+  border: 1px solid #c9c9c9;
+}
+.btn-round .active {
+  background: #e5e6e7;
+  border: 1px solid #c9c9c9;
 }
 .btn-primary {
   background-color: #870042;
@@ -2960,24 +2970,6 @@ button.btn.btn-caret.active:before {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
 }
-.btn-round {
-  background: #fff;
-  border: 1px solid #e5e6e7;
-  border-radius: 20px;
-  padding: 2px 7px;
-  float: right;
-  position: absolute;
-}
-.btn-round:hover {
-  border: 1px solid #c9c9c9;
-}
-.btn-round .active {
-  background: #e5e6e7;
-  border: 1px solid #c9c9c9;
-}
-.btn-round i {
-  color: #c9c9c9;
-}
 .btn-panel {
   font-weight: bold;
   border: 1px solid #e5e6e7;
@@ -3016,6 +3008,12 @@ button.btn.btn-caret.active:before {
 }
 .btn-edge.bottom {
   margin-bottom: -72px;
+}
+.float-e-margins .btn {
+  margin-bottom: 5px;
+}
+.btn-w-m {
+  min-width: 120px;
 }
 /*************************************************************
 MOBILE STYLES
@@ -8259,8 +8257,11 @@ BIRTHDAYS FULLVIEW
   }
 }
 .csv-save-btn {
-  right: 62px;
-  top: 125px;
+  right: 56px;
+  top: 147px;
+}
+#budgetPanel_ {
+  /*VERTICAL TEXTFIELDS*/
 }
 #budgetPanel_ .report-results {
   /**/
@@ -8485,6 +8486,711 @@ BIRTHDAYS FULLVIEW
 #budgetPanel_ .panel-collapse .panel-body a {
   white-space: normal;
 }
+#budgetPanel_ #excel_table {
+  /*CHERRY ROWS*/
+  /*GREY ROWS*/
+  /*FIRST VERTICAL ROW*/
+  /*SECOND VERTICAL ROW*/
+}
+#budgetPanel_ #excel_table td {
+  padding: 2px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+#budgetPanel_ #excel_table td[rowspan="2"],
+#budgetPanel_ #excel_table tr[height="154"] td {
+  color: white;
+  white-space: normal;
+  background: transparent;
+  vertical-align: middle;
+  text-align: left;
+  -moz-transform: rotate(-90deg);
+  /* FF3.5+ */
+  -o-transform: rotate(-90deg);
+  /* Opera 10.5 */
+  -webkit-transform: rotate(-90deg);
+  /* Saf3.1+, Chrome */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  /* IE8 */
+}
+#budgetPanel_ #excel_table td[rowspan="2"] {
+  position: relative;
+  top: 50px;
+}
+#budgetPanel_ #excel_table td[rowspan="2"] .font522173 {
+  color: white;
+}
+#budgetPanel_ #excel_table td[rowspan="2"]:first-child {
+  color: white;
+  top: 0px;
+  white-space: normal;
+  background: transparent;
+  vertical-align: middle;
+  text-align: center;
+  -moz-transform: rotate(0deg);
+  /* FF3.5+ */
+  -o-transform: rotate(0deg);
+  /* Opera 10.5 */
+  -webkit-transform: rotate(0deg);
+  /* Saf3.1+, Chrome */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+  /* IE8 */
+}
+#budgetPanel_ #excel_table tr[height="154"] td {
+  color: white;
+  position: relative;
+  top: 30px;
+}
+#budgetPanel_ #excel_table tr[height="33"] {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table tr[height="154"] {
+  background: #870042;
+}
+#budgetPanel_ #excel_table td[colspan="5"] {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table td[colspan="2"] {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17722173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17822173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl19722173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl19122173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl19022173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17122173 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17922173 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl18022173 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl17322173 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl18522173 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl17119474,
+#budgetPanel_ #excel_table .xl17119474 a,
+#budgetPanel_ #excel_table .xl26119474,
+#budgetPanel_ #excel_table .xl20319474,
+#budgetPanel_ #excel_table .xl26619474,
+#budgetPanel_ #excel_table .xl22519474,
+#budgetPanel_ #excel_table .xl19419474,
+#budgetPanel_ #excel_table .xl21519474,
+#budgetPanel_ #excel_table .xl22619474,
+#budgetPanel_ #excel_table .xl26719474,
+#budgetPanel_ #excel_table .xl26819474,
+#budgetPanel_ #excel_table .xl22819474,
+#budgetPanel_ #excel_table .xl22719474,
+#budgetPanel_ #excel_table .xl26019474,
+#budgetPanel_ #excel_table .xl18519474,
+#budgetPanel_ #excel_table .xl18519474,
+#budgetPanel_ #excel_table .xl17619474,
+#budgetPanel_ #excel_table .xl21919474,
+#budgetPanel_ #excel_table .xl17919474,
+#budgetPanel_ #excel_table .xl19919474,
+#budgetPanel_ #excel_table .xl22219474,
+#budgetPanel_ #excel_table .xl25419474,
+#budgetPanel_ #excel_table .xl18019474,
+#budgetPanel_ #excel_table .xl18219474,
+#budgetPanel_ #excel_table .xl18419474,
+#budgetPanel_ #excel_table .xl18819474,
+#budgetPanel_ #excel_table .xl18119474,
+#budgetPanel_ #excel_table .xl22019474,
+#budgetPanel_ #excel_table .xl17519474,
+#budgetPanel_ #excel_table .xl25319474 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl20619474,
+#budgetPanel_ #excel_table .xl20919474,
+#budgetPanel_ #excel_table .xl21219474,
+#budgetPanel_ #excel_table .xl21419474,
+#budgetPanel_ #excel_table .xl21719474,
+#budgetPanel_ #excel_table .xl19519474,
+#budgetPanel_ #excel_table .xl20019474,
+#budgetPanel_ #excel_table .xl21819474,
+#budgetPanel_ #excel_table .xl24719474,
+#budgetPanel_ #excel_table .xl24419474,
+#budgetPanel_ #excel_table .xl24819474,
+#budgetPanel_ #excel_table .xl22319474,
+#budgetPanel_ #excel_table .xl20119474,
+#budgetPanel_ #excel_table .xl25219474,
+#budgetPanel_ #excel_table .xl20219474,
+#budgetPanel_ #excel_table .xl22419474 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl20719474,
+#budgetPanel_ #excel_table .xl19619474,
+#budgetPanel_ #excel_table .xl17819474,
+#budgetPanel_ #excel_table .xl20519474,
+#budgetPanel_ #excel_table .xl20819474,
+#budgetPanel_ #excel_table .xl19719474,
+#budgetPanel_ #excel_table .xl20419474,
+#budgetPanel_ #excel_table .xl19819474,
+#budgetPanel_ #excel_table .xl21019474,
+#budgetPanel_ #excel_table .xl24519474,
+#budgetPanel_ #excel_table .xl22119474,
+#budgetPanel_ #excel_table .xl24919474,
+#budgetPanel_ #excel_table .xl21119474,
+#budgetPanel_ #excel_table .xl26219474,
+#budgetPanel_ #excel_table .xl21319474,
+#budgetPanel_ #excel_table .xl21619474 {
+  background: #e5e6e7;
+}
+#budgetPanel_ #excel_table .xl17131481,
+#budgetPanel_ #excel_table .xl17131481 a,
+#budgetPanel_ #excel_table .xl26731481,
+#budgetPanel_ #excel_table .xl18431481,
+#budgetPanel_ #excel_table .xl18031481,
+#budgetPanel_ #excel_table .xl17331481,
+#budgetPanel_ #excel_table .xl20931481,
+#budgetPanel_ #excel_table .xl20931481,
+#budgetPanel_ #excel_table .xl29231481,
+#budgetPanel_ #excel_table .xl23131481,
+#budgetPanel_ #excel_table .xl17931481,
+#budgetPanel_ #excel_table .xl30231481,
+#budgetPanel_ #excel_table .xl28331481,
+#budgetPanel_ #excel_table .xl17531481,
+#budgetPanel_ #excel_table .xl28831481,
+#budgetPanel_ #excel_table .xl27131481,
+#budgetPanel_ #excel_table .xl28431481,
+#budgetPanel_ #excel_table .xl30331481,
+#budgetPanel_ #excel_table .xl17431481,
+#budgetPanel_ #excel_table .xl30431481,
+#budgetPanel_ #excel_table .xl27231481,
+#budgetPanel_ #excel_table .xl18131481,
+#budgetPanel_ #excel_table .xl27331481,
+#budgetPanel_ #excel_table .xl30731481,
+#budgetPanel_ #excel_table .xl18231481,
+#budgetPanel_ #excel_table .xl30531481,
+#budgetPanel_ #excel_table .xl23231481,
+#budgetPanel_ #excel_table .xl30831481,
+#budgetPanel_ #excel_table .xl26531481,
+#budgetPanel_ #excel_table .xl28531481,
+#budgetPanel_ #excel_table .xl30931481,
+#budgetPanel_ #excel_table .xl18331481,
+#budgetPanel_ #excel_table .xl21631481,
+#budgetPanel_ #excel_table .xl30631481,
+#budgetPanel_ #excel_table .xl21531481,
+#budgetPanel_ #excel_table .xl22031481,
+#budgetPanel_ #excel_table .xl23531481,
+#budgetPanel_ #excel_table .xl21831481,
+#budgetPanel_ #excel_table .xl29631481,
+#budgetPanel_ #excel_table .xl22431481,
+#budgetPanel_ #excel_table .xl29731481,
+#budgetPanel_ #excel_table .xl22831481 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl24731481,
+#budgetPanel_ #excel_table .xl18531481,
+#budgetPanel_ #excel_table .xl26931481,
+#budgetPanel_ #excel_table .xl21031481,
+#budgetPanel_ #excel_table .xl25131481,
+#budgetPanel_ #excel_table .xl19231481,
+#budgetPanel_ #excel_table .xl25731481,
+#budgetPanel_ #excel_table .xl17631481,
+#budgetPanel_ #excel_table .xl17631481,
+#budgetPanel_ #excel_table .xl24231481,
+#budgetPanel_ #excel_table .xl26031481,
+#budgetPanel_ #excel_table .xl21331481,
+#budgetPanel_ #excel_table .xl21431481,
+#budgetPanel_ #excel_table .xl27931481,
+#budgetPanel_ #excel_table .xl27631481,
+#budgetPanel_ #excel_table .xl26431481,
+#budgetPanel_ #excel_table .xl27031481,
+#budgetPanel_ #excel_table .xl21131481,
+#budgetPanel_ #excel_table .xl28031481,
+#budgetPanel_ #excel_table .xl17831481 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl24831481,
+#budgetPanel_ #excel_table .xl18631481,
+#budgetPanel_ #excel_table .xl18731481,
+#budgetPanel_ #excel_table .xl24931481,
+#budgetPanel_ #excel_table .xl23931481,
+#budgetPanel_ #excel_table .xl18831481,
+#budgetPanel_ #excel_table .xl25331481,
+#budgetPanel_ #excel_table .xl25831481,
+#budgetPanel_ #excel_table .xl20231481,
+#budgetPanel_ #excel_table .xl17731481,
+#budgetPanel_ #excel_table .xl25831481,
+#budgetPanel_ #excel_table .xl20231481,
+#budgetPanel_ #excel_table .xl17731481,
+#budgetPanel_ #excel_table .xl24031481,
+#budgetPanel_ #excel_table .xl20331481,
+#budgetPanel_ #excel_table .xl26131481,
+#budgetPanel_ #excel_table .xl20331481,
+#budgetPanel_ #excel_table .xl24031481,
+#budgetPanel_ #excel_table .xl24631481,
+#budgetPanel_ #excel_table .xl27831481,
+#budgetPanel_ #excel_table .xl27431481 {
+  background: #e5e6e7;
+}
+#budgetPanel_ #excel_table .xl2411107,
+#budgetPanel_ #excel_table .xl2401107,
+#budgetPanel_ #excel_table .xl3001107 {
+  font-size: 10pt;
+}
+#budgetPanel_ #excel_table .xl1711107,
+#budgetPanel_ #excel_table .xl1711107 a,
+#budgetPanel_ #excel_table .xl2411107,
+#budgetPanel_ #excel_table .xl1761107,
+#budgetPanel_ #excel_table .xl2401107,
+#budgetPanel_ #excel_table .xl3021107,
+#budgetPanel_ #excel_table .xl2731107,
+#budgetPanel_ #excel_table .xl2971107,
+#budgetPanel_ #excel_table .xl3031107,
+#budgetPanel_ #excel_table .xl2981107,
+#budgetPanel_ #excel_table .xl3001107,
+#budgetPanel_ #excel_table .xl2461107,
+#budgetPanel_ #excel_table .xl3041107,
+#budgetPanel_ #excel_table .xl2991107,
+#budgetPanel_ #excel_table .xl1821107,
+#budgetPanel_ #excel_table .xl1831107,
+#budgetPanel_ #excel_table .xl2081107,
+#budgetPanel_ #excel_table .xl1841107,
+#budgetPanel_ #excel_table .xl1851107,
+#budgetPanel_ #excel_table .xl2421107,
+#budgetPanel_ #excel_table .xl2831107,
+#budgetPanel_ #excel_table .xl2741107,
+#budgetPanel_ #excel_table .xl1871107,
+#budgetPanel_ #excel_table .xl2331107,
+#budgetPanel_ #excel_table .xl2261107,
+#budgetPanel_ #excel_table .xl2841107,
+#budgetPanel_ #excel_table .xl2511107,
+#budgetPanel_ #excel_table .xl2291107,
+#budgetPanel_ #excel_table .xl2371107,
+#budgetPanel_ #excel_table .xl3011107,
+#budgetPanel_ #excel_table .xl2471107,
+#budgetPanel_ #excel_table .xl2501107,
+#budgetPanel_ #excel_table .xl3101107,
+#budgetPanel_ #excel_table .xl2951107,
+#budgetPanel_ #excel_table .xl2481107,
+#budgetPanel_ #excel_table .xl2491107,
+#budgetPanel_ #excel_table .xl3061107,
+#budgetPanel_ #excel_table .xl2961107,
+#budgetPanel_ #excel_table .xl2451107,
+#budgetPanel_ #excel_table .xl3051107,
+#budgetPanel_ #excel_table .xl3071107,
+#budgetPanel_ #excel_table .xl1861107,
+#budgetPanel_ #excel_table .xl2251107 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl2571107,
+#budgetPanel_ #excel_table .xl1881107,
+#budgetPanel_ #excel_table .xl2611107,
+#budgetPanel_ #excel_table .xl2091107,
+#budgetPanel_ #excel_table .xl1951107,
+#budgetPanel_ #excel_table .xl2681107,
+#budgetPanel_ #excel_table .xl1731107,
+#budgetPanel_ #excel_table .xl2941107,
+#budgetPanel_ #excel_table .xl1771107,
+#budgetPanel_ #excel_table .xl2711107,
+#budgetPanel_ #excel_table .xl2761107,
+#budgetPanel_ #excel_table .xl2881107,
+#budgetPanel_ #excel_table .xl1741107,
+#budgetPanel_ #excel_table .xl2231107,
+#budgetPanel_ #excel_table .xl2881107,
+#budgetPanel_ #excel_table .xl1741107,
+#budgetPanel_ #excel_table .xl2121107,
+#budgetPanel_ #excel_table .xl2561107,
+#budgetPanel_ #excel_table .xl1801107,
+#budgetPanel_ #excel_table .xl1811107,
+#budgetPanel_ #excel_table .xl2791107,
+#budgetPanel_ #excel_table .xl2241107,
+#budgetPanel_ #excel_table .xl2771107,
+#budgetPanel_ #excel_table .xl1791107,
+#budgetPanel_ #excel_table .xl2631107 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl2581107,
+#budgetPanel_ #excel_table .xl1891107,
+#budgetPanel_ #excel_table .xl2851107,
+#budgetPanel_ #excel_table .xl1901107,
+#budgetPanel_ #excel_table .xl2591107,
+#budgetPanel_ #excel_table .xl1911107,
+#budgetPanel_ #excel_table .xl1791107,
+#budgetPanel_ #excel_table .xl2631107,
+#budgetPanel_ #excel_table .xl2861107,
+#budgetPanel_ #excel_table .xl2651107,
+#budgetPanel_ #excel_table .xl2051107,
+#budgetPanel_ #excel_table .xl1781107,
+#budgetPanel_ #excel_table .xl2691107,
+#budgetPanel_ #excel_table .xl2931107,
+#budgetPanel_ #excel_table .xl2131107,
+#budgetPanel_ #excel_table .xl2801107,
+#budgetPanel_ #excel_table .xl2151107,
+#budgetPanel_ #excel_table .xl214110,
+#budgetPanel_ #excel_table .xl2811107,
+#budgetPanel_ #excel_table .xl2141107,
+#budgetPanel_ #excel_table .xl2161107,
+#budgetPanel_ #excel_table .xl2041107 {
+  background: #e5e6e7;
+}
+#budgetPanel_ #excel_table .xl22126691,
+#budgetPanel_ #excel_table .xl22326691 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#budgetPanel_ #excel_table .xl17126691,
+#budgetPanel_ #excel_table .xl17126691 a,
+#budgetPanel_ #excel_table .xl22126691,
+#budgetPanel_ #excel_table .xl29826691,
+#budgetPanel_ #excel_table .xl27126691,
+#budgetPanel_ #excel_table .xl28126691,
+#budgetPanel_ #excel_table .xl19126691,
+#budgetPanel_ #excel_table .xl27226691,
+#budgetPanel_ #excel_table .xl29926691,
+#budgetPanel_ #excel_table .xl27326691,
+#budgetPanel_ #excel_table .xl30026691,
+#budgetPanel_ #excel_table .xl27426691,
+#budgetPanel_ #excel_table .xl18126691,
+#budgetPanel_ #excel_table .xl27526691,
+#budgetPanel_ #excel_table .xl30126691,
+#budgetPanel_ #excel_table .xl28826691,
+#budgetPanel_ #excel_table .xl28926691,
+#budgetPanel_ #excel_table .xl29126691,
+#budgetPanel_ #excel_table .xl30226691,
+#budgetPanel_ #excel_table .xl28026691,
+#budgetPanel_ #excel_table .xl18726691,
+#budgetPanel_ #excel_table .xl29026691,
+#budgetPanel_ #excel_table .xl22826691,
+#budgetPanel_ #excel_table .xl22326691,
+#budgetPanel_ #excel_table .xl18226691,
+#budgetPanel_ #excel_table .xl29226691,
+#budgetPanel_ #excel_table .xl23826691,
+#budgetPanel_ #excel_table .xl24126691,
+#budgetPanel_ #excel_table .xl23526691,
+#budgetPanel_ #excel_table .xl28326691,
+#budgetPanel_ #excel_table .xl28726691,
+#budgetPanel_ #excel_table .xl24226691,
+#budgetPanel_ #excel_table .xl29326691,
+#budgetPanel_ #excel_table .xl29626691,
+#budgetPanel_ #excel_table .xl18826691,
+#budgetPanel_ #excel_table .xl18926691,
+#budgetPanel_ #excel_table .xl19026691,
+#budgetPanel_ #excel_table .xl22726691,
+#budgetPanel_ #excel_table .xl29426691,
+#budgetPanel_ #excel_table .xl25126691,
+#budgetPanel_ #excel_table .xl25326691,
+#budgetPanel_ #excel_table .xl24026691,
+#budgetPanel_ #excel_table .xl24026691,
+#budgetPanel_ #excel_table .xl29526691,
+#budgetPanel_ #excel_table .xl24026691,
+#budgetPanel_ #excel_table .xl22426691,
+#budgetPanel_ #excel_table .xl21526691,
+#budgetPanel_ #excel_table .xl25226691,
+#budgetPanel_ #excel_table .xl25526691,
+#budgetPanel_ #excel_table .xl22226691,
+#budgetPanel_ #excel_table .xl21926691,
+#budgetPanel_ #excel_table .xl25026691,
+#budgetPanel_ #excel_table .xl29726691,
+#budgetPanel_ #excel_table .xl22526691,
+#budgetPanel_ #excel_table .xl25026691,
+#budgetPanel_ #excel_table .xl25426691,
+#budgetPanel_ #excel_table .xl28426691,
+#budgetPanel_ #excel_table .xl25626691 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17326691,
+#budgetPanel_ #excel_table .xl19226691,
+#budgetPanel_ #excel_table .xl17626691,
+#budgetPanel_ #excel_table .xl20826691,
+#budgetPanel_ #excel_table .xl17926691,
+#budgetPanel_ #excel_table .xl30926691,
+#budgetPanel_ #excel_table .xl28226691,
+#budgetPanel_ #excel_table .xl20026691,
+#budgetPanel_ #excel_table .xl18626691,
+#budgetPanel_ #excel_table .xl18326691,
+#budgetPanel_ #excel_table .xl26526691,
+#budgetPanel_ #excel_table .xl26926691,
+#budgetPanel_ #excel_table .xl27926691,
+#budgetPanel_ #excel_table .xl23626691,
+#budgetPanel_ #excel_table .xl24326691,
+#budgetPanel_ #excel_table .xl24926691,
+#budgetPanel_ #excel_table .xl24526691,
+#budgetPanel_ #excel_table .xl24926691,
+#budgetPanel_ #excel_table .xl31226691 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl17426691,
+#budgetPanel_ #excel_table .xl19326691,
+#budgetPanel_ #excel_table .xl27626691,
+#budgetPanel_ #excel_table .xl19426691,
+#budgetPanel_ #excel_table .xl17526691,
+#budgetPanel_ #excel_table .xl19526691,
+#budgetPanel_ #excel_table .xl18526691,
+#budgetPanel_ #excel_table .xl27726691,
+#budgetPanel_ #excel_table .xl26326691,
+#budgetPanel_ #excel_table .xl23126691,
+#budgetPanel_ #excel_table .xl30626691,
+#budgetPanel_ #excel_table .xl17726691,
+#budgetPanel_ #excel_table .xl17826691,
+#budgetPanel_ #excel_table .xl18026691,
+#budgetPanel_ #excel_table .xl31026691,
+#budgetPanel_ #excel_table .xl23726691,
+#budgetPanel_ #excel_table .xl31126691,
+#budgetPanel_ #excel_table .xl18426691,
+#budgetPanel_ #excel_table .xl24626691,
+#budgetPanel_ #excel_table .xl24726691 {
+  background: #e5e6e7;
+}
+#budgetPanel_ #excel_table .xl6814490,
+#budgetPanel_ #excel_table .xl6814490 a,
+#budgetPanel_ #excel_table .xl6914490,
+#budgetPanel_ #excel_table .xl10814490,
+#budgetPanel_ #excel_table .xl10914490,
+#budgetPanel_ #excel_table .xl11014490,
+#budgetPanel_ #excel_table .xl11214490,
+#budgetPanel_ #excel_table .xl11114490,
+#budgetPanel_ #excel_table .xl11314490,
+#budgetPanel_ #excel_table .xl11414490,
+#budgetPanel_ #excel_table .xl9014490,
+#budgetPanel_ #excel_table .xl11514490,
+#budgetPanel_ #excel_table .xl11614490,
+#budgetPanel_ #excel_table .xl11814490,
+#budgetPanel_ #excel_table .xl11914490,
+#budgetPanel_ #excel_table .xl11714490,
+#budgetPanel_ #excel_table .xl9714490,
+#budgetPanel_ #excel_table .xl9814490,
+#budgetPanel_ #excel_table .xl12014490,
+#budgetPanel_ #excel_table .xl9914490,
+#budgetPanel_ #excel_table .xl12114490,
+#budgetPanel_ #excel_table .xl12214490,
+#budgetPanel_ #excel_table .xl10114490,
+#budgetPanel_ #excel_table .xl12314490,
+#budgetPanel_ #excel_table .xl10214490,
+#budgetPanel_ #excel_table .xl10414490,
+#budgetPanel_ #excel_table .xl10714490 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl7114490,
+#budgetPanel_ #excel_table .xl7614490,
+#budgetPanel_ #excel_table .xl8314490,
+#budgetPanel_ #excel_table .xl8614490,
+#budgetPanel_ #excel_table .xl7114490,
+#budgetPanel_ #excel_table .xl9614490 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl7214490,
+#budgetPanel_ #excel_table .xl7314490,
+#budgetPanel_ #excel_table .xl7814490,
+#budgetPanel_ #excel_table .xl8014490,
+#budgetPanel_ #excel_table .xl8414490,
+#budgetPanel_ #excel_table .xl9114490 {
+  background: #e5e6e7;
+}
+#budgetPanel_ #excel_table #budgetPanel_ td {
+  padding: 4px;
+  border-collapse: collapse;
+  line-height: normal;
+}
+#budgetPanel_ #excel_table tr[height="138"],
+#budgetPanel_ #excel_table tr[height="137"] {
+  background: #870042;
+}
+#budgetPanel_ #excel_table tr[height="138"] td,
+#budgetPanel_ #excel_table tr[height="137"] td {
+  padding: 0px;
+  white-space: normal;
+  background: transparent;
+  vertical-align: middle;
+  text-align: left;
+  -moz-transform: rotate(-90deg);
+  /* FF3.5+ */
+  -o-transform: rotate(-90deg);
+  /* Opera 10.5 */
+  -webkit-transform: rotate(-90deg);
+  /* Saf3.1+, Chrome */
+  -ms-transform: rotate(-90deg);
+  /* IE 9+ */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  /* IE8 */
+}
+#budgetPanel_ #excel_table tr[height="138"] td {
+  position: relative;
+  top: 35px;
+  line-height: 1;
+}
+#budgetPanel_ #excel_table tr[height="138"] td[width="76"] {
+  top: 25px;
+}
+#budgetPanel_ #excel_table tr[height="138"] td[width="47"] {
+  top: 40px;
+}
+#budgetPanel_ #excel_table tr[height="138"] td[width="66"] {
+  top: 30px;
+}
+#budgetPanel_ #excel_table tr[height="137"] td {
+  position: relative;
+  top: 30px;
+  line-height: 1;
+  font-size: 10pt;
+  height: 166px;
+}
+#budgetPanel_ #excel_table tr[height="138"] td:first-child,
+#budgetPanel_ #excel_table tr[height="137"] td:first-child {
+  top: 0px;
+  white-space: normal;
+  background: transparent;
+  vertical-align: middle;
+  text-align: center;
+  -moz-transform: rotate(0deg);
+  /* FF3.5+ */
+  -o-transform: rotate(0deg);
+  /* Opera 10.5 */
+  -webkit-transform: rotate(0deg);
+  /* Saf3.1+, Chrome */
+  -ms-transform: rotate(0deg);
+  /* IE 9+ */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  /* IE6,IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+  /* IE8 */
+}
+#budgetPanel_ #excel_table td[colspan="5"].xl17013794 {
+  background: white;
+}
+#budgetPanel_ #excel_table .xl23613794 {
+  border-left: 1.0pt solid windowtext;
+}
+#budgetPanel_ #excel_table .xl17113794,
+#budgetPanel_ #excel_table .xl17113794 a,
+#budgetPanel_ #excel_table .xl29213794,
+#budgetPanel_ #excel_table .xl29713794,
+#budgetPanel_ #excel_table .xl29313794,
+#budgetPanel_ #excel_table .xl29413794,
+#budgetPanel_ #excel_table .xl29513794,
+#budgetPanel_ #excel_table .xl29613794,
+#budgetPanel_ #excel_table .xl30513794,
+#budgetPanel_ #excel_table .xl30613794,
+#budgetPanel_ #excel_table .xl30713794,
+#budgetPanel_ #excel_table .xl30913794,
+#budgetPanel_ #excel_table .xl30813794,
+#budgetPanel_ #excel_table .xl26013794,
+#budgetPanel_ #excel_table .xl27913794,
+#budgetPanel_ #excel_table .xl18213794,
+#budgetPanel_ #excel_table .xl22113794,
+#budgetPanel_ #excel_table .xl28613794,
+#budgetPanel_ #excel_table .xl28013794,
+#budgetPanel_ #excel_table .xl28013794,
+#budgetPanel_ #excel_table .xl25813794,
+#budgetPanel_ #excel_table .xl28113794,
+#budgetPanel_ #excel_table .xl28213794,
+#budgetPanel_ #excel_table .xl27113794,
+#budgetPanel_ #excel_table .xl28713794,
+#budgetPanel_ #excel_table .xl28813794,
+#budgetPanel_ #excel_table .xl18813794,
+#budgetPanel_ #excel_table .xl25913794,
+#budgetPanel_ #excel_table .xl18913794,
+#budgetPanel_ #excel_table .xl19013794,
+#budgetPanel_ #excel_table .xl19113794,
+#budgetPanel_ #excel_table .xl23613794,
+#budgetPanel_ #excel_table .xl28513794,
+#budgetPanel_ #excel_table .xl23413794,
+#budgetPanel_ #excel_table .xl23513794,
+#budgetPanel_ #excel_table .xl29113794,
+#budgetPanel_ #excel_table .xl25113794,
+#budgetPanel_ #excel_table .xl19213794,
+#budgetPanel_ #excel_table .xl23813794,
+#budgetPanel_ #excel_table .xl25613794,
+#budgetPanel_ #excel_table .xl25613794,
+#budgetPanel_ #excel_table .xl24413794,
+#budgetPanel_ #excel_table .xl24813794,
+#budgetPanel_ #excel_table .xl25513794,
+#budgetPanel_ #excel_table .xl25413794,
+#budgetPanel_ #excel_table .xl24013794 {
+  background: #870042;
+  color: white;
+}
+#budgetPanel_ #excel_table .xl17313794,
+#budgetPanel_ #excel_table .xl19313794,
+#budgetPanel_ #excel_table .xl17613794,
+#budgetPanel_ #excel_table .xl26113794,
+#budgetPanel_ #excel_table .xl28313794,
+#budgetPanel_ #excel_table .xl28413794,
+#budgetPanel_ #excel_table .xl20113794,
+#budgetPanel_ #excel_table .xl18313794,
+#budgetPanel_ #excel_table .xl26513794,
+#budgetPanel_ #excel_table .xl17913794,
+#budgetPanel_ #excel_table .xl18113794,
+#budgetPanel_ #excel_table .xl25013794,
+#budgetPanel_ #excel_table .xl22213794,
+#budgetPanel_ #excel_table .xl27213794,
+#budgetPanel_ #excel_table .xl30013794,
+#budgetPanel_ #excel_table .xl18713794,
+#budgetPanel_ #excel_table .xl27313794,
+#budgetPanel_ #excel_table .xl30313794,
+#budgetPanel_ #excel_table .xl18613794,
+#budgetPanel_ #excel_table .xl23213794,
+#budgetPanel_ #excel_table .xl23313794,
+#budgetPanel_ #excel_table .xl27813794 {
+  background: #c9c9c9;
+}
+#budgetPanel_ #excel_table .xl17413794,
+#budgetPanel_ #excel_table .xl19413794,
+#budgetPanel_ #excel_table .xl19513794,
+#budgetPanel_ #excel_table .xl26213794,
+#budgetPanel_ #excel_table .xl17513794,
+#budgetPanel_ #excel_table .xl19613794,
+#budgetPanel_ #excel_table .xl18513794,
+#budgetPanel_ #excel_table .xl26313794,
+#budgetPanel_ #excel_table .xl17713794,
+#budgetPanel_ #excel_table .xl17813794,
+#budgetPanel_ #excel_table .xl18013794,
+#budgetPanel_ #excel_table .xl21413794,
+#budgetPanel_ #excel_table .xl21513794,
+#budgetPanel_ #excel_table .xl18413794,
+#budgetPanel_ #excel_table .xl30213794,
+#budgetPanel_ #excel_table .xl22413794,
+#budgetPanel_ #excel_table .xl27013794,
+#budgetPanel_ #excel_table .xl30113794,
+#budgetPanel_ #excel_table .xl27413794,
+#budgetPanel_ #excel_table .xl27513794,
+#budgetPanel_ #excel_table .xl22513794 {
+  background: #e5e6e7;
+}
+@media screen and (max-width: 1400px) {
+  #budgetPanel_ .csv-save-btn {
+    right: 30px;
+    top: 128px;
+  }
+}
 @media screen and (max-width: 991px) {
   #budgetPanel_ {
     /*thead tr {
@@ -8586,6 +9292,23 @@ BIRTHDAYS FULLVIEW
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  #budgetPanel_ #excel_table tbody,
+  #budgetPanel_ #excel_table tbody > tr:hover,
+  #budgetPanel_ #excel_table tbody > tr,
+  #budgetPanel_ #excel_table tbody > tr:hover > td,
+  #budgetPanel_ #excel_table tbody > tr > td,
+  #budgetPanel_ #excel_table tbody > tr:hover > th,
+  #budgetPanel_ #excel_table tbody > tr > th,
+  #budgetPanel_ #excel_table thead > tr:hover > td,
+  #budgetPanel_ #excel_table thead > tr > td,
+  #budgetPanel_ #excel_table thead > tr:hover > th,
+  #budgetPanel_ #excel_table thead > tr > th,
+  #budgetPanel_ #excel_table tfoot > tr:hover > td,
+  #budgetPanel_ #excel_table tfoot > tr > td,
+  #budgetPanel_ #excel_table tfoot > tr:hover > th,
+  #budgetPanel_ #excel_table tfoot > tr > th {
+    border: 1px solid black;
   }
 }
 @media screen and (max-width: 768px) {
@@ -9090,14 +9813,6 @@ SCORECARD STYLES
     border-bottom: 1px solid transparent;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0);
   }
-  .wrapper-srm tr td.nav_btm {
-    height: 80px;
-  }
-  .wrapper-srm tr td.nav_btm .records_found {
-    display: block;
-    margin-bottom: 10px;
-    float: none;
-  }
   .wrapper-srm tr td.nav_btm .navigation {
     display: inline-block;
     float: none;
@@ -9124,9 +9839,6 @@ SCORECARD STYLES
   }
 }
 @media screen and (max-width: 520px) {
-  .wrapper-srm .header .header_right {
-    float: left;
-  }
   .wrapper-srm .header .header_right .prefbox {
     right: auto;
     width: 220px;
