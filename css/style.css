@@ -3908,10 +3908,7 @@ SCROLL BACK UP BUTTON
   /* hover previous stars in list */
 }
 #bottom-survey.closed {
-  bottom: -112px;
-}
-#bottom-survey.extended.closed {
-  bottom: -243px;
+  bottom: -249px;
 }
 #bottom-survey fieldset,
 #bottom-survey label {
@@ -3951,11 +3948,11 @@ SCROLL BACK UP BUTTON
 #bottom-survey .rating > input:checked ~ label:hover ~ label {
   color: #FFED85;
 }
-#bottom-survey .comment {
-  display: none;
+#bottom-survey .error-msg-container {
+  height: 7px;
 }
-#bottom-survey .comment.show {
-  display: block;
+#bottom-survey .error-msg-container .error-msg {
+  font-size: 11px;
 }
 .flot-chart {
   display: block;
