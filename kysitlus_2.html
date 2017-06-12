@@ -294,28 +294,39 @@
             <i class="fa fa-comment-o"></i> Tagasiside <span class="pull-right"><i class="fa fa-chevron-up"></i></span>
           </div>
           <div class="panel-body">
+
             <h3>Palun hinda Portaali kasutusmugavust</h3>
+
 
             <div class="row">
               <div class="col-md-12">
                 <fieldset class="rating">
-                  <input type="radio" id="star5" name="rating" value="5" /><label class = "full high" for="star5" title="Väga äge - 5"></label>
-                  <input type="radio" id="star4" name="rating" value="4" /><label class = "full high" for="star4" title="Päris hea - 4"></label>
-                  <input type="radio" id="star3" name="rating" value="3" /><label class = "full low" for="star3" title="Töötab - 3"></label>
-                  <input type="radio" id="star2" name="rating" value="2" /><label class = "full low" for="star2" title="Üsna vilets - 2"></label>
-                  <input type="radio" id="star1" name="rating" value="1" /><label class = "full low" for="star1" title="Väga halb - 1"></label>
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label  class = "full high" for="star5" title="Väga äge - 5" data-stars="5"></label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label class = "full high" for="star4" title="Päris hea - 4" data-stars="4"></label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label class = "full low" for="star3" title="Töötab - 3" data-stars="3"></label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label class = "full low" for="star2" title="Üsna vilets - 2" data-stars="2"></label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label class = "full low" for="star1" title="Väga halb - 1" data-stars="1"></label>
                 </fieldset>
               </div>
             </div>
 
-            <div class="row comment m-t-xs m-b">
+            <div class="row m-t-xs m-b">
               <div class="col-md-12">
-                <textarea name="" id="" cols="49" rows="5" placeholder="Ole hea ja kirjelda natuke oma kogemusi"></textarea>
+                <textarea id="bottomSurveyComment" class="comment form-control " name="" cols="49" rows="5" placeholder="Ole hea ja kirjelda natuke oma kogemusi"></textarea>
+
+                 <div class="error-msg-container">
+                  <span class="error-msg"></span>
+                </div>
 
               </div>
             </div>
 
-            <a href="#" class="btn btn-primary pull-right ">Saada <i class="fa fa-angle-right"></i></a>
+            <button id="sendSurvey" class="btn btn-primary pull-right ">Saada <i class="fa fa-angle-right"></i></button>
 
           </div>
         </div>
@@ -372,11 +383,35 @@
         $('#bottom-survey .panel-heading span i').toggleClass('fa-chevron-down');
       });
 
-       $(document).on("click", "#bottom-survey .rating .low", function() {
-        $('#bottom-survey .comment').addClass('show');
-        $('#bottom-survey').addClass('extended');
+      var $rating = 0;
+
+      $(document).on("click", "#bottom-survey .rating label", function() {
+        $rating = $(this).attr('data-stars');
       });
 
+      $(document).on("click", "#sendSurvey", function() {
+        var minLength = 15;
+        var $textarea = $('#bottomSurveyComment');
+
+        if($rating < 4) {
+          if($textarea.val().length < minLength) {
+            console.log($textarea.val().length);
+            $('.error-msg').empty().append('Palun lisa kommentaar mis oleks vähemalt ' + minLength + ' tähemärki pikk');
+            $('#bottom-survey .comment').addClass('required');
+            return false;
+          }
+          else {
+            $('#bottom-survey .comment').removeClass('required');
+            $('.error-msg').empty()
+            console.log('korras');
+          }
+        }
+        else {
+          $('#bottom-survey .comment').removeClass('required');
+          $('.error-msg').empty()
+          console.log('korras');
+        }
+      });
     </script>
 
   </body>
