@@ -540,18 +540,14 @@ SCROLL BACK UP BUTTON
 
 
     &.closed {
-        bottom: -112px;
+        bottom: -249px;
     }
 
-    &.extended {
 
-        &.closed {
-            bottom: -243px;
-        }
-
+    fieldset, label {
+        margin: 0;
+        padding: 0;
     }
-
-    fieldset, label { margin: 0; padding: 0; }
 
     /****** Style Star Rating Widget *****/
 
@@ -583,18 +579,21 @@ SCROLL BACK UP BUTTON
 
     .rating > input:checked ~ label, /* show gold star when clicked */
     .rating:not(:checked) > label:hover, /* hover current star */
-    .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+    .rating:not(:checked) > label:hover ~ label {
+        color: #FFD700;
+    } /* hover previous stars in list */
 
     .rating > input:checked + label:hover, /* hover current star when changing rating */
     .rating > input:checked ~ label:hover,
     .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-    .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+    .rating > input:checked ~ label:hover ~ label {
+        color: #FFED85;
+    }
+    .error-msg-container {
+        height: 7px;
 
-    .comment {
-        display: none;
-
-        &.show {
-            display: block;
+        .error-msg {
+            font-size: 11px;
         }
     }
 }
