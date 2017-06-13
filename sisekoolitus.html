@@ -6,27 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sisulehe kujundus</title>
-    <!-- Main styles -->
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
-    <!-- Plugin styles -->
+    <!-- plugin css -->
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/plugins/x-editable/bootstrap-editable.css" rel="stylesheet">
-    <link href="css/plugins/datapicker/datepicker3.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/plugins/select2/select2.min.css">
-    <link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
-
-    <!-- Custom styles -->
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
     <link href="css/style.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body class="gray-bg">
 
-    <div id="wrapper" class="gray-darker-bg">
-
+    <div id="wrapper" class="gray-bg">
 
       <!-- TOP NAVBAR ------------------------------------->
       <nav class="navbar-top" role="navigation">  <background class="cherry-mod-bg"></background>
@@ -141,11 +136,8 @@
         <!--end----------------------------------------------------------></nav>
       <!-- end top navbar --------------------------------->
 
-
-
-      <!-- LEFT SIDEBAR
---------------------------------------------------------------->
-      <nav id="m-menu" class="min">   <div>
+      <!-- LEFT SIDEBAR ------------------------------------>
+      <nav id="m-menu" class="min">
 
         <ul>
           <li><span><i class="fa fa-desktop"></i>Coverpage</span>
@@ -235,213 +227,146 @@
           </div>
         </ul>
 
-        <!-- BOTTOM ICONS
----------------------------------------------------------------->
-        <div class="bottom-icons">
-          <div class="row">
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- end bottom icons ------------------------------->
+      </nav>
+      <!-- end left sidebar ------------------------------->
 
-        </div></nav>
-      <!-- end left sidebar ----------------------------------->
-
-      <!-- CONTENT
---------------------------------------------------------------->
+      <!-- PAGE ----------------------------------------->
       <div id="page-wrapper" class="gray-bg min">
 
-        <div class="row">
-          <div class="col-md-12">
-            <ol class="breadcrumb clos">
-              <li>
-                <a href="index.html">This is</a>
-              </li>
-              <li class="active">
-                <strong>Breadcrumb</strong>
-              </li>
+        <!-- breadcrumb -->
+        <div class="row page-wrapper gray-bg m-b-md">
+          <div class="col-sm-12">
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+
+              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+
+              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+
+              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
             </ol>
+
+          </div>
+          <span class="bookmark-btn-container">
+            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+          </span>
+        </div>
+        <!-- breadcrumb end -->
+
+        <!-- CONTENT -------------------------------------->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <i class="fa fa-graduation-cap"></i> Sisekoolitused
+          </div>
+          <div class="panel-body">
+
+            <div class="panel panel-default">
+              <div class="panel-body grey">
+                <p>TTÜ personali koolituse raames toimuvad 2016. aastal <strong>koolituskursused ja seminarid</strong>, mille loetelu on toodud allpool koolituskalendris.</p>
+
+                <p>Allpool toodud programmid on lõplikult valminud ja kooskõlastatud lektoritega ning neile on võimalik registreeruda läbi infosüsteemi, klikkides programmi üleval vasakus nurgas <strong>'Registreeru kursusele'</strong></p>
+
+                <p>Üksikasjalikumat informatsiooni kursuste kohta saab tel 620 2058 Ija Stõun (e-post <a id="obfuscated_email_12" href="mailto:ija dot stoun at ttu dot ee" style="display: none;">ija dot stoun at ttu dot ee</a><a href="mailto:ija dot stoun at ttu dot ee" id="obfuscated_email_11" style="display: none;">ija dot stoun at ttu dot ee</a><a href="mailto:ija.stoun@ttu.ee">ija.stoun@ttu.ee</a>)&nbsp;ja Liis Tõnisson (e-post <a id="obfuscated_email_22" href="mailto:marii dot saarlaid at ttu dot ee" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:marii dot saarlaid at ttu dot ee" id="obfuscated_email_21" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:marii.saarlaid@ttu.ee">liis.tonisson@ttu.ee</a>)&nbsp;vahendusel.</p><p style="text-align: justify;"><strong><span style="color: rgb(102, 0, 51);">NB! Palun veenduge, et olete saanud automaatse registreerimist kinnitava e-kirja. Kiri kinnitab, et teie registreerumine on õnnestunud.<br></span></strong></p>
+              </div>
+            </div>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th width="20%">JUUNI</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="right">14. juuni 2017</td>
+                  <td>
+                    <a href="#">
+                      <strong>Arengu- ja karjäärivestluste läbiviimise lühikoolitus juhtidele</strong>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>AUGUST</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="right">28.    - 29. august 2017
+                  </td>
+                  <td>
+                    <a href="#"><strong>Kõrgkoolididaktika õpituba</strong></a>
+                  </td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>OKTOOBER</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="right">10. oktoober 2017</td>
+                  <td><a href="#"><strong>Isikuandmete töötlemise ja kaitse alane lühikoolitus </strong></a>
+                  </td>
+                </tr>
+                 <tr>
+                  <td align="right">17. oktoober 2017</td>
+                  <td><a href="#"><strong>Suurepäraste loomuomaduste juurutamine </strong></a>
+                  </td>
+                </tr>  <tr>
+                  <td align="right">28. oktoober 2017</td>
+                  <td><a href="#"><strong>Exceli kasutuskoolitus  edasijõudnutele</strong></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
         </div>
 
-        <!--PAGE
---------------------------------------------------------------->
-        <div class="wrapper wrapper-content animated fadeIn" style="font-size: 1.1em">
-          <!--1ST BLOCK ERRAND FORM
---------------------------------------------------------------->
-          <div>
-            <div class="row"><div class="col-sm- text-center font-bold m-b-xs">Üldandmed</div></div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Lähetatu nimi</div><div class="col-xs-6"><a href="#" id="name" data-type="text" data-pk="1" data-url="/post">Peeter Kuusk</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Struktuuriüksus</div><div class="col-xs-6"><a href="#" id="department" data-type="text" data-pk="1" data-url="/post">Tarkvara osakond</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Amet</div><div class="col-xs-6"><a href="#" id="position" data-type="text" data-pk="1" data-url="/post">Arendusjuht</a></div>
-            </div>
-          </div>
-          <!--1ST BLOCK ERRAND FORM END
---------------------------------------------------------------->
-          <!--2ND BLOCK ERRAND FORM
---------------------------------------------------------------->
-          <div>
-            <div class="row"><div class="col-sm-12 text-center font-bold m-b-xs m-t-md">Lähetuse sisu</div></div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Sihtkoht</div><div class="col-xs-6">
-              <a href="#" id="destination-country" data-type="typeaheadjs" data-pk="1" data-placement="right" data-title="Alusta riigi nime kirjutamist" class="editable editable-click" data-original-title="" title="" data-value="Holland"></a>,
-              <a href="#" id="destination-city" data-type="text" data-value="Leyden" data-pk="1" data-url="/post"></a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Lähetuse kestus</div><div class="col-xs-6">
+        <!-- end content ---------------------------------->
 
-              <a href="#" id="errand_duration_b" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-placement="right" data-title="When you want vacation to start?" class="editable editable-click" style="display: inline;">20.02.2013</a>
-
-              -
-              <a href="#" id="errand_duration_e" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-placement="right" data-title="When you want vacation to start?" class="editable editable-click" style="display: inline;">25.02.2013</a>
-
-
-
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right">Finantseerimise allikad</div><div class="col-xs-6"><a href="#" id="financing" data-type="text" data-value="NATO" data-pk="1" data-url="/post" data-placeholder="Puuduvad"></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Organisatsioon</div><div class="col-xs-6"><a href="#" id="organization" data-type="text" data-value="MSG-117" data-pk="1" data-url="/post"></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Lähetuse eesmärk</div><div class="col-xs-6"><a href="#" id="errand-goal" data-type="select" data-value="9" data-pk="1" data-url="/post"></a></div>
-            </div>
-          </div>
-          <!--2ND BLOCK ERRAND FORM END
---------------------------------------------------------------->
-          <!--3RD BLOCK ERRAND FORM
---------------------------------------------------------------->
-          <div>
-            <div class="row">
-              <div class="col-sm-12 text-center font-bold m-b-xs m-t-md">Planeeritavad kulud</div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Päevaraha</div>
-              <div class="col-xs-6 "><a href="#" id="daily-expenditure" data-type="text" data-pk="1" data-value="350€" data-title="this is data title" class="editable editable-click" ></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Sõidukulud</div>
-              <div class="col-xs-6 "><a href="#" id="travel-expenditure" data-type="text" data-pk="1" data-value="452€" data-title="this is data title" class="editable editable-click" ></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Majutuskulud</div>
-              <div class="col-xs-6 "><a href="#" id="accomodation-expenditure" data-type="text" data-pk="1" data-value="1240€" data-title="this is data title" class="editable editable-click" ></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right m-b-xs">Muud kulud</div>
-              <div class="col-xs-6 "><a href="#" id="other-expenditure" data-type="text" data-pk="1" data-value="77€" data-title="this is data title" class="editable editable-click" ></a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right">Selgitus</div>
-              <div class="col-xs-6  m-b-xs">
-                <a href="#" id="other-expenditure-comment" data-type="textarea" data-pk="1" data-value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil voluptatem iste eos vitae necessitatibus, ratione veniam itaque. Nulla quos voluptatum rem natus animi esse tempore voluptate, blanditiis saepe at, eum?" data-title="this is data title" class="editable editable-click" ></a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 text-right">
-                <div class="hr-line-solid"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right font-bold">Planeeritavad kulud kokku</div><div class="col-xs-6  m-b"><a href="#" id="total-expenditure" data-type="select" data-pk="1" data-value="" data-title="this is data title" class="editable editable-click" >2042€</a></div>
-            </div>
-            <div class="row m-b-xs">
-              <div class="col-xs-6 text-right">Soovin avanssi summas</div><div class="col-xs-6"><a href="#" id="advance" data-type="text" data-pk="1" data-value="" data-title="advance" class="editable editable-click" >350€</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right">Palun avanss kanda minu arvelduskontole</div><div class="col-xs-6  m-b"><a href="#" id="my-bank-account" data-type="text" data-pk="1" data-value="" data-title="this is data title" class="editable editable-click" >100290042002</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right">Finantsallikate käsutaja(d)</div><div class="col-xs-6  m-b"><a href="#" id="finance-manager" data-type="text" data-pk="1" data-value="Sander Marandi" data-title="this is data title" class="editable editable-click" >Sander Marandi</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 text-right">Struktuuriüksuse juht</div><div class="col-xs-6  m-b"><a href="#" id="head-of-department" data-type="text" data-pk="1" data-value="Anna Kolossova" data-title="this is data title" class="editable editable-click" >Anna Kolossova</a></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 text-center m-b-lg">
-                <span class="font-bold">Olen teadlik ja nõus, et kasutamata avansi  peab tööandja minu palgast kinni.</span>
-              </div>
-            </div>
-            <div class="row m-t-md text-center">
-
-              <div class="col-sm-6 m-b-sm">
-                <button class="btn btn-primary pull-right">Saada kooskõlastamisele</button>
-              </div>
-
-              <div class="col-sm-6 ">
-                <button class="btn btn-default pull-left">Tühejnda väljad</button>
-              </div>
-            </div>
-          </div>
-          <!--3RD BLOCK ERRAND FORM END
---------------------------------------------------------------->
-          <!--MODAL CONTENT
---------------------------------------------------------------->
-
-          <!--MODAL CONTENT END
---------------------------------------------------------------->
-        </div>
-        <!--PAGE END
---------------------------------------------------------------->
-
-        <!-- FULLSCREEN MODE TOGGLE BUTTON
-------------------------------------------------------------------->
+        <!-- fullscreen mode -->
         <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
 
-        <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
+        <!-- scroll to top -->
         <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
       </div>
-      <!-- end content ---------------------------------------->
-
+      <!-- end page --------------------------------------->
     </div>
-    <!-- end wrapper ------------------------------------------>
+    <!-- end wrapper -------------------------------------->
 
-
-    <!--FOOTER
---------------------------------------------------------------->
+    <!-- FOOTER ------------------------------------------->
     <div class="footer">
       <div>
         TTÜ Siseportaal &copy; 2014 - 2015
       </div>
     </div>
+    <!-- footer end --------------------------------------->
 
+    <!-- MODAL CONTENT ------------------------------------>
 
-    <!--MODAL CONTENT
---------------------------------------------------------------->
+    <!-- modal content end -------------------------------->
 
-    <!--MODAL CONTENT END
---------------------------------------------------------------->
-
-
-    <!--CONTENT MASK FOR MOBILE MENU
---------------------------------------------------------------->
+    <!-- content mask for mobile menu -->
     <div id="c-mask" class="c-mask"></div>
 
+    <!-- loading animation -->
+    <div id="loading-mask" class="c-mask"></div>
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
 
-
-    <!-- SCRIPTS ------------------------------------>
+    <!-- SCRIPTS ----------------------------------------->
     <!-- Base scripts -->
     <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
     <!-- Plugin scripts -->
@@ -455,7 +380,7 @@
     <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
     <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
-
+    <!-- end scripts -------------------------------------->
   </body>
 
 </html>

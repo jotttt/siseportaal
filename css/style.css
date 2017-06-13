@@ -537,6 +537,12 @@ table tr td {
     border-bottom: 1px solid #eee;
     position: relative;
   }
+  td.pull-right {
+    float: none !important;
+  }
+  td[align="right"] {
+    text-align: inherit;
+  }
   td:before {
     position: absolute;
     top: 6px;
