@@ -3,34 +3,38 @@
     $.fn.portalui = function () {
 
         /**************************************************************
-        GENERAL SCRIPTS
-        **************************************************************/
+         GENERAL SCRIPTS
+         *************************************************************/
 
         //INIT M-MENU
-        //--------------------------------------------------------------
+        //-------------------------------------------------------------
         $("#m-menu").mmenu({
             "navbar": {
                 "title": ""
             }
         });
-        //end-----------------------------------------------------------
+        //end----------------------------------------------------------
 
+        // MOVE FOOTER TEXT ACCORDING TO LEFT SIDEBAR
+        //----------------------------------------------------------
+        var adjustFooter = function() {
+            if ($("#m-menu").hasClass("min")) {
+                $(".footer  div").removeClass("left-menu-open");
+            }
+            else if ($("#m-menu").hasClass("max")) {
+                $(".footer  div").addClass("left-menu-open");
+            }
+        };
+        adjustFooter();
+        // end -----------------------------------------------------
 
         //KEEP LEFT NAVBAR OPEN BUTTON
         //--------------------------------------------------------
-        $(document).on("click", "#navbar-expand", function() {
+        $(document).on("click", "#navbar-expand", function () {
             $("#page-wrapper").toggleClass("min");
             $("#m-menu").toggleClass("min max");
-
-            if($("#m-menu").hasClass("min")) {
-                //console.log("tere");
-
-            }
-            setTimeout(function() {
-
-            }, 1000);
             $(this).children("i").toggleClass("fa-expand fa-compress");
-
+            adjustFooter();
         });
         //end-----------------------------------------------------
 
@@ -38,26 +42,26 @@
         //TOGGLE M-MOBILE MENU
         //--------------------------------------------------------------
         $("#open-mobile-menu").click(function () {
-            if($('#m-menu').hasClass('max')) {
+            if ($('#m-menu').hasClass('max')) {
                 $("#m-menu").removeClass("max");
                 $("#m-menu").addClass("min");
                 $("#page-wrapper").addClass("min");
             }
             $("#m-menu.min").addClass("open");
             $("#c-mask").addClass("active");
-            $("html, body").css("overflow","hidden");
+            $("html, body").css("overflow", "hidden");
         });
 
         $("#c-mask, .nav-second-level li a.ajax-load").click(function () {
             $("#m-menu.min").removeClass("open");
             $("#c-mask").removeClass("active");
-            $("html, body").css("overflow","");
+            $("html, body").css("overflow", "");
         });
         //end-----------------------------------------------------------
 
         //CLOSE TOP MOBILE MENU ON SELECTION
         //--------------------------------------------------------------
-        $(function(){
+        $(function () {
             var navMain = $(".navbar-collapse");
 
             navMain.on("click", ".dropdown-menu a", null, function () {
@@ -71,11 +75,10 @@
         //--------------------------------------------------------------
         $(document).on('click', '#open-mobile-search', function (e) {
 
-            if($('#mobile-search').hasClass('hidden')) {
+            if ($('#mobile-search').hasClass('hidden')) {
                 $("#mobile-search").removeClass("hidden");
                 e.preventDefault();
-            }
-            else {
+            } else {
                 $("#mobile-search").addClass("hidden");
                 e.preventDefault();
             }
@@ -86,42 +89,42 @@
         //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
         //--------------------------------------------------------------
         /*var didScroll;
-        var lastScrollTop = 0;
-        var delta = 5;
-        var navbarHeight = $('.navbar-static-top').outerHeight();
+         var lastScrollTop = 0;
+         var delta = 5;
+         var navbarHeight = $('.navbar-static-top').outerHeight();
 
-        $(window).scroll(function (event) {
-            didScroll = true;
-        });
+         $(window).scroll(function (event) {
+         didScroll = true;
+         });
 
-        setInterval(function () {
-            if (didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 250);
+         setInterval(function () {
+         if (didScroll) {
+         hasScrolled();
+         didScroll = false;
+         }
+         }, 250);
 
-        function hasScrolled() {
-            var st = $(this).scrollTop();
+         function hasScrolled() {
+         var st = $(this).scrollTop();
 
-            // Make sure they scroll more than delta
-            if (Math.abs(lastScrollTop - st) <= delta) {
-                return;
-            }
-            // If they scrolled down and are past the navbar, add class .nav-up.
-            // This is necessary so you never see what is "behind" the navbar.
-            if (st > lastScrollTop && st > navbarHeight) {
-                // Scroll Down
-                $('.navbar-static-top').removeClass('nav-down').addClass('nav-up');
-            } else {
-                // Scroll Up
-                if (st + $(window).height() < $(document).height()) {
-                    $('.navbar-static-top').removeClass('nav-up').addClass('nav-down');
-                }
-            }
+         // Make sure they scroll more than delta
+         if (Math.abs(lastScrollTop - st) <= delta) {
+         return;
+         }
+         // If they scrolled down and are past the navbar, add class .nav-up.
+         // This is necessary so you never see what is "behind" the navbar.
+         if (st > lastScrollTop && st > navbarHeight) {
+         // Scroll Down
+         $('.navbar-static-top').removeClass('nav-down').addClass('nav-up');
+         } else {
+         // Scroll Up
+         if (st + $(window).height() < $(document).height()) {
+         $('.navbar-static-top').removeClass('nav-up').addClass('nav-down');
+         }
+         }
 
-            lastScrollTop = st;
-        }*/
+         lastScrollTop = st;
+         }*/
         //end------------------------------------------------------
 
         //BACK TO TOP BUTTON
@@ -145,7 +148,7 @@
 
         //SPINNER WHILE LOADING PAGE CONTENT
         //------------------------------------------------------
-        (function(factory) {
+        (function (factory) {
 
             if (typeof exports == 'object') {
                 // CommonJS
@@ -155,15 +158,16 @@
                 define(['jquery', 'spin'], factory);
             } else {
                 // Browser globals
-                if (!window.Spinner) throw new Error('Spin.js not present')
+                if (!window.Spinner)
+                    throw new Error('Spin.js not present');
                 factory(window.jQuery, window.Spinner);
             }
 
-        }(function($, Spinner) {
+        }(function ($, Spinner) {
 
-            $.fn.spin = function(opts, color) {
+            $.fn.spin = function (opts, color) {
 
-                return this.each(function() {
+                return this.each(function () {
                     var $this = $(this),
                         data = $this.data();
 
@@ -173,7 +177,7 @@
                     }
                     if (opts !== false) {
                         opts = $.extend(
-                            { color: color || $this.css('color') }, $.fn.spin.presets[opts] || opts
+                            {color: color || $this.css('color')}, $.fn.spin.presets[opts] || opts
                         );
                         data.spinner = new Spinner(opts).spin(this);
                     }
@@ -181,9 +185,9 @@
             };
 
             $.fn.spin.presets = {
-                tiny:  { lines:  8, length: 2, width: 2, radius: 3 },
-                small: { lines:  8, length: 4, width: 3, radius: 5 },
-                large: { lines: 10, length: 8, width: 4, radius: 8 },
+                tiny: {lines: 8, length: 2, width: 2, radius: 3},
+                small: {lines: 8, length: 4, width: 3, radius: 5},
+                large: {lines: 10, length: 8, width: 4, radius: 8},
                 ttu: {
                     lines: 13, // The number of lines to draw
                     length: 28, // The length of each line
@@ -198,8 +202,7 @@
                     speed: 1, // Rounds per second
                     trail: 60, // Afterglow percentage
                     fps: 20, // Frames per second when using setTimeout() as a fallback for CSS
-                    zIndex: 2e9, // The z-index (defaults to 2000000000)
-                    className: 'spinner', // The CSS class to assign to the spinner
+                    zIndex: 2e9, // The z-index (defaults to 2000000000)                     className: 'spinner', // The CSS class to assign to the spinner
                     top: '50%', // Top position relative to parent
                     left: '50%', // Left position relative to parent
                     shadow: false, // Whether to render a shadow
@@ -224,45 +227,45 @@
         $('input, textarea').placeholder();
 
         /*// MEGA MENU SCRIPTS
-        //---------------------------------------------------
-        //SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
-        $(".l3").hide();
-        $(".level-2 a").mouseenter(function () {
-            //get height and width of lvl 2 elem. and position lvl 3 elem
-            var height = ($(this).position()).top - 16;
-            var width = $(this).width() + 32;
-            $(this).parent().nextUntil('.level-2').css("left", width).css("top", height).show();
-        });
+         //---------------------------------------------------
+         //SHOW LEVEL 3 ELEMENTS ON LEVEL 2 HOVER
+         $(".l3").hide();
+         $(".level-2 a").mouseenter(function () {
+         //get height and width of lvl 2 elem. and position lvl 3 elem
+         var height = ($(this).position()).top - 16;
+         var width = $(this).width() + 32;
+         $(this).parent().nextUntil('.level-2').css("left", width).css("top", height).show();
+         });
 
-        //HIDE LEVEL 3 ELEMENT
-        // hide on lvl 3 element box mouse out
-        $(".l3").mouseleave(function () {
-            $(this).hide();
-        });
-        // hide on another lvl 2 element mouse in
-        $(".level-2").mouseenter(function () {
-            $(".l3").hide();
-        });
+         //HIDE LEVEL 3 ELEMENT
+         // hide on lvl 3 element box mouse out
+         $(".l3").mouseleave(function () {
+         $(this).hide();
+         });
+         // hide on another lvl 2 element mouse in
+         $(".level-2").mouseenter(function () {
+         $(".l3").hide();
+         });
 
-        //ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
-        $(".l3").prev().children().addClass("menu-chevron");
-        //end---------------------------------------------------*/
+         //ADD CHEVRON TO LEVEL 2 ELEMENTS THAT HAVE CHILDREN
+         $(".l3").prev().children().addClass("menu-chevron");
+         //end---------------------------------------------------*/
 
 
         //init chosen.js
         $(".chosen-select").chosen({width: "100%"});
 
         /****************************************************
-        GENERAL SCRIPTS END
-        ****************************************************/
+         GENERAL SCRIPTS END
+         ****************************************************/
 
         /*****************************************************
-        DASHBOARD
-        *****************************************************/
+         DASHBOARD
+         *****************************************************/
 
         //Carousels
         //----------------------------------------------------
-        function playcarousel(){
+        function playcarousel() {
             $('#carousel_desktop').carousel({
                 interval: 10000
             });
@@ -272,8 +275,8 @@
         }
         window.setTimeout(playcarousel, 1000);
         /*****************************************************
-        CONTENT PAGES
-        *****************************************************/
+         CONTENT PAGES
+         *****************************************************/
 
         //RIGHT SIDEBAR TOGGLE
         //-------------------------------------------------------
@@ -287,9 +290,7 @@
         //display on hover only
         $("#fullscreen-btn").hover(function () {
             $(this).css({
-                "opacity": "1",
-                "transition": "opacity .25s ease-in-out",
-                "-moz-transition": "opacity .25s ease-in-out",
+                "opacity": "1", "transition": "opacity .25s ease-in-out", "-moz-transition": "opacity .25s ease-in-out",
                 "-webkit-transition": "opacity .25s ease-in-out;"
             });
         }, function () {
@@ -299,10 +300,9 @@
         $("#fullscreen-btn").click(function () {
             $(this).toggleClass("active");
             if ($("#fullscreen-btn").hasClass("active")) {
-                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .wrapper-content, .breadcrumb, .footer").addClass("closed");
-            }
-            else {
-                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .wrapper-content, .breadcrumb, .footer").removeClass("closed");
+                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .breadcrumb, .footer").addClass("closed");
+            } else {
+                $("nav.navbar-top, nav#m-menu, #page-wrapper, #page-wrapper.min, .breadcrumb, .footer").removeClass("closed");
             }
         });
         //--------------------------------------------------
@@ -327,8 +327,65 @@
         //--------------------------------------------------
         //MASONRY BEHAVIOUR END
 
+        // FEEDBACK
+        $(document).on("click", "#bottom-feedback .panel-heading", function () {
+            $('#bottom-feedback').toggleClass('closed');
+            $('#bottom-feedback .panel-heading span i').toggleClass('fa-chevron-down');
+        });
 
+        var $rating = 0;
+
+        $(document).on("click", "#bottom-feedback .rating label", function () {
+            $rating = $(this).attr('data-stars');
+        });
+
+        $(document).on("click", "#sendFeedback", function () {
+            var minLength = ' 15 ';
+            var $textarea = $('#bottomFeedbackComment');
+            if ($rating < 4) {
+                if ($textarea.val().length < minLength) {
+                    $('.error-msg').empty().append(translations.txt_js_add_comment + minLength + translations.txt_js_add_comment2);
+                    $('#bottom-feedback .comment').addClass('required');
+                    return false;
+                } else {
+                    $('#bottom-feedback .comment').removeClass('required');
+                    $('.error-msg').empty();
+                }
+            } else {
+                $('#bottom-feedback .comment').removeClass('required');
+                $('.error-msg').empty();
+            }
+            sendFeedback($textarea.val(), $rating).done(function (data) {
+                if (data.success) {
+                    toastr.success("", translations.txt_js_feedback_sent, toastrSuccess);
+                    $('#bottom-feedback').toggleClass('closed');
+                    $('#bottom-feedback .panel-heading span i').toggleClass('fa-chevron-down');
+                } else {
+                    toastr.error("", translations.txt_js_feedback_fail, toastrError);
+                }
+            });
+        });
+        // FEEDBACK END
 
     };
-    $().portalui();
+
+    function sendFeedback(message, rating) {
+        var url = '/api/send:feedback';
+        return $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: url,
+            data: {
+                message: message,
+                rating: rating,
+                module: portal_module,
+                focus: portal_focus
+            }
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            toastr.error("", 'Tagasiside saatmine ei õnnestunud.', toastrError);
+        });
+    }
+    // * this line only for local dev
+ $().portalui();
+    // * end this line
 }(jQuery));

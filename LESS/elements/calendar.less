@@ -1,369 +1,396 @@
 // main: ../style.less
+#VacationsTable {
 
-.advancedTable {
-    border: 10px solid @lightest-grey;
-    //margin-bottom: 20px;
+    table {
+        display: table;
 
-    tr {
+        thead {
+            display: table-header-group;
 
-        td {
-            padding: 0;
+            tr {
+                display: table-row;
+
+                th {
+                    display: table-cell;
+                }
+            }
         }
 
+        tbody {
+            display: table-row-group;
+            tr {
+                display: table-row;
+
+                td {
+                    display: table-cell;
+                    padding: 0;
+                }
+            }
+        }
     }
-}
 
-.advancedTable .we {
-    background-color: @lightest-grey;
-}
+    .advancedTable * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
 
-.advancedTable .sh {
-    background-color: #fffdc0;
-}
+    .advancedTable {
+        border: 10px solid @lightest-grey;
+    }
 
-.advancedTable .cdt {
-    font-weight: 700;
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px);
-}
+    .advancedTable .we {
+        background-color: @lightest-grey;
+    }
 
-.advancedTable .cdb {
-    font-weight: 700;
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px);
-}
+    .advancedTable .sh {
+        background-color: #fffdc0;
+    }
 
-.advancedTable .sh.cdt {
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, #FFFDC0, #FFFDC0);
-}
+    .advancedTable .cdt {
+        font-weight: 700;
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px);
+    }
 
-.advancedTable .sh.cdb {
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, #FFFDC0, #FFFDC0);
-}
+    .advancedTable .cdb {
+        font-weight: 700;
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px);
+    }
 
-.advancedTable .we.cdt {
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, @lightest-grey, @lightest-grey);
-}
+    .advancedTable .sh.cdt {
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, #FFFDC0, #FFFDC0);
+    }
 
-.advancedTable .we.cdb {
-    background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, @lightest-grey, @lightest-grey);
-}
+    .advancedTable .sh.cdb {
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, #FFFDC0, #FFFDC0);
+    }
 
-#firstTd {
-    //border: 1px solid @lighter-grey;
-    background: @lightest-grey;
-}
+    .advancedTable .we.cdt {
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(180deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, @lightest-grey, @lightest-grey);
+    }
 
-.tableHeader {
-    width:  23px;
-    height: 23px;
-    line-height: 24px;
-    text-align: center;
-}
+    .advancedTable .we.cdb {
+        background: repeating-linear-gradient(90deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 21px), repeating-linear-gradient(0deg, @lighter-grey, @lighter-grey 3px, rgba(221, 221, 221, 0) 2px, rgba(221, 221, 221, 0) 24px),linear-gradient(to right, @lightest-grey, @lightest-grey);
+    }
 
-.tableFixedTop {
-    overflow: hidden;
-    width: 800px;
-    -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
-    -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
-    box-shadow: 20px 0px 0px 0px #e5e6e7;
-}
+    #firstTd {
+        //border: 1px solid @lighter-grey;
+        background: @lightest-grey;
+    }
 
-.tableFixedTop .tableYear {
-    width: 768px;
-    border: 1px solid @lighter-grey;
-    height: 24px;
-}
+    .tableHeader {
+        width:  23px;
+        height: 23px;
+        line-height: 24px;
+        text-align: center;
+    }
 
-.tableFixedTop .tableYear td .tableHeader {
-    height: 24px;
-    width: 100px;
-    border-right: 1px solid @lighter-grey;
-}
+    .tableFixedTop {
+        overflow: hidden;
+        width: 800px;
+        -webkit-box-shadow: 20px 0px 0px 0px #e5e6e7;
+        -moz-box-shadow: 20px 0px 0px 0px #e5e6e7;
+        box-shadow: 20px 0px 0px 0px #e5e6e7;
+    }
 
-.tableFixedTop .tableYear td:last-child .tableHeader {
-    border-right: 0px solid @lighter-grey;
-}
+    .tableFixedTop .tableYear {
+        width: 768px;
+        border: 1px solid @lighter-grey;
+        height: 24px;
+    }
 
-.tableFixedTop .tableMonth {
-
-}
-
-.tableFixedTop .tableMonth td .tableHeader {
-    width: 625px;
-    border-left: 1px solid @lighter-grey;
-    text-align: center;
-}
-
-.tableFixedTop .tableMonth td:last-child   {
-    border-right: 1px solid @lighter-grey;
-}
-
-.tableFixedTop .tableDay {
-
-}
-
-.tableFixedTop .tableDay td {
-    border: 1px solid @lighter-grey;
-}
-
-.tableFixedTop .tableWeekDay {
-    overflow: hidden;
-}
-
-.tableFixedTop .tableWeekDay td {
-    width: 24px;
-    border: 1px solid @lighter-grey;
-    border-top: 0px solid @lighter-grey;
-}
-
-
-
-//NAME COLUMN
-//------------------------------------------------
-#firstcol {
-    overflow: hidden;
-    height: 150px;
-    border-bottom: 17px solid @lightest-grey;
-}
-
-.tableFixedLeft {
-
-}
-
-.tableFixedLeft tr {
-    border: 1px solid @lighter-grey;
-}
-
-.tableFixedLeft td {
-    height: 24px;
-    padding: 0 10px;
-}
-
-.tableFixedLeft td div {
-    width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/*@media screen and (max-width: @mobile-width) {
-    .tableFixedLeft td div {
+    .tableFixedTop .tableYear td .tableHeader {
+        height: 24px;
         width: 100px;
+        border-right: 1px solid @lighter-grey;
     }
+
+    .tableFixedTop .tableYear td:last-child .tableHeader {
+        border-right: 0px solid @lighter-grey;
+    }
+
+    .tableFixedTop .tableMonth {
+
+    }
+
+    .tableFixedTop .tableMonth td .tableHeader {
+        width: 625px;
+        border-left: 1px solid @lighter-grey;
+        text-align: center;
+    }
+
+    .tableFixedTop .tableMonth td:last-child   {
+        border-right: 1px solid @lighter-grey;
+    }
+
+    .tableFixedTop .tableDay {
+
+    }
+
+    .tableFixedTop .tableDay td {
+        border: 1px solid @lighter-grey;
+    }
+
+    .tableFixedTop .tableWeekDay {
+        overflow: hidden;
+    }
+
+    .tableFixedTop .tableWeekDay td {
+        width: 24px;
+        border: 1px solid @lighter-grey;
+        border-top: 0px solid @lighter-grey;
+    }
+
+
+
+    //NAME COLUMN
+    //------------------------------------------------
+    #firstcol {
+        overflow: hidden;
+        height: 150px;
+        border-bottom: 17px solid @lightest-grey;
+    }
+
+    .tableFixedLeft {
+
+    }
+
+    .tableFixedLeft tr {
+        border: 1px solid @lighter-grey;
+    }
+
+    .tableFixedLeft td {
+        height: 24px;
+        padding: 0 10px;
+    }
+
+    .tableFixedLeft td div {
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /*@media screen and (max-width: @mobile-width) {
+    .tableFixedLeft td div {
+    width: 100px;
+}
 }*/
 
-//DATA CONTAINER
-//------------------------------------------------
-.tableDataContainer {
-    overflow: scroll;
-    min-width:200px;
-    height:150px;
-    position:relative;
-}
+    //DATA CONTAINER
+    //------------------------------------------------
+    .tableDataContainer {
+        overflow: scroll;
+        min-width:200px;
+        height:150px;
+        position:relative;
+    }
 
-.tableData {
-    width: 751px;
-}
+    .tableData {
+        width: 751px;
+    }
 
-.tableData tr {
-    //width: 526px;
-}
+    .tableData tr {
+        //width: 526px;
+    }
 
-.tableData td {
-    height: 24px;
-    line-height: 24px;
-    border: 1px solid @lighter-grey;
-    padding: 0;
-    margin: 0;
-}
+    .tableData td {
+        height: 24px;
+        line-height: 24px;
+        border: 1px solid @lighter-grey;
+        padding: 0;
+        margin: 0;
+    }
 
-.tableData td.green {
-    background: #4db74d;
-    //border: 1px solid transparent;
-}
+    .tableData td.green {
+        background: #4db74d;
+        //border: 1px solid transparent;
+    }
 
-.leaveBar {
-    position: absolute;
-    height: 19px;
-    border-radius: 5px;
-    z-index: 1;
-    cursor: pointer;
-}
+    .leaveBar {
+        position: absolute;
+        height: 19px;
+        border-radius: 5px;
+        z-index: 1;
+        cursor: pointer;
+    }
 
-.leaveBar.green {
-    background: #7aeda6;
-}
+    .leaveBar.green {
+        background: #7aeda6;
+    }
 
-.leaveBar.blue {
-    background: #90d8ff;
-}
+    .leaveBar.blue {
+        background: #90d8ff;
+    }
 
-.leaveBar.red {
-    background: #ffb9b9;
-}
+    .leaveBar.red {
+        background: #ffb9b9;
+    }
 
-.leaveBar.orange {
-    background: #ffb46a;
-}
+    .leaveBar.orange {
+        background: #ffb46a;
+    }
 
-.leaveBar.yellow {
-    background: #ffebaa;
-}
+    .leaveBar.yellow {
+        background: #ffebaa;
+    }
 
-.leaveBar.purple {
-    background: #f4a3ff;
-}
+    .leaveBar.purple {
+        background: #f4a3ff;
+    }
 
-.leaveBar.teal {
-    background: #91fff7;
-}
+    .leaveBar.teal {
+        background: #91fff7;
+    }
 
-.leaveBarText {
-    text-align: center;
-    line-height: 19px;
-    font-weight: 600;
-    font-size: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+    .leaveBarText {
+        text-align: center;
+        line-height: 19px;
+        font-weight: 600;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
-.advancedTableControls {
-    background: @lightest-grey;
-    padding: 3px 0 10px 0px;
-    -webkit-box-shadow: 26px 0px 0px 0px #e5e6e7;
-    -moz-box-shadow: 26px 0px 0px 0px #e5e6e7;
-    box-shadow: 26px 0px 0px 0px #e5e6e7;
-    text-align: center;
+    .advancedTableControls {
+        background: @lightest-grey;
+        padding: 3px 0 10px 0px;
+        -webkit-box-shadow: 26px 0px 0px 0px #e5e6e7;
+        -moz-box-shadow: 26px 0px 0px 0px #e5e6e7;
+        box-shadow: 26px 0px 0px 0px #e5e6e7;
+        text-align: center;
 
-}
+    }
 
-.advancedTableControlsContainer {
-    border: 1px solid @lighter-grey;
-    margin: 10px;
-    border-radius: 5px 20px 5px;
-    border-collapse: separate;
-}
+    .advancedTableControlsContainer {
+        border: 1px solid @lighter-grey;
+        margin: 10px;
+        border-radius: 5px 20px 5px;
+        border-collapse: separate;
+    }
 
-.advancedTableControlsContainer a {
-    color: @lighter-grey;
-    padding: 2px 15px;
-}
+    .advancedTableControlsContainer a {
+        color: @lighter-grey;
+        padding: 2px 15px;
+    }
 
-.advancedTableControlsContainer a:hover {
-    color: @grey;
-}
+    .advancedTableControlsContainer a:hover {
+        color: @grey;
+    }
 
 
-//GANTT CALENDAR PLUGIN
-//------------------------------------------------------
-.gantt *, *:before, *:after {
-    box-sizing: content-box;
-}
+    //GANTT CALENDAR PLUGIN
+    //------------------------------------------------------
+    .gantt *, *:before, *:after {
+        box-sizing: content-box;
+    }
 
-.gantt, .gantt2 {
-    border: @border;
-}
+    .gantt, .gantt2 {
+        border: @border;
+    }
 
-.fn-gantt .fn-content {
-    //overflow: auto;
-    //height: 503px;
-}
+    .fn-gantt .fn-content {
+        //overflow: auto;
+        //height: 503px;
+    }
 
-.fn-gantt .dataPanel {
-    //overflow: auto;
-    //height: 503px;
-}
+    .fn-gantt .dataPanel {
+        //overflow: auto;
+        //height: 503px;
+    }
 
-.fn-gantt .rightPanel {
-    //overflow:inherit;
-    //height: 503px;
-}
-
-.fn-gantt .leftPanel {
-    //height: 503px;
-    //overflow: hidden;
-}
-
-.fn-gantt .rightPanel .month, .fn-gantt .rightPanel .year {
-    background: white;
-}
-
-.fn-gantt .wd {
-    background: white;
-}
-
-.fn-gantt .spacer {
-    //position: fixed;
-    background: white;
-    height: 96px;
-    width: 225px !important;
-}
-
-.fn-gantt .row.year {
-    //position: fixed;
-    height: 23px;
-}
-
-.fn-gantt .row.month {
-    //top: 46px;
-    //position: fixed;
-    height: 23px;
-    z-index: 5555;
-}
-
-.fn-gantt .leftPanel .fn-label {
-    margin: 0 0 0 10px;
-}
-
-.fn-gantt .leftPanel .name, .fn-gantt .leftPanel .desc {
-    background: white;
-}
-
-.fn-gantt .bottom {
-    background: white;
-}
-
-.fn-gantt .bar {
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
+    .fn-gantt .rightPanel {
+        //overflow:inherit;
+        //height: 503px;
+    }
 
     .fn-gantt .leftPanel {
-        width: 150px;
+        //height: 503px;
+        //overflow: hidden;
+    }
+
+    .fn-gantt .rightPanel .month, .fn-gantt .rightPanel .year {
+        background: white;
+    }
+
+    .fn-gantt .wd {
+        background: white;
+    }
+
+    .fn-gantt .spacer {
+        //position: fixed;
+        background: white;
+        height: 96px;
+        width: 225px !important;
+    }
+
+    .fn-gantt .row.year {
+        //position: fixed;
+        height: 23px;
+    }
+
+    .fn-gantt .row.month {
+        //top: 46px;
+        //position: fixed;
+        height: 23px;
+        z-index: 5555;
+    }
+
+    .fn-gantt .leftPanel .fn-label {
+        margin: 0 0 0 10px;
+    }
+
+    .fn-gantt .leftPanel .name, .fn-gantt .leftPanel .desc {
+        background: white;
     }
 
     .fn-gantt .bottom {
-        height: 100px;
+        background: white;
     }
 
-    .fn-gantt .navigate {
-
-        padding-left: 0px;
-        text-align: center;
+    .fn-gantt .bar {
+        cursor: pointer;
     }
 
-    .fn-gantt .navigate .nav-slider-content {
-        display: block;
-        width: 250px;
-        margin: 10px 0 10px 9px;
-        position: relative;
-        text-align: center;
-    }
+    @media screen and (max-width: 768px) {
 
-    .fn-gantt .navigate .nav-slider-bar {
-        width: 250px;
-    }
+        .fn-gantt .leftPanel {
+            width: 150px;
+        }
 
-    .fn-gantt .navigate .nav-slider-left {
-        display: block;
-        margin: 40px 0 0 0;
-    }
+        .fn-gantt .bottom {
+            height: 100px;
+        }
 
-    .fn-gantt .navigate .nav-slider-right {
-        display: block;
-        float: none;
-        margin: 10px 0 0 160px;
-    }
+        .fn-gantt .navigate {
 
+            padding-left: 0px;
+            text-align: center;
+        }
+
+        .fn-gantt .navigate .nav-slider-content {
+            display: block;
+            width: 250px;
+            margin: 10px 0 10px 9px;
+            position: relative;
+            text-align: center;
+        }
+
+        .fn-gantt .navigate .nav-slider-bar {
+            width: 250px;
+        }
+
+        .fn-gantt .navigate .nav-slider-left {
+            display: block;
+            margin: 40px 0 0 0;
+        }
+
+        .fn-gantt .navigate .nav-slider-right {
+            display: block;
+            float: none;
+            margin: 10px 0 0 160px;
+        }
+
+    }
 }

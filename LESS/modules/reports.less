@@ -9,6 +9,18 @@
 
     .report-results {
 
+        thead tr th {
+            text-align: center;
+        }
+
+        tbody tr td {
+            text-align: right;
+        }
+
+        tbody tr td:first-child {
+            text-align: left;
+        }
+
         .collapsed {
             cursor: pointer;
             position: relative;
@@ -125,6 +137,8 @@
     table {
         margin: 0px;
     }
+
+
 
     #bar1, #sliders {
         min-width: 310px;
@@ -299,8 +313,9 @@
             }
         }
     }
-
-    // EXCEL STYLES -------------------------------------------
+    /************************************************************
+    EXCEL STYLES
+    ************************************************************/
     /*VERTICAL TEXTFIELDS*/
     #excel_table {
         td {
@@ -319,6 +334,7 @@
             -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
             -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
             -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+            -ms-transform: rotate(-90.0deg);  /* IE 9+ */
             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
             -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
         }
@@ -342,6 +358,7 @@
             -moz-transform: rotate(0.0deg);  /* FF3.5+ */
             -o-transform: rotate(0.0deg);  /* Opera 10.5 */
             -webkit-transform: rotate(0.0deg);  /* Saf3.1+, Chrome */
+            -ms-transform: rotate(0.0deg);  /* IE 9+ */
             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0);  /* IE6,IE7 */
             -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)"; /* IE8 */
         }
@@ -485,6 +502,11 @@
             background: @lightest-grey;
         }
 
+        //display none
+        .xl22126691, .xl2212669, .xl29826691, .xl29926691, .xl29826691, .xl30026691, .xl30126691, .xl30226691, .xl22826691, .xl23826691, .xl24126691, .xl22326691, .xl23526691, .xl29626691, .xl25126691, .xl22426691, .xl22226691, .xl22226691, .xl22526691, #dd1{
+            display: none;
+        }
+
         // MEREAKADEEMIA --------
         // cherry styles
         .xl6814490, .xl6814490 a, .xl6914490, .xl10814490, .xl10914490, .xl11014490, .xl11214490, .xl11114490, .xl11314490, .xl11414490, .xl9014490, .xl11514490, .xl11614490, .xl11814490, .xl11914490, .xl11714490, .xl9714490, .xl9814490, .xl12014490, .xl9914490, .xl12114490, .xl12214490, .xl10114490, .xl12314490, .xl10214490, .xl10414490, .xl10714490 {
@@ -591,7 +613,68 @@
             background: @lightest-grey;
         }
     }
-    // end excel styles ---------------------------------------
+    // end excel styles -----------------------------------------
+
+    /************************************************************
+    PTABLE
+    ************************************************************/
+    .ptable {
+        border: 1px solid #EBEBEB;
+
+        &:not(.no_border):hover, .rolled {
+            box-shadow: none;
+            border: 1px solid #EBEBEB;
+        }
+
+        tbody {
+            tr {
+                line-height: 1.42857;
+
+                &:hover {
+                    box-shadow: none;
+
+                    &:not(.no_hover) {
+                        td {
+                            box-shadow: none;
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    td {
+                        background-color: white;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    td {
+                        background-color: #F5F5F6;
+                    }
+                }
+
+                th {
+                    background-color: #F5F5F6;
+                    border: 1px solid #EBEBEB;
+                    opacity: 1;
+                    line-height: 1.42857;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+
+                td {
+                    border: 1px solid #EBEBEB;
+                    line-height: 1.42857;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
 
     @media screen and (max-width: 1400px) {
 
@@ -604,11 +687,22 @@
 
     @media screen and (max-width: @mobile-width) {
 
+        thead tr {
+            display: table-row;
+            position: relative;
+            top: 0;
+            left: 0;
+            border: 0px solid;
+        }
+
+
         #tab_results {
             width: 100%;
             margin-bottom: 15px;
             overflow-y: hidden;
             -ms-overflow-style: -ms-autohiding-scrollbar;
+
+
         }
 
         .csv-save-btn {

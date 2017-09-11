@@ -1,0 +1,60 @@
+// main: ../style.less
+.wrapper-training {
+
+    .training {
+
+        .month {
+            font-weight: bold;
+        }
+
+        .row {
+            border-top: 1px solid @lightest-grey;
+            padding: 8px;
+
+            .date {
+                text-align: right;
+            }
+
+            .details {
+
+            }
+        }
+    }
+
+    @media screen and (max-width: @mobile-width) {
+
+        .training {
+
+            .month {
+                font-weight: bold;
+                background: #870042;
+                color: white;
+                padding-left: 5px;
+            }
+
+            .row {
+                margin: 0 0 10px 0;
+
+                .date {
+                    text-align: left;
+                    margin: 5px 0 0 0;
+                }
+
+                .details {
+
+                    .training-title {
+                        a {
+                            color: @cherry;
+                        }
+                    }
+
+                    .pull-right {
+                        float: none !important;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

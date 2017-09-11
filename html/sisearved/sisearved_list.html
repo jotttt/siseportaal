@@ -284,6 +284,12 @@
                  <li class="">
                   <a href="#b" id="link_b" data-toggle="tab">Teistele esitatud arved</a>
                 </li>
+                 <li class="">
+                  <a href="#c" id="link_c" data-toggle="tab">Rollide määramine</a>
+                </li>
+                 <li class="cherry">
+                  <a href="#d" id="link_d" data-toggle="tab">Loo uus arve</a>
+                </li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane fade in active" id="a">
@@ -307,7 +313,7 @@
                           <div id="room-detail-search" class="m-md">
                             <div class="row">
                               <div class="col-sm-6 form-group">
-                                <label class="control-label">Arve nr.</label>
+                                <label class="control-label">Arve ID</label>
                                 <div class="input-group" style="width: 100%;">
                                   <input type="text" name="seats" maxlength="3" value="Otsi..." class="form-control">
                                 </div>
@@ -372,7 +378,7 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>Arve nr.</th>
+                          <th>Arve ID</th>
                           <th>Esitaja</th>
                           <th>Summa</th>
                           <th>Esitamise kuupäev</th>
@@ -382,15 +388,15 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>151</td>
+                          <td>ABC151</td>
                           <td>Logistikatalitus</td>
                           <td>124 €</td>
                           <td>12.04.2016</td>
                           <td>12.05.2016</td>
-                          <td><i class="fa fa-asterisk" style="color: #ed5565;"></i> Konteerimata</td>
+                          <td><i class="fa fa-asterisk" style="color: #;"></i> Kinnitatud (1/2)</td>
                         </tr>
                         <tr>
-                          <td>178</td>
+                          <td>DEF178</td>
                           <td>Raamatupidamine</td>
                           <td>56 €</td>
                           <td>04.04.2016</td>
@@ -398,7 +404,7 @@
                           <td><i class="fa fa-asterisk" style="color: #68DE00;"></i> Konteeritud</td>
                         </tr>
                         <tr>
-                          <td>13</td>
+                          <td>REL132</td>
                           <td>Mektory</td>
                           <td>40 €</td>
                           <td>02.04.2016</td>
@@ -410,130 +416,8 @@
                   </div>
 
                 </div>
-                <div class="tab-pane fade" id="b">
-
-                  <div class="panel-group" id="accordion2">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-
-                        <div class="input-group">
-                          <input type="text" name="search_room" value="" class="form-control" maxlength="32">
-                          <div class="input-group-btn">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Otsi</button>
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" id="" class="btn btn-primary btn-outline collapsed">Detailsem otsing </a>
-                          </div>
-                        </div>
-
-                      </div>
-
-                      <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
-                        <div class="panel-body">
-                          <div id="r" class="m-md">
-                            <div class="row">
-                              <div class="col-sm-6 form-group">
-                                <label class="control-label">Arve nr.</label>
-                                <div class="input-group" style="width: 100%;">
-                                  <input type="text" name="seats" maxlength="3" value="Otsi..." class="form-control">
-                                </div>
-                              </div>
-                              <div class="col-sm-6 form-group">
-                                <label class="control-label">Osakond</label>
-                                <div class="input-group" style="width: 100%;">
-                                  <input type="text" name="seats" maxlength="3" value="Otsi..." class="form-control">
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div class="row">
-
-                              <div class="col-sm-4 form-group">
-                                <label class="control-label">Summa</label>
-                                <div class="">
-                                  <div class="btn-group radio-type">
-                                    <a href="#" class="btn btn-xs btn-grey">min</a>
-                                    <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
-                                    <a href="#" class="btn btn-xs btn-grey">max</a>
-                                  </div>
-                                </div>
-                                <input type="text" name="room_size" class="form-control">
-                              </div>
-
-                              <div class="col-sm-4 form-group">
-                                <label class="control-label">Esitamise kuupäev</label>
-                                <div class="">
-                                  <div class="btn-group radio-type">
-                                    <a href="#" class="btn btn-xs btn-grey">min</a>
-                                    <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
-                                    <a href="#" class="btn btn-xs btn-grey">max</a>
-                                  </div>
-                                </div>
-                                <input type="text" name="room_size" class="form-control">
-                              </div>
-
-                              <div class="col-sm-4 form-group">
-                                <label class="control-label">Maksetähtaeg</label>
-                                <div class="">
-                                  <div class="btn-group radio-type">
-                                    <a href="#" class="btn btn-xs btn-grey">min</a>
-                                    <a href="#" class="btn btn-xs btn-grey selected">täpselt</a>
-                                    <a href="#" class="btn btn-xs btn-grey">max</a>
-                                  </div>
-                                </div>
-                                <input type="text" name="room_size" class="form-control">
-                              </div>
-
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                      <thead>
-                        <tr>
-                          <th>Arve nr.</th>
-                          <th>Arve saaja</th>
-                          <th>Summa</th>
-                          <th>Esitamise kuupäev</th>
-                          <th>Maksetähtaeg</th>
-                          <th>Staatus</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>151</td>
-                          <td>Logistikatalitus</td>
-                          <td>124 €</td>
-                          <td>12.04.2016</td>
-                          <td>12.05.2016</td>
-                          <td><i class="fa fa-asterisk" style="color: #68DE00;"></i> Konteeritud</td>
-                        </tr>
-                        <tr>
-                          <td>178</td>
-                          <td>Raamatupidamine</td>
-                          <td>56 €</td>
-                          <td>04.04.2016</td>
-                          <td>04.05.2016</td>
-                          <td><i class="fa fa-asterisk" style="color: #ed5565;"></i> Konteerimata</td>
-                        </tr>
-                        <tr>
-                          <td>13</td>
-                          <td>Mektory</td>
-                          <td>40 €</td>
-                          <td>02.04.2016</td>
-                          <td>02.05.2016</td>
-                          <td><i class="fa fa-asterisk" style="color: #ed5565;"></i> Konteerimata</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                </div>
+                <div class="tab-pane fade" id="b"></div>
+                <div class="tab-pane fade" id="c"></div>
               </div>
             </div>
           </div>

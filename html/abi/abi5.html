@@ -14,9 +14,6 @@
     <!-- plugin css -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/plugins/toastr/toastr.min.css">
-    <link rel="stylesheet" href="css/plugins/steps/jquery.steps.min.css">
-    <link rel="stylesheet" href="css/plugins/iCheck/blue.min.css">
     <!-- custom css -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -107,10 +104,6 @@
                 </ul>
               </li>
 
-              <li class="help-button">
-                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
-              </li>
-
               <li class="open-mobile-search-container">
                 <a id="open-mobile-search">
                   <i class="fa fa-search fa-2x"></i>
@@ -140,7 +133,7 @@
       <!-- end top navbar --------------------------------->
 
       <!-- LEFT SIDEBAR ------------------------------------>
-      <nav id="m-menu" class="min">   <div>
+      <nav id="m-menu" class="min">
 
         <ul>
           <li><span><i class="fa fa-desktop"></i>Coverpage</span>
@@ -230,191 +223,91 @@
           </div>
         </ul>
 
-        <!-- BOTTOM ICONS
----------------------------------------------------------------->
-        <div class="bottom-icons">
-          <div class="row">
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- end bottom icons ------------------------------->
-
-        </div></nav>
+      </nav>
       <!-- end left sidebar ------------------------------->
 
-      <!-- CONTENT ------------------------------------------>
+      <!-- PAGE ----------------------------------------->
       <div id="page-wrapper" class="gray-bg min">
+        <div id="content-wrapper" class="wrapper-">
 
-        <!-- PAGE ----------------------------------------->
+          <!-- breadcrumb -->
+          <div class="row page-wrapper gray-bg m-b-md">
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+                <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
 
-        <!-- breadcrumb -->
-        <div class="row page-wrapper gray-bg">
-          <div class="col-sm-12">
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
-              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+                <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
 
-              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+                <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
 
-              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+                <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+              </ol>
 
-              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
-            </ol>
+            </div>
+            <span class="bookmark-btn-container">
+              <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+            </span>
 
           </div>
-          <span class="bookmark-btn-container">
-            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+          <!-- breadcrumb end -->
+
+          <!-- CONTENT -------------------------------------->
+
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-birthday-cake"></i> Sünnipäevad - kujundus
+
+            </div>
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quidem maiores beatae nesciunt ullam cum dicta et quas, quia, modi fuga facere harum accusantium consequatur dolores repellendus doloribus consectetur autem pariatur, assumenda nihil consequuntur. Alias fugiat officia enim qui amet vitae dolore maxime ab consequuntur repellendus, cum ex accusantium fuga id iusto impedit nostrum. Nesciunt molestiae voluptatem velit, consequatur dolor ipsam eum aliquid optio, rem debitis facere! Deleniti in vel deserunt eveniet odio fugiat maiores at ullam iusto voluptatem? Officiis dicta, odio in recusandae pariatur ea, quibusdam velit laboriosam exercitationem, deleniti esse magni, quod nam asperiores. Ut provident eos dignissimos corporis nesciunt, quasi alias aliquid cum vitae repudiandae similique laboriosam beatae doloribus magni distinctio nihil, rerum! Autem voluptatibus eligendi atque recusandae, dignissimos, fuga laboriosam facilis repellendus, eaque quo reprehenderit natus voluptates sunt dolorum reiciendis asperiores! Possimus animi dolore eveniet laborum suscipit vero, in sapiente. Facere reiciendis, modi commodi fuga accusamus quia perspiciatis illo! Fugit ullam iste doloribus in quis labore, similique iusto, sit velit, dolores qui, dolor inventore eum. Ex dolorem velit dicta non itaque explicabo labore cupiditate sed officia. Esse inventore, impedit aliquam molestiae, nulla atque minus earum, incidunt temporibus neque officiis architecto culpa aliquid voluptate! Quaerat facilis, consequuntur?
+            </div>
+
+          </div>
+          <span class="help-btn-container-bottom pull-right m-r-md">
+            <a id="help_btn" href="#wiki_help" data-toggle="modal" class="btn btn-panel btn-white"><i class="fa fa-question-circle"></i> Abi</a>
           </span>
+
+          <!-- end content ---------------------------------->
+
+          <!-- fullscreen mode -->
+          <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+          <!-- scroll to top -->
+          <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
         </div>
-        <!-- breadcrumb end -->
-
-
-
-        <!-- PAGE END ------------------------------->
-
-        <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
-        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-        <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
-        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
+        <!-- end page --------------------------------------->
       </div>
-      <!-- end content ---------------------------------------->
-
     </div>
-    <!-- end wrapper ------------------------------------------>
+    <!-- end wrapper -------------------------------------->
 
-
-    <!-- FOOTER ------------------------------------>
+    <!-- FOOTER ------------------------------------------->
     <div class="footer">
       <div>
         TTÜ Siseportaal &copy; 2014 - 2015
       </div>
     </div>
+    <!-- footer end --------------------------------------->
 
-    <!-- MODAL CONTENT ------------------------->
-    <div class="modal inmodal fade" id="kysitlus1" tabindex="-1" role="dialog"  aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Rahulolu küsitlus</h4>
-            <small class="font-bold">Aitäh, et aitad Portaali paremaks muuta :)</small>
-          </div>
-          <div class="modal-body white-bg">
-            <div id="wizard">
-              <h1>Küsimus</h1>
-              <div class="step-content">
+    <!-- MODAL CONTENT ------------------------------------>
 
-                <form method="get" class="form-horizontal">
+    <!-- modal content end -------------------------------->
 
-                  <h2 class="text-center m-b-lg">Kuidas hindad Portaali kasutusmugavust?</h2>
-
-                  <div class="row">
-                    <div class="col-sm-5"></div>
-                    <div class="col-sm-7"><div class="radio i-checks"><label> <input type="radio" value="option1" name="a"> <i></i> Väga hea </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option2" name="a"> <i></i> Hea </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option3" name="a"> <i></i> Rahuldav </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option4" name="a"> <i></i> Mitterahuldav </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option5" name="a"> <i></i> Puudulik </label></div></div>
-
-                  </div>
-
-
-                </form>
-
-              </div>
-
-              <h1>Küsimus</h1>
-              <div class="step-content">
-                <form method="get" class="form-horizontal">
-
-                  <h2 class="text-center m-b-lg">Kuidas oled rahul Portaali töövahenditega?</h2>
-
-                  <div class="row">
-                    <div class="col-sm-5"></div>
-                    <div class="col-sm-7"><div class="radio i-checks"><label> <input type="radio" value="option1" name="a"> <i></i> Väga rahul </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option2" name="a"> <i></i> Rahul </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option3" name="a"> <i></i> Käib kah </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option4" name="a"> <i></i> Enne oli parem </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option5" name="a"> <i></i> Kohutav </label></div></div>
-
-                  </div>
-
-
-                </form>
-              </div>
-
-              <h1>Küsimus</h1>
-              <div class="step-content">
-                <form method="get" class="form-horizontal">
-
-                  <h2 class="text-center m-b-lg">Mida tahad kõige rohkem Portaalis näha tulevikus?</h2>
-
-                  <div class="row">
-                    <div class="col-sm-5"></div>
-                    <div class="col-sm-7"><div class="radio i-checks"><label> <input type="radio" value="option1" name="a"> <i></i> Täiustatud eelarvemoodulit </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option2" name="a"> <i></i> Puhkuste haldust </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option3" name="a"> <i></i> Sisearvete esitamise võimalust </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option4" name="a"> <i></i> Ruumide broneerimise võimalust </label></div>
-
-                      <div class="radio i-checks"><label> <input type="radio" value="option5" name="a"> <i></i> Töötajate vahelist sõnumite saatmise võimalust  </label></div></div>
-
-                  </div>
-
-
-                </form>
-
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-    <!-- MODAL CONTENT END ---------------------->
-
-    <!-- CONTENT MASK FOR MOBILE MENU ------------->
+    <!-- content mask for mobile menu -->
     <div id="c-mask" class="c-mask"></div>
 
-
-    <!-- LOADING ANIMATION -------------------------->
+    <!-- loading animation -->
     <div id="loading-mask" class="c-mask"></div>
-
     <div class="loading-animation hidden">
       <div id="loader-wrapper">
         <div id="loader"></div>
       </div>
     </div>
 
-
-    <!-- SCRIPTS ------------------------------------>
+    <!-- SCRIPTS ----------------------------------------->
     <!-- Base scripts -->
-    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin scripts -->
     <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/plugins/spin.js/spin.min.js"></script>
@@ -424,121 +317,10 @@
     <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
     <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
     <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
-    <script src="js/plugins/toastr/toastr.min.js"></script>
-    <script src="js/plugins/steps/jquery.steps.min.js"></script>
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
     <!-- My custom scripts -->
-    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
-
-    <script>
-      toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": 0,
-        "extendedTimeOut": 0,
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut",
-        "tapToDismiss": false
-      }
-
-      $(document).on('click','.clear-toast',function(){
-        $('#toast-container').hide();
-      });
-
-      toastr.info('Palume sind osaleda Siseportaali puudutavas rahulolu küsitluses. (2min)<br /><br /><button type="button" class="clear-toast btn btn-white text-info" data-toggle="modal" data-target="#kysitlus1">Osalen</button>','Rahulolu küsitlus');
-    </script>
-
-    <script>
-
-      $(document).ready(function(){
-        $("#wizard").steps();
-        $("#form").steps({
-          bodyTag: "fieldset",
-          onStepChanging: function (event, currentIndex, newIndex)
-          {
-            // Always allow going backward even if the current step contains invalid fields!
-            if (currentIndex > newIndex)
-            {
-              return true;
-            }
-
-            // Forbid suppressing "Warning" step if the user is to young
-            if (newIndex === 3 && Number($("#age").val()) < 18)
-            {
-              return false;
-            }
-
-            var form = $(this);
-
-            // Clean up if user went backward before
-            if (currentIndex < newIndex)
-            {
-              // To remove error styles
-              $(".body:eq(" + newIndex + ") label.error", form).remove();
-              $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-            }
-
-            // Disable validation on fields that are disabled or hidden.
-            form.validate().settings.ignore = ":disabled,:hidden";
-
-            // Start validation; Prevent going forward if false
-            return form.valid();
-          },
-          onStepChanged: function (event, currentIndex, priorIndex)
-          {
-            // Suppress (skip) "Warning" step if the user is old enough.
-            if (currentIndex === 2 && Number($("#age").val()) >= 18)
-            {
-              $(this).steps("järgmine");
-            }
-
-            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-            if (currentIndex === 2 && priorIndex === 3)
-            {
-              $(this).steps("eelmine");
-            }
-          },
-          onFinishing: function (event, currentIndex)
-          {
-            var form = $(this);
-
-            // Disable validation on fields that are disabled.
-            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-            form.validate().settings.ignore = ":disabled";
-
-            // Start validation; Prevent form submission if false
-            return form.valid();
-          },
-          onFinished: function (event, currentIndex)
-          {
-            var form = $(this);
-
-            // Submit form input
-            form.submit();
-          }
-        })
-
-
-
-        $('.i-checks').iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-        });
-
-
-      });
-
-    </script>
-
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+    <!-- end scripts -------------------------------------->
   </body>
 
 </html>

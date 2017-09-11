@@ -252,85 +252,247 @@
 
       <!-- CONTENT ------------------------------------------>
       <div id="page-wrapper" class="gray-bg min">
+        <div id="content-wrapper" class="wrapper-vacation">
 
-        <!-- PAGE ----------------------------------------->
+          <!-- PAGE ----------------------------------------->
 
-        <!-- breadcrumb -->
-        <div class="row page-wrapper gray-bg">
-          <div class="col-sm-12">
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
-              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+          <!-- breadcrumb -->
+          <div class="row page-wrapper gray-bg">
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+                <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
 
-              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+                <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
 
-              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+                <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
 
-              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
-            </ol>
+                <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+              </ol>
 
-          </div>
-          <span class="bookmark-btn-container">
-            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
-          </span>
-        </div>
-        <!-- breadcrumb end -->
-
-
-
-        <!-- PAGE END ------------------------------->
-
-        <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
-        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-        <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
-        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
-        <!-- SURVEY
-------------------------------------------------------------------->
-        <div id="bottom-survey" class="panel panel-primary closed">
-          <div class="panel-heading">
-            <i class="fa fa-comment-o"></i> Tagasiside <span class="pull-right"><i class="fa fa-chevron-up"></i></span>
-          </div>
-          <div class="panel-body">
-
-            <h3>Palun hinda Portaali kasutusmugavust</h3>
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <fieldset class="rating">
-                  <input type="radio" id="star5" name="rating" value="5" />
-                  <label  class = "full high" for="star5" title="Väga äge - 5" data-stars="5"></label>
-                  <input type="radio" id="star4" name="rating" value="4" />
-                  <label class = "full high" for="star4" title="Päris hea - 4" data-stars="4"></label>
-                  <input type="radio" id="star3" name="rating" value="3" />
-                  <label class = "full low" for="star3" title="Töötab - 3" data-stars="3"></label>
-                  <input type="radio" id="star2" name="rating" value="2" />
-                  <label class = "full low" for="star2" title="Üsna vilets - 2" data-stars="2"></label>
-                  <input type="radio" id="star1" name="rating" value="1" />
-                  <label class = "full low" for="star1" title="Väga halb - 1" data-stars="1"></label>
-                </fieldset>
-              </div>
             </div>
+            <span class="bookmark-btn-container">
+              <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+            </span>
+          </div>
+          <!-- breadcrumb end -->
 
-            <div class="row m-t-xs m-b">
-              <div class="col-md-12">
-                <textarea id="bottomSurveyComment" class="comment form-control " name="" cols="49" rows="5" placeholder="Ole hea ja kirjelda natuke oma kogemusi"></textarea>
+          <div class="panel panel-default m-t">
+            <div class="panel-heading"><i class="fa fa-sun-o"></i> Puhkused - juhivaade</div>
+            <div class="panel-body">
 
-                 <div class="error-msg-container">
-                  <span class="error-msg"></span>
+              <ul class="nav nav-tabs" id="mainTab">
+                <li class="active">
+                  <a href="#tab_admin" id="form_tab" data-toggle="tab" aria-expanded="false">Osakond</a>
+                </li>
+                <li>
+                  <a href="#budget_fill" id="budget_fill_tab" data-toggle="tab" >Statistika</a>
+                </li>
+              </ul>
+
+              <div class="tab-content">
+
+                <div class="tab-pane fade in active" id="tab_admin">
+
+                  <div class="header_left">
+                    <div class="selection">
+                      <span id="general-vac" class="radio m-r">
+                        <i class="radio_on fa fa-dot-circle-o fa-lg cherry"></i> Osakonna puhkused
+                      </span>
+                      <span id="confirm-vac" class="radio m-r">
+                        <i class="radio_on fa fa-circle-o fa-lg cherry"></i> Minu kinnitamist ootavad (<strong class="text-info">2</strong>)
+                      </span>
+                      <span id="confirmed-vac" class="radio">
+                        <i class="radio_on fa fa-circle-o fa-lg cherry"></i> Minu poolt kinnitatud
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="general-vac-view">
+                    <div class=" vacation-unit m-t">
+                      <table class="table table-bordered table-hover table-condensed ">
+
+                        <thead>
+                          <tr>
+
+                            <th>Nimi</th>
+                            <th>Ametinimetus</th>
+                            <th>Puhkusenorm</th>
+                            <th>Eelnevate aastate puhkuse jääk 31.12.17 seisuga</th>
+                            <th>Puhkuse alguse kuupäev</th>
+                            <th>Puhkuse lõpu kuupäev</th>
+                            <th>Puhkusepäevade arv</th>
+                            <th>Puhkusejääk 31.12.17 seisuga</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                          <tr>
+
+                            <td><strong class="visible-sm visible-xs">Nimi </strong><span class="open-structure">Sander Marandi</span></td>
+
+                            <td><strong class="visible-sm visible-xs">Ametinimetus</strong>Programmeerija</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusenorm</strong>35</td>
+
+                            <td><strong class="visible-sm visible-xs">Eelnevate aastate puhkuse jääk 31.12.17 seisuga</strong>12</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse alguse kuupäev</strong>21.08.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse lõpu kuupäev</strong>27.08.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusepäevade arv</strong>7</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusejääk 31.12.17 seisuga</strong>5</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="confirm-vac-view">
+                    <div class=" vacation-unit m-t">
+                      <table class="table table-bordered table-hover table-condensed ">
+
+                        <thead>
+                          <tr>
+                            <th width="10px"><span><input type="checkbox"></span></th>
+                            <th>Nimi</th>
+                            <th>Ametinimetus</th>
+                            <th>Puhkusenorm</th>
+                            <th>Eelnevate aastate puhkuse jääk 31.12.17 seisuga</th>
+                            <th>Puhkuse alguse kuupäev</th>
+                            <th>Puhkuse lõpu kuupäev</th>
+                            <th>Puhkusepäevade arv</th>
+                            <th>Puhkusejääk 31.12.17 seisuga</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                          <tr>
+
+                            <td><strong class="visible-sm visible-xs"> </strong><span><input type="checkbox"></span></td>
+
+                            <td><strong class="visible-sm visible-xs">Nimi </strong><span class="open-structure">Sander Marandi</span></td>
+
+                            <td><strong class="visible-sm visible-xs">Ametinimetus</strong>Programmeerija</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusenorm</strong>35</td>
+
+                            <td><strong class="visible-sm visible-xs">Eelnevate aastate puhkuse jääk 31.12.17 seisuga</strong>50</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse alguse kuupäev</strong>17.07.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse lõpu kuupäev</strong>06.08.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusepäevade arv</strong>21</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusejääk 31.12.17 seisuga</strong>29</td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><strong class="visible-sm visible-xs"> </strong><span><input type="checkbox"></span></td>
+
+                            <td><strong class="visible-sm visible-xs">Nimi </strong><span class="open-structure">Anna Kolossova</span></td>
+
+                            <td><strong class="visible-sm visible-xs">Ametinimetus</strong>Analüütik</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusenorm</strong>35</td>
+
+                            <td><strong class="visible-sm visible-xs">Eelnevate aastate puhkuse jääk 31.12.17 seisuga</strong>12</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse alguse kuupäev</strong>07.07.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse lõpu kuupäev</strong>14.07.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusepäevade arv</strong>7</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusejääk 31.12.17 seisuga</strong>5</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+
+                      <a class="btn btn-primary">Kinnita</a>
+                      <a class="btn btn-default">Lükka tagasi</a>
+
+                    </div>
+                  </div>
+
+                  <div class="confirmed-vac-view">
+                    <div class=" vacation-unit m-t">
+
+                      <table class="table table-bordered table-hover table-condensed ">
+
+                        <thead>
+                          <tr>
+
+                            <th>Nimi</th>
+                            <th>Ametinimetus</th>
+                            <th>Puhkusenorm</th>
+                            <th>Eelnevate aastate puhkuse jääk 31.12.17 seisuga</th>
+                            <th>Puhkuse alguse kuupäev</th>
+                            <th>Puhkuse lõpu kuupäev</th>
+                            <th>Puhkusepäevade arv</th>
+                            <th>Puhkusejääk 31.12.17 seisuga</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                          <tr>
+
+                            <td><strong class="visible-sm visible-xs">Nimi </strong><span class="open-structure">Sander Marandi</span></td>
+
+                            <td><strong class="visible-sm visible-xs">Ametinimetus</strong>Programmeerija</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusenorm</strong>35</td>
+
+                            <td><strong class="visible-sm visible-xs">Eelnevate aastate puhkuse jääk 31.12.17 seisuga</strong>12</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse alguse kuupäev</strong>21.08.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkuse lõpu kuupäev</strong>27.08.2017</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusepäevade arv</strong>7</td>
+
+                            <td><strong class="visible-sm visible-xs">Puhkusejääk 31.12.17 seisuga</strong>5</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+
+
+                  <!-- PAGE END ------------------------------->
+
+                  <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
+                  <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+                  <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+                  <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
                 </div>
-
+                <div class="tab-pane fade in" id="budget_fill"></div>
               </div>
+
             </div>
-
-            <button id="sendSurvey" class="btn btn-primary pull-right ">Saada <i class="fa fa-angle-right"></i></button>
-
           </div>
-        </div>
 
+
+
+        </div>
       </div>
       <!-- end content ---------------------------------------->
 
@@ -377,41 +539,53 @@
     <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
     <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
+
     <script>
-      $(document).on("click", "#bottom-survey .panel-heading", function() {
-        $('#bottom-survey').toggleClass('closed');
-        $('#bottom-survey .panel-heading span i').toggleClass('fa-chevron-down');
-      });
+      $(document).ready(function() {
+        // VIEW SWITCHER
+        // when page loads, show only general view
+        $('.confirm-vac-view, .confirmed-vac-view').hide();
 
-      var $rating = 0;
+        $(document).on('click', '#general-vac', function() {
+          // switch active radio button
+          $(this).children('i').removeClass('fa-circle-o').addClass('fa-dot-circle-o');
+          $('#confirm-vac, #confirmed-vac').children('i').removeClass('fa-dot-circle-o').addClass('fa-circle-o');
+          // switch active view
+          $('.confirm-vac-view, .confirmed-vac-view').hide();
+          $('.general-vac-view').show();
 
-      $(document).on("click", "#bottom-survey .rating label", function() {
-        $rating = $(this).attr('data-stars');
-      });
+        });
 
-      $(document).on("click", "#sendSurvey", function() {
-        var minLength = 15;
-        var $textarea = $('#bottomSurveyComment');
+        $(document).on('click', '#confirm-vac', function() {
+          // switch active radio button
+          $(this).children('i').removeClass('fa-circle-o').addClass('fa-dot-circle-o');
+          $('#general-vac, #confirmed-vac').children('i').removeClass('fa-dot-circle-o').addClass('fa-circle-o');
+          // switch active view
+          $('.general-vac-view, .confirmed-vac-view').hide();
+          $('.confirm-vac-view').show();
+        });
 
-        if($rating < 4) {
-          if($textarea.val().length < minLength) {
-            console.log($textarea.val().length);
-            $('.error-msg').empty().append('Palun lisa kommentaar mis oleks vähemalt ' + minLength + ' tähemärki pikk');
-            $('#bottom-survey .comment').addClass('required');
-            return false;
+        $(document).on('click', '#confirmed-vac', function() {
+          // switch active radio button
+          $(this).children('i').removeClass('fa-circle-o').addClass('fa-dot-circle-o');
+          $('#general-vac, #confirm-vac').children('i').removeClass('fa-dot-circle-o').addClass('fa-circle-o');
+          // switch active view
+          $('.general-vac-view, .confirm-vac-view').hide();
+          $('.confirmed-vac-view').show();
+        });
+
+        // PLUS/MINUS FOR PANEL OPEN/CLOSE
+        $(document).on('click', '.open-structure', function() {
+          if ($(this).hasClass('collapsed')) {
+            $(this).children('i.fa-minus-circle').removeClass('fa-minus-circle').addClass('fa-plus-circle');
           }
           else {
-            $('#bottom-survey .comment').removeClass('required');
-            $('.error-msg').empty()
-            console.log('korras');
+            $(this).children('i.fa-plus-circle').removeClass('fa-plus-circle').addClass('fa-minus-circle');
           }
-        }
-        else {
-          $('#bottom-survey .comment').removeClass('required');
-          $('.error-msg').empty()
-          console.log('korras');
-        }
+        });
+
       });
+
     </script>
 
   </body>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR ------------------------------------->
+      <nav class="navbar-top" role="navigation">  <background class="cherry-mod-bg"></background>
+
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
+
+        <btn id="open-mobile-menu" class="">
+          <i class="fa fa-bars fa-2x"></i>
+        </btn>
+        <!--end mobile-->
+
+        <div class="navbar">
+          <div class="navbar-header">
+
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </btn>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="nav-header">
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li><a href="">Inimesed</a></li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-services"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                  <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                </ul>
+              </li>
+
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
+              </li>
+
+              <li class="open-mobile-search-container">
+                <a id="open-mobile-search">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </li>
+
+            </ul>
+
+            <!--NAVBAR SEARCH
+------------------------------>
+            <ul class="desktop-search">
+              <form ole="search" method="post" action="/search">
+                <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+              </form>
+            </ul>
+            <!--end------------------------------>
+          </div>
+        </div>
+        <!--MOBILE SEARCH
+----------------------------------------------------------------->
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+        <!--end----------------------------------------------------------></nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR ------------------------------------>
+      <nav id="m-menu" class="min">   <div>
+
+        <ul>
+          <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+            <ul>
+              <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
+              <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
+            </ul>
+          </li>
+          <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+          <li><span><i class="fa fa-plane"></i>Lähetused</span>
+            <ul>
+              <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+              <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+              <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+              <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+            </ul>
+          </li>
+          <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+          <li><span><i class="fa fa-newspaper-o"></i>Uudised</span>
+            <ul>
+              <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+              <li><a href="uudised_1.1.html"><i class="fa fa-newspaper-o"></i>Uudised 1.1</a></li>
+            </ul>
+          </li>
+          <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+          <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+          <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+          <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+            <ul>
+              <li><a href="puhkused2-4.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+              <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              <li><a href="../puhkused_dev"><i class="fa fa-calendar"></i>Uus kalender</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+            <ul>
+              <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+              <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+            </ul>
+          </li>
+          <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+          <li><a href="seotud_isikud2.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
+          <li><span><i class="fa fa-money"></i>Sisearved</span>
+            <ul>
+              <li><a href="sisearved.html"><i class="fa fa-money"></i>Esita arve</a></li>
+              <li><a href="sisearved_esitatud.html"><i class="fa fa-money"></i>Esitatud arve</a></li>
+              <li><a href="sisearved_esitatud_konteerimine.html"><i class="fa fa-money"></i>Arve konteerimine</a></li>
+              <li><a href="sisearved_list.html"><i class="fa fa-money"></i>Arvete koondvaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-edit"></i>Sisulehtede mallid</span>
+            <ul>
+              <li><a href="mall_1.html"><i class="fa fa-edit"></i>Baasmall 1</a></li>
+              <li><a href="mall_2.html"><i class="fa fa-edit"></i>Baasmall 2</a></li>
+              <li><a href="mall_3.html"><i class="fa fa-edit"></i>Baasmall 3</a></li>
+              <li><a href="mall_4.html"><i class="fa fa-edit"></i>Baasmall 4</a></li>
+            </ul>
+          </li>
+          <li><a href="seadistused.html"><i class="fa fa-wrench"></i>Seadistused</a></li>
+          <li><span><i class="fa fa-ban"></i>Veateated</span>
+            <ul>
+              <li><a href="404.html"><i class="fa fa-ban"></i>404 viga</a></li>
+              <li><a href="503.html"><i class="fa fa-ban"></i>503 viga</a></li>
+              <li><a href="error_request_et.html"><i class="fa fa-ban"></i>päringu viga EST</a></li>
+              <li><a href="error_request_en.html"><i class="fa fa-ban"></i>päringu viga ENG</a></li>
+              <li><a href="error_session.html"><i class="fa fa-ban"></i>Sessioon aegunud</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-comments-o"></i>Arenguvestlused</span>
+            <ul>
+              <li><a href="arenguvestlus_tootaja.html"><i class="fa fa-comments-o"></i>Töötaja vaade</a></li>
+              <li><a href="arenguvestlus_juht.html"><i class="fa fa-comments-o"></i>Juhi vaade</a></li>
+              <li><a href="arenguvestlus_koordinaator.html"><i class="fa fa-comments-o"></i>Koordinaatori vaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-sun-o"></i>Puhkused</span>
+            <ul>
+              <li><a href="puhkus_admin.html"><i class="fa fa fa-sun-o"></i>Koordinaatori vaade</a></li>
+              <li><a href="puhkus_juht.html"><i class="fa fa fa-sun-o"></i>Juhivaade</a></li>
+              <li><a href="puhkus_osakond.html"><i class="fa fa fa-sun-o"></i>Osakonna vaade</a></li>
+              <li><a href="puhkus_tootaja.html"><i class="fa fa fa-sun-o"></i>Töötaja vaade</a></li>
+            </ul>
+          </li>
+
+          <div class="m-l m-r-sm m-t">
+            <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+          </div>
+        </ul>
+
+        <!-- BOTTOM ICONS
+---------------------------------------------------------------->
+        <div class="bottom-icons">
+          <div class="row">
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- end bottom icons ------------------------------->
+
+        </div></nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- CONTENT ------------------------------------------>
+      <div id="page-wrapper" class="gray-bg min">
+
+        <!-- PAGE ----------------------------------------->
+
+        <!-- breadcrumb -->
+        <div class="row page-wrapper gray-bg">
+          <div class="col-sm-12">
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+
+              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+
+              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+
+              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+            </ol>
+
+          </div>
+          <span class="bookmark-btn-container">
+            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+          </span>
+        </div>
+        <!-- breadcrumb end -->
+<h2>See on pealkiri</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio nemo accusamus numquam. Consequuntur necessitatibus reprehenderit doloremque eos cumque, architecto eligendi fugit, molestias quod, aliquam enim non sit dolor praesentium aspernatur, temporibus hic. Nihil itaque, cum minima recusandae iste quaerat perferendis voluptate, autem voluptates nisi sit optio totam consectetur veniam vitae quibusdam a obcaecati ducimus. Voluptate cum mollitia, quaerat quo sit quae delectus ea ad quibusdam pariatur magnam rem, eum voluptatibus! Minus omnis atque tenetur dolor repudiandae voluptatem architecto laudantium id eveniet, in delectus cumque quisquam alias eum. Veritatis quos atque perspiciatis voluptas quasi porro consequuntur repellendus, beatae error molestias qui aut minima suscipit unde eos rerum laudantium nesciunt nisi! Nisi quisquam, iusto labore adipisci sapiente consequuntur repudiandae, accusamus, officia iste aut voluptas. Harum impedit quam quas, quasi aperiam assumenda illo placeat repudiandae temporibus perferendis rerum odio, provident sint exercitationem in! Quia debitis quibusdam consectetur provident ipsum. Necessitatibus minus sunt enim cupiditate ut at quaerat rerum distinctio? Quos, doloremque veritatis ratione esse reprehenderit assumenda voluptates quibusdam, vitae autem nam earum ullam asperiores. Suscipit, harum! Ducimus officiis culpa commodi pariatur possimus nobis, dolore qui modi fuga sit obcaecati, nemo quae perferendis neque hic magnam facilis reiciendis earum officia eaque ea saepe voluptates repellendus doloremque error! Illum sunt iure eveniet quo repudiandae dolorum dolor aspernatur enim ea magni vitae ipsam esse atque, sapiente reiciendis cupiditate praesentium, unde quod obcaecati eius. Est nihil, et voluptatum magni earum non, nobis soluta nulla consectetur nostrum praesentium ut quae atque quas facere, quidem unde rerum? Illo commodi facere debitis a, sit similique. Aperiam neque hic doloremque quam laboriosam dignissimos incidunt ab fugiat quia non facilis deserunt, debitis asperiores quasi dolores iure, optio similique quisquam atque. Sapiente porro sed sit eos dolor perspiciatis incidunt praesentium, labore, assumenda magni nisi, magnam voluptates, id quis tenetur et numquam veniam vitae error quod. Autem, debitis, eligendi! Fugit ex, cupiditate perspiciatis animi error similique obcaecati rerum quas dolor nostrum dicta aut, culpa repellendus ut, tempora recusandae reprehenderit sunt esse eligendi officia blanditiis ipsa libero repellat. Sint nemo amet ut dicta reiciendis neque hic exercitationem officia beatae quos, ullam accusamus corporis, optio eveniet rem iusto delectus, quas! Cumque quidem eaque qui, architecto vel amet incidunt excepturi facilis asperiores earum magni laborum commodi nam, accusantium suscipit aliquam exercitationem molestiae consequuntur enim non placeat rem consequatur! Natus rerum error quam eos. Quod delectus, fuga, iusto nihil consequuntur eaque aspernatur. Omnis dolorum beatae earum facilis itaque ducimus, deleniti eveniet repellat minus voluptatibus delectus consequatur quae maiores exercitationem voluptas saepe deserunt tempore sequi id, nesciunt repudiandae neque optio, animi ab. Quas harum saepe sit veritatis soluta odio hic assumenda incidunt beatae culpa, enim delectus modi quaerat at? Aut beatae aspernatur, reprehenderit, ipsum amet consequatur dignissimos quisquam mollitia dolorum recusandae numquam placeat optio nemo ullam officiis! Porro dolorum eos cumque corporis, deserunt enim voluptate laborum repudiandae vel soluta aspernatur tempore perspiciatis autem quidem dolor, corrupti illo. Nemo omnis aliquid nam neque iusto, quasi, laudantium non tempora, nesciunt quae eaque veniam dignissimos excepturi dicta temporibus laboriosam. Vitae quod delectus aliquam placeat dolore eos deserunt recusandae laboriosam libero, maxime architecto, nemo nihil, magni sequi assumenda sint beatae ipsam! Sequi provident necessitatibus dignissimos repudiandae distinctio amet praesentium aspernatur explicabo inventore optio sed nisi eveniet, facilis esse, quod hic molestiae quidem voluptatem nam deleniti. Ad aliquid et id, consequuntur molestiae reprehenderit at non rem nulla natus voluptates tempore quisquam enim dolorem deleniti placeat consectetur praesentium. Temporibus commodi quod harum, recusandae praesentium? Eaque, ducimus ad harum quibusdam! Voluptates aliquam ullam cum dolores provident quis rerum, laboriosam totam necessitatibus, nesciunt saepe magni? Nam nisi, ab voluptatum odio itaque nihil sint, ipsam similique ea tenetur fugiat velit repellat officiis dignissimos amet consequatur officia cumque est aliquam tempore temporibus doloribus aut inventore sed iusto. Ea quidem facere omnis, iste alias at harum nemo ut cumque soluta architecto nesciunt vitae dolor tenetur voluptas qui aspernatur ad reprehenderit, molestias beatae incidunt modi, et distinctio deleniti! Deleniti, ducimus minima ut voluptates quibusdam illum recusandae officiis itaque at enim atque iusto molestias aliquam sed, dicta aspernatur nostrum animi vero. Aspernatur voluptates tempore quidem totam consequatur, odit. Iusto ad doloremque ipsa, voluptatibus distinctio voluptates possimus odio, sit facilis rem optio dolorem debitis hic quam unde voluptatum sint ab autem. Perspiciatis in, modi eius laboriosam quas voluptatem dolores provident accusamus nulla? Labore veniam optio sed, harum quasi. Maiores praesentium qui recusandae odio, sequi quia dolorum. Maiores, qui at nam explicabo rerum voluptatum quia quae ea cupiditate, vitae, nihil molestiae inventore! Ratione odio veritatis earum, consequatur sunt a neque dolores vero similique tenetur, possimus perspiciatis dolore quos incidunt, quam animi quo in aperiam magnam hic iste reprehenderit! Nemo ab est atque, omnis perferendis ipsum neque at? Quos maiores omnis qui, deleniti officia natus. Laboriosam tenetur facere similique asperiores ullam sed eveniet quos magnam, soluta deserunt voluptatibus excepturi odio iste rerum aliquam? Ea aut, eos nisi ipsum obcaecati atque architecto aperiam numquam aliquam et officia inventore debitis voluptatum nemo alias impedit. Quibusdam ipsam sapiente aspernatur aliquid tempora mollitia unde, nesciunt nostrum deserunt, hic architecto magni, veniam minus odit odio ea! Fugit impedit aliquam commodi provident rem sunt, quo reiciendis cumque quibusdam voluptas alias, perferendis, doloremque aspernatur! Cumque nemo exercitationem ipsam non rerum impedit nostrum labore officia odio in sapiente necessitatibus, quia eos repudiandae quod architecto dolores magnam reiciendis quos tempora velit? Accusamus odit laudantium praesentium quisquam, quas neque. Natus suscipit beatae ratione consequuntur magni a fugit eaque recusandae aspernatur asperiores magnam quas minus error soluta ducimus, fuga neque! Magnam, aliquid possimus adipisci excepturi sapiente eaque architecto mollitia ipsa odit. Aliquam temporibus dignissimos delectus, obcaecati harum magnam odio. Ipsa autem, sed expedita quam aspernatur facilis. Quidem officiis beatae totam repellat aut tempore, sunt! Optio qui tenetur, et, provident animi eligendi eum eius aliquid magni minima totam atque voluptatem distinctio repellat illum ipsum cupiditate ab blanditiis! Expedita eius veritatis perspiciatis! Maiores, eveniet. Sapiente culpa velit adipisci, laboriosam, placeat similique. Veritatis qui aliquid, culpa commodi ducimus non, dolorum, amet quos nobis cumque nemo doloribus consectetur quis voluptatum suscipit a beatae eligendi nesciunt quo odit quidem debitis vel quasi accusamus? Minus cupiditate aut porro quia veritatis eaque. Rerum voluptas modi earum nobis dolor sunt itaque ex. Officiis qui distinctio sunt quasi modi quisquam neque quaerat harum fuga sequi tenetur nam accusantium placeat aut, nesciunt minima doloremque beatae provident non nisi velit nobis incidunt id quas perspiciatis. Enim sed doloremque minima molestiae. Impedit facilis alias rem, pariatur dolore nam minus ullam illo iure, ea nobis sit quo totam dolorem, molestias accusamus libero cupiditate temporibus dolor nesciunt hic at fugiat. Atque nisi aspernatur quia, neque aliquam, recusandae molestias illum ducimus, molestiae error qui asperiores totam officia fugit tempore a obcaecati in. Iste officiis, qui? Eum facilis dolore porro nisi soluta ipsa, possimus officiis est natus impedit molestias suscipit doloribus alias corporis laudantium incidunt, excepturi dolores laboriosam amet quia tempora eaque asperiores? Unde perferendis impedit fuga autem modi voluptatibus fugit, labore excepturi voluptatem enim, ut nisi sunt deleniti. Neque accusantium nihil officiis nisi libero deserunt, et reprehenderit quis ea voluptatibus aliquam. Dicta molestias repellendus, nesciunt aliquid expedita et quasi fuga porro incidunt accusamus ratione ipsam laboriosam officia facere laudantium aperiam molestiae harum eos non ab, quaerat optio illum fugiat. Commodi pariatur mollitia cumque aliquam iusto. Unde possimus et ea tempore provident quae. Velit illum architecto natus quam nobis, earum maiores rerum pariatur beatae excepturi nam consequatur delectus. Quasi veritatis nihil laborum earum iure, quas odio vel blanditiis natus ut sed porro reiciendis doloremque, a, sit soluta in, enim hic similique! Sed amet placeat, alias beatae minima nisi quasi odit ipsa sint architecto officiis officia accusamus vero consectetur ipsam possimus aliquam omnis nulla tenetur excepturi aliquid repellendus in. Rem sit, dolorum nulla deleniti at. Explicabo hic temporibus repudiandae animi corporis nam iusto ad accusamus ipsum, inventore saepe tempore in culpa pariatur earum quibusdam nihil aspernatur aliquid officiis quis deserunt fuga praesentium quos. Porro eius, unde beatae. Est voluptatum doloribus repellat, labore distinctio sint enim fuga itaque quod unde doloremque neque eius, tempore, minus consectetur repudiandae sequi facere eligendi, ipsam cumque. Accusamus cumque, dolore ipsam dolorum doloremque quisquam unde odit saepe distinctio ut qui velit quae ea voluptatum minima officiis asperiores veniam nobis accusantium repellendus, debitis iusto. Repudiandae qui libero aspernatur, quibusdam eaque nisi dolor dolore ab consectetur sint! Iure, quia, optio. Accusamus iusto placeat, dolores odio at aliquid suscipit reiciendis deserunt. Obcaecati quisquam magnam, enim dolore omnis nesciunt quibusdam facilis voluptate sunt ipsa voluptates dolores illum quae veniam blanditiis reprehenderit iste ea, voluptatum. Ipsam officia modi iste dignissimos voluptatem nisi expedita nam nulla impedit! Cum temporibus laboriosam cumque neque vitae enim at a repellendus maiores, minus et magni corporis est, eveniet sint. Iste sit dolorum unde illum, odit temporibus vel ratione repellat, modi minima, eaque consectetur reprehenderit corporis. Voluptatem in reiciendis quaerat aliquam vel tenetur optio. Dicta est earum obcaecati neque consectetur aut, in dolor perspiciatis veritatis. Eum debitis consequatur, non dignissimos rerum eveniet at magnam sunt, ad vel magni quo mollitia sed culpa. Incidunt rerum impedit quae itaque vitae sequi veniam quisquam error adipisci tempora blanditiis natus culpa ducimus, voluptate maiores tempore facilis et, asperiores qui modi? Tempore doloremque libero eos, pariatur placeat quo ullam cupiditate laboriosam? Officiis doloribus dolorem perferendis, quae sapiente maiores reiciendis totam praesentium quasi atque, itaque temporibus facere dolore maxime architecto, dignissimos voluptatum eos fugiat. Architecto odit, repudiandae laboriosam rem dolorem. Temporibus ea odit officiis, corporis. Praesentium accusamus consectetur nihil optio neque omnis placeat, dolorem perferendis quos debitis aliquam ut quam nam, eaque amet eos tempore nisi. Veritatis rem quisquam, aspernatur, unde voluptas suscipit architecto, dolores molestias, explicabo sequi dolorum odit! Ullam debitis hic illo repellendus error reiciendis officia doloribus unde inventore cum sed nihil animi voluptas, consequuntur ex ipsa iste maxime cupiditate veniam vel. Aspernatur debitis, tempore fuga quae, nobis iure blanditiis fugiat repellendus in laudantium eaque sint quibusdam libero quas ducimus. Exercitationem expedita aut numquam. Rem amet soluta recusandae dolorum molestias et in doloremque debitis obcaecati mollitia aut libero ratione modi fuga repudiandae, incidunt cum, culpa, similique autem iusto vero aliquid velit quasi perspiciatis! Dolor reprehenderit veniam obcaecati eaque numquam similique minima repellat facilis quasi, magnam, cupiditate sed autem quod! Inventore repellendus perferendis pariatur optio perspiciatis odit nostrum eligendi modi voluptatem. Quidem optio libero, perspiciatis nemo numquam error id. Maiores aspernatur quia officiis atque voluptatum vel praesentium quaerat mollitia porro voluptas, facere esse quos, iusto odit, recusandae possimus dolore eos reprehenderit commodi amet! Necessitatibus vitae in numquam eos sint, porro unde voluptatum. Ipsum numquam hic qui doloremque ducimus at totam corrupti, voluptatum ad magnam maxime incidunt, fuga facere et? Atque ipsa eaque minus officiis harum! Quo blanditiis, explicabo culpa quisquam possimus ipsum, alias nulla id rerum necessitatibus iure atque, aperiam saepe inventore, placeat aut iste et ullam fugiat optio. Ex vitae dolorem sequi at consequuntur, perspiciatis esse inventore. Neque reprehenderit delectus quo vel, aut, voluptatum pariatur sed facilis expedita eos, tenetur cupiditate officia architecto perferendis! Tempora provident repellat distinctio explicabo libero doloremque soluta rerum nihil fugit sit esse hic autem reiciendis unde aliquam doloribus ipsam dolores, accusamus odio quibusdam inventore, rem. Dolore obcaecati at eum debitis officia aliquid doloremque distinctio nostrum, sit deserunt libero, error tenetur dolores veniam maxime. Modi consectetur alias explicabo, perspiciatis odit quidem quisquam beatae repellendus eligendi natus doloremque ipsa, similique nam, magni cum quis ad sit vel corporis officiis. Non deleniti ducimus veniam excepturi fuga vel modi tempora! Iste doloribus dignissimos optio vel, facere beatae ipsum corporis. Minima repellat quidem, nulla perspiciatis, quos quod itaque minus earum sequi qui harum sint beatae veniam repellendus iusto nam dolorem vel, accusantium aliquam! Eaque dolor porro, magnam, repellat ratione quibusdam ipsa dolorem aliquam mollitia temporibus odio tempore dicta officia cumque ullam blanditiis, voluptas facilis labore placeat dolore quidem minus animi asperiores. Debitis odit quas culpa, asperiores possimus, eveniet accusantium, soluta eum laborum ipsam aut itaque quia libero! Quibusdam alias reprehenderit blanditiis provident facilis maiores cumque, nulla recusandae incidunt dolorem laboriosam pariatur illo distinctio, ratione voluptatibus id asperiores praesentium! Amet officia, quasi vero quas natus dolore ex facilis, ipsum labore fugit voluptas mollitia, eligendi sapiente temporibus sed quam fuga ducimus voluptatum quos distinctio nisi at.</p>
+
+        <!-- PAGE END ------------------------------->
+
+        <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
+        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+        <!-- SCROLL TO TOP BUTTON
+------------------------------------------------------------------->
+        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+        <!-- FEEDBACK
+------------------------------------------------------------------->
+        <div id="bottom-feedback" class="panel panel-primary closed">
+          <div class="panel-heading">
+            <i class="fa fa-comment-o"></i> Tagasiside <span class="pull-right"><i class="fa fa-chevron-up"></i></span>
+          </div>
+          <div class="panel-body">
+
+            <h3>Palun hinda Portaali kasutusmugavust</h3>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label  class = "full high" for="star5" title="Väga äge - 5" data-stars="5"></label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label class = "full high" for="star4" title="Päris hea - 4" data-stars="4"></label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label class = "full low" for="star3" title="Töötab - 3" data-stars="3"></label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label class = "full low" for="star2" title="Üsna vilets - 2" data-stars="2"></label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label class = "full low" for="star1" title="Väga halb - 1" data-stars="1"></label>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="row m-t-xs m-b">
+              <div class="col-md-12">
+                <textarea id="bottom-feedback-comment" class="comment form-control " name="" cols="49" rows="5" placeholder="Ole hea ja kirjelda natuke oma kogemusi"></textarea>
+
+                 <div class="error-msg-container">
+                  <span class="error-msg"></span>
+                </div>
+
+              </div>
+            </div>
+
+            <button id="send-feedback" class="btn btn-primary pull-right ">Saada <i class="fa fa-angle-right"></i></button>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- end content ---------------------------------------->
+
+    </div>
+    <!-- end wrapper ------------------------------------------>
+
+
+    <!-- FOOTER ------------------------------------>
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+
+    <!-- MODAL CONTENT ------------------------->
+
+    <!-- MODAL CONTENT END ---------------------->
+
+    <!-- CONTENT MASK FOR MOBILE MENU ------------->
+    <div id="c-mask" class="c-mask"></div>
+
+
+    <!-- LOADING ANIMATION -------------------------->
+    <div id="loading-mask" class="c-mask"></div>
+
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+
+
+    <!-- SCRIPTS ------------------------------------>
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+    <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
+    <script>
+      $(document).on("click", "#bottom-feedback .panel-heading", function() {
+        $('#bottom-feedback').toggleClass('closed');
+        $('#bottom-feedback .panel-heading span i').toggleClass('fa-chevron-down');
+      });
+
+      var $rating = 0;
+
+      $(document).on("click", "#bottom-feedback .rating label", function() {
+        $rating = $(this).attr('data-stars');
+      });
+
+      $(document).on("click", "#send-feedback", function() {
+        var minLength = 15;
+        var $textarea = $('#bottom-feedback-comment');
+
+        if($rating < 4) {
+          if($textarea.val().length < minLength) {
+            console.log($textarea.val().length);
+            $('.error-msg').empty().append('Palun lisa kommentaar mis oleks vähemalt ' + minLength + ' tähemärki pikk');
+            $('#bottom-feedback .comment').addClass('required');
+            return false;
+          }
+          else {
+            $('#bottom-feedback .comment').removeClass('required');
+            $('.error-msg').empty()
+            console.log('korras');
+          }
+        }
+        else {
+          $('#bottom-feedback .comment').removeClass('required');
+          $('.error-msg').empty()
+          console.log('korras');
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

@@ -1,67 +1,251 @@
 // main: ../style.less
 
-/*************************************************************
-DASHBOARD
-*************************************************************/
-.dashboard-header {
-    border-top: 0;
-    padding: 20px 20px 20px 20px;
-}
-
-.dashboard-header h2 {
-    margin-top: 10px;
-    font-size: 26px;
-}
-
-.fist-item {
-    border-top: none !important;
-}
-
-.statistic-box {
-    margin-top: 40px;
-
-}
-
-.dashboard-header .list-group-item span.label {
-    margin-right: 10px;
-}
-
-.list-group.clear-list .list-group-item {
-    border-top: 1px solid @border-color;
-    border-bottom: 0;
-    border-right: 0;
-    border-left: 0;
-    padding: 10px 0;
-}
-
-ul.clear-list:first-child {
-    border-top: none !important;
-}
-
-// birthdays widget
-.birthdays-container {
-
-    .all-bdays {
-        width: 160px;
-        text-align: center;
-        border: 1px solid #e5e6e7;
-        border-bottom: 1px solid transparent;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        padding: 2px 5px 2px 5px;
-        margin: 15px auto -20px auto;
-    }
-}
-
-@media screen and (min-width: @mobile-width-dash) {
-
-    #sortable-left, #sortable-right {
-        min-height: 300px;
+.wrapper-intranet {
+    /*************************************************************
+    DASHBOARD
+    *************************************************************/
+    .dashboard-header {
+        border-top: 0;
+        padding: 20px 20px 20px 20px;
     }
 
-}
-//end----------------------------------------------------------
+    .dashboard-header h2 {
+        margin-top: 10px;
+        font-size: 26px;
+    }
 
+    .fist-item {
+        border-top: none !important;
+    }
+
+    .statistic-box {
+        margin-top: 40px;
+
+    }
+
+    .dashboard-header .list-group-item span.label {
+        margin-right: 10px;
+    }
+
+    .list-group.clear-list .list-group-item {
+        border-top: 1px solid @border-color;
+        border-bottom: 0;
+        border-right: 0;
+        border-left: 0;
+        padding: 10px 0;
+    }
+
+    ul.clear-list:first-child {
+        border-top: none !important;
+    }
+
+    // IBOX -------------------------------------------------------
+    .ibox-content h1, .ibox-content h2, .ibox-content h3, .ibox-content h4, .ibox-content h5,
+    .ibox-title h1, .ibox-title h2, .ibox-title h3, .ibox-title h4, .ibox-title h5 {
+        margin-top: 5px;
+    }
+
+    .ibox-content.text-box {
+        padding-bottom: 0px;
+        padding-top: 15px;
+    }
+
+    .ui-draggable.ibox-title, .ui-draggable.ibox-title-full {
+        cursor: move;
+    }
+
+    .ibox {
+        clear: both;
+        margin-bottom: 25px;
+        margin-top: 0;
+        padding: 0;
+        border: 1px solid @lightest-grey;
+        border-radius: 4px;
+    }
+
+    .ibox.collapsed .ibox-content{
+        display: none;
+    }
+    .ibox.collapsed .fa.fa-chevron-up:before {
+        content: "\f078";
+    }
+    .ibox.collapsed .fa.fa-chevron-down:before {
+        content: "\f077";
+    }
+
+    .ibox:after, .ibox:before {
+        display: table;
+    }
+
+    .ibox-title {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background-color: @ibox-title-bg;
+        border-color: white;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 0px 0px 0;
+        color: inherit;
+        margin-bottom: 0;
+        padding: 14px 15px 7px;
+        min-height: 48px;
+    }
+
+    .ibox-title .raci {
+        cursor: pointer;
+    }
+
+    @keyframes glowing {
+        0% { background-color: white;  }
+        50% { background-color: @cherry;  color: white; border-color: white;}
+        100% { background-color: white; }
+    }
+
+    #sortable-view > .ui-sortable > .ibox > .ibox-title, #sortable-view > .ui-sortable > .ibox > .ibox-title-full {
+        border: 2px dashed @cherry;
+    }
+
+    #sortable-view > .ui-sortable > .ibox > .ibox-title:hover, #sortable-view > .ui-sortable > .ibox > .ibox-title-full:hover {
+        animation: glowing 1500ms infinite;
+    }
+
+    .ibox-content {
+        background-color: @ibox-content-bg;
+        color: inherit;
+        padding: 15px 20px 20px 20px;
+
+        border-color: @border-color;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 0px;
+        clear: both;
+    }
+
+    .ibox-content hr:last-child {
+        display: none;
+    }
+
+    .ibox-full {
+        clear: both;
+        margin-bottom: 0px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .ibox-title-full {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background-color: white;
+        border-color: @lightest-grey;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 0px 0px 0;
+        color: @text-color;
+        margin-bottom: 0;
+        padding: 14px 15px 7px;
+        min-height: 48px;
+    }
+
+    .ibox-title-full .ibox-tools a {
+        color: @lighter-grey;
+    }
+    .ibox-content-full {
+        background-color: white;
+        color: inherit;
+        padding: 0px;
+        border-color: @border-color;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 0px 0px;
+    }
+
+    .ibox-heading {
+        background-color: #f3f6fb;
+        border-bottom: none;
+    }
+
+    .ibox-heading h3 {
+        font-weight: 200;
+        font-size: 24px;
+    }
+
+    .ibox-title h5, .ibox-title-full h5 {
+        display: inline-block;
+        font-size: 14px;
+        margin: 3px 0 7px;
+        padding: 0;
+        text-overflow: ellipsis;
+        float: left;
+    }
+
+    .ibox-title .label, .ibox-title-full .label {
+        float: left;
+        margin-left: 4px;
+    }
+
+    .ibox-tools {
+        display: inline-block;
+        float: right;
+        margin-top: 0;
+        position: relative;
+        padding: 0;
+    }
+
+    .ibox-tools a {
+        cursor: pointer;
+        margin-left: 5px;
+        color: #c4c4c4;
+    }
+
+    .ibox-tools a.close-link {
+        display: none;
+    }
+
+    .ibox-tools a.btn-primary {
+        color: #fff;
+    }
+
+    .ibox-tools .dropdown-menu > li > a {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .ibox .open > .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+    // end ibox -----------------------------------------------
+
+
+
+    // birthdays widget
+    .birthdays-container {
+
+        .all-bdays {
+            width: 160px;
+            text-align: center;
+            border: 1px solid #e5e6e7;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 2px 5px 2px 5px;
+            margin: 15px auto -20px auto;
+        }
+    }
+
+    @media screen and (min-width: @mobile-width-dash) {
+
+        #sortable-left, #sortable-right {
+            min-height: 300px;
+        }
+
+    }
+    //end----------------------------------------------------------
+}
 /************************************************************
 SEARCH
 ************************************************************/
@@ -150,6 +334,13 @@ SEARCH RESULTS FOR PEOPLE
             font-weight: 600;
         }
 
+    }
+
+    // training widget
+    .widget-training {
+        .pull-right {
+            float: none !important;
+        }
     }
 
 }

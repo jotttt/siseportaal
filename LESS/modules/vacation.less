@@ -14,6 +14,9 @@
 
     .open-structure {
         cursor: pointer;
+        float: left;
+        margin-top: 2px;
+
 
         &:hover,&:focus,&:active {
             color: @cherry;
@@ -37,10 +40,25 @@
 
                     .checkbox-inline {
                         display: inline;
-                        margin-left: 10px;
+                        margin-left: 4px;
+                        padding-left: 0px;
+                        line-height: 23px;
 
                         &.no-children {
-                            margin-left: 22px;
+                            margin-left: 4px;
+
+                            input {
+                                position: relative;
+                                margin: 6px 0 0 24px;
+                                float: left;
+                            }
+
+                        }
+
+                        input {
+                            position: relative;
+                            margin: 6px 0 0 12px;
+                            float: left;
                         }
                     }
                 }
@@ -61,7 +79,15 @@
 
                     .checkbox-inline {
                         display: inline;
-                        margin-left: 10px;
+                        margin-left: 4px;
+                        padding-left: 0px;
+                        line-height: 23px;
+
+                        input {
+                            position: relative;
+                            margin: 6px 0 0 12px;
+                            float: left;
+                        }
                     }
                 }
 
@@ -69,9 +95,17 @@
                     text-align: left;
                     margin: 0 0 3px 72px;
 
-                     .checkbox-inline {
+                    .checkbox-inline {
                         display: inline;
-                        margin-left: 10px;
+                        margin-left: 4px;
+                        padding-left: 0px;
+                        line-height: 23px;
+
+                        input {
+                            position: relative;
+                            margin: 6px 0 0 12px;
+                            float: left;
+                        }
                     }
                 }
 
@@ -79,7 +113,7 @@
                     text-align: left;
                     margin: 0 0 3px 108px;
 
-                     .checkbox-inline {
+                    .checkbox-inline {
                         display: inline;
                         margin-left: 10px;
                     }

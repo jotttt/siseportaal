@@ -672,6 +672,18 @@ button.btn.btn-caret.active:before {
         }
     }
 
+    &.btn-white {
+        background: white;
+
+        &:hover {
+            background:  darken(white, 3%);
+            border-color: darken(@lightest-grey, 3%);
+            -moz-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+            -webkit-box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+            box-shadow: inset 0px 4px 6px darken(#EDEDED, 3%);
+        }
+    }
+
     &.btn-primary {
         background: @cherry;
         color: white;

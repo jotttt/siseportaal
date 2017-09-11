@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kujunduskatsetused</title>
+
+    <!-- main css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="gray-bg">
+
+    <div id="wrapper" class="gray-bg">
+
+      <!-- TOP NAVBAR ------------------------------------->
+      <nav class="navbar-top" role="navigation">  <background class="cherry-mod-bg"></background>
+
+        <!--mobile-->
+        <a href="/start" class="mobile-logo-minimal-w"></a>
+
+        <btn id="open-mobile-menu" class="">
+          <i class="fa fa-bars fa-2x"></i>
+        </btn>
+        <!--end mobile-->
+
+        <div class="navbar">
+          <div class="navbar-header">
+
+            <btn class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars fa-2x"></i>
+            </btn>
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+
+                <li class="nav-header">
+                  <span>
+                    <a href="/start" class="ajax-load"><div id="logo-minimal-w"></div></a>
+                  </span>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-about">
+                      <li><a href="">Inimesed</a></li>
+                      <li>Struktuur</li>
+                      <li>Kavad</li>
+                    </div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-documents"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-services"></div>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <div class="core-widget-wrapper" id="wikimenu-trainings"></div>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+
+            <ul class="navbar-right">
+
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <i class="fa fa-user fa-fw"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+                  <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seaded</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/logout/$sess_id$"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+                </ul>
+              </li>
+
+              <li class="help-button">
+                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
+              </li>
+
+              <li class="open-mobile-search-container">
+                <a id="open-mobile-search">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </li>
+
+            </ul>
+
+            <!--NAVBAR SEARCH
+------------------------------>
+            <ul class="desktop-search">
+              <form ole="search" method="post" action="/search">
+                <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+              </form>
+            </ul>
+            <!--end------------------------------>
+          </div>
+        </div>
+        <!--MOBILE SEARCH
+----------------------------------------------------------------->
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="$txt_search$..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
+        </div>
+        <!--end----------------------------------------------------------></nav>
+      <!-- end top navbar --------------------------------->
+
+      <!-- LEFT SIDEBAR ------------------------------------>
+      <nav id="m-menu" class="min">
+
+        <ul>
+          <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+            <ul>
+              <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
+              <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
+            </ul>
+          </li>
+          <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+          <li><span><i class="fa fa-plane"></i>Lähetused</span>
+            <ul>
+              <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+              <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+              <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+              <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+            </ul>
+          </li>
+          <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+          <li><span><i class="fa fa-newspaper-o"></i>Uudised</span>
+            <ul>
+              <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+              <li><a href="uudised_1.1.html"><i class="fa fa-newspaper-o"></i>Uudised 1.1</a></li>
+            </ul>
+          </li>
+          <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+          <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+          <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+          <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+            <ul>
+              <li><a href="puhkused2-4.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+              <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              <li><a href="../puhkused_dev"><i class="fa fa-calendar"></i>Uus kalender</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+            <ul>
+              <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+              <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+            </ul>
+          </li>
+          <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+          <li><a href="seotud_isikud2.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
+          <li><span><i class="fa fa-money"></i>Sisearved</span>
+            <ul>
+              <li><a href="sisearved.html"><i class="fa fa-money"></i>Esita arve</a></li>
+              <li><a href="sisearved_esitatud.html"><i class="fa fa-money"></i>Esitatud arve</a></li>
+              <li><a href="sisearved_esitatud_konteerimine.html"><i class="fa fa-money"></i>Arve konteerimine</a></li>
+              <li><a href="sisearved_list.html"><i class="fa fa-money"></i>Arvete koondvaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-edit"></i>Sisulehtede mallid</span>
+            <ul>
+              <li><a href="mall_1.html"><i class="fa fa-edit"></i>Baasmall 1</a></li>
+              <li><a href="mall_2.html"><i class="fa fa-edit"></i>Baasmall 2</a></li>
+              <li><a href="mall_3.html"><i class="fa fa-edit"></i>Baasmall 3</a></li>
+              <li><a href="mall_4.html"><i class="fa fa-edit"></i>Baasmall 4</a></li>
+            </ul>
+          </li>
+          <li><a href="seadistused.html"><i class="fa fa-wrench"></i>Seadistused</a></li>
+          <li><span><i class="fa fa-ban"></i>Veateated</span>
+            <ul>
+              <li><a href="404.html"><i class="fa fa-ban"></i>404 viga</a></li>
+              <li><a href="503.html"><i class="fa fa-ban"></i>503 viga</a></li>
+              <li><a href="error_request_et.html"><i class="fa fa-ban"></i>päringu viga EST</a></li>
+              <li><a href="error_request_en.html"><i class="fa fa-ban"></i>päringu viga ENG</a></li>
+              <li><a href="error_session.html"><i class="fa fa-ban"></i>Sessioon aegunud</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-comments-o"></i>Arenguvestlused</span>
+            <ul>
+              <li><a href="arenguvestlus_tootaja.html"><i class="fa fa-comments-o"></i>Töötaja vaade</a></li>
+              <li><a href="arenguvestlus_juht.html"><i class="fa fa-comments-o"></i>Juhi vaade</a></li>
+              <li><a href="arenguvestlus_koordinaator.html"><i class="fa fa-comments-o"></i>Koordinaatori vaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-sun-o"></i>Puhkused</span>
+            <ul>
+              <li><a href="puhkus_admin.html"><i class="fa fa fa-sun-o"></i>Koordinaatori vaade</a></li>
+              <li><a href="puhkus_juht.html"><i class="fa fa fa-sun-o"></i>Juhivaade</a></li>
+              <li><a href="puhkus_osakond.html"><i class="fa fa fa-sun-o"></i>Osakonna vaade</a></li>
+              <li><a href="puhkus_tootaja.html"><i class="fa fa fa-sun-o"></i>Töötaja vaade</a></li>
+            </ul>
+          </li>
+
+          <div class="m-l m-r-sm m-t">
+            <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+          </div>
+        </ul>
+
+      </nav>
+      <!-- end left sidebar ------------------------------->
+
+      <!-- PAGE ----------------------------------------->
+      <div id="page-wrapper" class="gray-bg min">
+        <div id="content-wrapper" class="wrapper-training">
+
+
+          <!-- breadcrumb -->
+          <div class="row page-wrapper gray-bg m-b-md">
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+                <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+
+                <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+
+                <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+
+                <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+              </ol>
+
+            </div>
+            <span class="bookmark-btn-container">
+              <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+            </span>
+          </div>
+          <!-- breadcrumb end -->
+
+          <!-- CONTENT -------------------------------------->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-graduation-cap"></i> Sisekoolitused
+            </div>
+            <div class="panel-body">
+
+              <div class="panel panel-default">
+                <div class="panel-body grey">
+                  <p>TTÜ personali koolituse raames toimuvad 2016. aastal <strong>koolituskursused ja seminarid</strong>, mille loetelu on toodud allpool koolituskalendris.</p>
+
+                  <p>Allpool toodud programmid on lõplikult valminud ja kooskõlastatud lektoritega ning neile on võimalik registreeruda läbi infosüsteemi, klikkides programmi üleval vasakus nurgas <strong>'Registreeru kursusele'</strong></p>
+
+                  <p>Üksikasjalikumat informatsiooni kursuste kohta saab tel 620 2058 Ija Stõun (e-post <a id="obfuscated_email_12" href="mailto:ija dot stoun at ttu dot ee" style="display: none;">ija dot stoun at ttu dot ee</a><a href="mailto:ija dot stoun at ttu dot ee" id="obfuscated_email_11" style="display: none;">ija dot stoun at ttu dot ee</a><a href="mailto:ija.stoun@ttu.ee">ija.stoun@ttu.ee</a>)&nbsp;ja Liis Tõnisson (e-post <a id="obfuscated_email_22" href="mailto:marii dot saarlaid at ttu dot ee" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:marii dot saarlaid at ttu dot ee" id="obfuscated_email_21" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:marii.saarlaid@ttu.ee">liis.tonisson@ttu.ee</a>)&nbsp;vahendusel.</p><p style="text-align: justify;"><strong><span style="color: rgb(102, 0, 51);">NB! Palun veenduge, et olete saanud automaatse registreerimist kinnitava e-kirja. Kiri kinnitab, et teie registreerumine on õnnestunud.<br></span></strong></p>
+                </div>
+              </div>
+
+              <table class="training table">
+                <thead>
+                  <tr>
+                    <th width="20%">JUUNI</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="right">14. juuni 2017</td>
+                    <td>
+                      <div id="accordion">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          <strong>Arengu- ja karjäärivestluste läbiviimise lühikoolitus juhtidele</strong>
+                        </a>
+
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <table >
+                              <tbody>
+                                <tr>
+                                  <td >Toimumisaeg:</td>
+                                  <td><strong>14.06.2017</strong></td>
+                                </tr>
+                                <tr>
+                                  <td >Eesmärk:</td>
+                                  <td>Anda ülevaade arengu- ja karjäärivestluse vajalikkusest, ettevalmistamisest ja läbiviimisest TTÜ-s. Tutvustada uut siseportaali arengu- ja karjäärivestluste moodulit.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Sihtgrupp:</td>
+                                  <td>Struktuuriüksuste juhid, vahetud juhid</td>
+                                </tr>
+                                <tr>
+                                  <td >Teemad:</td>
+                                  <td>1.	Arengu- ja karjäärivestluste (edaspidi: vestluste) eesmärgid ja olemus; ohud ja võimalused.  Vestlusi reguleerivad dokumendid TTÜs. Juhi ja töötaja valmistumine vestluseks. Vestluste läbiviimine: juhile vajalikud kompetentsid. Sagedamini esinevad vead ja nende vältimine.<br>2.	Tutvustatakse uut siseportaali arengu- ja tulemusvestluste keskkonda ja antakse juhiseid selle kasutamiseks.<br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Õppekeel:
+                                  </td>
+                                  <td>eesti keel</td>
+                                </tr>
+                                <tr>
+                                  <td >Maht:
+                                  </td>
+                                  <td>auditoorne õppetöö: 4 akadeemilist tundi<br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Lektor:
+                                  </td>
+                                  <td>Merle Lõhmus, Mare Pihel, Liis Tõnisson
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Kontaktisik:
+                                  </td>
+                                  <td>Liis Tõnisson, 6202058, <a id="obfuscated_email_02" href="mailto:liis dot tonisson at ttu dot ee" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:liis dot tonisson at ttu dot ee" id="obfuscated_email_01" style="display: none;">liis dot tonisson at ttu dot ee</a><a href="mailto:liis.tonisson@ttu.ee">liis.tonisson@ttu.ee</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Registreerumise tähtaeg:
+                                  </td>
+                                  <td>14.06.2017
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td >Ajakava:</td>
+                                  <td><strong>13:00 - 16:15</strong></td>
+                                </tr>
+                                <tr>
+                                  <td >Koht:
+                                  </td>
+                                  <td><strong>U06-401</strong></td>
+                                </tr>
+                                <tr>
+                                  <td >
+                                  </td>
+                                  <td> <a href="#" class="btn btn-primary m-t">Registreeru</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>AUGUST</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="right">28.    - 29. august 2017
+                    </td>
+                    <td>
+                      <a href="#"><strong>Kõrgkoolididaktika õpituba</strong></a>
+                    </td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                    <th>OKTOOBER</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="right">10. oktoober 2017</td>
+                    <td><a href="#"><strong>Isikuandmete töötlemise ja kaitse alane lühikoolitus </strong></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">17. oktoober 2017</td>
+                    <td><a href="#"><strong>Suurepäraste loomuomaduste juurutamine </strong></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">28. oktoober 2017</td>
+                    <td>
+                      <a href="#">
+                        <strong>Exceli kasutuskoolitus edasijõudnutele</strong>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+          <!-- end content ---------------------------------->
+
+          <!-- fullscreen mode -->
+          <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+          <!-- scroll to top -->
+          <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+        </div>
+        <!-- end page --------------------------------------->
+      </div>
+    </div>
+    <!-- end wrapper -------------------------------------->
+
+    <!-- FOOTER ------------------------------------------->
+    <div class="footer">
+      <div>
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
+    <!-- footer end --------------------------------------->
+
+    <!-- MODAL CONTENT ------------------------------------>
+
+    <!-- modal content end -------------------------------->
+
+    <!-- content mask for mobile menu -->
+    <div id="c-mask" class="c-mask"></div>
+
+    <!-- loading animation -->
+    <div id="loading-mask" class="c-mask"></div>
+    <div class="loading-animation hidden">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS ----------------------------------------->
+    <!-- Base scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="js/plugins/spin.js/spin.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
+    <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
+    <script>
+      $('.panel-collapse').on('shown.bs.collapse', function(e) {
+        var $panel = $(this).closest('.panel');
+        $('html,body').animate({
+          scrollTop: $panel.offset().top
+        }, 500);
+      });
+    </script>
+    <!-- end scripts -------------------------------------->
+  </body>
+
+</html>

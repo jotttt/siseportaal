@@ -2,8 +2,11 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     minifyCSS = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    postcss = require('gulp-postcss'),
+    uncss = require('postcss-uncss');
 
+// PROCESS JS ----------------------------------------------------
 gulp.task('js', function () {
     return gulp.src([
         'js/jquery-2.1.1.min.js',
@@ -17,6 +20,7 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build'));
 });
 
+// PROCESS CSS --------------------------------------------------
 gulp.task('css', function () {
     return gulp.src(
         'css/deploy_plugins/*.css'
@@ -26,9 +30,23 @@ gulp.task('css', function () {
         .pipe(concat('app.css'))
         .pipe(gulp.dest('build'));
 });
+// UNCSS
+gulp.task('uncss', function () {
+    var plugins = [
+        uncss({
+            html: ['*.html']
+        }),
+    ];
+    return gulp.src('css/style.css')
+        .pipe(postcss(plugins))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('uncss'));
+});
 
+// COPY LESS AND CSS TO HTDOCS FOLDERS -------------------------
 gulp.task('copy', function () {
-    //CSS
+    // CSS
     gulp.src([
         'css/style.css',
         'css/style.css.map'

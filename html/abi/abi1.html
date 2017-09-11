@@ -232,42 +232,64 @@
 
       <!-- PAGE ----------------------------------------->
       <div id="page-wrapper" class="gray-bg min">
+        <div id="content-wrapper" class="wrapper-">
 
-        <!-- breadcrumb -->
-        <div class="row page-wrapper gray-bg m-b-md">
-          <div class="col-sm-12">
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
-              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
 
-              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
 
-              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+          <!-- breadcrumb -->
+          <div class="row page-wrapper gray-bg">
 
-              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
-            </ol>
+
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+                <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+
+                <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+
+                <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+
+                <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+              </ol>
+
+            </div>
+
+            <span class="bookmark-btn-container">
+              <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+            </span>
 
           </div>
-          <span class="bookmark-btn-container">
-            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
-          </span>
+
+          <!-- breadcrumb end -->
+          <div class="wrapper-content animated fadeIn" style="font-size: 1.0em">
+            <!-- CONTENT -------------------------------------->
+            <span class="help-btn-container">
+              <a id="help_btn" href="#wiki_help" data-toggle="modal"><i class="fa fa-question-circle"></i> <span class="hidden-sm hidden-xs">Juhend</span></a>
+            </span>
+
+            <div class="panel panel-default">
+              <div class="panel-heading"><i class="fa fa-birthday-cake"></i> Sünnipäevad - kujundus
+                <!-- <span class="help-btn-container pull-right m-r-md">
+<a id="help_btn" href="#wiki_help" data-toggle="modal"><i class="fa fa-question-circle"></i> Juhend</a>
+</span>-->
+              </div>
+              <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores nemo. Similique in nihil ut sit ad iure, incidunt excepturi tenetur velit magnam ipsam, numquam consectetur autem modi illo sapiente odit iusto quia. Debitis voluptatum minus magnam, accusantium nihil commodi iure quas repellat voluptas natus, neque vel placeat cumque recusandae numquam. Quidem a deserunt, reprehenderit porro ipsam, autem id sed at maiores facere blanditiis! Doloribus quis fuga laborum enim nisi, ipsa quibusdam. Ipsam molestiae, nemo qui consectetur, molestias voluptatibus unde culpa recusandae est, sapiente ipsa a minima. Perferendis earum, ducimus? Maxime sed recusandae quaerat. Quo deleniti ipsam veniam incidunt sint dolor atque sit laudantium, libero perferendis aperiam enim, optio minima porro quia, dolores dolore ratione saepe ipsum qui nam voluptatem laboriosam nesciunt repellat. Molestiae, iste modi. Omnis, recusandae modi suscipit quae pariatur fugit perspiciatis voluptates impedit et optio eos animi. Enim voluptas, tempore ducimus quas perspiciatis laborum blanditiis reprehenderit quia id quos, ipsam iusto aperiam! Amet perferendis facere accusamus odit in modi ex, asperiores nemo fuga nam alias quaerat debitis repellendus facilis veritatis maiores rem? Obcaecati est deserunt harum, aspernatur nihil quisquam odit consequatur nobis fuga quaerat suscipit laborum exercitationem soluta nam aperiam, ratione vel. Nihil, aliquid dolor aliquam atque?
+              </div>
+            </div>
+
+            <!-- end content ---------------------------------->
+
+            <!-- fullscreen mode -->
+            <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+            <!-- scroll to top -->
+            <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
+          </div>
         </div>
-        <!-- breadcrumb end -->
-
-        <!-- CONTENT -------------------------------------->
-
-
-
-        <!-- end content ---------------------------------->
-
-        <!-- fullscreen mode -->
-        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-        <!-- scroll to top -->
-        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
+        <!-- end page --------------------------------------->
       </div>
-      <!-- end page --------------------------------------->
     </div>
     <!-- end wrapper -------------------------------------->
 
@@ -296,7 +318,8 @@
 
     <!-- SCRIPTS ----------------------------------------->
     <!-- Base scripts -->
-    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin scripts -->
     <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/plugins/spin.js/spin.min.js"></script>
@@ -307,7 +330,8 @@
     <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
     <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
-    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
     <!-- end scripts -------------------------------------->
   </body>
 

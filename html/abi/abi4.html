@@ -17,10 +17,6 @@
     <!-- custom css -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!--test for date-time picker-->
-    <link rel="stylesheet" href="https://static.ttu.ee/portal/ext/date_time_picker/4.17.47/bootstrap-datetimepicker.min.css">
-    <!--end test for date-time picker-->
-
   </head>
 
   <body class="gray-bg">
@@ -108,10 +104,6 @@
                 </ul>
               </li>
 
-              <li class="help-button">
-                <a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> <text>Abi</text></a>
-              </li>
-
               <li class="open-mobile-search-container">
                 <a id="open-mobile-search">
                   <i class="fa fa-search fa-2x"></i>
@@ -141,7 +133,7 @@
       <!-- end top navbar --------------------------------->
 
       <!-- LEFT SIDEBAR ------------------------------------>
-      <nav id="m-menu" class="min">   <div>
+      <nav id="m-menu" class="min">
 
         <ul>
           <li><span><i class="fa fa-desktop"></i>Coverpage</span>
@@ -231,113 +223,89 @@
           </div>
         </ul>
 
-        <!-- BOTTOM ICONS
----------------------------------------------------------------->
-        <div class="bottom-icons">
-          <div class="row">
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
-            </div>
-            <div class="col-xs-3 text-center">
-              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- end bottom icons ------------------------------->
-
-        </div></nav>
+      </nav>
       <!-- end left sidebar ------------------------------->
 
-      <!-- CONTENT ------------------------------------------>
+      <!-- PAGE ----------------------------------------->
       <div id="page-wrapper" class="gray-bg min">
+        <div id="content-wrapper" class="wrapper-">
 
-        <!-- PAGE ----------------------------------------->
+          <!-- breadcrumb -->
+          <div class="row page-wrapper gray-bg m-b-md">
+            <div class="col-sm-12">
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
+                <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
 
-        <!-- breadcrumb -->
-        <div class="row page-wrapper gray-bg">
-          <div class="col-sm-12">
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i> <a href="/start" class="ajax-load">Avaleht</a></li>
-              <li><i class="fa fa-paperclip"></i> <a href="/fmreports" class="ajax-load">Aruanded</a></li>
+                <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
 
-              <li><i class="fa fa-play-circle"></i> <a href="/budget" class="ajax-load">Eelarve</a></li>
+                <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
 
-              <li><i class="fa fa-medkit"></i> <a href="/helpdesk" class="ajax-load">Kasutajatugi</a></li>
+                <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
+              </ol>
 
-              <li><i class="fa fa-rss"></i> <a href="/news" class="ajax-load">Uudised</a></li>
-            </ol>
+            </div>
+            <span class="bookmark-btn-container">
+              <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
+            </span>
 
           </div>
-          <span class="bookmark-btn-container">
-            <a id="bookmark_btn" class="bookmark-btn btn-round" data-toggle="tooltip" data-placement="left" title="Lisa see leht järjehoidjasse"><i class="fa fa-bookmark-o"></i></a>
-          </span>
-        </div>
-        <!-- breadcrumb end -->
+          <!-- breadcrumb end -->
 
-        <div class="row m-t-xl">
-          <div class='col-sm-2'>
-            <div class="form-group">
-              <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-              </div>
+          <!-- CONTENT -------------------------------------->
+
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-birthday-cake"></i> Sünnipäevad - kujundus
+              <span class="help-btn-container-round-text pull-right m-r-md">
+                <a id="help_btn" href="#wiki_help" data-toggle="modal" class="btn btn-round"><i class="fa fa-question-circle"></i> Abi</a>
+              </span>
+            </div>
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores nemo. Similique in nihil ut sit ad iure, incidunt excepturi tenetur velit magnam ipsam, numquam consectetur autem modi illo sapiente odit iusto quia. Debitis voluptatum minus magnam, accusantium nihil commodi iure quas repellat voluptas natus, neque vel placeat cumque recusandae numquam. Quidem a deserunt, reprehenderit porro ipsam, autem id sed at maiores facere blanditiis! Doloribus quis fuga laborum enim nisi, ipsa quibusdam. Ipsam molestiae, nemo qui consectetur, molestias voluptatibus unde culpa recusandae est, sapiente ipsa a minima. Perferendis earum, ducimus? Maxime sed recusandae quaerat. Quo deleniti ipsam veniam incidunt sint dolor atque sit laudantium, libero perferendis aperiam enim, optio minima porro quia, dolores dolore ratione saepe ipsum qui nam voluptatem laboriosam nesciunt repellat. Molestiae, iste modi. Omnis, recusandae modi suscipit quae pariatur fugit perspiciatis voluptates impedit et optio eos animi. Enim voluptas, tempore ducimus quas perspiciatis laborum blanditiis reprehenderit quia id quos, ipsam iusto aperiam! Amet perferendis facere accusamus odit in modi ex, asperiores nemo fuga nam alias quaerat debitis repellendus facilis veritatis maiores rem? Obcaecati est deserunt harum, aspernatur nihil quisquam odit consequatur nobis fuga quaerat suscipit laborum exercitationem soluta nam aperiam, ratione vel. Nihil, aliquid dolor aliquam atque?
             </div>
           </div>
 
+          <!-- end content ---------------------------------->
+
+          <!-- fullscreen mode -->
+          <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+          <!-- scroll to top -->
+          <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
+
         </div>
-
-        <!-- PAGE END ------------------------------->
-
-        <!-- FULLSCREEN MODE TOGGLE BUTTON -------------->
-        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-        <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
-        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
+        <!-- end page --------------------------------------->
       </div>
-      <!-- end content ---------------------------------------->
-
     </div>
-    <!-- end wrapper ------------------------------------------>
+    <!-- end wrapper -------------------------------------->
 
-
-    <!-- FOOTER ------------------------------------>
+    <!-- FOOTER ------------------------------------------->
     <div class="footer">
       <div>
         TTÜ Siseportaal &copy; 2014 - 2015
       </div>
     </div>
+    <!-- footer end --------------------------------------->
 
-    <!-- MODAL CONTENT ------------------------->
+    <!-- MODAL CONTENT ------------------------------------>
 
-    <!-- MODAL CONTENT END ---------------------->
+    <!-- modal content end -------------------------------->
 
-    <!-- CONTENT MASK FOR MOBILE MENU ------------->
+    <!-- content mask for mobile menu -->
     <div id="c-mask" class="c-mask"></div>
 
-
-    <!-- LOADING ANIMATION -------------------------->
+    <!-- loading animation -->
     <div id="loading-mask" class="c-mask"></div>
-
     <div class="loading-animation hidden">
       <div id="loader-wrapper">
         <div id="loader"></div>
       </div>
     </div>
 
-
-    <!-- SCRIPTS ------------------------------------>
+    <!-- SCRIPTS ----------------------------------------->
     <!-- Base scripts -->
-    <script src="js/jquery-2.1.1.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin scripts -->
     <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/plugins/spin.js/spin.min.js"></script>
@@ -348,21 +316,9 @@
     <script src="js/plugins/chosen/chosen.jquery.min.js"></script>
     <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
     <!-- My custom scripts -->
-    <script src="js/main_ui.js"></script><script src="js/widget_ui.js"></script>
-
-    <!--test for date-time picker-->
-    <script src="https://static.ttu.ee/portal/ext/moment/2.18.1/moment.min.js"></script>
-    <script src="https://static.ttu.ee/portal/ext/moment/2.18.1/et.js"></script>
-    <script src="https://static.ttu.ee/portal/ext/date_time_picker/4.17.47/bootstrap-datetimepicker.min.js"></script>
-
-    <script type="text/javascript">
-      $(function () {
-        $('#datetimepicker1').datetimepicker();
-      });
-    </script>
-
-    <!--end test for date-time picker-->
-
+    <script src="js/main_ui.js"></script>
+    <script src="js/widget_ui.js"></script>
+    <!-- end scripts -------------------------------------->
   </body>
 
 </html>
