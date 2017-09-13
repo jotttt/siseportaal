@@ -2,153 +2,159 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>auth.ttu.ee</title>
+    <title>auth.ttu.ee</title>
 
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet" />
-		<link href="css/toastr.min.css" rel="stylesheet"/>
-		<link href="css/style.css" rel="stylesheet">
-		<!--[if lt IE 9]>
+    <!-- main css -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="../../css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/plugins/toastr/toastr.min.css">
+    <!-- custom css -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
 <script src="https://auth-test.ttu.ee/js/1.1/html5shiv.min.js"></script>
 <script src="https://auth-test.ttu.ee/js/1.1/respond.js"></script>
 <![endif]-->
-		<style>
-			.loginscreen.middle-box {
-				width: 300px;
-			}
-			.middle-box {
-				max-width: 400px;
-				z-index: 100;
-				margin: 0 auto;
-				padding-top: 40px;
-			}
-			.btn-default {
-				background-color: #c9c9c9;
-				border-color: #c9c9c9;
-				color: #fff;
-			}
-		</style>
-	</head>
 
-	<body class="gray-bg" style="display: block;">
-		<div class="middle-box text-center loginscreen animated fadeInDown">
-			<div class="ttu-login">
-				<div class="m-b">
-					<div id="logo-minimal-c" class="center-block"></div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<div class=" btn-group pull-left m-b">
-							<a href="/login/et/portal-dev" id="login-est" class="btn btn-xs btn-default">Eesti keeles</a>
-							<a href="/login/en/portal-dev" id="login-eng" class="btn btn-xs btn-grey">In English</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 m-b p-r-none">
-						<div class="btn-group pull-left">
-							<a id="uni-id-select" class="btn btn-sm btn-default">Uni-ID</a>
-							<a id="id-card-select" class="btn btn-sm btn-grey">ID-kaart</a>
-							<a id="mobile-id-select" class="btn btn-sm btn-grey">Mobiil-ID</a>
-						</div>
-					</div>
-				</div>
-			</div>
+      <style>
+      .loginscreen.middle-box {
+        width: 300px;
+      }
+      .middle-box {
+        max-width: 400px;
+        z-index: 100;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
+      .btn-default {
+        background-color: #c9c9c9;
+        border-color: #c9c9c9;
+        color: #fff;
+      }
+    </style>
+  </head>
 
-			<form method="post" action="/login/et/portal-dev">
-				<div id="login-content-wrapper">
-					<div id="login-content-uni-id" class="show">
-						<div class="form-group"><input type="text" name="uname" maxlength="32" autocomplete="off" class="form-control" placeholder="Uni-ID kasutajatunnus"></div>
-						<div class="form-group"><input type="password" maxlength="128" name="secret" autocomplete="off" class="form-control" placeholder="Salasõna"></div>
-					</div>
-					<div id="login-content-id-card" class="hidden">
-						<input type="checkbox" name="sc-present"> Kaart on lugejas?
-						<div class="form-group"></div>
-					</div>
-					<div id="login-content-mobile-id" class="hidden">
-						<div class="form-group">
-							<input type="text" name="mobile" maxlength="14" class="form-control" placeholder="Mobiiltelefoni number">
-						</div>
-					</div>
-				</div>
-				<button type="submit" class="btn btn-primary block full-width m-b">Sisene</button>
-			</form>
+  <body class="gray-bg" style="display: block;">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+      <div class="ttu-login">
+        <div class="m-b">
+          <div id="logo-minimal-c" class="center-block"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class=" btn-group pull-left m-b">
+              <a href="/login/et/portal-dev" id="login-est" class="btn btn-xs btn-default">Eesti keeles</a>
+              <a href="/login/en/portal-dev" id="login-eng" class="btn btn-xs btn-grey">In English</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 m-b p-r-none">
+            <div class="btn-group pull-left">
+              <a id="uni-id-select" class="btn btn-sm btn-default">Uni-ID</a>
+              <a id="id-card-select" class="btn btn-sm btn-grey">ID-kaart</a>
+              <a id="mobile-id-select" class="btn btn-sm btn-grey">Mobiil-ID</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="row">
-				<div class="col-xs-2">
-				</div>
-				<div class="col-xs-8">
-					<small class="center-block">2013 - 2016</small>
-				</div>
-				<div class="col-xs-2">
-					<a data-toggle="modal" href="#modal-form" class="fa fa-question-circle pull-right text-muted" style="font-size: 21px;"></a>
-				</div>
-			</div>
-		</div>
+      <form method="post" action="/login/et/portal-dev">
+        <div id="login-content-wrapper">
+          <div id="login-content-uni-id" class="show">
+            <div class="form-group"><input type="text" name="uname" maxlength="32" autocomplete="off" class="form-control" placeholder="Uni-ID kasutajatunnus"></div>
+            <div class="form-group"><input type="password" maxlength="128" name="secret" autocomplete="off" class="form-control" placeholder="Salasõna"></div>
+          </div>
+          <div id="login-content-id-card" class="hidden">
+            <input type="checkbox" name="sc-present"> Kaart on lugejas?
+            <div class="form-group"></div>
+          </div>
+          <div id="login-content-mobile-id" class="hidden">
+            <div class="form-group">
+              <input type="text" name="mobile" maxlength="14" class="form-control" placeholder="Mobiiltelefoni number">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary block full-width m-b">Sisene</button>
+      </form>
 
-		<div id="modal-form" class="modal fade" aria-hidden="true" style="display: none;">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Sulge">×</button>
-						<h4 class="modal-title">Uni-ID autentimisteenus</h4>
-					</div>
-					<div class="modal-body">
+      <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+          <small class="center-block">2013 - 2016</small>
+        </div>
+        <div class="col-xs-2">
+          <a data-toggle="modal" href="#modal-form" class="fa fa-question-circle pull-right text-muted" style="font-size: 21px;"></a>
+        </div>
+      </div>
+    </div>
 
-						<h2 class="sectionedit1" id="mis-on-uni-id">Mis on Uni-ID?</h2>
-						<div class="level2">
+    <div id="modal-form" class="modal fade" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="Sulge">×</button>
+            <h4 class="modal-title">Uni-ID autentimisteenus</h4>
+          </div>
+          <div class="modal-body">
 
-							<p>
-								Tallinna Tehnikaülikool on võtnud suuna tsentraalse identiteedihalduse poole mis tähendab, et üleülikooliliste infosüsteemide kasutamiseks on ainult üks kasutajatunnus.
-							</p>
+            <h2 class="sectionedit1" id="mis-on-uni-id">Mis on Uni-ID?</h2>
+            <div class="level2">
 
-							<p>
-								<a href="/it/et/doc/uni-id" class="wikilink1" title="it:et:doc:uni-id">Uni-ID tunnus</a> tekib ja sulgub vastavalt sisemistel protseduurireeglitele ning on seotud kasutaja isikukoodiga tehes võimalikuks kasutaja tuvastamine paralleelselt ka ID kaardiga / Mobiil-ID'ga.
-							</p>
+              <p>
+                Tallinna Tehnikaülikool on võtnud suuna tsentraalse identiteedihalduse poole mis tähendab, et üleülikooliliste infosüsteemide kasutamiseks on ainult üks kasutajatunnus.
+              </p>
 
-							<p>
-								Uni-ID juurutusprojekt kestab kuni 2015. aasta keskpaigani - selleks ajaks peaks enamus infosüsteeme olema liidetud keskse autentimisportaaliga.
-							</p>
+              <p>
+                <a href="/it/et/doc/uni-id" class="wikilink1" title="it:et:doc:uni-id">Uni-ID tunnus</a> tekib ja sulgub vastavalt sisemistel protseduurireeglitele ning on seotud kasutaja isikukoodiga tehes võimalikuks kasutaja tuvastamine paralleelselt ka ID kaardiga / Mobiil-ID'ga.
+              </p>
 
-						</div>
-						<!-- EDIT1 SECTION "Mis on Uni-ID?" [1-570] -->
-						<h3 class="sectionedit2" id="passttuee">pass.ttu.ee</h3>
-						<div class="level3">
+              <p>
+                Uni-ID juurutusprojekt kestab kuni 2015. aasta keskpaigani - selleks ajaks peaks enamus infosüsteeme olema liidetud keskse autentimisportaaliga.
+              </p>
 
-							<p>
-								Oma kasutajatunnuse (üldjuhul kujul Ees.Perenimi) parooli saab ise seadistada keskkonnas <a href="https://pass.ttu.ee" class="urlextern" title="https://pass.ttu.ee" rel="nofollow">https://pass.ttu.ee</a> logides sisse oma ID kaardiga. Muudatuste jõustumiseks anna palun aega kuni 5 minutit.
-							</p>
+            </div>
+            <!-- EDIT1 SECTION "Mis on Uni-ID?" [1-570] -->
+            <h3 class="sectionedit2" id="passttuee">pass.ttu.ee</h3>
+            <div class="level3">
 
-						</div>
+              <p>
+                Oma kasutajatunnuse (üldjuhul kujul Ees.Perenimi) parooli saab ise seadistada keskkonnas <a href="https://pass.ttu.ee" class="urlextern" title="https://pass.ttu.ee" rel="nofollow">https://pass.ttu.ee</a> logides sisse oma ID kaardiga. Muudatuste jõustumiseks anna palun aega kuni 5 minutit.
+              </p>
 
-						<h4 id="it-kasutajatugi">IT kasutajatugi</h4>
-						<div class="level4">
+            </div>
 
-							<p>
-								Probleemide korral sisselogimisel palun anda sellest viivitamatult teada IT kasutajatoe spetsialistidele helistades 620 3333 või kirjutades <a href="mailto:helpdesk@ttu.ee" class="mail" title="helpdesk@ttu.ee">helpdesk@ttu.ee</a>
-							</p>
+            <h4 id="it-kasutajatugi">IT kasutajatugi</h4>
+            <div class="level4">
 
-						</div>
-						<!-- EDIT2 SECTION "pass.ttu.ee" [571-] -->
-					</div>
-				</div>
-			</div>
-		</div>
+              <p>
+                Probleemide korral sisselogimisel palun anda sellest viivitamatult teada IT kasutajatoe spetsialistidele helistades 620 3333 või kirjutades <a href="mailto:helpdesk@ttu.ee" class="mail" title="helpdesk@ttu.ee">helpdesk@ttu.ee</a>
+              </p>
 
-		<script src="js/jquery-2.1.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script>
-          //REMOVE UNI ID LOGIN OPTION
-        /*$('#uni-id-select, #login-content-uni-id').remove();
+            </div>
+            <!-- EDIT2 SECTION "pass.ttu.ee" [571-] -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script>
+      //REMOVE UNI ID LOGIN OPTION
+      /*$('#uni-id-select, #login-content-uni-id').remove();
         $('#id-card-select').removeClass('btn-grey').addClass('btn-default');
         $('#login-content-id-card').removeClass('hidden').addClass('show');*/
-      </script>
+    </script>
 
-	</body>
+  </body>
 
 
 </html>

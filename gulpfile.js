@@ -34,13 +34,13 @@ gulp.task('css', function () {
 gulp.task('uncss', function () {
     var plugins = [
         uncss({
-            html: ['*.html']
+            html: ['html/*.html','html/**/*.html']
         }),
     ];
     return gulp.src('css/style.css')
         .pipe(postcss(plugins))
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-        .pipe(minifyCSS())
+        //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+        //.pipe(minifyCSS())
         .pipe(gulp.dest('uncss'));
 });
 

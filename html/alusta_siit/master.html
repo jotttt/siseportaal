@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Starter template</title>
+    <title>Kujunduskatsetused</title>
 
     <!-- main css -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -21,9 +21,10 @@
 
   <body>
 
-    <div id="wrapper" class="">
+    <div id="wrapper" class="gray-darker-bg">
 
-      <!-- TOP NAVBAR ------------------------------------->
+
+      <!-- TOP NAVBAR -------------------------------------->
       <nav class="navbar-top" role="navigation">  <background class="cherry-mod-bg"></background>
 
         <!--mobile-->
@@ -144,11 +145,11 @@
         <ul>
           <li><span><i class="fa fa-desktop"></i>Coverpage</span>
             <ul>
-              <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
+              <li><a href="../esileht/esileht.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
               <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
             </ul>
           </li>
-          <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+          <li><a href="../arengukava/arengukava.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
           <li><span><i class="fa fa-plane"></i>Lähetused</span>
             <ul>
               <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
@@ -252,12 +253,12 @@
         </div></nav>
       <!-- end left sidebar ----------------------------------->
 
+
+
       <!-- CONTENT
 --------------------------------------------------------------->
-      <div id="page-wrapper" class="min gray-bg">
+      <div id="page-wrapper" class="gray-bg min">
 
-        <!--BREADCRUMB
---------------------------------------------------------------->
         <div class="row">
           <div class="col-md-12">
             <ol class="breadcrumb">
@@ -270,132 +271,39 @@
             </ol>
           </div>
         </div>
-        <!-- end breadcrumb ----------------------------------->
+
 
         <!--PAGE
 --------------------------------------------------------------->
-        <div class="wrapper-content animated fadeIn">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <i class="fa fa-money"></i> Sisearveldused
-            </div>
-            <div class="panel-body">
-              <ul class="nav nav-tabs">
-                <li class="active">
-                  <a href="#b" id="link_a" data-toggle="tab">Arve detailvaade</a>
-                </li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane fade in active" id="b">
-
-                  <form method="POST" action="/bill" class="form-horizontal" id="billForm">
-
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <h5>Arve esitaja:</h5>
-                        <strong>Infotehnoloogia osakond</strong>
-                      </div>
-
-                      <div class="col-sm-6 text-right">
-                        <h4>Arve ID</h4>
-                        <h4 class="text-navy">ABC156</h4>
-                        <p>
-                          <span>Maksja:</span><br>
-                          <strong>Logistikatalitus</strong><br>
-                        </p><br>
-                        <span><strong class="m-r-sm">Arve esitamise kuupäev:</strong> 31. mai 2017</span><br>
-                        <span><strong class="m-r-sm">Maksetähtaeg:</strong> 13. juuni 2017 (14 päeva jäänud)</span>
-                      </div>
-                    </div>
-
-                    <div class="table-responsive m-t">
-                      <table class="table invoice-table">
-                        <thead>
-                          <tr>
-                            <th>Nimetus</th>
-                            <th>Mõõtühik</th>
-                            <th>Hind</th>
-                            <th>Kogus</th>
-                            <th>Summa</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><div><strong>IT teenus ja võrgukaabeldus majandusmaja 4. korrusel 10. mail</strong></div>
-                            </td>
-                            <td>tund</td>
-                            <td>26,00 €</td>
-                            <td>4</td>
-                            <td>104,00 €</td>
-                          </tr>
-                          <tr>
-                            <td><div><strong>IT teenus 14. mail</strong></div>
-                            </td>
-                            <td>tund</td>
-                            <td>30,00 €</td>
-                            <td>10</td>
-                            <td>300,00 €</td>
-                          </tr>
-                          <tr>
-                            <td><div><strong>IT teenus 19. mail</strong></div>
-                            </td>
-                            <td>tund</td>
-                            <td>42,00 €</td>
-                            <td>3</td>
-                            <td>126,00 €</td>
-                          </tr>
-
-                        </tbody>
-                      </table>
-                      <table class="table invoice-total">
-                        <tbody>
-                          <tr>
-                            <td><strong>KOKKU :</strong></td>
-                            <td>530.00 €</td>
-                          </tr>
-                          <!--<tr>
-<td><strong>Käibemaks :</strong></td>
-<td>106,00 €</td>
-</tr>
-<tr>
-<td><strong>KOKKU :</strong></td>
-<td>636,00 €</td>
-</tr>-->
-                        </tbody>
-                      </table>
-                    </div>
-                  </form>
-
-
-
-
-
-                  <div id="results"></div>
-                </div>
-              </div>
-            </div>
+        <div class="widget white-bordered-bg text-center p-xl m-xl" style="height: 400px">
+          <div class="m-xl">
+            <i class="fa fa-bullseye fa-4x"></i>
+            <h1 class="m-xs">Siit saab kõigi kujunduse katsetuste juurde </h1>
           </div>
         </div>
-        <!-- end page ----------------------------------------->
+
+        <!--PAGE END
+------------------------------------------------------------->
 
         <!-- FULLSCREEN MODE TOGGLE BUTTON
-------------------------------------------------------------------->
+------------------------------------------------------------->
         <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
 
         <!-- SCROLL TO TOP BUTTON
-------------------------------------------------------------------->
+------------------------------------------------------------->
         <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
       </div>
-      <!-- end content ---------------------------------------->
+      <!-- end content --------------------------------------->
 
     </div>
-    <!-- end wrapper ------------------------------------------>
+    <!-- end wrapper ----------------------------------------->
+
 
     <!--FOOTER
---------------------------------------------------------------->
+-------------------------------------------------------------->
     <div class="footer">
-      <div>
+      <div >
         TTÜ Siseportaal &copy; 2014 - 2015
       </div>
     </div>
@@ -403,7 +311,9 @@
     <!--MODAL CONTENT
 --------------------------------------------------------------->
 
+
     <!-- end modal content ------------------------------------>
+
 
     <!--CONTENT MASK FOR MOBILE MENU
 --------------------------------------------------------------->

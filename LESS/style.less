@@ -1,11 +1,5 @@
  //out: ../css/style.css, sourceMap: true, /*compress: true*/
 
-/*
- *
- *   TTÜ Intranet Styles
- *
-*/
-
 // Base
 @import "base/fonts.less";
 @import "base/variables.less";
@@ -28,7 +22,7 @@
 @import "layout/navigation_left.less";
 @import "layout/navigation_top.less";
 @import "layout/sidebar.less";
-@import "layout/sidebar_right.less";
+@import "layout/footer.less";
 
 // modules
 @import "modules/appraisal.less";
@@ -47,6 +41,8 @@
 @import "modules/billing.less";
 
 // special cases
-@import "special/media.less";
 @import "special/high_contrast.less";
 @import "special/print.less";
+
+// mobile
+@import "media.less";

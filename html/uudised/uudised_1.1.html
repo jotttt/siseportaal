@@ -1,587 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <head>
+  <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Uudised</title>
+    <title>Uudised</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="css/animate.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/plugins/mmenu/jquery.mmenu.css">
-  <link href="css/style.css" rel="stylesheet">
+    <!-- main css -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- plugin css -->
+    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="../../css/plugins/mmenu/jquery.mmenu.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="../../css/style.css" rel="stylesheet">
 
- </head>
+  </head>
 
- <body>
+  <body>
 
-  <div id="wrapper" class="gray-darker-bg">
+    <div id="wrapper" class="gray-darker-bg">
 
-   <!-- TOP NAVBAR
+      <!-- TOP NAVBAR
 --------------------------------------------------------------->
-   <nav class="navbar navbar-static-top nav-down" role="navigation">
-    <div class="cherry-mod-bg"></div>
-    <span id="open-mobile-menu">
-     <button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
-    </span>
-    <span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
-     <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
-    </span>
-    <div id="mobile-search" class="hidden">
-     <form ole="search" method="post" action="/search">
-      <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
-     </form>
-    </div>
-
-    <div class="navbar-header">
-     <ul class="nav navbar-nav">
-      <li class="nav-header">
-       <div class="hidden-xs">
-        <span>
-         <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+      <nav class="navbar navbar-static-top nav-down" role="navigation">
+        <div class="cherry-mod-bg"></div>
+        <span id="open-mobile-menu">
+          <button class="btn btn-white btn-outline no-borders m-t-sm"><i class="fa fa-bars fa-2x"></i></button>
         </span>
-       </div>
-      </li>
-      <li class="dropdown dropdown-large hidden-xs">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
-      </li>
-      <li class="dropdown dropdown-large hidden-xs">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
-      </li>
-      <li class="dropdown dropdown-large hidden-xs">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
-      </li>
-      <li class="dropdown dropdown-large hidden-xs">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
-      </li>
-     </ul>
-    </div>
-
-    <ul class="nav navbar-top-links navbar-right">
-
-     <li class="dropdown right-sidebar">
-      <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-       <i class="fa fa-bell"></i><span class="label label-primary"></span>
-      </a>
-      <ul class="dropdown-menu dropdown-alerts">
-       <div class="core-widget-wrapper" id="alerts"><li>
-        <a href="/mail">
-
-         <div>
-          <i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
-          <span class="pull-right text-muted small">19 minutit tagasi</span>
-         </div>
-        </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <a href="/schedule">
-          <div>
-           <i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
-           <span class="pull-right text-muted small">4h tagasi</span>
-          </div>
-         </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <a href="/reports">
-          <div>
-           <i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
-           <span class="pull-right text-muted small">56 minutit tagasi</span>
-          </div>
-         </a>
-        </li>
-
-        <li class="divider"></li>
-        <li>
-         <div class="text-center link-block">
-          <a href="/alerts">
-           <strong>Vaata kõiki teavitusi</strong>
-           <i class="fa fa-angle-right"></i>
-          </a>
-         </div>
-        </li></div>
-      </ul>
-     </li>
-
-     <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
-
-     <li class="dropdown">
-      <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
-       <i class="fa fa-user fa-fw"></i>
-      </a>
-      <ul class="dropdown-menu">
-       <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
-       <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
-       <li class="divider"></li>
-       <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
-      </ul>
-     </li>
-     <li class="dropdown right-sidebar">
-      <a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
-       <i class="fa fa-tasks"></i>
-      </a>
-      <ul class="dropdown-menu">
-       <div class="core-widget-wrapper" id="confbar"><li>
-        <div class="setings-item">
-         <span>
-          Globaalne otsing
-         </span>
-         <div class="switch">
-          <div class="onoffswitch">
-           <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-           <label class="onoffswitch-label" for="example">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-           </label>
-          </div>
-         </div>
+        <span id="open-mobile-search" class="pull-right hidden-lg hidden-xl">
+          <button class="btn btn-white btn-outline no-borders m-t-sm m-r"><i class="fa fa-search fa-2x"></i></button>
+        </span>
+        <div id="mobile-search" class="hidden">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="mobile-srch-term" style="font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, FontAwesome">
+          </form>
         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="setings-item">
-          <span>
-           Keela messenger
-          </span>
-          <div class="switch">
-           <div class="onoffswitch">
-            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
-            <label class="onoffswitch-label" for="example2">
-             <span class="onoffswitch-inner"></span>
-             <span class="onoffswitch-switch"></span>
-            </label>
-           </div>
-          </div>
-         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="setings-item">
-          <span>
-           Luba ajaloo salvestus
-          </span>
-          <div class="switch">
-           <div class="onoffswitch">
-            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-            <label class="onoffswitch-label" for="example3">
-             <span class="onoffswitch-inner"></span>
-             <span class="onoffswitch-switch"></span>
-            </label>
-           </div>
-          </div>
-         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="setings-item">
-          <span>
-           Kõrge kontrastsus
-          </span>
-          <div class="switch">
-           <div class="onoffswitch">
-            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-            <label class="onoffswitch-label" for="example4">
-             <span class="onoffswitch-inner"></span>
-             <span class="onoffswitch-switch"></span>
-            </label>
-           </div>
-          </div>
-         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="setings-item">
-          <span>
-           Teavitused emailile
-          </span>
-          <div class="switch">
-           <div class="onoffswitch">
-            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
-            <label class="onoffswitch-label" for="example5">
-             <span class="onoffswitch-inner"></span>
-             <span class="onoffswitch-switch"></span>
-            </label>
-           </div>
-          </div>
-         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="setings-item">
-          <span>
-           Esilehe moodulite ümberpaigutus
-          </span>
-          <div class="switch">
-           <div class="onoffswitch">
-            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-            <label class="onoffswitch-label" for="example6">
-             <span class="onoffswitch-inner"></span>
-             <span class="onoffswitch-switch"></span>
-            </label>
-           </div>
-          </div>
-         </div>
-        </li>
-        <li class="divider"></li>
-        <li>
-         <div class="text-center link-block">
-          <a href="/settings">
-           <strong>Seadistuste detailvaade</strong>
-           <i class="fa fa-angle-right"></i>
-          </a>
-         </div>
-        </li></div>
-      </ul>
-     </li>
-    </ul>
 
-
-
-    <ul class="nav navbar-top-links navbar-right visible-lg">
-     <form ole="search" method="post" action="/search">
-      <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
-     </form>
-    </ul>
-
-   </nav>
-   <!-- end top navbar ------------------------------------->
-
-   <!-- LEFT SIDEBAR
---------------------------------------------------------------->
-   <nav id="m-menu" class="min">   <div>
-
-          <ul>
-            <li><span><i class="fa fa-desktop"></i>Coverpage</span>
-              <ul>
-                <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
-                <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
-              </ul>
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            <li class="nav-header">
+              <div class="hidden-xs">
+                <span>
+                  <a href="/main" class="cr-block ajax-load"><div id="logo-minimal-w" class="center-block m-l-sm m-r-md"></div></a>
+                </span>
+              </div>
             </li>
-            <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
-            <li><span><i class="fa fa-plane"></i>Lähetused</span>
-              <ul>
-                <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
-                <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
-                <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
-                <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
-              </ul>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ülikoolist <b class="caret"></b></a>
             </li>
-            <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
-            <li><span><i class="fa fa-newspaper-o"></i>Uudised</span>
-              <ul>
-                <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
-                <li><a href="uudised_1.1.html"><i class="fa fa-newspaper-o"></i>Uudised 1.1</a></li>
-              </ul>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dokumendid ja töökorraldus <b class="caret"></b></a>
             </li>
-            <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
-            <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
-            <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
-            <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
-              <ul>
-                <li><a href="puhkused2-4.html"><i class="fa fa-calendar"></i>Kalender</a></li>
-                <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
-                <li><a href="../puhkused_dev"><i class="fa fa-calendar"></i>Uus kalender</a></li>
-              </ul>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teenused <b class="caret"></b></a>
             </li>
-            <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
-              <ul>
-                <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
-                <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
-              </ul>
+            <li class="dropdown dropdown-large hidden-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Koolitused <b class="caret"></b></a>
             </li>
-            <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
-            <li><a href="seotud_isikud2.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
-            <li><span><i class="fa fa-money"></i>Sisearved</span>
-              <ul>
-                <li><a href="sisearved.html"><i class="fa fa-money"></i>Esita arve</a></li>
-                <li><a href="sisearved_esitatud.html"><i class="fa fa-money"></i>Esitatud arve</a></li>
-                <li><a href="sisearved_esitatud_konteerimine.html"><i class="fa fa-money"></i>Arve konteerimine</a></li>
-                <li><a href="sisearved_list.html"><i class="fa fa-money"></i>Arvete koondvaade</a></li>
-              </ul>
-            </li>
-            <li><span><i class="fa fa-edit"></i>Sisulehtede mallid</span>
-              <ul>
-                <li><a href="mall_1.html"><i class="fa fa-edit"></i>Baasmall 1</a></li>
-                <li><a href="mall_2.html"><i class="fa fa-edit"></i>Baasmall 2</a></li>
-                <li><a href="mall_3.html"><i class="fa fa-edit"></i>Baasmall 3</a></li>
-                <li><a href="mall_4.html"><i class="fa fa-edit"></i>Baasmall 4</a></li>
-              </ul>
-            </li>
-            <li><a href="seadistused.html"><i class="fa fa-wrench"></i>Seadistused</a></li>
-            <li><span><i class="fa fa-ban"></i>Veateated</span>
-              <ul>
-                <li><a href="404.html"><i class="fa fa-ban"></i>404 viga</a></li>
-                <li><a href="503.html"><i class="fa fa-ban"></i>503 viga</a></li>
-                <li><a href="error_request_et.html"><i class="fa fa-ban"></i>päringu viga EST</a></li>
-                <li><a href="error_request_en.html"><i class="fa fa-ban"></i>päringu viga ENG</a></li>
-                <li><a href="error_session.html"><i class="fa fa-ban"></i>Sessioon aegunud</a></li>
-              </ul>
-            </li>
-            <li><span><i class="fa fa-comments-o"></i>Arenguvestlused</span>
-              <ul>
-                <li><a href="arenguvestlus_tootaja.html"><i class="fa fa-comments-o"></i>Töötaja vaade</a></li>
-                <li><a href="arenguvestlus_juht.html"><i class="fa fa-comments-o"></i>Juhi vaade</a></li>
-                <li><a href="arenguvestlus_koordinaator.html"><i class="fa fa-comments-o"></i>Koordinaatori vaade</a></li>
-              </ul>
-            </li>
-            <li><span><i class="fa fa-sun-o"></i>Puhkused</span>
-              <ul>
-                <li><a href="puhkus_admin.html"><i class="fa fa fa-sun-o"></i>Koordinaatori vaade</a></li>
-                <li><a href="puhkus_juht.html"><i class="fa fa fa-sun-o"></i>Juhivaade</a></li>
-                <li><a href="puhkus_osakond.html"><i class="fa fa fa-sun-o"></i>Osakonna vaade</a></li>
-                <li><a href="puhkus_tootaja.html"><i class="fa fa fa-sun-o"></i>Töötaja vaade</a></li>
-              </ul>
-            </li>
-
-            <div class="m-l m-r-sm m-t">
-              <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
-            </div>
           </ul>
+        </div>
 
-          <!-- BOTTOM ICONS
+        <ul class="nav navbar-top-links navbar-right">
+
+          <li class="dropdown right-sidebar">
+            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+              <i class="fa fa-bell"></i><span class="label label-primary"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts">
+              <div class="core-widget-wrapper" id="alerts"><li>
+                <a href="/mail">
+
+                  <div>
+                    <i class="fa fa-envelope fa-fw"></i> Sul on 3 uut sõnumit
+                    <span class="pull-right text-muted small">19 minutit tagasi</span>
+                  </div>
+                </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="/schedule">
+                    <div>
+                      <i class="fa fa-upload fa-fw"></i> Kõik uuendused tehtud
+                      <span class="pull-right text-muted small">4h tagasi</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="/reports">
+                    <div>
+                      <i class="fa fa-calendar-o fa-fw"></i> Täna plaanis 2 sündmust
+                      <span class="pull-right text-muted small">56 minutit tagasi</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="divider"></li>
+                <li>
+                  <div class="text-center link-block">
+                    <a href="/alerts">
+                      <strong>Vaata kõiki teavitusi</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li></div>
+            </ul>
+          </li>
+
+          <li class="hidden-xs"><a href="#wiki_help" data-toggle="modal"><i class="fa fa-life-ring"></i> Abi</a></li>
+
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
+              <i class="fa fa-user fa-fw"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/profile" class="ajax-load"><i class="fa fa-user fa-fw"></i> Profiil</a></li>
+              <li><a href="/settings" class="ajax-load"><i class="fa fa-gear fa-fw"></i> Seadistused</a></li>
+              <li class="divider"></li>
+              <li><a href="/logout/3732716483929509"><i class="fa fa-sign-out fa-fw"></i> Logi välja</a></li>
+            </ul>
+          </li>
+          <li class="dropdown right-sidebar">
+            <a class="dropdown-toggle m-r" data-toggle="dropdown" href="#" aria-expanded="false">
+              <i class="fa fa-tasks"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="core-widget-wrapper" id="confbar"><li>
+                <div class="setings-item">
+                  <span>
+                    Globaalne otsing
+                  </span>
+                  <div class="switch">
+                    <div class="onoffswitch">
+                      <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                      <label class="onoffswitch-label" for="example">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Keela messenger
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                        <label class="onoffswitch-label" for="example2">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Luba ajaloo salvestus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                        <label class="onoffswitch-label" for="example3">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Kõrge kontrastsus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                        <label class="onoffswitch-label" for="example4">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Teavitused emailile
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                        <label class="onoffswitch-label" for="example5">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="setings-item">
+                    <span>
+                      Esilehe moodulite ümberpaigutus
+                    </span>
+                    <div class="switch">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                        <label class="onoffswitch-label" for="example6">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="text-center link-block">
+                    <a href="/settings">
+                      <strong>Seadistuste detailvaade</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li></div>
+            </ul>
+          </li>
+        </ul>
+
+
+
+        <ul class="nav navbar-top-links navbar-right visible-lg">
+          <form ole="search" method="post" action="/search">
+            <input type="text" class="form-control" placeholder="Otsi..." name="search_string" id="srch-term" style="font-family:Arial, FontAwesome">
+          </form>
+        </ul>
+
+      </nav>
+      <!-- end top navbar ------------------------------------->
+
+      <!-- LEFT SIDEBAR
+--------------------------------------------------------------->
+      <nav id="m-menu" class="min">   <div>
+
+        <ul>
+          <li><span><i class="fa fa-desktop"></i>Coverpage</span>
+            <ul>
+              <li><a href="index.html"><i class="fa fa-desktop"></i>Uusim variant</a></li>
+              <li><a href="index_profiil.html"><i class="fa fa-desktop"></i>Navbarile nimi</a></li>
+            </ul>
+          </li>
+          <li><a href="arengukava_1.3.html"><i class="fa fa-bar-chart"></i>Arengukava</a></li>
+          <li><span><i class="fa fa-plane"></i>Lähetused</span>
+            <ul>
+              <li><a href="lahetus_lisa_uus.html"><i class="fa fa-plane"></i>Lisa uus lähetus</a></li>
+              <li><a href="lahetus_uld.html"><i class="fa fa-plane text-lighter-grey"></i>Minu lähetused</a></li>
+              <li><a href="lahetus_kinnitus_vastutaja.html"><i class="fa fa-plane"></i>Lähetuste kinnitamine</a></li>
+              <li><a href="lahetus_aruanne.html"><i class="fa fa-plane"></i>Lähetuse aruanne</a></li>
+            </ul>
+          </li>
+          <li><a href="srm_tellimused.html"><i class="fa fa-hdd-o"></i>SRM</a></li>
+          <li><span><i class="fa fa-newspaper-o"></i>Uudised</span>
+            <ul>
+              <li><a href="uudised.html"><i class="fa fa-newspaper-o"></i>Uudised</a></li>
+              <li><a href="uudised_1.1.html"><i class="fa fa-newspaper-o"></i>Uudised 1.1</a></li>
+            </ul>
+          </li>
+          <li><a href="otsing.html"><i class="fa fa-search"></i>Otsing</a></li>
+          <li><a href="login.html"><i class="fa fa-sign-out"></i>Login</a></li>
+          <li><a href="ruumid.html"><i class="fa fa-building"></i>Ruumihaldus</a></li>
+          <li><span><i class="fa fa-calendar"></i>Rektoraadi kalender</span>
+            <ul>
+              <li><a href="puhkused2-4.html"><i class="fa fa-calendar"></i>Kalender</a></li>
+              <li><a href="kalender_modal.html"><i class="fa fa-calendar"></i>Modaal</a></li>
+              <li><a href="../puhkused_dev"><i class="fa fa-calendar"></i>Uus kalender</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-spinner"></i>Laadimisanimatsioon</span>
+            <ul>
+              <li><a href="loading.html"><i class="fa fa-spinner"></i>Animatsioon 1</a></li>
+              <li><a href="loading2.html"><i class="fa fa-spinner"></i>Animatsioon 2</a></li>
+            </ul>
+          </li>
+          <li><a href="tagasiside.html"><i class="fa fa-comment-o"></i>Tagasiside</a></li>
+          <li><a href="seotud_isikud2.html"><i class="fa fa-users"></i>Seotud isikute register</a></li>
+          <li><span><i class="fa fa-money"></i>Sisearved</span>
+            <ul>
+              <li><a href="sisearved.html"><i class="fa fa-money"></i>Esita arve</a></li>
+              <li><a href="sisearved_esitatud.html"><i class="fa fa-money"></i>Esitatud arve</a></li>
+              <li><a href="sisearved_esitatud_konteerimine.html"><i class="fa fa-money"></i>Arve konteerimine</a></li>
+              <li><a href="sisearved_list.html"><i class="fa fa-money"></i>Arvete koondvaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-edit"></i>Sisulehtede mallid</span>
+            <ul>
+              <li><a href="mall_1.html"><i class="fa fa-edit"></i>Baasmall 1</a></li>
+              <li><a href="mall_2.html"><i class="fa fa-edit"></i>Baasmall 2</a></li>
+              <li><a href="mall_3.html"><i class="fa fa-edit"></i>Baasmall 3</a></li>
+              <li><a href="mall_4.html"><i class="fa fa-edit"></i>Baasmall 4</a></li>
+            </ul>
+          </li>
+          <li><a href="seadistused.html"><i class="fa fa-wrench"></i>Seadistused</a></li>
+          <li><span><i class="fa fa-ban"></i>Veateated</span>
+            <ul>
+              <li><a href="404.html"><i class="fa fa-ban"></i>404 viga</a></li>
+              <li><a href="503.html"><i class="fa fa-ban"></i>503 viga</a></li>
+              <li><a href="error_request_et.html"><i class="fa fa-ban"></i>päringu viga EST</a></li>
+              <li><a href="error_request_en.html"><i class="fa fa-ban"></i>päringu viga ENG</a></li>
+              <li><a href="error_session.html"><i class="fa fa-ban"></i>Sessioon aegunud</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-comments-o"></i>Arenguvestlused</span>
+            <ul>
+              <li><a href="arenguvestlus_tootaja.html"><i class="fa fa-comments-o"></i>Töötaja vaade</a></li>
+              <li><a href="arenguvestlus_juht.html"><i class="fa fa-comments-o"></i>Juhi vaade</a></li>
+              <li><a href="arenguvestlus_koordinaator.html"><i class="fa fa-comments-o"></i>Koordinaatori vaade</a></li>
+            </ul>
+          </li>
+          <li><span><i class="fa fa-sun-o"></i>Puhkused</span>
+            <ul>
+              <li><a href="puhkus_admin.html"><i class="fa fa fa-sun-o"></i>Koordinaatori vaade</a></li>
+              <li><a href="puhkus_juht.html"><i class="fa fa fa-sun-o"></i>Juhivaade</a></li>
+              <li><a href="puhkus_osakond.html"><i class="fa fa fa-sun-o"></i>Osakonna vaade</a></li>
+              <li><a href="puhkus_tootaja.html"><i class="fa fa fa-sun-o"></i>Töötaja vaade</a></li>
+            </ul>
+          </li>
+
+          <div class="m-l m-r-sm m-t">
+            <a id="navbar-expand" class="pull-right hidden-xs hidden-sm m-r-sm"><i class="fa fa-thumb-tack text-muted fa-expand fa-compress"></i></a>
+          </div>
+        </ul>
+
+        <!-- BOTTOM ICONS
 ---------------------------------------------------------------->
-          <div class="bottom-icons">
-            <div class="row">
-              <div class="col-xs-3 text-center">
-                <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
-              </div>
-              <div class="col-xs-3 text-center">
-                <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
-              </div>
-              <div class="col-xs-3 text-center">
-                <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
-              </div>
-              <div class="col-xs-3 text-center">
-                <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
-              </div>
+        <div class="bottom-icons">
+          <div class="row">
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted "><i class="fa fa-bell fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-tasks fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-user fa-2x"></i></a>
+            </div>
+            <div class="col-xs-3 text-center">
+              <a href="#" class="text-muted"><i class="fa fa-sign-out fa-2x"></i></a>
             </div>
           </div>
-          <!-- end bottom icons ------------------------------->
+        </div>
+        <!-- end bottom icons ------------------------------->
 
         </div></nav>
-   <!-- end left sidebar ----------------------------------->
+      <!-- end left sidebar ----------------------------------->
 
-   <!-- CONTENT
+      <!-- CONTENT
 --------------------------------------------------------------->
-   <div id="page-wrapper" class="gray-bg min">
+      <div id="page-wrapper" class="gray-bg min">
 
-    <!--BREADCRUMB
+        <!--BREADCRUMB
 --------------------------------------------------------------->
-    <div class="row">
-     <div class="col-md-12">
-      <ol class="breadcrumb">
-       <li>
-        <a href="index.html">This is</a>
-       </li>
-       <li class="active">
-        <strong>Breadcrumb</strong>
-       </li>
-      </ol>
-     </div>
-    </div>
-    <!-- end breadcrumb ----------------------------------->
-
-    <!--PAGE
---------------------------------------------------------------->
-    <div class="wrapper-content animated fadeIn">
-     <div class="row">
-      <div class="col-lg-12">
-       <ul class="nav nav-tabs">
-        <li><a href="#a" data-toggle="tab">Ilmateenistus</a></li>
-        <li class=""><a href="#b" data-toggle="tab" aria-expanded="true">Uudised</a></li>
-        <li class="active"><a href="#c" data-toggle="tab" aria-expanded="true">Siseuudised</a></li>
-        <li><a href="#d" data-toggle="tab">Sündmused</a></li>
-        <li><a href="#e" data-toggle="tab">Meediakajastus</a></li>
-        <li><a href="#f" data-toggle="tab">Teadusuudised</a></li>
-       </ul>
-       <div class="tab-content">
-        <div class="tab-pane fade" id="a">
-        </div>
-        <div class="tab-pane fade" id="b">
-        </div>
-        <div class="tab-pane fade active in" id="c">
-         <div class="widget-wrapper" id="news-intra">
-          <div class="grid">
-           <div class="grid-sizer"><div class="news-item m-b-lg">
-            <div class="news-img"><img src="http://static.err.ee/gridfs/7EE9A106EDCDCF77B88AC58A79552D36A4EC93FFD7E9CCBFB6B5A6949003BCB7.jpg?width=752&crop=(52%2C0%2C800%2C422.59887005649716)&cropxunits=800&cropyunits=530&rotate=0&s.contrast=0&s.saturation=0&s.brightness=0&s.grayscale=0&s.alpha=1&s.roundcorners=0%2C0%2C0%2C0&format=jpg" class="img-responsive te"></div>
-            <h2 class="text-cherry">Rektor Aaviksoo kohtus Aafrika tudengite organisatsiooni esindajatega</h2>
-            <h6>Anna Kolossova, 17.04.2016 11:28, <a>Prindi</a></h6>
-            <div class=""><p>Rektor Jaak Aaviksoo kohtus esmaspäeval, 18. aprillil Aafrika tudengite organisatsiooni Association of African Students Estonia (AASE) esindajatega, et arutada, kuidas saab ülikool tudengitele siinse elu korraldamisel abiks olla. Tallinna tehnikaülikoolis toimunud kohtumisel esindasid aafrika tudengeid TTÜ materjaliteaduste doktorantuuris õppiv AASE president God’swill Nkwusi, EBS-is rahvusvahelist ärijuhtimist õppiv AASE asepresident Ojo Temitope, TTÜ magistriõppes mehhatroonikat tudeeriv AASE peasekretär Godwin Oamen ja TTÜ keskkonnajuhtimise magistrant AASE-s sotsiaalküsimustega tegelev Damilola Adeyemi.AASE pakub Aafrikast pärit tudengitele praktilist tugivõrgustikku ja aitab Eesti eluga kohaneda ning õpingutesse sisse elada. Ühtlasi on organisatsiooni eesmärk nii Aafrikast kui ka Eestist positiivse kuvandi loomine.Arutati nõukoja loomist, mille eesmärgiks oleks üliõpilaste omavahelise koostöö tugevdamine ja sünergia. Peale pagulasteema võimendatud käsitlemist meedia poolt on välistudengid tunnetanud suhtumise halvenemist. Rektor kinnitas, et TTÜ on väga uhke oma rahvusvahelise üliõpilaskonna üle ja suhtub nende turvalise õppe- ja elukeskkonna tagamisse täie tõsidusega.Tehnikaülikoolis õpib 12 000 tudengit, kellest 1400 on välistudengid nii teistest Euroopa Liidu riikidest kui kaugemalt.</p></div>
-            </div></div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg">
-             <div class=""><img src="http://www.ttu.ee/public/t/tudengimaja/.thumbnails/DSCF1173_520x390.JPG" class="img-responsive te"></div>
-             <h2 class="text-cherry">Mis teeb õpetamise heaks?</h2>
-             <h6>Anna Kolossova, 16.04.2016 09:19, <a>Prindi</a></h6>
-             <div class=""><p>
-              30. märtsil toimus TTÜs seminar „Õppejõult õppejõule“, kus külalisesinejaks oli Tartu Ülikooli elukestva õppe keskuse koordinaator Ene Voolaid (all fotol). Kohtumise eesmärk oli vahetada kogemusi ja saada teada, kuidas tekkis TÜ õppejõududel kollegiaalse tagasiside andmise idee. Ühtlasi kuulda sellest, kuidas moodustusid praktikakogukonnad, milline oli nende roll õpetamise hea tava väljatöötamisel ning kuidas praktikakogukondade tegevus on mõjutamas akadeemilist kultuuri täna.Tartu Ülikoolis piloteeriti kollegiaalset tagasisidet 2014. aasta sügissemestril. Pilootprojekti tulemusi tutvustati konverentsil „Õppejõult õppejõule 2015: kollegiaalne tagasiside“. Konverentsi materjalide põhjal koostati vaatmikraamat, mis on avaldatud TÜ raamatukogu repositooriumis DSpace ja millega on võimalik tutvuda kõigil huvilistel. Et praktikakogukondade projekt osutus edukaks, astuti TÜs järgmine samm ja asuti välja töötama õpetamise hea tava põhimõtteid. „Õppejõult õppejõule 2016“ konverentsil arutletigi õppimise ja õpetamise üle – selle üle, mis õpetamise heaks teeb ning kuidas üks või teine põhimõte igapäevases õpetamispraktikas on avaldunud. Igapäevases ülikoolielus jätkati praktikakogukondade tegevuse toestamisega ja uute kogukondade tekkele kaasa aitamisega, mis on päädinud sellega, et TÜs on praeguseks 12 õppimist ja õpetamist toetavat kogukonda. Et TTÜ uue arengukava õppetegevuse valdkonna tegevuskavas on eesmärk muuta kolleegi tagasiside õppetööle ülikooli organisatsioonikultuuri osaks (p 2.3), siis seatud eesmärki silmas pidades oli TÜ kolleegide kogemus seminaris osalejatele inspireeriv. TTÜs on õppimise ja õpetamise parendamise eesmärgil tehtud praktiliselt samu tegevusi, mida kolleegide juures Tartu Ülikoolis. Oleme neid tegevusi nimetanud teiste nimedega, kuid „Õppejõult õppejõule“ seminaride formaat on kasutusel nii meie ülikoolis kui TÜs. </p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg">
-             <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Heategevuslik lasteasjade turg 10. aprillil TTÜ tudengimajas</h2>
-             <h6>Anna Kolossova, 14.04.2016 16:12, <a>Prindi</a></h6>
-             <div class=""><p>Eeloleval pühapäeval, 10. aprillil kella 10-15 ootame kõiki külalisi suurele lasteasjade kevadturule, mis toimub TTÜ tudengimajas, aadressil Ehitajate tee 5. Turul kaubeldakse kõigega, mis seostub lastega – riided, jalanõud, mänguasjad, kärud, vankrid, jalgrattad, turvatoolid jne. Kauplemas on nii eraisikud kasutatud asjadega kui ka firmad uue kaubaga. Turul väljas olevate ettevõtete tutvustused leiate www.lasteriieteturg.weebly.com. Nagu juba traditsiooniks saanud, on kõigil võimalus annetada turul suurperedele ja lastekodudele üle Eesti, seekord Nõmme Lastekaitse Liidu vahendusel. Turul on selleks eraldi annetusala, kus on kotid jaotatud laste soo ja vanuse järgi.Annetusteks ootame riideid ja jalanõusid erinevas vanuses lastele, igapäevaseid tarbeesemeid, mida lastele võib vaja minna ja loomulikult mänguasju. Ootame ka meesteriideid! Palume kindlasti kontrollida, et riided oleksid puhtad ja terved ning tarbeesemed kasutuskõlblikud. Turukülastajatele on sissepääs tasuta. Et emmed-issid saaksid rahulikult ostelda, on taas lapsi lõbustamas Jänku-Juss. Tulemas on veel palju muudki põnevat! Lisainfo
-              lasteriieteturg@gmail.com</p></div>
-            </div>
-           </div>
-           <div class="grid-sizer"><div class="news-item m-b-lg">
-            <div class=""><img src="http://www.nitinh.com/wp-content/uploads/2013/03/what-is-responsive-web-design-700x466.png" class="img-responsive te"></div>
-            <h2 class="text-cherry">Õppeinfosüsteemist valmis mobiilne versioon</h2>
-            <h6>Sander Marandi, 13.04.2016 13:51, <a>Prindi</a></h6>
-            <div class=""><p>TTÜ õppeinfosüsteemist (ÕIS) on valminud mobiilne versioon, mis muudab lehekülje lihtsasti ja mugavalt kasutatavaks nutitelefonides ja tahvelarvutites.Avades õppeinfosüsteemi ois.ttu.ee mobiilses seadmes, suunatakse kasutaja nüüd automaatselt ümber süsteemi spetsiaalselt mobiilse seadmega kasutamiseks kohandatud versioonile.Võrreldes ÕISi tavaversiooniga on mobiilses õppeinfosüsteemis funktsioonid piiratud, kuna kõiki ÕISi võimalusi ei saa mobiilsena nii hästi kasutada. Mobiilsesse õppeinfosüsteemi saavad sisse logida ainult õppurid. Sisse saab logida nii ÕISi parooliga kui mobiil-ID abil. Sisse logimata saab mobiilse ÕISi avalehel vaadata TTÜ õppekavasid, õppeaineid ja tunniplaane.Mobiilsesse ÕISi sisse loginud õppurid näevad oma personaalset tunniplaani ja saavad salvestada seda oma elektroonsesse kalendrisse, õppurid näevad oma õpingukava ja sooritusi ning arveid, saavad registreerida end eksamitele, arvestustele ja konsultatsioonidele ning esitada õpingukava juhul, kui see on juba koostatud, kuid unustatud esitamata. Samuti saab mobiilses õppeinfosüsteemis lugeda teateid ja nendele vastata.Lisainfo: ois@ttu.ee</p></div>
-            </div></div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="https://s-media-cache-ak0.pinimg.com/600x315/12/cc/7b/12cc7be511f2025fc16fe1260e314be1.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
-             <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
-             <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg">
-             <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Heategevuslik lasteasjade turg 10. aprillil TTÜ tudengimajas</h2>
-             <h6>Anna Kolossova, 14.04.2016 16:12, <a>Prindi</a></h6>
-             <div class=""><p>Eeloleval pühapäeval, 10. aprillil kella 10-15 ootame kõiki külalisi suurele lasteasjade kevadturule, mis toimub TTÜ tudengimajas, aadressil Ehitajate tee 5. Turul kaubeldakse kõigega, mis seostub lastega – riided, jalanõud, mänguasjad, kärud, vankrid, jalgrattad, turvatoolid jne. Kauplemas on nii eraisikud kasutatud asjadega kui ka firmad uue kaubaga. Turul väljas olevate ettevõtete tutvustused leiate www.lasteriieteturg.weebly.com. Nagu juba traditsiooniks saanud, on kõigil võimalus annetada turul suurperedele ja lastekodudele üle Eesti, seekord Nõmme Lastekaitse Liidu vahendusel. Turul on selleks eraldi annetusala, kus on kotid jaotatud laste soo ja vanuse järgi.Annetusteks ootame riideid ja jalanõusid erinevas vanuses lastele, igapäevaseid tarbeesemeid, mida lastele võib vaja minna ja loomulikult mänguasju. Ootame ka meesteriideid! Palume kindlasti kontrollida, et riided oleksid puhtad ja terved ning tarbeesemed kasutuskõlblikud. Turukülastajatele on sissepääs tasuta. Et emmed-issid saaksid rahulikult ostelda, on taas lapsi lõbustamas Jänku-Juss. Tulemas on veel palju muudki põnevat! Lisainfo
-              lasteriieteturg@gmail.com</p></div>
-            </div>
-           </div>
-           <div class="grid-sizer"><div class="news-item m-b-lg">
-            <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-            <h2 class="text-cherry">Õppeinfosüsteemist valmis mobiilne versioon</h2>
-            <h6>Sander Marandi, 13.04.2016 13:51, <a>Prindi</a></h6>
-            <div class=""><p>TTÜ õppeinfosüsteemist (ÕIS) on valminud mobiilne versioon, mis muudab lehekülje lihtsasti ja mugavalt kasutatavaks nutitelefonides ja tahvelarvutites.Avades õppeinfosüsteemi ois.ttu.ee mobiilses seadmes, suunatakse kasutaja nüüd automaatselt ümber süsteemi spetsiaalselt mobiilse seadmega kasutamiseks kohandatud versioonile.Võrreldes ÕISi tavaversiooniga on mobiilses õppeinfosüsteemis funktsioonid piiratud, kuna kõiki ÕISi võimalusi ei saa mobiilsena nii hästi kasutada. Mobiilsesse õppeinfosüsteemi saavad sisse logida ainult õppurid. Sisse saab logida nii ÕISi parooliga kui mobiil-ID abil. Sisse logimata saab mobiilse ÕISi avalehel vaadata TTÜ õppekavasid, õppeaineid ja tunniplaane.Mobiilsesse ÕISi sisse loginud õppurid näevad oma personaalset tunniplaani ja saavad salvestada seda oma elektroonsesse kalendrisse, õppurid näevad oma õpingukava ja sooritusi ning arveid, saavad registreerida end eksamitele, arvestustele ja konsultatsioonidele ning esitada õpingukava juhul, kui see on juba koostatud, kuid unustatud esitamata. Samuti saab mobiilses õppeinfosüsteemis lugeda teateid ja nendele vastata.Lisainfo: ois@ttu.ee</p></div>
-            </div></div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
-             <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="http://www.stfrancis.edu/wp-content/uploads/2013/07/Container-stack-on-freight-ship.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
-             <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
-             <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
-            </div>
-           </div>
-           <div class="grid-sizer">
-            <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
-             <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
-             <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
-             <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
-            </div>
-           </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="breadcrumb">
+              <li>
+                <a href="index.html">This is</a>
+              </li>
+              <li class="active">
+                <strong>Breadcrumb</strong>
+              </li>
+            </ol>
           </div>
-         </div>
         </div>
-        <div class="tab-pane fade" id="d">
-        </div>
-        <div class="tab-pane fade" id="e">
-        </div>
-        <div class="tab-pane fade" id="f">
-        </div>
+        <!-- end breadcrumb ----------------------------------->
+
+        <!--PAGE
+--------------------------------------------------------------->
+        <div class="wrapper-content animated fadeIn">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="nav nav-tabs">
+                <li><a href="#a" data-toggle="tab">Ilmateenistus</a></li>
+                <li class=""><a href="#b" data-toggle="tab" aria-expanded="true">Uudised</a></li>
+                <li class="active"><a href="#c" data-toggle="tab" aria-expanded="true">Siseuudised</a></li>
+                <li><a href="#d" data-toggle="tab">Sündmused</a></li>
+                <li><a href="#e" data-toggle="tab">Meediakajastus</a></li>
+                <li><a href="#f" data-toggle="tab">Teadusuudised</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade" id="a">
+                </div>
+                <div class="tab-pane fade" id="b">
+                </div>
+                <div class="tab-pane fade active in" id="c">
+                  <div class="widget-wrapper" id="news-intra">
+                    <div class="grid">
+                      <div class="grid-sizer"><div class="news-item m-b-lg">
+                        <div class="news-img"><img src="http://static.err.ee/gridfs/7EE9A106EDCDCF77B88AC58A79552D36A4EC93FFD7E9CCBFB6B5A6949003BCB7.jpg?width=752&crop=(52%2C0%2C800%2C422.59887005649716)&cropxunits=800&cropyunits=530&rotate=0&s.contrast=0&s.saturation=0&s.brightness=0&s.grayscale=0&s.alpha=1&s.roundcorners=0%2C0%2C0%2C0&format=jpg" class="img-responsive te"></div>
+                        <h2 class="text-cherry">Rektor Aaviksoo kohtus Aafrika tudengite organisatsiooni esindajatega</h2>
+                        <h6>Anna Kolossova, 17.04.2016 11:28, <a>Prindi</a></h6>
+                        <div class=""><p>Rektor Jaak Aaviksoo kohtus esmaspäeval, 18. aprillil Aafrika tudengite organisatsiooni Association of African Students Estonia (AASE) esindajatega, et arutada, kuidas saab ülikool tudengitele siinse elu korraldamisel abiks olla. Tallinna tehnikaülikoolis toimunud kohtumisel esindasid aafrika tudengeid TTÜ materjaliteaduste doktorantuuris õppiv AASE president God’swill Nkwusi, EBS-is rahvusvahelist ärijuhtimist õppiv AASE asepresident Ojo Temitope, TTÜ magistriõppes mehhatroonikat tudeeriv AASE peasekretär Godwin Oamen ja TTÜ keskkonnajuhtimise magistrant AASE-s sotsiaalküsimustega tegelev Damilola Adeyemi.AASE pakub Aafrikast pärit tudengitele praktilist tugivõrgustikku ja aitab Eesti eluga kohaneda ning õpingutesse sisse elada. Ühtlasi on organisatsiooni eesmärk nii Aafrikast kui ka Eestist positiivse kuvandi loomine.Arutati nõukoja loomist, mille eesmärgiks oleks üliõpilaste omavahelise koostöö tugevdamine ja sünergia. Peale pagulasteema võimendatud käsitlemist meedia poolt on välistudengid tunnetanud suhtumise halvenemist. Rektor kinnitas, et TTÜ on väga uhke oma rahvusvahelise üliõpilaskonna üle ja suhtub nende turvalise õppe- ja elukeskkonna tagamisse täie tõsidusega.Tehnikaülikoolis õpib 12 000 tudengit, kellest 1400 on välistudengid nii teistest Euroopa Liidu riikidest kui kaugemalt.</p></div>
+                        </div></div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg">
+                          <div class=""><img src="http://www.ttu.ee/public/t/tudengimaja/.thumbnails/DSCF1173_520x390.JPG" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Mis teeb õpetamise heaks?</h2>
+                          <h6>Anna Kolossova, 16.04.2016 09:19, <a>Prindi</a></h6>
+                          <div class=""><p>
+                            30. märtsil toimus TTÜs seminar „Õppejõult õppejõule“, kus külalisesinejaks oli Tartu Ülikooli elukestva õppe keskuse koordinaator Ene Voolaid (all fotol). Kohtumise eesmärk oli vahetada kogemusi ja saada teada, kuidas tekkis TÜ õppejõududel kollegiaalse tagasiside andmise idee. Ühtlasi kuulda sellest, kuidas moodustusid praktikakogukonnad, milline oli nende roll õpetamise hea tava väljatöötamisel ning kuidas praktikakogukondade tegevus on mõjutamas akadeemilist kultuuri täna.Tartu Ülikoolis piloteeriti kollegiaalset tagasisidet 2014. aasta sügissemestril. Pilootprojekti tulemusi tutvustati konverentsil „Õppejõult õppejõule 2015: kollegiaalne tagasiside“. Konverentsi materjalide põhjal koostati vaatmikraamat, mis on avaldatud TÜ raamatukogu repositooriumis DSpace ja millega on võimalik tutvuda kõigil huvilistel. Et praktikakogukondade projekt osutus edukaks, astuti TÜs järgmine samm ja asuti välja töötama õpetamise hea tava põhimõtteid. „Õppejõult õppejõule 2016“ konverentsil arutletigi õppimise ja õpetamise üle – selle üle, mis õpetamise heaks teeb ning kuidas üks või teine põhimõte igapäevases õpetamispraktikas on avaldunud. Igapäevases ülikoolielus jätkati praktikakogukondade tegevuse toestamisega ja uute kogukondade tekkele kaasa aitamisega, mis on päädinud sellega, et TÜs on praeguseks 12 õppimist ja õpetamist toetavat kogukonda. Et TTÜ uue arengukava õppetegevuse valdkonna tegevuskavas on eesmärk muuta kolleegi tagasiside õppetööle ülikooli organisatsioonikultuuri osaks (p 2.3), siis seatud eesmärki silmas pidades oli TÜ kolleegide kogemus seminaris osalejatele inspireeriv. TTÜs on õppimise ja õpetamise parendamise eesmärgil tehtud praktiliselt samu tegevusi, mida kolleegide juures Tartu Ülikoolis. Oleme neid tegevusi nimetanud teiste nimedega, kuid „Õppejõult õppejõule“ seminaride formaat on kasutusel nii meie ülikoolis kui TÜs. </p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg">
+                          <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Heategevuslik lasteasjade turg 10. aprillil TTÜ tudengimajas</h2>
+                          <h6>Anna Kolossova, 14.04.2016 16:12, <a>Prindi</a></h6>
+                          <div class=""><p>Eeloleval pühapäeval, 10. aprillil kella 10-15 ootame kõiki külalisi suurele lasteasjade kevadturule, mis toimub TTÜ tudengimajas, aadressil Ehitajate tee 5. Turul kaubeldakse kõigega, mis seostub lastega – riided, jalanõud, mänguasjad, kärud, vankrid, jalgrattad, turvatoolid jne. Kauplemas on nii eraisikud kasutatud asjadega kui ka firmad uue kaubaga. Turul väljas olevate ettevõtete tutvustused leiate www.lasteriieteturg.weebly.com. Nagu juba traditsiooniks saanud, on kõigil võimalus annetada turul suurperedele ja lastekodudele üle Eesti, seekord Nõmme Lastekaitse Liidu vahendusel. Turul on selleks eraldi annetusala, kus on kotid jaotatud laste soo ja vanuse järgi.Annetusteks ootame riideid ja jalanõusid erinevas vanuses lastele, igapäevaseid tarbeesemeid, mida lastele võib vaja minna ja loomulikult mänguasju. Ootame ka meesteriideid! Palume kindlasti kontrollida, et riided oleksid puhtad ja terved ning tarbeesemed kasutuskõlblikud. Turukülastajatele on sissepääs tasuta. Et emmed-issid saaksid rahulikult ostelda, on taas lapsi lõbustamas Jänku-Juss. Tulemas on veel palju muudki põnevat! Lisainfo
+                            lasteriieteturg@gmail.com</p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer"><div class="news-item m-b-lg">
+                        <div class=""><img src="http://www.nitinh.com/wp-content/uploads/2013/03/what-is-responsive-web-design-700x466.png" class="img-responsive te"></div>
+                        <h2 class="text-cherry">Õppeinfosüsteemist valmis mobiilne versioon</h2>
+                        <h6>Sander Marandi, 13.04.2016 13:51, <a>Prindi</a></h6>
+                        <div class=""><p>TTÜ õppeinfosüsteemist (ÕIS) on valminud mobiilne versioon, mis muudab lehekülje lihtsasti ja mugavalt kasutatavaks nutitelefonides ja tahvelarvutites.Avades õppeinfosüsteemi ois.ttu.ee mobiilses seadmes, suunatakse kasutaja nüüd automaatselt ümber süsteemi spetsiaalselt mobiilse seadmega kasutamiseks kohandatud versioonile.Võrreldes ÕISi tavaversiooniga on mobiilses õppeinfosüsteemis funktsioonid piiratud, kuna kõiki ÕISi võimalusi ei saa mobiilsena nii hästi kasutada. Mobiilsesse õppeinfosüsteemi saavad sisse logida ainult õppurid. Sisse saab logida nii ÕISi parooliga kui mobiil-ID abil. Sisse logimata saab mobiilse ÕISi avalehel vaadata TTÜ õppekavasid, õppeaineid ja tunniplaane.Mobiilsesse ÕISi sisse loginud õppurid näevad oma personaalset tunniplaani ja saavad salvestada seda oma elektroonsesse kalendrisse, õppurid näevad oma õpingukava ja sooritusi ning arveid, saavad registreerida end eksamitele, arvestustele ja konsultatsioonidele ning esitada õpingukava juhul, kui see on juba koostatud, kuid unustatud esitamata. Samuti saab mobiilses õppeinfosüsteemis lugeda teateid ja nendele vastata.Lisainfo: ois@ttu.ee</p></div>
+                        </div></div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="https://s-media-cache-ak0.pinimg.com/600x315/12/cc/7b/12cc7be511f2025fc16fe1260e314be1.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
+                          <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
+                          <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg">
+                          <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Heategevuslik lasteasjade turg 10. aprillil TTÜ tudengimajas</h2>
+                          <h6>Anna Kolossova, 14.04.2016 16:12, <a>Prindi</a></h6>
+                          <div class=""><p>Eeloleval pühapäeval, 10. aprillil kella 10-15 ootame kõiki külalisi suurele lasteasjade kevadturule, mis toimub TTÜ tudengimajas, aadressil Ehitajate tee 5. Turul kaubeldakse kõigega, mis seostub lastega – riided, jalanõud, mänguasjad, kärud, vankrid, jalgrattad, turvatoolid jne. Kauplemas on nii eraisikud kasutatud asjadega kui ka firmad uue kaubaga. Turul väljas olevate ettevõtete tutvustused leiate www.lasteriieteturg.weebly.com. Nagu juba traditsiooniks saanud, on kõigil võimalus annetada turul suurperedele ja lastekodudele üle Eesti, seekord Nõmme Lastekaitse Liidu vahendusel. Turul on selleks eraldi annetusala, kus on kotid jaotatud laste soo ja vanuse järgi.Annetusteks ootame riideid ja jalanõusid erinevas vanuses lastele, igapäevaseid tarbeesemeid, mida lastele võib vaja minna ja loomulikult mänguasju. Ootame ka meesteriideid! Palume kindlasti kontrollida, et riided oleksid puhtad ja terved ning tarbeesemed kasutuskõlblikud. Turukülastajatele on sissepääs tasuta. Et emmed-issid saaksid rahulikult ostelda, on taas lapsi lõbustamas Jänku-Juss. Tulemas on veel palju muudki põnevat! Lisainfo
+                            lasteriieteturg@gmail.com</p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer"><div class="news-item m-b-lg">
+                        <div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                        <h2 class="text-cherry">Õppeinfosüsteemist valmis mobiilne versioon</h2>
+                        <h6>Sander Marandi, 13.04.2016 13:51, <a>Prindi</a></h6>
+                        <div class=""><p>TTÜ õppeinfosüsteemist (ÕIS) on valminud mobiilne versioon, mis muudab lehekülje lihtsasti ja mugavalt kasutatavaks nutitelefonides ja tahvelarvutites.Avades õppeinfosüsteemi ois.ttu.ee mobiilses seadmes, suunatakse kasutaja nüüd automaatselt ümber süsteemi spetsiaalselt mobiilse seadmega kasutamiseks kohandatud versioonile.Võrreldes ÕISi tavaversiooniga on mobiilses õppeinfosüsteemis funktsioonid piiratud, kuna kõiki ÕISi võimalusi ei saa mobiilsena nii hästi kasutada. Mobiilsesse õppeinfosüsteemi saavad sisse logida ainult õppurid. Sisse saab logida nii ÕISi parooliga kui mobiil-ID abil. Sisse logimata saab mobiilse ÕISi avalehel vaadata TTÜ õppekavasid, õppeaineid ja tunniplaane.Mobiilsesse ÕISi sisse loginud õppurid näevad oma personaalset tunniplaani ja saavad salvestada seda oma elektroonsesse kalendrisse, õppurid näevad oma õpingukava ja sooritusi ning arveid, saavad registreerida end eksamitele, arvestustele ja konsultatsioonidele ning esitada õpingukava juhul, kui see on juba koostatud, kuid unustatud esitamata. Samuti saab mobiilses õppeinfosüsteemis lugeda teateid ja nendele vastata.Lisainfo: ois@ttu.ee</p></div>
+                        </div></div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
+                          <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="http://www.stfrancis.edu/wp-content/uploads/2013/07/Container-stack-on-freight-ship.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
+                          <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Väikelaevajuhi koolitus Mereakadeemias TTÜ töötajatele soodushinnaga</h2>
+                          <h6>Sander Marandi, 12.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>TTÜ Eesti Mereakadeemia täiendusõppe keskus pakub kõikidele TTÜ töötajatele väikelaevajuhtide koolitust soodushinnaga 350 eurot. Koolitus toimub Mereakadeemia peamajas aadressil Kopli 101 argipäevaõhtuti ajavahemikus 18. aprillist kuni 27. maini.Kursusel osaleja saab teadmised: navigatsioonist ja lootsindusest,väikelaeva praktilisest juhtimisest, meresõiduohutusest,laevaehituse teooriast, rahvusvahelistest laevade kokkupõrke vältimise eeskirjadest (COLREG), seadusandlusest, esmaabist merel, meteoroloogiast, raadiosidest,väikelaeva mootorite teooriast, purjetamise teooria alustest. Kursus lõpeb eksamiga, mis koosneb kolmest osast: navigatsiooniline kaarditöö,suuline teooriaeksam, praktiline väikelaeva juhtimine simulaatoril. Lisainfo koolituse kohta ja registreerumine</p></div>
+                        </div>
+                      </div>
+                      <div class="grid-sizer">
+                        <div class="news-item m-b-lg"><div class=""><img src="img/voremodulatsioon_logo.jpg" class="img-responsive te"></div>
+                          <h2 class="text-cherry">Intermodaalsete vedude 60. aastapäeva tähistamine</h2>
+                          <h6>Sander Marandi, 11.04.2016 13:51, <a>Prindi</a></h6>
+                          <div class=""><p>Intermodaalsete vedude 60. aastapäeva tähistamine26. aprillil algusega kell 11:50 toimub Mereakadeemia peahoone fuajees merenduskeskuse eestvedamisel intermodaalsete vedude 60. aastapäeva pidulik tähistamine. Sellega seoses ootab merenduskeskus TTÜ töötajaid merekonteineri kujulise tordi söömisele.Nüüdisaegse intermodaalse konteineri väljatöötajaks loetakse ameeriklasi Malcolm McLeani ja Keith Tantlingeri, kes kavandasid 1955. aastal merekonteineri, mida saaks tõhusalt laevadele laadida ja hoida ohutult kinnitatuna pikkade merereiside vältel. Esimeseks nüüdisaegsete konteinerite edukaks veoks loetakse 26. aprilli 1956, kui Malcolm McLean laskis paigutada 58 35-jalast konteinerit (35×8×8) oma laevale "Ideal-X", ümberehitatud tankerile (lisaks 15 000 tonnile petrooleumile) ja see sõitis rannikuvetes Newarki sadamast Houstonisse, kus konteinerid laaditi lõpptarbijatele toimetamiseks 58-le veoautole. 35 jalga (10,67 m) oli tollal USA-s veoauto poolhaagise standardpikkus. </p></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="d">
+                </div>
+                <div class="tab-pane fade" id="e">
+                </div>
+                <div class="tab-pane fade" id="f">
+                </div>
 
 
 
 
-       </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <!-- end page ---------------------------------------->
+
+
+
+        <!-- FULLSCREEN MODE TOGGLE BUTTON
+---------------------------------------------------------->
+        <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
+
+        <!-- SCROLL TO TOP BUTTON
+---------------------------------------------------------->
+        <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
 
       </div>
-     </div>
-
-
-
-
+      <!-- end content --------------------------------------->
 
     </div>
-    <!-- end page ---------------------------------------->
+    <!-- end wrapper ----------------------------------------->
 
-
-
-    <!-- FULLSCREEN MODE TOGGLE BUTTON
----------------------------------------------------------->
-    <button id="fullscreen-btn" class="btn btn-sm btn-grey pull-right hidden-xs" type="button" style="opacity: 0;"><i class="fa fa-arrows"></i></button>
-
-    <!-- SCROLL TO TOP BUTTON
----------------------------------------------------------->
-    <a href="#" class="scroll-up"><i class="fa fa-2x fa-angle-double-up"></i></a>
-
-   </div>
-   <!-- end content --------------------------------------->
-
-  </div>
-  <!-- end wrapper ----------------------------------------->
-
-  <!--MODAL CONTENT
+    <!--MODAL CONTENT
 -------------------------------------------------------------->
 
 
 
-  <!-- end modal content ------------------------------------>
+    <!-- end modal content ------------------------------------>
 
-  <!--FOOTER
+    <!--FOOTER
 -------------------------------------------------------------->
-  <div class="footer">
-   <div >
-    TTÜ Siseportaal &copy; 2014 - 2015
-   </div>
-  </div>
+    <div class="footer">
+      <div >
+        TTÜ Siseportaal &copy; 2014 - 2015
+      </div>
+    </div>
 
-  <!--CONTENT MASK FOR MOBILE MENU
+    <!--CONTENT MASK FOR MOBILE MENU
 --------------------------------------------------------------->
-  <div id="c-mask" class="c-mask"></div>
+    <div id="c-mask" class="c-mask"></div>
 
-  <!--SCRIPTS
---------------------------------------------------------------->
-  <!-- Main scripts -->
-  <script src="js/jquery-2.1.1.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <!-- SCRIPTS ----------------------------------------->
+    <!-- Base scripts -->
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- Plugin scripts -->
+    <script src="../../js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
+    <script src="../../js/plugins/spin.js/spin.min.js"></script>
+    <script src="../../js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../../js/plugins/pace/pace.min.js"></script>
+    <script src="../../js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../js/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="../../js/plugins/chosen/chosen.jquery.min.js"></script>
+    <script src="../../js/plugins/masonry/masonry.pkgd.min.js"></script>
+    <!-- My custom scripts -->
+    <script src="../../js/main_ui.js"></script>
+    <script src="../../js/widget_ui.js"></script>
+    <!-- end scripts -------------------------------------->
 
-  <!-- Plugin javascript -->
-  <script src="js/plugins/mmenu/jquery.mmenu.min.all.js"></script>
-  <script src="js/plugins/moment/moment.min.js"></script>
-  <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-  <script src="js/plugins/slimscroll/jquery.slimscroll.js"></script>
-  <script src="js/inspinia.js"></script>
-  <script src="js/plugins/pace/pace.min.js"></script>
-  <script src="js/plugins/masonry/masonry.pkgd.min.js"></script>
+    <script>
+      $(function(){
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-sizer',
+          columnWidth: '.grid-sizer',
+          percentPosition: true
+        });
+      });
+    </script>
 
-  <!-- Custom javascript -->
-  <script src="js/main_ui.js"></script>
-
-  <script>
-   $(function(){
-    $('.grid').masonry({
-     // options
-     itemSelector: '.grid-sizer',
-     columnWidth: '.grid-sizer',
-     percentPosition: true
-    });
-   });
-  </script>
-
- </body>
+  </body>
 
 </html>
