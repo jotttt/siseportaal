@@ -7718,7 +7718,7 @@ WIKI EDIT TOOLS
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   position: absolute;
-  top: 62px;
+  top: 38px;
   right: -10px;
   height: 40px;
   width: 60px;
@@ -7731,6 +7731,7 @@ WIKI EDIT TOOLS
 #wikiTools .dropdown-menu {
   right: 75px;
   top: 40px;
+  width: 400px;
 }
 #wikiTools .dropdown-menu:after,
 #wikiTools .dropdown-menu:before {
@@ -7791,7 +7792,7 @@ WIKI EDIT TOOLS
 @media screen and (max-width: 1400px) {
   #wikiTools {
     right: -40px;
-    top: 42px;
+    top: 27px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -7812,7 +7813,7 @@ WIKI EDIT TOOLS
   }
   #wikiTools .dropdown-menu {
     right: 70px;
-    top: -25px;
+    top: -50px;
     width: 250px;
   }
   #wikiTools .dropdown-menu:after,
