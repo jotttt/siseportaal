@@ -1,10 +1,11 @@
 // main: ../style.less
 /****************************************************************
-BADGES AND LABELS************************************************
+BADGES AND LABELS ***********************************************
 ****************************************************************/
 .label {
     background-color: @light-gray;
     color: @label-badget-color;
+    border: 1px solid @light-gray;
     font-family: 'Open Sans';
     font-size: 10px;
     font-weight: 600;
@@ -12,7 +13,7 @@ BADGES AND LABELS************************************************
     text-shadow: none;
     text-transform: uppercase;
     touch-action: manipulation;
-    cursor: pointer;
+    //cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -22,6 +23,7 @@ BADGES AND LABELS************************************************
 .badge {
     background-color: @light-gray;
     color: @label-badget-color;
+    border: 1px solid @light-gray;
     font-family: 'Open Sans';
     font-size: 11px;
     font-weight: 600;
@@ -32,16 +34,34 @@ BADGES AND LABELS************************************************
     margin-bottom: 1px;
     text-shadow: none;
     touch-action: manipulation;
-    cursor: pointer;
+    //cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
+.label-primary, .badge-primary {
+    background-color: @cherry !important;
+    color: #FFFFFF !important;
+    border: 1px solid @cherry !important;
+
+    &.label-outline, &.badge-outline {
+        color: @cherry !important;
+        background-color: white !important;
+    }
+}
+
 .label-default, .badge-default {
     background-color: @lightest-grey !important;
     color:  @text-color !important;
+    border: 1px solid @lightest-grey;
+
+
+    &.label-outline, &.badge-outline {
+        background-color: white !important;
+            border: 1px solid @lighter-grey;
+    }
 }
 
 .label-light, .badge-light {
@@ -52,11 +72,6 @@ BADGES AND LABELS************************************************
 .label-transparent, .badge-transparent {
     background-color: transparent !important;
     color:  @grey !important;
-}
-
-.label-primary, .badge-primary {
-    background-color: @cherry !important;
-    color: #FFFFFF !important;
 }
 
 .label-success, .badge-success {

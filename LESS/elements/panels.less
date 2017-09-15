@@ -31,63 +31,25 @@ PANELS **********************************************************
             border: 1px solid @lightest-grey;
         }
 
-         &.lightest-grey {
+        &.lightest-grey {
             background-color: @lightest-grey;
             border: 1px solid transparent;
         }
     }
 }
 
-
-
-.page-heading {
-    border-top: 0;
-    padding: 0px 10px 20px 10px;
-}
-
-.panel-heading h1, .panel-heading h2 {
-    margin-bottom: 5px;
-}
-
-.panel .panel-heading .panel-options ul li a {
-    color: @text-color;
-    padding: 10px 15px;
-}
-.panel .panel-heading .panel-options ul li.active a {
-    color: @cherry;
-}
-
-.panel-default > .panel-heading {
-    background-color: white;
-    border-color: @lightest-grey;
-    cursor: pointer;
-}
-
-.panel.blank-panel {
-    background: none;
-    margin: 0;
-}
-
-.blank-panel .panel-heading {
-    padding-bottom: 0;
-}
-
-.panel-group {
-    margin: 0px;
-}
-
 .panel-primary {
     border: 1px solid @cherry;
     border-top: 0px solid transparent;
-}
 
-.panel-primary:empty {
-    display: none;
-}
+    &:empty {
+        display: none;
+    }
 
-.panel-primary > .panel-heading {
-    background-color: @cherry;
-    border-color: @cherry;
+    .panel-heading {
+        background-color: @cherry !important;
+        border-color: @cherry !important;
+    }
 }
 
 .panel-primary-alt {
@@ -103,6 +65,14 @@ PANELS **********************************************************
     border-color: @cherry;
 }
 
+.panel-default {
+
+    .panel-heading {
+        background-color: white;
+        border-color: @lightest-grey;
+    }
+}
+
 .panel-grey {
     border: 1px solid @lightest-grey;
     border-top: 0px solid transparent;
@@ -115,6 +85,31 @@ PANELS **********************************************************
         background-color: @lightest-grey;
         border-color: @lightest-grey;
     }
+}
+
+.panel-heading h1, .panel-heading h2 {
+    margin-bottom: 5px;
+}
+
+.panel .panel-heading .panel-options ul li a {
+    color: @text-color;
+    padding: 10px 15px;
+}
+.panel .panel-heading .panel-options ul li.active a {
+    color: @cherry;
+}
+
+.panel.blank-panel {
+    background: none;
+    margin: 0;
+}
+
+.blank-panel .panel-heading {
+    padding-bottom: 0;
+}
+
+.panel-group {
+    margin: 0px;
 }
 
 .panel-success {

@@ -171,6 +171,10 @@ a:focus {
 .center-item {
   margin: 0 auto;
 }
+.page-heading {
+  border-top: 0;
+  padding: 0px 10px 20px 10px;
+}
 li {
   list-style-type: none;
 }
@@ -623,6 +627,39 @@ code {
   color: #870042;
   font-size: 90%;
   padding: 0px 0px;
+}
+code .indent-0 {
+  padding-left: 0px;
+}
+code .indent-1 {
+  padding-left: 10px;
+}
+code .indent-2 {
+  padding-left: 20px;
+}
+code .indent-3 {
+  padding-left: 30px;
+}
+code .indent-4 {
+  padding-left: 40px;
+}
+code .indent-5 {
+  padding-left: 50px;
+}
+code .indent-6 {
+  padding-left: 60px;
+}
+code .indent-7 {
+  padding-left: 70px;
+}
+code .indent-8 {
+  padding-left: 80px;
+}
+code .indent-9 {
+  padding-left: 90px;
+}
+code .indent-10 {
+  padding-left: 100px;
 }
 table.table-mail tr td {
   padding: 12px;
@@ -1805,11 +1842,12 @@ LOGOS ***********************************************************
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAgNjAiPjxyZWN0IHg9IjM1MCIgeT0iLTI0IiBmaWxsPSIjNkMwRTM5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzcwIiB5PSItMjQiIGZpbGw9IiM2QzBFMzkiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIzODAiIHk9Ii0yNCIgZmlsbD0iIzZDMEUzOSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjM2MCIgeT0iLTI0IiBmaWxsPSIjNkMwRTM5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzkwIiB5PSItMjQiIGZpbGw9IiM4NzE4NDUiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIzNjAiIHk9Ii0yNCIgZmlsbD0iIzg3MTg0NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjQwMCIgeT0iLTI0IiBmaWxsPSIjNkMwRTM5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iNDA5IiB5PSItMjQiIGZpbGw9IiM4NzE4NDUiIHdpZHRoPSIzIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjM3MyIgeT0iLTI0IiBmaWxsPSIjODcxODQ1IiB3aWR0aD0iMyIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIxMzAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjE1MCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTYwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIxNDAiIHk9Ii0yNCIgZmlsbD0iIzZDMEUzOSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjE3MCIgeT0iLTI0IiBmaWxsPSIjODcxODQ1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTQwIiB5PSItMjQiIGZpbGw9IiM4NzE4NDUiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIxODAiIHk9Ii0yNCIgZmlsbD0iIzZDMEUzOSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjI1MCIgeT0iLTI0IiBmaWxsPSIjNjIwMDMzIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMjcwIiB5PSItMjQiIGZpbGw9IiM2QzBFMzkiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIyODAiIHk9Ii0yNCIgZmlsbD0iIzYyMDAzMyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjI5MCIgeT0iLTI0IiBmaWxsPSIjNTQwRjMzIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzAwIiB5PSItMjQiIGZpbGw9IiM2QzBFMzkiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIzMTAiIHk9Ii0yNCIgZmlsbD0iIzU0MEYzMyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjMyMCIgeT0iLTI0IiBmaWxsPSIjNkMwRTM5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzMwIiB5PSItMjQiIGZpbGw9IiM1NDBGMzMiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIzNDAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjIzMCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMjIwIiB5PSItMjQiIGZpbGw9IiM2QzBFMzkiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIyMTAiIHk9Ii0yNCIgZmlsbD0iIzg3MTg0NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjIwMCIgeT0iLTI0IiBmaWxsPSIjNkMwRTM5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTkwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIyNDAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjI2MCIgeT0iLTI0IiBmaWxsPSIjODcxODQ1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMjM3IiB5PSItMjQiIGZpbGw9IiM4NzE4NDUiIHdpZHRoPSIzIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjI3NSIgeT0iLTI0IiBmaWxsPSIjNjAwRTM1IiB3aWR0aD0iMyIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIzMjQiIHk9Ii0yNCIgZmlsbD0iIzg3MTg0NSIgd2lkdGg9IjMiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjUwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSI2MCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iNzAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjgwIiB5PSItMjQiIGZpbGw9IiM4NzE4NDUiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSI5MCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTAwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIxMTAiIHk9Ii0yNCIgZmlsbD0iIzg3MTg0NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjEyMCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTAiIHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHk9Ii0yNCIgZmlsbD0iIzc3MDczRCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjIwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSI0MCIgeT0iLTI0IiBmaWxsPSIjODcxODQ1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMzAyIiB5PSItMjQiIGZpbGw9IiM1NDBGMzMiIHdpZHRoPSIzIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjIwMCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMTAiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTgwIiB5PSItMjQiIGZpbGw9IiM3NzA3M0QiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIyMDAiIHk9Ii0yNCIgZmlsbD0iIzZDMEUzOSIgd2lkdGg9IjMiIGhlaWdodD0iMTEwIi8+PHJlY3QgeD0iMTk3IiB5PSItMjQiIGZpbGw9IiM2QzBFMzkiIHdpZHRoPSIzIiBoZWlnaHQ9IjExMCIvPjxyZWN0IHg9IjE3MCIgeT0iLTI0IiBmaWxsPSIjNzcwNzNEIiB3aWR0aD0iMyIgaGVpZ2h0PSIxMTAiLz48cmVjdCB4PSIxNTYiIHk9Ii0yNCIgZmlsbD0iIzZDMEUzOSIgd2lkdGg9IjMiIGhlaWdodD0iMTEwIi8+PC9zdmc+);
 }
 /****************************************************************
-BADGES AND LABELS************************************************
+BADGES AND LABELS ***********************************************
 ****************************************************************/
 .label {
   background-color: #d1dade;
   color: #5e5e5e;
+  border: 1px solid #d1dade;
   font-family: 'Open Sans';
   font-size: 10px;
   font-weight: 600;
@@ -1817,7 +1855,6 @@ BADGES AND LABELS************************************************
   text-shadow: none;
   text-transform: uppercase;
   touch-action: manipulation;
-  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1826,6 +1863,7 @@ BADGES AND LABELS************************************************
 .badge {
   background-color: #d1dade;
   color: #5e5e5e;
+  border: 1px solid #d1dade;
   font-family: 'Open Sans';
   font-size: 11px;
   font-weight: 600;
@@ -1836,16 +1874,36 @@ BADGES AND LABELS************************************************
   margin-bottom: 1px;
   text-shadow: none;
   touch-action: manipulation;
-  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+.label-primary,
+.badge-primary {
+  background-color: #870042 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #870042 !important;
+}
+.label-primary.label-outline,
+.badge-primary.label-outline,
+.label-primary.badge-outline,
+.badge-primary.badge-outline {
+  color: #870042 !important;
+  background-color: white !important;
+}
 .label-default,
 .badge-default {
   background-color: #e5e6e7 !important;
   color: #333333 !important;
+  border: 1px solid #e5e6e7;
+}
+.label-default.label-outline,
+.badge-default.label-outline,
+.label-default.badge-outline,
+.badge-default.badge-outline {
+  background-color: white !important;
+  border: 1px solid #c9c9c9;
 }
 .label-light,
 .badge-light {
@@ -1856,11 +1914,6 @@ BADGES AND LABELS************************************************
 .badge-transparent {
   background-color: transparent !important;
   color: #818182 !important;
-}
-.label-primary,
-.badge-primary {
-  background-color: #870042 !important;
-  color: #FFFFFF !important;
 }
 .label-success,
 .badge-success {
@@ -4199,9 +4252,41 @@ PANELS **********************************************************
   background-color: #e5e6e7;
   border: 1px solid transparent;
 }
-.page-heading {
-  border-top: 0;
-  padding: 0px 10px 20px 10px;
+.panel-primary {
+  border: 1px solid #870042;
+  border-top: 0px solid transparent;
+}
+.panel-primary:empty {
+  display: none;
+}
+.panel-primary .panel-heading {
+  background-color: #870042 !important;
+  border-color: #870042 !important;
+}
+.panel-primary-alt {
+  border: 1px solid #870042;
+}
+.panel-primary-alt:empty {
+  display: none;
+}
+.panel-primary-alt > .panel-heading {
+  background-color: white;
+  border-color: #870042;
+}
+.panel-default .panel-heading {
+  background-color: white;
+  border-color: #e5e6e7;
+}
+.panel-grey {
+  border: 1px solid #e5e6e7;
+  border-top: 0px solid transparent;
+}
+.panel-grey:empty {
+  display: none;
+}
+.panel-grey .panel-heading {
+  background-color: #e5e6e7;
+  border-color: #e5e6e7;
 }
 .panel-heading h1,
 .panel-heading h2 {
@@ -4214,11 +4299,6 @@ PANELS **********************************************************
 .panel .panel-heading .panel-options ul li.active a {
   color: #870042;
 }
-.panel-default > .panel-heading {
-  background-color: white;
-  border-color: #e5e6e7;
-  cursor: pointer;
-}
 .panel.blank-panel {
   background: none;
   margin: 0;
@@ -4228,38 +4308,6 @@ PANELS **********************************************************
 }
 .panel-group {
   margin: 0px;
-}
-.panel-primary {
-  border: 1px solid #870042;
-  border-top: 0px solid transparent;
-}
-.panel-primary:empty {
-  display: none;
-}
-.panel-primary > .panel-heading {
-  background-color: #870042;
-  border-color: #870042;
-}
-.panel-primary-alt {
-  border: 1px solid #870042;
-}
-.panel-primary-alt:empty {
-  display: none;
-}
-.panel-primary-alt > .panel-heading {
-  background-color: white;
-  border-color: #870042;
-}
-.panel-grey {
-  border: 1px solid #e5e6e7;
-  border-top: 0px solid transparent;
-}
-.panel-grey:empty {
-  display: none;
-}
-.panel-grey .panel-heading {
-  background-color: #e5e6e7;
-  border-color: #e5e6e7;
 }
 .panel-success {
   border-color: #2ba9c6;
