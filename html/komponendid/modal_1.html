@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Siseportaali kasutajaliidese elemendid</title>
+<title>Siseportaali kasutajaliidese elemendid</title>
 
     <!-- main css -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -80,14 +80,53 @@
 
           <!-- CONTENT -------------------------------------->
 
-          <div class="widget white-bordered-bg text-center p-xl m-xl" style="height: 400px">
-            <div  class="m-xl">
-              <i class="fa fa-pencil fa-4x"></i>
-              <h1 class="m-xs">Siseportaali kasutajaliidese elemendid</h1>
-              <h5>Vali vasakult menüüst komponent, millega soovid tutvuda</h5>
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-pencil"></i> Siseportaali kasutajaliidese elemendid - modaal-aken</div>
+            <div class="panel-body">
+
+              <div class="row m-b">
+                <div class="col-md-12">
+                  <a href="#demo" data-toggle="modal" class="btn btn-primary">Käivita modaal-aken</a>
+
+                </div>
+              </div>
+
+              <h2>Nupp</h2>
+              <div class="panel panel-default">
+                <div class="panel-body lightest-grey">
+                  <code>
+                    &lt;a href="#demo" data-toggle="modal" class="btn btn-primary"&gt;Käivita modaal-aken&lt;/a&gt; <br>
+                  </code>
+                </div>
+              </div>
+
+              <h2>Modaal-aken</h2>
+              <div class="panel panel-default">
+                <div class="panel-body lightest-grey">
+                    <code>
+
+                     &lt;div class="modal inmodal fade" id="demo" tabindex="-1" role="dialog"  aria-hidden="true"&gt;<br>
+                      &lt;div class="modal-dialog modal-lg"&gt;<br>
+                        &lt;div class="modal-content"&gt;<br>
+                          &lt;div class="modal-header"&gt;<br>
+                            &lt;button type="button" class="close" data-dismiss="modal"&gt;<br>
+                            &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;<br>&lt;span class="sr-only"&gt;Close&lt;/span&gt;<br>&lt;/button&gt;<br>
+                            &lt;h4 class="modal-title"&gt;Demo pealkiri&lt;/h4&gt;<br>
+                            &lt;small class="font-bold"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quo.&lt;/small&gt;<br>
+                          &lt;/div&gt;<br>
+                          &lt;div class="modal-body white-bg"&gt;<br>
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse odit beatae magnam earum, id repellendus nisi, voluptatem nesciunt, facere minus! Maiores cumque eum, ipsa pariatur voluptas quaerat adipisci, nemo delectus sunt consequuntur fugiat saepe nulla nobis, quasi est. Error assumenda vero numquam ipsum, alias, vitae perferendis architecto, saepe consequatur possimus porro unde enim autem! Officia consequuntur eligendi similique eius, quas iure labore deserunt itaque, obcaecati pariatur, omnis recusandae adipisci sequi odio ab, minus nobis? Consequuntur nihil natus, eveniet maxime vero eos consectetur quisquam enim quam amet deleniti ut, nisi. Quibusdam sapiente excepturi temporibus, accusamus culpa voluptas asperiores eos maxime.&lt;/p&gt;<br>
+                          &lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                      &lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+
+                  </code>
+                </div>
+              </div>
+
             </div>
           </div>
-
 
           <!-- end content ---------------------------------->
 
@@ -112,7 +151,21 @@
     <!-- footer end --------------------------------------->
 
     <!-- MODAL CONTENT ------------------------------------>
+    <div class="modal inmodal fade" id="demo" tabindex="-1" role="dialog"  aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Demo pealkiri</h4>
+            <small class="font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, quo.</small>
+          </div>
+          <div class="modal-body white-bg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse odit beatae magnam earum, id repellendus nisi, voluptatem nesciunt, facere minus! Maiores cumque eum, ipsa pariatur voluptas quaerat adipisci, nemo delectus sunt consequuntur fugiat saepe nulla nobis, quasi est. Error assumenda vero numquam ipsum, alias, vitae perferendis architecto, saepe consequatur possimus porro unde enim autem! Officia consequuntur eligendi similique eius, quas iure labore deserunt itaque, obcaecati pariatur, omnis recusandae adipisci sequi odio ab, minus nobis? Consequuntur nihil natus, eveniet maxime vero eos consectetur quisquam enim quam amet deleniti ut, nisi. Quibusdam sapiente excepturi temporibus, accusamus culpa voluptas asperiores eos maxime.</p>
+          </div>
 
+        </div>
+      </div>
+    </div>
     <!-- modal content end -------------------------------->
 
     <!-- content mask for mobile menu -->
