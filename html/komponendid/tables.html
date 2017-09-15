@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kujunduskatsetused</title>
+    <title>Siseportaali kasutajaliidese elemendid</title>
 
     <!-- main css -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -62,17 +62,19 @@
 
       <!-- LEFT SIDEBAR ------------------------------------>
       <nav id="m-menu" class="max">
-
         <ul>
-          <li><a href="buttons.html">Nupud</a></li>
           <li><a href="modal.html">Modaal-aken</a></li>
+          <li><a href="badges_and_labels.html">Märgid ja sildid</a></li>
+          <li><a href="buttons.html">Nupud</a></li>
+          <li><a href="panels.html">Paneelid</a></li>
+          <li><a href="tables.html">Tabelid</a></li>
+          <li><a href="fonts.html">Tüpograafia</a></li>
         </ul>
-
       </nav>
       <!-- end left sidebar ------------------------------->
 
       <!-- PAGE ----------------------------------------->
-      <div id="page-wrapper" class="gray-bg">
+      <div id="page-wrapper" class="gray-bg m-t">
         <div id="content-wrapper" class="">
 
           <!-- CONTENT -------------------------------------->
@@ -80,12 +82,79 @@
           <div class="panel panel-default">
             <div class="panel-heading"><i class="fa fa-pencil"></i> Siseportaali kasutajaliidese elemendid</div>
             <div class="panel-body">
+              <h2>Tabelid</h2>
+              <hr class="m-b">
+
+              <div class="row m-b">
+                <div class="col-md-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Nimi</th>
+                        <th class="hidden-xs">Ametinimetus</th>
+                        <th>Kontor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Sandra Kolossova</td>
+                        <td class="hidden-xs">talituse juhataja</td>
+                        <td>SOC-116</td>
+                      </tr>
+                      <tr>
+                        <td>Kalle Tamm</td>
+                        <td class="hidden-xs">õppeinfosüsteemi spetsialist</td>
+                        <td>SOC-132</td>
+                      </tr>
+                      <tr>
+                        <td>Sander Marandi</td>
+                        <td class="hidden-xs">infosüsteemi analüütik</td>
+                        <td>SOC-134</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+
+              <div class="panel panel-default">
+                <div class="panel-body lightest-grey">
+
+                  <code>
+
+                    <div class="indent-0">
+                      &lt;table class="table"&gt;
+                    </div>
+                    <div class="indent-1">
+                      &lt;thead&gt;
+                    </div>
+                    <div class="indent-2">
+                      &lt;tr&gt;
+                    </div>
+                    <div class="indent-3">
+                      &lt;th&gt;Nimi&lt;/th&gt;
+                    </div>
+                    <div class="indent-2">
+                      &lt;/tr&gt;
+                    </div>
+                    <div class="indent-1">
+                      &lt;/thead&gt;
+                    </div>
+
+                    <hr class="strong m-t m-b">
+
+
+
+                  </code>
+
+                </div>
+              </div>
 
 
 
             </div>
           </div>
-
 
           <!-- end content ---------------------------------->
 
