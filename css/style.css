@@ -8253,6 +8253,15 @@ BIRTHDAYS FULLVIEW
 /****************************************************************
 MISSION *********************************************************
 ****************************************************************/
+.wrapper-mission {
+  /*
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+        color: #870042 !important;
+    }
+    */
+}
 .wrapper-mission #expenses .col-xs-1,
 .wrapper-mission #expenses .col-sm-1,
 .wrapper-mission #expenses .col-md-1,
@@ -8304,9 +8313,106 @@ MISSION *********************************************************
   padding-left: 0px;
   padding-right: 0px;
 }
+.wrapper-mission .scroll-to-workflow:hover {
+  cursor: pointer;
+}
+.wrapper-mission .nav-pills > li.active {
+  border-left: 0px;
+}
+.wrapper-mission .nav-pills > li.active > a,
+.wrapper-mission .nav-pills > li.active > a:hover,
+.wrapper-mission .nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #870042;
+}
+.wrapper-mission .btn-default {
+  margin-top: 4px;
+}
 .wrapper-mission .badge {
   background: #870042;
   color: white;
+}
+.wrapper-mission .hr-line-solid-high {
+  border-bottom: 1px solid #c9c9c9;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.wrapper-mission textarea.fc_report,
+.wrapper-mission textarea.fc_check {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  resize: none;
+}
+.wrapper-mission .fc_file_upload {
+  margin-top: 5px;
+}
+.wrapper-mission .fc_check_disabled {
+  cursor: default !important;
+  color: #aaa !important;
+}
+.wrapper-mission .flash_green {
+  -webkit-animation: flash_green_border 2s normal forwards;
+  -moz-animation: flash_green_border 2s normal forwards;
+  -o-animation: flash_green_border 2s normal forwards;
+}
+@-webkit-keyframes flash_green_border {
+  0% {
+    border-color: #e4e5e6;
+  }
+  50% {
+    border-color: #1ab394;
+  }
+  100% {
+    border-color: #e4e5e6;
+  }
+}
+.wrapper-mission .flash_red {
+  -webkit-animation: flash_red_border 0.5s normal forwards;
+  -moz-animation: flash_red_border 0.5s normal forwards;
+  -o-animation: flash_red_border 0.5s normal forwards;
+}
+@-webkit-keyframes flash_red_border {
+  0% {
+    border-color: #e4e5e6;
+  }
+  50% {
+    border-color: #ff0000;
+  }
+  100% {
+    border-color: #e4e5e6;
+  }
+}
+.wrapper-mission .bg_yellow {
+  background-color: #ff0;
+}
+.wrapper-mission .bcar .check,
+.wrapper-mission .bcar .radio {
+  display: inline;
+}
+.wrapper-mission .bcar .check {
+  margin-top: 10px;
+}
+.wrapper-mission .bcar .check > i {
+  position: relative;
+  top: 2px;
+}
+.wrapper-mission .bcar .check_off,
+.wrapper-mission .bcar .check_on,
+.wrapper-mission .bcar .radio_off,
+.wrapper-mission .bcar .radio_on {
+  width: 20px;
+  margin-left: 5px;
+  font-size: 20px;
+  color: #870042;
+  line-height: 27px;
+  cursor: pointer;
+}
+.wrapper-mission .bcar .check_off:hover,
+.wrapper-mission .bcar .check_on:hover,
+.wrapper-mission .bcar .radio_off:hover,
+.wrapper-mission .bcar .radio_on:hover {
+  font-weight: bold;
 }
 @media screen and (max-width: 991px) {
   .wrapper-mission .ptable .header_right {
