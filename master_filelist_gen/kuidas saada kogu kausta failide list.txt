@@ -1,2 +1,0 @@
-bash:
-find ./ -type f  > somefile.txt
