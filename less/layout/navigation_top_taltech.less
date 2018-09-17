@@ -526,12 +526,13 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 
         .mobile-logo {
             display: inline-block;
+            left: 50%;
             height: 36px;
             z-index: 4;
             margin-top: 8px;
 
             img {
-                margin: 0 0 0 -18px;
+                margin: 0 0 0 -32px;
                 position: absolute;
                 left: 50%;
                 display: inline-block;
@@ -905,26 +906,20 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
                 color: @primary;
             }
         }
-         #open-mobile-search {
+        #open-mobile-search {
             color: @primary;
             &:hover, &:active, &:focus {
                 color: @primary;
             }
         }
         .help-button {
-        display: none;
+            display: none;
         }
     }
 
 }
 
 @media (max-width: 500px) {
-    .navbar-top {
-        .taltech-mod-bg {
-            width: 120px;
-        }
-    }
-
     .navbar-top .navbar .right-side .navbar-right .dropdown {
         padding: 15px 0;
     }
@@ -944,16 +939,9 @@ MEDIA QUERIES (DESKTOP FIRST APPROACH)
 }
 
 @media (max-width: 350px) {
-    .navbar-top {
-        .taltech-mod-bg {
-            width: 0px;
-        }
-    }
-
-    .nav.navbar-top-links li.dropdown {
+     .nav.navbar-top-links li.dropdown {
         //display: none;
     }
-
 }
 
 /**********************************************************
